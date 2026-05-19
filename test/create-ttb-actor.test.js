@@ -50,21 +50,39 @@ test("createTTBActor allows overriding defaults", async () => {
   });
 });
 
-test("createTTBActor validates actorData", async () => {
+test("createTTBActor ignores unsupported actor properties", async () => {
+  const calls = [];
+  const ActorDocumentClass = {
+    create: async (data) => {
+      calls.push(data);
+      return data;
+    },
+  };
+
+  await createTTBActor(
+    { name: "Nellie Cochrane", unknownField: true },
+    {},
+    ActorDocumentClass,
+  );
+
+  assert.equal(calls[0].unknownField, undefined);
+});
+
+test("createTTBActor validates actorData", () => {
   assert.throws(
     () => createTTBActor(null, {}, { create: async () => ({}) }),
     /actorData must be an object/,
   );
 });
 
-test("createTTBActor validates actor name", async () => {
+test("createTTBActor validates actor name", () => {
   assert.throws(
     () => createTTBActor({ name: "  " }, {}, { create: async () => ({}) }),
     /actorData.name must be a non-empty string/,
   );
 });
 
-test("createTTBActor validates actor document class", async () => {
+test("createTTBActor validates actor document class", () => {
   assert.throws(
     () => createTTBActor({ name: "Valid Name" }, {}, null),
     /Actor document class with a create function is required/,

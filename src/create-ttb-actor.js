@@ -14,8 +14,29 @@ function createTTBActor(actorData, createOptions = {}, actorDocumentClass = glob
   const normalizedData = {
     type: "character",
     system: {},
-    ...actorData,
   };
+
+  const allowedKeys = new Set([
+    "name",
+    "type",
+    "img",
+    "system",
+    "items",
+    "effects",
+    "folder",
+    "sort",
+    "ownership",
+    "flags",
+    "prototypeToken",
+    "token",
+    "biography",
+  ]);
+
+  for (const [key, value] of Object.entries(actorData)) {
+    if (allowedKeys.has(key)) {
+      normalizedData[key] = value;
+    }
+  }
 
   return actorDocumentClass.create(normalizedData, createOptions);
 }
