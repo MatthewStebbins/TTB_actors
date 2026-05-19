@@ -8,7 +8,7 @@ function createTTBActor(actorData, createOptions = {}, actorDocumentClass = glob
   }
 
   if (!actorDocumentClass || typeof actorDocumentClass.create !== "function") {
-    throw new Error("Foundry Actor document class with a create function is required.");
+    throw new Error("Actor document class with a create function is required.");
   }
 
   const normalizedData = {
