@@ -1,0 +1,58 @@
+const test = require("node:test");
+const assert = require("node:assert/strict");
+
+const { createTTBActor } = require("../src/create-ttb-actor");
+
+test("createTTBActor creates an actor with defaults", async () => {
+  const mockActor = { id: "actor-1" };
+  const calls = [];
+  const ActorDocumentClass = {
+    create: async (data, options) => {
+      calls.push({ data, options });
+      return mockActor;
+    },
+  };
+
+  const created = await createTTBActor(
+    { name: "Sonnia Criid" },
+    { renderSheet: true },
+    ActorDocumentClass,
+  );
+
+  assert.equal(created, mockActor);
+  assert.deepEqual(calls, [
+    {
+      data: { name: "Sonnia Criid", type: "character", system: {} },
+      options: { renderSheet: true },
+    },
+  ]);
+});
+
+test("createTTBActor allows overriding defaults", async () => {
+  const calls = [];
+  const ActorDocumentClass = {
+    create: async (data) => {
+      calls.push(data);
+      return data;
+    },
+  };
+
+  await createTTBActor(
+    { name: "Lady Justice", type: "npc", system: { rank: "master" } },
+    {},
+    ActorDocumentClass,
+  );
+
+  assert.deepEqual(calls[0], {
+    name: "Lady Justice",
+    type: "npc",
+    system: { rank: "master" },
+  });
+});
+
+test("createTTBActor validates actorData", async () => {
+  assert.throws(
+    () => createTTBActor(null, {}, { create: async () => ({}) }),
+    /actorData must be an object/,
+  );
+});
