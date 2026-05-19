@@ -65,7 +65,7 @@ test("createTTBActor ignores unsupported actor properties", async () => {
     ActorDocumentClass,
   );
 
-  assert.equal(calls[0].unknownField, undefined);
+  assert.ok(!("unknownField" in calls[0]));
 });
 
 test("createTTBActor validates actorData", () => {

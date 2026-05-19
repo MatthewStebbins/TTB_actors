@@ -29,7 +29,6 @@ function createTTBActor(actorData, createOptions = {}, actorDocumentClass = glob
     "flags",
     "prototypeToken",
     "token",
-    "biography",
   ]);
 
   for (const [key, value] of Object.entries(actorData)) {

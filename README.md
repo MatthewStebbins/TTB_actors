@@ -21,4 +21,4 @@ By default the helper uses the global Foundry `Actor` document class and calls
 
 Supported actor fields passed through to `Actor.create(...)` are: `name`,
 `type`, `img`, `system`, `items`, `effects`, `folder`, `sort`, `ownership`,
-`flags`, `prototypeToken`, `token`, and `biography`.
+`flags`, `prototypeToken`, and `token`.
