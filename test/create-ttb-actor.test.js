@@ -56,3 +56,17 @@ test("createTTBActor validates actorData", async () => {
     /actorData must be an object/,
   );
 });
+
+test("createTTBActor validates actor name", async () => {
+  assert.throws(
+    () => createTTBActor({ name: "  " }, {}, { create: async () => ({}) }),
+    /actorData.name must be a non-empty string/,
+  );
+});
+
+test("createTTBActor validates actor document class", async () => {
+  assert.throws(
+    () => createTTBActor({ name: "Valid Name" }, {}, null),
+    /Actor document class with a create function is required/,
+  );
+});

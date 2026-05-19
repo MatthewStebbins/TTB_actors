@@ -3,7 +3,7 @@ function createTTBActor(actorData, createOptions = {}, actorDocumentClass = glob
     throw new TypeError("actorData must be an object.");
   }
 
-  if (!actorData.name || typeof actorData.name !== "string") {
+  if (typeof actorData.name !== "string" || actorData.name.trim().length === 0) {
     throw new TypeError("actorData.name must be a non-empty string.");
   }
 
