@@ -3,6 +3,15 @@ const ATTRIBUTE_ORDER = [
   "charm", "cunning", "tenacity", "intellect",
 ];
 
+/** Localize a key; fall back to the last segment, title-cased, if the key isn't found. */
+function loc(key) {
+  const result = game.i18n.localize(key);
+  if (result !== key) return result;
+  // Fallback: extract last segment and insert spaces before capitals
+  const segment = key.split(".").pop();
+  return segment.replace(/([A-Z])/g, " $1").replace(/^./, (c) => c.toUpperCase());
+}
+
 export class TtbCharacterSheet extends ActorSheet {
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
@@ -32,27 +41,27 @@ export class TtbCharacterSheet extends ActorSheet {
 
     context.attributes = ATTRIBUTE_ORDER.map((key) => ({
       key,
-      label: game.i18n.localize(`TTB.Attribute.${key}`),
+      label: loc(`TTB.Attribute.${key}`),
       value: a[key].value,
     }));
 
     context.skillsByAttribute = ATTRIBUTE_ORDER.map((attrKey) => ({
       attrKey,
-      label: game.i18n.localize(`TTB.Attribute.${attrKey}`),
+      label: loc(`TTB.Attribute.${attrKey}`),
       skills: Object.entries(system.skills)
         .filter(([, skill]) => skill.attribute === attrKey)
         .map(([key, skill]) => ({
           key,
-          label: game.i18n.localize(`TTB.Skill.${key}`),
+          label: loc(`TTB.Skill.${key}`),
           value: skill.value,
         })),
     }));
 
     context.aspectOptions = [
-      { value: "crow", label: game.i18n.localize("TTB.Aspect.crow") },
-      { value: "mask", label: game.i18n.localize("TTB.Aspect.mask") },
-      { value: "ram",  label: game.i18n.localize("TTB.Aspect.ram")  },
-      { value: "tome", label: game.i18n.localize("TTB.Aspect.tome") },
+      { value: "crow", label: loc("TTB.Aspect.crow") },
+      { value: "mask", label: loc("TTB.Aspect.mask") },
+      { value: "ram",  label: loc("TTB.Aspect.ram")  },
+      { value: "tome", label: loc("TTB.Aspect.tome") },
     ];
 
     return context;
