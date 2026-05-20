@@ -18,6 +18,13 @@ const SUIT_OPTIONS = [
   { value: "tome", label: "\u2666 Tome" },
 ];
 
+const SUIT_BUTTONS = [
+  { value: "crow", symbol: "\u2660", label: "Crow" },
+  { value: "mask", symbol: "\u2663", label: "Mask" },
+  { value: "ram",  symbol: "\u2665", label: "Ram"  },
+  { value: "tome", symbol: "\u2666", label: "Tome" },
+];
+
 /** Localize a key; fall back to the last segment title-cased if not found. */
 function loc(key) {
   const result = game.i18n.localize(key);
@@ -95,22 +102,33 @@ export class TtbCharacterSheet extends ActorSheet {
       label: loc(`TTB.Attribute.${key}`),
       value: av(key),
       suit:  a[key]?.suit ?? "",
+      suitButtons: SUIT_BUTTONS.map((b) => ({
+        value:  b.value,
+        symbol: b.symbol,
+        label:  b.label,
+        active: (a[key]?.suit ?? "") === b.value,
+      })),
     }));
 
     const skills = system.skills ?? {};
-    context.skillsByAttribute = ATTRIBUTE_ORDER.map((attrKey) => ({
-      attrKey,
-      label: loc(`TTB.Attribute.${attrKey}`),
-      skills: Object.entries(skills)
-        .filter(([, s]) => s?.attribute === attrKey)
-        .map(([key, s]) => ({
-          key,
-          label:    loc(`TTB.Skill.${key}`),
-          value:    s?.value    ?? 0,
-          triggers: s?.triggers ?? "",
-          practiced: !!s?.practiced,
-        })),
-    }));
+    context.skillsByAttribute = ATTRIBUTE_ORDER.map((attrKey) => {
+      const attrVal = av(attrKey);
+      return {
+        attrKey,
+        label: loc(`TTB.Attribute.${attrKey}`),
+        skills: Object.entries(skills)
+          .filter(([, s]) => s?.attribute === attrKey)
+          .map(([key, s]) => ({
+            key,
+            label:    loc(`TTB.Skill.${key}`),
+            value:    s?.value    ?? 0,
+            total:    attrVal + (s?.value ?? 0),
+            attrVal,
+            triggers: s?.triggers ?? "",
+            practiced: !!s?.practiced,
+          })),
+      };
+    });
 
     context.aspectOptions = [
       { value: "crow", label: loc("TTB.Aspect.crow") },
@@ -212,9 +230,12 @@ export class TtbCharacterSheet extends ActorSheet {
       this.actor.update({ [`system.attributes.${attr}.value`]: Number(ev.currentTarget.value) });
     });
 
-    html.find(".ttb-attr-suit").change((ev) => {
-      const attr = ev.currentTarget.dataset.attr;
-      this.actor.update({ [`system.attributes.${attr}.suit`]: ev.currentTarget.value });
+    html.find(".ttb-attr-suit-btn").click((ev) => {
+      const attr    = ev.currentTarget.dataset.attr;
+      const suit    = ev.currentTarget.dataset.suit;
+      const current = this.actor.system.attributes?.[attr]?.suit ?? "";
+      // clicking the active suit deselects it
+      this.actor.update({ [`system.attributes.${attr}.suit`]: current === suit ? "" : suit });
     });
 
     html.find(".ttb-actors-skill-value").change((ev) => {
