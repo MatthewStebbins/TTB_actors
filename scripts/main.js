@@ -16,6 +16,10 @@ Hooks.once("init", () => {
   return preloadTemplates();
 });
 
+Hooks.once("i18nInit", () => {
+  console.log("TTB | i18n ready");
+});
+
 async function preloadTemplates() {
   const templatePaths = [
     "systems/ttb-actors/templates/actors/character-sheet.hbs",
