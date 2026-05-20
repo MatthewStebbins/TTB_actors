@@ -14,7 +14,7 @@
       "url": "https://github.com/MatthewStebbins"
     }
   ],
-  "esmodules": ["src/main.js"],
+  "esmodules": ["scripts/main.js"],
   "url": "https://github.com/MatthewStebbins/TTB_actors",
   "readme": "README.md",
   "bugs": "https://github.com/MatthewStebbins/TTB_actors/issues",

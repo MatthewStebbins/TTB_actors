@@ -1,7 +1,7 @@
 const test = require("node:test");
 const assert = require("node:assert/strict");
 
-const { createTTBActor } = require("../src/create-ttb-actor");
+const { createTTBActor } = require("../scripts/create-ttb-actor");
 
 test("createTTBActor creates an actor with defaults", async () => {
   const mockActor = { id: "actor-1" };
