@@ -15,6 +15,10 @@
   --ttb-ink:          #1a0d05;
   --ttb-ink-mid:      #3a2010;
   --ttb-shadow:       rgba(0, 0, 0, 0.45);
+  --ttb-soulstone:    #3a7ab5;
+  --ttb-soulstone-lt: #5aa0e0;
+  --ttb-power:        #5a1a6b;
+  --ttb-power-lt:     #7a3090;
 }
 
 /* ── Base sheet ─────────────────────────────────────────── */
@@ -152,6 +156,54 @@
 
 .ttb-actors-wounds .ttb-actors-derived-label { color: #e06070; }
 
+/* ── Soulstones ─────────────────────────────────────────── */
+.ttb-soulstones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4px 10px;
+  border-left: 1px solid rgba(58,122,181,0.4);
+  background: rgba(30,50,90,0.3);
+  flex-shrink: 0;
+}
+
+.ttb-soulstone-track {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-top: 2px;
+}
+
+.ttb-soulstone-dot {
+  background: transparent;
+  border: none;
+  color: rgba(90,160,224,0.35);
+  font-size: 1.2em;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s;
+}
+
+.ttb-soulstone-dot.filled { color: var(--ttb-soulstone-lt); }
+.ttb-soulstone-dot:hover  { color: var(--ttb-soulstone); }
+
+.ttb-soulstone-max {
+  width: 24px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(58,122,181,0.5);
+  color: rgba(90,160,224,0.7);
+  font-size: 0.7em;
+  text-align: center;
+  margin-left: 2px;
+}
+
 /* ── Wound Track ─────────────────────────────────────────── */
 .ttb-wound-track {
   display: flex;
@@ -209,16 +261,78 @@
   font-size: 0.9em;
 }
 
+/* ── Conditions Strip ───────────────────────────────────── */
+.ttb-conditions-strip {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px 8px;
+  background: var(--ttb-leather);
+  border-bottom: 1px solid var(--ttb-gold-dk);
+  flex-wrap: wrap;
+}
+
+.ttb-condition {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  padding: 2px 7px;
+  border: 1px solid rgba(201,168,76,0.2);
+  border-radius: 10px;
+  font-size: 0.72em;
+  font-variant: small-caps;
+  letter-spacing: 0.05em;
+  color: rgba(240,230,204,0.5);
+  transition: all 0.15s;
+}
+
+.ttb-condition.active {
+  color: var(--ttb-parchment);
+  border-color: var(--ttb-gold-dk);
+  background: rgba(107,15,26,0.4);
+}
+
+.ttb-condition label { cursor: pointer; }
+
+.ttb-condition input[type="checkbox"] {
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+  accent-color: var(--ttb-burgundy);
+}
+
+.ttb-condition-number input[type="number"] {
+  width: 32px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(201,168,76,0.4);
+  color: var(--ttb-parchment);
+  font-size: 1em;
+  text-align: center;
+  font-family: inherit;
+  -moz-appearance: textfield;
+}
+
+.ttb-condition-number input[type="number"]::-webkit-inner-spin-button,
+.ttb-condition-number input[type="number"]::-webkit-outer-spin-button { opacity: 0; }
+
+.ttb-condition-number:has(input:not([value="0"])) {
+  color: var(--ttb-parchment);
+  border-color: var(--ttb-gold-dk);
+  background: rgba(107,15,26,0.4);
+}
+
 /* ── Tabs ────────────────────────────────────────────────── */
 .ttb-actors.sheet .tabs {
   display: flex;
   background: var(--ttb-leather);
   border-bottom: 2px solid var(--ttb-gold-dk);
   padding: 0 8px;
+  flex-wrap: wrap;
 }
 
 .ttb-actors.sheet .tabs .item {
-  padding: 6px 14px;
+  padding: 6px 12px;
   font-size: 0.78em;
   font-variant: small-caps;
   letter-spacing: 0.08em;
@@ -264,6 +378,9 @@
   background: linear-gradient(to right, var(--ttb-burgundy), transparent);
   opacity: 0.4;
 }
+
+.ttb-manifested-header { color: var(--ttb-power-lt); border-bottom-color: rgba(90,26,107,0.3); }
+.ttb-manifested-header::after { background: linear-gradient(to right, var(--ttb-power-lt), transparent); }
 
 .ttb-section { margin-bottom: 14px; }
 
@@ -495,6 +612,11 @@
   margin-bottom: 8px;
 }
 
+.ttb-power-entry {
+  border-color: rgba(90,26,107,0.35);
+  background: #f0e8f5;
+}
+
 .ttb-talent-header {
   display: flex;
   align-items: center;
@@ -510,6 +632,10 @@
   border-bottom: 1px solid var(--ttb-burgundy-lt);
   background: transparent;
   font-size: 0.95em;
+}
+
+.ttb-power-entry .ttb-talent-header input {
+  border-bottom-color: var(--ttb-power-lt);
 }
 
 .ttb-talent-entry textarea {
@@ -584,6 +710,73 @@
   background: var(--ttb-parchment-dk);
   text-align: right;
   font-size: 1em;
+}
+
+/* ── Biography Tab ──────────────────────────────────────── */
+.ttb-biography { padding: 4px 0; }
+
+.ttb-bio-fields {
+  display: grid;
+  grid-template-columns: auto 1fr auto 1fr;
+  gap: 6px 12px;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(107,15,26,0.2);
+}
+
+.ttb-bio-fields label {
+  font-variant: small-caps;
+  font-weight: bold;
+  font-size: 0.8em;
+  color: var(--ttb-burgundy);
+  white-space: nowrap;
+}
+
+.ttb-bio-fields input,
+.ttb-bio-fields select {
+  background: var(--ttb-parchment-dk);
+  border: 1px solid rgba(107,15,26,0.3);
+  border-radius: 2px;
+  padding: 4px 7px;
+  font-family: inherit;
+  font-size: 0.88em;
+  color: var(--ttb-ink);
+}
+
+.ttb-bio-fields select option { background: var(--ttb-parchment); }
+
+.ttb-bio-section {
+  margin-bottom: 12px;
+}
+
+.ttb-bio-label {
+  display: block;
+  font-variant: small-caps;
+  font-weight: bold;
+  font-size: 0.78em;
+  color: var(--ttb-burgundy);
+  letter-spacing: 0.08em;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.ttb-bio-section textarea {
+  width: 100%;
+  background: var(--ttb-parchment-dk);
+  border: 1px solid rgba(107,15,26,0.25);
+  border-radius: 3px;
+  padding: 6px 8px;
+  font-family: inherit;
+  font-size: 0.88em;
+  color: var(--ttb-ink);
+  resize: vertical;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+.ttb-bio-section textarea:focus {
+  border-color: var(--ttb-burgundy-lt);
 }
 
 /* ── Add / Delete buttons ───────────────────────────────── */

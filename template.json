@@ -67,6 +67,8 @@
         "details": {
           "age":         "",
           "gender":      "",
+          "appearance":  "",
+          "background":  "",
           "description": ""
         }
       }
@@ -78,12 +80,25 @@
         "max":   0,
         "boxes":  [false,false,false,false,false,false,false,false,false,false]
       },
+      "soulstones": {
+        "value": 0,
+        "max":   3
+      },
       "derived": {
         "defense":   0,
         "willpower": 0,
         "walk":      0,
         "charge":    0,
         "height":    2
+      },
+      "conditions": {
+        "burning":   0,
+        "slow":      false,
+        "fast":      false,
+        "stunned":   false,
+        "paralyzed": false,
+        "focused":   0,
+        "defensive": false
       },
       "destiny": {
         "currentStep": 1,
@@ -102,8 +117,11 @@
           { "suit": "", "value": "" }
         ]
       },
-      "pursuits": [],
-      "talents":  [],
+      "allegiance":       "",
+      "pursuits":          [],
+      "talents":           [],
+      "manifestedPowers": [],
+      "notes":             "",
       "equipment": {
         "scrip": 0
       }

@@ -51,6 +51,19 @@
       <span class="ttb-actors-derived-label">Wounds&nbsp;</span>
       <span class="ttb-actors-derived-value">{{system.wounds.value}}/{{derived.woundsMax}}</span>
     </div>
+    <!-- Soulstones -->
+    <div class="ttb-soulstones">
+      <span class="ttb-actors-derived-label">Soulstones</span>
+      <div class="ttb-soulstone-track">
+        {{#each soulstoneDots}}
+          <button type="button"
+            class="ttb-soulstone-dot {{#if filled}}filled{{/if}}"
+            data-index="{{index}}" title="Soulstone {{add index 1}}">&#9670;</button>
+        {{/each}}
+        <input type="number" name="system.soulstones.max" value="{{soulstoneMax}}"
+          min="0" max="10" class="ttb-soulstone-max" title="Max soulstones" />
+      </div>
+    </div>
   </div>
 
   <!-- Wound Boxes -->
@@ -67,6 +80,38 @@
     </div>
   </div>
 
+  <!-- Conditions Strip -->
+  <div class="ttb-conditions-strip">
+    <div class="ttb-condition ttb-condition-number">
+      <label>Burning</label>
+      <input type="number" name="system.conditions.burning" value="{{conditions.burning}}" min="0" max="4" />
+    </div>
+    <div class="ttb-condition ttb-condition-bool {{#if conditions.slow}}active{{/if}}">
+      <input type="checkbox" name="system.conditions.slow" {{#if conditions.slow}}checked{{/if}} id="cond-slow" />
+      <label for="cond-slow">Slow</label>
+    </div>
+    <div class="ttb-condition ttb-condition-bool {{#if conditions.fast}}active{{/if}}">
+      <input type="checkbox" name="system.conditions.fast" {{#if conditions.fast}}checked{{/if}} id="cond-fast" />
+      <label for="cond-fast">Fast</label>
+    </div>
+    <div class="ttb-condition ttb-condition-bool {{#if conditions.stunned}}active{{/if}}">
+      <input type="checkbox" name="system.conditions.stunned" {{#if conditions.stunned}}checked{{/if}} id="cond-stunned" />
+      <label for="cond-stunned">Stunned</label>
+    </div>
+    <div class="ttb-condition ttb-condition-bool {{#if conditions.paralyzed}}active{{/if}}">
+      <input type="checkbox" name="system.conditions.paralyzed" {{#if conditions.paralyzed}}checked{{/if}} id="cond-paralyzed" />
+      <label for="cond-paralyzed">Paralyzed</label>
+    </div>
+    <div class="ttb-condition ttb-condition-number">
+      <label>Focused</label>
+      <input type="number" name="system.conditions.focused" value="{{conditions.focused}}" min="0" max="10" />
+    </div>
+    <div class="ttb-condition ttb-condition-bool {{#if conditions.defensive}}active{{/if}}">
+      <input type="checkbox" name="system.conditions.defensive" {{#if conditions.defensive}}checked{{/if}} id="cond-defensive" />
+      <label for="cond-defensive">Defensive</label>
+    </div>
+  </div>
+
   <!-- Tabs -->
   <nav class="sheet-tabs tabs">
     <a class="item" data-tab="attributes">Attributes</a>
@@ -74,6 +119,7 @@
     <a class="item" data-tab="destiny">Destiny</a>
     <a class="item" data-tab="pursuits">Pursuits</a>
     <a class="item" data-tab="equipment">Equipment</a>
+    <a class="item" data-tab="biography">Biography</a>
   </nav>
 
   <section class="sheet-body">
@@ -150,7 +196,7 @@
       </div>
     </div>
 
-    <!-- Pursuits & Talents Tab -->
+    <!-- Pursuits, Talents & Manifested Powers Tab -->
     <div class="tab" data-tab="pursuits">
       <div class="ttb-pursuits-talents">
         <div class="ttb-section">
@@ -191,6 +237,26 @@
                   <button type="button" class="ttb-talent-delete ttb-delete-btn" data-index="{{@index}}">&times;</button>
                 </div>
                 <textarea name="system.talents.{{@index}}.description" rows="2" placeholder="Talent description...">{{description}}</textarea>
+              </div>
+            {{/each}}
+          {{/if}}
+        </div>
+
+        <div class="ttb-section">
+          <h3 class="ttb-section-header ttb-manifested-header">
+            Manifested Powers
+            <button type="button" class="ttb-power-add ttb-add-btn" title="Add manifested power">+</button>
+          </h3>
+          {{#if manifestedPowersEmpty}}
+            <p class="ttb-empty-notice">No manifested powers yet — gained by completing Destiny steps.</p>
+          {{else}}
+            {{#each manifestedPowers}}
+              <div class="ttb-talent-entry ttb-power-entry">
+                <div class="ttb-talent-header">
+                  <input type="text" name="system.manifestedPowers.{{@index}}.name" value="{{name}}" placeholder="Power name" />
+                  <button type="button" class="ttb-power-delete ttb-delete-btn" data-index="{{@index}}">&times;</button>
+                </div>
+                <textarea name="system.manifestedPowers.{{@index}}.description" rows="2" placeholder="Power description...">{{description}}</textarea>
               </div>
             {{/each}}
           {{/if}}
@@ -277,6 +343,45 @@
         <div class="ttb-scrip">
           <label>Scrip (Guilders)</label>
           <input type="number" name="system.equipment.scrip" value="{{system.equipment.scrip}}" min="0" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Biography Tab -->
+    <div class="tab" data-tab="biography">
+      <div class="ttb-biography">
+        <div class="ttb-bio-fields">
+          <label>Allegiance</label>
+          <select name="system.allegiance">
+            <option value="">— Select —</option>
+            {{#each allegianceOptions}}
+              <option value="{{value}}" {{#if (eq value ../system.allegiance)}}selected{{/if}}>{{label}}</option>
+            {{/each}}
+          </select>
+
+          <label>Age</label>
+          <input type="text" name="system.details.age" value="{{system.details.age}}" placeholder="Age" style="width:80px" />
+
+          <label>Gender</label>
+          <input type="text" name="system.details.gender" value="{{system.details.gender}}" placeholder="Gender / pronouns" />
+        </div>
+
+        <div class="ttb-bio-section">
+          <label class="ttb-bio-label">Appearance</label>
+          <textarea name="system.details.appearance" rows="3"
+            placeholder="Describe your character's appearance...">{{system.details.appearance}}</textarea>
+        </div>
+
+        <div class="ttb-bio-section">
+          <label class="ttb-bio-label">Background</label>
+          <textarea name="system.details.background" rows="4"
+            placeholder="Describe your character's history and background...">{{system.details.background}}</textarea>
+        </div>
+
+        <div class="ttb-bio-section">
+          <label class="ttb-bio-label">Notes</label>
+          <textarea name="system.notes" rows="5"
+            placeholder="Session notes, NPC contacts, loose ends...">{{system.notes}}</textarea>
         </div>
       </div>
     </div>

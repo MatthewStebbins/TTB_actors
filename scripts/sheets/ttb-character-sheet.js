@@ -5,6 +5,11 @@ const ATTRIBUTE_ORDER = [
 
 const SUIT_SYMBOLS = { crow: "\u2660", mask: "\u2663", ram: "\u2665", tome: "\u2666", "": "?" };
 
+const ALLEGIANCE_OPTIONS = [
+  "guild", "arcanists", "resurrectionists", "neverborn",
+  "tenThunders", "outcasts", "unaffiliated",
+];
+
 /** Localize a key; fall back to the last segment title-cased if not found. */
 function loc(key) {
   const result = game.i18n.localize(key);
@@ -20,7 +25,7 @@ function loc(key) {
 function repairArrays(expanded) {
   const sys = expanded?.system;
   if (!sys) return expanded;
-  for (const field of ["pursuits", "talents"]) {
+  for (const field of ["pursuits", "talents", "manifestedPowers"]) {
     if (sys[field] && !Array.isArray(sys[field])) {
       sys[field] = Object.values(sys[field]);
     }
@@ -35,7 +40,7 @@ function repairArrays(expanded) {
   return expanded;
 }
 
-/** Coerce a raw pursuits/talents field to a plain Array regardless of storage format. */
+/** Coerce a raw array field to a plain Array regardless of storage format. */
 function toArray(raw) {
   if (!raw) return [];
   if (Array.isArray(raw)) return raw;
@@ -47,8 +52,8 @@ export class TtbCharacterSheet extends ActorSheet {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["ttb-actors", "sheet", "actor"],
       template: "systems/ttb-actors/templates/actors/character-sheet.hbs",
-      width: 740,
-      height: 680,
+      width: 760,
+      height: 720,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "attributes" }],
     });
   }
@@ -58,11 +63,9 @@ export class TtbCharacterSheet extends ActorSheet {
     const system  = this.actor.system;
     context.system = system;
 
-    // Safe attribute accessor
-    const a = system.attributes ?? {};
+    const a  = system.attributes ?? {};
     const av = (name) => a[name]?.value ?? 2;
 
-    // Items — use Array.from to avoid EmbeddedCollection edge-cases
     const allItems = Array.from(this.actor.items);
     const armorBonus = allItems
       .filter((i) => i.type === "armor" && i.system?.equipped)
@@ -99,6 +102,20 @@ export class TtbCharacterSheet extends ActorSheet {
       { value: "tome", label: loc("TTB.Aspect.tome") },
     ];
 
+    context.allegianceOptions = ALLEGIANCE_OPTIONS.map((v) => ({
+      value: v,
+      label: loc(`TTB.Allegiance.${v}`),
+    }));
+
+    // Soulstones
+    const ss = system.soulstones ?? { value: 0, max: 3 };
+    context.soulstoneMax   = ss.max ?? 3;
+    context.soulstoneValue = ss.value ?? 0;
+    context.soulstoneDots  = Array.from({ length: ss.max ?? 3 }, (_, i) => ({
+      index:  i,
+      filled: i < (ss.value ?? 0),
+    }));
+
     // Wound boxes
     const woundsValue = system.wounds?.value ?? 0;
     const maxWounds   = context.derived.woundsMax;
@@ -108,10 +125,22 @@ export class TtbCharacterSheet extends ActorSheet {
       active: i < maxWounds,
     }));
 
-    // Destiny — always produce exactly 5 entries so HBS never sees undefined
-    const destiny = system.destiny ?? {};
-    const rawSpread = Array.isArray(destiny.spread) ? destiny.spread : toArray(destiny.spread);
-    const rawSteps  = Array.isArray(destiny.steps)  ? destiny.steps  : toArray(destiny.steps);
+    // Conditions
+    const cond = system.conditions ?? {};
+    context.conditions = {
+      burning:   Number(cond.burning)  || 0,
+      slow:      !!cond.slow,
+      fast:      !!cond.fast,
+      stunned:   !!cond.stunned,
+      paralyzed: !!cond.paralyzed,
+      focused:   Number(cond.focused)  || 0,
+      defensive: !!cond.defensive,
+    };
+
+    // Destiny — always pad to 5 entries
+    const destiny    = system.destiny ?? {};
+    const rawSpread  = toArray(destiny.spread);
+    const rawSteps   = toArray(destiny.steps);
     const currentStep = destiny.currentStep ?? 1;
 
     context.destinySpread = Array.from({ length: 5 }, (_, i) => {
@@ -124,11 +153,13 @@ export class TtbCharacterSheet extends ActorSheet {
       return { index: i, number: i + 1, text: step.text ?? "", completed: !!step.completed, isCurrent: currentStep === i + 1 };
     });
 
-    // Pursuits & Talents — coerce to array regardless of corruption
-    context.pursuits      = toArray(system.pursuits);
-    context.talents       = toArray(system.talents);
-    context.talentsEmpty  = context.talents.length  === 0;
-    context.pursuitsEmpty = context.pursuits.length === 0;
+    // Pursuits / Talents / Manifested Powers
+    context.pursuits         = toArray(system.pursuits);
+    context.talents          = toArray(system.talents);
+    context.manifestedPowers = toArray(system.manifestedPowers);
+    context.pursuitsEmpty         = context.pursuits.length         === 0;
+    context.talentsEmpty          = context.talents.length          === 0;
+    context.manifestedPowersEmpty = context.manifestedPowers.length === 0;
 
     // Items by type
     context.weapons   = allItems.filter((i) => i.type === "weapon");
@@ -138,10 +169,7 @@ export class TtbCharacterSheet extends ActorSheet {
     return context;
   }
 
-  /**
-   * Override _updateObject to repair arrays that Foundry's form serialization
-   * converts to numeric-keyed plain objects.
-   */
+  /** Repair array fields before saving to prevent Foundry's expandObject corruption. */
   async _updateObject(event, formData) {
     const expanded = repairArrays(foundry.utils.expandObject(formData));
     return this.actor.update(expanded);
@@ -168,6 +196,14 @@ export class TtbCharacterSheet extends ActorSheet {
       this.actor.update({ "system.wounds.value": newVal });
     });
 
+    // Soulstone dot click — toggle fill up to that dot
+    html.find(".ttb-soulstone-dot").click((ev) => {
+      const idx     = Number(ev.currentTarget.dataset.index);
+      const current = this.actor.system.soulstones?.value ?? 0;
+      const newVal  = current === idx + 1 ? idx : idx + 1;
+      this.actor.update({ "system.soulstones.value": newVal });
+    });
+
     html.find(".ttb-destiny-step-check").click((ev) => {
       const idx   = Number(ev.currentTarget.dataset.index);
       const steps = foundry.utils.deepClone(toArray(this.actor.system.destiny?.steps));
@@ -176,12 +212,12 @@ export class TtbCharacterSheet extends ActorSheet {
       this.actor.update({ "system.destiny.steps": steps });
     });
 
+    // Pursuits
     html.find(".ttb-pursuit-add").click(() => {
       const pursuits = toArray(foundry.utils.deepClone(this.actor.system.pursuits));
       pursuits.push({ name: "", session: "" });
       this.actor.update({ "system.pursuits": pursuits });
     });
-
     html.find(".ttb-pursuit-delete").click((ev) => {
       const idx      = Number(ev.currentTarget.dataset.index);
       const pursuits = toArray(foundry.utils.deepClone(this.actor.system.pursuits));
@@ -189,12 +225,12 @@ export class TtbCharacterSheet extends ActorSheet {
       this.actor.update({ "system.pursuits": pursuits });
     });
 
+    // Talents
     html.find(".ttb-talent-add").click(() => {
       const talents = toArray(foundry.utils.deepClone(this.actor.system.talents));
       talents.push({ name: "", description: "" });
       this.actor.update({ "system.talents": talents });
     });
-
     html.find(".ttb-talent-delete").click((ev) => {
       const idx     = Number(ev.currentTarget.dataset.index);
       const talents = toArray(foundry.utils.deepClone(this.actor.system.talents));
@@ -202,21 +238,32 @@ export class TtbCharacterSheet extends ActorSheet {
       this.actor.update({ "system.talents": talents });
     });
 
+    // Manifested Powers
+    html.find(".ttb-power-add").click(() => {
+      const powers = toArray(foundry.utils.deepClone(this.actor.system.manifestedPowers));
+      powers.push({ name: "", description: "" });
+      this.actor.update({ "system.manifestedPowers": powers });
+    });
+    html.find(".ttb-power-delete").click((ev) => {
+      const idx    = Number(ev.currentTarget.dataset.index);
+      const powers = toArray(foundry.utils.deepClone(this.actor.system.manifestedPowers));
+      powers.splice(idx, 1);
+      this.actor.update({ "system.manifestedPowers": powers });
+    });
+
+    // Items
     html.find(".ttb-item-create").click((ev) => {
       const type = ev.currentTarget.dataset.type;
       Item.create({ name: `New ${type}`, type }, { parent: this.actor });
     });
-
     html.find(".ttb-item-edit").click((ev) => {
       const id = ev.currentTarget.closest("[data-item-id]").dataset.itemId;
       this.actor.items.get(id)?.sheet.render(true);
     });
-
     html.find(".ttb-item-delete").click((ev) => {
       const id = ev.currentTarget.closest("[data-item-id]").dataset.itemId;
       this.actor.items.get(id)?.delete();
     });
-
     html.find(".ttb-item-equipped").change((ev) => {
       const id = ev.currentTarget.closest("[data-item-id]").dataset.itemId;
       this.actor.items.get(id)?.update({ "system.equipped": ev.currentTarget.checked });
