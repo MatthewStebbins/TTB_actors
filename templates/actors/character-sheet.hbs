@@ -114,11 +114,10 @@
           {{#each destinySpread}}
             <div class="ttb-fate-card">
               <div class="ttb-fate-suit">{{symbol}}</div>
-              {{!-- No name= attrs: JS change listeners handle save to prevent array corruption --}}
-              <input class="ttb-fate-value ttb-spread-value" type="text"
-                data-index="{{index}}"
+              <input class="ttb-fate-value" type="text"
+                name="system.destiny.spread.{{index}}.value"
                 value="{{value}}" placeholder="&mdash;" />
-              <select class="ttb-spread-suit" data-index="{{index}}">
+              <select name="system.destiny.spread.{{index}}.suit">
                 <option value="" {{#if (eq suit "")}}selected{{/if}}>?</option>
                 <option value="crow" {{#if (eq suit "crow")}}selected{{/if}}>&#9824; Crow</option>
                 <option value="mask" {{#if (eq suit "mask")}}selected{{/if}}>&#9827; Mask</option>
@@ -134,9 +133,8 @@
           {{#each destinySteps}}
             <div class="ttb-destiny-step {{#if isCurrent}}current{{/if}} {{#if completed}}completed{{/if}}">
               <span class="ttb-step-num">{{number}}</span>
-              {{!-- No name= attrs: JS change listeners handle save to prevent array corruption --}}
-              <input class="ttb-step-text" type="text"
-                data-index="{{index}}"
+              <input type="text"
+                name="system.destiny.steps.{{index}}.text"
                 value="{{text}}" placeholder="Destiny step..." />
               <button type="button" class="ttb-destiny-step-check" data-index="{{index}}"
                 title="Toggle completed">{{#if completed}}&#10003;{{else}}&#9675;{{/if}}</button>
@@ -160,23 +158,22 @@
             Pursuits
             <button type="button" class="ttb-pursuit-add ttb-add-btn" title="Add pursuit">+</button>
           </h3>
+          {{#if pursuitsEmpty}}
+            <p class="ttb-empty-notice">No pursuits yet. Click + to add one.</p>
+          {{else}}
           <table class="ttb-table">
             <thead><tr><th>Pursuit</th><th>Session</th><th></th></tr></thead>
             <tbody>
               {{#each pursuits}}
                 <tr>
-                  {{!-- No name= attrs: JS change listeners handle save to prevent array corruption --}}
-                  <td><input class="ttb-pursuit-name" type="text"
-                    data-index="{{@index}}" data-field="name"
-                    value="{{name}}" placeholder="e.g. Gunslinger" /></td>
-                  <td><input class="ttb-pursuit-session" type="text"
-                    data-index="{{@index}}" data-field="session"
-                    value="{{session}}" placeholder="Session #" style="width:70px" /></td>
-                  <td><button type="button" class="ttb-pursuit-delete ttb-delete-btn" data-index="{{@index}}">&#10005;</button></td>
+                  <td><input type="text" name="system.pursuits.{{@index}}.name" value="{{name}}" placeholder="e.g. Gunslinger" /></td>
+                  <td><input type="text" name="system.pursuits.{{@index}}.session" value="{{session}}" placeholder="Session #" style="width:70px" /></td>
+                  <td><button type="button" class="ttb-pursuit-delete ttb-delete-btn" data-index="{{@index}}">&times;</button></td>
                 </tr>
               {{/each}}
             </tbody>
           </table>
+          {{/if}}
         </div>
 
         <div class="ttb-section">
@@ -184,23 +181,19 @@
             Talents
             <button type="button" class="ttb-talent-add ttb-add-btn" title="Add talent">+</button>
           </h3>
-          {{#each talents}}
-            <div class="ttb-talent-entry">
-              <div class="ttb-talent-header">
-                {{!-- No name= attrs: JS change listeners handle save to prevent array corruption --}}
-                <input class="ttb-talent-name" type="text"
-                  data-index="{{@index}}" data-field="name"
-                  value="{{name}}" placeholder="Talent name" />
-                <button type="button" class="ttb-talent-delete ttb-delete-btn" data-index="{{@index}}">&#10005;</button>
-              </div>
-              <textarea class="ttb-talent-desc"
-                data-index="{{@index}}" data-field="description"
-                rows="2" placeholder="Talent description...">{{description}}</textarea>
-            </div>
-          {{/each}}
-          {{#unless talents.length}}
+          {{#if talentsEmpty}}
             <p class="ttb-empty-notice">No talents yet. Click + to add one.</p>
-          {{/unless}}
+          {{else}}
+            {{#each talents}}
+              <div class="ttb-talent-entry">
+                <div class="ttb-talent-header">
+                  <input type="text" name="system.talents.{{@index}}.name" value="{{name}}" placeholder="Talent name" />
+                  <button type="button" class="ttb-talent-delete ttb-delete-btn" data-index="{{@index}}">&times;</button>
+                </div>
+                <textarea name="system.talents.{{@index}}.description" rows="2" placeholder="Talent description...">{{description}}</textarea>
+              </div>
+            {{/each}}
+          {{/if}}
         </div>
       </div>
     </div>
@@ -208,7 +201,6 @@
     <!-- Equipment Tab -->
     <div class="tab" data-tab="equipment">
       <div class="ttb-equipment">
-        <!-- Weapons -->
         <div class="ttb-section">
           <h3 class="ttb-section-header">
             Weapons
@@ -227,7 +219,7 @@
                   <td>{{system.special}}</td>
                   <td class="ttb-item-controls">
                     <button type="button" class="ttb-item-edit" title="Edit">&#9998;</button>
-                    <button type="button" class="ttb-item-delete" title="Delete">&#10005;</button>
+                    <button type="button" class="ttb-item-delete" title="Delete">&times;</button>
                   </td>
                 </tr>
               {{/each}}
@@ -235,7 +227,6 @@
           </table>
         </div>
 
-        <!-- Armor -->
         <div class="ttb-section">
           <h3 class="ttb-section-header">
             Armor
@@ -252,7 +243,7 @@
                   <td>{{system.special}}</td>
                   <td class="ttb-item-controls">
                     <button type="button" class="ttb-item-edit" title="Edit">&#9998;</button>
-                    <button type="button" class="ttb-item-delete" title="Delete">&#10005;</button>
+                    <button type="button" class="ttb-item-delete" title="Delete">&times;</button>
                   </td>
                 </tr>
               {{/each}}
@@ -260,7 +251,6 @@
           </table>
         </div>
 
-        <!-- Inventory -->
         <div class="ttb-section">
           <h3 class="ttb-section-header">
             Inventory
@@ -276,7 +266,7 @@
                   <td>{{system.description}}</td>
                   <td class="ttb-item-controls">
                     <button type="button" class="ttb-item-edit" title="Edit">&#9998;</button>
-                    <button type="button" class="ttb-item-delete" title="Delete">&#10005;</button>
+                    <button type="button" class="ttb-item-delete" title="Delete">&times;</button>
                   </td>
                 </tr>
               {{/each}}
@@ -284,7 +274,6 @@
           </table>
         </div>
 
-        <!-- Scrip -->
         <div class="ttb-scrip">
           <label>Scrip (Guilders)</label>
           <input type="number" name="system.equipment.scrip" value="{{system.equipment.scrip}}" min="0" />

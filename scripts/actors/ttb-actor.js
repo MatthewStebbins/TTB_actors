@@ -3,20 +3,29 @@ export class TtbActor extends Actor {
     super.prepareDerivedData();
     if (this.type !== "character") return;
 
-    const system = this.system;
-    const a = system.attributes;
+    try {
+      const system = this.system;
+      const a = system.attributes ?? {};
+      const av = (name) => a[name]?.value ?? 2;
 
-    // Sum defense bonus from all equipped armor items
-    const armorBonus = this.items
-      .filter((i) => i.type === "armor" && i.system.equipped)
-      .reduce((sum, i) => sum + (i.system.defenseBonus ?? 0), 0);
+      const armorBonus = Array.from(this.items)
+        .filter((i) => i.type === "armor" && i.system?.equipped)
+        .reduce((sum, i) => sum + (Number(i.system?.defenseBonus) || 0), 0);
 
-    system.derived.defense   = a.grace.value + armorBonus;
-    system.derived.willpower = a.tenacity.value;
-    system.derived.walk      = a.speed.value;
-    system.derived.charge    = a.speed.value + 2;
-    system.derived.height    = 2;
-    system.wounds.max        = a.resilience.value * 2;
+      if (system.derived) {
+        system.derived.defense   = av("grace") + armorBonus;
+        system.derived.willpower = av("tenacity");
+        system.derived.walk      = av("speed");
+        system.derived.charge    = av("speed") + 2;
+        system.derived.height    = 2;
+      }
+
+      if (system.wounds) {
+        system.wounds.max = av("resilience") * 2;
+      }
+    } catch (err) {
+      console.warn("TTB | prepareDerivedData failed:", err);
+    }
   }
 
   getRollData() {
