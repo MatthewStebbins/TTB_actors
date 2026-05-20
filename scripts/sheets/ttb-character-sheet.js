@@ -3,7 +3,7 @@ const ATTRIBUTE_ORDER = [
   "charm", "cunning", "tenacity", "intellect",
 ];
 
-const SUIT_SYMBOLS = { crow: "♠", mask: "♣", ram: "♥", tome: "♦", "": "?" };
+const SUIT_SYMBOLS = { crow: "\u2660", mask: "\u2663", ram: "\u2665", tome: "\u2666", "": "?" };
 
 /** Localize a key; fall back to the last segment title-cased if not found. */
 function loc(key) {
@@ -11,6 +11,19 @@ function loc(key) {
   if (result !== key) return result;
   const segment = key.split(".").pop();
   return segment.replace(/([A-Z])/g, " $1").replace(/^./, (c) => c.toUpperCase());
+}
+
+/**
+ * Foundry's expandObject() converts array-backed form fields
+ * (e.g. name="arr.0.x") into plain objects ({"0": {x:...}}).
+ * This helper safely returns a proper Array from either form.
+ */
+function toArray(val) {
+  if (!val) return [];
+  if (Array.isArray(val)) return val;
+  return Object.keys(val)
+    .sort((a, b) => Number(a) - Number(b))
+    .map((k) => val[k]);
 }
 
 export class TtbCharacterSheet extends ActorSheet {
@@ -80,26 +93,28 @@ export class TtbCharacterSheet extends ActorSheet {
       active: i < maxWounds,
     }));
 
-    // Destiny spread with symbols
-    context.destinySpread = (system.destiny?.spread ?? []).map((card, i) => ({
+    // Destiny spread — toArray() guards against Foundry turning arrays into objects
+    const spread = toArray(system.destiny?.spread);
+    context.destinySpread = spread.map((card, i) => ({
       index: i,
-      suit:   card.suit,
-      value:  card.value,
-      symbol: SUIT_SYMBOLS[card.suit] ?? "?",
+      suit:   card.suit ?? "",
+      value:  card.value ?? "",
+      symbol: SUIT_SYMBOLS[card.suit ?? ""] ?? "?",
     }));
 
     // Destiny steps
-    context.destinySteps = (system.destiny?.steps ?? []).map((step, i) => ({
+    const steps = toArray(system.destiny?.steps);
+    context.destinySteps = steps.map((step, i) => ({
       index: i,
       number: i + 1,
-      text:      step.text,
-      completed: step.completed,
+      text:      step.text ?? "",
+      completed: step.completed ?? false,
       isCurrent: (system.destiny?.currentStep ?? 1) === i + 1,
     }));
 
-    // Pursuits & Talents (stored as arrays on the actor)
-    context.pursuits = system.pursuits ?? [];
-    context.talents  = system.talents  ?? [];
+    // Pursuits & Talents
+    context.pursuits = toArray(system.pursuits);
+    context.talents  = toArray(system.talents);
 
     // Items by type
     context.weapons   = this.actor.items.filter((i) => i.type === "weapon");
@@ -129,22 +144,54 @@ export class TtbCharacterSheet extends ActorSheet {
     html.find(".ttb-wound-box").click((ev) => {
       const idx = Number(ev.currentTarget.dataset.index);
       const current = this.actor.system.wounds.value;
-      // If clicking the last filled box, unfill it; otherwise fill up to this box
       const newVal = current === idx + 1 ? idx : idx + 1;
       this.actor.update({ "system.wounds.value": newVal });
     });
 
-    // Destiny step toggle
+    // Destiny spread value
+    html.find(".ttb-spread-value").change((ev) => {
+      const idx = Number(ev.currentTarget.dataset.index);
+      const spread = toArray(foundry.utils.deepClone(this.actor.system.destiny?.spread));
+      spread[idx] = { ...spread[idx], value: ev.currentTarget.value };
+      this.actor.update({ "system.destiny.spread": spread });
+    });
+
+    // Destiny spread suit
+    html.find(".ttb-spread-suit").change((ev) => {
+      const idx = Number(ev.currentTarget.dataset.index);
+      const spread = toArray(foundry.utils.deepClone(this.actor.system.destiny?.spread));
+      spread[idx] = { ...spread[idx], suit: ev.currentTarget.value };
+      this.actor.update({ "system.destiny.spread": spread });
+    });
+
+    // Destiny step text
+    html.find(".ttb-step-text").change((ev) => {
+      const idx = Number(ev.currentTarget.dataset.index);
+      const steps = toArray(foundry.utils.deepClone(this.actor.system.destiny?.steps));
+      steps[idx] = { ...steps[idx], text: ev.currentTarget.value };
+      this.actor.update({ "system.destiny.steps": steps });
+    });
+
+    // Destiny step toggle completed
     html.find(".ttb-destiny-step-check").click((ev) => {
       const idx = Number(ev.currentTarget.dataset.index);
-      const steps = foundry.utils.deepClone(this.actor.system.destiny.steps);
-      steps[idx].completed = !steps[idx].completed;
+      const steps = toArray(foundry.utils.deepClone(this.actor.system.destiny?.steps));
+      steps[idx] = { ...steps[idx], completed: !steps[idx].completed };
       this.actor.update({ "system.destiny.steps": steps });
+    });
+
+    // Pursuit field change
+    html.find(".ttb-pursuit-name, .ttb-pursuit-session").change((ev) => {
+      const idx   = Number(ev.currentTarget.dataset.index);
+      const field = ev.currentTarget.dataset.field;
+      const pursuits = toArray(foundry.utils.deepClone(this.actor.system.pursuits));
+      pursuits[idx] = { ...pursuits[idx], [field]: ev.currentTarget.value };
+      this.actor.update({ "system.pursuits": pursuits });
     });
 
     // Pursuit add
     html.find(".ttb-pursuit-add").click(() => {
-      const pursuits = foundry.utils.deepClone(this.actor.system.pursuits ?? []);
+      const pursuits = toArray(foundry.utils.deepClone(this.actor.system.pursuits));
       pursuits.push({ name: "", session: "" });
       this.actor.update({ "system.pursuits": pursuits });
     });
@@ -152,14 +199,23 @@ export class TtbCharacterSheet extends ActorSheet {
     // Pursuit delete
     html.find(".ttb-pursuit-delete").click((ev) => {
       const idx = Number(ev.currentTarget.dataset.index);
-      const pursuits = foundry.utils.deepClone(this.actor.system.pursuits ?? []);
+      const pursuits = toArray(foundry.utils.deepClone(this.actor.system.pursuits));
       pursuits.splice(idx, 1);
       this.actor.update({ "system.pursuits": pursuits });
     });
 
+    // Talent field change
+    html.find(".ttb-talent-name, .ttb-talent-desc").change((ev) => {
+      const idx   = Number(ev.currentTarget.dataset.index);
+      const field = ev.currentTarget.dataset.field;
+      const talents = toArray(foundry.utils.deepClone(this.actor.system.talents));
+      talents[idx] = { ...talents[idx], [field]: ev.currentTarget.value };
+      this.actor.update({ "system.talents": talents });
+    });
+
     // Talent add
     html.find(".ttb-talent-add").click(() => {
-      const talents = foundry.utils.deepClone(this.actor.system.talents ?? []);
+      const talents = toArray(foundry.utils.deepClone(this.actor.system.talents));
       talents.push({ name: "", description: "" });
       this.actor.update({ "system.talents": talents });
     });
@@ -167,7 +223,7 @@ export class TtbCharacterSheet extends ActorSheet {
     // Talent delete
     html.find(".ttb-talent-delete").click((ev) => {
       const idx = Number(ev.currentTarget.dataset.index);
-      const talents = foundry.utils.deepClone(this.actor.system.talents ?? []);
+      const talents = toArray(foundry.utils.deepClone(this.actor.system.talents));
       talents.splice(idx, 1);
       this.actor.update({ "system.talents": talents });
     });
