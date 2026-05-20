@@ -435,25 +435,39 @@
 .ttb-actors-attr-value::-webkit-inner-spin-button,
 .ttb-actors-attr-value::-webkit-outer-spin-button { opacity: 0; }
 
-/* Characteristic suit selector inside attribute card */
-.ttb-attr-suit {
-  width: 100%;
-  margin-top: 5px;
-  font-size: 0.72em;
-  font-family: inherit;
-  background: transparent;
-  border: 1px solid rgba(107,15,26,0.25);
-  border-radius: 2px;
-  color: var(--ttb-ink-mid);
-  text-align: center;
-  cursor: pointer;
-  padding: 1px 2px;
+/* Characteristic suit — 4 clickable symbol buttons */
+.ttb-attr-suit-row {
+  display: flex;
+  gap: 3px;
+  margin-top: 6px;
 }
 
-.ttb-attr-suit:has(option[value="crow"]:checked) { color: #1a1a2e; }
-.ttb-attr-suit:has(option[value="mask"]:checked) { color: #1a3a1a; }
-.ttb-attr-suit:has(option[value="ram"]:checked)  { color: var(--ttb-burgundy); }
-.ttb-attr-suit:has(option[value="tome"]:checked) { color: #8b6800; }
+.ttb-attr-suit-btn {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85em;
+  background: transparent;
+  border: 1px solid rgba(107,15,26,0.25);
+  border-radius: 3px;
+  color: var(--ttb-ink-mid);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.12s, color 0.12s, border-color 0.12s;
+  flex-shrink: 0;
+}
+
+.ttb-attr-suit-btn:hover {
+  border-color: var(--ttb-burgundy-lt);
+  background: rgba(107,15,26,0.08);
+}
+
+.ttb-attr-suit-btn.active[data-suit="crow"] { background: #2a2a5a; color: #c0c8ff; border-color: #4a4aaa; }
+.ttb-attr-suit-btn.active[data-suit="mask"] { background: #1a4a1a; color: #90e090; border-color: #3a8a3a; }
+.ttb-attr-suit-btn.active[data-suit="ram"]  { background: var(--ttb-burgundy); color: var(--ttb-parchment); border-color: var(--ttb-burgundy-lt); }
+.ttb-attr-suit-btn.active[data-suit="tome"] { background: #7a5c00; color: #ffe090; border-color: #c09020; }
 
 /* ── Skills ─────────────────────────────────────────────── */
 .ttb-actors-skill-group { margin-bottom: 14px; }
@@ -497,7 +511,7 @@
 .ttb-actors-skill-label { font-size: 0.82em; color: var(--ttb-ink-mid); flex: 1; min-width: 0; }
 
 .ttb-actors-skill-value {
-  width: 28px;
+  width: 26px;
   text-align: center;
   border: none;
   border-bottom: 1px solid var(--ttb-burgundy-lt);
@@ -524,9 +538,26 @@
 
 .ttb-skill-practiced:checked { opacity: 1; }
 
+/* Flip total badge (attribute + skill) */
+.ttb-skill-total {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 18px;
+  background: var(--ttb-burgundy);
+  color: var(--ttb-parchment);
+  font-size: 0.72em;
+  font-weight: bold;
+  border-radius: 3px;
+  flex-shrink: 0;
+  cursor: default;
+  opacity: 0.85;
+}
+
 /* Trigger text input */
 .ttb-skill-triggers {
-  width: 80px;
+  width: 110px;
   flex-shrink: 0;
   border: none;
   border-bottom: 1px dotted rgba(107,15,26,0.3);
@@ -536,10 +567,14 @@
   font-style: italic;
   color: var(--ttb-ink-mid);
   padding: 1px 2px;
+  transition: width 0.15s;
 }
 
 .ttb-skill-triggers::placeholder { color: rgba(58,32,16,0.3); }
-.ttb-skill-triggers:focus { border-bottom-color: var(--ttb-burgundy-lt); }
+.ttb-skill-triggers:focus {
+  border-bottom-color: var(--ttb-burgundy-lt);
+  width: 130px;
+}
 
 /* ── Destiny Tab ─────────────────────────────────────────── */
 .ttb-destiny { padding: 4px 0; }
@@ -806,6 +841,14 @@
 /* ── Pursuits & Talents Tab ─────────────────────────────── */
 .ttb-pursuits-talents { padding: 4px 0; }
 
+/* 2-column layout for Talents + Other Abilities */
+.ttb-pursuits-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 16px;
+  align-items: start;
+}
+
 .ttb-talent-entry {
   background: var(--ttb-parchment-dk);
   border: 1px solid rgba(107,15,26,0.25);
@@ -1004,11 +1047,10 @@
   border: 1px solid var(--ttb-gold-dk);
   color: var(--ttb-gold-dk);
   border-radius: 3px;
-  width: 20px;
-  height: 20px;
-  font-size: 1em;
-  line-height: 1;
   cursor: pointer;
+  font-size: 0.85em;
+  width: 18px;
+  height: 18px;
   padding: 0;
   margin-left: auto;
 }
