@@ -332,8 +332,8 @@
 }
 
 .ttb-actors.sheet .tabs .item {
-  padding: 6px 12px;
-  font-size: 0.78em;
+  padding: 6px 10px;
+  font-size: 0.74em;
   font-variant: small-caps;
   letter-spacing: 0.08em;
   color: var(--ttb-gold-dk);
@@ -458,21 +458,21 @@
   padding: 0 0 0 6px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 3px 20px;
+  gap: 3px 12px;
 }
 
 .ttb-actors-skill-item {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 4px;
   border-bottom: 1px dotted rgba(107,15,26,0.2);
   padding-bottom: 2px;
 }
 
-.ttb-actors-skill-label { font-size: 0.82em; color: var(--ttb-ink-mid); flex: 1; }
+.ttb-actors-skill-label { font-size: 0.82em; color: var(--ttb-ink-mid); flex: 1; min-width: 0; }
 
 .ttb-actors-skill-value {
-  width: 32px;
+  width: 28px;
   text-align: center;
   border: none;
   border-bottom: 1px solid var(--ttb-burgundy-lt);
@@ -480,11 +480,41 @@
   font-size: 0.9em;
   font-weight: bold;
   color: var(--ttb-burgundy);
+  flex-shrink: 0;
   -moz-appearance: textfield;
 }
 
 .ttb-actors-skill-value::-webkit-inner-spin-button,
 .ttb-actors-skill-value::-webkit-outer-spin-button { opacity: 0; }
+
+/* Practice tracker checkbox */
+.ttb-skill-practiced {
+  width: 11px;
+  height: 11px;
+  flex-shrink: 0;
+  cursor: pointer;
+  accent-color: var(--ttb-gold-dk);
+  opacity: 0.55;
+}
+
+.ttb-skill-practiced:checked { opacity: 1; }
+
+/* Trigger text input */
+.ttb-skill-triggers {
+  width: 80px;
+  flex-shrink: 0;
+  border: none;
+  border-bottom: 1px dotted rgba(107,15,26,0.3);
+  background: transparent;
+  font-family: inherit;
+  font-size: 0.72em;
+  font-style: italic;
+  color: var(--ttb-ink-mid);
+  padding: 1px 2px;
+}
+
+.ttb-skill-triggers::placeholder { color: rgba(58,32,16,0.3); }
+.ttb-skill-triggers:focus { border-bottom-color: var(--ttb-burgundy-lt); }
 
 /* ── Destiny Tab ─────────────────────────────────────────── */
 .ttb-destiny { padding: 4px 0; }
@@ -599,6 +629,153 @@
   font-size: 0.82em;
   font-variant: small-caps;
   color: var(--ttb-burgundy);
+}
+
+/* ── Personal Agenda ─────────────────────────────────────── */
+.ttb-personal-agenda {
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(107,15,26,0.2);
+}
+
+.ttb-agenda-note {
+  font-size: 0.78em;
+  font-style: italic;
+  font-variant: normal;
+  color: var(--ttb-ink-mid);
+  opacity: 0.7;
+  letter-spacing: 0;
+}
+
+.ttb-agenda-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.ttb-agenda-row textarea {
+  flex: 1;
+  background: var(--ttb-parchment-dk);
+  border: 1px solid rgba(107,15,26,0.25);
+  border-radius: 3px;
+  padding: 6px 8px;
+  font-family: inherit;
+  font-size: 0.88em;
+  color: var(--ttb-ink);
+  resize: vertical;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+.ttb-agenda-complete-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.72em;
+  font-variant: small-caps;
+  color: var(--ttb-burgundy);
+  white-space: nowrap;
+  padding-top: 4px;
+}
+
+.ttb-agenda-complete-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--ttb-gold-dk);
+  cursor: pointer;
+}
+
+/* ── Grimoire Tab ────────────────────────────────────────── */
+.ttb-grimoire { padding: 4px 0; }
+
+.ttb-grimoire-hint {
+  font-size: 0.82em;
+  font-style: italic;
+  color: var(--ttb-ink-mid);
+  opacity: 0.65;
+  margin: 0 0 10px;
+}
+
+.ttb-grimoire-entry {
+  background: var(--ttb-parchment-dk);
+  border: 1px solid rgba(90,26,107,0.3);
+  border-radius: 4px;
+  padding: 8px 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(90,26,107,0.1);
+}
+
+.ttb-grimoire-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.ttb-grimoire-theory {
+  width: 130px;
+  flex-shrink: 0;
+  font-size: 0.78em;
+  font-variant: small-caps;
+  color: var(--ttb-power-lt);
+  font-weight: bold;
+}
+
+.ttb-grimoire-name {
+  flex: 1;
+  font-size: 0.92em;
+  font-weight: bold;
+}
+
+.ttb-grimoire-field {
+  border: none;
+  border-bottom: 1px solid rgba(90,26,107,0.3);
+  background: transparent;
+  font-family: inherit;
+  color: var(--ttb-ink);
+  padding: 2px 3px;
+}
+
+.ttb-grimoire-field:focus { border-bottom-color: var(--ttb-power-lt); }
+
+.ttb-grimoire-stats {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+}
+
+.ttb-grimoire-stats span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.ttb-grimoire-stats label {
+  font-size: 0.72em;
+  font-variant: small-caps;
+  font-weight: bold;
+  color: var(--ttb-power-lt);
+  white-space: nowrap;
+}
+
+.ttb-grimoire-stats input {
+  width: 72px;
+  font-size: 0.82em;
+}
+
+.ttb-grimoire-desc {
+  width: 100%;
+  border: none;
+  border-top: 1px dotted rgba(90,26,107,0.2);
+  background: transparent;
+  font-family: inherit;
+  font-size: 0.85em;
+  color: var(--ttb-ink);
+  resize: vertical;
+  box-sizing: border-box;
+  padding-top: 5px;
 }
 
 /* ── Pursuits & Talents Tab ─────────────────────────────── */
