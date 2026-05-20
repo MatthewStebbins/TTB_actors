@@ -1058,12 +1058,15 @@
 .ttb-add-btn:hover { color: var(--ttb-gold); border-color: var(--ttb-gold); }
 
 .ttb-delete-btn {
+  width: auto;
+  flex-shrink: 0;
   background: transparent;
   border: none;
   color: var(--ttb-burgundy-lt);
   cursor: pointer;
   font-size: 0.85em;
   padding: 0 3px;
+  line-height: 1;
 }
 
 .ttb-delete-btn:hover { color: #cc0000; }
