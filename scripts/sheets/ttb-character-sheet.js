@@ -17,24 +17,32 @@ export class TtbCharacterSheet extends ActorSheet {
   getData() {
     const context = super.getData();
     context.system = this.actor.system;
+
     context.attributes = ATTRIBUTE_ORDER.map((key) => ({
       key,
-      label: `TTB.Attribute.${key}`,
+      label: game.i18n.localize(`TTB.Attribute.${key}`),
       value: this.actor.system.attributes[key].value,
     }));
+
     context.skillsByAttribute = ATTRIBUTE_ORDER.map((attrKey) => ({
-      attribute: attrKey,
-      label: `TTB.Attribute.${attrKey}`,
+      attrKey,
+      label: game.i18n.localize(`TTB.Attribute.${attrKey}`),
       skills: Object.entries(this.actor.system.skills)
         .filter(([, skill]) => skill.attribute === attrKey)
-        .map(([key, skill]) => ({ key, label: `TTB.Skill.${key}`, value: skill.value })),
+        .map(([key, skill]) => ({
+          key,
+          label: game.i18n.localize(`TTB.Skill.${key}`),
+          value: skill.value,
+        })),
     }));
+
     context.aspectOptions = [
-      { value: "crow", label: "TTB.Aspect.crow" },
-      { value: "mask", label: "TTB.Aspect.mask" },
-      { value: "ram",  label: "TTB.Aspect.ram"  },
-      { value: "tome", label: "TTB.Aspect.tome" },
+      { value: "crow", label: game.i18n.localize("TTB.Aspect.crow") },
+      { value: "mask", label: game.i18n.localize("TTB.Aspect.mask") },
+      { value: "ram",  label: game.i18n.localize("TTB.Aspect.ram")  },
+      { value: "tome", label: game.i18n.localize("TTB.Aspect.tome") },
     ];
+
     return context;
   }
 
