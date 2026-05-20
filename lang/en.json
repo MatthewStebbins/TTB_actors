@@ -39,22 +39,37 @@
   "TTB.Aspect.ram":  "Ram",
   "TTB.Aspect.tome": "Tome",
 
-  "TTB.Conditions.burning":   "Burning",
-  "TTB.Conditions.slow":      "Slow",
-  "TTB.Conditions.fast":      "Fast",
-  "TTB.Conditions.stunned":   "Stunned",
-  "TTB.Conditions.paralyzed": "Paralyzed",
-  "TTB.Conditions.focused":   "Focused",
-  "TTB.Conditions.defensive": "Defensive",
+  "TTB.Conditions.burning":     "Burning",
+  "TTB.Conditions.slow":        "Slow",
+  "TTB.Conditions.fast":        "Fast",
+  "TTB.Conditions.stunned":     "Stunned",
+  "TTB.Conditions.paralyzed":   "Paralyzed",
+  "TTB.Conditions.focused":     "Focused",
+  "TTB.Conditions.defensive":   "Defensive",
+  "TTB.Conditions.distracted":  "Distracted",
+  "TTB.Conditions.immobilized": "Immobilized",
 
-  "TTB.Destiny.fateSpread":   "Fate Spread",
-  "TTB.Destiny.steps":        "Destiny Steps",
-  "TTB.Destiny.currentStep":  "Current Step",
+  "TTB.Destiny.fateSpread":      "Fate Spread",
+  "TTB.Destiny.steps":           "Destiny Steps",
+  "TTB.Destiny.currentStep":     "Current Step",
+  "TTB.Destiny.agenda":          "Personal Agenda",
+  "TTB.Destiny.agendaComplete":  "Agenda Complete",
 
   "TTB.Pursuits.label":           "Pursuits",
   "TTB.Pursuits.session":         "Session",
   "TTB.Talents.label":            "Talents",
   "TTB.ManifestPowers.label":     "Manifested Powers",
+
+  "TTB.Grimoire.label":       "Grimoire",
+  "TTB.Grimoire.theory":      "Theory",
+  "TTB.Grimoire.name":        "Spell Name",
+  "TTB.Grimoire.cost":        "Cost",
+  "TTB.Grimoire.range":       "Range",
+  "TTB.Grimoire.duration":    "Duration",
+  "TTB.Grimoire.description": "Description",
+
+  "TTB.Skills.practiced": "Practiced",
+  "TTB.Skills.triggers":  "Triggers",
 
   "TTB.Equipment.weapons":    "Weapons",
   "TTB.Equipment.armor":      "Armor",
@@ -104,6 +119,7 @@
   "TTB.Tab.attributes": "Attributes",
   "TTB.Tab.skills":      "Skills",
   "TTB.Tab.destiny":     "Destiny",
+  "TTB.Tab.grimoire":    "Grimoire",
   "TTB.Tab.pursuits":    "Pursuits",
   "TTB.Tab.equipment":   "Equipment",
   "TTB.Tab.biography":   "Biography",
@@ -118,8 +134,8 @@
   "TTB.ItemType.armor":  "Armor",
   "TTB.ItemType.gear":   "Gear",
 
-  "TTB.Sheet.character": "Through the Breach — Fated",
-  "TTB.Sheet.item":      "Through the Breach — Item",
+  "TTB.Sheet.character": "Through the Breach -- Fated",
+  "TTB.Sheet.item":      "Through the Breach -- Item",
 
   "TTB.ActorTypes.character": "Fated"
 }

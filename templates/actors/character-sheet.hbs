@@ -102,6 +102,14 @@
       <input type="checkbox" name="system.conditions.paralyzed" {{#if conditions.paralyzed}}checked{{/if}} id="cond-paralyzed" />
       <label for="cond-paralyzed">Paralyzed</label>
     </div>
+    <div class="ttb-condition ttb-condition-bool {{#if conditions.distracted}}active{{/if}}">
+      <input type="checkbox" name="system.conditions.distracted" {{#if conditions.distracted}}checked{{/if}} id="cond-distracted" />
+      <label for="cond-distracted">Distracted</label>
+    </div>
+    <div class="ttb-condition ttb-condition-bool {{#if conditions.immobilized}}active{{/if}}">
+      <input type="checkbox" name="system.conditions.immobilized" {{#if conditions.immobilized}}checked{{/if}} id="cond-immobilized" />
+      <label for="cond-immobilized">Immobilized</label>
+    </div>
     <div class="ttb-condition ttb-condition-number">
       <label>Focused</label>
       <input type="number" name="system.conditions.focused" value="{{conditions.focused}}" min="0" max="10" />
@@ -117,6 +125,7 @@
     <a class="item" data-tab="attributes">Attributes</a>
     <a class="item" data-tab="skills">Skills</a>
     <a class="item" data-tab="destiny">Destiny</a>
+    <a class="item" data-tab="grimoire">Grimoire</a>
     <a class="item" data-tab="pursuits">Pursuits</a>
     <a class="item" data-tab="equipment">Equipment</a>
     <a class="item" data-tab="biography">Biography</a>
@@ -143,8 +152,12 @@
           <ul class="ttb-actors-skill-list">
             {{#each skills}}
               <li class="ttb-actors-skill-item">
+                <input type="checkbox" class="ttb-skill-practiced" data-skill="{{key}}"
+                  {{#if practiced}}checked{{/if}} title="Practiced this session" />
                 <label class="ttb-actors-skill-label">{{label}}</label>
                 <input class="ttb-actors-skill-value" type="number" value="{{value}}" min="0" max="5" data-skill="{{key}}" />
+                <input class="ttb-skill-triggers" type="text" value="{{triggers}}" data-skill="{{key}}"
+                  placeholder="Triggers..." title="Suit triggers for this skill" />
               </li>
             {{/each}}
           </ul>
@@ -192,6 +205,72 @@
           <label>Current Step</label>
           <input type="number" name="system.destiny.currentStep"
             value="{{system.destiny.currentStep}}" min="1" max="5" style="width:48px" />
+        </div>
+
+        <!-- Personal Agenda -->
+        <div class="ttb-personal-agenda">
+          <h3 class="ttb-section-header">Personal Agenda
+            <span class="ttb-agenda-note">(earn scrip on completion)</span>
+          </h3>
+          <div class="ttb-agenda-row">
+            <textarea name="system.destiny.agenda" rows="2"
+              placeholder="Short-term personal goal for this session...">{{destinyAgenda}}</textarea>
+            <label class="ttb-agenda-complete-label">
+              <input type="checkbox" name="system.destiny.agendaComplete"
+                {{#if destinyAgendaComplete}}checked{{/if}} />
+              Complete
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grimoire Tab -->
+    <div class="tab" data-tab="grimoire">
+      <div class="ttb-grimoire">
+        <div class="ttb-section">
+          <h3 class="ttb-section-header">
+            Grimoire
+            <button type="button" class="ttb-grimoire-add ttb-add-btn" title="Add spell">+</button>
+          </h3>
+          <p class="ttb-grimoire-hint">Record spells and magical effects for Arcanists, Resurrectionists, and other magic users.</p>
+          {{#if grimoireEmpty}}
+            <p class="ttb-empty-notice">No spells recorded yet. Click + to add one.</p>
+          {{else}}
+            {{#each grimoire}}
+              <div class="ttb-grimoire-entry" data-index="{{@index}}">
+                <div class="ttb-grimoire-header">
+                  <input type="text" class="ttb-grimoire-field ttb-grimoire-theory"
+                    placeholder="Theory (e.g. Necromancy)" value="{{theory}}"
+                    data-grimoire-index="{{@index}}" data-grimoire-field="theory" />
+                  <input type="text" class="ttb-grimoire-field ttb-grimoire-name"
+                    placeholder="Spell / Effect name" value="{{name}}"
+                    data-grimoire-index="{{@index}}" data-grimoire-field="name" />
+                  <button type="button" class="ttb-grimoire-delete ttb-delete-btn" data-index="{{@index}}">&times;</button>
+                </div>
+                <div class="ttb-grimoire-stats">
+                  <span>
+                    <label>Cost</label>
+                    <input type="text" class="ttb-grimoire-field" value="{{cost}}"
+                      placeholder="e.g. 1 AP" data-grimoire-index="{{@index}}" data-grimoire-field="cost" />
+                  </span>
+                  <span>
+                    <label>Range</label>
+                    <input type="text" class="ttb-grimoire-field" value="{{range}}"
+                      placeholder="e.g. 6&#39;" data-grimoire-index="{{@index}}" data-grimoire-field="range" />
+                  </span>
+                  <span>
+                    <label>Duration</label>
+                    <input type="text" class="ttb-grimoire-field" value="{{duration}}"
+                      placeholder="e.g. Instant" data-grimoire-index="{{@index}}" data-grimoire-field="duration" />
+                  </span>
+                </div>
+                <textarea class="ttb-grimoire-desc" rows="2"
+                  placeholder="Effect description..."
+                  data-grimoire-index="{{@index}}" data-grimoire-field="description">{{description}}</textarea>
+              </div>
+            {{/each}}
+          {{/if}}
         </div>
       </div>
     </div>

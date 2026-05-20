@@ -25,7 +25,7 @@ function loc(key) {
 function repairArrays(expanded) {
   const sys = expanded?.system;
   if (!sys) return expanded;
-  for (const field of ["pursuits", "talents", "manifestedPowers"]) {
+  for (const field of ["pursuits", "talents", "manifestedPowers", "grimoire"]) {
     if (sys[field] && !Array.isArray(sys[field])) {
       sys[field] = Object.values(sys[field]);
     }
@@ -52,8 +52,8 @@ export class TtbCharacterSheet extends ActorSheet {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["ttb-actors", "sheet", "actor"],
       template: "systems/ttb-actors/templates/actors/character-sheet.hbs",
-      width: 760,
-      height: 720,
+      width: 820,
+      height: 740,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "attributes" }],
     });
   }
@@ -92,7 +92,13 @@ export class TtbCharacterSheet extends ActorSheet {
       label: loc(`TTB.Attribute.${attrKey}`),
       skills: Object.entries(skills)
         .filter(([, s]) => s?.attribute === attrKey)
-        .map(([key, s]) => ({ key, label: loc(`TTB.Skill.${key}`), value: s?.value ?? 0 })),
+        .map(([key, s]) => ({
+          key,
+          label:    loc(`TTB.Skill.${key}`),
+          value:    s?.value    ?? 0,
+          triggers: s?.triggers ?? "",
+          practiced: !!s?.practiced,
+        })),
     }));
 
     context.aspectOptions = [
@@ -128,13 +134,15 @@ export class TtbCharacterSheet extends ActorSheet {
     // Conditions
     const cond = system.conditions ?? {};
     context.conditions = {
-      burning:   Number(cond.burning)  || 0,
-      slow:      !!cond.slow,
-      fast:      !!cond.fast,
-      stunned:   !!cond.stunned,
-      paralyzed: !!cond.paralyzed,
-      focused:   Number(cond.focused)  || 0,
-      defensive: !!cond.defensive,
+      burning:     Number(cond.burning)    || 0,
+      slow:        !!cond.slow,
+      fast:        !!cond.fast,
+      stunned:     !!cond.stunned,
+      paralyzed:   !!cond.paralyzed,
+      focused:     Number(cond.focused)    || 0,
+      defensive:   !!cond.defensive,
+      distracted:  !!cond.distracted,
+      immobilized: !!cond.immobilized,
     };
 
     // Destiny — always pad to 5 entries
@@ -153,6 +161,9 @@ export class TtbCharacterSheet extends ActorSheet {
       return { index: i, number: i + 1, text: step.text ?? "", completed: !!step.completed, isCurrent: currentStep === i + 1 };
     });
 
+    context.destinyAgenda         = destiny.agenda         ?? "";
+    context.destinyAgendaComplete = !!destiny.agendaComplete;
+
     // Pursuits / Talents / Manifested Powers
     context.pursuits         = toArray(system.pursuits);
     context.talents          = toArray(system.talents);
@@ -160,6 +171,10 @@ export class TtbCharacterSheet extends ActorSheet {
     context.pursuitsEmpty         = context.pursuits.length         === 0;
     context.talentsEmpty          = context.talents.length          === 0;
     context.manifestedPowersEmpty = context.manifestedPowers.length === 0;
+
+    // Grimoire
+    context.grimoire      = toArray(system.grimoire);
+    context.grimoireEmpty = context.grimoire.length === 0;
 
     // Items by type
     context.weapons   = allItems.filter((i) => i.type === "weapon");
@@ -187,6 +202,16 @@ export class TtbCharacterSheet extends ActorSheet {
     html.find(".ttb-actors-skill-value").change((ev) => {
       const skill = ev.currentTarget.dataset.skill;
       this.actor.update({ [`system.skills.${skill}.value`]: Number(ev.currentTarget.value) });
+    });
+
+    html.find(".ttb-skill-practiced").change((ev) => {
+      const skill = ev.currentTarget.dataset.skill;
+      this.actor.update({ [`system.skills.${skill}.practiced`]: ev.currentTarget.checked });
+    });
+
+    html.find(".ttb-skill-triggers").change((ev) => {
+      const skill = ev.currentTarget.dataset.skill;
+      this.actor.update({ [`system.skills.${skill}.triggers`]: ev.currentTarget.value });
     });
 
     html.find(".ttb-wound-box").click((ev) => {
@@ -249,6 +274,19 @@ export class TtbCharacterSheet extends ActorSheet {
       const powers = toArray(foundry.utils.deepClone(this.actor.system.manifestedPowers));
       powers.splice(idx, 1);
       this.actor.update({ "system.manifestedPowers": powers });
+    });
+
+    // Grimoire
+    html.find(".ttb-grimoire-add").click(() => {
+      const grimoire = toArray(foundry.utils.deepClone(this.actor.system.grimoire));
+      grimoire.push({ theory: "", name: "", cost: "", range: "", duration: "", description: "" });
+      this.actor.update({ "system.grimoire": grimoire });
+    });
+    html.find(".ttb-grimoire-delete").click((ev) => {
+      const idx      = Number(ev.currentTarget.dataset.index);
+      const grimoire = toArray(foundry.utils.deepClone(this.actor.system.grimoire));
+      grimoire.splice(idx, 1);
+      this.actor.update({ "system.grimoire": grimoire });
     });
 
     // Items
