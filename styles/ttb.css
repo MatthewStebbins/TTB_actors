@@ -1,38 +1,103 @@
-/* ===========================
-   Through the Breach System
-   =========================== */
+/* ============================================================
+   Through the Breach — Character Sheet Styles
+   Dark Victorian/Western Steampunk aesthetic
+   ============================================================ */
 
-.ttb-actors.sheet {
-  font-family: "Palatino Linotype", Palatino, serif;
+:root {
+  --ttb-parchment:    #f0e6cc;
+  --ttb-parchment-dk: #e0d0a8;
+  --ttb-leather:      #2a1505;
+  --ttb-leather-mid:  #3d2010;
+  --ttb-burgundy:     #6b0f1a;
+  --ttb-burgundy-lt:  #8b2030;
+  --ttb-gold:         #c9a84c;
+  --ttb-gold-dk:      #9a7830;
+  --ttb-ink:          #1a0d05;
+  --ttb-ink-mid:      #3a2010;
+  --ttb-shadow:       rgba(0, 0, 0, 0.45);
 }
 
-/* Header */
+/* ── Base sheet ─────────────────────────────────────────── */
+.ttb-actors.sheet {
+  font-family: "Palatino Linotype", Palatino, "Book Antiqua", serif;
+  background: var(--ttb-parchment);
+  color: var(--ttb-ink);
+  overflow-y: auto;
+}
+
+.ttb-actors.sheet *:focus {
+  outline: 1px solid var(--ttb-gold);
+  outline-offset: 1px;
+}
+
+/* Scrollbar */
+.ttb-actors.sheet ::-webkit-scrollbar { width: 6px; }
+.ttb-actors.sheet ::-webkit-scrollbar-track { background: var(--ttb-parchment-dk); }
+.ttb-actors.sheet ::-webkit-scrollbar-thumb { background: var(--ttb-burgundy-lt); border-radius: 3px; }
+
+/* ── Ornamental Divider ─────────────────────────────────── */
+.ttb-actors-divider {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 0;
+  color: var(--ttb-gold-dk);
+  font-size: 0.8em;
+  letter-spacing: 0.2em;
+}
+.ttb-actors-divider::before,
+.ttb-actors-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--ttb-gold-dk), transparent);
+}
+
+/* ── Header ─────────────────────────────────────────────── */
 .ttb-actors-header {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
-  margin-bottom: 8px;
+  gap: 12px;
+  padding: 10px 12px 6px;
+  background: linear-gradient(180deg, var(--ttb-leather) 0%, var(--ttb-leather-mid) 100%);
+  border-bottom: 2px solid var(--ttb-gold-dk);
+  box-shadow: 0 3px 8px var(--ttb-shadow);
 }
 
 .ttb-actors-header .profile-img {
-  width: 80px;
-  height: 80px;
+  width: 84px;
+  height: 84px;
   object-fit: cover;
-  border: 2px solid #8b0000;
+  border: 2px solid var(--ttb-gold);
   cursor: pointer;
+  box-shadow: 0 0 0 1px var(--ttb-burgundy), 2px 2px 6px var(--ttb-shadow);
+  flex-shrink: 0;
 }
 
 .ttb-actors-header-fields {
   flex: 1;
+  min-width: 0;
+}
+
+.ttb-actors-header-fields .charname {
+  margin: 0 0 6px;
 }
 
 .ttb-actors-header-fields .charname input {
   width: 100%;
-  font-size: 1.4em;
+  font-size: 1.5em;
   font-weight: bold;
+  font-variant: small-caps;
+  letter-spacing: 0.06em;
   border: none;
-  border-bottom: 2px solid #8b0000;
+  border-bottom: 1px solid var(--ttb-gold);
   background: transparent;
+  color: var(--ttb-parchment);
+  text-shadow: 1px 1px 3px var(--ttb-shadow);
+}
+
+.ttb-actors-header-fields .charname input::placeholder {
+  color: rgba(240, 230, 204, 0.4);
 }
 
 .ttb-actors-header-details {
@@ -40,25 +105,39 @@
   align-items: center;
   gap: 8px;
   flex-wrap: wrap;
-  margin-top: 6px;
 }
 
 .ttb-actors-header-details label {
   font-weight: bold;
-  font-size: 0.8em;
+  font-size: 0.72em;
   text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ttb-gold);
 }
 
-/* Derived stats bar */
+.ttb-actors-header-details input,
+.ttb-actors-header-details select {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid var(--ttb-gold-dk);
+  color: var(--ttb-parchment);
+  padding: 2px 5px;
+  font-family: inherit;
+  font-size: 0.85em;
+  border-radius: 2px;
+}
+
+.ttb-actors-header-details select option {
+  background: var(--ttb-leather);
+  color: var(--ttb-parchment);
+}
+
+/* ── Derived Stats Bar ──────────────────────────────────── */
 .ttb-actors-derived {
   display: flex;
-  align-items: center;
-  gap: 14px;
-  background: #2b1a1a;
-  color: #e8d8b0;
-  border-radius: 4px;
-  padding: 6px 12px;
-  margin-bottom: 6px;
+  align-items: stretch;
+  gap: 0;
+  background: var(--ttb-leather-mid);
+  border-bottom: 2px solid var(--ttb-gold-dk);
   flex-wrap: wrap;
 }
 
@@ -66,139 +145,258 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 5px 12px;
+  border-right: 1px solid rgba(201, 168, 76, 0.25);
+  color: var(--ttb-parchment);
+  flex: 1;
+  min-width: 56px;
+}
+
+.ttb-actors-derived-item:last-child {
+  border-right: none;
 }
 
 .ttb-actors-derived-label {
-  font-size: 0.65em;
+  font-size: 0.6em;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  opacity: 0.8;
+  letter-spacing: 0.1em;
+  color: var(--ttb-gold);
+  white-space: nowrap;
 }
 
 .ttb-actors-derived-value {
-  font-size: 1.2em;
+  font-size: 1.3em;
   font-weight: bold;
+  line-height: 1.2;
 }
 
+/* Wounds — right-justified in derived bar */
 .ttb-actors-wounds {
   display: flex;
   align-items: center;
   gap: 4px;
-  margin-left: auto;
-  font-size: 1em;
+  padding: 5px 10px;
+  background: rgba(107, 15, 26, 0.5);
+  border-left: 1px solid var(--ttb-burgundy-lt);
+  color: var(--ttb-parchment);
+  flex-shrink: 0;
+}
+
+.ttb-actors-wounds .ttb-actors-derived-label {
+  color: #e06070;
 }
 
 .ttb-actors-wounds-value {
-  width: 40px;
+  width: 38px;
   text-align: center;
-  background: transparent;
-  border: 1px solid #e8d8b0;
-  color: #e8d8b0;
-  border-radius: 3px;
+  background: rgba(0,0,0,0.25);
+  border: 1px solid var(--ttb-burgundy-lt);
+  color: #ffc8c8;
+  font-weight: bold;
+  font-size: 1.1em;
+  border-radius: 2px;
+  padding: 0 2px;
 }
 
-/* Attributes grid */
+/* ── Tabs ────────────────────────────────────────────────── */
+.ttb-actors.sheet .tabs {
+  display: flex;
+  gap: 0;
+  background: var(--ttb-leather);
+  border-bottom: 2px solid var(--ttb-gold-dk);
+  padding: 0 8px;
+}
+
+.ttb-actors.sheet .tabs .item {
+  padding: 6px 16px;
+  font-size: 0.8em;
+  font-variant: small-caps;
+  letter-spacing: 0.1em;
+  color: var(--ttb-gold-dk);
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  transition: color 0.15s, border-color 0.15s;
+  cursor: pointer;
+}
+
+.ttb-actors.sheet .tabs .item:hover {
+  color: var(--ttb-gold);
+}
+
+.ttb-actors.sheet .tabs .item.active {
+  color: var(--ttb-parchment);
+  border-bottom-color: var(--ttb-gold);
+}
+
+/* ── Sheet body ─────────────────────────────────────────── */
+.ttb-actors.sheet .sheet-body {
+  padding: 10px;
+  background: var(--ttb-parchment);
+}
+
+/* ── Attributes Grid ────────────────────────────────────── */
 .ttb-actors-attributes {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
-  padding: 10px;
+  padding: 4px 0 8px;
 }
 
 .ttb-actors-attr {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #f5f0e8;
-  border: 1px solid #8b0000;
-  border-radius: 4px;
-  padding: 8px 4px;
+  background: var(--ttb-parchment-dk);
+  border: 1px solid var(--ttb-burgundy);
+  border-radius: 3px;
+  padding: 8px 4px 6px;
+  position: relative;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.4), 0 1px 3px var(--ttb-shadow);
+  /* Ornate corner accents via outline trick */
+  outline: 1px solid var(--ttb-gold-dk);
+  outline-offset: -3px;
 }
 
 .ttb-actors-attr-label {
-  font-size: 0.75em;
+  font-size: 0.72em;
   text-transform: uppercase;
   font-weight: bold;
-  letter-spacing: 0.04em;
-  color: #5a2a2a;
+  letter-spacing: 0.08em;
+  color: var(--ttb-burgundy);
+  font-variant: small-caps;
+  margin-bottom: 4px;
 }
 
 .ttb-actors-attr-value {
-  width: 48px;
+  width: 52px;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.6em;
   font-weight: bold;
   border: none;
-  border-bottom: 2px solid #8b0000;
+  border-bottom: 2px solid var(--ttb-burgundy);
   background: transparent;
+  color: var(--ttb-ink);
+  -moz-appearance: textfield;
 }
 
-/* Skills */
+.ttb-actors-attr-value::-webkit-inner-spin-button,
+.ttb-actors-attr-value::-webkit-outer-spin-button { opacity: 0; }
+
+/* ── Skills ─────────────────────────────────────────────── */
 .ttb-actors-skill-group {
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .ttb-actors-skill-group-header {
-  font-size: 0.85em;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: #8b0000;
-  border-bottom: 1px solid #8b0000;
-  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82em;
+  font-variant: small-caps;
+  letter-spacing: 0.1em;
+  color: var(--ttb-burgundy);
+  margin: 0 0 5px;
+}
+
+.ttb-actors-skill-group-header::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, var(--ttb-burgundy), transparent);
+  opacity: 0.5;
 }
 
 .ttb-actors-skill-list {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 6px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 4px 16px;
+  gap: 3px 20px;
 }
 
 .ttb-actors-skill-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1px dotted rgba(107, 15, 26, 0.2);
+  padding-bottom: 2px;
 }
 
 .ttb-actors-skill-label {
-  font-size: 0.85em;
+  font-size: 0.82em;
+  color: var(--ttb-ink-mid);
   flex: 1;
 }
 
 .ttb-actors-skill-value {
-  width: 36px;
+  width: 32px;
   text-align: center;
   border: none;
-  border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid var(--ttb-burgundy-lt);
   background: transparent;
+  font-size: 0.9em;
+  font-weight: bold;
+  color: var(--ttb-burgundy);
+  -moz-appearance: textfield;
 }
 
-/* Details tab */
+.ttb-actors-skill-value::-webkit-inner-spin-button,
+.ttb-actors-skill-value::-webkit-outer-spin-button { opacity: 0; }
+
+/* ── Details Tab ─────────────────────────────────────────── */
 .ttb-actors-details {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 16px;
+  padding: 4px 0 8px;
+}
+
+.ttb-actors-details .ttb-full-row {
+  grid-column: 1 / -1;
 }
 
 .ttb-actors-details label {
+  display: block;
   font-weight: bold;
-  font-size: 0.8em;
+  font-size: 0.72em;
   text-transform: uppercase;
-  color: #5a2a2a;
+  letter-spacing: 0.1em;
+  color: var(--ttb-burgundy);
+  font-variant: small-caps;
+  margin-bottom: 2px;
 }
 
 .ttb-actors-details input,
 .ttb-actors-details textarea {
   width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  padding: 4px;
+  background: var(--ttb-parchment-dk);
+  border: 1px solid rgba(107, 15, 26, 0.35);
+  border-radius: 2px;
+  padding: 4px 6px;
   font-family: inherit;
+  font-size: 0.9em;
+  color: var(--ttb-ink);
+  box-sizing: border-box;
+}
+
+.ttb-actors-details input:focus,
+.ttb-actors-details textarea:focus {
+  border-color: var(--ttb-burgundy);
+  background: #f8f0dc;
 }
 
 .ttb-actors-details textarea {
   resize: vertical;
+  min-height: 80px;
+}
+
+/* ── Misc input resets ──────────────────────────────────── */
+.ttb-actors.sheet input[type="number"] {
+  -moz-appearance: textfield;
+}
+.ttb-actors.sheet input[type="number"]::-webkit-inner-spin-button,
+.ttb-actors.sheet input[type="number"]::-webkit-outer-spin-button {
+  opacity: 0;
 }
