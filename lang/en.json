@@ -14,14 +14,32 @@
   "TTB.Derived.charge":    "Charge",
   "TTB.Derived.height":    "Height",
 
-  "TTB.Wounds":   "Wounds",
-  "TTB.Station":  "Station",
-  "TTB.Aspect":   "Aspect",
+  "TTB.Wounds":        "Wounds",
+  "TTB.SeriousWound":  "Serious Wound",
+  "TTB.Station":       "Station",
+  "TTB.Aspect":        "Aspect",
+  "TTB.PlayerName":    "Player",
+  "TTB.Pursuit":       "Pursuit",
+  "TTB.Size":          "Size",
+  "TTB.Scrip":         "Scrip",
 
   "TTB.Aspect.crow": "Crow",
   "TTB.Aspect.mask": "Mask",
   "TTB.Aspect.ram":  "Ram",
   "TTB.Aspect.tome": "Tome",
+
+  "TTB.Destiny.fateSpread":   "Fate Spread",
+  "TTB.Destiny.steps":        "Destiny Steps",
+  "TTB.Destiny.currentStep":  "Current Step",
+
+  "TTB.Pursuits.label":       "Pursuits",
+  "TTB.Pursuits.session":     "Session",
+  "TTB.Talents.label":        "Talents",
+
+  "TTB.Equipment.weapons":    "Weapons",
+  "TTB.Equipment.armor":      "Armor",
+  "TTB.Equipment.inventory":  "Inventory",
+  "TTB.Equipment.scrip":      "Scrip (Guilders)",
 
   "TTB.Skill.athletics":        "Athletics",
   "TTB.Skill.intimidation":     "Intimidation",
@@ -65,11 +83,20 @@
 
   "TTB.Tab.attributes": "Attributes",
   "TTB.Tab.skills":      "Skills",
-  "TTB.Tab.details":     "Details",
+  "TTB.Tab.destiny":     "Destiny",
+  "TTB.Tab.pursuits":    "Pursuits",
+  "TTB.Tab.equipment":   "Equipment",
 
   "TTB.Details.age":         "Age",
   "TTB.Details.gender":      "Gender",
   "TTB.Details.description": "Description",
+
+  "TTB.ItemType.weapon": "Weapon",
+  "TTB.ItemType.armor":  "Armor",
+  "TTB.ItemType.gear":   "Gear",
+
+  "TTB.Sheet.character": "Through the Breach — Fated",
+  "TTB.Sheet.item":      "Through the Breach — Item",
 
   "TTB.ActorTypes.character": "Fated"
 }

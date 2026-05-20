@@ -1,0 +1,19 @@
+<form class="ttb-actors sheet item" autocomplete="off">
+  <header class="ttb-actors-header sheet-header">
+    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+    <div class="ttb-actors-header-fields">
+      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" /></h1>
+      <div class="ttb-actors-header-details">
+        <label>Type</label><span style="color:var(--ttb-gold)">Gear</span>
+      </div>
+    </div>
+  </header>
+  <section class="ttb-item-body">
+    <div class="ttb-item-fields">
+      <label>Quantity</label>
+      <input type="number" name="system.quantity" value="{{system.quantity}}" min="0" />
+      <label>Description</label>
+      <textarea name="system.description" rows="4">{{system.description}}</textarea>
+    </div>
+  </section>
+</form>

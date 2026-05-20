@@ -30,28 +30,9 @@
   outline-offset: 1px;
 }
 
-/* Scrollbar */
 .ttb-actors.sheet ::-webkit-scrollbar { width: 6px; }
 .ttb-actors.sheet ::-webkit-scrollbar-track { background: var(--ttb-parchment-dk); }
 .ttb-actors.sheet ::-webkit-scrollbar-thumb { background: var(--ttb-burgundy-lt); border-radius: 3px; }
-
-/* ── Ornamental Divider ─────────────────────────────────── */
-.ttb-actors-divider {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin: 6px 0;
-  color: var(--ttb-gold-dk);
-  font-size: 0.8em;
-  letter-spacing: 0.2em;
-}
-.ttb-actors-divider::before,
-.ttb-actors-divider::after {
-  content: "";
-  flex: 1;
-  height: 1px;
-  background: linear-gradient(to right, transparent, var(--ttb-gold-dk), transparent);
-}
 
 /* ── Header ─────────────────────────────────────────────── */
 .ttb-actors-header {
@@ -74,14 +55,9 @@
   flex-shrink: 0;
 }
 
-.ttb-actors-header-fields {
-  flex: 1;
-  min-width: 0;
-}
+.ttb-actors-header-fields { flex: 1; min-width: 0; }
 
-.ttb-actors-header-fields .charname {
-  margin: 0 0 6px;
-}
+.ttb-actors-header-fields .charname { margin: 0 0 6px; }
 
 .ttb-actors-header-fields .charname input {
   width: 100%;
@@ -96,14 +72,12 @@
   text-shadow: 1px 1px 3px var(--ttb-shadow);
 }
 
-.ttb-actors-header-fields .charname input::placeholder {
-  color: rgba(240, 230, 204, 0.4);
-}
+.ttb-actors-header-fields .charname input::placeholder { color: rgba(240,230,204,0.4); }
 
 .ttb-actors-header-details {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   flex-wrap: wrap;
 }
 
@@ -135,7 +109,6 @@
 .ttb-actors-derived {
   display: flex;
   align-items: stretch;
-  gap: 0;
   background: var(--ttb-leather-mid);
   border-bottom: 2px solid var(--ttb-gold-dk);
   flex-wrap: wrap;
@@ -146,14 +119,10 @@
   flex-direction: column;
   align-items: center;
   padding: 5px 12px;
-  border-right: 1px solid rgba(201, 168, 76, 0.25);
+  border-right: 1px solid rgba(201,168,76,0.25);
   color: var(--ttb-parchment);
   flex: 1;
   min-width: 56px;
-}
-
-.ttb-actors-derived-item:last-child {
-  border-right: none;
 }
 
 .ttb-actors-derived-label {
@@ -170,59 +139,97 @@
   line-height: 1.2;
 }
 
-/* Wounds — right-justified in derived bar */
 .ttb-actors-wounds {
   display: flex;
   align-items: center;
   gap: 4px;
   padding: 5px 10px;
-  background: rgba(107, 15, 26, 0.5);
+  background: rgba(107,15,26,0.5);
   border-left: 1px solid var(--ttb-burgundy-lt);
   color: var(--ttb-parchment);
   flex-shrink: 0;
 }
 
-.ttb-actors-wounds .ttb-actors-derived-label {
-  color: #e06070;
+.ttb-actors-wounds .ttb-actors-derived-label { color: #e06070; }
+
+/* ── Wound Track ─────────────────────────────────────────── */
+.ttb-wound-track {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 10px;
+  background: var(--ttb-parchment-dk);
+  border-bottom: 1px solid rgba(107,15,26,0.3);
+  flex-wrap: wrap;
 }
 
-.ttb-actors-wounds-value {
-  width: 38px;
-  text-align: center;
-  background: rgba(0,0,0,0.25);
-  border: 1px solid var(--ttb-burgundy-lt);
-  color: #ffc8c8;
+.ttb-wound-box {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--ttb-burgundy);
+  border-radius: 3px;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.1s;
+}
+
+.ttb-wound-box.filled {
+  background: var(--ttb-burgundy);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.4);
+}
+
+.ttb-wound-box.inactive {
+  opacity: 0.25;
+  cursor: default;
+}
+
+.ttb-serious-wound {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 12px;
+  flex: 1;
+}
+
+.ttb-serious-wound label {
+  font-size: 0.72em;
+  font-variant: small-caps;
   font-weight: bold;
-  font-size: 1.1em;
-  border-radius: 2px;
-  padding: 0 2px;
+  color: var(--ttb-burgundy);
+  white-space: nowrap;
+}
+
+.ttb-serious-wound input {
+  flex: 1;
+  border: none;
+  border-bottom: 1px solid var(--ttb-burgundy-lt);
+  background: transparent;
+  font-family: inherit;
+  font-size: 0.9em;
 }
 
 /* ── Tabs ────────────────────────────────────────────────── */
 .ttb-actors.sheet .tabs {
   display: flex;
-  gap: 0;
   background: var(--ttb-leather);
   border-bottom: 2px solid var(--ttb-gold-dk);
   padding: 0 8px;
 }
 
 .ttb-actors.sheet .tabs .item {
-  padding: 6px 16px;
-  font-size: 0.8em;
+  padding: 6px 14px;
+  font-size: 0.78em;
   font-variant: small-caps;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   color: var(--ttb-gold-dk);
   text-decoration: none;
   border-bottom: 3px solid transparent;
   margin-bottom: -2px;
-  transition: color 0.15s, border-color 0.15s;
   cursor: pointer;
 }
 
-.ttb-actors.sheet .tabs .item:hover {
-  color: var(--ttb-gold);
-}
+.ttb-actors.sheet .tabs .item:hover { color: var(--ttb-gold); }
 
 .ttb-actors.sheet .tabs .item.active {
   color: var(--ttb-parchment);
@@ -233,7 +240,32 @@
 .ttb-actors.sheet .sheet-body {
   padding: 10px;
   background: var(--ttb-parchment);
+  overflow-y: auto;
 }
+
+/* ── Section headers ─────────────────────────────────────── */
+.ttb-section-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82em;
+  font-variant: small-caps;
+  letter-spacing: 0.1em;
+  color: var(--ttb-burgundy);
+  margin: 0 0 6px;
+  border-bottom: 1px solid rgba(107,15,26,0.3);
+  padding-bottom: 3px;
+}
+
+.ttb-section-header::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, var(--ttb-burgundy), transparent);
+  opacity: 0.4;
+}
+
+.ttb-section { margin-bottom: 14px; }
 
 /* ── Attributes Grid ────────────────────────────────────── */
 .ttb-actors-attributes {
@@ -251,9 +283,7 @@
   border: 1px solid var(--ttb-burgundy);
   border-radius: 3px;
   padding: 8px 4px 6px;
-  position: relative;
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.4), 0 1px 3px var(--ttb-shadow);
-  /* Ornate corner accents via outline trick */
   outline: 1px solid var(--ttb-gold-dk);
   outline-offset: -3px;
 }
@@ -284,9 +314,7 @@
 .ttb-actors-attr-value::-webkit-outer-spin-button { opacity: 0; }
 
 /* ── Skills ─────────────────────────────────────────────── */
-.ttb-actors-skill-group {
-  margin-bottom: 14px;
-}
+.ttb-actors-skill-group { margin-bottom: 14px; }
 
 .ttb-actors-skill-group-header {
   display: flex;
@@ -320,15 +348,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px dotted rgba(107, 15, 26, 0.2);
+  border-bottom: 1px dotted rgba(107,15,26,0.2);
   padding-bottom: 2px;
 }
 
-.ttb-actors-skill-label {
-  font-size: 0.82em;
-  color: var(--ttb-ink-mid);
-  flex: 1;
-}
+.ttb-actors-skill-label { font-size: 0.82em; color: var(--ttb-ink-mid); flex: 1; }
 
 .ttb-actors-skill-value {
   width: 32px;
@@ -345,58 +369,290 @@
 .ttb-actors-skill-value::-webkit-inner-spin-button,
 .ttb-actors-skill-value::-webkit-outer-spin-button { opacity: 0; }
 
-/* ── Details Tab ─────────────────────────────────────────── */
-.ttb-actors-details {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 6px 16px;
-  padding: 4px 0 8px;
+/* ── Destiny Tab ─────────────────────────────────────────── */
+.ttb-destiny { padding: 4px 0; }
+
+.ttb-destiny-spread {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
 }
 
-.ttb-actors-details .ttb-full-row {
-  grid-column: 1 / -1;
-}
-
-.ttb-actors-details label {
-  display: block;
-  font-weight: bold;
-  font-size: 0.72em;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--ttb-burgundy);
-  font-variant: small-caps;
-  margin-bottom: 2px;
-}
-
-.ttb-actors-details input,
-.ttb-actors-details textarea {
-  width: 100%;
+.ttb-fate-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: var(--ttb-parchment-dk);
-  border: 1px solid rgba(107, 15, 26, 0.35);
+  border: 1px solid var(--ttb-burgundy);
+  border-radius: 4px;
+  padding: 6px 8px;
+  width: 72px;
+  box-shadow: 0 2px 4px var(--ttb-shadow);
+  outline: 1px solid var(--ttb-gold-dk);
+  outline-offset: -2px;
+}
+
+.ttb-fate-suit {
+  font-size: 1.8em;
+  line-height: 1;
+  color: var(--ttb-burgundy);
+}
+
+.ttb-fate-value {
+  width: 100%;
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: bold;
+  border: none;
+  border-bottom: 1px solid var(--ttb-burgundy-lt);
+  background: transparent;
+  color: var(--ttb-ink);
+  margin: 4px 0;
+}
+
+.ttb-fate-card select {
+  font-size: 0.7em;
+  width: 100%;
+  background: transparent;
+  border: 1px solid var(--ttb-gold-dk);
+  color: var(--ttb-ink);
+  border-radius: 2px;
+}
+
+.ttb-destiny-steps { display: flex; flex-direction: column; gap: 6px; margin-bottom: 10px; }
+
+.ttb-destiny-step {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--ttb-parchment-dk);
+  border: 1px solid rgba(107,15,26,0.25);
+  border-radius: 3px;
+  padding: 5px 8px;
+}
+
+.ttb-destiny-step.current {
+  border-color: var(--ttb-gold-dk);
+  box-shadow: 0 0 0 1px var(--ttb-gold-dk);
+}
+
+.ttb-destiny-step.completed { opacity: 0.6; }
+
+.ttb-step-num {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ttb-burgundy);
+  color: var(--ttb-parchment);
+  border-radius: 50%;
+  font-size: 0.75em;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.ttb-destiny-step input {
+  flex: 1;
+  border: none;
+  border-bottom: 1px dotted var(--ttb-burgundy-lt);
+  background: transparent;
+  font-family: inherit;
+  font-size: 0.88em;
+  font-style: italic;
+}
+
+.ttb-destiny-step-check {
+  background: transparent;
+  border: 1px solid var(--ttb-burgundy-lt);
+  color: var(--ttb-burgundy);
+  border-radius: 3px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  font-size: 0.9em;
+  flex-shrink: 0;
+}
+
+.ttb-destiny-current {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82em;
+  font-variant: small-caps;
+  color: var(--ttb-burgundy);
+}
+
+/* ── Pursuits & Talents Tab ─────────────────────────────── */
+.ttb-pursuits-talents { padding: 4px 0; }
+
+.ttb-talent-entry {
+  background: var(--ttb-parchment-dk);
+  border: 1px solid rgba(107,15,26,0.25);
+  border-radius: 3px;
+  padding: 6px 8px;
+  margin-bottom: 8px;
+}
+
+.ttb-talent-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.ttb-talent-header input {
+  flex: 1;
+  font-weight: bold;
+  font-variant: small-caps;
+  border: none;
+  border-bottom: 1px solid var(--ttb-burgundy-lt);
+  background: transparent;
+  font-size: 0.95em;
+}
+
+.ttb-talent-entry textarea {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 0.85em;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.ttb-empty-notice {
+  font-style: italic;
+  font-size: 0.85em;
+  color: var(--ttb-ink-mid);
+  opacity: 0.6;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* ── Equipment Tab ──────────────────────────────────────── */
+.ttb-equipment { padding: 4px 0; }
+
+.ttb-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.83em;
+  margin-bottom: 4px;
+}
+
+.ttb-table th {
+  text-align: left;
+  font-variant: small-caps;
+  font-weight: bold;
+  letter-spacing: 0.06em;
+  color: var(--ttb-burgundy);
+  border-bottom: 1px solid var(--ttb-burgundy-lt);
+  padding: 2px 6px;
+}
+
+.ttb-table td {
+  padding: 3px 6px;
+  border-bottom: 1px dotted rgba(107,15,26,0.15);
+  vertical-align: middle;
+}
+
+.ttb-table tr:hover td { background: rgba(107,15,26,0.04); }
+
+.ttb-item-controls {
+  display: flex;
+  gap: 4px;
+  justify-content: flex-end;
+}
+
+.ttb-scrip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  font-variant: small-caps;
+  font-size: 0.9em;
+  font-weight: bold;
+  color: var(--ttb-burgundy);
+}
+
+.ttb-scrip input {
+  width: 80px;
+  border: 1px solid var(--ttb-burgundy-lt);
+  border-radius: 2px;
+  padding: 3px 6px;
+  background: var(--ttb-parchment-dk);
+  text-align: right;
+  font-size: 1em;
+}
+
+/* ── Add / Delete buttons ───────────────────────────────── */
+.ttb-add-btn {
+  background: transparent;
+  border: 1px solid var(--ttb-gold-dk);
+  color: var(--ttb-gold-dk);
+  border-radius: 3px;
+  width: 20px;
+  height: 20px;
+  font-size: 1em;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+  margin-left: auto;
+}
+
+.ttb-add-btn:hover { color: var(--ttb-gold); border-color: var(--ttb-gold); }
+
+.ttb-delete-btn {
+  background: transparent;
+  border: none;
+  color: var(--ttb-burgundy-lt);
+  cursor: pointer;
+  font-size: 0.85em;
+  padding: 0 3px;
+}
+
+.ttb-delete-btn:hover { color: #cc0000; }
+
+/* ── Item Sheet ─────────────────────────────────────────── */
+.ttb-item-body {
+  padding: 12px;
+  background: var(--ttb-parchment);
+}
+
+.ttb-item-fields {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 6px 12px;
+  align-items: center;
+}
+
+.ttb-item-fields label {
+  font-variant: small-caps;
+  font-weight: bold;
+  font-size: 0.8em;
+  color: var(--ttb-burgundy);
+  text-align: right;
+}
+
+.ttb-item-fields input,
+.ttb-item-fields textarea {
+  background: var(--ttb-parchment-dk);
+  border: 1px solid rgba(107,15,26,0.35);
   border-radius: 2px;
   padding: 4px 6px;
   font-family: inherit;
   font-size: 0.9em;
   color: var(--ttb-ink);
-  box-sizing: border-box;
 }
 
-.ttb-actors-details input:focus,
-.ttb-actors-details textarea:focus {
-  border-color: var(--ttb-burgundy);
-  background: #f8f0dc;
-}
-
-.ttb-actors-details textarea {
+.ttb-item-fields textarea {
+  grid-column: 1 / -1;
   resize: vertical;
-  min-height: 80px;
+  min-height: 60px;
 }
 
-/* ── Misc input resets ──────────────────────────────────── */
-.ttb-actors.sheet input[type="number"] {
-  -moz-appearance: textfield;
-}
+/* ── Input resets ───────────────────────────────────────── */
+.ttb-actors.sheet input[type="number"] { -moz-appearance: textfield; }
 .ttb-actors.sheet input[type="number"]::-webkit-inner-spin-button,
-.ttb-actors.sheet input[type="number"]::-webkit-outer-spin-button {
-  opacity: 0;
-}
+.ttb-actors.sheet input[type="number"]::-webkit-outer-spin-button { opacity: 0; }

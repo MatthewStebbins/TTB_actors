@@ -1,0 +1,21 @@
+<form class="ttb-actors sheet item" autocomplete="off">
+  <header class="ttb-actors-header sheet-header">
+    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+    <div class="ttb-actors-header-fields">
+      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" /></h1>
+      <div class="ttb-actors-header-details">
+        <label>Type</label><span style="color:var(--ttb-gold)">Armor</span>
+      </div>
+    </div>
+  </header>
+  <section class="ttb-item-body">
+    <div class="ttb-item-fields">
+      <label>Defense Bonus</label>
+      <input type="number" name="system.defenseBonus" value="{{system.defenseBonus}}" min="0" />
+      <label>Special</label>
+      <input type="text" name="system.special" value="{{system.special}}" />
+      <label>Equipped</label>
+      <input type="checkbox" name="system.equipped" {{#if system.equipped}}checked{{/if}} />
+    </div>
+  </section>
+</form>

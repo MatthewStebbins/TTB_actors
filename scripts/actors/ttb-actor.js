@@ -1,20 +1,29 @@
 export class TtbActor extends Actor {
-  /** Compute derived stats after base data is prepared. */
   prepareDerivedData() {
     super.prepareDerivedData();
     if (this.type !== "character") return;
 
-    const attrs = this.system.attributes;
-    if (!attrs) return;
+    const system = this.system;
+    const a = system.attributes;
 
-    this.system.derived ??= {};
-    this.system.derived.defense   = attrs.grace.value;
-    this.system.derived.willpower = attrs.tenacity.value;
-    this.system.derived.walk      = attrs.speed.value;
-    this.system.derived.charge    = attrs.speed.value + 2;
-    this.system.derived.height    = 2;
+    // Sum defense bonus from all equipped armor items
+    const armorBonus = this.items
+      .filter((i) => i.type === "armor" && i.system.equipped)
+      .reduce((sum, i) => sum + (i.system.defenseBonus ?? 0), 0);
 
-    this.system.wounds ??= { value: 0, max: 0 };
-    this.system.wounds.max = attrs.resilience.value * 2;
+    system.derived.defense   = a.grace.value + armorBonus;
+    system.derived.willpower = a.tenacity.value;
+    system.derived.walk      = a.speed.value;
+    system.derived.charge    = a.speed.value + 2;
+    system.derived.height    = 2;
+    system.wounds.max        = a.resilience.value * 2;
+  }
+
+  getRollData() {
+    const data = super.getRollData();
+    data.attributes = this.system.attributes;
+    data.skills     = this.system.skills;
+    data.derived    = this.system.derived;
+    return data;
   }
 }
