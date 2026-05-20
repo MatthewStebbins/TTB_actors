@@ -1,6 +1,6 @@
 # Through the Breach — FoundryVTT System
 
-> **Keep this file current.** Update it whenever new conventions, bugs, gotchas, or architectural decisions are established. It is the primary knowledge source for Copilot agents working on this repo.
+> **Self-updating instructions:** This file MUST be updated automatically by Copilot agents whenever new conventions, critical bugs/fixes, architectural decisions, or gotchas are discovered. Do not wait for the user to ask — if something important is learned during a session, update this file as part of the work.
 
 This repo is a **FoundryVTT Game System** (`system.json`) for the *Through the Breach* TTRPG by Wyrd Miniatures. The goal is to grow it into a full system capable of running a complete TTB adventure.
 
@@ -8,7 +8,7 @@ This repo is a **FoundryVTT Game System** (`system.json`) for the *Through the B
 
 | Path | Purpose |
 |------|---------|
-| `system.json` | Foundry system manifest. `id` must stay `ttb-actors` (matches install folder). Current version: `0.1.0`. |
+| `system.json` | Foundry system manifest. `id` must stay `ttb-actors` (matches install folder). Current version: `0.1.1`. Verified on Foundry **v13**. |
 | `template.json` | Declarative data model for all Actor/Item types. Edit this to add new fields — no JS needed for data shape. |
 | `scripts/main.js` | ES module entry point. Registers actor class, sheets, and preloads templates via `Hooks.once("init")`. |
 | `scripts/actors/` | `Actor` document subclasses. Derived stats computed in `prepareDerivedData()`. |
@@ -160,7 +160,7 @@ git tag v0.x.x         # trigger release.yml → produces system.zip on GitHub
 git push origin v0.x.x
 ```
 
-**Note**: `pwsh.exe` (PowerShell 6+) is not available in the Copilot agent environment. Use `git` CLI and GitHub API tools for all file operations.
+**Note**: `pwsh.exe` (PowerShell 6+) is not available in the Copilot agent environment. Use `git` CLI and GitHub API tools for all file operations. Commits pushed via GitHub API require the user to run `git pull` locally before tagging.
 
 ## Release Process
 
