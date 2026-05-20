@@ -139,11 +139,14 @@
           <div class="ttb-actors-attr">
             <label class="ttb-actors-attr-label">{{label}}</label>
             <input class="ttb-actors-attr-value" type="number" value="{{value}}" min="1" max="5" data-attr="{{key}}" />
-            <select class="ttb-attr-suit" data-attr="{{key}}" title="Characteristic suit for {{label}}">
-              {{#each ../suitOptions}}
-                <option value="{{value}}" {{#if (eq value ../../suit)}}selected{{/if}}>{{label}}</option>
+            <div class="ttb-attr-suit-row">
+              {{#each suitButtons}}
+                <button type="button"
+                  class="ttb-attr-suit-btn{{#if active}} active{{/if}}"
+                  data-attr="{{../key}}" data-suit="{{value}}"
+                  title="{{label}}">{{symbol}}</button>
               {{/each}}
-            </select>
+            </div>
           </div>
         {{/each}}
       </div>
@@ -161,6 +164,7 @@
                   {{#if practiced}}checked{{/if}} title="Practiced this session" />
                 <label class="ttb-actors-skill-label">{{label}}</label>
                 <input class="ttb-actors-skill-value" type="number" value="{{value}}" min="0" max="5" data-skill="{{key}}" />
+                <span class="ttb-skill-total" title="{{attrVal}} + {{value}}">{{total}}</span>
                 <input class="ttb-skill-triggers" type="text" value="{{triggers}}" data-skill="{{key}}"
                   placeholder="Triggers..." title="Suit triggers for this skill" />
               </li>
@@ -283,6 +287,8 @@
     <!-- Pursuits, Talents, Manifested Powers, and Other Abilities Tab -->
     <div class="tab" data-tab="pursuits">
       <div class="ttb-pursuits-talents">
+
+        <!-- Pursuits — full width -->
         <div class="ttb-section">
           <h3 class="ttb-section-header">
             Pursuits
@@ -306,26 +312,51 @@
           {{/if}}
         </div>
 
-        <div class="ttb-section">
-          <h3 class="ttb-section-header">
-            Talents
-            <button type="button" class="ttb-talent-add ttb-add-btn" title="Add talent">+</button>
-          </h3>
-          {{#if talentsEmpty}}
-            <p class="ttb-empty-notice">No talents yet. Click + to add one.</p>
-          {{else}}
-            {{#each talents}}
-              <div class="ttb-talent-entry">
-                <div class="ttb-talent-header">
-                  <input type="text" name="system.talents.{{@index}}.name" value="{{name}}" placeholder="Talent name" />
-                  <button type="button" class="ttb-talent-delete ttb-delete-btn" data-index="{{@index}}">&times;</button>
+        <!-- Talents + Other Abilities — 2 columns -->
+        <div class="ttb-pursuits-cols">
+          <div class="ttb-section">
+            <h3 class="ttb-section-header">
+              Talents
+              <button type="button" class="ttb-talent-add ttb-add-btn" title="Add talent">+</button>
+            </h3>
+            {{#if talentsEmpty}}
+              <p class="ttb-empty-notice">No talents yet. Click + to add one.</p>
+            {{else}}
+              {{#each talents}}
+                <div class="ttb-talent-entry">
+                  <div class="ttb-talent-header">
+                    <input type="text" name="system.talents.{{@index}}.name" value="{{name}}" placeholder="Talent name" />
+                    <button type="button" class="ttb-talent-delete ttb-delete-btn" data-index="{{@index}}">&times;</button>
+                  </div>
+                  <textarea name="system.talents.{{@index}}.description" rows="2" placeholder="Talent description...">{{description}}</textarea>
                 </div>
-                <textarea name="system.talents.{{@index}}.description" rows="2" placeholder="Talent description...">{{description}}</textarea>
-              </div>
-            {{/each}}
-          {{/if}}
+              {{/each}}
+            {{/if}}
+          </div>
+
+          <div class="ttb-section">
+            <h3 class="ttb-section-header ttb-other-abilities-header">
+              Other Abilities
+              <button type="button" class="ttb-ability-add ttb-add-btn" title="Add ability">+</button>
+            </h3>
+            <p class="ttb-other-abilities-hint">Origin abilities, Station perks, species traits, and other innate capabilities.</p>
+            {{#if otherAbilitiesEmpty}}
+              <p class="ttb-empty-notice">No other abilities yet. Click + to add one.</p>
+            {{else}}
+              {{#each otherAbilities}}
+                <div class="ttb-talent-entry ttb-ability-entry">
+                  <div class="ttb-talent-header">
+                    <input type="text" name="system.otherAbilities.{{@index}}.name" value="{{name}}" placeholder="Ability name" />
+                    <button type="button" class="ttb-ability-delete ttb-delete-btn" data-index="{{@index}}">&times;</button>
+                  </div>
+                  <textarea name="system.otherAbilities.{{@index}}.description" rows="2" placeholder="Ability description...">{{description}}</textarea>
+                </div>
+              {{/each}}
+            {{/if}}
+          </div>
         </div>
 
+        <!-- Manifested Powers — full width below -->
         <div class="ttb-section">
           <h3 class="ttb-section-header ttb-manifested-header">
             Manifested Powers
@@ -346,26 +377,6 @@
           {{/if}}
         </div>
 
-        <div class="ttb-section">
-          <h3 class="ttb-section-header ttb-other-abilities-header">
-            Other Abilities
-            <button type="button" class="ttb-ability-add ttb-add-btn" title="Add ability">+</button>
-          </h3>
-          <p class="ttb-other-abilities-hint">Origin abilities, Station perks, species traits, and other innate capabilities.</p>
-          {{#if otherAbilitiesEmpty}}
-            <p class="ttb-empty-notice">No other abilities yet. Click + to add one.</p>
-          {{else}}
-            {{#each otherAbilities}}
-              <div class="ttb-talent-entry ttb-ability-entry">
-                <div class="ttb-talent-header">
-                  <input type="text" name="system.otherAbilities.{{@index}}.name" value="{{name}}" placeholder="Ability name" />
-                  <button type="button" class="ttb-ability-delete ttb-delete-btn" data-index="{{@index}}">&times;</button>
-                </div>
-                <textarea name="system.otherAbilities.{{@index}}.description" rows="2" placeholder="Ability description...">{{description}}</textarea>
-              </div>
-            {{/each}}
-          {{/if}}
-        </div>
       </div>
     </div>
 
