@@ -3,6 +3,7 @@
   "title": "Through the Breach Actors",
   "description": "Small helper utilities for creating Through the Breach actors in FoundryVTT.",
   "version": "1.0.0",
+  "library": true,
   "compatibility": {
     "minimum": "10",
     "verified": "12"
