@@ -16,18 +16,30 @@ export class TtbCharacterSheet extends ActorSheet {
 
   getData() {
     const context = super.getData();
-    context.system = this.actor.system;
+    const system = this.actor.system;
+    context.system = system;
+
+    // Compute derived stats fresh from current attribute values every render
+    const a = system.attributes;
+    context.derived = {
+      defense:   a.grace.value,
+      willpower: a.tenacity.value,
+      walk:      a.speed.value,
+      charge:    a.speed.value + 2,
+      height:    2,
+      woundsMax: a.resilience.value * 2,
+    };
 
     context.attributes = ATTRIBUTE_ORDER.map((key) => ({
       key,
       label: game.i18n.localize(`TTB.Attribute.${key}`),
-      value: this.actor.system.attributes[key].value,
+      value: a[key].value,
     }));
 
     context.skillsByAttribute = ATTRIBUTE_ORDER.map((attrKey) => ({
       attrKey,
       label: game.i18n.localize(`TTB.Attribute.${attrKey}`),
-      skills: Object.entries(this.actor.system.skills)
+      skills: Object.entries(system.skills)
         .filter(([, skill]) => skill.attribute === attrKey)
         .map(([key, skill]) => ({
           key,
