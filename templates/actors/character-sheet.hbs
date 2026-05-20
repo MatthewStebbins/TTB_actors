@@ -1,0 +1,101 @@
+<form class="ttb-actors sheet" autocomplete="off">
+  <!-- Header -->
+  <header class="ttb-actors-header sheet-header">
+    <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
+    <div class="ttb-actors-header-fields">
+      <h1 class="charname">
+        <input name="name" type="text" value="{{actor.name}}" placeholder="Name" />
+      </h1>
+      <div class="ttb-actors-header-details">
+        <label>{{localize "TTB.Station"}}</label>
+        <input type="text" name="system.station" value="{{system.station}}" />
+        <label>{{localize "TTB.Aspect"}}</label>
+        <select name="system.aspect">
+          {{#each aspectOptions}}
+            <option value="{{value}}" {{#if (eq value ../system.aspect)}}selected{{/if}}>{{localize label}}</option>
+          {{/each}}
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <!-- Derived Stats Bar -->
+  <div class="ttb-actors-derived">
+    <div class="ttb-actors-derived-item">
+      <span class="ttb-actors-derived-label">{{localize "TTB.Derived.defense"}}</span>
+      <span class="ttb-actors-derived-value">{{system.derived.defense}}</span>
+    </div>
+    <div class="ttb-actors-derived-item">
+      <span class="ttb-actors-derived-label">{{localize "TTB.Derived.willpower"}}</span>
+      <span class="ttb-actors-derived-value">{{system.derived.willpower}}</span>
+    </div>
+    <div class="ttb-actors-derived-item">
+      <span class="ttb-actors-derived-label">{{localize "TTB.Derived.walk"}}</span>
+      <span class="ttb-actors-derived-value">{{system.derived.walk}}</span>
+    </div>
+    <div class="ttb-actors-derived-item">
+      <span class="ttb-actors-derived-label">{{localize "TTB.Derived.charge"}}</span>
+      <span class="ttb-actors-derived-value">{{system.derived.charge}}</span>
+    </div>
+    <div class="ttb-actors-derived-item">
+      <span class="ttb-actors-derived-label">{{localize "TTB.Derived.height"}}</span>
+      <span class="ttb-actors-derived-value">{{system.derived.height}}</span>
+    </div>
+    <div class="ttb-actors-wounds">
+      <span class="ttb-actors-derived-label">{{localize "TTB.Wounds"}}</span>
+      <input class="ttb-actors-wounds-value" type="number" value="{{system.wounds.value}}" min="0" max="{{system.wounds.max}}" />
+      <span>/</span>
+      <span class="ttb-actors-derived-value">{{system.wounds.max}}</span>
+    </div>
+  </div>
+
+  <!-- Tabs -->
+  <nav class="sheet-tabs tabs">
+    <a class="item" data-tab="attributes">{{localize "TTB.Tab.attributes"}}</a>
+    <a class="item" data-tab="skills">{{localize "TTB.Tab.skills"}}</a>
+    <a class="item" data-tab="details">{{localize "TTB.Tab.details"}}</a>
+  </nav>
+
+  <section class="sheet-body">
+    <!-- Attributes Tab -->
+    <div class="tab" data-tab="attributes">
+      <div class="ttb-actors-attributes">
+        {{#each attributes}}
+          <div class="ttb-actors-attr">
+            <label class="ttb-actors-attr-label">{{localize label}}</label>
+            <input class="ttb-actors-attr-value" type="number" value="{{value}}" min="1" max="5" data-attr="{{key}}" />
+          </div>
+        {{/each}}
+      </div>
+    </div>
+
+    <!-- Skills Tab -->
+    <div class="tab" data-tab="skills">
+      {{#each skillsByAttribute}}
+        <div class="ttb-actors-skill-group">
+          <h3 class="ttb-actors-skill-group-header">{{localize attribute}}</h3>
+          <ul class="ttb-actors-skill-list">
+            {{#each skills}}
+              <li class="ttb-actors-skill-item">
+                <label class="ttb-actors-skill-label">{{localize label}}</label>
+                <input class="ttb-actors-skill-value" type="number" value="{{value}}" min="0" max="5" data-skill="{{key}}" />
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+      {{/each}}
+    </div>
+
+    <!-- Details Tab -->
+    <div class="tab" data-tab="details">
+      <div class="ttb-actors-details">
+        <label>{{localize "TTB.Details.age"}}</label>
+        <input type="text" name="system.details.age" value="{{system.details.age}}" />
+        <label>{{localize "TTB.Details.gender"}}</label>
+        <input type="text" name="system.details.gender" value="{{system.details.gender}}" />
+        <label>{{localize "TTB.Details.description"}}</label>
+        <textarea name="system.details.description" rows="6">{{system.details.description}}</textarea>
+      </div>
+    </div>
+  </section>
+</form>

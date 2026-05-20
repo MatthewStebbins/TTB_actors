@@ -1,0 +1,204 @@
+/* ===========================
+   Through the Breach System
+   =========================== */
+
+.ttb-actors.sheet {
+  font-family: "Palatino Linotype", Palatino, serif;
+}
+
+/* Header */
+.ttb-actors-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.ttb-actors-header .profile-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border: 2px solid #8b0000;
+  cursor: pointer;
+}
+
+.ttb-actors-header-fields {
+  flex: 1;
+}
+
+.ttb-actors-header-fields .charname input {
+  width: 100%;
+  font-size: 1.4em;
+  font-weight: bold;
+  border: none;
+  border-bottom: 2px solid #8b0000;
+  background: transparent;
+}
+
+.ttb-actors-header-details {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+.ttb-actors-header-details label {
+  font-weight: bold;
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+
+/* Derived stats bar */
+.ttb-actors-derived {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #2b1a1a;
+  color: #e8d8b0;
+  border-radius: 4px;
+  padding: 6px 12px;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+}
+
+.ttb-actors-derived-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ttb-actors-derived-label {
+  font-size: 0.65em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.8;
+}
+
+.ttb-actors-derived-value {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.ttb-actors-wounds {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+  font-size: 1em;
+}
+
+.ttb-actors-wounds-value {
+  width: 40px;
+  text-align: center;
+  background: transparent;
+  border: 1px solid #e8d8b0;
+  color: #e8d8b0;
+  border-radius: 3px;
+}
+
+/* Attributes grid */
+.ttb-actors-attributes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+
+.ttb-actors-attr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f5f0e8;
+  border: 1px solid #8b0000;
+  border-radius: 4px;
+  padding: 8px 4px;
+}
+
+.ttb-actors-attr-label {
+  font-size: 0.75em;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  color: #5a2a2a;
+}
+
+.ttb-actors-attr-value {
+  width: 48px;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  border: none;
+  border-bottom: 2px solid #8b0000;
+  background: transparent;
+}
+
+/* Skills */
+.ttb-actors-skill-group {
+  margin-bottom: 12px;
+}
+
+.ttb-actors-skill-group-header {
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #8b0000;
+  border-bottom: 1px solid #8b0000;
+  margin-bottom: 4px;
+}
+
+.ttb-actors-skill-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px 16px;
+}
+
+.ttb-actors-skill-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ttb-actors-skill-label {
+  font-size: 0.85em;
+  flex: 1;
+}
+
+.ttb-actors-skill-value {
+  width: 36px;
+  text-align: center;
+  border: none;
+  border-bottom: 1px solid #aaa;
+  background: transparent;
+}
+
+/* Details tab */
+.ttb-actors-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px;
+}
+
+.ttb-actors-details label {
+  font-weight: bold;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  color: #5a2a2a;
+}
+
+.ttb-actors-details input,
+.ttb-actors-details textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 4px;
+  font-family: inherit;
+}
+
+.ttb-actors-details textarea {
+  resize: vertical;
+}

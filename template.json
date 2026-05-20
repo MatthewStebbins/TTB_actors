@@ -1,0 +1,88 @@
+{
+  "Actor": {
+    "types": ["character"],
+    "templates": {
+      "attributes": {
+        "attributes": {
+          "might":      { "value": 2 },
+          "grace":      { "value": 2 },
+          "speed":      { "value": 2 },
+          "resilience": { "value": 2 },
+          "charm":      { "value": 2 },
+          "cunning":    { "value": 2 },
+          "tenacity":   { "value": 2 },
+          "intellect":  { "value": 2 }
+        }
+      },
+      "skills": {
+        "skills": {
+          "athletics":       { "value": 0, "attribute": "might" },
+          "intimidation":    { "value": 0, "attribute": "might" },
+          "labor":           { "value": 0, "attribute": "might" },
+          "pugilism":        { "value": 0, "attribute": "might" },
+          "toughness":       { "value": 0, "attribute": "might" },
+          "acrobatics":      { "value": 0, "attribute": "grace" },
+          "disguise":        { "value": 0, "attribute": "grace" },
+          "evade":           { "value": 0, "attribute": "grace" },
+          "prestidigitation":{ "value": 0, "attribute": "grace" },
+          "ride":            { "value": 0, "attribute": "grace" },
+          "escapology":      { "value": 0, "attribute": "speed" },
+          "pistol":          { "value": 0, "attribute": "speed" },
+          "rifle":           { "value": 0, "attribute": "speed" },
+          "thrownWeapons":   { "value": 0, "attribute": "speed" },
+          "carouse":         { "value": 0, "attribute": "resilience" },
+          "endurance":       { "value": 0, "attribute": "resilience" },
+          "mettle":          { "value": 0, "attribute": "resilience" },
+          "wilderness":      { "value": 0, "attribute": "resilience" },
+          "convince":        { "value": 0, "attribute": "charm" },
+          "leadership":      { "value": 0, "attribute": "charm" },
+          "performance":     { "value": 0, "attribute": "charm" },
+          "seduction":       { "value": 0, "attribute": "charm" },
+          "cheatFate":       { "value": 0, "attribute": "cunning" },
+          "deceive":         { "value": 0, "attribute": "cunning" },
+          "gambling":        { "value": 0, "attribute": "cunning" },
+          "lockpicking":     { "value": 0, "attribute": "cunning" },
+          "pickpocket":      { "value": 0, "attribute": "cunning" },
+          "scrutiny":        { "value": 0, "attribute": "cunning" },
+          "stealth":         { "value": 0, "attribute": "cunning" },
+          "centering":       { "value": 0, "attribute": "tenacity" },
+          "enchanting":      { "value": 0, "attribute": "tenacity" },
+          "necromancy":      { "value": 0, "attribute": "tenacity" },
+          "sorcery":         { "value": 0, "attribute": "tenacity" },
+          "spellcasting":    { "value": 0, "attribute": "tenacity" },
+          "academics":       { "value": 0, "attribute": "intellect" },
+          "engineering":     { "value": 0, "attribute": "intellect" },
+          "healing":         { "value": 0, "attribute": "intellect" },
+          "lore":            { "value": 0, "attribute": "intellect" },
+          "notice":          { "value": 0, "attribute": "intellect" }
+        }
+      },
+      "details": {
+        "station": "",
+        "aspect": "crow",
+        "details": {
+          "age": "",
+          "gender": "",
+          "description": ""
+        }
+      }
+    },
+    "character": {
+      "templates": ["attributes", "skills", "details"],
+      "wounds": {
+        "value": 0,
+        "max": 0
+      },
+      "derived": {
+        "defense": 0,
+        "willpower": 0,
+        "walk": 0,
+        "charge": 0,
+        "height": 2
+      }
+    }
+  },
+  "Item": {
+    "types": []
+  }
+}
