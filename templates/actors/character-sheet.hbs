@@ -8,7 +8,7 @@
       </h1>
       <div class="ttb-actors-header-details">
         <label>Station</label>
-        <input type="text" name="system.station" value="{{system.station}}" />
+        <input type="text" name="system.station" value="{{system.station}}" placeholder="e.g. Outcast" />
         <label>Aspect</label>
         <select name="system.aspect">
           {{#each aspectOptions}}
@@ -42,9 +42,9 @@
       <span class="ttb-actors-derived-value">{{derived.height}}</span>
     </div>
     <div class="ttb-actors-wounds">
-      <span class="ttb-actors-derived-label">Wounds</span>
+      <span class="ttb-actors-derived-label">Wounds&nbsp;</span>
       <input class="ttb-actors-wounds-value" type="number" value="{{system.wounds.value}}" min="0" max="{{derived.woundsMax}}" />
-      <span>/</span>
+      <span style="color:var(--ttb-gold);">&thinsp;/&thinsp;</span>
       <span class="ttb-actors-derived-value">{{derived.woundsMax}}</span>
     </div>
   </div>
@@ -89,12 +89,18 @@
     <!-- Details Tab -->
     <div class="tab" data-tab="details">
       <div class="ttb-actors-details">
-        <label>Age</label>
-        <input type="text" name="system.details.age" value="{{system.details.age}}" />
-        <label>Gender</label>
-        <input type="text" name="system.details.gender" value="{{system.details.gender}}" />
-        <label>Description</label>
-        <textarea name="system.details.description" rows="6">{{system.details.description}}</textarea>
+        <div>
+          <label>Age</label>
+          <input type="text" name="system.details.age" value="{{system.details.age}}" />
+        </div>
+        <div>
+          <label>Gender</label>
+          <input type="text" name="system.details.gender" value="{{system.details.gender}}" />
+        </div>
+        <div class="ttb-full-row">
+          <label>Description</label>
+          <textarea name="system.details.description" rows="6">{{system.details.description}}</textarea>
+        </div>
       </div>
     </div>
   </section>
