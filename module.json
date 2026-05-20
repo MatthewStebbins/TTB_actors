@@ -1,0 +1,22 @@
+{
+  "id": "ttb-actors",
+  "title": "Through the Breach Actors",
+  "description": "Small helper utilities for creating Through the Breach actors in FoundryVTT.",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "10",
+    "verified": "12"
+  },
+  "authors": [
+    {
+      "name": "MatthewStebbins",
+      "url": "https://github.com/MatthewStebbins"
+    }
+  ],
+  "esmodules": ["src/main.js"],
+  "url": "https://github.com/MatthewStebbins/TTB_actors",
+  "readme": "README.md",
+  "bugs": "https://github.com/MatthewStebbins/TTB_actors/issues",
+  "manifest": "https://raw.githubusercontent.com/MatthewStebbins/TTB_actors/main/module.json",
+  "download": "https://github.com/MatthewStebbins/TTB_actors/releases/latest/download/module.zip"
+}
