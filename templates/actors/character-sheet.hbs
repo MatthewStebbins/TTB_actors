@@ -58,7 +58,7 @@
         {{#each soulstoneDots}}
           <button type="button"
             class="ttb-soulstone-dot {{#if filled}}filled{{/if}}"
-            data-index="{{index}}" title="Soulstone {{add index 1}}">&#9670;</button>
+            data-index="{{index}}" title="Soulstone">&#9670;</button>
         {{/each}}
         <input type="number" name="system.soulstones.max" value="{{soulstoneMax}}"
           min="0" max="10" class="ttb-soulstone-max" title="Max soulstones" />
@@ -162,7 +162,7 @@
               <div class="ttb-fate-suit">{{symbol}}</div>
               <input class="ttb-fate-value" type="text"
                 name="system.destiny.spread.{{index}}.value"
-                value="{{value}}" placeholder="&mdash;" />
+                value="{{value}}" placeholder="--" />
               <select name="system.destiny.spread.{{index}}.suit">
                 <option value="" {{#if (eq suit "")}}selected{{/if}}>?</option>
                 <option value="crow" {{#if (eq suit "crow")}}selected{{/if}}>&#9824; Crow</option>
@@ -196,7 +196,7 @@
       </div>
     </div>
 
-    <!-- Pursuits, Talents & Manifested Powers Tab -->
+    <!-- Pursuits, Talents and Manifested Powers Tab -->
     <div class="tab" data-tab="pursuits">
       <div class="ttb-pursuits-talents">
         <div class="ttb-section">
@@ -248,7 +248,7 @@
             <button type="button" class="ttb-power-add ttb-add-btn" title="Add manifested power">+</button>
           </h3>
           {{#if manifestedPowersEmpty}}
-            <p class="ttb-empty-notice">No manifested powers yet — gained by completing Destiny steps.</p>
+            <p class="ttb-empty-notice">No manifested powers yet - gained by completing Destiny steps.</p>
           {{else}}
             {{#each manifestedPowers}}
               <div class="ttb-talent-entry ttb-power-entry">
@@ -353,7 +353,7 @@
         <div class="ttb-bio-fields">
           <label>Allegiance</label>
           <select name="system.allegiance">
-            <option value="">— Select —</option>
+            <option value="">-- Select --</option>
             {{#each allegianceOptions}}
               <option value="{{value}}" {{#if (eq value ../system.allegiance)}}selected{{/if}}>{{label}}</option>
             {{/each}}
@@ -369,13 +369,13 @@
         <div class="ttb-bio-section">
           <label class="ttb-bio-label">Appearance</label>
           <textarea name="system.details.appearance" rows="3"
-            placeholder="Describe your character's appearance...">{{system.details.appearance}}</textarea>
+            placeholder="Describe your character appearance...">{{system.details.appearance}}</textarea>
         </div>
 
         <div class="ttb-bio-section">
           <label class="ttb-bio-label">Background</label>
           <textarea name="system.details.background" rows="4"
-            placeholder="Describe your character's history and background...">{{system.details.background}}</textarea>
+            placeholder="Describe your character history and background...">{{system.details.background}}</textarea>
         </div>
 
         <div class="ttb-bio-section">
