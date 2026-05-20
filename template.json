@@ -4,14 +4,14 @@
     "templates": {
       "attributes": {
         "attributes": {
-          "might":      { "value": 2 },
-          "grace":      { "value": 2 },
-          "speed":      { "value": 2 },
-          "resilience": { "value": 2 },
-          "charm":      { "value": 2 },
-          "cunning":    { "value": 2 },
-          "tenacity":   { "value": 2 },
-          "intellect":  { "value": 2 }
+          "might":      { "value": 2, "suit": "" },
+          "grace":      { "value": 2, "suit": "" },
+          "speed":      { "value": 2, "suit": "" },
+          "resilience": { "value": 2, "suit": "" },
+          "charm":      { "value": 2, "suit": "" },
+          "cunning":    { "value": 2, "suit": "" },
+          "tenacity":   { "value": 2, "suit": "" },
+          "intellect":  { "value": 2, "suit": "" }
         }
       },
       "skills": {
@@ -125,6 +125,7 @@
       "pursuits":          [],
       "talents":           [],
       "manifestedPowers": [],
+      "otherAbilities":   [],
       "grimoire":          [],
       "notes":             "",
       "equipment": {

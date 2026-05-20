@@ -10,6 +10,14 @@ const ALLEGIANCE_OPTIONS = [
   "tenThunders", "outcasts", "unaffiliated",
 ];
 
+const SUIT_OPTIONS = [
+  { value: "",     label: "\u2014 suit \u2014" },
+  { value: "crow", label: "\u2660 Crow" },
+  { value: "mask", label: "\u2663 Mask" },
+  { value: "ram",  label: "\u2665 Ram"  },
+  { value: "tome", label: "\u2666 Tome" },
+];
+
 /** Localize a key; fall back to the last segment title-cased if not found. */
 function loc(key) {
   const result = game.i18n.localize(key);
@@ -25,7 +33,7 @@ function loc(key) {
 function repairArrays(expanded) {
   const sys = expanded?.system;
   if (!sys) return expanded;
-  for (const field of ["pursuits", "talents", "manifestedPowers", "grimoire"]) {
+  for (const field of ["pursuits", "talents", "manifestedPowers", "otherAbilities", "grimoire"]) {
     if (sys[field] && !Array.isArray(sys[field])) {
       sys[field] = Object.values(sys[field]);
     }
@@ -80,10 +88,13 @@ export class TtbCharacterSheet extends ActorSheet {
       woundsMax: av("resilience") * 2,
     };
 
+    context.suitOptions = SUIT_OPTIONS;
+
     context.attributes = ATTRIBUTE_ORDER.map((key) => ({
       key,
       label: loc(`TTB.Attribute.${key}`),
       value: av(key),
+      suit:  a[key]?.suit ?? "",
     }));
 
     const skills = system.skills ?? {};
@@ -164,13 +175,15 @@ export class TtbCharacterSheet extends ActorSheet {
     context.destinyAgenda         = destiny.agenda         ?? "";
     context.destinyAgendaComplete = !!destiny.agendaComplete;
 
-    // Pursuits / Talents / Manifested Powers
+    // Pursuits / Talents / Manifested Powers / Other Abilities
     context.pursuits         = toArray(system.pursuits);
     context.talents          = toArray(system.talents);
     context.manifestedPowers = toArray(system.manifestedPowers);
+    context.otherAbilities   = toArray(system.otherAbilities);
     context.pursuitsEmpty         = context.pursuits.length         === 0;
     context.talentsEmpty          = context.talents.length          === 0;
     context.manifestedPowersEmpty = context.manifestedPowers.length === 0;
+    context.otherAbilitiesEmpty   = context.otherAbilities.length   === 0;
 
     // Grimoire
     context.grimoire      = toArray(system.grimoire);
@@ -197,6 +210,11 @@ export class TtbCharacterSheet extends ActorSheet {
     html.find(".ttb-actors-attr-value").change((ev) => {
       const attr = ev.currentTarget.dataset.attr;
       this.actor.update({ [`system.attributes.${attr}.value`]: Number(ev.currentTarget.value) });
+    });
+
+    html.find(".ttb-attr-suit").change((ev) => {
+      const attr = ev.currentTarget.dataset.attr;
+      this.actor.update({ [`system.attributes.${attr}.suit`]: ev.currentTarget.value });
     });
 
     html.find(".ttb-actors-skill-value").change((ev) => {
@@ -274,6 +292,19 @@ export class TtbCharacterSheet extends ActorSheet {
       const powers = toArray(foundry.utils.deepClone(this.actor.system.manifestedPowers));
       powers.splice(idx, 1);
       this.actor.update({ "system.manifestedPowers": powers });
+    });
+
+    // Other Abilities
+    html.find(".ttb-ability-add").click(() => {
+      const abilities = toArray(foundry.utils.deepClone(this.actor.system.otherAbilities));
+      abilities.push({ name: "", description: "" });
+      this.actor.update({ "system.otherAbilities": abilities });
+    });
+    html.find(".ttb-ability-delete").click((ev) => {
+      const idx       = Number(ev.currentTarget.dataset.index);
+      const abilities = toArray(foundry.utils.deepClone(this.actor.system.otherAbilities));
+      abilities.splice(idx, 1);
+      this.actor.update({ "system.otherAbilities": abilities });
     });
 
     // Grimoire

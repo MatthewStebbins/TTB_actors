@@ -19,6 +19,8 @@
   --ttb-soulstone-lt: #5aa0e0;
   --ttb-power:        #5a1a6b;
   --ttb-power-lt:     #7a3090;
+  --ttb-teal:         #1a5a4a;
+  --ttb-teal-lt:      #2a8060;
 }
 
 /* ── Base sheet ─────────────────────────────────────────── */
@@ -382,6 +384,9 @@
 .ttb-manifested-header { color: var(--ttb-power-lt); border-bottom-color: rgba(90,26,107,0.3); }
 .ttb-manifested-header::after { background: linear-gradient(to right, var(--ttb-power-lt), transparent); }
 
+.ttb-other-abilities-header { color: var(--ttb-teal-lt); border-bottom-color: rgba(26,90,74,0.3); }
+.ttb-other-abilities-header::after { background: linear-gradient(to right, var(--ttb-teal-lt), transparent); }
+
 .ttb-section { margin-bottom: 14px; }
 
 /* ── Attributes Grid ────────────────────────────────────── */
@@ -429,6 +434,26 @@
 
 .ttb-actors-attr-value::-webkit-inner-spin-button,
 .ttb-actors-attr-value::-webkit-outer-spin-button { opacity: 0; }
+
+/* Characteristic suit selector inside attribute card */
+.ttb-attr-suit {
+  width: 100%;
+  margin-top: 5px;
+  font-size: 0.72em;
+  font-family: inherit;
+  background: transparent;
+  border: 1px solid rgba(107,15,26,0.25);
+  border-radius: 2px;
+  color: var(--ttb-ink-mid);
+  text-align: center;
+  cursor: pointer;
+  padding: 1px 2px;
+}
+
+.ttb-attr-suit:has(option[value="crow"]:checked) { color: #1a1a2e; }
+.ttb-attr-suit:has(option[value="mask"]:checked) { color: #1a3a1a; }
+.ttb-attr-suit:has(option[value="ram"]:checked)  { color: var(--ttb-burgundy); }
+.ttb-attr-suit:has(option[value="tome"]:checked) { color: #8b6800; }
 
 /* ── Skills ─────────────────────────────────────────────── */
 .ttb-actors-skill-group { margin-bottom: 14px; }
@@ -794,6 +819,19 @@
   background: #f0e8f5;
 }
 
+.ttb-ability-entry {
+  border-color: rgba(26,90,74,0.35);
+  background: #e8f5f0;
+}
+
+.ttb-other-abilities-hint {
+  font-size: 0.8em;
+  font-style: italic;
+  color: var(--ttb-ink-mid);
+  opacity: 0.65;
+  margin: -4px 0 8px;
+}
+
 .ttb-talent-header {
   display: flex;
   align-items: center;
@@ -813,6 +851,10 @@
 
 .ttb-power-entry .ttb-talent-header input {
   border-bottom-color: var(--ttb-power-lt);
+}
+
+.ttb-ability-entry .ttb-talent-header input {
+  border-bottom-color: var(--ttb-teal-lt);
 }
 
 .ttb-talent-entry textarea {
