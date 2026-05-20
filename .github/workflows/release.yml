@@ -1,0 +1,32 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build system.zip
+        run: |
+          zip -r system.zip \
+            system.json \
+            template.json \
+            scripts/ \
+            templates/ \
+            styles/ \
+            lang/ \
+            --exclude "scripts/create-ttb-actor.js"
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: system.zip
+          generate_release_notes: true
