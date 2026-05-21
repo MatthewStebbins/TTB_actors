@@ -3,7 +3,7 @@ const ATTRIBUTE_ORDER = [
   "charm", "cunning", "tenacity", "intellect",
 ];
 
-const SUIT_SYMBOLS = { crow: "\u2660", mask: "\u2663", ram: "\u2665", tome: "\u2666", "": "?" };
+const SUIT_SYMBOLS = { crow: "\u2660", mask: "\u2663", ram: "\u2665", tome: "\u2666", joker: "\u2605", "": "?" };
 
 const ALLEGIANCE_OPTIONS = [
   "guild", "arcanists", "resurrectionists", "neverborn",
@@ -31,6 +31,35 @@ function loc(key) {
   if (result !== key) return result;
   const segment = key.split(".").pop();
   return segment.replace(/([A-Z])/g, " $1").replace(/^./, (c) => c.toUpperCase());
+}
+
+/**
+ * Build card display info from raw stored data (suit/value/name strings).
+ * Works for both live Card documents and persisted snapshots.
+ */
+function cardDisplayInfoFromData(suit, value, name) {
+  const suitLower    = (suit ?? "").toLowerCase();
+  const isJoker      = suitLower === "joker";
+  const nameLower    = (name ?? "").toLowerCase();
+  const isRedJoker   = isJoker && nameLower.includes("red");
+  const isBlackJoker = isJoker && !isRedJoker;
+  const symbol       = SUIT_SYMBOLS[suitLower] || "?";
+  const tnValue      = isRedJoker ? 14 : isBlackJoker ? 0 : (value ?? 0);
+  return {
+    suit:        suitLower,
+    symbol,
+    value:       value ?? 0,
+    tnValue,
+    label:       name ?? "",
+    isJoker,
+    isRedJoker,
+    isBlackJoker,
+  };
+}
+
+/** Build card display info from a Foundry Card document (includes id). */
+function cardDisplayInfo(card) {
+  return { ...cardDisplayInfoFromData(card.suit, card.value, card.name), id: card.id };
 }
 
 /**
@@ -212,6 +241,22 @@ export class TtbCharacterSheet extends ActorSheet {
     context.armors    = allItems.filter((i) => i.type === "armor");
     context.inventory = allItems.filter((i) => i.type === "gear");
 
+    // ── Fate Deck ──────────────────────────────────────────
+    const fd         = system.fateDeck ?? {};
+    const deckDoc    = fd.deckId    ? game.cards?.get(fd.deckId)    : null;
+    const handDoc    = fd.handId    ? game.cards?.get(fd.handId)    : null;
+    const discardDoc = fd.discardId ? game.cards?.get(fd.discardId) : null;
+
+    context.deckMissing  = !deckDoc;
+    context.deckSize     = deckDoc    ? deckDoc.cards.size    : 0;
+    context.handSize     = handDoc    ? handDoc.cards.size    : 0;
+    context.discardSize  = discardDoc ? discardDoc.cards.size : 0;
+
+    const lf = fd.lastFlip ?? {};
+    context.lastFlip  = lf.name ? cardDisplayInfoFromData(lf.suit, lf.value, lf.name) : null;
+    context.hand      = handDoc ? handDoc.cards.contents.map(c => cardDisplayInfo(c)) : [];
+    context.handEmpty = context.hand.length === 0;
+
     return context;
   }
 
@@ -234,7 +279,6 @@ export class TtbCharacterSheet extends ActorSheet {
       const attr    = ev.currentTarget.dataset.attr;
       const suit    = ev.currentTarget.dataset.suit;
       const current = this.actor.system.attributes?.[attr]?.suit ?? "";
-      // clicking the active suit deselects it
       this.actor.update({ [`system.attributes.${attr}.suit`]: current === suit ? "" : suit });
     });
 
@@ -260,7 +304,6 @@ export class TtbCharacterSheet extends ActorSheet {
       this.actor.update({ "system.wounds.value": newVal });
     });
 
-    // Soulstone dot click — toggle fill up to that dot
     html.find(".ttb-soulstone-dot").click((ev) => {
       const idx     = Number(ev.currentTarget.dataset.index);
       const current = this.actor.system.soulstones?.value ?? 0;
@@ -340,6 +383,13 @@ export class TtbCharacterSheet extends ActorSheet {
       grimoire.splice(idx, 1);
       this.actor.update({ "system.grimoire": grimoire });
     });
+    html.find(".ttb-grimoire-field, .ttb-grimoire-desc").change((ev) => {
+      const idx   = Number(ev.currentTarget.dataset.grimoireIndex);
+      const field = ev.currentTarget.dataset.grimoireField;
+      const grimoire = toArray(foundry.utils.deepClone(this.actor.system.grimoire));
+      if (grimoire[idx]) grimoire[idx][field] = ev.currentTarget.value;
+      this.actor.update({ "system.grimoire": grimoire });
+    });
 
     // Items
     html.find(".ttb-item-create").click((ev) => {
@@ -357,6 +407,84 @@ export class TtbCharacterSheet extends ActorSheet {
     html.find(".ttb-item-equipped").change((ev) => {
       const id = ev.currentTarget.closest("[data-item-id]").dataset.itemId;
       this.actor.items.get(id)?.update({ "system.equipped": ev.currentTarget.checked });
+    });
+
+    // ── Fate Deck Listeners ──────────────────────────────────
+
+    // Flip top card from deck to discard
+    html.find(".ttb-deck-flip").click(async () => {
+      const sys     = this.actor.system.fateDeck ?? {};
+      const deck    = sys.deckId    ? game.cards?.get(sys.deckId)    : null;
+      const discard = sys.discardId ? game.cards?.get(sys.discardId) : null;
+      if (!deck || !discard) return ui.notifications.warn("TTB | Fate Deck not found. Click \"Create Fate Deck\".");
+      if (deck.cards.size === 0) return ui.notifications.warn("TTB | Fate Deck is empty. Click Reshuffle Discard.");
+
+      const sorted = deck.cards.contents.sort((a, b) => (b.sort ?? 0) - (a.sort ?? 0));
+      const card   = sorted[0];
+      if (!card) return;
+      const info = { suit: card.suit ?? "", value: card.value ?? 0, name: card.name ?? "" };
+      await deck.pass(discard, [card.id]);
+      await this.actor.update({
+        "system.fateDeck.lastFlip.suit":  info.suit,
+        "system.fateDeck.lastFlip.value": info.value,
+        "system.fateDeck.lastFlip.name":  info.name,
+      });
+    });
+
+    // Draw top card from deck to hand
+    html.find(".ttb-deck-draw-hand").click(async () => {
+      const sys  = this.actor.system.fateDeck ?? {};
+      const deck = sys.deckId ? game.cards?.get(sys.deckId) : null;
+      const hand = sys.handId ? game.cards?.get(sys.handId) : null;
+      if (!deck || !hand) return;
+      if (deck.cards.size === 0) return ui.notifications.warn("TTB | Fate Deck is empty. Reshuffle first.");
+      const sorted = deck.cards.contents.sort((a, b) => (b.sort ?? 0) - (a.sort ?? 0));
+      const card   = sorted[0];
+      if (card) await deck.pass(hand, [card.id]);
+    });
+
+    // Play a card from hand (Cheat Fate) — replaces last flip
+    html.find(".ttb-hand-play").click(async (ev) => {
+      const cardId  = ev.currentTarget.dataset.cardId;
+      const sys     = this.actor.system.fateDeck ?? {};
+      const hand    = sys.handId    ? game.cards?.get(sys.handId)    : null;
+      const discard = sys.discardId ? game.cards?.get(sys.discardId) : null;
+      if (!hand || !discard || !cardId) return;
+      const card = hand.cards.get(cardId);
+      if (!card) return;
+      const info = { suit: card.suit ?? "", value: card.value ?? 0, name: card.name ?? "" };
+      await hand.pass(discard, [cardId]);
+      await this.actor.update({
+        "system.fateDeck.lastFlip.suit":  info.suit,
+        "system.fateDeck.lastFlip.value": info.value,
+        "system.fateDeck.lastFlip.name":  info.name,
+      });
+    });
+
+    // Reshuffle all discard cards back into the deck, then shuffle
+    html.find(".ttb-deck-reshuffle").click(async () => {
+      const sys     = this.actor.system.fateDeck ?? {};
+      const deck    = sys.deckId    ? game.cards?.get(sys.deckId)    : null;
+      const discard = sys.discardId ? game.cards?.get(sys.discardId) : null;
+      if (!deck || !discard) return;
+      if (discard.cards.size === 0) return ui.notifications.warn("TTB | Discard pile is empty — nothing to reshuffle.");
+      const allIds = discard.cards.contents.map(c => c.id);
+      await discard.pass(deck, allIds);
+      await deck.shuffle();
+      await this.actor.update({ "system.fateDeck.lastFlip.name": "" });
+    });
+
+    // Open native Foundry deck/hand sheet
+    html.find(".ttb-deck-open").click(() => {
+      game.cards?.get(this.actor.system.fateDeck?.deckId ?? "")?.sheet.render(true);
+    });
+    html.find(".ttb-hand-open").click(() => {
+      game.cards?.get(this.actor.system.fateDeck?.handId ?? "")?.sheet.render(true);
+    });
+
+    // Create card stacks if missing
+    html.find(".ttb-deck-create").click(async () => {
+      await this.actor._createFateDeck();
     });
   }
 }

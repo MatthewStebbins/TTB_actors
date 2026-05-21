@@ -130,6 +130,12 @@
       "notes":             "",
       "equipment": {
         "scrip": 0
+      },
+      "fateDeck": {
+        "deckId":    "",
+        "handId":    "",
+        "discardId": "",
+        "lastFlip":  { "suit": "", "value": 0, "name": "" }
       }
     }
   },
