@@ -8,7 +8,7 @@ This repo is a **FoundryVTT Game System** (`system.json`) for the *Through the B
 
 | Path | Purpose |
 |------|---------|
-| `system.json` | Foundry system manifest. `id` must stay `ttb-actors` (matches install folder). Current version: `0.1.1`. Verified on Foundry **v13**. |
+| `system.json` | Foundry system manifest. `id` must stay `ttb-actors` (matches install folder). Current version: `0.1.2`. Verified on Foundry **v13**. |
 | `template.json` | Declarative data model for all Actor/Item types. Edit this to add new fields — no JS needed for data shape. |
 | `scripts/main.js` | ES module entry point. Registers actor class, sheets, and preloads templates via `Hooks.once("init")`. |
 | `scripts/actors/` | `Actor` document subclasses. Derived stats computed in `prepareDerivedData()`. |
@@ -50,6 +50,46 @@ This repo is a **FoundryVTT Game System** (`system.json`) for the *Through the B
 - **Grimoire tab**: Spell entries with Theory, Name, Cost, Range, Duration, Description.
 - **Allegiance**: Guild, Arcanists, Resurrectionists, Neverborn, Ten Thunders, Outcasts, Unaffiliated.
 
+### Fate Deck (v0.1.2+)
+Each character gets **3 linked Foundry Card Stacks** auto-created on `_onCreate`:
+- `[Name]'s Fate Deck` — type `"deck"`, populated with 54 TTB cards + shuffled
+- `[Name]'s Hand` — type `"hand"`
+- `[Name]'s Discard` — type `"pile"`
+
+IDs stored on actor at `system.fateDeck.{ deckId, handId, discardId }`.
+
+**TTB Card Data (54 cards):**
+- 4 suits × 13 values: Crow, Mask, Ram, Tome (capitalized in `card.suit`)
+- Value names: 1=Ace, 11=Jack, 12=Queen, 13=King
+- Red Joker: `{ suit: "Joker", value: 14 }` — critical success (TN +14, triggers on any suit)
+- Black Joker: `{ suit: "Joker", value: 0 }` — critical failure (TN +0, Bad Luck Twist)
+
+**Foundry Cards API patterns used:**
+```js
+// Get top card and move to discard (Flip)
+const sorted = deck.cards.contents.sort((a, b) => (b.sort ?? 0) - (a.sort ?? 0));
+await deck.pass(discard, [sorted[0].id]);
+
+// Move from hand to discard (Cheat Fate / Play)
+await hand.pass(discard, [cardId]);
+
+// Reshuffle all discard back into deck
+await discard.pass(deck, discard.cards.contents.map(c => c.id));
+await deck.shuffle();
+```
+
+**Last flip storage** — store a data snapshot, NOT the card ID (IDs change on move):
+```js
+await actor.update({
+  "system.fateDeck.lastFlip.suit":  card.suit,
+  "system.fateDeck.lastFlip.value": card.value,
+  "system.fateDeck.lastFlip.name":  card.name,
+});
+```
+Read back via `cardDisplayInfoFromData(suit, value, name)` in `getData()`.
+
+**`_createFateDeck()` is public** — called from the "Create Fate Deck" button if stacks go missing (e.g., accidentally deleted). Guard with `if (!game.cards) return;`.
+
 ### Items
 - **Weapon**: attackSkill, damage, range, special, equipped.
 - **Armor**: defenseBonus, special, equipped (adds to Defense when equipped).
@@ -62,7 +102,6 @@ This repo is a **FoundryVTT Game System** (`system.json`) for the *Through the B
 ### Key Future Systems to Build
 | Feature | Notes |
 |---------|-------|
-| Fate Deck | Virtual card deck per player; flip action; hand management |
 | Twists | Special effects triggered by Jokers or suit matches |
 | Pursuits advancement | XP/scrip spending to gain talents |
 | Fatemaster tools | Encounter builder, NPC quick-creator |
@@ -111,6 +150,8 @@ function toArray(raw) {
 }
 ```
 
+**Fate Deck arrays do NOT use form `name=` binding** — they are managed entirely via explicit JS listeners using `this.actor.update()` with dot-path keys. No array corruption risk there.
+
 ### Grimoire and Trigger Fields — Save Pattern
 Grimoire fields and skill trigger inputs save via explicit `.change()` listeners using `data-*` attributes, NOT via `name=` form binding. This avoids the array corruption issue. Do not add `name` attributes to these inputs.
 
@@ -127,7 +168,7 @@ html.find(".ttb-attr-suit-btn").click((ev) => {
 Clicking the already-active suit deselects it (sets to `""`). Active colors per suit: Crow = blue-purple, Mask = green, Ram = burgundy, Tome = gold.
 
 ### CSS — Foundry Override Gotchas
-- **Foundry sets `button { width: 100%; }` globally.** Any custom button that should NOT be full-width must explicitly set `width: auto; flex-shrink: 0;` or a fixed pixel width.
+- **Foundry sets `button { width: 100%; }` globally.** Any custom button that should NOT be full-width must explicitly set `width: auto; flex-shrink: 0;` or a fixed pixel width. This includes all Fate Deck buttons (`.ttb-deck-flip`, `.ttb-hand-play`, etc.).
 - CSS variables are defined in `:root` — see `styles/ttb.css` for the full palette (`--ttb-parchment`, `--ttb-burgundy`, `--ttb-gold`, etc.).
 
 ### Adding a New Actor Type
@@ -180,3 +221,4 @@ The `download` field in `system.json` points to the GitHub Release asset. Always
 | 0.0.9 | Characteristic suit per attribute, Other Abilities section |
 | 0.1.0 | Flip totals badge, suit symbol buttons, wider trigger fields, 2-column Pursuits tab |
 | 0.1.1 | Fixed delete button full-width override (Foundry global CSS) |
+| 0.1.2 | Fate Deck tab — auto-creates 3 Foundry Card Stacks per character; flip, draw-to-hand, Cheat Fate, reshuffle |
