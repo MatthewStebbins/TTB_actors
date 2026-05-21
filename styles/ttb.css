@@ -1113,3 +1113,286 @@
 .ttb-actors.sheet input[type="number"] { -moz-appearance: textfield; }
 .ttb-actors.sheet input[type="number"]::-webkit-inner-spin-button,
 .ttb-actors.sheet input[type="number"]::-webkit-outer-spin-button { opacity: 0; }
+
+/* ── Fate Deck Tab ──────────────────────────────────────── */
+.ttb-fate-deck { padding: 6px 0; }
+
+/* Missing deck notice */
+.ttb-fate-missing {
+  text-align: center;
+  padding: 30px 20px;
+  color: var(--ttb-ink-mid);
+}
+
+.ttb-fate-missing p {
+  font-style: italic;
+  margin-bottom: 14px;
+  opacity: 0.75;
+}
+
+.ttb-fate-missing .ttb-deck-create,
+.ttb-deck-create {
+  background: var(--ttb-burgundy);
+  border: 1px solid var(--ttb-burgundy-lt);
+  color: var(--ttb-parchment);
+  font-family: inherit;
+  font-size: 0.88em;
+  font-variant: small-caps;
+  letter-spacing: 0.08em;
+  padding: 6px 18px;
+  border-radius: 3px;
+  cursor: pointer;
+  width: auto;
+  transition: background 0.15s;
+}
+
+.ttb-deck-create:hover { background: var(--ttb-burgundy-lt); }
+
+/* Deck stats bar */
+.ttb-fate-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--ttb-leather-mid);
+  border-radius: 4px;
+  padding: 6px 14px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.ttb-fate-counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 44px;
+}
+
+.ttb-fate-counter-label {
+  font-size: 0.6em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ttb-gold);
+}
+
+.ttb-fate-counter-value {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: var(--ttb-parchment);
+  line-height: 1.1;
+}
+
+.ttb-fate-open-btns {
+  display: flex;
+  gap: 6px;
+  margin-left: auto;
+}
+
+.ttb-fate-open-btns button,
+.ttb-deck-open,
+.ttb-hand-open {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid var(--ttb-gold-dk);
+  color: var(--ttb-gold);
+  font-family: inherit;
+  font-size: 0.78em;
+  font-variant: small-caps;
+  padding: 3px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  width: auto;
+  transition: background 0.12s;
+}
+
+.ttb-deck-open:hover,
+.ttb-hand-open:hover { background: rgba(255,255,255,0.15); }
+
+/* Action buttons row */
+.ttb-fate-actions {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.ttb-fate-actions button,
+.ttb-deck-flip,
+.ttb-deck-draw-hand,
+.ttb-deck-reshuffle {
+  background: var(--ttb-parchment-dk);
+  border: 1px solid var(--ttb-burgundy);
+  color: var(--ttb-burgundy);
+  font-family: inherit;
+  font-size: 0.85em;
+  font-variant: small-caps;
+  letter-spacing: 0.06em;
+  padding: 5px 14px;
+  border-radius: 3px;
+  cursor: pointer;
+  width: auto;
+  transition: background 0.12s, color 0.12s;
+  flex-shrink: 0;
+}
+
+.ttb-deck-flip {
+  background: var(--ttb-burgundy);
+  color: var(--ttb-parchment);
+  font-weight: bold;
+}
+
+.ttb-deck-flip:hover { background: var(--ttb-burgundy-lt); }
+.ttb-deck-draw-hand:hover,
+.ttb-deck-reshuffle:hover {
+  background: var(--ttb-burgundy);
+  color: var(--ttb-parchment);
+}
+
+/* Last flip result */
+.ttb-fate-flip-result {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.ttb-fate-flip-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--ttb-parchment-dk);
+  border: 2px solid var(--ttb-burgundy);
+  border-radius: 8px;
+  padding: 14px 24px;
+  min-width: 140px;
+  box-shadow: 0 4px 12px var(--ttb-shadow);
+  outline: 1px solid var(--ttb-gold-dk);
+  outline-offset: -3px;
+  gap: 4px;
+}
+
+.ttb-flip-symbol {
+  font-size: 3em;
+  line-height: 1;
+  color: var(--ttb-burgundy);
+}
+
+.ttb-flip-label {
+  font-size: 1.05em;
+  font-weight: bold;
+  font-variant: small-caps;
+  color: var(--ttb-ink);
+}
+
+.ttb-flip-tn {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: var(--ttb-burgundy);
+  letter-spacing: 0.04em;
+}
+
+.ttb-joker-note {
+  font-size: 0.75em;
+  font-style: italic;
+  text-align: center;
+  margin-top: 4px;
+}
+
+/* Suit color overrides on flip card */
+.ttb-fate-flip-card.ttb-suit-crow .ttb-flip-symbol { color: #2a3080; }
+.ttb-fate-flip-card.ttb-suit-crow .ttb-flip-tn     { color: #2a3080; }
+.ttb-fate-flip-card.ttb-suit-mask .ttb-flip-symbol { color: #1a5a2a; }
+.ttb-fate-flip-card.ttb-suit-mask .ttb-flip-tn     { color: #1a5a2a; }
+.ttb-fate-flip-card.ttb-suit-tome .ttb-flip-symbol { color: var(--ttb-gold-dk); }
+.ttb-fate-flip-card.ttb-suit-tome .ttb-flip-tn     { color: var(--ttb-gold-dk); }
+
+.ttb-fate-flip-card.ttb-joker-red {
+  background: linear-gradient(160deg, #fff0f0 0%, #ffe0e0 100%);
+  border-color: #cc0000;
+  outline-color: #aa0000;
+}
+.ttb-fate-flip-card.ttb-joker-red .ttb-flip-symbol,
+.ttb-fate-flip-card.ttb-joker-red .ttb-flip-tn { color: #cc0000; }
+.ttb-fate-flip-card.ttb-joker-red .ttb-joker-note { color: #880000; }
+
+.ttb-fate-flip-card.ttb-joker-black {
+  background: linear-gradient(160deg, #2a2a2a 0%, #1a1a1a 100%);
+  border-color: #555;
+  outline-color: #333;
+}
+.ttb-fate-flip-card.ttb-joker-black .ttb-flip-symbol,
+.ttb-fate-flip-card.ttb-joker-black .ttb-flip-tn,
+.ttb-fate-flip-card.ttb-joker-black .ttb-flip-label { color: #ddd; }
+.ttb-fate-flip-card.ttb-joker-black .ttb-joker-note { color: #aaa; }
+
+/* No-flip placeholder */
+.ttb-fate-no-flip {
+  text-align: center;
+  padding: 20px;
+  font-style: italic;
+  color: var(--ttb-ink-mid);
+  opacity: 0.55;
+}
+
+/* Hand grid */
+.ttb-hand-section { margin-top: 8px; }
+
+.ttb-hand-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 6px 0;
+}
+
+.ttb-hand-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--ttb-parchment-dk);
+  border: 1px solid var(--ttb-burgundy);
+  border-radius: 5px;
+  padding: 8px 10px 6px;
+  min-width: 80px;
+  gap: 3px;
+  box-shadow: 0 2px 5px var(--ttb-shadow);
+}
+
+.ttb-hand-card-symbol {
+  font-size: 1.6em;
+  color: var(--ttb-burgundy);
+  line-height: 1;
+}
+
+.ttb-hand-card-name {
+  font-size: 0.7em;
+  font-variant: small-caps;
+  text-align: center;
+  color: var(--ttb-ink-mid);
+  line-height: 1.2;
+}
+
+.ttb-hand-play {
+  background: var(--ttb-burgundy);
+  border: none;
+  color: var(--ttb-parchment);
+  font-family: inherit;
+  font-size: 0.7em;
+  font-variant: small-caps;
+  padding: 2px 8px;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-top: 3px;
+  width: auto;
+  transition: background 0.12s;
+}
+
+.ttb-hand-play:hover { background: var(--ttb-burgundy-lt); }
+
+/* Suit color overrides on hand cards */
+.ttb-hand-card.ttb-suit-crow .ttb-hand-card-symbol { color: #2a3080; }
+.ttb-hand-card.ttb-suit-mask .ttb-hand-card-symbol { color: #1a5a2a; }
+.ttb-hand-card.ttb-suit-tome .ttb-hand-card-symbol { color: var(--ttb-gold-dk); }
+
+.ttb-hand-card.ttb-joker-red  { background: #fff0f0; border-color: #cc0000; }
+.ttb-hand-card.ttb-joker-red  .ttb-hand-card-symbol { color: #cc0000; }
+.ttb-hand-card.ttb-joker-black { background: #2a2a2a; border-color: #555; }
+.ttb-hand-card.ttb-joker-black .ttb-hand-card-symbol,
+.ttb-hand-card.ttb-joker-black .ttb-hand-card-name { color: #ccc; }
+.ttb-hand-card.ttb-joker-black .ttb-hand-play { background: #444; }
