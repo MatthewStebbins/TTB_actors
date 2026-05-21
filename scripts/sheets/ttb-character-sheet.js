@@ -91,6 +91,16 @@ function toArray(raw) {
   return Object.values(raw);
 }
 
+/**
+ * Reset the drawn:true flag on all cards currently in a deck.
+ * Foundry marks cards drawn:true when they leave their origin deck. Returning them
+ * via pass() does not reset this flag, causing "already been drawn" on the next flip.
+ */
+async function resetDrawnFlags(deck) {
+  const updates = deck.cards.contents.map(c => ({ _id: c.id, drawn: false }));
+  if (updates.length > 0) await deck.updateEmbeddedDocuments("Card", updates);
+}
+
 export class TtbCharacterSheet extends ActorSheet {
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
@@ -461,7 +471,9 @@ export class TtbCharacterSheet extends ActorSheet {
       });
     });
 
-    // Reshuffle all discard cards back into the deck, then shuffle
+    // Reshuffle all discard cards back into the deck, then shuffle.
+    // After pass(), cards return to the deck but keep drawn:true from their first draw.
+    // Reset drawn:false so Foundry allows them to be passed again on the next flip.
     html.find(".ttb-deck-reshuffle").click(async () => {
       const sys     = this.actor.system.fateDeck ?? {};
       const deck    = sys.deckId    ? game.cards?.get(sys.deckId)    : null;
@@ -470,6 +482,7 @@ export class TtbCharacterSheet extends ActorSheet {
       if (discard.cards.size === 0) return ui.notifications.warn("TTB | Discard pile is empty — nothing to reshuffle.");
       const allIds = discard.cards.contents.map(c => c.id);
       await discard.pass(deck, allIds);
+      await resetDrawnFlags(deck);
       await deck.shuffle();
       await this.actor.update({ "system.fateDeck.lastFlip.name": "" });
     });
