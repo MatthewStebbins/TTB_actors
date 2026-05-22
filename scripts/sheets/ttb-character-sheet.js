@@ -419,10 +419,12 @@ export class TtbCharacterSheet extends ActorSheet {
     });
 
     // ── Fate Deck Listeners ──────────────────────────────────
+    // Each handler awaits all card operations, then calls this.render(false) to
+    // force a fresh getData() so deck/hand/discard counts update immediately.
+    // Card stacks are external documents — the sheet won't re-render automatically
+    // unless we explicitly request it after each operation.
 
     // Flip top card from deck to discard.
-    // Clear drawn:false on the card first — cards can have stale drawn:true if
-    // resetDrawnFlags had a timing issue or from state before v0.1.3.
     html.find(".ttb-deck-flip").click(async () => {
       const sys     = this.actor.system.fateDeck ?? {};
       const deck    = sys.deckId    ? game.cards?.get(sys.deckId)    : null;
@@ -441,10 +443,10 @@ export class TtbCharacterSheet extends ActorSheet {
         "system.fateDeck.lastFlip.value": info.value,
         "system.fateDeck.lastFlip.name":  info.name,
       });
+      this.render(false);
     });
 
     // Draw top card from deck to hand.
-    // Same defensive drawn:false clear as the flip handler.
     html.find(".ttb-deck-draw-hand").click(async () => {
       const sys  = this.actor.system.fateDeck ?? {};
       const deck = sys.deckId ? game.cards?.get(sys.deckId) : null;
@@ -456,9 +458,10 @@ export class TtbCharacterSheet extends ActorSheet {
       if (!card) return;
       if (card.drawn) await deck.updateEmbeddedDocuments("Card", [{ _id: card.id, drawn: false }]);
       await deck.pass(hand, [card.id]);
+      this.render(false);
     });
 
-    // Play a card from hand (Cheat Fate) — replaces last flip
+    // Play a card from hand (Cheat Fate) — replaces last flip.
     html.find(".ttb-hand-play").click(async (ev) => {
       const cardId  = ev.currentTarget.dataset.cardId;
       const sys     = this.actor.system.fateDeck ?? {};
@@ -474,11 +477,10 @@ export class TtbCharacterSheet extends ActorSheet {
         "system.fateDeck.lastFlip.value": info.value,
         "system.fateDeck.lastFlip.name":  info.name,
       });
+      this.render(false);
     });
 
     // Reshuffle all discard cards back into the deck, then shuffle.
-    // After pass(), cards return to the deck but keep drawn:true from their first draw.
-    // Reset drawn:false on all deck cards so they can be passed again.
     html.find(".ttb-deck-reshuffle").click(async () => {
       const sys     = this.actor.system.fateDeck ?? {};
       const deck    = sys.deckId    ? game.cards?.get(sys.deckId)    : null;
@@ -490,6 +492,7 @@ export class TtbCharacterSheet extends ActorSheet {
       await resetDrawnFlags(deck);
       await deck.shuffle();
       await this.actor.update({ "system.fateDeck.lastFlip.name": "" });
+      this.render(false);
     });
 
     // Open native Foundry deck/hand sheet
@@ -503,6 +506,7 @@ export class TtbCharacterSheet extends ActorSheet {
     // Create card stacks if missing
     html.find(".ttb-deck-create").click(async () => {
       await this.actor._createFateDeck();
+      this.render(false);
     });
   }
 }
