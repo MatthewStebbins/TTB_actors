@@ -123,6 +123,26 @@ export class TtbCharacterSheet extends ActorSheet {
     });
   }
 
+  constructor(...args) {
+    super(...args);
+    /** Prevents concurrent fate deck operations from double-firing (e.g. rapid clicks). */
+    this._fateInProgress = false;
+  }
+
+  /**
+   * Wrap a fate deck async operation with a lock so rapid clicks don't cause
+   * duplicate card moves (which throw "already exists in collection").
+   */
+  async _fateOp(fn) {
+    if (this._fateInProgress) return;
+    this._fateInProgress = true;
+    try {
+      await fn();
+    } finally {
+      this._fateInProgress = false;
+    }
+  }
+
   getData() {
     const context = super.getData();
     const system  = this.actor.system;
@@ -431,11 +451,11 @@ export class TtbCharacterSheet extends ActorSheet {
     });
 
     // ── Fate Deck Listeners ──────────────────────────────────
-    // Each handler awaits all card operations, then calls this.render(false) to
-    // force a fresh getData() so deck/hand/discard counts update immediately.
+    // All handlers are wrapped in _fateOp() to prevent concurrent operations
+    // (e.g. rapid double-clicks) that would cause "already exists in collection" errors.
 
     // Flip top card from deck to discard — reveal face-up in discard pile.
-    html.find(".ttb-deck-flip").click(async () => {
+    html.find(".ttb-deck-flip").click(() => this._fateOp(async () => {
       const sys     = this.actor.system.fateDeck ?? {};
       const deck    = sys.deckId    ? game.cards?.get(sys.deckId)    : null;
       const discard = sys.discardId ? game.cards?.get(sys.discardId) : null;
@@ -455,10 +475,10 @@ export class TtbCharacterSheet extends ActorSheet {
         "system.fateDeck.lastFlip.name":  info.name,
       });
       this.render(false);
-    });
+    }));
 
     // Draw top card from deck to hand — reveal face-up in hand.
-    html.find(".ttb-deck-draw-hand").click(async () => {
+    html.find(".ttb-deck-draw-hand").click(() => this._fateOp(async () => {
       const sys  = this.actor.system.fateDeck ?? {};
       const deck = sys.deckId ? game.cards?.get(sys.deckId) : null;
       const hand = sys.handId ? game.cards?.get(sys.handId) : null;
@@ -471,10 +491,10 @@ export class TtbCharacterSheet extends ActorSheet {
       await deck.pass(hand, [card.id]);
       await revealCard(hand, card.id);
       this.render(false);
-    });
+    }));
 
     // Play a card from hand (Cheat Fate) — reveal face-up in discard.
-    html.find(".ttb-hand-play").click(async (ev) => {
+    html.find(".ttb-hand-play").click((ev) => this._fateOp(async () => {
       const cardId  = ev.currentTarget.dataset.cardId;
       const sys     = this.actor.system.fateDeck ?? {};
       const hand    = sys.handId    ? game.cards?.get(sys.handId)    : null;
@@ -491,11 +511,11 @@ export class TtbCharacterSheet extends ActorSheet {
         "system.fateDeck.lastFlip.name":  info.name,
       });
       this.render(false);
-    });
+    }));
 
     // Reshuffle all discard cards back into the deck, then shuffle.
     // resetDrawnFlags also resets face:null so cards return face-down.
-    html.find(".ttb-deck-reshuffle").click(async () => {
+    html.find(".ttb-deck-reshuffle").click(() => this._fateOp(async () => {
       const sys     = this.actor.system.fateDeck ?? {};
       const deck    = sys.deckId    ? game.cards?.get(sys.deckId)    : null;
       const discard = sys.discardId ? game.cards?.get(sys.discardId) : null;
@@ -507,7 +527,7 @@ export class TtbCharacterSheet extends ActorSheet {
       await deck.shuffle();
       await this.actor.update({ "system.fateDeck.lastFlip.name": "" });
       this.render(false);
-    });
+    }));
 
     // Open native Foundry deck/hand sheet
     html.find(".ttb-deck-open").click(() => {
@@ -518,9 +538,9 @@ export class TtbCharacterSheet extends ActorSheet {
     });
 
     // Create card stacks if missing
-    html.find(".ttb-deck-create").click(async () => {
+    html.find(".ttb-deck-create").click(() => this._fateOp(async () => {
       await this.actor._createFateDeck();
       this.render(false);
-    });
+    }));
   }
 }
