@@ -94,6 +94,7 @@ function toArray(raw) {
 /**
  * Reveal a card (face: 0) in whatever stack currently holds it.
  * Call after passing a card to hand or discard so it shows face-up.
+ * Cards.pass() preserves card IDs, so the same ID works in the destination.
  */
 async function revealCard(stack, cardId) {
   const card = stack.cards.get(cardId);
@@ -127,6 +128,8 @@ export class TtbCharacterSheet extends ActorSheet {
     super(...args);
     /** Prevents concurrent fate deck operations from double-firing (e.g. rapid clicks). */
     this._fateInProgress = false;
+    /** Foundry hook registration IDs — cleaned up on sheet close. */
+    this._fateHookIds = [];
   }
 
   /**
@@ -141,6 +144,42 @@ export class TtbCharacterSheet extends ActorSheet {
     } finally {
       this._fateInProgress = false;
     }
+  }
+
+  /**
+   * Register createCard / deleteCard hooks so deck/hand/discard counts update
+   * reactively whenever a card moves between our tracked stacks.
+   *
+   * These hooks fire AFTER Foundry updates the local in-memory collection,
+   * which is the reliable moment to re-render (unlike calling render() right
+   * after await pass(), which can race the socket propagation).
+   */
+  _registerFateHooks() {
+    this._unregisterFateHooks();
+    const sys = this.actor.system.fateDeck ?? {};
+    const trackedIds = new Set([sys.deckId, sys.handId, sys.discardId].filter(Boolean));
+    if (trackedIds.size === 0) return;
+
+    const onCardChange = (card) => {
+      if (trackedIds.has(card.parent?.id)) this.render(false);
+    };
+
+    this._fateHookIds = [
+      { name: "createCard", id: Hooks.on("createCard", onCardChange) },
+      { name: "deleteCard", id: Hooks.on("deleteCard", onCardChange) },
+    ];
+  }
+
+  /** Remove registered fate hooks — called on each re-register and on sheet close. */
+  _unregisterFateHooks() {
+    for (const { name, id } of this._fateHookIds) Hooks.off(name, id);
+    this._fateHookIds = [];
+  }
+
+  /** Override close to clean up card hooks so they don't leak after sheet is closed. */
+  async close(options = {}) {
+    this._unregisterFateHooks();
+    return super.close(options);
   }
 
   getData() {
@@ -311,6 +350,9 @@ export class TtbCharacterSheet extends ActorSheet {
     super.activateListeners(html);
     if (!this.isEditable) return;
 
+    // Re-register card hooks every render so tracked IDs stay current.
+    this._registerFateHooks();
+
     html.find(".ttb-actors-attr-value").change((ev) => {
       const attr = ev.currentTarget.dataset.attr;
       this.actor.update({ [`system.attributes.${attr}.value`]: Number(ev.currentTarget.value) });
@@ -452,7 +494,9 @@ export class TtbCharacterSheet extends ActorSheet {
 
     // ── Fate Deck Listeners ──────────────────────────────────
     // All handlers are wrapped in _fateOp() to prevent concurrent operations
-    // (e.g. rapid double-clicks) that would cause "already exists in collection" errors.
+    // (e.g. rapid double-clicks) that cause "already exists in collection" errors.
+    // Counts update via the createCard/deleteCard hooks registered above — those
+    // fire after Foundry updates the local collection, guaranteeing fresh data.
 
     // Flip top card from deck to discard — reveal face-up in discard pile.
     html.find(".ttb-deck-flip").click(() => this._fateOp(async () => {
@@ -469,12 +513,12 @@ export class TtbCharacterSheet extends ActorSheet {
       if (card.drawn) await deck.updateEmbeddedDocuments("Card", [{ _id: card.id, drawn: false }]);
       await deck.pass(discard, [card.id]);
       await revealCard(discard, card.id);
+      // actor.update triggers auto re-render for lastFlip display; card hooks handle counts.
       await this.actor.update({
         "system.fateDeck.lastFlip.suit":  info.suit,
         "system.fateDeck.lastFlip.value": info.value,
         "system.fateDeck.lastFlip.name":  info.name,
       });
-      this.render(false);
     }));
 
     // Draw top card from deck to hand — reveal face-up in hand.
@@ -490,7 +534,7 @@ export class TtbCharacterSheet extends ActorSheet {
       if (card.drawn) await deck.updateEmbeddedDocuments("Card", [{ _id: card.id, drawn: false }]);
       await deck.pass(hand, [card.id]);
       await revealCard(hand, card.id);
-      this.render(false);
+      // No actor.update here — card hooks trigger render so the hand grid updates.
     }));
 
     // Play a card from hand (Cheat Fate) — reveal face-up in discard.
@@ -505,12 +549,12 @@ export class TtbCharacterSheet extends ActorSheet {
       const info = { suit: card.suit ?? "", value: card.value ?? 0, name: card.name ?? "" };
       await hand.pass(discard, [cardId]);
       await revealCard(discard, cardId);
+      // actor.update triggers auto re-render for lastFlip display; card hooks handle counts.
       await this.actor.update({
         "system.fateDeck.lastFlip.suit":  info.suit,
         "system.fateDeck.lastFlip.value": info.value,
         "system.fateDeck.lastFlip.name":  info.name,
       });
-      this.render(false);
     }));
 
     // Reshuffle all discard cards back into the deck, then shuffle.
@@ -525,8 +569,8 @@ export class TtbCharacterSheet extends ActorSheet {
       await discard.pass(deck, allIds);
       await resetDrawnFlags(deck);
       await deck.shuffle();
+      // Clear lastFlip display; actor.update also triggers re-render.
       await this.actor.update({ "system.fateDeck.lastFlip.name": "" });
-      this.render(false);
     }));
 
     // Open native Foundry deck/hand sheet
