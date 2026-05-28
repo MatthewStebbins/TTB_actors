@@ -285,9 +285,7 @@ Destiny is read in this order: Endeavor → Mind → Root → Body → Station.
 | Defense | 2 | 2 + max(Evade=0, Speed=0) |
 | Willpower | 4 | 2 + max(Centering=1, Tenacity=2) |
 | Initiative | 1 | Speed(0) + Notice(1) |
-| Wounds | 7 | 4 + Toughness(3) = 7; Resilience=+1 → ceil(1/2)=1, but example gives 7 — verify whether Resilience bonus requires Resilience ≥ 2 |
+| Wounds | 8 | 4 + Toughness(3) + ceil(Resilience(1)/2)=1 |
 | Walk | 4 | 4 + floor(Speed(0)/2) |
 | Charge | 4 | max(Walk=4, 4+Speed(0)=4) |
 | Height | 2 | Fixed for adult humans |
-
-> **Open Question — Wounds/Resilience interaction**: The example yields 7 Wounds with Resilience=+1 and Toughness=3. This suggests either the Resilience bonus does not apply at +1, or rounding works differently. Needs verification against the full rules text.
