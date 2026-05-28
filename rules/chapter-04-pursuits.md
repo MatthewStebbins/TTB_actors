@@ -2,65 +2,45 @@
 
 ## Overview
 
-A **Pursuit** is a temporary template describing a character's role in the current story. Characters switch Pursuits between sessions to match the narrative and build a diverse character, though some may specialize by staying on one Pursuit.
+Pursuits are temporary templates describing a character's role within a story and short-term goals. Characters are encouraged to move between Pursuits to build diverse characters, though specialization is possible.
+
+### Pursuit Components
+
+| Component | Description |
+|---|---|
+| **Starting Bonus** | Benefit gained **only** if this Pursuit was chosen at character creation |
+| **On the Pursuit** | Ability active while on this Pursuit during a session |
+| **Advancements** | Talents gained at end of each session, in listed order |
+| **Step 0 Talent** | Gained immediately the **first time** this Pursuit is chosen (creation or later session) |
+
+### Rules
+
+- At the end of each session (**Epilogue**), the character advances one Step and gains the listed Talent
+- A character may choose any **General Talent** when the advancement says "General Talent" (if prerequisites met)
+- Pursuits max out at **10 Steps** — a character cannot advance further in a maxed Pursuit
+- Changing Pursuits: the **On the Pursuit** ability changes, but all previously gained Talents are **retained**
+- Pursuits are chosen **after the Prologue** each session
 
 ### Pursuit Types
 
-| Type | Description |
+| Type | Availability |
 |---|---|
-| **Basic** | Available to any character at creation or session Prologue; no prerequisites |
+| **Basic** | Any character at creation or session Prologue; no prerequisites |
 | **Advanced** | Require specific prerequisites; not available to starting characters |
-
----
-
-## Pursuit Mechanics
-
-### Components of Every Pursuit
-
-| Component | When Gained | Description |
-|---|---|---|
-| **Starting Bonus** | Character creation only | Benefit for choosing this as your first Pursuit |
-| **Step 0 Talent** | First time choosing the Pursuit (any session) | Immediate benefit; always gained before play begins |
-| **On the Pursuit** | While this Pursuit is active for the session | Primary card-draw / hand-replenishment ability |
-| **Advancements** | End of each session (Epilogue), Steps 1–10 | Talents gained in listed order; sometimes a choice of two |
-
-### Session Flow
-
-1. **Prologue** — short scene setting tone; no combat duels
-2. **Choose Pursuit** — each character picks their Pursuit for the session
-   - If first time on this Pursuit → gain Step 0 Talent
-   - Gain "On the Pursuit" ability for the session
-3. **Play the session**
-4. **Epilogue** — advance one step; gain the listed Talent
-
-### Changing Pursuits
-
-- Characters **retain all Talents** from previous Pursuits (including Step 0 Talents)
-- Max **10 steps** per Basic Pursuit; must switch after reaching Step 10
-- Changing Pursuit changes the "On the Pursuit" ability immediately
-
-### General Talents
-
-When an advancement step says "General Talent," the character may choose **any General Talent** from Chapter 6 (subject to prerequisites and Fatemaster approval).
 
 ---
 
 ## Basic Pursuits
 
----
-
 ### Academic
 
-**Flavor**: Torchbearers of the new Golden Age of learning and progress. Use intellect over brute force — everything obeys rules, and learning those rules is their greatest weapon.
+**Theme**: Scholars, scientists, inventors, and artists who rely on their minds over their muscles.
 
-**Skill Category**: Academic Skills
+**Starting Bonus**: Non-magical skill toolkit
 
-#### Starting Bonus
-Non-magical skill toolkit.
+**On the Pursuit — Avid Student**: When this character fails an Academic duel, she may draw a card.
 
-#### On the Pursuit: Avid Student
-- When this character **fails an Academic duel**, she may draw a card.
-- During the **Epilogue**, may advance in any Academic Skill (in addition to Fatemaster options).
+**Epilogue Skill Advancement**: May advance any Academic Skill (in addition to Fatemaster options).
 
 #### Advancement Path
 
@@ -80,100 +60,56 @@ Non-magical skill toolkit.
 
 #### Talents
 
----
+**Know-It-All** *(Step 0)*
+When this character fails a Skill Challenge with a Skill associated with a Mental Aspect, she may discard a card to immediately reflip that Challenge. If the discarded card was a Tome (t), she may use an Academic Skill of her choice in place of the original Skill.
 
-##### Know-It-All *(Step 0)*
-When this character **fails a Skill Challenge with a Mental-Aspect Skill**, she may discard a card to **immediately reflip** that Challenge.
-- If the discarded card was a **Tome (t)**, she may use any Academic Skill of her choice in place of the original Skill.
+**Student of Knowledge** *(Step 1)*
+Gains the following Trigger on all Academic Skill Duels:
+- t **Insight**: After resolving, draw a card.
 
----
+**Scientific Classification** *(Step 1)*
+Gains the following Tactical Action:
+- **(1) Document Denizen**: Target an enemy within 10 yards. Make a Challenge flip using Engineering (Construct), History (human), or Wilderness (everything else). Wilderness is Academic for this duel. Opposed by target's Deceive + Cunning + Rank Value. Success: learn target's type, Rank Value, and nature of Abilities/Talents. Rare/unique targets may impose − at Fatemaster's discretion. Cannot identify characters by name.
 
-##### Student of Knowledge *(Step 1 option)*
-Gains the following **Trigger on all Academic Skill Duels**:
-> **t Insight**: After resolving, draw a card.
+**Rational Mind** *(Step 3)*
+Choose an Academic Skill. When making a Challenge Flip to resist manipulation (terror, mind control, intimidation), add ranks in the chosen Skill to the final duel total.
 
----
+**Symposium** *(Step 3)*
+During an Ongoing Challenge, this character's Academic Skill final duel totals increase by +1 each time another character in the Ongoing Challenge succeeds at an Academic Skill Challenge. Bonus lasts until end of the Ongoing Challenge.
 
-##### Scientific Classification *(Step 1 option)*
-Gains the following **Tactical Action**:
+**Annoying Distraction** *(Step 5)*
+When this character successfully uses the Trick or Impose Action against an opponent during Dramatic Time, that opponent becomes **Dazed** until the start of this character's next turn.
 
-> **(1) Document Denizen**: Target an enemy within 10 yards. Make a Challenge flip:
-> - **Engineering** if target is a Construct
-> - **History** if target is human
-> - **Wilderness** for everything else
->
-> *(Wilderness is considered Academic for this duel)*
->
-> Opposed by target's **Deceive + Cunning + Rank Value**.
->
-> **Success**: Learn target's type, Rank Value, and nature of Abilities/Talents.
-> Rare/unique targets may impose **−** at Fatemaster's discretion.
-> Cannot identify specific characters by name.
+**Boring Lecture** *(Step 5)*
+With at least 5 minutes to lecture on a subject corresponding to an Academic Skill (≥1 rank), make a Challenge Flip using that Skill, opposed by Willpower duels of every non-Beast character that can hear her. If this character's total ≥ opponent's Willpower total → **Dazed** for 1 hour of Narrative Time. Margin of Success against any character → that character must attempt a TN 10 Unconsciousness Challenge.
 
----
+**Lessons Learned** *(Step 7)*
+Gains the following Defensive Trigger:
+- **Df (t) Lessons Learned**: After resolving against an enemy's attack, draw a card.
 
-##### Rational Mind *(Step 3 option)*
-Choose an Academic Skill. When making a Challenge Flip to **resist manipulation** (terror, mind control, intimidation, etc.), add ranks in the chosen Skill to the final duel total.
+**Mental Conditioning** *(Step 7)*
+Choose a Mental-based Skill and a Suit. Add the chosen Suit to that Skill's rank value.
 
----
+**Philosopher** *(Step 9)*
+Once per turn during Dramatic Time, after taking a Pass Action, this character may discard a card to draw a card.
 
-##### Symposium *(Step 3 option)*
-During an **Ongoing Challenge**, this character's Academic Skill final duel totals increase by **+1 each time another character in the Ongoing Challenge succeeds** at an Academic Skill Challenge. Bonus lasts until end of the Ongoing Challenge.
+**Erudition** *(Step 9)*
+This character may add her Intellect Aspect to the final duel total of every non-Magical Skill associated with a Mental Aspect.
 
----
-
-##### Annoying Distraction *(Step 5 option)*
-When this character **successfully uses the Trick or Impose Action** against an opponent during Dramatic Time, that opponent becomes **Dazed** until the start of this character's next turn.
-
----
-
-##### Boring Lecture *(Step 5 option)*
-If this character has **at least 5 minutes** to lecture on a subject corresponding to an Academic Skill she has ≥1 rank in:
-- Make a Challenge Flip using that Academic Skill
-- Opposed by **Willpower duels** of every non-Beast character that can hear her
-- If this character's total ≥ opponent's Willpower total → that character gains **Dazed** for the next **hour of Narrative Time**
-- If **Margin of Success** against any character → that character must immediately attempt a **TN 10 Unconsciousness Challenge**
-
----
-
-##### Lessons Learned *(Step 7 option)*
-Gains the following **Defensive Trigger**:
-> **Df (t) Lessons Learned**: After resolving against an enemy's attack, draw a card.
-
----
-
-##### Mental Conditioning *(Step 7 option)*
-Choose a **Mental-based Skill** and a **Suit**. Add the chosen Suit to that Skill's rank value.
-
----
-
-##### Philosopher *(Step 9 option)*
-Once per turn during Dramatic Time, after taking a **Pass Action**, this character may **discard a card to draw a card**.
-
----
-
-##### Erudition *(Step 9 option)*
-This character may add her **Intellect Aspect** to the final duel total of every **non-Magical Skill associated with a Mental Aspect**.
-
----
-
-##### Eureka Moment *(Step 10)*
-Once per session, this character may **discard a card** to **deduce an important piece of information** about a topic of her choice. Content determined by Fatemaster; should be practically useful to the character.
+**Eureka Moment** *(Step 10)*
+Once per session, this character may discard a card to deduce an important piece of information about a topic of her choice. Content determined by Fatemaster; should be practically useful.
 
 ---
 
 ### Criminal
 
-**Flavor**: Those who willingly engage in illegal activity — some out of desperation, others for the thrill. Many Malifaux Criminals were transported through the Breach as punishment for Earth-side crimes.
+**Theme**: Thieves, con artists, and those who operate outside the law.
 
-**Skill Category**: Training Skills
+**Starting Bonus**: Non-magical skill toolkit
 
-#### Starting Bonus
-Non-magical skill toolkit.
+**On the Pursuit — Opportunist**: When this character fails a Training duel, she may draw a card.
 
-#### On the Pursuit: Opportunist
-- When this character **fails a Training duel**, she may draw a card.
-- During the **Epilogue**, may advance in any Training Skill (in addition to Fatemaster options).
+**Epilogue Skill Advancement**: May advance any Training Skill (in addition to Fatemaster options).
 
 #### Advancement Path
 
@@ -193,53 +129,32 @@ Non-magical skill toolkit.
 
 #### Talents
 
----
+**Improvise** *(Step 0)*
+This character may discard a card to create a **shiv**. Lasts indefinitely until used; breaks at end of Dramatic Time after use.
+> *Shiv stats: melee weapon — full stat block listed in rulebook (table was cut off in source)*
 
-##### Improvise *(Step 0)*
-This character may **discard a card to create a shiv**.
-- The shiv lasts indefinitely until used; **breaks at end of Dramatic Time** after use.
+**Scoundrel** *(Step 1)*
+Gains the following Trigger on all Social Skill Challenges:
+- M **Fast Talk**: After resolving, take a Pick Pocket Action against a target within 1 yard. The Pick Pocket Action gains + to its flip.
 
-> **Shiv** — stats listed in full rulebook (melee weapon, improvised)
+**Friends in Low Places** *(Step 1)*
+- Gains + to Barter, Bewitch, and Leadership Challenges against bandits, gang members, criminals, mercenaries, and other lawless types.
+- If a Fatemaster character pursues a bounty on this character, she learns about it from a contact as soon as possible.
 
----
-
-##### Scoundrel *(Step 1 option)*
-Gains the following **Trigger on all Social Skill Challenges**:
-> **M Fast Talk**: After resolving, take a **Pick Pocket Action** against a target within 1 yard. The Pick Pocket Action gains **+** to its flip.
-
----
-
-##### Friends in Low Places *(Step 1 option)*
-- Gains **+** to Barter, Bewitch, and Leadership Challenges made against **bandits, gang members, criminals, mercenaries, and other lawless types**.
-- If a Fatemaster character pursues a **bounty** on this character, this character learns of it **as soon as possible** through contacts.
-
----
-
-##### Relentless *(Step 3 option)*
+**Relentless** *(Step 3)*
 This character is **immune to Horror Duels**.
 
----
+**Duplicitous** *(Step 3)*
+This character may use her Deceive Skill in place of Evade Skill when calculating her **Defense Derived Aspect**.
 
-##### Duplicitous *(Step 3 option)*
-This character may use her **Deceive Skill in place of Evade Skill** when calculating her **Defense Derived Aspect**.
+**Dirty Trick** *(Step 5)*
+Gains the following Trigger on the Trick Action:
+- M **Dirty Trick**: After succeeding, take a (1) AP Close Combat attack against the target, if in range.
 
----
+**Thugs** *(Step 5)*
+This character attracts 2 Thug subordinate characters. When using the (1) Order Action to command Thugs, may command both with different orders. When commanding a single Thug, (1) Order Action becomes a (0) Action. Killed Thugs may be replaced at start of next session.
 
-##### Dirty Trick *(Step 5 option)*
-Gains the following **Trigger on the Trick Action**:
-> **M Dirty Trick**: After succeeding, take a **(1) AP Close Combat attack** against the target, if in range.
-
----
-
-##### Thugs *(Step 5 option)*
-This character attracts **2 Thug subordinate characters**.
-- When using the **(1) Order Action** to command Thugs, may command **both** with different orders.
-- When commanding a **single Thug**, the (1) Order Action is treated as a **(0) Action**.
-- If Thugs are killed, recruit new ones at the **start of the next session**.
-
-**Thug Stats**:
-
-| Stat | Value |
+| Thug Stat | Value |
 |---|---|
 | Might | 2 |
 | Grace | 1 |
@@ -250,69 +165,49 @@ This character attracts **2 Thug subordinate characters**.
 | Cunning | -1 |
 | Tenacity | 2 |
 | Defense | 4 (9) |
-| Walk | 4 |
-| Height | 2 |
-| Initiative | 1 (6) |
 | Willpower | 4 (9) |
+| Walk | 4 |
 | Charge | 4 |
+| Initiative | 1 (6) |
 | Wounds | 6 |
-| Type | Minion (5), Living |
+| Type | Minion (5), Living, Height 2 |
 
 Skills: Evade 2, Intimidate 2, Melee 3, Notice 1, Toughness 1.
 
-**Goons**: When this character's controller succeeds on the (1) Trick Action, this Thug also gains the benefits of the Action.
+**Goons**: When this character's controller succeeds on the (1) Trick Action, this Thug also gains the benefits.
 
-**Pick On Someone Yer Own Size!**: When this Thug's controller is targeted with a melee attack, if this Thug would be a valid target, its controller may discard a card to make this Thug the target instead.
+**Pick On Someone Yer Own Size!**: When this Thug's controller is targeted with a melee attack and this Thug would be a valid target, controller may discard a card to make this Thug the target instead.
 
-**(1) Crude Club (Melee)** — AV: 5 (10) | Rg: melee 2 | Resist: Df
-Damage: 2/2/4. Severe damage also inflicts a Weak Critical Effect.
+**(1) Crude Club** (Melee) — AV: 5 (10) | Rg: melee 2 | Resist: Df — Damage: 2/2/4. Severe damage also inflicts a Weak Critical Effect.
 
----
+**Study Opponent** *(Step 7)*
+Choose Close Combat or Ranged Combat. When making an attack of the chosen type, this character may target the opponent's **Willpower instead of Defense**.
 
-##### Study Opponent *(Step 7 option)*
-When gaining this Talent, choose **Close Combat** or **Ranged Combat** attacks. When making an attack of the chosen type, this character may choose to target the opponent's **Willpower instead of Defense**.
+**Into Shadow** *(Step 7)*
+Choose Close Combat or Ranged Combat. Gains the following Trigger on all attacks of the chosen type:
+- M **Hide in Shadow**: After succeeding, move up to 3 yards in any direction.
 
----
+**Misdirection** *(Step 9)*
+Gains the following Defensive Trigger:
+- **Df (M) Misdirection**: After a Close Combat attack from an enemy succeeds against this character, this character may discard a card. A target enemy in the attacker's engagement range suffers the effects of the attack instead of this character.
 
-##### Into Shadow *(Step 7 option)*
-When gaining this Talent, choose **Close Combat** or **Ranged Combat** attacks. Gains the following **Trigger on all attacks of the chosen type**:
-> **M Hide in Shadow**: After succeeding, this character may **move up to 3 yards** in any direction.
+**Shock and Awe** *(Step 9)*
+When this character succeeds on the (1) Trick Action, every friendly character within 6 yards and line of sight of the target also gains the Action's benefits.
 
----
-
-##### Misdirection *(Step 9 option)*
-Gains the following **Defensive Trigger**:
-> **Df (M) Misdirection**: After a Close Combat attack from an enemy succeeds against this character, this character may discard a card. If she does, a **target enemy in the attacker's engagement range** suffers the effects of the attack instead of this character.
-
----
-
-##### Shock and Awe *(Step 9 option)*
-When this character **succeeds on the (1) Trick Action**, every **friendly character within 6 yards and line of sight** of the target also gains the Action's benefits.
-
----
-
-##### Nimble *(Step 10)*
-This character generates **1 additional AP** on her turn that **can only be used for a Movement General Action**.
+**Nimble** *(Step 10)*
+This character generates 1 additional AP on her turn that can only be used for a Movement General Action.
 
 ---
 
 ### Dabbler
 
-**Flavor**: Spellcasters drawn to Malifaux by its amplified magical energy. Practitioners of Sorcery — the most destructive school of magic. Work in secret to avoid Guild persecution.
+**Theme**: Self-taught spellcasters harnessing Sorcery outside Guild doctrine.
 
-**Skill Category**: Magical Skills
+**Starting Bonus**: A Grimoire containing 1 Sorcery Magia + 1 Enchanting/Necromancy/Prestidigitation Magia + 3 Immuto.
 
-#### Starting Bonus
-A Grimoire containing:
-- **1 Sorcery Magia**
-- **1 Magia** from: Enchanting, Necromancy, or Prestidigitation
-- **3 Immuto**
+**On the Pursuit — Epiphany**: When this character fails a Magical duel during Dramatic Time, she may draw a card.
 
-*(Total: 2 Magia, 3 Immuto)*
-
-#### On the Pursuit: Epiphany
-- When this character **fails a Magical duel during Dramatic Time**, she may draw a card.
-- During the **Epilogue**, may advance in any Magical Skill (in addition to Fatemaster options).
+**Epilogue Skill Advancement**: May advance any Magical Skill (in addition to Fatemaster options).
 
 #### Advancement Path
 
@@ -332,81 +227,48 @@ A Grimoire containing:
 
 #### Talents
 
----
+**Imbue Protection** *(Step 0)*
+Gains the following Tactical Action:
+- **(0) Imbue Protection**: Target a friendly character within 1 yard (may be self) and discard a card. Target gains Condition for 5 minutes: *"Imbued Protection +N: When this character suffers damage, reduce damage by +N (minimum 0), then reduce Condition value by the same amount."*
+  - Card value 1–5 → **+1** | Card value 6–10 → **+2** | Card value 11+ → **+3**
 
-##### Imbue Protection *(Step 0)*
-Gains the following **Tactical Action**:
+**Counter Magic** *(Step 1)*
+Gains the following Tactical Action:
+- **(0) Counter Magic**: Target a character within 10 yards and line of sight. Until the start of this character's next turn, the next time the target casts a Spell or Spell-like Manifested Power, this character may make a Counter-Spelling Challenge against a TN equal to the final duel total of that Spell/Power. Success: the Spell/Power is countered and has no effect.
 
-> **(0) Imbue Protection**: Target a friendly character within 1 yard (may be self) and discard a card. Target gains the following Condition for **5 minutes**:
->
-> *"Imbued Protection +N: When this character suffers damage, reduce damage by +N (minimum 0), then reduce this Condition's value by the same amount."*
->
-> - Discarded card value **1–5** → **+1**
-> - Discarded card value **6–10** → **+2**
-> - Discarded card value **11+** → **+3**
+**Mastered Immuto** *(Steps 1, 5, 9)*
+Choose an Immuto. This character always has access to it regardless of her current Grimoire. *(May be taken once per step that offers it.)*
 
----
+**Arcane Musings** *(Step 3)*
+This character adds **+t** to her Sorcery Skill.
 
-##### Counter Magic *(Step 1 option)*
-Gains the following **Tactical Action**:
+**Mastered Magia** *(Steps 3, 7)*
+Choose a Magia. This character always has access to it regardless of her current Grimoire. If she has no Grimoire, she may act as if she had one containing this Magia. *(May be taken once per step that offers it.)*
 
-> **(0) Counter Magic**: Target a character within 10 yards and line of sight. Until the start of this character's next turn, the **next time the target attempts to cast a Spell or Spell-like Manifested Power**, this character may make a **Counter-Spelling Challenge** against a **TN equal to the final duel total** of that Spell or Manifested Power.
-> - **Success**: The Spell or Manifested Power is **countered** and has no effect.
+**Spell Twisting** *(Step 5)*
+After adding one or more Immuto to a Spell, this character may discard a card to add one additional instance of any Immuto she knows (may be the same Immuto if allowed) to the Spell with **no increase to the Spell's TN**.
 
----
+**Surge** *(Step 7)*
+Gains the following Trigger on Magical Skill Challenges used to cast Spells:
+- tt **Surge**: After succeeding, draw a card.
 
-##### Mastered Immuto *(Steps 1, 5, 9)*
-Choose an **Immuto**. This character always has access to that Immuto **regardless of her current Grimoire**.
-*(Can be taken multiple times — once per step that offers it)*
+**Empowered Channeling** *(Step 9)*
+This character gains + to the casting attempt and any resulting damage flip of the **first Spell she casts on her turn**.
 
----
-
-##### Arcane Musings *(Step 3 option)*
-This character adds **+t** to her **Sorcery Skill**.
-
----
-
-##### Mastered Magia *(Steps 3, 7)*
-Choose a **Magia**. This character always has access to that Magia **regardless of her current Grimoire**. If she has no Grimoire, she may act as if she has a Grimoire containing this Magia.
-*(Can be taken multiple times — once per step that offers it)*
-
----
-
-##### Spell Twisting *(Step 5 option)*
-After adding one or more Immuto to a Spell, this character may **discard a card** to add **one additional instance of any Immuto she knows** (may be the same Immuto if allowed) to the Spell with **no increase to the Spell's TN**.
-
----
-
-##### Surge *(Step 7 option)*
-Gains the following **Trigger on Magical Skill Challenges used to cast Spells**:
-> **tt Surge**: After succeeding, draw a card.
-
----
-
-##### Empowered Channeling *(Step 9 option)*
-This character gains **+** to the **casting attempt** and any **resulting damage flip** of the **first Spell she casts on her turn**.
-
----
-
-##### Casting Expert *(Step 10)*
-This character gains **1 additional AP** on her turn, but this AP **may only be used to cast a Spell or Manifested Power**.
+**Casting Expert** *(Step 10)*
+This character gains 1 additional AP on her turn, but this AP **may only be used to cast a Spell or Manifested Power**.
 
 ---
 
 ### Drudge
 
-**Flavor**: Manual laborers — often M&SU miners and construction workers. Hard-working, tough, and inured to pain. Many sport pneumatic limb replacements from workplace injuries, adding debt to their indenture contracts.
+**Theme**: Manual laborers and miners — tough, hardy, and inured to pain. Many sport pneumatic limbs from workplace injuries.
 
-**Skill Category**: Training Skills
+**Starting Bonus**: Choose one: non-magical skill toolkit **or** one pneumatic limb with any number of steam augments up to **25§ total value**.
 
-#### Starting Bonus
-Choose one:
-- Non-magical skill toolkit, **or**
-- One **pneumatic limb** with any number of steam augments up to a total value of **25§**
+**On the Pursuit — Long Days**: When this character fails a Training duel, she may draw a card.
 
-#### On the Pursuit: Long Days
-- When this character **fails a Training duel**, she may draw a card.
-- During the **Epilogue**, may advance in any Training Skill (in addition to Fatemaster options).
+**Epilogue Skill Advancement**: May advance any Training Skill (in addition to Fatemaster options).
 
 #### Advancement Path
 
@@ -426,71 +288,49 @@ Choose one:
 
 #### Talents
 
----
+**Hard Worker** *(Step 0)*
+- Gains + to all Athletics Challenges.
+- If she succeeds on an Athletics Challenge, she gains a Margin of Success.
 
-##### Hard Worker *(Step 0)*
-- Gains **+** to all Athletics Challenges.
-- If she **succeeds** on an Athletics Challenge, she gains a **Margin of Success**.
+**Keep Standing** *(Step 1)*
+- May discard a Twist Card when suffering a Critical Effect:
+  - Instant Critical Effect → ignored
+  - Lasting Critical Effect → no effect until start of next turn (Dramatic Time) or 1 minute (Narrative Time)
+- May discard a Twist Card to automatically pass an Unconsciousness Challenge.
 
----
-
-##### Keep Standing *(Step 1 option)*
-- May **discard a Twist Card** when suffering a **Critical Effect** to mitigate it:
-  - **Instant Critical Effect** → ignored entirely
-  - **Lasting Critical Effect** → no effect until start of this character's next turn (Dramatic Time) or for 1 minute (Narrative Time)
-- May **discard a Twist Card** to automatically **pass an Unconsciousness Challenge**.
-
----
-
-##### Long Suffering *(Step 1 option)*
+**Long Suffering** *(Step 1)*
 This character gains **+2 Wounds**.
 
----
+**Teamwork** *(Step 3)*
+- May take the (1) Assist Action as a **(0) Action**.
+- When targeted by the Assist Action, gains an additional + to the assisted Action.
 
-##### Teamwork *(Step 3 option)*
-- This character may take the **(1) Assist Action as a (0) Action**.
-- When **targeted by the Assist Action**, she gains an **additional +** to the assisted Action (on top of the normal Assist benefits).
+**Hard to Kill** *(Step 3)*
+Once per Dramatic Time when this character receives a Critical Effect, she may choose not to receive it.
 
----
+**Steady Pace** *(Step 5)*
+After succeeding at a Skill Challenge as part of an Ongoing Challenge, gains + to her next Skill Challenge in that same Ongoing Challenge.
 
-##### Hard to Kill *(Step 3 option)*
-**Once per Dramatic Time** when this character receives a Critical Effect, she may choose **not to receive** that Critical Effect.
+**Slow to Die** *(Step 5)*
+When this character suffers a Critical Effect, the **Critical Effect flip suffers a −**.
 
----
+**Soldier On** *(Step 7)*
+At the beginning of Dramatic Time, this character may heal **2/3/5 damage**. She may also choose one conscious friendly character that can hear her to also heal **2/3/5 damage**.
 
-##### Steady Pace *(Step 5 option)*
-After this character **succeeds at a Skill Challenge as part of an Ongoing Challenge**, she gains **+** to her **next Skill Challenge** made as part of that same Ongoing Challenge.
+**Put Your Back Into It** *(Step 7)*
+Before performing a Close Combat, Expertise, Training, or Ranged Combat Skill Challenge, may discard a card to substitute:
+- **Athletics + Resilience** (if tied to a Physical Aspect), or
+- **Athletics + Tenacity** (if tied to a Mental Aspect)
 
----
+in place of the original Skill and Aspect.
 
-##### Slow to Die *(Step 5 option)*
-When this character **suffers a Critical Effect**, the **Critical Effect flip suffers a −**.
+**Just a Graze** *(Step 9)*
+This character may **Cheat any Damage Flip she suffers**, regardless of − modifiers or Jokers.
 
----
+**Can't Keep Me Down** *(Step 9)*
+At the start of this character's turn during Dramatic Time:
+- Less than half total Wounds remaining (rounded up) → heal **1 damage**
+- Suffering from Critical Effect(s) or less than 0 Wounds → heal **2 damage** instead
 
-##### Soldier On *(Step 7 option)*
-At the **beginning of Dramatic Time**, this character may **heal 2/3/5 damage**. She may also choose any conscious friendly character that can hear her to **also heal 2/3/5 damage**.
-
----
-
-##### Put Your Back Into It *(Step 7 option)*
-Before performing a **Close Combat, Expertise, Training, or Ranged Combat Skill Challenge**, this character may **discard a card** to use:
-- **Athletics + Resilience** in place of the original Skill and Aspect (if the Challenge is tied to a Physical Aspect), **or**
-- **Athletics + Tenacity** in place of the original Skill and Aspect (if tied to a Mental Aspect)
-
----
-
-##### Just a Graze *(Step 9 option)*
-This character may **Cheat any Damage Flip she suffers**, regardless of **−** modifiers or Jokers.
-
----
-
-##### Can't Keep Me Down *(Step 9 option)*
-At the **start of this character's turn during Dramatic Time**:
-- If she has **less than half her total Wounds remaining** (rounded up) → heal **1 damage**
-- If she is suffering from **one or more Critical Effects** or has **less than 0 Wounds remaining** → heal **2 damage** instead
-
----
-
-##### My Lot in Life *(Step 10)*
-At the **start of this character's turn during Dramatic Time**, she may **discard a card** to gain a number of **additional AP equal to the number of Lasting Critical Effects** she is currently suffering from (even if ignoring their effects via Keep Standing). **Maximum 3 additional AP**.
+**My Lot in Life** *(Step 10)*
+At the start of this character's turn during Dramatic Time, may discard a card to gain additional AP equal to the number of Lasting Critical Effects she is suffering (even if ignoring them via Keep Standing). **Maximum 3 additional AP**.
