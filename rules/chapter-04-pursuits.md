@@ -334,3 +334,358 @@ At the start of this character's turn during Dramatic Time:
 
 **My Lot in Life** *(Step 10)*
 At the start of this character's turn during Dramatic Time, may discard a card to gain additional AP equal to the number of Lasting Critical Effects she is suffering (even if ignoring them via Keep Standing). **Maximum 3 additional AP**.
+
+---
+
+### Graverobber
+
+**Theme**: Necromancy-touched individuals drawn to the power of life and death — often driven by the mysterious "Whisper" toward darker and darker acts.
+
+**Starting Bonus**: A Grimoire containing 1 Necromancy Magia + 1 Enchanting/Prestidigitation/Sorcery Magia + 3 Immuto (total: 2 Magia, 3 Immuto).
+
+**On the Pursuit — Black Soul**: When this character fails a Magical duel during Dramatic Time, she may draw a card.
+
+**Epilogue Skill Advancement**: May advance any Magical Skill (in addition to Fatemaster options).
+
+#### Advancement Path
+
+| Step | Talent |
+|---|---|
+| 0 | Sense Corpses |
+| 1 | They Weren't Using It **or** Mastered Immuto |
+| 2 | General Talent |
+| 3 | Morbid Thoughts **or** Mastered Magia |
+| 4 | General Talent |
+| 5 | Macabre Infusions **or** Mastered Immuto |
+| 6 | General Talent |
+| 7 | Consume Corpse **or** Mastered Magia |
+| 8 | General Talent |
+| 9 | Maniacal Laugh **or** Mastered Immuto |
+| 10 | Unholy Beacon |
+
+#### Talents
+
+**Sense Corpses** *(Step 0)*
+Gains the following Tactical Action:
+- **(0) Sense Corpse**: This character may discard a card to sense the presence of a corpse within 5 yards of her. Corpses may be buried, hidden in walls, in containers, etc. This Action only locates corpses; it does not create them. The Fatemaster may declare no corpses are present in heavily patrolled areas (e.g., the Guild Enclave).
+
+**They Weren't Using It** *(Step 1)*
+When this character uses her Sense Corpse Talent, if the discarded card was a **Crow (C)**, the corpse has valuables (rings, jewelry, pneumatic augmentations) worth **half the value of the discarded card** in scrip.
+
+**Mastered Immuto** *(Steps 1, 5, 9)*
+Choose an Immuto. This character always has access to it regardless of her current Grimoire. *(May be taken once per step that offers it.)*
+
+**Morbid Thoughts** *(Step 3)*
+This character adds **+C** to her Necromancy Skill.
+
+**Mastered Magia** *(Steps 3, 7)*
+Choose a Magia. This character always has access to it regardless of her current Grimoire. If she has no Grimoire, she may act as if she had one containing this Magia. *(May be taken once per step that offers it.)*
+
+**Macabre Infusions** *(Step 5)*
+If this character does not have the Undead Characteristic, she may **count as Undead whenever she wishes**. Fatemaster Undead characters treat her with disinterest unless attacked or directly threatened.
+
+**Consume Corpse** *(Step 7)*
+When casting a Necromancy Spell, this character may consume any number of corpses within 5 yards of her to **lower the Spell's TN by −2 per consumed corpse**. Consumed corpses are reduced to dust and ash. No line of sight required (buried corpses sensed via Sense Corpses may be consumed). May also consume Undead subordinate characters under her direct control as if they were corpses; uncontrolled undead or those under another character's control cannot be consumed.
+
+**Maniacal Laugh** *(Step 9)*
+This character may **discard a card** to animate all corpses within **pulse 8** of her as **Mindless Zombies** (see NPC chapter). Zombies remain animated for a number of rounds equal to **half the discarded card's value (rounded up)**. They count as subordinate characters under this character's control. This character may command every Mindless Zombie under her control with a **(1) Order Action**, and orders may be different.
+
+**Unholy Beacon** *(Step 10)*
+This character may **discard a card from her Control Hand** to take control of an Undead character within line of sight.
+- **Minion Rank or lower**: No Challenge required; character is placed under this character's control as a subordinate. Control lasts indefinitely (until destroyed).
+- **Enforcer Rank or higher**: Must succeed on a **Necromancy + Charm** Challenge opposed by the target's Willpower. Success: subordinate control for **24 hours**. Failure: target is immune to this Talent for 24 hours.
+- **Stitched characters** (Fated Undead) are immune to this Talent.
+
+---
+
+### Guard
+
+**Theme**: Protectors and bodyguards who place themselves between allies and danger — whether altruistic or mercenary.
+
+**Starting Bonus**: One Close Combat weapon + any Armor (combined value ≤ **20§**).
+
+**On the Pursuit — Iron Tank**: When this character fails a Close Combat duel during Dramatic Time, she may draw a card.
+
+**Epilogue Skill Advancement**: May advance any Close Combat Skill (in addition to Fatemaster options).
+
+#### Advancement Path
+
+| Step | Talent |
+|---|---|
+| 0 | Lasting Challenge |
+| 1 | Stoic Defender **or** Stand Ground |
+| 2 | General Talent |
+| 3 | Take the Hit **or** Ocular Pat Down |
+| 4 | General Talent |
+| 5 | Flurry **or** Laugh Off |
+| 6 | General Talent |
+| 7 | Juggernaut **or** Imposing Stance |
+| 8 | General Talent |
+| 9 | Enduring Defense **or** Knock Aside |
+| 10 | Sentinel |
+
+#### Talents
+
+**Lasting Challenge** *(Step 0)*
+When this character succeeds on the **Impose Action**, the effects last until the **end of Dramatic Time** or until this character takes the Impose Action again (in which case the previous Impose lasts until the start of this character's next turn).
+
+**Stoic Defender** *(Step 1)*
+Gains the following Defensive Trigger:
+- **Df (R) Glancing Blow**: When suffering damage, reduce the amount of damage suffered by 1, to a minimum of 0.
+
+**Stand Ground** *(Step 1)*
+This character **does not need to discard a card** to take the Defensive Stance Action.
+
+**Take the Hit** *(Step 3)*
+This character may **discard a card from her Control Hand** after an attack hits a friendly character within 2 yards of her. If she does, she moves to a position between the friendly character and the attacker and **suffers the effects of the attack** (which suffers a − to its damage flip) instead of the friendly character. Opponents engaged with this character when she moves may not attempt Disengaging Strikes to stop this movement.
+
+**Ocular Pat Down** *(Step 3)*
+After watching a target character for at least **1 minute during Narrative Time**, this character may attempt a **Scrutiny Challenge** (TN = target's Cunning + Stealth + Rank Value). Failure: cannot use this Talent against the target for the remainder of the scene.
+
+Success: learns whether the target has **concealed weapons** and what they are. Target also gains the following Condition for the rest of the scene:
+> *"Assessed Threat: This character suffers − to Intimidate Challenges. If this character enters combat against the character that applied this Condition, this character's Initiative is reduced by −5 (minimum 0), and the character that applied this Condition gains + to all Close Combat Attacks against this character."*
+
+**Flurry** *(Step 5)*
+Choose a Close Combat Skill when gaining this Talent. Gains the following Tactical Action:
+- **(2) Flurry**: This character may discard a Twist Card to take **three 1 AP strikes** with a Close Combat weapon using the chosen Skill against a single target.
+
+**Laugh Off** *(Step 5)*
+This character **may not be pushed or moved by enemy characters**.
+
+**Juggernaut** *(Step 7)*
+Gains the following Tactical Action:
+- **(0) Juggernaut**: This character may discard a card to heal **1/2/4 damage**.
+
+**Imposing Stance** *(Step 7)*
+When this character takes the **Impose Action**, she may **target two characters instead of one**. She makes a single Intimidate Challenge against both.
+
+**Enduring Defense** *(Step 9)*
+When this character takes the Defensive Stance action, her **Defensive Condition lasts one additional round** (i.e., until the start of her second turn after taking the action).
+
+**Knock Aside** *(Step 9)*
+Gains the following Defensive Trigger:
+- **Df (M) Knock Aside**: After an attacker misses this character with a Close Combat attack, if this character has a readied Close Combat weapon, the attacker suffers **that weapon's weak damage** and is **pushed a number of yards away equal to this character's Might Aspect** (minimum 1 yard).
+
+**Sentinel** *(Step 10)*
+- This character may take the **Defensive Stance Action as a (0) Action**.
+- Whenever this character has the **Defensive Condition** (at any value), all friendly characters within 2 yards gain **+** to their Defense Challenges.
+
+---
+
+### Gunfighter
+
+**Theme**: Pistol specialists who have elevated gunplay to an art form — quick, precise, and addicted to the thrill of combat.
+
+**Starting Bonus**: One or two Pistols (combined value ≤ **20§**).
+
+**On the Pursuit — High Noon**: When this character fails a Ranged Combat duel during Dramatic Time, she may draw a card.
+
+**Epilogue Skill Advancement**: May advance any Ranged Combat Skill (in addition to Fatemaster options).
+
+#### Advancement Path
+
+| Step | Talent |
+|---|---|
+| 0 | Quick Draw |
+| 1 | Call Out **or** Bulletproof |
+| 2 | General Talent |
+| 3 | Gunfighter **or** Quick Reload |
+| 4 | General Talent |
+| 5 | Rapid Fire **or** Fastest Gun |
+| 6 | General Talent |
+| 7 | No Time For This **or** Debilitating Shot |
+| 8 | General Talent |
+| 9 | Finger on the Trigger **or** Bullet Bending |
+| 10 | Ranged Expert |
+
+#### Talents
+
+**Quick Draw** *(Step 0)*
+This character may treat the **(1) Ready Weapon Action as a (0) Action** when drawing a Pistol, and she may **draw two Pistols** instead of one.
+
+**Call Out** *(Step 1)*
+When this character takes the **Impose Action**, she may **add her ranks in the Pistol Skill** to her final duel total.
+
+**Bulletproof** *(Step 1)*
+Passive ability:
+> **Bulletproof +1**: Reduce all damage suffered from Ranged Combat attacks by 1, to a minimum of 1.
+
+**Gunfighter** *(Step 3)*
+This character may use Pistol weapons **as if their Range were melee 2** (in addition to their normal range). This allows firing in melee without penalty.
+
+**Quick Reload** *(Step 3)*
+This character **reduces the AP cost to load Pistol weapons by 1**.
+
+**Rapid Fire** *(Step 5)*
+Gains the following Tactical Action:
+- **(2) Rapid Fire**: This character may discard a Twist Card to take **three 1 AP Ranged Combat attacks** with a Ranged Combat weapon against a single target.
+
+**Fastest Gun** *(Step 5)*
+Gains the following Defensive Trigger:
+- **Df (M) Fastest Gun**: After a Ranged Combat attack **fails** against this character, this character may **expend one round of ammunition** in a readied Pistol to deal its damage to the attacker. This damage flip receives a −.
+
+**No Time For This** *(Step 7)*
+Whenever this character is involved in an Ongoing Challenge, she may choose to make one of the Challenge Flips using her **Pistol Skill** instead of the appropriate Skill (she still uses the appropriate Aspect). The Fatemaster and player determine how this works narratively (e.g., threatening someone with a gun, using gunpowder to crack a safe, trick shots).
+
+**Debilitating Shot** *(Step 7)*
+After damaging an enemy with a Ranged Combat weapon, this character may **discard a card** to give that enemy the **Useless Limb (Arms) or Useless Limb (Legs) Condition** (her choice). The Condition lasts until the enemy has fully healed all missing Wounds.
+
+**Finger on the Trigger** *(Step 9)*
+Gains the following Tactical Action:
+- **(1) Finger on the Trigger**: Until the start of this character's next turn, if an enemy character within 10 yards declares a **Charge Action or Ranged Combat action**, this character may immediately make a **1 AP Ranged Combat attack** against that enemy. On a success, the enemy suffers **1 damage** and the Charge/Ranged Combat action **fails**.
+
+**Bullet Bending** *(Step 9)*
+Before making a Ranged Combat attack, this character may **discard a card**. If she does, her attack may **ignore either cover or line of sight** (her choice). If she ignores line of sight and fires at a target behind cover, that target still receives cover benefits as normal.
+
+**Ranged Expert** *(Step 10)*
+This character gains **1 additional AP** on her turn, but this AP **may only be used to make a Ranged Combat attack**.
+
+---
+
+### Mercenary
+
+**Theme**: Professional soldiers and bounty hunters who sell their skills to the highest bidder.
+
+**Starting Bonus**: One Ranged Combat weapon + any Armor (combined value ≤ **20§**).
+
+**On the Pursuit — A Fistful of Scrip**: When this character fails a Ranged Combat duel during Dramatic Time, she may draw a card.
+
+**Epilogue Skill Advancement**: May advance any Ranged Combat Skill (in addition to Fatemaster options).
+
+#### Advancement Path
+
+| Step | Talent |
+|---|---|
+| 0 | Bounty Hunter |
+| 1 | Endless Pursuit **or** Odd Jobs |
+| 2 | General Talent |
+| 3 | To the Highest Bidder **or** Contract Negotiation |
+| 4 | General Talent |
+| 5 | Human Shield **or** Making Ends Meet |
+| 6 | General Talent |
+| 7 | Coin for Kills **or** Deadly Hunter |
+| 8 | General Talent |
+| 9 | Hard Knock Life **or** Borrowed Time |
+| 10 | Paid in Advance |
+
+#### Talents
+
+**Bounty Hunter** *(Step 0)*
+When this character encounters a character with a **bounty on their head**, she automatically recognizes this and remembers the bounty amount and whether they are wanted dead, alive, or either. If the wanted character is disguised or using a fake name, this character must succeed on a **Scrutiny Challenge** (TN = target's Deceive + Cunning + Rank Value) to see through it; failure means the disguise prevents recognition.
+
+**Endless Pursuit** *(Step 1)*
+- Gains **+** to Track Challenges.
+- On a successful Track Challenge, finds her target **50% faster** than normal.
+- On a **Margin of Success**, learns how tracked characters are equipped (provisions, weapons, armor, general ammunition level).
+
+**Odd Jobs** *(Step 1)*
+At the start of every session, this character gains scrip equal to **twice her completed ranks in this Pursuit**. Requires at least 8 hours of waking time between sessions to have completed odd jobs. Exact nature determined with the Fatemaster.
+
+**To the Highest Bidder** *(Step 3)*
+When targeted with a **Close Combat attack by a non-Beast attacker**, this character may throw scrip amounting to **no less than half the attacker's Rank Value** into the air. If she does, she may add her **ranks in Barter** to her Defense and Willpower for the duration of the attack. If the attack misses, the attacker cannot make further attacks against this character for the rest of its turn. If the attack achieves a Margin of Failure, the attacker's turn immediately ends as it chases the money.
+
+**Contract Negotiation** *(Step 3)*
+- Gains **+** to Barter Challenges.
+- When turning in a bounty (dead or alive), may attempt a **Barter Challenge** (TN = 5 + target's Rank Value) to increase the bounty value by **+50%**.
+
+**Human Shield** *(Step 5)*
+Gains the following Defensive Trigger:
+- **Df (M) Human Shield**: After this character fails, she grabs a target character of **Minion rank or lower** within 2 yards and Line of Sight (not the attacker) and places it between herself and the attacker. Damage is split evenly between the Minion and this character, with **any uneven damage going to the Minion**.
+
+**Making Ends Meet** *(Step 5)*
+After this character fails a Skill Challenge, she may "lose" scrip equal to **twice the difference between her final acting value and the Challenge's TN**. If she does, she is considered to have **passed the Challenge with no Margins of Success**. If it was an attack, it counts as a tie (damage flip suffers a −− modifier).
+
+**Coin for Kills** *(Step 7)*
+After this character kills an enemy, she may **discard a card** to gain scrip equal to the **target's Rank Value**. Source (loot, eerie winds blowing scrip bills, etc.) determined by player and Fatemaster.
+
+**Deadly Hunter** *(Step 7)*
+This character gains **+** to the damage flip of any attack against a target she **was paid to fight or kill** (including bounties). Fatemaster determines what qualifies.
+
+**Hard Knock Life** *(Step 9)*
+At the **end of her turn during Dramatic Time**, this character may choose to either "lose" **2 scrip** or **suffer 1 Wound**. If she chooses either, she may **draw a card**.
+
+**Borrowed Time** *(Step 9)*
+At the **start of her turn during Dramatic Time**, this character may choose to "lose" **5 scrip** or **suffer 2 damage**. If she chooses either, she gains **Fast**.
+
+**Paid in Advance** *(Step 10)*
+- When flipping Initiative at the start of Dramatic Time, this character may **draw up to 5 cards**. If she does, at the start of her **second turn and every turn thereafter** until end of Dramatic Time, she must **discard a card** (if possible).
+- When accepting a mission or bounty, she gains **50% of the final reward as an advance**. If she fails to complete it and does not return the advance, her reputation suffers, she earns enemies, and she **cannot use this Talent for 2 months**.
+
+---
+
+### Overseer
+
+**Theme**: Bosses, foremen, and entrepreneurs who coordinate others toward a goal — whether through loyalty, fear, or coin.
+
+**Starting Bonus**: Non-magical skill toolkit.
+
+**On the Pursuit — Oversight**: When this character fails a Social duel, she may draw a card.
+
+**Epilogue Skill Advancement**: May advance any Social Skill (in addition to Fatemaster options).
+
+#### Advancement Path
+
+| Step | Talent |
+|---|---|
+| 0 | Management Material |
+| 1 | Concerted Effort **or** Supervision |
+| 2 | General Talent |
+| 3 | Work Smarter **or** Reminder of a Worse Fate |
+| 4 | General Talent |
+| 5 | Best Practices **or** Protect Me! |
+| 6 | General Talent |
+| 7 | How to Do Your Job **or** You Lazy So-and-So |
+| 8 | General Talent |
+| 9 | Finish the Job **or** Stay Focused |
+| 10 | What Lackeys Are For |
+
+#### Talents
+
+**Management Material** *(Step 0)*
+When this character joins an Ongoing Challenge, she may **discard a card** to use the **Leadership Skill as if it were one of the Skills Allowed** by the Ongoing Challenge for a set number of Durations based on the discarded card's value:
+- Value 1–5 → **1 Duration**
+- Value 6–10 → **2 Durations**
+- Value 11+ → **3 Durations**
+
+**Concerted Effort** *(Step 1)*
+- This character always makes **Initiative flips before any of her companions**. If multiple characters have this Talent, they choose their order among themselves.
+- Friendly characters making Initiative flips may choose **not to flip** and instead use this character's initiative value (after all modifiers).
+
+**Supervision** *(Step 1)*
+This character may **discard a card** to add the **suit of the discarded card** to the final duel total of any friendly character that can see or hear her (including herself).
+
+**Work Smarter** *(Step 3)*
+After this character succeeds at a Skill Challenge during an Ongoing Challenge, **permanently reduce the Ongoing Challenge's TN by −1** for all subsequent Durations. Cumulative if multiple characters have this Talent.
+
+**Reminder of a Worse Fate** *(Step 3)*
+When another friendly character within 6 yards attempts a **Horror or Unconsciousness Challenge**, she may add this character's **ranks in Leadership** to her final duel total.
+
+**Best Practices** *(Step 5)*
+When this character succeeds on a Challenge Flip made as part of an Ongoing Challenge, she gains **one extra Margin of Success**.
+
+**Protect Me!** *(Step 5)*
+Gains the following Defensive Trigger:
+- **Df (t) Protect Me!**: After this character fails, another **willing character** within 2 yards (within range and line of sight of the attacker) suffers the effects of the attack instead of this character. This character's **subordinate characters are always considered willing**.
+
+**How to Do Your Job** *(Step 7)*
+After another character within 6 yards **fails a Skill Challenge**, this character may **discard a card** to make a Skill Challenge against the same TN (with the same flip modifiers). If this character succeeds, the other character **uses this character's final duel total** in place of her failed total.
+
+**You Lazy So-and-So** *(Step 7)*
+Gains the following Manifested Power:
+
+| You Lazy So-and-So | AP | TN | Resist | Range |
+|---|---|---|---|---|
+| Charm + Leadership | 1 | 8R | Wp | 6 yards |
+
+Effect: Target unconscious character **regains consciousness** and heals **1/2/3 damage**.
+- R **Stop Complaining**: The target may **ignore one Critical Effect** currently affecting her for **3 rounds**.
+- t **On Your Feet!**: The target may immediately **stand up from being Prone**.
+
+**Finish the Job** *(Step 9)*
+When another friendly character within 6 yards would **fall unconscious or be killed**, that character may **discard a card** to take a **1 AP Action** before falling unconscious or being killed. Cannot affect a specific character more than once per round.
+
+**Stay Focused** *(Step 9)*
+This character may **discard a card** to end the **Focused Condition on herself**. If she does, every friendly character within 6 yards that can see or hear her gains **Focused +1**.
+
+**What Lackeys Are For** *(Step 10)*
+On her turn during Dramatic Time, this character may **discard three cards**. If she does, every friendly character that can see or hear her may immediately take a **1 AP Action** in any order this character wishes.
