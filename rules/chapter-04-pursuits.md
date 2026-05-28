@@ -689,3 +689,214 @@ This character may **discard a card** to end the **Focused Condition on herself*
 
 **What Lackeys Are For** *(Step 10)*
 On her turn during Dramatic Time, this character may **discard three cards**. If she does, every friendly character that can see or hear her may immediately take a **1 AP Action** in any order this character wishes.
+
+---
+
+### Performer
+
+**Theme**: Actors, musicians, and showgirls who manipulate the emotions of crowds — and turn those social skills to their advantage in any situation.
+
+**Starting Bonus**: Non-magical skill toolkit.
+
+**On the Pursuit — Flair for the Dramatic**: When this character fails a Social duel, she may draw a card.
+
+**Epilogue Skill Advancement**: May advance any Social Skill (in addition to Fatemaster options).
+
+#### Advancement Path
+
+| Step | Talent |
+|---|---|
+| 0 | Center of Attention |
+| 1 | Distracting Performance |
+| 2 | General Talent |
+| 3 | Grace Under Fire **or** Powerful Impression |
+| 4 | General Talent |
+| 5 | Helluva Entrance **or** Charming Demeanor |
+| 6 | General Talent |
+| 7 | Opening Act **or** The World is a Stage |
+| 8 | General Talent |
+| 9 | A Whisper in Your Ear **or** Practiced Production |
+| 10 | That's Showbiz |
+
+#### Talents
+
+**Center of Attention** *(Step 0)*
+After another character **fails a Social Skill Challenge**, this character may **discard a card** to make a Skill Challenge with the same Skill against the same TN (with the same flip modifiers). If she succeeds, this character is considered to have succeeded on the initial Social duel and **the original character's failure is ignored**.
+
+**Distracting Performance** *(Step 1)*
+When this character is **performing in any manner**, her allies within 10 yards gain **+** to their Deceive, Pick Pocket, and Stealth Challenges for the duration of the performance.
+
+**Grace Under Fire** *(Step 3)*
+This character may substitute her **Grace for her Speed** when calculating her **Defense Aspect** and when **flipping for Initiative**.
+
+**Powerful Impression** *(Step 3)*
+Gains the following Trigger on all Social duels:
+- M **Impress**: After succeeding, draw a card.
+
+**Helluva Entrance** *(Step 5)*
+This character may gain **+** to the **first non-Stealth Challenge Flip** she makes in any scene. If she does, she suffers **−** to all **Stealth Challenges** she makes for the remainder of that scene.
+
+**Charming Demeanor** *(Step 5)*
+When this character is **targeted with an attack**, she may **discard a card** to impose a **−−** penalty to the attack flip.
+
+**Opening Act** *(Step 7)*
+After flipping for Initiative at the start of Dramatic Time, this character may **nominate a friendly character** (which may be herself) to take a **Walk Action**.
+
+**The World is a Stage** *(Step 7)*
+When this character is involved in an Ongoing Challenge, she may choose to make one of the Challenge Flips using her **Bewitch or Music Skill** instead of the appropriate Skill (she still uses the appropriate Aspect). The Fatemaster and player explain how this works narratively.
+
+**A Whisper in Your Ear** *(Step 9)*
+If this character scores a **Margin of Success** on a Bewitch Challenge during **Narrative Time**, she may force the target to **perform a single act of up to one hour** in length. Unless she achieves **two Margins of Success**, the act cannot involve violence. For the duration, the target believes the act was their own idea (though they may come to doubt this later). This action cannot cause the target to directly hurt themselves.
+
+**Practiced Production** *(Step 9)*
+If this character achieves a **Margin of Success on a Skill Challenge**, she may choose **not to apply it** to her own result. If she does so, she may instead **apply that Margin of Success to a successful Skill Challenge made by one of her allies**, provided her ally makes the Skill Challenge within **five minutes** of her own. The maximum number of Margins of Success she may have "saved" at one time cannot exceed her **Charm Aspect** (minimum one).
+
+**That's Showbiz** *(Step 10)*
+This character may **exchange her Charm Aspect for any of her other Mental Aspects** when she makes a Social Skill Challenge.
+
+---
+
+### Pioneer
+
+**Theme**: Explorers, frontiersmen, and wilderness survivalists who have carved a life out of the wilds of Malifaux.
+
+**Starting Bonus**: Non-magical skill toolkit.
+
+**On the Pursuit — Rugged Individual**: When this character fails a Training duel, she may draw a card.
+
+**Epilogue Skill Advancement**: May advance any Training Skill (in addition to Fatemaster options).
+
+#### Advancement Path
+
+| Step | Talent |
+|---|---|
+| 0 | Unimpeded |
+| 1 | Making Do With What We Have |
+| 2 | General Talent |
+| 3 | Circle the Wagons **or** At a Glance |
+| 4 | General Talent |
+| 5 | Healing Poultices **or** Favorable Terrain |
+| 6 | General Talent |
+| 7 | Survivalist **or** Know the Path |
+| 8 | General Talent |
+| 9 | Pathfinder **or** Nature Lover |
+| 10 | Manifest Destiny |
+
+#### Talents
+
+**Unimpeded** *(Step 0)*
+This character **ignores penalties for severe terrain** while taking Movement Actions.
+
+**Making Do With What We Have** *(Step 1)*
+This character may **discard a card** to create a **skill toolkit** for a skill she has at least 1 rank in. Unless the discarded card had a value of **11+**, only this character may use the toolkit. The toolkit **lasts for one hour**.
+
+**Circle the Wagons** *(Step 3)*
+On her turn during Dramatic Time, this character may **discard a card** to let all friendly characters that can hear her treat:
+- **Severe Terrain as if it were also Soft Cover**, or
+- **Soft Cover as if it were Hard Cover**
+
+until the end of Dramatic Time.
+
+**At a Glance** *(Step 3)*
+If this character **fails a Notice Challenge**, she may **discard a card** to **reflip the Notice Challenge with a +**.
+
+**Healing Poultices** *(Step 5)*
+When in a rural or wilderness area, this character may **spend one hour and discard a card** to produce **Healing Poultices**:
+- Card value 1–5 → **1 poultice**
+- Card value 6–10 → **2 poultices**
+- Card value 11+ → **3 poultices**
+
+Any character may apply a Healing Poultice to a **Living character** as a **(2) AP Action**. Doing so: reduces the target's **Poison Condition value by 5** (minimum 0), and heals **2/3/4 damage**. Poultices remain viable for **3 days** before decaying.
+
+**Favorable Terrain** *(Step 5)*
+At the **start of Dramatic Time**, this character may **discard a card** to declare that one patch of ground **no more than 3 yards in radius** counts as **Severe Terrain**. How it came to be so is determined by the player and Fatemaster. The area remains Severe Terrain indefinitely until physically altered.
+
+**Survivalist** *(Step 7)*
+- This character **no longer suffers damage from Hazardous Terrain**.
+- She and any allies she travels with gain **+** on any Challenges made to **resist the elements or other environmental hazards** (frostbite, sunstroke, biting insects, drowning, etc.).
+
+**Know the Path** *(Step 7)*
+When this character joins an Ongoing Challenge that allows the use of **Homesteading, Track, or Wilderness Skills**, the **TN of the Ongoing Challenge is lowered by −2** for participating characters that use one of those Skills.
+
+**Pathfinder** *(Step 9)*
+Friendly characters within **aura 3** of this character:
+- **Ignore movement penalties for terrain** while taking Movement Actions.
+- **Only suffer 1 damage from Hazardous Terrain** (instead of full damage).
+
+**Nature Lover** *(Step 9)*
+At the **start of this character's turn during Dramatic Time**, if she is in **Severe or Hazardous Terrain**, she may **draw a card and then discard a card**.
+
+**Manifest Destiny** *(Step 10)*
+This character may **discard two cards** to **lay claim to a reasonably sized area** (generally one structure or natural area such as a grove). This grants no immediate legal ownership, but gives **+** to Bureaucracy, Convince, or Intimidate Challenges to assert her claim. This bonus lasts until she uses this Talent again.
+
+While on any land reasonably considered to be **owned by this character** (her homestead, claimed Contract Town, or an area claimed with this Talent), she **generates 1 additional General AP** at the start of her turn.
+
+---
+
+### Scrapper
+
+**Theme**: Melee fighters — sword-and-axe warriors, bare-knuckle brawlers, and martial artists who prefer to get up close and personal.
+
+**Starting Bonus**: One Close Combat weapon + any Armor (combined value ≤ **20§**).
+
+**On the Pursuit — Bloody Minded**: When this character fails a Close Combat duel during Dramatic Time, she may draw a card.
+
+**Epilogue Skill Advancement**: May advance any Close Combat Skill (in addition to Fatemaster options).
+
+#### Advancement Path
+
+| Step | Talent |
+|---|---|
+| 0 | Into the Fray |
+| 1 | Duck and Weave **or** Fast Healer |
+| 2 | General Talent |
+| 3 | Close the Gap **or** Shoot Past Me |
+| 4 | General Talent |
+| 5 | Wicked **or** Flurry |
+| 6 | General Talent |
+| 7 | Finish the Cur **or** Counter-Charge |
+| 8 | General Talent |
+| 9 | Diving Charge **or** Momentum |
+| 10 | Melee Expert |
+
+#### Talents
+
+**Into the Fray** *(Step 0)*
+This character increases her **Charge Aspect by +2**.
+
+**Duck and Weave** *(Step 1)*
+Gains the following Trigger on Close Combat attacks:
+- t **Duck and Weave**: After succeeding, this character increases her **Defense by +1** until the start of her next turn.
+
+**Fast Healer** *(Step 1)*
+- Gains **+** to Healing Flips.
+- When healed with the **Artefacting, Doctor, or Stitching Skills**, heals **one additional damage**.
+
+**Close the Gap** *(Step 3)*
+When this character **declares a Charge Action**, she may **draw a Twist Card**.
+
+**Shoot Past Me** *(Step 3)*
+Friendly characters **do not flip a card** for this character when **shooting into an engagement** she is involved in.
+
+**Wicked** *(Step 5)*
+When this character makes a **successful disengaging strike**, she **deals damage with her weapon** in addition to stopping her target's movement.
+
+**Flurry** *(Step 5)*
+Choose a Close Combat Skill when gaining this Talent. Gains the following Tactical Action:
+- **(2) Flurry**: This character may discard a Twist Card to take **three 1 AP strikes** with a Close Combat weapon using the chosen Skill against a single target.
+
+**Finish the Cur** *(Step 7)*
+**Once per round**, after an enemy character **suffers a Critical Effect**, this character may **discard a card** to allow a friendly character within 5 yards of her (which may be herself) to make a **1 AP Close Combat attack** against that enemy character.
+
+**Counter-Charge** *(Step 7)*
+**Once per round**, after an enemy character **completes a Charge Action against this character** (including any resulting attacks), this character may **discard a card** to make a **Close Combat attack** against that enemy character.
+
+**Diving Charge** *(Step 9)*
+- This character may **declare Charge Actions while she is engaged**.
+- When moving as part of a Charge Action, she may **ignore intervening characters**, is **not slowed by terrain**, and opponents engaged with her **may not attempt Disengaging Strikes** to prevent her movement.
+
+**Momentum** *(Step 9)*
+After this character **completes the movement portion of a Charge Action**, she may make a single **Athletics Challenge** opposed by the **Evade Challenges of every character within her engagement range**. Every character that fails this Evade Challenge **suffers 1 damage** and immediately becomes **Prone**.
+
+**Melee Expert** *(Step 10)*
+This character gains **1 additional AP** on her turn, but this AP **may only be used to make a Close Combat attack**.
