@@ -274,3 +274,148 @@ Combines powerful punches with defensive movements and feints. Proper combinatio
 | 3 | 1 yard | 1/3/4 | — |
 | 4 | 1 yard | 2/3/4 | Snaring |
 | 5 | 1 yard | 2/3/5 | Snaring |
+
+---
+
+### Rank Progression — Crafting Skills
+
+Crafting Skills are used to build and create objects of value. Generally, a character does **not** need to perform a Challenge Duel to craft an item — she only needs the required Skill rank, crafting equipment, raw resources worth **25% of the item's base price**, and time. A Challenge Duel may be performed to declare a Trigger, but success is guaranteed if the requirements are met.
+
+| Rank | Title | Description |
+|---|---|---|
+| 1 | Interest | Creates simple, utilitarian items that are unremarkable in appearance and function. |
+| 2 | Apprentice | Creates generally useful items with moderate complexity and decoration. |
+| 3 | Journeyman | Creates complicated items requiring multiple steps and great patience. **May learn one Trigger** for the Skill. |
+| 4 | Expert | Creates sophisticated items with delicate components. Items may fetch **up to 25% more** than comparable work. |
+| 5 | Master | A master craftsman and pioneer in her field. Items may fetch **up to 50% more**. **May learn a second Trigger** for the Skill. |
+
+#### Alchemistry
+**Associated Aspect**: Intellect
+
+Used for mixing chemicals to create complex compounds: acids, poisons, medicinal and recreational drugs. *(Under Quarantine contains an expanded list of craftable compounds.)*
+
+| Rank | Example Craftable Items |
+|---|---|
+| 1 | Antacids, matches, weak poison (Poison +1 Condition if ingested) |
+| 2 | Mild acid (Thrown Weapons, 1/2B/3B damage ignoring Armor), sedatives |
+| 3 | Anesthetic, embalming fluid, medicine |
+| 4 | Rare poisons, bulky chemical batteries |
+| 5 | Philosopher's Stone, small homunculi |
+
+#### Art
+**Associated Aspect**: Cunning
+
+Covers a broad variety of artistic mediums. Used to create physical art, enhance the appearance of other crafted items, appraise art, or identify forgeries.
+
+| Rank | Example Craftable Items |
+|---|---|
+| 1 | Pleasing but unobtrusive art |
+| 2 | Interesting conversation pieces |
+| 3 | Art objects that draw attention and favorable comments |
+| 4 | Impressive pieces likely to fetch high prices |
+| 5 | Masterpieces of historical significance |
+
+#### Artefacting
+**Associated Aspect**: Intellect
+
+Building mechanical devices powered by steam engines or pneumatic pressure. The applied counterpart to Engineering (theoretical).
+
+**Repair** (2 AP Action): Expend scrap worth at least 0.5 scrip and make an Artefacting Challenge vs. **TN 5**. On success, the Construct heals **1 damage + 1 per Margin of Success**.
+
+**Retrofit** (removes lasting Critical Effects): Expend scrap worth **3 scrip per Moderate lasting Critical Effect** and **9 scrip per Severe lasting Critical Effect** to be removed. Make an Artefacting Challenge vs. **TN 10 +2 per Critical Effect** being removed.
+- *Success*: noted Critical Effects are removed.
+- *Failure*: the Construct suffers a **Destroyed/0/0 damage flip with −** for each Margin of Failure.
+- Takes **1 hour per Critical Effect** being removed. A Construct cannot Retrofit itself.
+
+| Rank | Example Craftable Items |
+|---|---|
+| 1 | Cameras, pocket watches, typewriters, pressure gauges |
+| 2 | Pneumatic limbs and tools, steam engines, quick-draw rig (pistol readied as a (0) Action) |
+| 3 | Clockwork hearing aids, aethervoxes, battery-powered floodlights |
+| 4 | Motorized carriages, electric devices |
+| 5 | Airships, flying harnesses |
+
+#### Blacksmithing
+**Associated Aspect**: Intellect
+
+Covers everyday goods, tools, gunsmithing, metal-based melee weapons, and armor.
+
+| Rank | Example Craftable Items |
+|---|---|
+| 1 | Nails, horseshoes, basic melee weapons |
+| 2 | Printing plates, needles, copper wire, metal armor, refurbished/shoddy guns |
+| 3 | Reliable guns, parade armor, tiny delicate items (e.g., pocket watch gears) |
+| 4 | Artillery weapons, specialized/experimental firearms, items from rare metals and alloys |
+| 5 | Masterwork weapons and armor — heirlooms and symbols of wealth passed through generations |
+
+#### Culinary
+**Associated Aspect**: Charm
+
+Covers the creation of food and beverages, including brewing alcohol. A skilled character can prepare both food and drink equally well.
+
+| Rank | Example Craftable Items |
+|---|---|
+| 1 | Tea, hot mash, roasted wild game, coffee, boiled eggs, weak moonshine |
+| 2 | Sourdough, pork pie, ale, sake, hot chocolate, grilled fish |
+| 3 | Honey cakes, liquor, strong moonshine, candied fruit, stuffed leg of lamb |
+| 4 | Wine, poached salmon in aspic, venison shanks with juniper and red currant, ice cream |
+| 5 | Champagne, ikizukuri, roasted pork and vegetable consommé, beef wellington, baked Alaska |
+
+#### Explosives
+**Associated Aspect**: Intellect
+
+Creating, storing, and safely detonating dangerous substances. Commonly set up ahead of time and triggered with a fuse or blasting plunger. **When used in combat, Explosives use the Thrown Weapons Skill.**
+
+| Rank | Example Craftable Items |
+|---|---|
+| 1 | Black powder, fireworks, noisemakers, simple explosives, flaming bottles (1/1BB/1BBB, Burning +2) |
+| 2 | Bullets, larger petrol-based explosives, firebombs (2/2BB/3BBB, Burning +3) |
+| 3 | Dynamite (3/4BB/5BBB, ignores Armor), nitroglycerin |
+| 4 | Pressurized gases, demolition charges (4/6BB/8BBB ignores Armor; characters with Evade 2+ take half damage) |
+| 5 | Blasting gelatin (shapeable explosive; only detonates with a special detonator) |
+
+#### Homesteading
+**Associated Aspect**: Tenacity
+
+Combines carpentry and farming to construct and maintain buildings, locate pastures and farmland, and grow food.
+
+| Rank | Example Craftable Items |
+|---|---|
+| 1 | Fences, palisade walls, simple tables and bookshelves; root vegetables (potatoes, carrots) |
+| 2 | Barns, wooden walls with walkways, cabinets, small boats; corn |
+| 3 | Small houses, stone walls, four-poster beds; cotton and melons |
+| 4 | Large houses and secret passages; apples and artichokes |
+| 5 | Mansions and greenhouses; wasabi and farmed Malifaux fruits and vegetables |
+
+#### Printing
+**Associated Aspect**: Intellect
+
+Produces newsletters and books, individually or in bulk (with a printing press). Covers only the printing process — **Literacy** determines writing quality.
+
+| Rank | Example Craftable Items |
+|---|---|
+| 1 | Single-page posters and fliers |
+| 2 | Short leaflets and pamphlets, scrolls |
+| 3 | Text books of any length |
+| 4 | Illustrated books of any length |
+| 5 | Books with gilt edges or gold leaf |
+
+#### Stitching
+**Associated Aspect**: Tenacity
+
+Covers needlepoint, leatherwork, and sewing — creating, mending, and altering clothing and household items.
+
+**Mend** (2 AP Action): Make a Stitching Challenge vs. **TN 5**. On success, the Undead character heals **1 damage + 1 per Margin of Success**.
+
+**Stitch Up** (removes lasting Critical Effects from Undead): Requires a **corpse of the same Height** as the target (expended in the process). Make a Stitching Challenge vs. **TN 10 +2 per Critical Effect** being removed.
+- *Success*: noted Critical Effects are removed.
+- *Failure*: the Undead suffers a **Destroyed/0/0 damage flip with −** for each Margin of Failure.
+- Takes **1 hour per Critical Effect** being removed. An Undead character cannot Stitch Up itself.
+
+| Rank | Example Craftable Items |
+|---|---|
+| 1 | Small puppet, patching torn clothing, blankets, curtains, basic cross-stitching |
+| 2 | Basic clothing (shirts, pants, vests, dresses, yukata), quilts, shoes, basic embroidery |
+| 3 | Tailored suits and traveling dresses, kimono, corsets, boots, stuffed mattresses, elaborate embroidery |
+| 4 | Tuxedos, evening dresses, hats, elaborate kimono, fashionable clothing |
+| 5 | Clothing that starts fashion trends and becomes known by the creator's name |
