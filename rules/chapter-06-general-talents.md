@@ -48,6 +48,23 @@ General Talents are the tricks, knacks, and abilities that set a character apart
 | Secretive Spellcasting | Magical Theory | When casting a Spell or Manifested Power, discard a card to make Magical Theory appear to be the Thalarian Doctrine to detection attempts. |
 | Seize the Day | Grace −1 or lower | + to Initiative flips. |
 | Shot Studies | Shotgun 3+ | If the character has the Focused Condition and fires slug ammunition from a shotgun, multiply the shotgun's range by ×10. |
+| Shove Aside | Might 1+ | Move through characters with lower Height without impediment; such characters cannot make disengaging strikes against this character. |
+| Shrug Off | Resilience −1 or lower | Gains **(0) Shrug Off** Tactical Action: discard a Twist Card to end a Condition affecting her. |
+| Specialized Skill | FM Character or 2+ completed Destiny Steps | Choose a Skill and a suit; add the chosen suit to that Skill's value. Multiple times (different Skill each time). |
+| Specialized Toxins | Alchemistry 2+ | Choose a Characteristic (Living/Construct/Undead/Spirit/Nightmare). Poison effects applied by this character affect targets with that Characteristic (even non-Living) and deal +1 Poison per chosen Characteristic possessed. Multiple times (different Characteristic). |
+| Speed Loading | Chosen Skill Rank 2+ | Chosen Ranged Skill gains Trigger — **R Speed Loading**: If this weapon's Reload AP cost is 2 or lower, reload this weapon. |
+| Steam-Powered Charge | Construct or 1+ pneumatic limbs | When Charging, may make a single (1) AP or (2) AP Close Combat attack instead of two (1) AP attacks. Single (1) AP variant deals +1 damage and knocks target Prone on success. |
+| Sturdy | None | +2 Wounds. Each additional time taken: +1 Wound. May be taken multiple times. |
+| Sure-Footed | Speed −1 or lower | When pushed or moved by an effect, apply Speed Aspect as a penalty (in yards) to the distance pushed or moved. |
+| Tenacious Warrior | Resilience 2+ | When an enemy declares a Trigger on a successful attack against this character, she may discard a card to negate the Trigger's effect on her. |
+| Threatening Posture | Intimidate 3+ | Enemies engaged with this character suffer − on Close Combat attacks made against targets other than her (unless those targets also possess this Talent). |
+| Tricky Shot | Chosen Skill Rank 2+ | Choose a Ranged Combat Skill. When attacking with the chosen Skill, may ignore one −. |
+| Twisted Fates | Fated | Choose one card in the Twist deck and permanently increase its value by 1 (max 13). May be taken multiple times. |
+| Unassuming | Might −1 or lower | + to duels made to avoid being noticed in a group or angering someone. |
+| Undermine Confidence | Resilience −1 or lower | + to all Intimidate Challenges made during Narrative Time. |
+| Unequaled Accuracy | Magical or Ranged Combat Skill 2+ | Choose a Skill. This character does **not** randomize her target when firing into an engagement using the chosen Skill. |
+| Wall of Muscle | Resilience 1+ | Height increases to 3. Range of all y weapons wielded by this character increases by 1 yard (max 3 yards). |
+| Will of Ages | Counter-Spelling 3+ | When using Magical Shielding, may shield additional friendly characters equal to her Tenacity (including herself). |
 
 ---
 
@@ -371,3 +388,174 @@ Gains **+** to **Initiative flips**.
 Shotguns are second nature to this character.
 
 If this character has the **Focused Condition** and fires a shotgun loaded with **slug ammunition**, multiply the **shotgun's range by ×10**.
+
+---
+
+### Shove Aside
+**Requirement:** Might 1 or higher
+
+This character can barrel through others with little resistance.
+
+This character can **move through characters with a Height lower than her own** without being impeded. Such characters **cannot make disengaging strikes** against this character.
+
+---
+
+### Shrug Off
+**Requirement:** Resilience −1 or lower
+
+This character is so accustomed to minor pains she can ignore them entirely.
+
+Gains the following Tactical Action:
+
+> **(0) Shrug Off:** Discard a Twist Card to **end a Condition** affecting this character.
+
+---
+
+### Specialized Skill
+**Requirement:** Fatemaster Character or 2 or more completed Destiny Steps
+
+This character has honed a specific skill, allowing her to perform tricks with little effort.
+
+Choose a **Skill** and a **suit**. Add the chosen suit to that Skill's value.
+
+> May be taken multiple times; each time a different Skill must be chosen.
+
+---
+
+### Specialized Toxins
+**Requirement:** Alchemistry 2 or higher
+
+This character knows the perfect poison for a specific kind of creature.
+
+Choose one of the following Characteristics: **Living, Construct, Undead, Spirit,** or **Nightmare**. When this character performs an Action or declares a Trigger that would give a target with the chosen Characteristic the **Poison Condition**:
+- The effect applies even if the target is **not Living**.
+- The target gains an additional **Poison +1 for each chosen Characteristic it possesses**.
+
+> May be taken multiple times; each time a different Characteristic must be chosen.
+
+---
+
+### Speed Loading
+**Requirement:** Chosen Skill Rank 2 or higher
+
+This character knows how to quickly reload her weapon in combat.
+
+Choose **Long Arms, Pistols, Shotguns,** or **Heavy Weapons**. The character gains the following Trigger on any attack Action using the chosen Skill:
+
+> **R Speed Loading:** If this weapon's **Reload AP cost is 2 or lower**, reload this weapon.
+
+---
+
+### Steam-Powered Charge
+**Requirement:** Character must be a Construct or possess one or more pneumatic limbs
+
+When this character charges, she pushes her pneumatic limbs to their limits and hits like a steam locomotive.
+
+When declaring the **Charge Action**, she may choose to make a **single (1) AP or (2) AP Close Combat attack** instead of two (1) AP Close Combat attacks.
+- If she makes a **single (1) AP** attack: deals **+1 damage** and knocks the target **Prone** on success.
+
+---
+
+### Sturdy
+**Requirement:** None
+
+This character can push her body to endure wounds that would leave larger people incapacitated.
+
+Gains **+2 Wounds**.
+
+> May be taken multiple times. Each additional time: gains **+1 Wound**.
+
+---
+
+### Sure-Footed
+**Requirement:** Speed −1 or lower
+
+This character might not move quickly, but she's hard to budge.
+
+When this character is **pushed or moved by an effect**, she may apply her **Speed Aspect as a penalty** (in yards) to the distance pushed or moved.
+
+---
+
+### Tenacious Warrior
+**Requirement:** Resilience 2 or higher
+
+This rugged character ignores the worst parts of most attacks.
+
+When an enemy makes a successful attack against this character and **declares a Trigger**, this character may **discard a card**. If she does, the **Trigger has no effect on her** (though the Trigger may still affect other characters, and she still suffers all other effects of the attack normally).
+
+---
+
+### Threatening Posture
+**Requirement:** Intimidate 3 or higher
+
+This character is so threatening that her presence distracts opponents from attacking her allies.
+
+Enemies **engaged with this character** suffer **−** on Close Combat attacks made against targets **other than her**, unless those targets also possess this Talent.
+
+---
+
+### Tricky Shot
+**Requirement:** Chosen Skill Rank 2 or higher
+
+This character is highly adept at pulling off tricky shots in a variety of conditions.
+
+Choose a **Ranged Combat Skill**. While making an attack with the chosen Skill, this character may **ignore one −**.
+
+---
+
+### Twisted Fates
+**Requirement:** Fated
+
+This character can bend luck to her will more often than most.
+
+Choose one card in the character's **Twist deck** and permanently **increase its value by 1** (maximum value 13).
+
+> May be taken multiple times.
+
+---
+
+### Unassuming
+**Requirement:** Might −1 or lower
+
+A lifetime of dealing with those stronger than her has taught this character how to present a calm manner and blend in.
+
+Gains **+** to any duels made to **avoid being noticed in a group or angering someone**.
+
+---
+
+### Undermine Confidence
+**Requirement:** Resilience −1 or lower
+
+Sometimes it's better to talk big and let nervousness set in slowly.
+
+Gains **+** to all **Intimidate Challenges made during Narrative Time**.
+
+---
+
+### Unequaled Accuracy
+**Requirement:** Magical or Ranged Combat Skill 2 or higher
+
+This character has an unequaled sense of timing when shooting into a chaotic fight.
+
+Choose a Skill that meets the requirement. This character **does not randomize her target** when firing into an engagement using the chosen Skill.
+
+---
+
+### Wall of Muscle
+**Requirement:** Resilience 1 or higher
+
+This character is both tall and wide, and she knows how to use her size to her advantage.
+
+- Increase this character's **Height to 3**.
+- Increase the range of all **y weapons** wielded by this character by **1 yard** (maximum 3 yards).
+
+> If taken after character creation, the character must have justification for this growth.
+
+---
+
+### Will of Ages
+**Requirement:** Counter-Spelling 3 or higher
+
+This character has learned how to protect multiple characters from harmful magic.
+
+When using **Magical Shielding**, she may shield a number of **additional friendly characters** (including herself) equal to her **Tenacity**.
