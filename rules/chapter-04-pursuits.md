@@ -1145,3 +1145,239 @@ If this character is in **physical contact with her coffin**, she heals **1 dama
 - If an Undead character **ends a Walk Action within this character's engagement range** or **targets her with an Action**, it must attempt a **TN 12 Horror Duel**.
 
 This effect lasts until the character takes another **(0) Action to end the effect**, or until the end of the session.
+---
+
+### Freikorpsmann
+
+**Theme**: Elite mercenary organization operating out of the Quarantine Zone's Powderburg district — well-trained, well-equipped, and tactically superior to most fighting forces in Malifaux. The Guild tolerates them because they don't want a war with what has essentially become a private army.
+
+**Requirements**:
+- Locate a Freikorps member and demonstrate proficiency with both **pistols and melee weapons**
+- Slip into the **Quarantine Zone unassisted** and reach the designated location in Powderburg
+- Survive **up to 24 hours of observation** (including sporadic undead encounters herded by a watching recruiter) to prove discipline and ability to follow orders
+- Complete a **squad mission** as the final entry requirement — the squad passes or fails as a group
+- Sign a contract; members pay **one third of independent earnings** to the company to cover operating costs
+
+**Advancement**: Advanced Pursuit with **5 Steps** (no Step 0 talent). Step 1 grants **two talents simultaneously**.
+
+#### Advancement Path
+
+| Step | Talent |
+|---|---|
+| 1 | Outfitting + Powder Wars Training |
+| 2 | Survival Training |
+| 3 | Combat Training |
+| 4 | Ever-Changing Battlefield |
+| 5 | Specialist Training |
+
+#### Talents
+
+**Outfitting** *(Step 1)*
+Upon joining, the character is issued standard gear: a **Clockwork Pistol**, a **Hunting Knife**, and a full suit of **Clockwork Armor**. Damaged or lost issued items may be repurchased from the Freikorps at **50% of market value**.
+
+| Clockwork Armor | Type | Special | Cost | Skill |
+|---|---|---|---|---|
+| Clockwork Body | Light | Protected (R), Sealed | 17§ | 2 |
+| Clockwork Head | Light | Protected (t), Sealed | 12§ | 2 |
+| Clockwork Arms | — | Protected (C), Sealed | 14§ | 2 |
+| Clockwork Legs | — | Protected (M), Sealed | 14§ | 2 |
+
+> **Sealed**: A character wearing Sealed armor on her head, chest, legs, and arms **ignores all damage from p and b effects**.
+
+**Powder Wars Training** *(Step 1)*
+When making a **non-Magical Skill Challenge**, this character may **discard a card** to add the **suit of the discarded card** to her final duel total.
+
+**Survival Training** *(Step 2)*
+- Reduces the **Defense penalty from wearing armor by 1** (minimum 0).
+- **Ignores movement penalties for terrain** while taking Movement Actions.
+
+**Combat Training** *(Step 3)*
+Gains the following Trigger on **Ranged Combat duels**:
+- M **Reposition**: After succeeding, this character may move up to **3 yards**.
+
+Gains the following Trigger on **Close Combat attacks**:
+- t **Duck & Weave**: After succeeding, this character increases her **Defense by +1** until the start of her next turn.
+
+**Ever-Changing Battlefield** *(Step 4)*
+Gains the following Tactical Action:
+- **(0) Fighting Retreat**: If this character is engaged, she may **discard a card** to move up to **4 yards** in any direction, **ignoring disengaging strikes**. If the discarded card had a value of **6+**, she may then take a **1 AP Ranged Combat Action**.
+
+**Specialist Training** *(Step 5)*
+The character chooses one of the following specializations:
+
+- **Librarian**: Powder Wars Training now also affects **Magical Challenges**. The character is issued a heavy tome — a Grimoire containing the **Heal Magia** plus **one Magia and three Immuto** of the character's choice. If she does not have a Magical Theory, she gains the **Tradition Magical Theory**.
+- **Drache Trooper**: The character is issued a **Flamethrower** and may use Flamethrowers as if their Range were **3 yards** (in addition to their normal Range).
+- **Trapper**: The character is issued a **Yamisaka Type 30 Rifle**. Whenever this character takes a **(1) Walk Action** during Dramatic Time, she gains **Focused +1**.
+
+---
+
+### Grave Servant
+
+**Theme**: Obsessive seekers of the Grave Spirit's scattered essence — corrupted necromancers whose power grows with every fragment claimed, even as their sanity erodes. Actively hunted by the Death Marshals.
+
+**Requirements**:
+- Locate a fragment of the **Grave Spirit's essence** and claim it through a powerful necromantic ritual at the appropriate location (requires extensive research into forbidden tomes and sites of spontaneous animation)
+- Each subsequent advancement requires finding and claiming an **additional fragment** — possibly by wrenching it from other Grave Servants or powerful undead creatures animated by proximity to a fragment
+- Note: Death Marshals actively hunt Grave Servants; more than one has ended up trapped forever in a pine box
+
+**Advancement**: Advanced Pursuit with **5 Steps** (no Step 0 talent).
+
+#### Advancement Path
+
+| Step | Talent |
+|---|---|
+| 1 | Servant of Death |
+| 2 | Endless Whispers |
+| 3 | Shadow of Death |
+| 4 | The Final Veil |
+| 5 | Death Ascendant |
+
+#### Talents
+
+**Servant of Death** *(Step 1)*
+When this character transforms a corpse into an Undead subordinate using the **Raise Undead Magia**:
+- The Undead's **Mental Aspects are lowered to −3** (instead of −5)
+- Its **Physical Aspects are not halved**
+- Its **Rank Value becomes Minion (6)**
+
+**Endless Whispers** *(Step 2)*
+At any point during Narrative Time, or at the **start of her turn during Dramatic Time**, this character may **discard a card** to choose a **Necromancy Magia**. Until the end of Dramatic Time or the current scene of Narrative Time, she has access to that Magia regardless of her current Grimoire. If she does not possess a Grimoire, she may act as if she possessed one containing that Magia.
+
+**Shadow of Death** *(Step 3)*
+Gains the following Manifested Power:
+
+| Shadow of Death | AP | TN | Resist | Range |
+|---|---|---|---|---|
+| Necromancy + Prestidigitation | 2 | Special | Wp | 10 yards |
+
+**Special**: When cast, name a type of Undead creature. The TN is **10MC + the Rank Value of the chosen creature**.
+
+**Effect**: An Undead creature of the chosen type appears at a safe location within range and is placed under this character's control as a subordinate for the **next hour**. At the end of that time, the Undead creature becomes **uncontrolled** (and usually violent).
+
+**The Final Veil** *(Step 4)*
+When a **non-Peon Living character is killed within aura 8** of this character, she **heals 2 damage**.
+
+**Death Ascendant** *(Step 5)*
+**Once per session** as a **(0) Action**, this character draws upon the Grave Spirit's essence, cloaking herself in inky tendrils that lift her from the ground. While in this state:
+- Gains **+2 to Walk and Charge Aspects**
+- **Ignores Severe Terrain**
+- Adds **+C to all Magical Skill Challenges**
+- **Suffers 1 damage at the start of her turn**
+- If a Living character **ends a Walk Action within her engagement range** or **targets her with an Action**, it must attempt a **TN 12 Horror Duel**
+
+The character may end this effect as a **(0) Action**.
+
+While in this state, she also gains the following attack:
+
+| Inky Tendril (Necromancy) | Range | Damage |
+|---|---|---|
+| Inky Tendril | pulse 4 | 3/5/6 |
+
+**Special**: This character must **discard a card** to declare this attack. Undead damaged by this attack instead **heal** the indicated amount of damage.
+- C **The Touch of Death**: After damaging a Living target, it must **discard a card**. If it does not, it **loses the Living Characteristic and gains the Undead Characteristic** as it dies and becomes an Undead creature. If the target was a Fatemaster character, it becomes a **subordinate character** under this character's control.
+
+---
+
+### Steamfitter
+
+**Theme**: M&SU magewrights who officially maintain animated constructs in the mines — secretly Arcanist agents using their Union positions to shield advanced magical powers from Guild detection. Animating the dead is strictly forbidden by Arcanist charter.
+
+**Requirements**:
+- Apply at the nearest Union office and pass a demonstration of magical talent
+- Must have a **Magical Theory other than the Thalarian Doctrine or The Whisper** (to exclude Guild spies and Resurrectionists)
+- Must demonstrate ability to **animate a provided mechanical construct for at least 10 minutes**
+- Pay **10 scrip** Union dues if not already a member
+- Note: Advancement beyond Step 1 requires passing secret Arcanist loyalty tests. Those who fail never advance further. Members are expected to periodically assist Union/Arcanist operations; those who refuse suffer "industrial accidents."
+
+**Advancement**: Advanced Pursuit with **5 Steps** (no Step 0 talent).
+
+#### Advancement Path
+
+| Step | Talent |
+|---|---|
+| 1 | Construct Prowess |
+| 2 | Arcanist Initiation |
+| 3 | Arcanist Contacts |
+| 4 | Construct Efficiency |
+| 5 | Grimoire Vault |
+
+#### Talents
+
+**Construct Prowess** *(Step 1)*
+When building a Construct, each **Construct Point spent to increase one of its Physical Aspects increases the Aspect by 2 points** instead of 1.
+
+**Arcanist Initiation** *(Step 2)*
+The character is formally inducted into the Arcanists and given additional magical training. She chooses **one Magia and one Immuto**. She always has access to this Magia and Immuto regardless of her current Grimoire. If she does not possess a Grimoire, she may act as if she possessed one containing this Magia and Immuto.
+
+**Arcanist Contacts** *(Step 3)*
+While in **Malifaux City or the Northern Hills**, this character may **discard a card** to find a safe place to hide, needed supplies, or knowledgeable contacts (e.g., medical supplies, extra weapons and ammunition, someone who can remove Guild Control Collars).
+
+**Construct Efficiency** *(Step 4)*
+This character may treat the **(1) Order Action as a (0) Action** when commanding a subordinate Construct.
+
+Alternatively, she may treat the **(1) Order Action as a (2) Action**. If she does, the subordinate Construct becomes **Fast** at the start of its turn. If she can command multiple Constructs simultaneously, **each becomes Fast**.
+
+**Grimoire Vault** *(Step 5)*
+**Once per session**, this character may spend **two hours** meeting with a fellow Arcanist to request access to one of the organization's Grimoires. She chooses **three Magia and three Immuto** for the Grimoire, which is then loaned to her indefinitely.
+
+She must **return the borrowed Grimoire** before requesting a new one. If a borrowed Grimoire is lost or stolen, a different Grimoire may be substituted — though repeated losses may result in losing access to this Talent.
+
+---
+
+### Torakage
+
+**Theme**: Ten Thunders silent assassins, spies, thieves, and extortionists — masters of the Ten Weapons of Wxu-Shu who live double lives. They serve the Katanaka Clan without question, their identities secret even from their masters and each other.
+
+**Requirements**:
+- Attract the attention of either the **Ten Thunders** or an existing **Torakage** through devotion to the Ten Thunders bordering on fanatical, political or emotional ties the Ten Thunders can leverage, or exceptional skills
+- Must have **no significant ties to other factions**
+- Complete an intensive **one-week training regimen** at a temporary dojo without arousing suspicion about the absence — this is the **first test**
+- Pass multiple tests of physical strength, agility, cunning, and loyalty
+
+**Advancement**: Advanced Pursuit with **5 Steps** (no Step 0 talent).
+
+#### Advancement Path
+
+| Step | Talent |
+|---|---|
+| 1 | The Ten Weapons of Wxu-Shu |
+| 2 | The Wind's Path |
+| 3 | The Leaves Upon the Breeze |
+| 4 | Faceless Killer |
+| 5 | Assassinate |
+
+#### Talents
+
+**The Ten Weapons of Wxu-Shu** *(Step 1)*
+Before making an attack with one of the weapons listed below or the **Martial Arts Skill**, this character may **name a suit and add it to her final duel total**.
+
+| Weapon | Type | Range | Damage | Special | Cost | Skill |
+|---|---|---|---|---|---|---|
+| Longbow | Archery | 12 yards | 2/2/4 | Arrow, Bow | 5§ | 1 |
+| Iron Whip | Flexible | 2 yards | 2/3/4 | Stunning | 25§ | 3 |
+| Kusari-gama | Flexible | 3 yards | 2/2/3 | Snaring | 7§ | 2 |
+| Meteor Hammer | Flexible | 2 yards | 2/4/5 | Brutal | 13§ | 2 |
+| Double-Edged Sword | Melee | 2 yards | 2/3/5 | Deadly | 12§ | 3 |
+| Single-Edged Sword | Melee | 2 yards | 2/3/4 | Precise | 25§ | 3 |
+| Greataxe | Heavy Melee | 2 yards | 3/5/7 | Enlarged, Intimidating | 20§ | 2 |
+| Spear | Heavy Melee | 3 yards | 2/3/4 | Precise | 4§ | 1 |
+| Staff | Heavy Melee | 2 yards | 1/2/4 | — | 1§ | 1 |
+
+**The Wind's Path** *(Step 2)*
+- This character is **immune to disengaging strikes**.
+- If pushed by any effect, she may **increase or decrease the push distance by a number of yards equal to her Speed Aspect** (minimum 1 yard).
+
+**The Leaves Upon the Breeze** *(Step 3)*
+This character can manufacture **shuriken** with great speed. These are Thrown Weapons with **range 8 yards**, the **Fan special rule**, dealing **1/2/3 damage**. They can be crafted from almost any sharpenable material at a rate of **10 per hour of work**.
+
+Gains the following Trigger on all Thrown Weapon attacks:
+- M **Leaf Steps**: After resolving, move up to **3 yards**.
+
+**Faceless Killer** *(Step 4)*
+If this character's face is **hidden behind a mask**:
+- Gains **++** to **Intimidate Challenges**
+- **May not be the target of Charge Actions** unless the charging character has the **Relentless Talent**
+
+**Assassinate** *(Step 5)*
+Gains the following Trigger on any attack made with the **Martial Arts Skill** or any of the Ten Weapons of Wxu-Shu:
+- CC **Assassinate**: After damaging, **immediately kill the target** unless it **discards two cards**.
