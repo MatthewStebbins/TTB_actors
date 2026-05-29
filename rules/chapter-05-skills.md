@@ -525,3 +525,100 @@ Focuses on illusions and the manipulation of dimensional space — subtle and sl
 **Associated Aspect**: Intellect or Tenacity
 
 The most iconic form of magic — hurling fire, lightning, and ice or summoning creatures to fight for the caster. Prized for destructive power; most spellcasters dabble in it. **More than any other magical field, Sorcery attracts the attention of the Witch Hunters** due to its highly visible effects.
+
+---
+
+### Rank Progression — Ranged Combat Skills
+
+Ranged combat is a staple of life in Malifaux — firearms are nearly ubiquitous, from Guild Guard pistols to weapons tucked behind shop counters. A skilled marksman relies on a steady hand and years of training more than luck.
+
+| Rank | Title | Description |
+|---|---|---|
+| 1 | Amateur | Knows how to load her weapon; isn't surprised by its report or recoil. |
+| 2 | Enthusiast | Has received some training; can put a shot downrange with reasonable accuracy even in battle. |
+| 3 | Soldier | Rare level of skill while maintaining a clear conscience. **May learn one Trigger** for the Skill. |
+| 4 | Marksman | Truly deadly; capable of multiple acts of lethal accuracy from a dozen paces. |
+| 5 | Master | One of the most reliable shots in all of Malifaux. **May learn a second Trigger** for the Skill. |
+
+#### Archery
+**Associated Aspect**: Grace
+
+One of the oldest forms of ranged combat, using bows and blowguns. An expert bowman can match a pistol or rifle for accuracy at considerable distance. Especially popular with natives of the Three Kingdoms, many of whom were restricted from owning firearms on Earth.
+
+#### Heavy Guns
+**Associated Aspect**: Might
+
+Large battlefield weapons (cannons, Gatling guns, mortars) with immense destructive power but significant drawbacks — they typically must be set up and mounted before firing, and are difficult to move quickly. Most are **mounted on vehicles or built into defensive positions**. **Most heavy guns are Guild-restricted**; some require permits, others are strictly illegal.
+
+#### Long Arms
+**Associated Aspect**: Intellect
+
+Two-handed firearms including carbines, muskets, and rifles — any two-handed gun that fires a single bullet at long range. Favored by sharpshooters and snipers for their **superior long-range accuracy** compared to other firearms of similar caliber.
+
+#### Pistol
+**Associated Aspect**: Grace
+
+The most common ranged weapon in Malifaux — carried by nearly everyone and tucked behind shop counters and bars throughout the city. Types include front-loading flintlocks, tiny holdout pistols, revolvers, and more. Their primary advantage is being **small enough to carry and conceal**.
+
+#### Shotgun
+**Associated Aspect**: Grace
+
+Scatter guns that blanket large areas with shot, making precise aim less critical than with other firearms. Popular among stagecoach guards due to effectiveness when firing from a moving vehicle. The phrase **"riding shotgun"** (the seat next to the driver) originates from this practice.
+
+#### Thrown Weapons
+**Associated Aspect**: Grace
+
+Covers any hurled weapon — purpose-built (shuriken, bolas) or improvised (melee weapons thrown in desperation).
+
+- **Items without the Thrown special ability**: Range **3 yards**, damage **1/2/3** regardless of normal damage profile.
+- **Items with the Thrown special ability**: Range **3 yards + (3 × Thrown Weapons ranks)**; deal **normal damage** on a hit.
+- Once thrown, a weapon must be **retrieved** before it can be thrown again.
+
+---
+
+### Rank Progression — Social Skills
+
+Most people use Social skills daily. All Social skills share one key trait: **they rely on the perception of others to be effective**.
+
+| Rank | Title | Description |
+|---|---|---|
+| 1 | Amateur | Intuitive grasp; can apply the skill in a limited capacity to avoid complications or embarrassment. |
+| 2 | Novice | Has learned from prior mistakes; can gracefully adapt to new situations. |
+| 3 | Practiced | Comfortable relying on the skill for favorable daily interactions. **May learn one Trigger** for the Skill. |
+| 4 | Expert | A true expert; may be hired as a professional negotiator or called upon to serve others. |
+| 5 | Master | Well known for her ability to influence others; an inspiration to those who follow. **May learn a second Trigger** for the Skill. |
+
+#### Barter
+**Associated Aspect**: Tenacity
+
+Used to haggle over goods and services, sell valuables, negotiate contracts, and bribe people. **Most often resisted by the target's own Barter skill.**
+
+#### Bewitch
+**Associated Aspect**: Charm
+
+Making friends and convincing them to perform favors. Used to navigate social situations (parties, galas) through charm, harmless jokes, and amusing stories. Along with Intimidate, **can be used to gather information from groups of people** — asking around in the streets, learning what happened at a private meeting, etc. **Most often resisted by the target's Scrutiny skill.**
+
+#### Convince
+**Associated Aspect**: Intellect
+
+Mastery of logical arguments and emotional appeals — changing the opinions of others and winning them to one's side. Popular among lawyers, academics, and politicians. **Most often resisted by the target's Scrutiny skill.**
+
+#### Deceive
+**Associated Aspect**: Cunning
+
+Getting another person to believe something that isn't true — cover stories, half-truths, omissions, or outright lies. **Most often resisted by the target's Scrutiny skill.**
+
+#### Intimidate
+**Associated Aspect**: Tenacity
+
+Getting others to back down or comply out of fear — physical, political, or emotional. More about a well-chosen phrase or unflinching gaze than raw strength. Along with Bewitch, **can be used to gather information from groups of people**, often via threats and small acts of violence. **Most often resisted by the target's Centering skill.**
+
+#### Leadership
+**Associated Aspect**: Charm
+
+Valuable for anyone leading, inspiring, or coordinating others. Used when giving speeches, issuing orders, or making logistical decisions. Characters with high Leadership often earn deep **loyalty and devotion** from followers even when other social skills are lacking.
+
+#### Scrutiny
+**Associated Aspect**: Cunning
+
+Sizing up a person — analyzing their emotional state, detecting honesty or deception, and noticing when someone acts inconsistently with their normal personality. Popular among guardsmen and gamblers. Functions as the **"social defense" skill**, used to resist the Bewitch, Convince, and Deceive skills.
