@@ -419,3 +419,109 @@ Covers needlepoint, leatherwork, and sewing — creating, mending, and altering 
 | 3 | Tailored suits and traveling dresses, kimono, corsets, boots, stuffed mattresses, elaborate embroidery |
 | 4 | Tuxedos, evening dresses, hats, elaborate kimono, fashionable clothing |
 | 5 | Clothing that starts fashion trends and becomes known by the creator's name |
+
+---
+
+### Rank Progression — Expertise Skills
+
+Expertise Skills combine instruction and intuition with hands-on experience. Many are honed through a life of crime, seclusion, or both. Characters with multiple ranks have almost certainly had plenty of field experience.
+
+| Rank | Title | Description |
+|---|---|---|
+| 1 | Interest | Passing familiarity; can ask intelligent questions and make reasonable assumptions. |
+| 2 | Proficient | Workable ability; may provide a supplemental income but unlikely to fully support herself. |
+| 3 | Experienced | Used the Skill for quite some time; can support herself and has developed personal shortcuts. **May learn one Trigger** for the Skill. |
+| 4 | Expert | Performs the Skill with relative ease; only the most challenging situations will test her. |
+| 5 | Master | Renowned (in certain circles) for her skill; has likely pioneered innovations in her field. **May learn a second Trigger** for the Skill. |
+
+#### Doctor
+**Associated Aspect**: Intellect
+
+Ensures patients recover quickly from wounds and ailments.
+
+**First Aid** (2 AP Action): Make a Doctor Challenge vs. **TN 5**. On success, the Living character heals **1 damage + 1 per Margin of Success**. A character may only benefit from First Aid **once per hour**.
+
+**Surgery** (removes lasting Critical Effects from Living characters): Can only remove Critical Effects no older than **1 day per rank of Doctor** the character possesses. Make a Doctor Challenge vs. **TN 10 +2 per Critical Effect** being removed.
+- *Success*: noted Critical Effects are removed.
+- *Failure*: the Living character suffers a **Killed/0/0 damage flip with −** for each Margin of Failure.
+- Takes **1 hour per Critical Effect** being removed. A character can only undergo Surgery **once per week** and cannot perform Surgery on herself.
+
+#### Forgery
+**Associated Aspect**: Cunning
+
+Creating false legal documents, copying signatures, and counterfeiting Guild Scrip. Requires **access to an original copy** of the document, signature, or bank note being duplicated or altered.
+
+#### Gambling
+**Associated Aspect**: Cunning
+
+Covers the rules of games of chance, calculating odds, making proper wagers, counting cards, reading opponents' tells, and cheating without getting caught.
+
+#### Husbandry
+**Associated Aspect**: Charm
+
+Breeding and training animals — work animals (horses, oxen), domestication of wild animals (hoarcats, Bayou pigs), and general animal care and feeding. **Also used to control mounts**, making it essential for anyone who spends time in the saddle.
+
+#### Lockpicking
+**Associated Aspect**: Grace
+
+Opening locks without a key. Having a **Lockpicking Toolkit** is helpful but not required — with the right knowledge, a skilled thief can open sturdy locks with something as simple as a sharp twig.
+
+#### Notice
+**Associated Aspect**: Cunning
+
+Paying attention to surroundings to recognize dangers before they cause harm. **Plays a prominent role in determining Initiative score** and is used to resist the Pick Pocket and Stealth Skills.
+
+#### Track
+**Associated Aspect**: Cunning
+
+Following animals and people across terrain — used for hunting, trapping, and bounty hunting. An experienced tracker can tell if her quarry is doubling back or covering its tracks while still moving fast enough to close the gap.
+
+#### Wilderness
+**Associated Aspect**: Cunning
+
+Surviving in harsh environments: finding shelter, trapping food, recognizing edible plants, navigating without roads, starting fires, finding potable water, cleaning and gutting animals, and avoiding natural hazards.
+
+---
+
+### Rank Progression — Magical Skills
+
+Magical Skills represent a character's knowledge of arcane forces. **Possessing ranks in a Magical Skill does not grant the ability to cast spells** — the character must also find a Grimoire, develop a Manifested Power, or obtain a Talent granting access to Magia and/or Immuto. See Chapter 8 for full details.
+
+| Rank | Title | Description |
+|---|---|---|
+| 1 | Novice | Understands the basic concepts of the chosen type of magic. |
+| 2 | Apprentice | Has a feel for the boundaries of what this magic can and cannot accomplish. |
+| 3 | Specialist | Has moved beyond others' formulae and begun developing personal magical rituals. **May learn one Trigger** for the Skill. |
+| 4 | Expert | Comfortable channeling magical power; can wield impressive spells with minimal effort. |
+| 5 | Master | One of the most powerful practitioners in all of Malifaux. **May learn a second Trigger** for the Skill. |
+
+#### Counter-Spelling
+**Associated Aspect**: Tenacity
+
+Uses arcane wards and gestures to dampen magical effects — creating "static" that hostile spells find difficult to penetrate.
+
+**Magical Shielding** (1 AP Action): Wraps a character in defensive magical static. Requires line of sight; the shielding character may only protect **one character at a time** (including herself). If the protected character moves out of line of sight, the shielding ends immediately. The shielding character may end it as a **(0) Action**.
+- The protected character adds the shielding character's **Counter-Spelling ranks** to the final duel total of any **Defense or Willpower duel** made to resist a Spell or Manifested Power.
+- If protected by multiple shielding characters, only the **highest bonus** applies.
+
+**Dispel**: Choose a magical effect within line of sight and make a Counter-Spelling Challenge vs. a **TN equal to the magical effect's TN**. On success, the effect ends immediately. On failure, all future attempts to dispel **that same effect** have their TNs increased by **+4 per failed attempt**.
+
+#### Enchanting
+**Associated Aspect**: Charm or Cunning
+
+The art of permanently augmenting objects and people in wondrous ways — from enhancing their inherent nature to granting entirely new properties (e.g., a sword that burns those it strikes, a rowboat that floats in air). Enchanting drives the greatest demand for Soulstones, as effects built with a Soulstone can last for centuries. **One of the few forms of magic not considered outright illegal by the Guild**, though improper use can still cause serious trouble.
+
+#### Necromancy
+**Associated Aspect**: Charm or Tenacity
+
+Though primarily associated with animating dead corpses, Necromancy also has influence over the mind and soul — rooting through a subject's mind, terrifying them, or banishing them to a timeless nether-space. Its power draws from the **Grave Spirit**, an entity embodying death itself. Though the Grave Spirit was driven from Malifaux in 1902, echoes of its influence remain like oil stains on a white tablecloth.
+
+#### Prestidigitation
+**Associated Aspect**: Cunning or Intellect
+
+Focuses on illusions and the manipulation of dimensional space — subtle and slippery compared to other magical fields. Less visible than Sorcery or Necromancy, so the Guild tends to prioritize more obvious threats. Skilled practitioners can cloak themselves in illusions and teleport to safety, making them notoriously difficult to catch. Witch Hunters often assign pursuit of Prestidigitation users as a form of punishment.
+
+#### Sorcery
+**Associated Aspect**: Intellect or Tenacity
+
+The most iconic form of magic — hurling fire, lightning, and ice or summoning creatures to fight for the caster. Prized for destructive power; most spellcasters dabble in it. **More than any other magical field, Sorcery attracts the attention of the Witch Hunters** due to its highly visible effects.
