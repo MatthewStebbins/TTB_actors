@@ -1109,3 +1109,73 @@ Characters do not normally make Challenge duels to craft items, but may do so to
 | C | **Wary** | After succeeding, gain until end of scene: *"On Alert: When this character enters Dramatic Time, she may end this Condition to gain + to her Initiative flip."* |
 | R | **I've Seen Your Poster** | After succeeding, learn whether the target has a **bounty** on their head and, if so, how much it is worth. |
 
+---
+
+### Training Triggers
+
+Training Triggers represent a variety of tricks characters have picked up during their practices.
+
+#### Acrobatics
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Bouncy** | After succeeding, move up to **2 yards** in any direction. |
+| t | **Show Boating** | After succeeding, make an immediate **Pugilism or Martial Arts attack** against an engaged character. The attack flip gains **+**. |
+| C | **Hold Still!** | After succeeding, any Ranged Combat attack made against you before the start of your next turn suffers **−** to the attack flip. |
+| R | **Physique** | After succeeding, gain **one Margin of Success per R** in the final duel total. |
+
+#### Athletics
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Like A Spider** | After succeeding while climbing, move at **twice the normal speed**. |
+| t | **Show Boating** | After succeeding, make an immediate **Pugilism or Martial Arts attack** against an engaged character. The attack flip gains **+**. |
+| C | **Pratfall** | After failing, if you would suffer damage from the result, suffer **2 less damage**. |
+| R | **Invigorating Exercise** | After succeeding, discard a card to **end one Condition** affecting you. |
+
+#### Carouse
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Just Like Down On the Bayou** | After succeeding, gain for the next hour: *"Drunk and Reckless: At the start of this character's turn, it may suffer 2 damage to generate 1 additional General AP."* |
+| t | **Teetotaler** | After succeeding, **dispose of your drinks or drugs** without partaking and without anyone realizing you have done so. |
+| C | **Drunken Strength** | After succeeding, gain for the next hour: *"Drunken Strength: This character has +1 Might (max +4), but suffers − to any Ranged Combat Challenges."* |
+| R | **Binge Drinker** | After succeeding, heal **1/2/3 damage** and gain **Poison +1**. |
+
+#### Centering
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Strange Numbness** | After succeeding, gain **+** on the next Challenge made to resist a Social Skill, if it occurs by end of the day. |
+| t | **Calm Mind** | After succeeding, gain for the next 30 minutes: *"Calm Mind: This character gains +1 Willpower."* |
+| C | **Is That All?** | After succeeding, allies within line of sight who failed to resist the same effect may make a **second Centering Challenge**; on success, their first failure is ignored. |
+| R | **No More Words** | After succeeding, draw a one-handed weapon and make an **immediate attack** against the character you are speaking with (if in range). |
+
+#### Evade
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Check Please!** | After succeeding, immediately take a **(1) Walk Action**. |
+| t | **Oww-reeka!** | After failing, suffer **2 damage** to draw a Twist Card. |
+| C | **Pratfall** | After failing, if you would suffer damage from the result, suffer **2 less damage**. |
+| R | **Ignore the Pain** | After succeeding, if you suffer a **Weak Critical Effect** before the start of your next turn, it is **ignored** and has no effect. |
+
+#### Pick Pocket
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Both Hands** | After succeeding, make another Pick Pocket Challenge against the same target with **+**. This extra attempt may not declare Triggers. |
+| t | **Well Hello There** | After failing, make an immediate **Bewitch Challenge** against the target. On success, the target **does not notice** the failed Pick Pocket attempt. |
+| C | **Pat Down** | After succeeding, learn whether the target has any **pneumatic limbs or hidden weapons** on their person. |
+| R | **Must Have Been Payday** | After succeeding, if you lift any scrip off the target, **double the amount**. |
+
+#### Stealth
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Dart And Snatch** | After succeeding, make a **Pick Pocket Challenge** against a target within 3 yards with **+** to the duel. |
+| t | **Stakeout** | After succeeding, make a **Notice or Scrutiny Challenge** against a nearby character or location with **+** to the duel. |
+| C | **Stalker** | After succeeding, gain for the next minute: *"Getting Closer: This character may end this Condition when making a Melee attack against a target that does not know she is present to gain ++ to the attack flip."* |
+| R | **Sniper** | After succeeding during Narrative Time, make a **Long Arms attack** with a readied weapon against a target within range. If it hits, the **damage flip gains +**. |
+
+#### Toughness
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Motivated By Pain** | After succeeding, suffer **1 damage** to take a **(1) Walk Action**. |
+| t | **Stanch the Bleeding** | After succeeding, choose to **end one Weak or Moderate Critical Effect** affecting you. |
+| C | **It Doesn't Hurt Anymore** | After succeeding during Dramatic Time, gain until end of Dramatic Time: *"Hard to Wound +1: Damage flips against this character suffer −."* |
+| R | **Tough As Nails** | After succeeding, **heal 1 damage**. |
+
