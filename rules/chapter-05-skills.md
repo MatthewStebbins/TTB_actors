@@ -140,3 +140,137 @@ The Fatemaster may rule that a different Aspect is more relevant when a Skill is
 | Tenacity | Homesteading, Stitching, Barter, Intimidate, Centering, Counter-Spelling, Sorcery\*, Necromancy\* |
 
 > \* Magical Skills with dual Associated Aspects appear under both; use the higher Aspect value when calculating Acting Value.
+
+---
+
+## Skill Descriptions
+
+### Rank Progression — Academic Skills
+
+Academic Skills are learned through study and require a teacher or access to a well-stocked library. They are a hallmark of the wealthy but accessible to anyone willing to put in the work.
+
+| Rank | Title | Description |
+|---|---|---|
+| 1 | Interest | Understands broad underlying concepts (e.g., how laws are written, general world events). |
+| 2 | Student | Firm grasp of the subject (e.g., compound interest, exact dates of major events). |
+| 3 | Journeyman | Can financially support herself using this Skill. Speaks with authority; knows intricate details. **May learn one Trigger** for the Skill. |
+| 4 | Expert | Significant time spent studying; considered a specialist. Others seek her out for opinions. |
+| 5 | Master | Pushes the boundaries of the field. **May learn a second Trigger** for the Skill. |
+
+#### Bureaucracy
+**Associated Aspect**: Cunning
+
+The study and understanding of rules. Used to correctly fill out paperwork, find loopholes in contracts and agreements, and discern whether official paperwork is legitimate or a forgery. Lawyers, barristers, clerks, and guardsmen all develop this skill through necessity.
+
+#### Engineering
+**Associated Aspect**: Intellect
+
+The application of mathematics, scientific principles, and practical knowledge to design, maintain, and improve machines, tools, and structures. Used to understand the scientific principles behind a mechanical device or to draft construction plans for buildings, bridges, and other large structures. Often paired with the Artefacting Skill (its applied counterpart).
+
+#### History
+**Associated Aspect**: Intellect
+
+The study of past civilizations and events. Covers general knowledge of world affairs back to ancient times (e.g., the extent of the Roman Empire at its peak), important dates, and broader historical eras.
+
+> **Special**: For Gremlin or Neverborn characters, this Skill relates to their own people's history unless they specifically studied Earth history. Fatemasters may split this into **History (Earth)** and **History (Malifaux)** as two distinct Skills.
+
+#### Literacy
+**Associated Aspect**: Intellect
+
+The ability to read and write, decipher codes, and read between the lines to determine a writer's social standing and intent. **Each rank of Literacy grants the character one additional language** (read, write, and speak) of her choice.
+
+#### Mathematics
+**Associated Aspect**: Intellect
+
+Used to solve complex problems involving numbers and angles. Required for bankers, accountants, and business owners. Also valuable for gamblers calculating how house rules affect odds.
+
+#### Music
+**Associated Aspect**: Charm
+
+Encompasses playing instruments, reading music, and composing works from simple sing-alongs to grand operas. Musical training allows a character to pick up new instruments much faster than an untrained person.
+
+---
+
+### Rank Progression — Close Combat Skills
+
+Close Combat Skills govern the use of melee weapons and unarmed strikes. A character's rank in certain Skills also determines the damage she deals with unarmed attacks.
+
+| Rank | Title | Description |
+|---|---|---|
+| 1 | Comfortable | Theoretically knows how to handle the weapon; unlikely to hurt herself using it. |
+| 2 | Proficient | Has used the weapon in combat enough to understand its strengths and limitations. |
+| 3 | Veteran | Familiar with multiple weapons of the chosen type; has likely picked up tricks. **May learn one Trigger** for the Skill. |
+| 4 | Expert | Has lost count of uses; wields such weapons as extensions of her own body. |
+| 5 | Master | Has mastered all weapons of the chosen type; may be sought out as a teacher. **May learn a second Trigger** for the Skill. |
+
+#### Flexible
+**Associated Aspect**: Grace
+
+Covers whips, lassos, chains, flails, and other flexible weapons. Capable of tripping and restraining opponents, though generally lower damage than rigid weapons. Preferred by those who favor natural agility and showmanship.
+
+#### Grappling
+**Associated Aspect**: Speed
+
+Focuses on controlling and pinning an opponent rather than dealing damage — useful when the character does not wish to kill her target. Damage scales with Skill rank.
+
+**Special Rules:**
+- **Pinning**: Whenever this weapon deals Severe damage, the target is **Paralyzed** until the start of this character's next turn or until this character takes an Action other than Pass, whichever comes first.
+- **Potent**: Whenever this weapon deals Moderate damage, the target suffers a **Weak Critical Effect**. Whenever it deals Severe damage, the target suffers a **Moderate Critical Effect** (in addition to any other Critical Effects).
+
+| Rank | Range | Damage | Special |
+|---|---|---|---|
+| 0 | 1 yard | 0/0/1 | — |
+| 1 | 1 yard | 0/1/1 | Pinning |
+| 2 | 1 yard | 1/1/1 | Pinning |
+| 3 | 1 yard | 1/1/2 | Pinning |
+| 4 | 1 yard | 1/2/2 | Pinning, Potent |
+| 5 | 1 yard | 1/2/3 | Pinning, Potent |
+
+#### Heavy Melee
+**Associated Aspect**: Might
+
+Covers two-handed melee weapons: heavy axes, pole arms, maces, large clubs, lengths of sturdy pipe, etc. These weapons have the **highest damage potential** of all Close Combat weapons.
+
+#### Martial Arts
+**Associated Aspect**: Speed
+
+Strikes with hands, feet, knees, and elbows — based on speed and pressure points rather than strength. Primarily practiced by people from the Three Kingdoms. Also used by creatures whose natural attacks rely on speed and precision rather than brute strength.
+
+**Special Rules:**
+- **Stunning**: Whenever this weapon deals Severe damage, the target suffers a **Weak Critical Effect** in addition to any other Critical Effects.
+
+| Rank | Range | Damage | Special |
+|---|---|---|---|
+| 0 | 1 yard | 0/1/2 | — |
+| 1 | 1 yard | 1/2/3 | — |
+| 2 | 1 yard | 1/2/4 | — |
+| 3 | 1 yard | 1/3/4 | — |
+| 4 | 1 yard | 2/3/4 | Stunning |
+| 5 | 1 yard | 2/3/5 | Stunning |
+
+#### Melee
+**Associated Aspect**: Might
+
+The most common close combat weapons — one-handed blades, knives, clubs, and similar weapons. Almost everyone in Malifaux carries some sort of knife or small weapon for personal defense.
+
+#### Pneumatic
+**Associated Aspect**: Might
+
+Covers steam-powered weapons. Commonly known only by constructs, as most pneumatic weapons are too heavy or bulky for humans. Characters with pneumatic limbs may be able to use pneumatic weapons integrated into those limbs.
+
+#### Pugilism
+**Associated Aspect**: Might
+
+Combines powerful punches with defensive movements and feints. Proper combinations can stagger and knock out opponents.
+
+**Special Rules:**
+- **Snaring**: The target gains the **Slow Condition** in addition to suffering damage.
+
+| Rank | Range | Damage | Special |
+|---|---|---|---|
+| 0 | 1 yard | 0/1/2 | — |
+| 1 | 1 yard | 1/2/3 | — |
+| 2 | 1 yard | 1/2/4 | — |
+| 3 | 1 yard | 1/3/4 | — |
+| 4 | 1 yard | 2/3/4 | Snaring |
+| 5 | 1 yard | 2/3/5 | Snaring |
