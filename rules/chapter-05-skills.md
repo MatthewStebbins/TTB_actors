@@ -622,3 +622,186 @@ Valuable for anyone leading, inspiring, or coordinating others. Used when giving
 **Associated Aspect**: Cunning
 
 Sizing up a person — analyzing their emotional state, detecting honesty or deception, and noticing when someone acts inconsistently with their normal personality. Popular among guardsmen and gamblers. Functions as the **"social defense" skill**, used to resist the Bewitch, Convince, and Deceive skills.
+
+---
+
+### Rank Progression — Training Skills
+
+Training Skills rely on physical conditioning, instincts, and muscle memory — they cannot be effectively learned from a book alone. Months or years of practice are required.
+
+| Rank | Title | Description |
+|---|---|---|
+| 1 | Amateur | Has practiced a little but hasn't developed muscle memory or the correct frame of mind. |
+| 2 | Novice | Growing accustomed to the skill; the physical aches that once accompanied it are now gone. |
+| 3 | Practiced | Accustomed to using the skill for considerable lengths of time without hardship. **May learn one Trigger** for the Skill. |
+| 4 | Expert | The body has become so accustomed that even a layperson can pick it out (chiseled physique, natural grace, iron stomach, etc.). |
+| 5 | Master | Countless years of practice; the skill appears natural and effortless. **May learn a second Trigger** for the Skill. |
+
+#### Acrobatics
+**Associated Aspect**: Grace
+
+Moving quickly and gracefully — walking narrow beams, maneuvering across rooftops and patches of ice without slipping. Prioritizes dexterity and mobility over brute strength.
+
+#### Athletics
+**Associated Aspect**: Might
+
+Running farther, jumping higher, and swimming longer distances. Also applies to situations where raw physical prowess matters: breaking down doors, laboring for long hours, etc.
+
+#### Carouse
+**Associated Aspect**: Resilience
+
+Consuming alcohol or drugs without losing control of one's actions. Frequently practiced in saloons and casinos.
+
+#### Centering
+**Associated Aspect**: Tenacity
+
+Calming one's mind to resist fear, intimidation, and magical influence — usually through meditation, though some achieve it by experiencing danger so often that adrenaline no longer phases them. **Plays an important part in determining a character's Willpower.**
+
+#### Evade
+**Associated Aspect**: Speed
+
+Dodging out of the path of environmental hazards and area effects. **Evade is reactionary** — it applies when something dangerous is happening and the character simply happens to be in the area (e.g., a pressure plate triggering a scything blade, or uncontrolled lightning arcing between machines). Direct attacks from sentient enemies are resolved as normal attack duels, not Evade Challenges. **Plays an important part in determining a character's Defense.**
+
+#### Pick Pocket
+**Associated Aspect**: Speed
+
+Taking a wallet or watch without anyone noticing; also used for stage magic and sleight of hand. **Most often resisted by the target's Notice skill.**
+
+#### Stealth
+**Associated Aspect**: Cunning
+
+Moving silently, hiding weapons on one's person, remaining unnoticed in shadows, and disappearing into crowds. Used for ambushes, infiltration, and evading pursuit. **Most often resisted by the target's Notice skill.**
+
+#### Toughness
+**Associated Aspect**: Resilience
+
+Enduring harm and continuing to fight without distraction or discomfort. Nobody is born tough — this skill is learned through experience, though learning it inevitably involves a great deal of pain. **Plays an important part in determining a character's Wounds.**
+
+---
+
+## Skill Triggers
+
+Skill Triggers are special effects declared when a character has a **specific suit** in her final duel total. A character may only declare Triggers associated with the Skill being used, and only Triggers she has already learned.
+
+**Learning Triggers:**
+- During character creation: learn one Trigger for each Skill at **Rank 3 or higher**.
+- After character creation: learn a Trigger upon reaching **Rank 3** (one Trigger) and **Rank 5** (second Trigger), each costing **1 Experience Point** (can be spent immediately upon reaching the rank or at the end of any subsequent session).
+- **Limit**: only **one Trigger per Skill Challenge** may be declared, regardless of how many are known.
+
+The Triggers listed below are suggestions. Players and Fatemasters may create new Triggers at roughly the same power level.
+
+---
+
+### Academic Triggers
+
+Academic Triggers apply academic knowledge to practical situations — learning information, gaining social bonuses, and earning scrip.
+
+#### Bureaucracy
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Ruthless Litigation** | After succeeding, the target must attempt a Bureaucracy Challenge at TN 10 +2 per Margin of Success. On failure, the target becomes **Dazed** until end of scene. |
+| t | **Legal Documents** | After succeeding, produce documents backing your claim. Social or Bureaucracy Challenges made to contest your claim or change the minds of witnesses suffer **−** to the duel. |
+| C | **Monotone** | After succeeding, choose one target that can hear you. That target must succeed on a **TN 10 Willpower Challenge** or fall asleep. TN increases by **+2 per Margin of Success** on your Bureaucracy Challenge. |
+| R | **Legal Fees** | After succeeding during Narrative Time, present a bill to the target. Within a week, the target pays **2 scrip +1 per Margin of Success**, gives an item, or performs a service of similar value. Once per session. |
+
+#### Engineering
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Technobabble** | After succeeding, make a Social Duel against a nearby character. If that character has no ranks of Engineering, gain **+** to the duel. |
+| t | **Careful Preparations** | After succeeding, choose a suit. The next Artefacting Challenge this scene adds the chosen suit to the final duel total. |
+| C | **A Piece Fell Off...** | After failing in a duel involving a machine, find scrap materials worth **2 scrip**. Once per scene. |
+| R | **Power Loop** | After succeeding in a duel involving a friendly Construct, it gains the Condition: *"Power Loop: When performing a duel, this character may use the Acting Value of another friendly model with the Power Loop Condition instead of its own."* Until end of scene. |
+
+#### History
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Written by the Victors** | After succeeding, make a Deceive Challenge against a nearby target with **+** to the duel. On success, convince the target that a historical event happened differently (or not at all). Target believes the alternate history until confronted with solid facts. |
+| t | **Of Course!** | After succeeding, learn a previously hidden secret about Malifaux's history pertaining to your current inquiry. Should shed further light on your situation. |
+| C | **Boring History Lesson** | After succeeding, choose one target that can hear you (plus one per Margin of Success). Those targets are **Dazed** for as long as you continue talking. |
+| R | **Research Grant** | After succeeding, your research attracts attention from the Guild or another faction. Within a few days, gain **scrip equal to your final duel total**. Once per session. |
+
+#### Literacy
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Flowery Words** | After succeeding, make a Bewitch or Convince Challenge against a nearby target with **+** to the duel. |
+| t | **Uncover Grimoire** | After succeeding, the text you are reading is actually a Grimoire containing one Magia and one Immuto (Fatemaster's choice). If already a Grimoire, the FM adds one Immuto. A text may only benefit once. Once per session. |
+| C | **Scrawlings** | After succeeding, anyone attempting to read what you've written must succeed on a Literacy Challenge at **TN 10 +2 per Margin of Success**, or be unable to read it. |
+| R | **Editing** | After succeeding, make a Forgery Challenge with **+**. On success, rewrite **1 page +1 per Margin of Success** to say whatever you wish. Rewriting a Grimoire does not affect its Magia and Immuto. |
+
+#### Mathematics
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Probability Studies** | After succeeding, reveal your hand to the Fatemaster and draw a card from your Twist Deck. If its suit matches any card in your hand, discard it. Otherwise, add it to your hand. |
+| t | **Integers** | After succeeding, discard a Twist Card. Each other player may shuffle Twist Cards from their discard piles with the same value back into their Twist Decks. Shuffle matching-value cards from the Fate Deck discard back into the Fate Deck. |
+| C | **Outliers** | After succeeding, search the Fate Deck discard pile for the Red Joker and Black Joker and shuffle any found back into the Fate Deck. |
+| R | **Addition** | After succeeding, gain the Condition until end of scene: *"Additive: When Cheating Fate, you may end this Condition to Cheat Fate with two Twist Cards instead of one; add the value and suit of one card to the other (combined value may not exceed 13)."* |
+
+#### Music
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Gentle Lullaby** | After succeeding, every character within pulse 8 becomes **Dazed** for as long as you continue singing or playing. |
+| t | **Inspiring Ballad** | After succeeding, friendly characters within pulse 8 may discard a Twist Card to gain **+** on Social Skill Challenges for as long as you continue. |
+| C | **Heartache** | After succeeding, all characters within pulse 8 become keenly aware of their troubles and suffer **−** on Social Skill Challenges for as long as you continue. |
+| R | **Marching Tune** | After succeeding during Dramatic Time, every friendly character within pulse 8 may discard a Twist Card to gain the **Fast Condition**. |
+
+---
+
+### Close Combat Triggers
+
+Close Combat Triggers augment a character's melee abilities — additional ways to harm opponents and control the battlefield.
+
+#### Flexible
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Git!** | After succeeding, move the target **1 yard** in any direction. |
+| t | **Whipping Frenzy** | After succeeding, make another Flexible Weapon attack against the same target. This attack may not declare Triggers. |
+| C | **Tangled Up** | After succeeding, target gains Condition until you leave its engagement range, you make another attack with this weapon, or end of its next turn: *"Tangled Up: This character may not take Walk or Charge Actions."* |
+| R | **Cruel Laugh** | After succeeding, this character gains the **Focused Condition**. |
+
+#### Grappling
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Drag** | After succeeding, move up to **2 yards** then push the target into physical contact with you. |
+| t | **Grab and Throw** | After succeeding, throw the target up to **Might in yards** (minimum 1 yard); target becomes **Prone**. |
+| C | **Dislocate** | Gain **+** to the damage flip, but it may not be cheated. |
+| R | **Submission Hold** | Target suffers **+1 damage**. |
+
+#### Heavy Melee
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Knock Back** | After damaging, push the target **3 yards** away from this character. |
+| t | **Crushing** | After succeeding, this attack **ignores Armor**. |
+| C | **Finisher** | After damaging, if the target is **Paralyzed**, the target is **killed**. |
+| R | **Stagger** | The damage flip suffers **−**. After damaging, the target gains the **Slow Condition**. |
+
+#### Martial Arts
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Pressure Point** | After succeeding, target gains Condition until start of this character's next turn: *"Blocked Chi: This character may not take (0) Actions."* |
+| t | **Pin Down** | After succeeding, target gains Condition until you leave its engagement range or start of your next turn (whichever comes first): *"Pinned: This character may not move or be pushed."* |
+| C | **Low Blow** | After succeeding, target becomes **Dazed** until end of its next turn. |
+| R | **Jump Kick** | After succeeding, if this attack was taken as part of a Charge Action, take an additional Martial Arts attack against the target. Once per turn. |
+
+#### Melee
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Circling Around** | After succeeding, place yourself anywhere within the target's engagement range. |
+| t | **Impromptu Parry** | After failing, gain **+1 Defense** against Close Combat attacks made by the target until start of your next turn. |
+| C | **Smeared With Poison** | After succeeding, the target gains **Poison +1**. |
+| R | **Bloody Mess** | After killing the target, draw a Twist Card then discard a Twist Card. |
+
+#### Pneumatic
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Steam in My Eyes!** | After damaging the target with a Close Combat weapon, target becomes **Blind** until end of its next turn. |
+| t | **Steam Blast** | When damaging, this attack's Moderate and Severe damage values gain **+B**. All B damage dealt is Weak damage. You are unaffected by any B generated. |
+| C | **Industrial Strength** | After damaging, the target receives a **Critical Effect** of the appropriate severity. |
+| R | **Overheated** | After damaging, the target gains **Burning +1**. |
+
+#### Pugilism
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Rabbit Punch** | After succeeding, take an additional Pugilism attack against the target. This attack may not declare Triggers. |
+| t | **TKO** | After damaging, target must make a **TN 10 Unconsciousness Challenge** (+1 TN if Moderate damage, +2 TN if Severe). |
+| C | **Cowed** | After damaging, target gains Condition until end of its next turn: *"Cowed: This character suffers − on all attack flips made against the character that applied this Condition."* |
+| R | **Beatdown** | When damaging, deal **+1 damage** if the target does not have the Armor ability. |
