@@ -805,3 +805,307 @@ Close Combat Triggers augment a character's melee abilities — additional ways 
 | t | **TKO** | After damaging, target must make a **TN 10 Unconsciousness Challenge** (+1 TN if Moderate damage, +2 TN if Severe). |
 | C | **Cowed** | After damaging, target gains Condition until end of its next turn: *"Cowed: This character suffers − on all attack flips made against the character that applied this Condition."* |
 | R | **Beatdown** | When damaging, deal **+1 damage** if the target does not have the Armor ability. |
+
+
+---
+
+### Crafting Triggers
+
+Characters do not normally make Challenge duels to craft items, but may do so to declare a Trigger or for another reason. Success is still guaranteed if requirements are met.
+
+#### Alchemistry
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **We Can Drink That!** | After creating an alchemical item, gain a jar of moonshine. |
+| t | **Additional Product** | After creating an item, gain an additional item of that type. |
+| C | **Toxic Distillation** | After creating an alchemical item, gain a vial of strong poison (anyone who drinks it gains **Poison +4**). |
+| R | **...And It Burns!** | After creating an alchemical item, gain a Flaming Bottle (Thrown Weapons, 1/1BB/1BBB damage, everyone damaged gains **Burning +2**). |
+
+#### Art
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Propaganda** | After creating art, choose a simple task. Fatemaster characters who see it must pass a **Willpower Challenge (TN 8 +1 per Skill rank)** or be compelled to perform or encourage the task. |
+| t | **Masterpiece** | After creating art, its scrip value equals your final Art duel total; sell it to interested buyers for that amount. |
+| C | **The Perfect Portrait** | After creating a likeness of a character, that character gains: *"A Portrait of the Soul: When this character would suffer damage, she may instead end this Condition and transfer the damage to the likeness."* |
+| R | **Ambiance** | After creating art, choose one Social Skill. While in view of the art, all characters suffer **−** on Challenges with the chosen Skill. Only one piece's effect applies at a time (arranger's choice). |
+
+#### Artefacting
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Spontaneous Animation** | After succeeding, immediately create and animate a **Ht 1 Construct worth 20 scrip or less** under your control. Once per session; the Construct breaks apart at end of session. |
+| t | **Valuable Components** | After creating a Construct or item worth more than 10 scrip, find leftover parts worth **3 scrip**. |
+| C | **Give It A Good Thwump** | After failing, immediately make another Artefacting Challenge at the same TN. On success, the original failure counts as a success. |
+| R | **Extra Scrap** | If Repairing a Construct, it heals **+1 damage** and gains **Armor +1** until end of scene. Once per scene. |
+
+#### Blacksmithing
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Knock Offs** | After creating a weapon, gain **two additional weapons of the same type**, each with the Shoddy Customization. |
+| t | **Additional Product** | After creating an item, gain an additional item of that type. |
+| C | **Special Process** | After creating a weapon, add the **Nickel-Plated Customization** at no cost. |
+| R | **I Added Some Spikes** | After creating a pistol or rifle, add a **free bayonet** to the weapon. |
+
+#### Culinary
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Strong Stuff** | After brewing alcohol, anyone drinking it gains for the next hour: *"Drunk and Reckless: At the start of this character's turn, it may suffer 2 damage to generate 1 additional General AP."* |
+| t | **Banquet** | After creating food or drink, produce enough for **3 additional people per t** in the final duel total. |
+| C | **This Tastes Like Dog Food** | After creating food or drink, gain a plate of animal food. If fed to a Beast within the next hour, that Beast gains **+** to all duels during Narrative Time for the rest of the day. |
+| R | **Loosen Your Belts** | After creating food or drink, anyone who partakes gains until end of day: *"Stuffed: The character that applied this Condition gains + on Bewitch and Convince Duels made against this character."* |
+
+#### Explosives
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Bomb in a Jar** | After creating an explosive, disguise it as a household item (**Notice TN 8 +1 per Skill rank** to recognize it as an explosive). |
+| t | **Incendiary** | After creating an explosive, characters damaged by it gain **Burning +1**. |
+| C | **Concentrated** | After creating an explosive, it deals no B damage. Instead, deal **+1 damage per B** that would have been generated. |
+| R | **Here Comes the Boom** | After creating an explosive, add **+B** to the explosive's Moderate and Severe damage values. |
+
+#### Homesteading
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **We Built Around It** | After constructing a building or compound, discover a single wondrous feature (Fatemaster's choice, e.g., healing fruit tree, fireproof wood, hidden underground passages). |
+| t | **A Fort** | After constructing a building or compound, you and allies within its boundaries treat **all soft cover as hard cover** and ignore severe terrain. |
+| C | **Safe Pasture** | After building a fence, gain **+** to Husbandry duels made against Beasts within the fenced area. |
+| R | **Barbed** | After building a fence, the fence gains: *"Barbed: Characters passing through suffer 1/2/3 damage."* |
+
+#### Printing
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Propaganda Machine** | After printing text, readers must pass a **Centering Challenge (TN 8 +1 per Skill rank)** or be swayed to a political opinion espoused in the work. |
+| t | **Paper Blizzard** | After printing text, produce **+25% more copies**. |
+| C | **Slander** | After printing text, readers must pass a **Centering Challenge (TN 8 +1 per Skill rank)** or develop a **negative opinion** of someone mentioned. |
+| R | **Laudation** | After succeeding, readers must pass a **Centering Challenge (TN 8 +1 per Skill rank)** or develop a **positive opinion** of someone mentioned. |
+
+#### Stitching
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **From Curtains** | After creating or repairing clothing, it appears to be of **much higher quality** than it actually is. |
+| t | **Exquisite Craftsmanship** | After creating clothing, the wearer gains **+** to Bewitch duels the first time it is worn. Lasts until removed, 12 hours pass, or the character suffers damage. |
+| C | **Loose Stitches** | After succeeding on a corpse or Undead, it gains for one day: *"Loose Stitches: After being damaged, all characters within pulse 1 gain Poison +1."* |
+| R | **Tight Stitches** | When Mending an Undead target, it heals **+1 damage** and gains for one day: *"Hard to Wound +1: Damage flips against this character suffer −."* Once per day per Undead. |
+
+---
+
+### Expertise Triggers
+
+#### Doctor
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Outpatient Care** | After successful Surgery, the target heals **2/3/4 damage**. |
+| t | **Lots of Bandages** | After succeeding on First Aid, make **another First Aid attempt** on the same target. |
+| C | **Antidote** | After succeeding on First Aid, **remove the Poison Condition** from the target. |
+| R | **Take Two of These...** | After succeeding on First Aid, the target heals **+1 Wound per R** in the final duel total. |
+
+#### Forgery
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Perfect Copy** | After succeeding, gain **+** to any Convince or Deceive Challenge regarding the forgery or its written content. |
+| t | **Official Papers** | For the next 24 hours, gain **+** to Bureaucracy Challenges when using the forged object. |
+| C | **Skilled Duplication** | After succeeding, any attempts to detect the forgery have their TNs increased by **+5**. |
+| R | **Illicit Gains** | After successfully forging an object of art, sell the forgery at the **full value of the original**. |
+
+#### Gambling
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Draw Up** | After succeeding, draw a Twist Card then discard a Twist Card. |
+| t | **Quick Hands** | After succeeding, look at the **bottom card of the Fate Deck**. You may move it to the top. |
+| C | **Discard** | After succeeding, look at the **top card of the Fate Deck**. You may move it to the bottom. |
+| R | **Shuffle** | After succeeding, discard a Twist Card to **reshuffle the Fate Deck discard pile** back into the Fate Deck. No characters draw cards from this reshuffling. |
+
+#### Husbandry
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Puppies!!!** | After successfully birthing a Beast, birth **+1 Beast of the same type +1 per Margin of Success**. |
+| t | **Grow Up Strong** | After successfully birthing a Beast, increase **two of its Physical Aspects by +1 each**. |
+| C | **Twisted** | After successfully birthing a Beast, give it unnatural parts. Choose one Talent or attack from a different Beast and grant it to the new Beast (Fatemaster approval). |
+| R | **Proper Care** | After succeeding, if the target is a Beast, it heals **1/2/3 damage**. |
+
+#### Lockpicking
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Entering** | After succeeding, gain for 5 minutes: *"Silent Entry: Gain + to all Stealth duels."* |
+| t | **Copy** | After succeeding, gain **a copy of the key** that opens the lock you just picked. |
+| C | **Trapped Lock** | After succeeding, the next time a character uses the lock (key or pick), they gain **Poison +3**. |
+| R | **Breaking** | After succeeding, the next time the lock is closed it becomes **jammed and cannot be unlocked with a key**. |
+
+#### Notice
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Context Clues** | After succeeding, immediately make a Scrutiny Challenge against a character in the area with **+** to the duel. |
+| t | **I'm On Point** | After succeeding during an Ongoing Challenge, discard a card to **remove one Failure Requirement** from the Ongoing Challenge. |
+| C | **Wary** | After succeeding, gain until end of scene: *"On Alert: When this character enters Dramatic Time, she may end this Condition to gain + to her Initiative flip."* |
+| R | **Size Up** | After succeeding against a character, learn the target's **highest Close Combat or Ranged Combat Skill and its value**. |
+
+#### Track
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **No Trail** | After succeeding, obscure the trail — anyone else following it suffers **−−** to the duel. |
+| t | **Deep Impressions** | After succeeding, gain a rough idea of how the tracked characters are equipped (backpacks, weapon types, heavy items, etc.). |
+| C | **Follow Their Lead** | After succeeding, gain **+** to Wilderness duels made while following the trail. |
+| R | **Guns Blazing** | On success, when you catch up with your quarry, take **one additional turn** at the start of any resulting Dramatic Time (after Initiative flip, before turns begin). |
+
+#### Wilderness
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **One With Nature** | After succeeding, if you encounter an enemy Beast within the next four hours, designate it as "friendly." It will not become hostile so long as you and your companions do not attack, hamper, or annoy it. |
+| t | **Hidden Cache** | After succeeding, find a hidden cache of supplies (ammunition, a useful item, a crude map, etc.). |
+| C | **Forecast** | After succeeding, choose what weather the local area experiences for the next day **+1 day per Margin of Success**. Must be weather natural to the area. |
+| R | **Look, Berries!** | After succeeding, one Living companion (may be you) heals **1 damage**. |
+
+---
+
+### Magical Triggers
+
+#### Counter-Spelling
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Expose Prestidigitation** | After succeeding, if the caster is within line of sight, they gain the **Dazed Condition** until end of their next turn. |
+| t | **Douse Sorcery** | After succeeding, if the caster is within line of sight, they suffer **1/2/3 damage** as their spell's energy is turned back on them. |
+| C | **Unravel Necromancy** | After succeeding, target Undead **Peon or Minion** within line of sight suffers **1/2/3 damage**. |
+| R | **Break Enchantment** | After succeeding, target Construct **Peon or Minion** within line of sight suffers **1/2/3 damage**. |
+
+#### Enchanting
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Quicken Reflexes** | After succeeding, a friendly target within 3 yards gains **+1 Grace** until start of your next turn. |
+| t | **Enhance Intelligence** | After succeeding, a friendly target within 3 yards gains **+1 Intellect** until start of your next turn. |
+| C | **Amplify Resilience** | After succeeding, a friendly target within 3 yards gains **+1 Resilience** until start of your next turn. |
+| R | **Strengthen Muscles** | After succeeding, a friendly target within 3 yards gains **+1 Might** until start of your next turn. |
+
+#### Necromancy
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **It's Alive...-ish** | After succeeding, target Undead within 3 yards gains until end of scene: *"Visage of Life: This character appears to be Living. Characters who suspect otherwise may attempt a TN 12 Scrutiny Challenge."* |
+| t | **Whispers of the Dead** | After succeeding, learn the location of all corpses within **3 yards +3 per t** in the final duel total (even if buried). |
+| C | **Bolster Undead** | After succeeding, target Undead within 3 yards **heals 1 damage**. |
+| R | **Fray Life** | After succeeding, target Living character within 3 yards suffers **1 damage**. |
+
+#### Sorcery
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Telekinetic Shove** | After succeeding, push a target within 3 yards **up to 1 yard** in any direction. |
+| t | **Bright Flash** | After successfully casting a Spell or Manifested Power, all characters within pulse 1 of the target must pass a **TN 10 Centering Duel** or gain the **Blind Condition** until end of the round. |
+| C | **Arcing Energies** | After casting, choose an Elemental Immuto added to that Spell or Effect. A character within 2 yards of the target suffers the effects of **one instance of the chosen Elemental Immuto**. |
+| R | **Brute Force** | After damaging, hard cover within 2 yards of the target is **reduced to soft cover**, or soft cover is **destroyed and reduced to severe terrain**. |
+
+#### Prestidigitation
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Fade Away** | After succeeding, gain until start of your next turn: *"Fade Away: Attacks against this character suffer −−. Ends immediately after an attack is resolved against this character."* |
+| t | **Glimpse the Future** | After succeeding during Dramatic Time, immediately **increase your Initiative value by +2**. |
+| C | **Distraction** | After succeeding, a target within line of sight gains the **Dazed Condition** until end of its next turn. |
+| R | **Weapons of the Mind** | After succeeding, a target within 2 yards of one of your illusions suffers **1 damage**. |
+
+---
+
+### Ranged Combat Triggers
+
+#### Archery
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Awkward Shot** | After damaging, target gains: *"Awkward Arrow: − to all attacks. May take a (1) Action to remove the arrow and end this Condition."* |
+| t | **Pinned to the Ground** | After succeeding, target gains until it moves or is pushed: *"Pinned to the Ground: May not declare Walk or Charge Actions. May take a (1) Action to remove the arrow and end this Condition."* |
+| C | **Poisoned Arrowhead** | After damaging, target gains **Poison +1**. |
+| R | **Headshot** | When damaging, this attack **ignores Hard to Wound**. If a Critical Effect is generated, it automatically affects the **head**. |
+
+#### Heavy Guns
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **No Man Can Outrun A Bullet** | When damaging, reduce all damage to **0**. Move the target a number of yards equal to its Walk Aspect in any direction, ending farther from you than it began. |
+| t | **Hit the Deck!** | When damaging, reduce all damage to **0**. Every character that would have been damaged becomes **Prone**. |
+| C | **Perforate** | After damaging, target gains the **Bleeding Out Condition**. |
+| R | **Sweeping Fire** | After damaging, immediately make another Heavy Guns attack against a **different target** not yet targeted by this attack or a Sweeping Fire attack this turn. |
+
+#### Long Arms
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Precision Sniping** | If the damage results in a Critical Effect, **choose the location** rather than flipping for it. |
+| t | **Sight In** | After resolving, discard a Twist Card to gain **Focused +1**. |
+| C | **Punch Through** | After damaging, deal **1/2/4 damage** to a second character within 3 yards of the target and behind them (relative to shooter). This second damage flip may not be cheated. |
+| R | **Headshot** | When damaging, this attack **ignores Hard to Wound**. If a Critical Effect is generated, it automatically affects the **head**. |
+
+#### Pistol
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Ricochet** | After damaging, another character within 3 yards of the target suffers **1/2/4 damage** (may not be cheated). |
+| t | **Armor-Piercing Bullets** | When damaging, this attack **ignores Armor**. |
+| C | **Loud Blank** | After succeeding, reduce all damage to **0**. Target gains **Slow**. |
+| R | **Unload** | When damaging, if you have two or more bullets remaining, deal **+2 damage**. Your weapon is now **empty**. |
+
+#### Shotgun
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Run 'n Gun** | After damaging, immediately move up to your **Walk Aspect in yards** toward the target. |
+| t | **What If…More Powder?** | When damaging, add **+B** to Moderate and Severe damage values. |
+| C | **Shotgun Surgeon** | When damaging, this attack deals no B damage. Instead, deal **+1 damage per B** that would have been created. |
+| R | **Blown Back** | After damaging, if Moderate or Severe damage was dealt, the target is **pushed 1 yard away** and becomes **Prone**. |
+
+#### Thrown Weapons
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Ready Weapon** | After resolving, take the **(1) Ready Weapon Action**. |
+| t | **I Had An Extra** | After succeeding, find an additional item identical to the one just thrown in your gear (effectively replenishing it). Will not duplicate rare or unique items at FM's discretion. |
+| C | **Smacked in the Head** | When damaging, deal **+1 damage**. If a Critical hit is generated, it automatically affects the **head**. |
+| R | **Hey! Over Here!** | After resolving, take the **Impose Action** against the target. |
+
+---
+
+### Social Triggers
+
+#### Barter
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Flatter** | After succeeding, target becomes **friendly and willing to assist** with gossip, directions, or information. |
+| t | **Can't You Do A Little Better?** | After succeeding, reduce the price of the item or service by an **additional 20%**. |
+| C | **I'll Never Shop Here Again!** | After failing, target offers a **minor item or service** to keep you as a customer. Once per day per target. |
+| R | **How Much For The Hat?** | After succeeding, make another Barter Challenge for **an item the target owns but was not otherwise willing to sell**. |
+
+#### Bewitch
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **I'm Kinda Important** | After succeeding, target believes you are a **moderate- to high-ranking member** of an organization they are friendly with and treats you accordingly until they have reason to believe otherwise. |
+| t | **Flirtatious Wink** | After succeeding, target **develops a crush** on you — offers small favors and speaks favorably about you for **one week**. |
+| C | **I Don't Like You, Either** | After failing, immediately make an **Intimidate Challenge** against the target with **+** to the duel. |
+| R | **And Who's Your Friend?** | After succeeding, immediately make another Bewitch Challenge against a **different target** with **+** to the duel. |
+
+#### Convince
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Just Between Us** | After succeeding, if you asked for a questionable or illegal favor, the target will **keep the matter secret** unless forcefully questioned. |
+| t | **Revelation** | After succeeding, target **abandons their previous beliefs** and adopts yours on the topic. |
+| C | **We're Just Talking Is All** | After failing, if you asked for a questionable or illegal action, the target **keeps the discussion secret** unless forcefully questioned. |
+| R | **The Honest Truth** | After succeeding, if you are being truthful and sincere, gain **one additional Margin of Success**. |
+
+#### Deceive
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Straight Faced** | After failing during Narrative Time, if the target has no ranks in Scrutiny, **you win the Challenge**. |
+| t | **Revelation** | After succeeding, target **abandons their previous beliefs** and adopts yours on the topic. |
+| C | **"Guys, He Said It's Not A Real Knife!"** | After succeeding during Narrative Time, target **turns their back on you**. Draw a one-handed weapon and make an immediate attack with **++** to the attack flip. |
+| R | **But Seriously...** | After failing, make a **Convince Challenge** against the same target with **+**. On success, there are no repercussions for the failed Deceive duel. |
+
+#### Intimidate
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **It's Nothing Personal** | After succeeding, make a **Bewitch Challenge** against the target with **+**. On success, the target's perception of you **does not worsen** from the Intimidate Challenge. |
+| t | **Interrogation** | After succeeding, target **must reveal a piece of helpful information** she might not have otherwise given (if possible). |
+| C | **We're Just Talking Is All** | After failing, if you asked for a questionable or illegal action, target **keeps the discussion secret** unless forcefully questioned. |
+| R | **Soften You Up** | After succeeding against a target within 1 yard, make a **free Pugilism attack** (no Triggers). On success, gain a **Margin of Success on the Intimidate Challenge**. |
+
+#### Leadership
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **It Wasn't My Idea** | After resolving, all listeners believe the orders or words were **the sentiments of someone else** (who need not be present), even if the character claims otherwise. |
+| t | **I Believe In You** | After succeeding, NPCs performing a task as a result treat their **Rank Value as +2 higher** for the duration. |
+| C | **For Them!** | After succeeding, all listeners may make a **TN 10 Tenacity Challenge**. On success, that character may **ignore the first Critical Effect** they suffer within the next hour. |
+| R | **Let's Do This!** | After succeeding during an Ongoing Challenge, every other participating character gains **+** to Challenge Duels during the next Duration. |
+
+#### Scrutiny
+| Suit | Trigger | Effect |
+|---|---|---|
+| M | **Political Ties** | After succeeding, learn which **Faction(s)** the target is most closely associated with. If none, they count as Outcasts. |
+| t | **Sense Magic** | After succeeding, learn the identity of **every Magia in the target's current Grimoire** (if any). |
+| C | **Wary** | After succeeding, gain until end of scene: *"On Alert: When this character enters Dramatic Time, she may end this Condition to gain + to her Initiative flip."* |
+| R | **I've Seen Your Poster** | After succeeding, learn whether the target has a **bounty** on their head and, if so, how much it is worth. |
+
