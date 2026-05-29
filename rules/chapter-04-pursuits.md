@@ -1,4 +1,4 @@
-# Chapter 4: Pursuits
+﻿# Chapter 4: Pursuits
 
 ## Overview
 
@@ -17,7 +17,7 @@ Pursuits are temporary templates describing a character's role within a story an
 
 - At the end of each session (**Epilogue**), the character advances one Step and gains the listed Talent
 - A character may choose any **General Talent** when the advancement says "General Talent" (if prerequisites met)
-- Pursuits max out at **10 Steps** — a character cannot advance further in a maxed Pursuit
+- Pursuits max out at **10 Steps** â€” a character cannot advance further in a maxed Pursuit
 - Changing Pursuits: the **On the Pursuit** ability changes, but all previously gained Talents are **retained**
 - Pursuits are chosen **after the Prologue** each session
 
@@ -38,7 +38,7 @@ Pursuits are temporary templates describing a character's role within a story an
 
 **Starting Bonus**: Non-magical skill toolkit
 
-**On the Pursuit — Avid Student**: When this character fails an Academic duel, she may draw a card.
+**On the Pursuit â€” Avid Student**: When this character fails an Academic duel, she may draw a card.
 
 **Epilogue Skill Advancement**: May advance any Academic Skill (in addition to Fatemaster options).
 
@@ -69,7 +69,7 @@ Gains the following Trigger on all Academic Skill Duels:
 
 **Scientific Classification** *(Step 1)*
 Gains the following Tactical Action:
-- **(1) Document Denizen**: Target an enemy within 10 yards. Make a Challenge flip using Engineering (Construct), History (human), or Wilderness (everything else). Wilderness is Academic for this duel. Opposed by target's Deceive + Cunning + Rank Value. Success: learn target's type, Rank Value, and nature of Abilities/Talents. Rare/unique targets may impose − at Fatemaster's discretion. Cannot identify characters by name.
+- **(1) Document Denizen**: Target an enemy within 10 yards. Make a Challenge flip using Engineering (Construct), History (human), or Wilderness (everything else). Wilderness is Academic for this duel. Opposed by target's Deceive + Cunning + Rank Value. Success: learn target's type, Rank Value, and nature of Abilities/Talents. Rare/unique targets may impose âˆ’ at Fatemaster's discretion. Cannot identify characters by name.
 
 **Rational Mind** *(Step 3)*
 Choose an Academic Skill. When making a Challenge Flip to resist manipulation (terror, mind control, intimidation), add ranks in the chosen Skill to the final duel total.
@@ -81,7 +81,7 @@ During an Ongoing Challenge, this character's Academic Skill final duel totals i
 When this character successfully uses the Trick or Impose Action against an opponent during Dramatic Time, that opponent becomes **Dazed** until the start of this character's next turn.
 
 **Boring Lecture** *(Step 5)*
-With at least 5 minutes to lecture on a subject corresponding to an Academic Skill (≥1 rank), make a Challenge Flip using that Skill, opposed by Willpower duels of every non-Beast character that can hear her. If this character's total ≥ opponent's Willpower total → **Dazed** for 1 hour of Narrative Time. Margin of Success against any character → that character must attempt a TN 10 Unconsciousness Challenge.
+With at least 5 minutes to lecture on a subject corresponding to an Academic Skill (â‰¥1 rank), make a Challenge Flip using that Skill, opposed by Willpower duels of every non-Beast character that can hear her. If this character's total â‰¥ opponent's Willpower total â†’ **Dazed** for 1 hour of Narrative Time. Margin of Success against any character â†’ that character must attempt a TN 10 Unconsciousness Challenge.
 
 **Lessons Learned** *(Step 7)*
 Gains the following Defensive Trigger:
@@ -107,7 +107,7 @@ Once per session, this character may discard a card to deduce an important piece
 
 **Starting Bonus**: Non-magical skill toolkit
 
-**On the Pursuit — Opportunist**: When this character fails a Training duel, she may draw a card.
+**On the Pursuit â€” Opportunist**: When this character fails a Training duel, she may draw a card.
 
 **Epilogue Skill Advancement**: May advance any Training Skill (in addition to Fatemaster options).
 
@@ -131,7 +131,7 @@ Once per session, this character may discard a card to deduce an important piece
 
 **Improvise** *(Step 0)*
 This character may discard a card to create a **shiv**. Lasts indefinitely until used; breaks at end of Dramatic Time after use.
-> *Shiv stats: melee weapon — full stat block listed in rulebook (table was cut off in source)*
+> *Shiv stats: melee weapon â€” full stat block listed in rulebook (table was cut off in source)*
 
 **Scoundrel** *(Step 1)*
 Gains the following Trigger on all Social Skill Challenges:
@@ -178,7 +178,7 @@ Skills: Evade 2, Intimidate 2, Melee 3, Notice 1, Toughness 1.
 
 **Pick On Someone Yer Own Size!**: When this Thug's controller is targeted with a melee attack and this Thug would be a valid target, controller may discard a card to make this Thug the target instead.
 
-**(1) Crude Club** (Melee) — AV: 5 (10) | Rg: melee 2 | Resist: Df — Damage: 2/2/4. Severe damage also inflicts a Weak Critical Effect.
+**(1) Crude Club** (Melee) â€” AV: 5 (10) | Rg: melee 2 | Resist: Df â€” Damage: 2/2/4. Severe damage also inflicts a Weak Critical Effect.
 
 **Study Opponent** *(Step 7)*
 Choose Close Combat or Ranged Combat. When making an attack of the chosen type, this character may target the opponent's **Willpower instead of Defense**.
@@ -205,7 +205,7 @@ This character generates 1 additional AP on her turn that can only be used for a
 
 **Starting Bonus**: A Grimoire containing 1 Sorcery Magia + 1 Enchanting/Necromancy/Prestidigitation Magia + 3 Immuto.
 
-**On the Pursuit — Epiphany**: When this character fails a Magical duel during Dramatic Time, she may draw a card.
+**On the Pursuit â€” Epiphany**: When this character fails a Magical duel during Dramatic Time, she may draw a card.
 
 **Epilogue Skill Advancement**: May advance any Magical Skill (in addition to Fatemaster options).
 
@@ -230,7 +230,7 @@ This character generates 1 additional AP on her turn that can only be used for a
 **Imbue Protection** *(Step 0)*
 Gains the following Tactical Action:
 - **(0) Imbue Protection**: Target a friendly character within 1 yard (may be self) and discard a card. Target gains Condition for 5 minutes: *"Imbued Protection +N: When this character suffers damage, reduce damage by +N (minimum 0), then reduce Condition value by the same amount."*
-  - Card value 1–5 → **+1** | Card value 6–10 → **+2** | Card value 11+ → **+3**
+  - Card value 1â€“5 â†’ **+1** | Card value 6â€“10 â†’ **+2** | Card value 11+ â†’ **+3**
 
 **Counter Magic** *(Step 1)*
 Gains the following Tactical Action:
@@ -262,11 +262,11 @@ This character gains 1 additional AP on her turn, but this AP **may only be used
 
 ### Drudge
 
-**Theme**: Manual laborers and miners — tough, hardy, and inured to pain. Many sport pneumatic limbs from workplace injuries.
+**Theme**: Manual laborers and miners â€” tough, hardy, and inured to pain. Many sport pneumatic limbs from workplace injuries.
 
-**Starting Bonus**: Choose one: non-magical skill toolkit **or** one pneumatic limb with any number of steam augments up to **25§ total value**.
+**Starting Bonus**: Choose one: non-magical skill toolkit **or** one pneumatic limb with any number of steam augments up to **25Â§ total value**.
 
-**On the Pursuit — Long Days**: When this character fails a Training duel, she may draw a card.
+**On the Pursuit â€” Long Days**: When this character fails a Training duel, she may draw a card.
 
 **Epilogue Skill Advancement**: May advance any Training Skill (in addition to Fatemaster options).
 
@@ -294,8 +294,8 @@ This character gains 1 additional AP on her turn, but this AP **may only be used
 
 **Keep Standing** *(Step 1)*
 - May discard a Twist Card when suffering a Critical Effect:
-  - Instant Critical Effect → ignored
-  - Lasting Critical Effect → no effect until start of next turn (Dramatic Time) or 1 minute (Narrative Time)
+  - Instant Critical Effect â†’ ignored
+  - Lasting Critical Effect â†’ no effect until start of next turn (Dramatic Time) or 1 minute (Narrative Time)
 - May discard a Twist Card to automatically pass an Unconsciousness Challenge.
 
 **Long Suffering** *(Step 1)*
@@ -312,7 +312,7 @@ Once per Dramatic Time when this character receives a Critical Effect, she may c
 After succeeding at a Skill Challenge as part of an Ongoing Challenge, gains + to her next Skill Challenge in that same Ongoing Challenge.
 
 **Slow to Die** *(Step 5)*
-When this character suffers a Critical Effect, the **Critical Effect flip suffers a −**.
+When this character suffers a Critical Effect, the **Critical Effect flip suffers a âˆ’**.
 
 **Soldier On** *(Step 7)*
 At the beginning of Dramatic Time, this character may heal **2/3/5 damage**. She may also choose one conscious friendly character that can hear her to also heal **2/3/5 damage**.
@@ -325,12 +325,12 @@ Before performing a Close Combat, Expertise, Training, or Ranged Combat Skill Ch
 in place of the original Skill and Aspect.
 
 **Just a Graze** *(Step 9)*
-This character may **Cheat any Damage Flip she suffers**, regardless of − modifiers or Jokers.
+This character may **Cheat any Damage Flip she suffers**, regardless of âˆ’ modifiers or Jokers.
 
 **Can't Keep Me Down** *(Step 9)*
 At the start of this character's turn during Dramatic Time:
-- Less than half total Wounds remaining (rounded up) → heal **1 damage**
-- Suffering from Critical Effect(s) or less than 0 Wounds → heal **2 damage** instead
+- Less than half total Wounds remaining (rounded up) â†’ heal **1 damage**
+- Suffering from Critical Effect(s) or less than 0 Wounds â†’ heal **2 damage** instead
 
 **My Lot in Life** *(Step 10)*
 At the start of this character's turn during Dramatic Time, may discard a card to gain additional AP equal to the number of Lasting Critical Effects she is suffering (even if ignoring them via Keep Standing). **Maximum 3 additional AP**.
@@ -339,11 +339,11 @@ At the start of this character's turn during Dramatic Time, may discard a card t
 
 ### Graverobber
 
-**Theme**: Necromancy-touched individuals drawn to the power of life and death — often driven by the mysterious "Whisper" toward darker and darker acts.
+**Theme**: Necromancy-touched individuals drawn to the power of life and death â€” often driven by the mysterious "Whisper" toward darker and darker acts.
 
 **Starting Bonus**: A Grimoire containing 1 Necromancy Magia + 1 Enchanting/Prestidigitation/Sorcery Magia + 3 Immuto (total: 2 Magia, 3 Immuto).
 
-**On the Pursuit — Black Soul**: When this character fails a Magical duel during Dramatic Time, she may draw a card.
+**On the Pursuit â€” Black Soul**: When this character fails a Magical duel during Dramatic Time, she may draw a card.
 
 **Epilogue Skill Advancement**: May advance any Magical Skill (in addition to Fatemaster options).
 
@@ -385,7 +385,7 @@ Choose a Magia. This character always has access to it regardless of her current
 If this character does not have the Undead Characteristic, she may **count as Undead whenever she wishes**. Fatemaster Undead characters treat her with disinterest unless attacked or directly threatened.
 
 **Consume Corpse** *(Step 7)*
-When casting a Necromancy Spell, this character may consume any number of corpses within 5 yards of her to **lower the Spell's TN by −2 per consumed corpse**. Consumed corpses are reduced to dust and ash. No line of sight required (buried corpses sensed via Sense Corpses may be consumed). May also consume Undead subordinate characters under her direct control as if they were corpses; uncontrolled undead or those under another character's control cannot be consumed.
+When casting a Necromancy Spell, this character may consume any number of corpses within 5 yards of her to **lower the Spell's TN by âˆ’2 per consumed corpse**. Consumed corpses are reduced to dust and ash. No line of sight required (buried corpses sensed via Sense Corpses may be consumed). May also consume Undead subordinate characters under her direct control as if they were corpses; uncontrolled undead or those under another character's control cannot be consumed.
 
 **Maniacal Laugh** *(Step 9)*
 This character may **discard a card** to animate all corpses within **pulse 8** of her as **Mindless Zombies** (see NPC chapter). Zombies remain animated for a number of rounds equal to **half the discarded card's value (rounded up)**. They count as subordinate characters under this character's control. This character may command every Mindless Zombie under her control with a **(1) Order Action**, and orders may be different.
@@ -400,11 +400,11 @@ This character may **discard a card from her Control Hand** to take control of a
 
 ### Guard
 
-**Theme**: Protectors and bodyguards who place themselves between allies and danger — whether altruistic or mercenary.
+**Theme**: Protectors and bodyguards who place themselves between allies and danger â€” whether altruistic or mercenary.
 
-**Starting Bonus**: One Close Combat weapon + any Armor (combined value ≤ **20§**).
+**Starting Bonus**: One Close Combat weapon + any Armor (combined value â‰¤ **20Â§**).
 
-**On the Pursuit — Iron Tank**: When this character fails a Close Combat duel during Dramatic Time, she may draw a card.
+**On the Pursuit â€” Iron Tank**: When this character fails a Close Combat duel during Dramatic Time, she may draw a card.
 
 **Epilogue Skill Advancement**: May advance any Close Combat Skill (in addition to Fatemaster options).
 
@@ -437,13 +437,13 @@ Gains the following Defensive Trigger:
 This character **does not need to discard a card** to take the Defensive Stance Action.
 
 **Take the Hit** *(Step 3)*
-This character may **discard a card from her Control Hand** after an attack hits a friendly character within 2 yards of her. If she does, she moves to a position between the friendly character and the attacker and **suffers the effects of the attack** (which suffers a − to its damage flip) instead of the friendly character. Opponents engaged with this character when she moves may not attempt Disengaging Strikes to stop this movement.
+This character may **discard a card from her Control Hand** after an attack hits a friendly character within 2 yards of her. If she does, she moves to a position between the friendly character and the attacker and **suffers the effects of the attack** (which suffers a âˆ’ to its damage flip) instead of the friendly character. Opponents engaged with this character when she moves may not attempt Disengaging Strikes to stop this movement.
 
 **Ocular Pat Down** *(Step 3)*
 After watching a target character for at least **1 minute during Narrative Time**, this character may attempt a **Scrutiny Challenge** (TN = target's Cunning + Stealth + Rank Value). Failure: cannot use this Talent against the target for the remainder of the scene.
 
 Success: learns whether the target has **concealed weapons** and what they are. Target also gains the following Condition for the rest of the scene:
-> *"Assessed Threat: This character suffers − to Intimidate Challenges. If this character enters combat against the character that applied this Condition, this character's Initiative is reduced by −5 (minimum 0), and the character that applied this Condition gains + to all Close Combat Attacks against this character."*
+> *"Assessed Threat: This character suffers âˆ’ to Intimidate Challenges. If this character enters combat against the character that applied this Condition, this character's Initiative is reduced by âˆ’5 (minimum 0), and the character that applied this Condition gains + to all Close Combat Attacks against this character."*
 
 **Flurry** *(Step 5)*
 Choose a Close Combat Skill when gaining this Talent. Gains the following Tactical Action:
@@ -474,11 +474,11 @@ Gains the following Defensive Trigger:
 
 ### Gunfighter
 
-**Theme**: Pistol specialists who have elevated gunplay to an art form — quick, precise, and addicted to the thrill of combat.
+**Theme**: Pistol specialists who have elevated gunplay to an art form â€” quick, precise, and addicted to the thrill of combat.
 
-**Starting Bonus**: One or two Pistols (combined value ≤ **20§**).
+**Starting Bonus**: One or two Pistols (combined value â‰¤ **20Â§**).
 
-**On the Pursuit — High Noon**: When this character fails a Ranged Combat duel during Dramatic Time, she may draw a card.
+**On the Pursuit â€” High Noon**: When this character fails a Ranged Combat duel during Dramatic Time, she may draw a card.
 
 **Epilogue Skill Advancement**: May advance any Ranged Combat Skill (in addition to Fatemaster options).
 
@@ -522,7 +522,7 @@ Gains the following Tactical Action:
 
 **Fastest Gun** *(Step 5)*
 Gains the following Defensive Trigger:
-- **Df (M) Fastest Gun**: After a Ranged Combat attack **fails** against this character, this character may **expend one round of ammunition** in a readied Pistol to deal its damage to the attacker. This damage flip receives a −.
+- **Df (M) Fastest Gun**: After a Ranged Combat attack **fails** against this character, this character may **expend one round of ammunition** in a readied Pistol to deal its damage to the attacker. This damage flip receives a âˆ’.
 
 **No Time For This** *(Step 7)*
 Whenever this character is involved in an Ongoing Challenge, she may choose to make one of the Challenge Flips using her **Pistol Skill** instead of the appropriate Skill (she still uses the appropriate Aspect). The Fatemaster and player determine how this works narratively (e.g., threatening someone with a gun, using gunpowder to crack a safe, trick shots).
@@ -546,9 +546,9 @@ This character gains **1 additional AP** on her turn, but this AP **may only be 
 
 **Theme**: Professional soldiers and bounty hunters who sell their skills to the highest bidder.
 
-**Starting Bonus**: One Ranged Combat weapon + any Armor (combined value ≤ **20§**).
+**Starting Bonus**: One Ranged Combat weapon + any Armor (combined value â‰¤ **20Â§**).
 
-**On the Pursuit — A Fistful of Scrip**: When this character fails a Ranged Combat duel during Dramatic Time, she may draw a card.
+**On the Pursuit â€” A Fistful of Scrip**: When this character fails a Ranged Combat duel during Dramatic Time, she may draw a card.
 
 **Epilogue Skill Advancement**: May advance any Ranged Combat Skill (in addition to Fatemaster options).
 
@@ -593,7 +593,7 @@ Gains the following Defensive Trigger:
 - **Df (M) Human Shield**: After this character fails, she grabs a target character of **Minion rank or lower** within 2 yards and Line of Sight (not the attacker) and places it between herself and the attacker. Damage is split evenly between the Minion and this character, with **any uneven damage going to the Minion**.
 
 **Making Ends Meet** *(Step 5)*
-After this character fails a Skill Challenge, she may "lose" scrip equal to **twice the difference between her final acting value and the Challenge's TN**. If she does, she is considered to have **passed the Challenge with no Margins of Success**. If it was an attack, it counts as a tie (damage flip suffers a −− modifier).
+After this character fails a Skill Challenge, she may "lose" scrip equal to **twice the difference between her final acting value and the Challenge's TN**. If she does, she is considered to have **passed the Challenge with no Margins of Success**. If it was an attack, it counts as a tie (damage flip suffers a âˆ’âˆ’ modifier).
 
 **Coin for Kills** *(Step 7)*
 After this character kills an enemy, she may **discard a card** to gain scrip equal to the **target's Rank Value**. Source (loot, eerie winds blowing scrip bills, etc.) determined by player and Fatemaster.
@@ -615,11 +615,11 @@ At the **start of her turn during Dramatic Time**, this character may choose to 
 
 ### Overseer
 
-**Theme**: Bosses, foremen, and entrepreneurs who coordinate others toward a goal — whether through loyalty, fear, or coin.
+**Theme**: Bosses, foremen, and entrepreneurs who coordinate others toward a goal â€” whether through loyalty, fear, or coin.
 
 **Starting Bonus**: Non-magical skill toolkit.
 
-**On the Pursuit — Oversight**: When this character fails a Social duel, she may draw a card.
+**On the Pursuit â€” Oversight**: When this character fails a Social duel, she may draw a card.
 
 **Epilogue Skill Advancement**: May advance any Social Skill (in addition to Fatemaster options).
 
@@ -643,9 +643,9 @@ At the **start of her turn during Dramatic Time**, this character may choose to 
 
 **Management Material** *(Step 0)*
 When this character joins an Ongoing Challenge, she may **discard a card** to use the **Leadership Skill as if it were one of the Skills Allowed** by the Ongoing Challenge for a set number of Durations based on the discarded card's value:
-- Value 1–5 → **1 Duration**
-- Value 6–10 → **2 Durations**
-- Value 11+ → **3 Durations**
+- Value 1â€“5 â†’ **1 Duration**
+- Value 6â€“10 â†’ **2 Durations**
+- Value 11+ â†’ **3 Durations**
 
 **Concerted Effort** *(Step 1)*
 - This character always makes **Initiative flips before any of her companions**. If multiple characters have this Talent, they choose their order among themselves.
@@ -655,7 +655,7 @@ When this character joins an Ongoing Challenge, she may **discard a card** to us
 This character may **discard a card** to add the **suit of the discarded card** to the final duel total of any friendly character that can see or hear her (including herself).
 
 **Work Smarter** *(Step 3)*
-After this character succeeds at a Skill Challenge during an Ongoing Challenge, **permanently reduce the Ongoing Challenge's TN by −1** for all subsequent Durations. Cumulative if multiple characters have this Talent.
+After this character succeeds at a Skill Challenge during an Ongoing Challenge, **permanently reduce the Ongoing Challenge's TN by âˆ’1** for all subsequent Durations. Cumulative if multiple characters have this Talent.
 
 **Reminder of a Worse Fate** *(Step 3)*
 When another friendly character within 6 yards attempts a **Horror or Unconsciousness Challenge**, she may add this character's **ranks in Leadership** to her final duel total.
@@ -694,11 +694,11 @@ On her turn during Dramatic Time, this character may **discard three cards**. If
 
 ### Performer
 
-**Theme**: Actors, musicians, and showgirls who manipulate the emotions of crowds — and turn those social skills to their advantage in any situation.
+**Theme**: Actors, musicians, and showgirls who manipulate the emotions of crowds â€” and turn those social skills to their advantage in any situation.
 
 **Starting Bonus**: Non-magical skill toolkit.
 
-**On the Pursuit — Flair for the Dramatic**: When this character fails a Social duel, she may draw a card.
+**On the Pursuit â€” Flair for the Dramatic**: When this character fails a Social duel, she may draw a card.
 
 **Epilogue Skill Advancement**: May advance any Social Skill (in addition to Fatemaster options).
 
@@ -734,10 +734,10 @@ Gains the following Trigger on all Social duels:
 - M **Impress**: After succeeding, draw a card.
 
 **Helluva Entrance** *(Step 5)*
-This character may gain **+** to the **first non-Stealth Challenge Flip** she makes in any scene. If she does, she suffers **−** to all **Stealth Challenges** she makes for the remainder of that scene.
+This character may gain **+** to the **first non-Stealth Challenge Flip** she makes in any scene. If she does, she suffers **âˆ’** to all **Stealth Challenges** she makes for the remainder of that scene.
 
 **Charming Demeanor** *(Step 5)*
-When this character is **targeted with an attack**, she may **discard a card** to impose a **−−** penalty to the attack flip.
+When this character is **targeted with an attack**, she may **discard a card** to impose a **âˆ’âˆ’** penalty to the attack flip.
 
 **Opening Act** *(Step 7)*
 After flipping for Initiative at the start of Dramatic Time, this character may **nominate a friendly character** (which may be herself) to take a **Walk Action**.
@@ -762,7 +762,7 @@ This character may **exchange her Charm Aspect for any of her other Mental Aspec
 
 **Starting Bonus**: Non-magical skill toolkit.
 
-**On the Pursuit — Rugged Individual**: When this character fails a Training duel, she may draw a card.
+**On the Pursuit â€” Rugged Individual**: When this character fails a Training duel, she may draw a card.
 
 **Epilogue Skill Advancement**: May advance any Training Skill (in addition to Fatemaster options).
 
@@ -802,9 +802,9 @@ If this character **fails a Notice Challenge**, she may **discard a card** to **
 
 **Healing Poultices** *(Step 5)*
 When in a rural or wilderness area, this character may **spend one hour and discard a card** to produce **Healing Poultices**:
-- Card value 1–5 → **1 poultice**
-- Card value 6–10 → **2 poultices**
-- Card value 11+ → **3 poultices**
+- Card value 1â€“5 â†’ **1 poultice**
+- Card value 6â€“10 â†’ **2 poultices**
+- Card value 11+ â†’ **3 poultices**
 
 Any character may apply a Healing Poultice to a **Living character** as a **(2) AP Action**. Doing so: reduces the target's **Poison Condition value by 5** (minimum 0), and heals **2/3/4 damage**. Poultices remain viable for **3 days** before decaying.
 
@@ -816,7 +816,7 @@ At the **start of Dramatic Time**, this character may **discard a card** to decl
 - She and any allies she travels with gain **+** on any Challenges made to **resist the elements or other environmental hazards** (frostbite, sunstroke, biting insects, drowning, etc.).
 
 **Know the Path** *(Step 7)*
-When this character joins an Ongoing Challenge that allows the use of **Homesteading, Track, or Wilderness Skills**, the **TN of the Ongoing Challenge is lowered by −2** for participating characters that use one of those Skills.
+When this character joins an Ongoing Challenge that allows the use of **Homesteading, Track, or Wilderness Skills**, the **TN of the Ongoing Challenge is lowered by âˆ’2** for participating characters that use one of those Skills.
 
 **Pathfinder** *(Step 9)*
 Friendly characters within **aura 3** of this character:
@@ -835,11 +835,11 @@ While on any land reasonably considered to be **owned by this character** (her h
 
 ### Scrapper
 
-**Theme**: Melee fighters — sword-and-axe warriors, bare-knuckle brawlers, and martial artists who prefer to get up close and personal.
+**Theme**: Melee fighters â€” sword-and-axe warriors, bare-knuckle brawlers, and martial artists who prefer to get up close and personal.
 
-**Starting Bonus**: One Close Combat weapon + any Armor (combined value ≤ **20§**).
+**Starting Bonus**: One Close Combat weapon + any Armor (combined value â‰¤ **20Â§**).
 
-**On the Pursuit — Bloody Minded**: When this character fails a Close Combat duel during Dramatic Time, she may draw a card.
+**On the Pursuit â€” Bloody Minded**: When this character fails a Close Combat duel during Dramatic Time, she may draw a card.
 
 **Epilogue Skill Advancement**: May advance any Close Combat Skill (in addition to Fatemaster options).
 
@@ -900,3 +900,248 @@ After this character **completes the movement portion of a Charge Action**, she 
 
 **Melee Expert** *(Step 10)*
 This character gains **1 additional AP** on her turn, but this AP **may only be used to make a Close Combat attack**.
+
+---
+
+### Tinkerer
+
+**Theme**: Artisans, engineers, enchanters, and inventors living on the edge of industrial innovation — creating magical constructs to solve problems or unleash technological horror.
+
+**Starting Bonus**: One Height 1 Construct built per construct creation rules (= **25§** total value).
+
+**On the Pursuit — Gear Head**: When one of this character's subordinate Constructs fails a Pneumatic duel during Dramatic Time, this character may draw a card.
+
+**Epilogue Skill Advancement**: May advance any Magical Skill (in addition to Fatemaster options).
+
+#### Advancement Path
+
+| Step | Talent |
+|---|---|
+| 0 | Machine Magic |
+| 1 | Loyal Protector |
+| 2 | General Talent |
+| 3 | Construct Specialist **or** Push the Limits |
+| 4 | General Talent |
+| 5 | Mend Steel **or** Multi-Tasker |
+| 6 | General Talent |
+| 7 | Unrealistic Expectations **or** Bleeding Edge Tech |
+| 8 | General Talent |
+| 9 | Over Pressure **or** Magical Maintenance |
+| 10 | Rise of the Machines |
+
+#### Talents
+
+**Machine Magic** *(Step 0)*
+This character always has access to the **Animate Construct Magia**, no matter her current Grimoire. If she does not possess a Grimoire, she may act as if she possessed a Grimoire with this Magia. If she does not possess a Magical Theory, she gains the **Darlin Theories Magical Theory**.
+
+**Loyal Protector** *(Step 1)*
+While this character is within 2 yards of one or more of her subordinate Constructs, she may add the **Height of the largest such Construct** to her Defense.
+
+**Construct Specialist** *(Step 3)*
+When this character gains this Talent, she chooses one Skill. With an hour of work, this character may increase a Construct's ranks in that Skill to a value equal to her ranks in the **Engineering Skill**. When this character builds a Construct, it gains a number of ranks of the chosen Skill equal to her ranks in Engineering **at no additional cost**.
+
+**Push the Limits** *(Step 3)*
+When a subordinate Construct under this character's control performs an Action, this character can force it to **suffer 1 damage**. If she does so, the Construct gains **+** on the Action.
+
+If this character is a Construct or has at least one pneumatic limb, she may use this Talent on herself.
+
+**Mend Steel** *(Step 5)*
+When this character successfully casts the Animate Construct Magia on a Construct, the Construct heals **1/2/3 damage**.
+
+If this character is a Construct, she may cast the Animate Construct Magia on herself to heal her own damage in this way.
+
+**Multi-Tasker** *(Step 5)*
+When this character takes a **(1) Order Action**, she may **give orders to an additional Construct subordinate**, and the orders for each Construct may be different.
+
+**Unrealistic Expectations** *(Step 7)*
+With an hour of tinkering, this character can give a subordinate Construct character a **+1 increase to one of its Physical Aspects** for **one week**.
+
+Subordinate characters who are not Constructs can benefit from this Talent as well, provided that they have one or more pneumatic limbs.
+
+A character can only benefit from a single instance of this Talent at one time; any additional applications merely change which Aspect is increased and reset the duration.
+
+**Bleeding Edge Tech** *(Step 7)*
+When this character is building a Construct, each Construct Point she spends to increase its Skills gives the Construct **twice as many Skill Ranks to distribute** as normal.
+
+**Over Pressure** *(Step 9)*
+This character and every subordinate Construct under her control gains the following Trigger on their Pneumatic attacks:
+- t **Over Pressure**: After succeeding, take an additional attack against the target. This Trigger may only be declared once per turn.
+
+If this character is a Construct or has at least one pneumatic limb, she also gains this Trigger on her Pugilism and Martial Arts attacks.
+
+**Magical Maintenance** *(Step 9)*
+At the start of this character's turn, each of her subordinate Constructs within **aura 4** heals **1 damage**.
+
+**Rise of the Machines** *(Step 10)*
+When this character takes the **(1) Order Action** to command a subordinate Construct during Dramatic Time, it may **act normally at the end of her next turn** as well as the current turn, just as if she had taken the (1) Order Action on her next turn to command it. If this character is killed or knocked unconscious before then, the Construct still gets its "free" turn immediately after when this character's turn would normally have been.
+
+---
+
+### Wastrel
+
+**Theme**: Gamblers and professional rogues whose main goal is to avoid serious work — card sharks, con artists, and cheats who have learned to bend probability itself.
+
+**Starting Bonus**: Non-magical skill toolkit.
+
+**On the Pursuit — Aces and Eights**: When this character fails an Expertise duel, she may draw a card.
+
+**Epilogue Skill Advancement**: May advance any Expertise Skill (in addition to Fatemaster options).
+
+#### Advancement Path
+
+| Step | Talent |
+|---|---|
+| 0 | Luck of the Draw |
+| 1 | Cards Up a Sleeve |
+| 2 | General Talent |
+| 3 | Marked Cards **or** Double Down |
+| 4 | General Talent |
+| 5 | All In **or** Counting Cards |
+| 6 | General Talent |
+| 7 | Gamble Your Life **or** Double Down |
+| 8 | General Talent |
+| 9 | High Aces **or** Mulligan |
+| 10 | Fifty-Fifty Chance |
+
+#### Talents
+
+**Luck of the Draw** *(Step 0)*
+When the Fate Deck is shuffled, this character draws **two cards instead of one**.
+
+**Cards Up a Sleeve** *(Step 1)*
+At any point, this character may place one Twist Card from her Control Hand **face up on the table** in front of her. While the Twist Card is face up, **any player may discard a card** from their Control Hand to Cheat Fate with that card instead of a card from their own Control Hand.
+
+After the face up card has been used to Cheat Fate, or at the end of the session, it is discarded into the appropriate discard pile. This character may only have one face up Twist Card in front of her at any one time.
+
+**Marked Cards** *(Step 3)*
+At any point during this character's turn during Dramatic Time, she may **discard a card** to look at the **top three cards of the Fate Deck** and either **discard all three cards** or **replace all three cards in any order**.
+
+**Double Down** *(Steps 3, 7)*
+After succeeding at a Challenge, this character may choose to "Double Down." If she does, she makes a **second Challenge**, using all the same modifiers as the first. If this second Challenge succeeds, it has no effect other than allowing her to either deal **+1 damage** to her target (if the Challenge was an attack) or gain a **Margin of Success** (if the Challenge was not an attack). If the second Skill Challenge fails, however, then her original success **counts as a failure**.
+
+If this Talent is gained a second time *(Step 7)*, when this character would be able to declare a legal Trigger on her second Challenge, she may choose to **declare that Trigger in addition to any she declared on her first Challenge**. This can allow the character to potentially declare **two Triggers on a single Action** (one from the initial flip and one from the second flip), provided that both Triggers are different. The character may choose the order in which the Triggers resolve.
+
+**All In** *(Step 5)*
+This character gains **+** to all duels when she has **no Twist Cards in her hand**.
+
+**Counting Cards** *(Step 5)*
+At the start of this character's turn, she may **discard a Twist Card**. If she does, for the rest of her turn, this character "flips" cards from the **top of the Fate Deck discard pile**, instead of from the Fate Deck.
+
+While this Talent is being used, any Fate Card that would be discarded is instead set aside and discarded at the end of this character's turn. If this character cannot "flip" a card from the discard pile — if it has run out of cards, for instance — then any cards she cannot flip are treated as if she had instead flipped the **Black Joker**.
+
+**Gamble Your Life** *(Step 7)*
+Gains the following Manifested Power:
+
+| Gamble Your Life | AP | TN | Resist | Range |
+|---|---|---|---|---|
+| Cunning + Gambling | 1 | 10M | Special | 6 yards |
+
+**Special**: This Manifested Power is resisted by the target's **Gambling + Cunning** (+ Rank Value, if applicable).
+
+**Effect**: The target suffers **3/4/6 damage**. If the target successfully resists this Manifested Power, the **caster suffers 3/4/6 damage**. Damage flips generated by this Manifested Power **may not be Cheated** and **ignore all + and - modifiers**.
+
+**High Aces** *(Step 9)*
+This character may treat all **Ace cards** in the Fate Deck and her Control Hand as if they had either a **value of 1 or 11**. She must make this choice immediately after the Ace card is flipped or cheated.
+
+**Mulligan** *(Step 9)*
+**Once per session**, this character may discard her Control Hand, shuffle her discard pile into her Twist Deck, and **draw three cards**.
+
+If the character discarded at least one Twist Card in this way, she may also **shuffle the Fate discard pile into the Fate Deck** (which in turn allows all of the Fated to draw a card due to the Fate Deck being reshuffled).
+
+**Fifty-Fifty Chance** *(Step 10)*
+**Once per Dramatic Time**, instead of flipping a card from the Fate Deck, this character may "stack the deck" by going through the Fate Deck and discard pile to find **both Jokers**. The Fatemaster then randomly chooses one of the Jokers **without looking at them** and shuffles it into the Fate Deck. The remaining Joker is then placed on top of the Fate Deck for the character to flip over.
+
+---
+
+## Advanced Pursuits
+
+While the Basic Pursuits cover a variety of general archetypes that any character can adopt without much special training, there are certain paths that characters can only follow if they have special training or belong to certain factions. These paths are represented by **Advanced Pursuits**.
+
+### Requirements
+
+Advanced Pursuits are only ever available through events that unfold as a campaign progresses. Each one has special requirements that are narrative, rather than mechanic, and many require special initiation into exclusive groups and extensive training regimes.
+
+### Advancement Rules
+
+Acquiring and advancing along an Advanced Pursuit is handled differently than with Basic Pursuits. In order to advance along an Advanced Pursuit, the **character's involvement with the Advanced Pursuit must be the focus of the current session**, rather than the resolution of one of the characters' Destiny Steps.
+
+- At the end of the session, instead of advancing along her current Basic Pursuit, the character instead advances **one step along her chosen Advanced Pursuit**.
+- There is no limit to how many Advanced Pursuits a character may follow at once, except by time and common sense (the Death Marshals are unlikely to recruit a Grave Servant, for instance).
+- Even if the character progressing along the Advanced Pursuit is the focus of the session, the other characters should have the opportunity to contribute and participate meaningfully in the session.
+
+### Advanced Pursuits Overview
+
+| Pursuit | Theme |
+|---|---|
+| **Death Marshal** | Guild special division tasked with fighting Resurrectionists; study Necromancy to combat the undead |
+| **Freikorpsmann** | Prestigious mercenary company; well-armed and well-trained private army |
+| **Grave Servant** | Demented seekers of the Grave Spirit's dissipated essence for power over the undead |
+| **Steamfitter** | M&SU magewrights who keep constructs animated; secretly Arcanist conspirators with magical secrets |
+| **Torakage** | Ten Thunders silent assassins, spies, and thieves trained in the Ten Weapons of Wxu-Shu |
+
+---
+
+### Death Marshal
+
+**Theme**: Guild special division tasked with combating the Resurrectionist threat. Solemn, grim warriors who study necromantic lore to understand and destroy their enemies. Most show physical corruption from their studies — sunken eyes, pallid complexions, hair loss.
+
+**Requirements**:
+- Must either **apply for the position** (requires existing Guild position) or be **selected by a Death Marshal recruiter** (requires slaying one or more significant undead/Resurrectionists)
+- **Cannot have The Whisper Magical Theory**
+- **Cannot have strong ties to another faction** (especially Resurrectionists)
+- Must pass a **trial combat against undead creatures** retrieved from the Quarantine Zone (the Death Marshals care about courage and bravery more than martial prowess)
+- Must leave a single drop of blood with Lady Justice (used to find rogue Death Marshals)
+
+**Advancement**: Advanced Pursuits have **no Step 0 talent**. Death Marshal has **5 Steps** (Steps 1–5).
+
+#### Advancement Path
+
+| Step | Talent |
+|---|---|
+| 1 | Special Dispensation |
+| 2 | Fear Not Death |
+| 3 | Pine Box |
+| 4 | One Foot in the Grave |
+| 5 | Flames of the Pit |
+
+#### Talents
+
+**Special Dispensation** *(Step 1)*
+This character gains special permission from the Guild to use necromantic magic, so long as it does not result in the creation of Undead creatures.
+
+- This character always has access to the **Subsume Corpse Magia**, no matter her current Grimoire. If she does not possess a Grimoire, she may act as if she possessed a Grimoire with this Magia.
+- If the character does not have a Magical Theory, she gains the **Thalarian Doctrine Magical Theory**.
+- This character's special training allows her to have **more than 2 ranks in the Necromancy Skill** without violating the Thalarian Doctrine.
+- The character is also issued a **Peacebringer** (pg. 234).
+
+**Fear Not Death** *(Step 2)*
+This character's corpse can **never be reanimated as an Undead creature**; every attempt to do so automatically fails. When this character kills another character, she may choose to instantly render her target's remains **unfit to be reanimated into an Undead creature**.
+
+In addition, this character gains the following ability:
+
+> **Hard to Wound +1**: Damage flips against this character suffer **-**.
+
+**Pine Box** *(Step 3)*
+At this point in the character's training, she is instructed to build the coffin that she will one day be buried in.
+
+The character may **carry her coffin without any undue difficulty**, though its actual weight does not change. When used in this way, the coffin has the following stats:
+
+| Pine Box (Heavy Melee) | Range | Damage |
+|---|---|---|
+| Pine Box | melee 2 | 2/3/4 |
+
+**Special**: Thrown. When carried, this weapon is always considered to be readied.
+
+- C **Get In The Box**: After succeeding, the target is **trapped in the Pine Box** and gains the following Condition until this character (or another character, if this character is killed) takes a **(1) Action to open it**: *"Boxed and Buried: This character is removed from reality and cannot take Actions."* This Trigger may not be declared if there is already a character in the Pine Box.
+
+If her coffin is destroyed, the character may replace it with a day of work.
+
+**One Foot in the Grave** *(Step 4)*
+If this character is in **physical contact with her coffin**, she heals **1 damage** at the start of each of her turns during Dramatic Time.
+
+**Flames of the Pit** *(Step 5)*
+**Once per session** as a **(0) Action**, the character can draw upon her necromantic powers to make her flesh temporarily fall away, revealing bare bones that blaze with phantom flames. While in this state:
+- The character suffers **-** to all Social Skill Challenges other than **Intimidate**, which gains **+**.
+- If an Undead character **ends a Walk Action within this character's engagement range** or **targets her with an Action**, it must attempt a **TN 12 Horror Duel**.
+
+This effect lasts until the character takes another **(0) Action to end the effect**, or until the end of the session.
