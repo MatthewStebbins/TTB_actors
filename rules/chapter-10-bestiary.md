@@ -782,3 +782,248 @@ Brought to Malifaux in the days of the first Breach and again when it reopened, 
 **(1) Hoof** (Martial Arts)
 AV: 5 (8) | Rg: y1 | Resist: Df
 Target suffers 1/2/4 damage.
+
+---
+
+### Socialite
+
+Socialites inhabit the highest echelons of Malifaux society — guild officials, manufacturing tycoons, famous performers, and their spouses. Genuine friendship is rare; most relationships are transactional, abandoned the moment someone's social star fades. Socialites weaponize gossip, bribery, and conspiracy to ruin rivals for sport. Many are wealthy sycophants; others are pretenders spending beyond their means on clothes and jewelry, hoping to marry into legitimacy. Few succeed, and fewer are happy when they do.
+
+#### Socialite
+
+| Aspect | Value |
+|---|---|
+| Might | -2 |
+| Grace | 2 |
+| Speed | -1 |
+| Resilience | -1 |
+| Charm | 3 |
+| Cunning | 1 |
+| Intellect | 2 |
+| Tenacity | -1 |
+
+**Rank:** Minion (5) | **Types:** Living
+
+| Stat | Value |
+|---|---|
+| Defense | 4 (9) |
+| Willpower | 4 (9) |
+| Walk | 4 |
+| Charge | 4 |
+| Height | 2 |
+| Initiative | 3 (8) |
+| Wounds | 4 |
+
+**Note:** Grace Under Fire means Defense and Initiative are derived from Grace, not Speed.
+
+**Skills:** Art 2, Barter 1, Bewitch 3, Bureaucracy 1, Centering 2, Convince 2, Deceive 1, Gambling 1, Literacy 1, Notice 1
+
+**Abilities:**
+- **Governor's Gift:** Choose a gender. This character gains + on Bewitch and Scrutiny duels made against characters of the chosen gender.
+- **Grace Under Fire:** This character uses Grace instead of Speed to determine her Defense and Initiative.
+- **Don't Mind Me (11):** If this character did not take any offensive actions on her last turn, or if it is the first round of Dramatic Time and this character has not yet acted, enemies targeting this character with an attack action must succeed on a TN 11 Scrutiny Challenge or be forced to choose a different target.
+
+**Actions:**
+
+**(1) B&D Pocket** (Pistol)
+AV: 2 (7) | Rg: z6 | Resist: Df
+Target suffers 2/3/3 damage. Capacity 4, Reload 2.
+
+---
+
+### Convict Gunslinger
+
+Condemned criminals purchased by the Guild and pressed into Soulstone mine labor, those who escape live on borrowed time — always moving, always watching for wanted posters bearing their likeness. With no path back to Earth, they survive as hired guns, taking mercenary work and never staying anywhere too long. Armed to the teeth, they deal violence when necessary and keep moving — but they keep moving free.
+
+#### Convict Gunslinger
+
+| Aspect | Value |
+|---|---|
+| Might | 1 |
+| Grace | 2 |
+| Speed | 2 |
+| Resilience | 2 |
+| Charm | -2 |
+| Cunning | 2 |
+| Intellect | 2 |
+| Tenacity | 2 |
+
+**Rank:** Enforcer (7) | **Types:** Living
+
+| Stat | Value |
+|---|---|
+| Defense | 4 (11) |
+| Willpower | 4 (11) |
+| Walk | 5 |
+| Charge | 6 |
+| Height | 2 |
+| Initiative | 4 (11) |
+| Wounds | 7 |
+
+**Skills:** Athletics 3, Carouse 2, Centering 2, Deceive 2, Gambling 1, Intimidate 3, Notice 2, Pistol 4, Scrutiny 2, Stealth 1, Toughness 2
+
+**Abilities:**
+- **Df/Wp (Mask) Return Fire:** After this character succeeds, the attacker suffers damage from one of this character's readied Pistol weapons. The damage flip receives −.
+- **Bulletproof +1:** Reduce all damage suffered by this character from Ranged Combat attacks by 1, to a minimum of 1.
+- **Gunfighter:** This character may use Pistols as if they were Range y2.
+- **Relentless:** This character is immune to Horror Duels.
+
+**Actions:**
+
+**(1) Paired Collier "Rough Riders"** (Pistol)
+AV: 6 (13) | Rg: y2 or z10 | Resist: Df
+Target suffers 2/3/4 damage. These weapons gain + to the attack flip. If this attack was made as part of the Rapid Fire Action, increase this attack's final duel total by +2. Capacity 6, Reload 2.
+- Mask Trigger Happy: After damaging, immediately take this action again against the same target. This extra action may not declare Triggers.
+- Crow Aim Low: After damaging, the target becomes Slow.
+
+**(2) Rapid Fire**
+This character may discard a Twist Card to take three (1) AP attack Actions with a Ranged Combat weapon against a single target.
+
+---
+
+### Desperate Mercenary
+
+Failed immigrants whose dreams died in Malifaux's harsh reality, Desperate Mercenaries take the jobs that no reputable mercenary will touch — extortion, kidnapping, murder. They do what they must to keep their loved ones alive, haunted by the screams and faces of those they've harmed. Some succumb to guilt and take their own lives; others push on, rationalizing survival at any cost.
+
+#### Desperate Mercenary
+
+| Aspect | Value |
+|---|---|
+| Might | 2 |
+| Grace | 2 |
+| Speed | 1 |
+| Resilience | -1 |
+| Charm | 0 |
+| Cunning | 1 |
+| Intellect | 1 |
+| Tenacity | 2 |
+
+**Rank:** Minion (5) | **Types:** Living
+
+| Stat | Value |
+|---|---|
+| Defense | 4 (9) |
+| Willpower | 4 (9) |
+| Walk | 5 |
+| Charge | 5 |
+| Height | 2 |
+| Initiative | 3 (8) |
+| Wounds | 5 |
+
+**Skills:** Athletics 1, Barter 2, Convince 1, Evade 2, Melee 2, Notice 2, Pistol 3, Scrutiny 2, Toughness 1
+
+**Abilities:**
+- **Combat Reading:** When making disengaging strikes, this character adds its Scrutiny Skill (+2) to its Acting Value.
+- **Reckless:** At the start of this character's turn, it may suffer 1 damage to gain 1 additional General AP.
+
+**Actions:**
+
+**(1) Brahk'blade** (Melee)
+AV: 4 (9) | Rg: y2 | Resist: Df
+Target suffers 2/3/4 damage. This weapon may not declare Triggers.
+
+**(1) Collier Navy** (Pistol)
+AV: 5 (10) | Rg: z12 | Resist: Df
+Target suffers 2/3/4 damage. Capacity 6, Reload 2.
+- Ram Unload: When damaging, if this character has two or more bullets remaining in this weapon, deal +2 damage to the target. This weapon is now empty.
+
+---
+
+### Ronin
+
+Masterless wanderers — escaped convicts or fugitives from Guild justice — Ronin hire themselves out as cheap bodyguards to anyone willing to pay, accepting work that legitimate mercenaries refuse. They travel in disguise, never comfortable in one place too long. As soon as comfort sets in, they feel their past catching up and slip away in the night, preferring endless wandering to bars.
+
+#### Ronin
+
+| Aspect | Value |
+|---|---|
+| Might | 2 |
+| Grace | 2 |
+| Speed | 1 |
+| Resilience | 1 |
+| Charm | 1 |
+| Cunning | 2 |
+| Intellect | 0 |
+| Tenacity | 2 |
+
+**Rank:** Minion (6) | **Types:** Living
+
+| Stat | Value |
+|---|---|
+| Defense | 5 (11) |
+| Willpower | 5 (11) |
+| Walk | 5 |
+| Charge | 5 |
+| Height | 2 |
+| Initiative | 3 (9) |
+| Wounds | 7 |
+
+**Skills:** Athletics 2, Centering 3, Evade 3, Literacy 1, Melee 3, Notice 2, Pistol 2, Scrutiny 2, Toughness 2, Track 2
+
+**Abilities:**
+- **Disguised:** This character may not be the target of the Charge Action.
+- **Hard to Kill:** This character may choose to ignore one Critical Effect per Dramatic Time.
+- **Take the Hit:** This character may discard a card after an attack hits a friendly character within 2 yards of her. If she does, this character moves to a position between the friendly character and the attacker, and this character suffers the effects of the attack (which suffers − to its damage flip) instead of the friendly character. Opponents engaged with this character when she moves may not attempt Disengaging Strikes to stop this movement.
+
+**Actions:**
+
+**(1) Daito** (Melee)
+AV: 5 (11) | Rg: y2 | Resist: Df
+Target suffers 2/3/5 damage, ignoring Armor.
+- Mask Next Target: After damaging, this character may move up to 4 yards in any direction.
+- Crow Twist the Blade: The damage flip gains +.
+
+**(1) Collier Navy** (Pistol)
+AV: 4 (10) | Rg: z12 | Resist: Df
+Target suffers 2/3/4 damage. Capacity 6, Reload 2.
+
+**(2) Flurry**
+This character may discard a Twist Card to take three (1) AP attack Actions with a Close Combat weapon against a single target.
+
+---
+
+### Bandit
+
+Bandits — many escaped convicts or those freed from Guild chain gangs — plague the Northern Hills and Contract Towns far from Guild oversight. Their typical MO: ride into a near-empty mining town midday and demand money, valuables, and food. The boldest attempt to rob Guild trains and stagecoaches. The most infamous group, the Barrows Gang led by Parker Barrows, has repeatedly stolen huge hauls of scrip and Soulstones from Guild trains while eluding all pursuit.
+
+#### Bandit
+
+| Aspect | Value |
+|---|---|
+| Might | 1 |
+| Grace | 2 |
+| Speed | 2 |
+| Resilience | 1 |
+| Charm | -2 |
+| Cunning | 0 |
+| Intellect | 0 |
+| Tenacity | 2 |
+
+**Rank:** Minion (5) | **Types:** Living
+
+| Stat | Value |
+|---|---|
+| Defense | 5 (10) |
+| Willpower | 4 (9) |
+| Walk | 5 |
+| Charge | 6 |
+| Height | 2 |
+| Initiative | 4 (9) |
+| Wounds | 6 |
+
+**Skills:** Acrobatics 1, Athletics 2, Carouse 3, Centering 2, Evade 3, Intimidate 3, Notice 2, Pistol 3, Scrutiny 1, Stealth 2, Toughness 1, Wilderness 1
+
+**Abilities:**
+- **Df (Mask) Quick Getaway:** After resolving against an enemy, push this character up to 5 yards in any direction.
+- **Bulletproof +1:** Reduce all damage suffered by this character from Ranged Combat attacks by 1, to a minimum of 1.
+- **Gunfighter:** This character may use Pistols as if they were Range y2.
+
+**Actions:**
+
+**(1) Collier Navy** (Pistol)
+AV: 5 (10) | Rg: y2 or z12 | Resist: Df
+Target suffers 2/3/4 damage. Capacity 6, Reload 2.
+- Tome Drop It!: After succeeding, the target must pass a TN 10 Centering duel or drop one of the items held in its hands.
+
+**(2) Run and Gun**
+This character may discard a Twist Card. If she does, she may move a number of yards up to her Walk Aspect, make a single (1) AP Ranged Combat attack, and then move a number of yards up to her Walk Aspect.
