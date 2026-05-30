@@ -1714,3 +1714,354 @@ All characters within p3 must succeed on a TN 11 Defense duel or suffer the effe
 
 **(2) Flurry**
 This character may discard a Twist Card to take three (1) AP attack Actions with a Close Combat weapon against a single target.
+
+---
+
+## Resurrectionists
+
+Necromancy finds its practitioners through subtle means — old books that slowly reveal their secrets, paintings that whisper spells, or voices that find the cracks in a desperate mind. The Guild labels all spirit-binders and necromancers "Resurrectionists," though unlike the Union or Ten Thunders, they have no unified agenda or command structure. They gather only when convenient, and most conflict with the Guild stems from the Death Marshals' relentless extermination efforts rather than any organized resistance.
+
+### Resurrectionist
+
+A practicing necromancer who commands undead minions. Zombie Apocalypse lets them field Mindless Zombies equal to their Rank Value; Restless Dead makes those zombies faster and more dangerous nearby.
+
+#### Resurrectionist
+
+| Aspect | Value |
+|---|---|
+| Might | 1 |
+| Grace | -2 |
+| Speed | 1 |
+| Resilience | 2 |
+| Charm | 2 |
+| Cunning | 2 |
+| Intellect | -2 |
+| Tenacity | 1 |
+
+**Rank:** Enforcer (8) | **Types:** Living, Tormented
+
+| Stat | Value |
+|---|---|
+| Defense | 3 (11) |
+| Willpower | 5 (13) |
+| Walk | 5 |
+| Charge | 5 |
+| Height | 2 |
+| Initiative | 3 (11) |
+| Wounds | 8 |
+
+**Skills:** Centering 3, Deceive 2, Doctor 1, Intimidate 2, Leadership 1, Literacy 1, Necromancy 4C, Notice 2, Stealth 3, Stitching 3, Toughness 3
+
+**Abilities:**
+- **Restless Dead:** Mindless Zombies are immune to the Slow Condition and gain +4 Pugilism while within a6 of this character.
+- **Zombie Apocalypse:** This character is accompanied by and may control a number of Mindless Zombies equal to its Rank Value.
+
+**Actions:**
+
+**(1) Drain Life** (Necromancy/Tenacity)
+AV: 5C (13C) | TN: 12C | Rg: y1 | Resist: Df
+A Living target suffers 1/3/4 damage, then this character heals an amount of damage equal to the damage inflicted (after reduction).
+- Crow Fleeting Breath: After killing a Living target, it is reanimated as a Mindless Zombie under this character's control. If this would exceed her normal limit of Mindless Zombies, the new zombie is free-willed (and likely attacks anything in sight).
+
+**(1) Rigor Mortis** (Necromancy/Tenacity)
+AV: 5C (13C) | TN: 10C | Rg: 10 | Resist: Wp
+If the target is Living, it becomes Slow. If the target is Undead, it instead becomes Fast.
+- Mask Zombie Food: After succeeding, any friendly Mindless Zombies within 1 yard of the target may take a (1) AP Close Combat attack against it. If the target is now Slow, it suffers − to its Defense against these attacks.
+
+**(0) Raise Undead**
+This character may discard a card to animate a corpse within 5 yards as a Mindless Zombie under her control.
+
+---
+
+### Shieldbearer
+
+Once desperate slum-dwellers, Shieldbearers were inspired by the Resurrectionist Reva Cortinas — a woman who treated the undead with dignity and eased the dying into their next life. When Reva called for soldiers, they took up salvaged Guardian weapons and shields to protect her and those necromancers who genuinely seek to better the world. As a reward, Reva has marked their souls: those who fall in battle near an ally may rise again as Shackled Spirits to continue the fight.
+
+#### Shieldbearer
+
+| Aspect | Value |
+|---|---|
+| Might | 3 |
+| Grace | -2 |
+| Speed | 1 |
+| Resilience | 0 |
+| Charm | -2 |
+| Cunning | 2 |
+| Intellect | 0 |
+| Tenacity | 2 |
+
+**Rank:** Minion (5) | **Types:** Living
+
+| Stat | Value |
+|---|---|
+| Defense | 3 (8) |
+| Willpower | 6 (11) |
+| Walk | 5 |
+| Charge | 5 |
+| Height | 2 |
+| Initiative | 2 (7) |
+| Wounds | 4 |
+
+**Skills:** Athletics 1, Centering 4, Evade 2, Heavy Melee 2, Melee 3, Necromancy 2, Notice 1
+
+**Abilities:**
+- **Armor +1:** Reduce all damage suffered by this character by 1, to a minimum of 1.
+- **Dismember:** When one of this character's attacks causes a Severe Critical Effect, it may discard a card to immediately change the Critical Effect to Amputated. This does not change the location of the Critical Effect.
+- **Tethered Soul:** If this character is killed within 6 yards of a friendly Enforcer, Henchman, or Master, that character may discard a card to bind this character's spirit, transforming it into a friendly Shackled Spirit that appears adjacent to this character's corpse. The Shackled Spirit may not act this round.
+
+**Actions:**
+
+**(1) Salvaged Greatsword** (Heavy Melee)
+AV: 5 (10) | Rg: y2 | Resist: Df
+Target suffers 3/4/6 damage. The damage flip gains + if this attack is not the result of a Charge Action.
+
+**(1) Shield Slam** (Melee)
+AV: 6 (11) | Rg: y2 | Resist: Df
+Target suffers 1/2/3 damage. Push the target 1 yard away from this character.
+
+---
+
+### Nurse
+
+Dr. McMourning promised his nurses eternal youth through skin transplant surgery — a process that involves removing the nurse's original skin and replacing it with that of a specially captured donor. The resulting psychological trauma and constant pain drives them insane, making them experts in self-administered anesthetic. Transplanted skin rarely takes, requiring victims to be regularly replaced. They serve McMourning in both his Guild morgue and his secret Quarantine Zone laboratory.
+
+#### Nurse
+
+| Aspect | Value |
+|---|---|
+| Might | -1 |
+| Grace | 3 |
+| Speed | 2 |
+| Resilience | 1 |
+| Charm | 2 |
+| Cunning | 1 |
+| Intellect | 2 |
+| Tenacity | 2 |
+
+**Rank:** Minion (6) | **Types:** Living, Tormented
+
+| Stat | Value |
+|---|---|
+| Defense | 6 (12) |
+| Willpower | 4 (10) |
+| Walk | 5 |
+| Charge | 6 |
+| Height | 2 |
+| Initiative | 3 (9) |
+| Wounds | 6 |
+
+**Skills:** Doctor 3, Evade 4, Literacy 2, Melee 2, Notice 1, Prestidigitation 2, Toughness 1
+
+**Abilities:**
+- **Df (Mask) Hands Off!:** After this character is damaged by an enemy's y attack, this character may immediately move a number of yards equal to its Walk Aspect in any direction.
+- **Flick of the Wrist:** This character uses Grace instead of Might when calculating the Acting Value of her Melee and Pugilism attacks.
+- **Illegible Prescriptions:** When performing a duel, this character may end her Focused Condition to add any suit to her final duel total.
+
+**Actions:**
+
+**(1) Surgical Instruments** (Melee)
+AV: 5 (11) | Rg: y1 | Resist: Df
+Target suffers 2/3/5 damage, ignoring Hard to Wound.
+
+**(1) Syringe** (Melee)
+AV: 5 (11) | Rg: y1 | Resist: Df
+Target suffers 0/0/1 damage and gains Poison +4.
+- Ram Overdose: When damaging, the target suffers 2/3/4 damage and does not gain the Poison +4 Condition.
+
+**(1) Take Your Meds** (Doctor/Prestidigitation)
+AV: 5 (11) | Rg: 8 | Resist: Wp
+The target gains one of the following Conditions until the start of this character's next turn, as determined by a suit in the final duel total:
+- Ram *"Hallucinogens: This character deals +1 damage with Close Combat attacks but suffers − on all duels that are not Close Combat attacks."*
+- Mask *"Uppers: This character gains + to all duels. The first action this character declares each round must be a Walk Action."*
+- Tome *"Downers: This character gains Armor +1 but generates 1 less General AP at the start of its turn."*
+- Crow *"Painkillers: When this Condition is first applied, this character heals 2/3/4 damage. When this character suffers damage, it suffers +1 damage."*
+
+---
+
+### Shackled Spirit
+
+Spirits bound to the mortal realm by necromantic ritual, denied their passage into the afterlife. Furious at their enslavement and unable to strike their captor, they lash out at the living instead. Some pour their entire essence into a single devastating spectral blast, burning themselves out in the process. They are created either deliberately through binding rituals or through Tethered Soul — rising from the corpses of fallen Shieldbearers.
+
+#### Shackled Spirit
+
+| Aspect | Value |
+|---|---|
+| Might | 1 |
+| Grace | -1 |
+| Speed | 3 |
+| Resilience | 0 |
+| Charm | -4 |
+| Cunning | 2 |
+| Intellect | 0 |
+| Tenacity | 2 |
+
+**Rank:** Minion (5) | **Types:** Spirit, Retainer
+
+| Stat | Value |
+|---|---|
+| Defense | 5 (10) |
+| Willpower | 5 (10) |
+| Walk | 6 |
+| Charge | 7 |
+| Height | 2 |
+| Initiative | 4 (9) |
+| Wounds | 4 |
+
+**Skills:** Centering 3, Intimidate 2, Martial Arts 2, Necromancy 3C, Notice 1, Stealth 2
+
+**Abilities:**
+- **Shackled Servitude:** If this character is within 6 yards of a friendly Enforcer, Henchman, or Master, it gains + to its attack flips.
+- **Incorporeal:** This character ignores, and is ignored by, other characters and terrain during any movement. Reduce all damage this character suffers from Ranged and Close Combat attacks by half.
+
+**Actions:**
+
+**(1) Spectral Claws** (Martial Arts)
+AV: 5 (10) | Rg: y1 | Resist: Df
+Target suffers 1/2/4 damage.
+- Crow Chill of Death: The target gains the following Condition until the start of this character's next turn: *"Chill of Death: This character suffers − to duels using Physical Aspects."*
+
+**(0) Soulfire** (Necromancy/Tenacity)
+AV: 5C (10C) | Rg: 8 | Resist: Df
+Target suffers 2/3/4 damage, then this character fades away into the aether and is effectively killed.
+
+---
+
+### Simulacrum
+
+Originally invented during the first Breach and rediscovered by Dr. McMourning, Simulacrums are massive brutes stitched from dozens of corpses — nearly a graveyard's worth per creation. The rarity of suitable corpses is the only thing preventing them from overrunning the city. Each composite part retains its own life, so severing a limb releases Mindless Zombies, and killing one releases a full horde. They inspire revulsion in all who see them.
+
+#### Simulacrum
+
+| Aspect | Value |
+|---|---|
+| Might | 4 |
+| Grace | -3 |
+| Speed | -2 |
+| Resilience | 4 |
+| Charm | -5 |
+| Cunning | -3 |
+| Intellect | -4 |
+| Tenacity | 3 |
+
+**Rank:** Enforcer (8) | **Types:** Undead, Horror
+
+| Stat | Value |
+|---|---|
+| Defense | 2 (10) |
+| Willpower | 5 (13) |
+| Walk | 3 |
+| Charge | 6 |
+| Height | 3 |
+| Initiative | -2 (6) |
+| Wounds | 11 |
+
+**Skills:** Athletics 5, Pugilism 2, Thrown Weapons 2, Toughness 5
+
+**Abilities:**
+- **Hard to Wound +2:** Damage flips against this character suffer −−.
+- **Rush +3:** This character's Charge Aspect has been increased by +3.
+- **Terrifying (Living) (12):** Enemy Living characters must pass a TN 12 Horror Duel when they end their turn within this character's engagement range or target this character with a harmful action.
+- **Walking Morgue:** If any of this character's limbs are severed or otherwise destroyed, the severed limb reanimates as two Mindless Zombies that cannot act this round. If this character is killed, it reanimates as six Mindless Zombies that may not act this round.
+
+**Actions:**
+
+**(1) Meaty Fists** (Pugilism)
+AV: 6 (14) | Rg: y1 | Resist: Df
+Target suffers 3/5/6 damage.
+- Mask Knockabout: After damaging, push the target up to 5 yards in any direction.
+- Crow Loose Pieces: Summon a Mindless Zombie in base contact with the target. It may not act this round. Then, this character suffers 1 damage.
+
+**(1) Hurl Zombie** (Thrown Weapons/Might)
+AV: 6 (14) | Rg: z10 | Resist: Df
+Target friendly Mindless Zombie within 3 yards is thrown at the target. Target suffers 2/4/5 damage and is knocked Prone. Whether this attack hits or misses, the Mindless Zombie suffers 2 damage, is placed within 1 yard of the target, and becomes Prone.
+
+---
+
+### Mindless Zombie
+
+The weakest of all undead — incapable of higher thought, chasing anything that moves. Dangerous only in numbers, but those numbers can grow quickly: any Living character they kill reanimates as a new Mindless Zombie an hour later. The Death Marshals respond to every zombie report seriously for this reason.
+
+#### Mindless Zombie Horde
+
+A swarm stat block representing multiple zombies as a single entity.
+
+| Aspect | Value |
+|---|---|
+| Might | 1 |
+| Grace | -3 |
+| Speed | -3 |
+| Resilience | 0 |
+| Charm | -5 |
+| Cunning | -5 |
+| Intellect | -5 |
+| Tenacity | -5 |
+
+**Rank:** Peon (Variable) | **Types:** Undead, Swarm
+
+| Stat | Value |
+|---|---|
+| Defense | 2 (no RV bonus) |
+| Willpower | 2 (varies) |
+| Walk | 3 |
+| Charge | 3 |
+| Height | 2 |
+| Initiative | -3 (varies) |
+| Wounds | Special |
+
+**Skills:** Pugilism 2
+
+**Abilities:**
+- **Collective Focus:** This character has the Condition *"Rank Value +8: Treat this character's Rank Value as equal to the value of this Condition. This character does not add its Rank Value to its Defense."*
+- **Multiple Bodies:** This character does not have Wounds. When this character would suffer damage, reduce its Rank Value Condition by 1 instead — unless the attack dealt blast or pulse damage, in which case the Rank Value Condition is reduced by the full damage dealt. When the Rank Value Condition reaches 0, the last Mindless Zombies are slain.
+- **Rotted Brains:** This character is immune to Willpower duels.
+- **Shambling:** This character gains Slow at the start of each of its turns during Dramatic Time.
+- **Zombie Curse:** Any Living character killed by this character animates as a Mindless Zombie one hour after its original death.
+
+**Actions:**
+
+**(1) Pulled into the Horde** (Pugilism)
+AV: 3 (varies) | Rg: y1 | Resist: Df
+Target suffers an amount of damage equal to this character's Rank Value Condition.
+
+**(0) Surge Forward**
+Move this character up to 5 yards in any direction, then reduce its Rank Value Condition by 1.
+
+---
+
+#### Mindless Zombie (Individual)
+
+| Aspect | Value |
+|---|---|
+| Might | 1 |
+| Grace | -3 |
+| Speed | -3 |
+| Resilience | 0 |
+| Charm | -5 |
+| Cunning | -5 |
+| Intellect | -5 |
+| Tenacity | -5 |
+
+**Rank:** Peon (4) | **Types:** Undead
+
+| Stat | Value |
+|---|---|
+| Defense | 2 (6) |
+| Willpower | 2 (6) |
+| Walk | 3 |
+| Charge | 3 |
+| Height | 2 |
+| Initiative | -3 (1) |
+| Wounds | 4 |
+
+**Skills:** Pugilism 2
+
+**Abilities:**
+- **Hard to Wound +1:** Damage flips against this character suffer −.
+- **Shambling:** This character gains Slow at the start of each of its turns during Dramatic Time.
+- **Zombie Curse:** Any Living character killed by this character animates as a Mindless Zombie one hour after its original death.
+
+**Actions:**
+
+**(1) Gnashing Bite** (Pugilism)
+AV: 3 (7) | Rg: y1 | Resist: Df
+Target suffers 2/3/3 damage. Increase the AV of this attack by +1 for every other friendly character engaged with the target.
