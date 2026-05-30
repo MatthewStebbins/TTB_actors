@@ -3822,3 +3822,411 @@ Target suffers 2/2/4 damage. This attack can be made without needing line of sig
 
 **(2) Rapid Fire**
 This character may discard a Twist Card to take three 1 AP attack Actions with a Ranged Combat weapon against a single target.
+
+---
+
+### Rail Worker
+
+> Pneumatically augmented workers loyal to Mei Feng, who earned their devotion by treating their injuries without expectation of repayment. They fight for whichever faction Mei Feng currently supports.
+
+**Aspects:**
+| Aspect | Value |
+|---|---|
+| Might | 3 |
+| Grace | 2 |
+| Speed | -1 |
+| Resilience | 2 |
+| Charm | 0 |
+| Intellect | -1 |
+| Cunning | 2 |
+| Tenacity | 2 |
+
+**Rank:** Minion (5) | **Types:** Construct, Living
+
+| Stat | Value |
+|---|---|
+| Defense | 3 (8) |
+| Willpower | 4 (9) |
+| Walk | 4 |
+| Charge | 4 |
+| Height | 2 |
+| Initiative | 0 (5) |
+| Wounds | 7 |
+
+**Skills:** Athletics 3, Evade 2, Melee 2, Notice 1, Pneumatic 2, Thrown Weapons 2, Toughness 2.
+
+**Abilities:**
+- **Armor +1:** Reduce all damage suffered by this character by +1, to a minimum of 1.
+- **Hard to Kill:** This character may choose to ignore one Critical Effect per Dramatic Time.
+- **Pneumatic Augmentation:** At the start of this character's turn, it may discard a card to increase any of its Physical Aspects to 5 until the start of its next turn.
+
+**Actions:**
+
+**(1) Rail Driver Limb** (Pneumatic)
+AV: 5 (10) | Rg: y2 | Resist: Df
+Target suffers 2/4/5 damage, ignoring Armor.
+- Crow Nailed Down: After damaging, the target becomes Prone and must succeed at a TN 10 Athletics Challenge when it attempts to stand up. On a failure, it does not stand up. On a success, it stands up but suffers 1 damage in the process.
+
+**(1) Rivet Gun** (Thrown Weapons)
+AV: 4 (9) | Rg: z9 | Resist: Df
+Target suffers 2/4/5 damage, ignoring Armor.
+
+**(0) Implacable Assault**
+This character may discard a Twist Card to adopt the unceasing relentlessness of a machine. This grants the character a + to her attack and damage flips for the duration of her turn.
+
+**(2) Rapid Fire**
+This character may discard a Twist Card to take three 1 AP attack Actions with a Ranged Combat weapon against a single target.
+
+---
+
+### Ten Thunder Brother
+
+> Masked thugs of the Ten Thunders criminal family. They hide behind steel mempo depicting leering oni, ensuring anonymity for the syndicate's protection rackets, smuggling rings, and money laundering operations.
+
+**Aspects:**
+| Aspect | Value |
+|---|---|
+| Might | 2 |
+| Grace | -1 |
+| Speed | 2 |
+| Resilience | 1 |
+| Charm | -2 |
+| Intellect | 0 |
+| Cunning | 2 |
+| Tenacity | 3 |
+
+**Rank:** Minion (5) | **Types:** Living, Retainer
+
+| Stat | Value |
+|---|---|
+| Defense | 4 (9) |
+| Willpower | 5 (10) |
+| Walk | 5 |
+| Charge | 6 |
+| Height | 2 |
+| Initiative | 4 (9) |
+| Wounds | 6 |
+
+**Skills:** Athletics 1, Barter 2, Carouse 1, Heavy Melee 3, Intimidate 3, Martial Arts 3, Notice 2, Toughness 1.
+
+**Abilities:**
+- **Df (Tome) Bend as the Willow:** After resolving, this character gains Defensive +1 until the start of its next turn.
+- **Diversion:** Enemy characters engaged with one or more characters with this ability may discard a card when they declare a (0) Action. If they do not, the (0) Action is canceled.
+
+**Actions:**
+
+**(1) Daitō-ryū** (Martial Arts)
+AV: 5 (10) | Rg: y1 | Resist: Df
+Target suffers 1/3/4 damage. If this attack deals Severe damage, the target suffers a Weak Critical Effect.
+- Crow Atemi Strike: After succeeding, the target gains the Useless Limb Condition for an arm or leg of this character's choice until the start of this character's next turn.
+
+**(1) Heavy Maul** (Heavy Melee)
+AV: 5 (10) | Rg: y2 | Resist: Df
+Target suffers 2/4/6 damage.
+- Ram Hammer Time: After succeeding, the target becomes Prone.
+- Crow Smashing Melons: When damaging, if the target is Prone, it suffers a Moderate Critical Effect.
+
+**(0) Wander the Earth**
+This character may push up to 2 yards in any direction.
+
+---
+
+### Samurai
+
+> Powerful Japanese nobles who travel to Malifaux serving the Ten Thunders — willingly or under duress. Clad in powered armor modeled after ancient samurai, they wield daito swords and shoulder-mounted Gatling cannons.
+
+**Aspects:**
+| Aspect | Value |
+|---|---|
+| Might | 2 |
+| Grace | -2 |
+| Speed | -2 |
+| Resilience | 3 |
+| Charm | 2 |
+| Intellect | 1 |
+| Cunning | 1 |
+| Tenacity | 2 |
+
+**Rank:** Henchman (9) | **Types:** Living
+
+| Stat | Value |
+|---|---|
+| Defense | 3 (12) |
+| Willpower | 5 (14) |
+| Walk | 4 |
+| Charge | 6 |
+| Height | 2 |
+| Initiative | 0 (9) |
+| Wounds | 9 |
+
+**Skills:** Athletics 3, Centering 3, Convince 2, Evade 3, Heavy Guns 3, Intimidate 2, Leadership 3, Melee 4, Notice 2, Toughness 3.
+
+**Abilities:**
+- **Armor +2:** Reduce all damage suffered by this character by +2, to a minimum of 1.
+- **Daimyo:** Friendly Minions within a6 gain + to their melee (y) attacks.
+- **Reading the Wind:** The first time that this character takes the Focus Action during its turn, it gains an additional Focused +1.
+- **Rush +2:** This character's Charge Aspect has been increased by +2.
+
+**Actions:**
+
+**(1) Daito** (Melee)
+AV: 6 (15) | Rg: y2 | Resist: Df
+Target suffers 2/3/5 damage, ignoring Armor.
+- Ram Critical Strike: When damaging the target, this attack deals +1 damage for each Ram in the final duel total.
+- Crow Twist the Blade: The damage flip gains +.
+
+**(1) Custom Shoulder Gatling** (Heavy Guns)
+AV: 5 (14) | Rg: z14 | Resist: Df
+Target suffers 2/3b/4bb. This action gains + to its attack flip. This weapon gives its wielder + to Intimidate duels. Capacity 8, Reload 4.
+- Ram Stutter Fire: After damaging, immediately make another attack with this weapon against a different target. This extra attack may not declare Triggers.
+
+**(2) Run Through** (Athletics)
+This character may move a number of yards up to its Charge Aspect, make a single 1 AP Close Combat attack, and then move a number of yards up to its Charge Aspect.
+
+---
+
+### Torakage
+
+> Ancient covert assassins of the Katanaka Clan, now secretly employed by the Ten Thunders. Masters of stealth and precision, they are a scalpel wielded with restraint against the syndicate's most sensitive targets.
+
+**Aspects:**
+| Aspect | Value |
+|---|---|
+| Might | 2 |
+| Grace | 2 |
+| Speed | 3 |
+| Resilience | 1 |
+| Charm | -2 |
+| Intellect | 2 |
+| Cunning | 0 |
+| Tenacity | 1 |
+
+**Rank:** Enforcer (8) | **Types:** Living, Last-Blossom
+
+| Stat | Value |
+|---|---|
+| Defense | 6 (14) |
+| Willpower | 6 (14) |
+| Walk | 6 |
+| Charge | 7 |
+| Height | 2 |
+| Initiative | 6 (14) |
+| Wounds | 7 |
+
+**Skills:** Acrobatics 4, Archery 3, Athletics 3, Centering 4, Evade 4, Flexible 3, Forgery 2, Lockpicking 2, Melee 3R, Notice 3, Pick Pocket 2, Stealth 5, Thrown Weapons 3M, Toughness 2, Track 3, Wilderness 1.
+
+**Abilities:**
+- **The Wind's Path:** This character is immune to disengaging strikes. If she is pushed by any effect, she may increase or decrease the distance of the push by a number of yards equal to her Speed Aspect (minimum 1 yard).
+- **Smoke Screen:** Enemy characters targeting this character with attacks from more than 6 yards away suffer a - to their attack flip.
+- **Lone Assassin:** This character gains the Focused +1 Condition when attacking a character that is more than 6 yards away from one of its allies.
+
+**Actions:**
+
+**(1) Double-Edged Sword** (Melee)
+AV: 5R (13R) | Rg: y2 | Resist: Df
+Target suffers 2/3/5 damage.
+- Ram Critical Strike: When damaging the target, this attack deals +1 damage for each Ram in the final duel total.
+
+**(1) Shuriken** (Thrown Weapons)
+AV: 5M (13M) | Rg: z8 | Resist: Df
+Target suffers 1/2/3 damage. If this attack was made as part of the Rapid Fire Action, increase this attack's final duel total by +2.
+- Mask Leaf Steps: After resolving, move up to 3 yards.
+
+**(2) Rapid Fire**
+This character may discard a Twist Card to take three 1 AP attack Actions with a Ranged Combat weapon against a single target.
+
+---
+
+### Oiran
+
+> Skilled intelligence operatives who disguise their lethal training beneath the humble demeanor of entertainers. They serve as handlers for Ten Thunders specialists and fight with poisoned metal claws when pressed.
+
+**Aspects:**
+| Aspect | Value |
+|---|---|
+| Might | -1 |
+| Grace | 3 |
+| Speed | 3 |
+| Resilience | 1 |
+| Charm | 3 |
+| Intellect | 2 |
+| Cunning | 3 |
+| Tenacity | 1 |
+
+**Rank:** Minion (6) | **Types:** Living, Belle, Last-Blossom
+
+| Stat | Value |
+|---|---|
+| Defense | 5 (11) |
+| Willpower | 6 (12) |
+| Walk | 6 |
+| Charge | 7 |
+| Height | 2 |
+| Initiative | 6 (12) |
+| Wounds | 6 |
+
+**Skills:** Acrobatics 2, Art 2, Athletics 1, Bewitch 2, Centering 4, Convince 1, Deceive 3, Leadership 1, Music 2, Notice 3, Pugilism 3, Scrutiny 3, Toughness 1.
+
+**Abilities:**
+- **Disguised:** This character may not be the target of the Charge Action.
+- **Flick of the Wrist:** This character may use Grace in place of Might when making a Melee or Pugilism attack.
+- **Manipulative (11):** When an enemy character targets this character with an Action, they must pass a TN 11 Willpower Challenge. On a failure, this character may change the target of the Action to a legal target of its choice.
+
+**Actions:**
+
+**(1) Poisoned Fighting Claws** (Pugilism)
+AV: 6 (12) | Rg: y1 | Resist: Df
+Target suffers 1/3/4 damage and gains Poison +1. These weapons gain + to the attack flip.
+- Tome Overwhelm: After damaging, take this action again against the same target. This attack has -1 AV for each other time this Trigger has been declared this turn.
+
+**(1) Lure** (Bewitch)
+AV: 5 (11) | Rg: 18 yards | Resist: Wp
+A Living target moves a number of yards equal to its Walk Aspect directly towards this character. This movement must end as close to this character as possible.
+- Crow The Spider and the Fly: After succeeding, after the target has moved, this character may take a 1 AP Close Combat attack against the target.
+
+---
+
+### Gokudo
+
+> Thugs of the Little Kingdom district bound to the ancient sorcerer Wei Lu through magical oaths inherited across generations. When killed near a Ten Thunders leader, their spirits can be bound and forced to fight on.
+
+**Aspects:**
+| Aspect | Value |
+|---|---|
+| Might | 0 |
+| Grace | 2 |
+| Speed | 2 |
+| Resilience | 1 |
+| Charm | -2 |
+| Intellect | 0 |
+| Cunning | 2 |
+| Tenacity | 1 |
+
+**Rank:** Minion (5) | **Types:** Living, Retainer
+
+| Stat | Value |
+|---|---|
+| Defense | 4 (9) |
+| Willpower | 4 (9) |
+| Walk | 5 |
+| Charge | 6 |
+| Height | 2 |
+| Initiative | 3 (8) |
+| Wounds | 6 |
+
+**Skills:** Athletics 1, Carouse 1, Centering 2, Intimidate 2, Martial Arts 3, Notice 1, Scrutiny 2, Stealth 2, Thrown Weapons 3, Toughness 1.
+
+**Abilities:**
+- **Df (Mask) Leap Aside:** After an attack fails against this character, this character may push up to 5 yards in any direction.
+- **Tethered Soul:** If this character is killed within 6 yards of a friendly Enforcer, Henchman, or Master, that character may discard a card to bind this character's spirit, transforming it into a friendly Shackled Spirit that appears adjacent to this character's corpse. The Shackled Spirit may not act this round.
+
+**Actions:**
+
+**(1) Serpent Punch** (Martial Arts)
+AV: 5 (10) | Rg: y1 | Resist: Df
+Target suffers 1/3/4 damage. If this attack deals Severe damage, the target suffers a Weak Critical Effect.
+- Crow Poisoned Chi: After damaging, the target gains Poison +1.
+
+**(1) Shuriken** (Thrown Weapons)
+AV: 5 (10) | Rg: z8 | Resist: Df
+Target suffers 1/2/3 damage.
+- Ram Poison Coated: After damaging, the target gains Poison +1.
+
+---
+
+### Wastrel
+
+> Privileged ne'er-do-wells who serve both the Guild and the Ten Thunders, usually due to gambling debts. They handle operations both factions can't be seen doing officially, and spy on Guild patrol routes for the Thunders.
+
+**Aspects:**
+| Aspect | Value |
+|---|---|
+| Might | 1 |
+| Grace | 2 |
+| Speed | 2 |
+| Resilience | 0 |
+| Charm | 2 |
+| Intellect | 2 |
+| Cunning | 1 |
+| Tenacity | 1 |
+
+**Rank:** Minion (5) | **Types:** Living, Black Sheep
+
+| Stat | Value |
+|---|---|
+| Defense | 4 (9) |
+| Willpower | 5 (10) |
+| Walk | 5 |
+| Charge | 6 |
+| Height | 2 |
+| Initiative | 3 (8) |
+| Wounds | 5 |
+
+**Skills:** Art 1, Carouse 3, Centering 3, Forgery 1, Gambling 2, Intimidate 2, Lockpicking 1, Melee 3, Notice 1, Pick Pocket 1, Pistol 3, Scrutiny 1, Toughness 1.
+
+**Abilities:**
+- **Swagger:** At the end of this character's turn, it gains the Defensive +1 Condition if it declared only Walk Actions during its turn.
+- **The Old Ultraviolence:** This character deals +1 damage to characters who are under the effects of one or more Conditions.
+
+**Actions:**
+
+**(1) Gang Weapons** (Melee)
+AV: 4 (9) | Rg: y1 | Resist: Df
+Target suffers 1/2/3 damage.
+- Mask "And Then He Just Strolled Away...": After resolving, this character may move up to 3 yards in any direction.
+
+**(1) B&D Pocket Revolver** (Pistol)
+AV: 5 (10) | Rg: z6 | Resist: Df
+Target suffers 2/3/3 damage. Capacity 4, Reload 2.
+- Mask "A Fiver Says I Can Do It Again": After damaging, this character gains the Focused +1 Condition.
+
+---
+
+### Ansatsu Sniper
+
+> Tongueless assassins of the Ansatsu dojo who serve the Ten Thunders as precision killers. They communicate through secret gestures and use clockwork rifles whose range extends dramatically when they focus.
+
+**Aspects:**
+| Aspect | Value |
+|---|---|
+| Might | 2 |
+| Grace | 2 |
+| Speed | 1 |
+| Resilience | 1 |
+| Charm | -2 |
+| Intellect | 2 |
+| Cunning | 1 |
+| Tenacity | 2 |
+
+**Rank:** Enforcer (8) | **Types:** Living
+
+| Stat | Value |
+|---|---|
+| Defense | 5 (13) |
+| Willpower | 6 (14) |
+| Walk | 5 |
+| Charge | 5 |
+| Height | 2 |
+| Initiative | 4 (12) |
+| Wounds | 8 |
+
+**Skills:** Acrobatics 2, Archery 3, Athletics 2, Centering 4, Evade 3, Literacy 1, Long Arms 4, Melee 3, Notice 3, Scrutiny 3, Stealth 3, Toughness 3, Track 2.
+
+**Abilities:**
+- **From the Shadows:** When called upon to make an Initiative flip, if no enemy is aware that this character is an unfriendly combatant, this character may immediately take one additional turn after the Initiative flip (but before characters begin resolving their turns in order) for each instance of this Talent. If multiple characters have this talent, resolve each in Initiative order.
+- **Lone Assassin:** This character gains the Focused +1 Condition when attacking a character that is more than 6 yards away from one of its allies.
+
+**Actions:**
+
+**(1) Katana** (Melee)
+AV: 5 (13) | Rg: y2 | Resist: Df
+Target suffers 2/3/5 damage. This weapon gains + to its damage flip.
+
+**(1) Clockwork Rifle** (Long Arms)
+AV: 6 (14) | Rg: z14 | Resist: Df
+Target suffers 2/3/5 damage. This weapon gains + to its attack flip. The Range of this weapon is increased by +10 for each + it gains from the Focused Condition. Capacity 1, Reload 2.
+- Ram Critical Strike: When damaging the target, this attack deals +1 damage for each Ram in the final duel total.
+
+**(0) Poisoned Dart** (Archery)
+AV: 5 (13) | Rg: z6 | Resist: Df
+Target suffers 1/1/2 damage and gains Poison +1. Capacity 1, Reload 1.
