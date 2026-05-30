@@ -4230,3 +4230,188 @@ Target suffers 2/3/5 damage. This weapon gains + to its attack flip. The Range o
 **(0) Poisoned Dart** (Archery)
 AV: 5 (13) | Rg: z6 | Resist: Df
 Target suffers 1/1/2 damage and gains Poison +1. Capacity 1, Reload 1.
+
+---
+
+## Summoned Constructs
+
+### Gamin & Golems
+
+Gamin and Golems are summoned through Spells or Manifested Powers using an Elemental Immuto. The base stat blocks below are modified by selecting an Immuto from the table; the summoned creature gains all three abilities listed under that Immuto.
+
+---
+
+### Gamin (Base)
+
+> Small elemental constructs summoned by spellcasters. Apply one Elemental Immuto from the table below.
+
+**Aspects:**
+| Aspect | Value |
+|---|---|
+| Might | 2 |
+| Grace | 2 |
+| Speed | 0 |
+| Resilience | 1 |
+| Charm | -3 |
+| Intellect | -1 |
+| Cunning | 1 |
+| Tenacity | 2 |
+
+**Rank:** Minion (5) | **Types:** Construct, Gamin
+
+| Stat | Value |
+|---|---|
+| Defense | 4 (9) |
+| Willpower | 4 (9) |
+| Walk | 4 |
+| Charge | 5 |
+| Height | 1 |
+| Initiative | 2 (7) |
+| Wounds | 5 |
+
+**Skills:** Evade 3, Notice 2, Pugilism 2, Thrown Weapons 2.
+
+**Abilities:**
+- **Armor +1:** Reduce all damage suffered by this character by +1, to a minimum of 1.
+- **Demise:** If this character falls unconscious, it is killed. When this character is killed, all characters within p2 suffer 2 damage and an additional effect determined by the Immuto used to create it.
+- **Rush +1:** This character's Charge Aspect has been increased by +1.
+- *(Add 3 abilities from chosen Elemental Immuto — see table below)*
+
+**Actions:**
+
+**(1) Claw** (Pugilism)
+AV: 4 (9) | Rg: y1 | Resist: Df
+Target suffers 1/3/4 damage.
+
+**(1) Elemental Blast** (Thrown Weapons)
+AV: 4 (9) | Rg: z8 | Resist: Df
+Target suffers 1/3/4 damage.
+
+---
+
+### Golem (Base)
+
+> Massive elemental constructs requiring powerful sorcerers to summon. Apply one Elemental Immuto from the table below.
+
+**Aspects:**
+| Aspect | Value |
+|---|---|
+| Might | 5 |
+| Grace | 0 |
+| Speed | 0 |
+| Resilience | 3 |
+| Charm | -3 |
+| Intellect | -1 |
+| Cunning | 1 |
+| Tenacity | 3 |
+
+**Rank:** Enforcer (8) | **Types:** Construct, Golem
+
+| Stat | Value |
+|---|---|
+| Defense | 2 (10) |
+| Willpower | 5 (13) |
+| Walk | 4 |
+| Charge | 6 |
+| Height | 3 |
+| Initiative | 2 (10) |
+| Wounds | 10 |
+
+**Skills:** Evade 2, Notice 2, Pugilism 3R, Toughness 4.
+
+**Abilities:**
+- **Armor +2:** Reduce all damage suffered by this character by +2, to a minimum of 1.
+- **Demise:** If this character falls unconscious, it is killed. When this character is killed, all characters within p2 suffer 2 damage and an additional effect determined by the Immuto used to create it.
+- **Melee Expert:** This character generates 1 additional AP on its turn, but this AP may only be used to make a Close Combat attack.
+- **Rush +2:** This character's Charge Aspect has been increased by +2.
+- *(Add 3 abilities from chosen Elemental Immuto — see table below)*
+
+**Actions:**
+
+**(1) Talon** (Pugilism)
+AV: 8R (16R) | Rg: y2 | Resist: Df
+Target suffers 3/4/6 damage.
+- Ram Toss: After succeeding, this character may choose to reduce the damage from this attack to 0. Push the target up to 10 yards in any direction. The target becomes Prone.
+
+**(3) Smash** (Pugilism)
+AV: 8R (16R) | Rg: y1 | Resist: Df
+Target suffers 9/10/12 damage.
+
+---
+
+### Elemental Immuto Table
+
+Apply all three abilities from one Immuto when creating a Gamin or Golem.
+
+| Immuto | Demise Effect | Passive Ability | Attack Trigger |
+|---|---|---|---|
+| **Darkness** | Damaged characters gain Blind until end of their next turn | Born In Shadow: sees perfectly in darkness, immune to Blind | Tome Clinging Shadows: After damaging, target becomes Blind until end of its next turn |
+| **Decay** | Undead characters are healed instead of damaged | Aura of Decay: Living characters that end their turn within a3 suffer 1 damage | Crow Rotting Touch: After damaging, target suffers 1 damage if Living or heals 1 if Undead |
+| **Electric** | Damage cannot be reduced | Bzzzt!: Characters suffer 1 damage after a successful Close Combat attack against this character | Electric: Attacks ignore Armor and do not randomize when fired into engagements |
+| **Fire** | Damaged characters gain Burning +1 | Saracenar's Plight: Reduce damage from Burning Condition to 0 | On Fire: Targets damaged also gain Burning +1 (passive, not a trigger) |
+| **Ice** | Damaged characters gain Slow | Frozen Heart: Immune to Horror Duels and Paralyzed Condition | Tome Chill: After damaging, target becomes Slow |
+| **Infected** | Damaged characters gain Infection +1 | Crippling Contagion: Enemy characters beginning their turn within a6 have Speed and Charge reduced by their Infection Condition value (min 1) | Crow Spread Disease: After succeeding, target gains Infection +1 Condition ("At the end of the day, this character takes +1 damage") |
+| **Light** | Damaged characters gain Blind until end of their next turn | Too Bright!: Ranged attacks at targets within a3 suffer - to attack flip if attacker has LoS to this character | Shining Bright: Gives off bright light like a lantern, immune to Blind (passive) |
+| **Natural** | Damaged characters gain Entangled until end of their next turn | Regeneration +1: Heals 1 damage at start of its turn during Dramatic Time | Mask Tangling Vines: After damaging, target gains Entangled until end of its next turn ("May not take movement actions; if pushed, take 1 damage then end this Condition") |
+| **Poison** | Damaged characters gain Poison +1 | Toxicity: Immune to Poison damage; other Poisoned characters within a3 immediately suffer 1 Poison damage and lower its value by 1 | Crow Infect: After succeeding, target gains Poison +1 for each Crow in the final duel total |
+| **Spirit** | Damaged characters gain Dazed | Ghostly: Gains no benefit from Armor, but attacks ignore Hard to Wound | Incorporeal: Ignores and is ignored by other characters/terrain while moving; halve all Ranged and Close Combat damage suffered |
+| **Terror** | Damaged characters gain I Can Hear Them +1 until end of next turn | Hysteria: All enemy characters within a2 suffer - to Willpower duels | Scary: Targets damaged gain "I Can Hear Them +1: This character has -1 Willpower" until end of their next turn |
+| **Water** | Damaged characters end their Burning Condition | Splish Splosh: Immune to Burning Condition and all Fire Immuto Spells/Powers | Liquid Form: Can pass through any opening large enough for a single drop of water (passive, not a trigger) |
+| **Wind** | Damaged characters are pushed 2 yards directly away | Flight: Immune to falling damage; may ignore terrain and other characters while moving | Tome Strong Wind: After succeeding, target is pushed 2 yards away from this character |
+
+---
+
+## Freikorps Masters
+
+### Leopold Von Schill
+
+> Master — Founder and undisputed leader of the Freikorps mercenary company. Tenacious, arrogant, and supremely effective, Von Schill built the finest private military in Malifaux from a core of Guild veterans. Lost an arm and leg to Rasputina; replaced them with top-of-the-line pneumatic limbs.
+
+**Aspects:**
+| Aspect | Value |
+|---|---|
+| Might | 3 |
+| Grace | 2 |
+| Speed | 3 |
+| Resilience | 5 |
+| Charm | 2 |
+| Intellect | 2 |
+| Cunning | 4 |
+| Tenacity | 4 |
+
+**Rank:** Master (12) | **Types:** Living, Freikorps
+
+| Stat | Value |
+|---|---|
+| Defense | 4 (16) |
+| Willpower | 6 (18) |
+| Walk | 6 |
+| Charge | 7 |
+| Height | 2 |
+| Initiative | 5 (17) |
+| Wounds | 12 |
+
+**Skills:** Acrobatics 3, Athletics 4, Barter 4, Bewitch 2, Bureaucracy 3, Carouse 2, Gambling 3, Intimidate 2, Leadership 5, Literacy 2, Long Arms 4, Melee 3R, Notice 2, Pistol 4, Pugilism 3, Scrutiny 5, Stealth 2, Toughness 5.
+
+**Abilities:**
+- **Armor +1:** Reduce all damage suffered by this character by +1, to a minimum of 1.
+- **Assault Tactics:** This character may declare the Charge action while engaged. When moving as part of a Charge action, this character may move through other characters.
+- **Freikorps Suit:** This character ignores all damage from pulse (p) and blast (b) effects.
+- **Swift:** This character generates an additional General AP on his turn.
+- **Legendary Leader:** When a friendly Freikorps character within a10 would be knocked unconscious or killed, that character may discard a card to immediately take a (1) AP Action before falling unconscious or dying.
+
+**Actions:**
+
+**(1) Hunting Knife** (Melee)
+AV: 6R (18R) | Rg: y1 | Resist: Df
+Target suffers 1/3/4 damage.
+- Ram Critical Strike: When damaging, deal 1 additional damage for each Ram in the final duel total.
+- Crow Can Opener: After succeeding, the target's Armor ability is ignored for the remainder of Dramatic Time.
+
+**(1) Custom Clockwork Rifle** (Long Arms)
+AV: 6 (18) | Rg: z12 | Resist: Df
+Target suffers 3/4/6 damage. This weapon ignores Hard to Wound. Capacity 10, Reload 2.
+- Ram Stutter Fire: After succeeding, immediately make another attack with this weapon against a different target. This extra attack may not declare Triggers.
+
+**(3) Stand and Shoot** (Pistol)
+This character may make a (1) AP ranged (z) attack against every enemy character within range.
