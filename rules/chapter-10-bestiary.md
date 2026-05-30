@@ -1306,3 +1306,411 @@ Friendly characters within p10 with the Slow or Paralyzed Condition lose that Co
 
 **(0) Freikorps Tactics**
 This character may discard a card to add a suit of its choice to every duel it makes until the start of its next turn.
+
+---
+
+## Void (Servants of Obliteration)
+
+### Void Wretch
+
+Sentient slips of nothingness given purpose by the Tyrant Obliteration, Void Wretches exist in the space between dimensions — including, paradoxically, themselves. They serve without question but cannot comprehend their own non-existence; they simply want to unmake reality. Fortunately, reality fights back: Void Wretches typically only survive a few hours before the air, grime, and substance of the world begins filling them in. They frequently appear near temporal paradoxes and dimensional portals, making them an occupational hazard for Death Marshals.
+
+#### Void Wretch
+
+| Aspect | Value |
+|---|---|
+| Might | 0 |
+| Grace | 3 |
+| Speed | 1 |
+| Resilience | 0 |
+| Charm | -5 |
+| Cunning | -2 |
+| Intellect | -2 |
+| Tenacity | 2 |
+
+**Rank:** Minion (6) | **Types:** Void
+
+| Stat | Value |
+|---|---|
+| Defense | 7 (13) |
+| Willpower | 4 (10) |
+| Walk | 5 |
+| Charge | 5 |
+| Height | 1 |
+| Initiative | 3 (9) |
+| Wounds | 5 |
+
+**Skills:** Athletics 2, Evade 5, Necromancy 3, Notice 2, Prestidigitation 2, Toughness 1, Track 2
+
+**Abilities:**
+- **Incorporeal:** This character ignores, and is ignored by, other characters and terrain during any movement. Reduce all damage this character suffers from Ranged and Close Combat attack actions by half, rounded up.
+- **Pure Nothingness:** At the end of each round of Dramatic Time, this character suffers a cumulative −1 Df, to a minimum of 0 Df.
+- **Time is Meaningless:** This character gains ++ on all duels made against characters with the Fast Condition.
+
+**Actions:**
+
+**(1) Siphon Existence** (Necromancy/Tenacity)
+AV: 5 (11) | Rg: y1 | Resist: Wp
+Target suffers 2/3/4 damage.
+- Tome Glimpse the Void: After damaging, the target must pass a TN 13 Willpower duel or be removed from reality. Return the target to reality within 6 yards of this character (or its last position) at the end of the round.
+
+**(0) Time Shudder** (Prestidigitation/Tenacity)
+AV: 4 (10) | Rg: 6 | Resist: Wp
+Target gains this character's choice of either Fast or Slow.
+
+---
+
+### Void Hunter
+
+Rarely encountered and even more rarely survived, Void Hunters are patient, stalking predators that wait hours for prey to be alone before ambushing through solid surfaces. Each bite causes flesh, muscle, and bone to simply evaporate into nothingness. Like Void Wretches, they degrade as reality claims them — but Void Hunters actively slough off the parts of themselves that have begun to exist, shedding those fragments as new Void Wretches.
+
+#### Void Hunter
+
+| Aspect | Value |
+|---|---|
+| Might | 0 |
+| Grace | 3 |
+| Speed | 3 |
+| Resilience | 2 |
+| Charm | -5 |
+| Cunning | 2 |
+| Intellect | -2 |
+| Tenacity | 3 |
+
+**Rank:** Enforcer (8) | **Types:** Void
+
+| Stat | Value |
+|---|---|
+| Defense | 7 (15) |
+| Willpower | 5 (13) |
+| Walk | 6 |
+| Charge | 7 |
+| Height | 2 |
+| Initiative | 5 (13) |
+| Wounds | 8 |
+
+**Skills:** Athletics 3, Counter-Spelling 1, Evade 5, Necromancy 3, Notice 2, Prestidigitation 3, Toughness 3, Track 3
+
+**Abilities:**
+- **Df (Tome) Borrowed Time:** After this character fails, summon a Void Wretch within 1 yard of this character. Then the attacker must discard a card or become Fast until the start of its next turn.
+- **Incorporeal:** This character ignores, and is ignored by, other characters and terrain during any movement. Reduce all damage this character suffers from Ranged and Close Combat attack actions by half.
+- **Pure Nothingness:** At the end of each round of Dramatic Time, this character suffers a cumulative −1 Df, to a minimum of 0 Df.
+- **Terrifying (Living) (12):** Enemy Living characters must pass a TN 12 Horror Duel when they end their turn within this character's engagement range or target this character with a harmful action.
+- **Time is Meaningless:** This character gains ++ on all duels made against characters with the Fast Condition.
+
+**Actions:**
+
+**(1) Obliterate** (Necromancy/Tenacity)
+AV: 6 (14) | Rg: y3 | Resist: Wp
+Target suffers 2/5/6 damage.
+- Tome Glimpse the Void: After damaging, the target must pass a TN 13 Willpower duel or be removed from reality. Return the target to reality within 6 yards of this character (or its last position) at the end of the round.
+- Ram Evaporate: Target suffers a Severe Critical Effect.
+
+**(0) Déjà Vu** (Prestidigitation/Tenacity)
+AV: 6 (14) | Rg: 10 | Resist: Wp
+Target becomes Slow. If the target was Fast, this character heals 2 damage and may teleport to within 1 yard of the target.
+
+---
+
+## Abominations (Resurrectionist Constructs)
+
+### Abomination
+
+Ancient ruins of Old Malifaux contain horrifying amalgamations of mechanical devices and rotting flesh. Amateur necromancers sometimes construct their own versions — haphazard horrors that leave nightmares in the minds of witnesses. Mere proximity warps living flesh as it's pulled toward the Abomination's body. Worse, when an Abomination kills, it can absorb the victim's body to repair itself — and the victim's remains may rise as a new Abomination.
+
+#### Abomination
+
+| Aspect | Value |
+|---|---|
+| Might | 2 |
+| Grace | 1 |
+| Speed | 2 |
+| Resilience | -1 |
+| Charm | -5 |
+| Cunning | -3 |
+| Intellect | -3 |
+| Tenacity | 3 |
+
+**Rank:** Minion (5) | **Types:** Construct, Undead, Horror
+
+| Stat | Value |
+|---|---|
+| Defense | 4 (9) |
+| Willpower | 5 (10) |
+| Walk | 5 |
+| Charge | 6 |
+| Height | 2 |
+| Initiative | 3 (8) |
+| Wounds | 4 |
+
+**Skills:** Athletics 2, Notice 1, Pugilism 2, Stealth 1
+
+**Abilities:**
+- **Caustic Aura:** Living characters that begin their turn within a2 of one or more characters with this ability suffer 1 damage and may not declare (0) Actions until the start of their next turn.
+- **Controlled Deformation:** If this character is within 2 yards of at least three other characters with this ability at the start of its turn, it absorbs every such character and becomes a Desolation Engine. The new Desolation Engine may not act this round.
+- **Desolate Warping:** After killing a Living, Construct, or Undead character, this character may discard a card to transform it into an Abomination that may not act this round. If this happens, this character heals to full Wounds.
+- **Hard to Wound +1:** Damage flips against this character suffer −.
+
+**Actions:**
+
+**(1) Claws of Metal and Bone** (Pugilism)
+AV: 4 (9) | Rg: y1 | Resist: Df
+Target suffers 2/3/3 damage.
+- Tome Consuming Touch: After damaging, this character heals an amount of damage equal to the amount the target suffered from this attack.
+
+---
+
+### Desolation Engine
+
+When four or more Abominations converge, the unstable magic binding them erupts — fusing them into a towering Desolation Engine. These monstrosities ooze putrid fluid from every seam between rotting flesh and steel piping, tearing through anything in their path and healing by consuming what they destroy. They have no concept of loyalty — as likely to attack allies as enemies — and can only be directed by a potent necromancer. Destroying one merely spawns new Abominations; only total annihilation of the remains ends the cycle.
+
+#### Desolation Engine
+
+| Aspect | Value |
+|---|---|
+| Might | 4 |
+| Grace | -2 |
+| Speed | 1 |
+| Resilience | 5 |
+| Charm | -5 |
+| Cunning | -3 |
+| Intellect | -3 |
+| Tenacity | 3 |
+
+**Rank:** Enforcer (8) | **Types:** Construct, Undead
+
+| Stat | Value |
+|---|---|
+| Defense | 3 (11) |
+| Willpower | 5 (13) |
+| Walk | 5 |
+| Charge | 8 |
+| Height | 3 |
+| Initiative | 3 (11) |
+| Wounds | 12 |
+
+**Skills:** Athletics 3, Necromancy 2, Notice 2, Pugilism 2T, Stealth 1, Toughness 5
+
+**Abilities:**
+- **Hard to Wound +2:** Damage flips against this character suffer −−.
+- **Caustic Aura:** Living characters that begin their turn within a2 of this character suffer 2 damage and may not declare (0) Actions until the start of their next turn.
+- **Desolate Warping:** After killing a Living, Construct, or Undead character, this character may discard a card to transform it into an Abomination that may not act this round. If this happens, this character heals to full Wounds.
+- **Lost Focus:** If this character is killed, it instead becomes two Abominations that may not act this round.
+- **Melee Expert:** This character generates 1 additional AP on its turn, but this AP may only be used to make a Close Combat attack.
+- **Rush +3:** This character's Charge Aspect has been increased by +3.
+
+**Actions:**
+
+**(1) Entropy Claws** (Pugilism)
+AV: 6T (14T) | Rg: y3 | Resist: Df
+Target suffers 3/4/6 damage.
+- Tome Consuming Touch: After damaging, this character heals an amount of damage equal to the amount the target suffered from this attack.
+
+**(1) Desolate Supplications** (Necromancy)
+This character may suffer up to 4 damage. Then, every character within p6 must pass a TN 13 Toughness duel or suffer damage equal to what this character suffered −1.
+
+---
+
+## Belles (Resurrectionist Undead)
+
+### Rotten Belle
+
+Disturbingly attractive in moldering dresses, Rotten Belles were typically courtesans or prostitutes in life — though some respectable women have been transformed as well. They lurk near their old haunts, using shadows to hide their decaying faces until prey is within reach. Fresher Belles can still giggle or sway their hips invitingly; most victims aren't discerning enough after a few drinks to question who they're following into a dark alley.
+
+#### Rotten Belle
+
+| Aspect | Value |
+|---|---|
+| Might | 1 |
+| Grace | 2 |
+| Speed | 2 |
+| Resilience | 2 |
+| Charm | 2 |
+| Cunning | 1 |
+| Intellect | -3 |
+| Tenacity | 2 |
+
+**Rank:** Minion (5) | **Types:** Undead, Belle
+
+| Stat | Value |
+|---|---|
+| Defense | 4 (9) |
+| Willpower | 4 (9) |
+| Walk | 5 |
+| Charge | 6 |
+| Height | 2 |
+| Initiative | 4 (9) |
+| Wounds | 6 |
+
+**Skills:** Bewitch 3, Deceive 1, Notice 2, Pugilism 3, Toughness 1
+
+**Abilities:**
+- **Hard to Wound +1:** Damage flips against this character suffer −.
+- **Pounce:** When an enemy character ends a push or move within this character's engagement range that is not part of a Walk or Charge Action, this character may immediately take a (1) AP Close Combat attack against the enemy character.
+
+**Actions:**
+
+**(1) Teeth and Nails** (Pugilism)
+AV: 4 (9) | Rg: y1 | Resist: Df
+Target suffers 2/3/4 damage.
+
+**(1) Lure** (Bewitch)
+AV: 5 (10) | Rg: 18 | Resist: Wp
+A Living target moves a number of yards equal to its Walk Aspect directly towards this character. This movement must end as close to this character as possible.
+- Mask Confusing Feelings: After succeeding, the target gains the following Condition until the end of its next turn: *"Confusing Feelings: This character suffers − on all duels in which it is the defender."*
+
+**(1) Undress** (Bewitch)
+AV: 5 (10) | Rg: 6 | Resist: Wp
+A Living target becomes Slow.
+
+---
+
+### Dead Doxy
+
+Undead performers reanimated by necromancers. Unlike most zombies, Dead Doxies retain a measure of the grace and showmanship drilled into them through countless hours of practice — though the personality they retain is rarely their own. The fictional characters they performed in life resonate more strongly in death than their own memories. They walk with confident strides rather than a shambling gait, and their seductive manner can freeze attackers in their tracks.
+
+#### Dead Doxy
+
+| Aspect | Value |
+|---|---|
+| Might | -2 |
+| Grace | 3 |
+| Speed | 2 |
+| Resilience | 3 |
+| Charm | 3 |
+| Cunning | 2 |
+| Intellect | -2 |
+| Tenacity | 3 |
+
+**Rank:** Minion (6) | **Types:** Undead, Belle
+
+| Stat | Value |
+|---|---|
+| Defense | 5 (11) |
+| Willpower | 5 (11) |
+| Walk | 5 |
+| Charge | 6 |
+| Height | 2 |
+| Initiative | 4 (10) |
+| Wounds | 7 |
+
+**Skills:** Acrobatics 2, Bewitch 3T, Deceive 1, Evade 3, Melee 3, Music 2, Notice 2, Toughness 1
+
+**Abilities:**
+- **Flick of the Wrist:** This character may use Grace in place of Might when making a Melee or Pugilism attack.
+- **Hard to Wound +1:** Damage flips against this character suffer −.
+- **Inviting Allure:** When a character within a6 becomes Slow, this character may discard a card to force it to move a number of yards equal to its Walk Aspect directly toward this character.
+- **Manipulative (10):** When an enemy character targets this character with an Action, they must pass a TN 10 Willpower Challenge. On a failure, this character may change the target of the Action to a legal target of its choice.
+
+**Actions:**
+
+**(1) Fancy Cane** (Melee)
+AV: 6 (12) | Rg: y2 | Resist: Df
+Target suffers 2/2/4 damage. If this attack inflicts Severe damage, the target suffers a Weak Critical Effect.
+- Ram Out Clubbing: After damaging, the target is knocked Prone. Take this Action again against the same target.
+
+**(1) Undress** (Bewitch)
+AV: 6T (12T) | Rg: 6 | Resist: Wp
+A Living target becomes Slow.
+- Tome Burlesque Show: Every Living character within p3 of the target must make a TN 13 Centering Challenge or become Slow.
+- Mask Confusing Feelings: After succeeding, the target gains the following Condition until the end of its next turn: *"Confusing Feelings: This character suffers − on all duels in which it is the defender."*
+
+---
+
+### Crooligan
+
+On dark foggy nights, Malifaux's mist seems to seek out the abused and the desperate, offering them an escape. Most who flee into it are children — occasionally battered spouses too — changed forever by what the mist holds. When an abuser follows their victim into the fog, they find themselves confronted by ragged child-shaped silhouettes with dead eyes. By morning: no blood, no bodies, no evidence. Only an empty house, waiting for the next family.
+
+#### Crooligan
+
+| Aspect | Value |
+|---|---|
+| Might | 0 |
+| Grace | 4 |
+| Speed | 2 |
+| Resilience | 0 |
+| Charm | -2 |
+| Cunning | 2 |
+| Intellect | 0 |
+| Tenacity | 3 |
+
+**Rank:** Minion (5) | **Types:** Undead, Horror, Lost
+
+| Stat | Value |
+|---|---|
+| Defense | 6 (11) |
+| Willpower | 5 (10) |
+| Walk | 5 |
+| Charge | 6 |
+| Height | 1 |
+| Initiative | 4 (9) |
+| Wounds | 4 |
+
+**Skills:** Acrobatics 1, Athletics 1, Enchanting 3C, Evade 4, Lockpicking 1, Melee 3C, Notice 2, Pick Pocket 2, Stealth 4
+
+**Abilities:**
+- **From the Shadows:** When called upon to make an Initiative flip, if no enemy is aware that this character is an unfriendly combatant, this character may immediately take one additional turn after the Initiative flip (but before characters begin resolving their turns in order) for each instance of this Talent. If multiple characters have this talent, resolve each in Initiative order.
+
+**Actions:**
+
+**(1) Infected Dagger** (Melee)
+AV: 3C (8C) | Rg: y1 | Resist: Df
+Target suffers 1/2/3 damage.
+- Crow Infect: After succeeding, the target gains the Poison +1 Condition a number of times equal to the number of Crow in the final duel total.
+
+**(1) Return to Sender**
+This character teleports to a space within 1 yard of its controller, regardless of distance, or to within 1 yard of any other character within 12 yards and fully within an area of soft cover.
+
+**(1) The Mist** (Enchanting/Cunning)
+AV: 5C (10C) | TN: 10C
+Until the start of this character's next turn (or the start of its controller's next turn, if subordinate), the area within a4 of this character is considered to be Ht 3 soft cover.
+
+---
+
+### Zombie Swordsman
+
+Some reanimated corpses retain muscle memory from life — long-trained physical skills that surface in death as pale reflections of living ability. The corpses of skilled swordsmen are prized by Resurrectionists; the most capable necromancers can even summon a sliver of the zombie's spirit back to enhance reflexes. Zombie Swordsmen wield blades with much of their living skill, compensating for lost cunning with fearlessness and immunity to pain.
+
+#### Zombie Swordsman
+
+| Aspect | Value |
+|---|---|
+| Might | 2 |
+| Grace | 2 |
+| Speed | 1 |
+| Resilience | 3 |
+| Charm | -5 |
+| Cunning | -1 |
+| Intellect | -3 |
+| Tenacity | 3 |
+
+**Rank:** Minion (6) | **Types:** Undead, Horror
+
+| Stat | Value |
+|---|---|
+| Defense | 5 (11) |
+| Willpower | 5 (11) |
+| Walk | 5 |
+| Charge | 5 |
+| Height | 2 |
+| Initiative | 2 (8) |
+| Wounds | 7 |
+
+**Skills:** Athletics 2, Centering 3, Evade 3, Intimidate 2, Melee 3, Notice 1, Toughness 1
+
+**Abilities:**
+- **Hard to Kill:** This character may choose to ignore one Critical Effect per Dramatic Time.
+- **Hard to Wound +1:** Damage flips against this character suffer −.
+- **Unimpeded:** This character ignores penalties for terrain while taking Movement Actions.
+
+**Actions:**
+
+**(1) Paired Swords** (Melee)
+AV: 5 (11) | Rg: y2 | Resist: Df
+Target suffers 2/3/4 damage. This action gains + to the attack flip.
+
+**(1) Slice and Dice** (Melee)
+All characters within p3 must succeed on a TN 11 Defense duel or suffer the effects of a damage flip with one of this character's wielded swords. This damage flip receives −.
+
+**(2) Flurry**
+This character may discard a Twist Card to take three (1) AP attack Actions with a Close Combat weapon against a single target.
