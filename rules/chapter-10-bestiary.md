@@ -3476,3 +3476,349 @@ Target character or object is instantly teleported to a safe location within ran
 AV: 6 (11) | Rg: y2 | Resist: Df
 Target suffers 4/5/7 damage, ignoring Armor.
 - Mask Excavation: After resolving, a two yard deep, one yard wide hole is created beneath the target. The target must make a TN 10 Evade Challenge or fall into the hole and become Prone.
+
+---
+
+### Rock Hopper
+
+> The M&SU's most common mining construct. Reliable if clumsy, Rock Hoppers bore through solid stone with their pneumatic drills and have been pressed into combat service on more than one occasion.
+
+**Aspects:**
+| Aspect | Value |
+|---|---|
+| Might | 2 |
+| Grace | -1 |
+| Speed | -1 |
+| Resilience | 1 |
+| Charm | -5 |
+| Intellect | -5 |
+| Cunning | -5 |
+| Tenacity | -5 |
+
+**Rank:** Minion (5) | **Types:** Construct
+
+| Stat | Value |
+|---|---|
+| Defense | 2 (7) |
+| Willpower | 2 (7) |
+| Walk | 4 |
+| Charge | 4 |
+| Height | 2 |
+| Initiative | -1 (4) |
+| Wounds | 7 |
+
+**Skills:** Athletics 2, Heavy Melee 2, Evade 1, Pneumatic 3, Toughness 2.
+
+**Abilities:**
+- **Df (Tome) Grinding Halt:** This character immediately gains an additional Armor +2 for the duration of this Action.
+- **Armor +1:** Reduce all damage suffered by this character by +1, to a minimum of 1.
+
+**Actions:**
+
+**(1) Mining Pick** (Heavy Melee)
+AV: 4 (9) | Rg: y2 | Resist: Df
+Target suffers 2/3/4 damage.
+
+**(2) Pneumatic Drill** (Pneumatic)
+AV: 5 (10) | Rg: y2 | Resist: Df
+Target suffers 4/5/7 damage, ignoring Armor.
+
+---
+
+### Steam Arachnid
+
+> Small, spider-like spy constructs used by the Arcanists. Weak individually, they are programmed to merge into deadly swarms when possible.
+
+**Aspects:**
+| Aspect | Value |
+|---|---|
+| Might | 0 |
+| Grace | 1 |
+| Speed | 1 |
+| Resilience | 0 |
+| Charm | -5 |
+| Intellect | -5 |
+| Cunning | -5 |
+| Tenacity | -5 |
+
+**Rank:** Minion (5) | **Types:** Construct
+
+| Stat | Value |
+|---|---|
+| Defense | 4 (9) |
+| Willpower | 2 (7) |
+| Walk | 5 |
+| Charge | 5 |
+| Height | 1 |
+| Initiative | 1 (6) |
+| Wounds | 4 |
+
+**Skills:** Evade 3, Pneumatic 4, Stealth 1.
+
+**Abilities:**
+- **Armor +1:** Reduce all damage suffered by this character by +1, to a minimum of 1.
+- **Evasive:** This character is immune to damage caused by pulse (p) effects.
+- **Unimpeded:** This character ignores penalties for terrain while taking Movement Actions.
+
+**Actions:**
+
+**(1) Steel Claws** (Pneumatic)
+AV: 4 (9) | Rg: y1 | Resist: Df
+Target suffers 1/2/4 damage.
+- Tome Overheat: After resolving, destroy this character. Every character within p2 suffers 2 damage.
+
+**(0) Swarm Together**
+This character and at least one other friendly Steam Arachnid within a3 become a Steam Arachnid Swarm with a Rank Value Condition equal to the number of Steam Arachnids used to create it.
+
+---
+
+### Steam Arachnid Swarm
+
+> A merged collective of Steam Arachnids that functions as a single dangerous entity. Its health is tracked via a Rank Value Condition rather than Wounds, and blasts deal reduced damage against it.
+
+**Aspects:**
+| Aspect | Value |
+|---|---|
+| Might | 0 |
+| Grace | 1 |
+| Speed | 1 |
+| Resilience | 0 |
+| Charm | -5 |
+| Intellect | -5 |
+| Cunning | -5 |
+| Tenacity | -5 |
+
+**Rank:** Minion (Variable) | **Types:** Construct, Swarm
+
+| Stat | Value |
+|---|---|
+| Defense | 4 |
+| Willpower | 2 (varies) |
+| Walk | 5 |
+| Charge | 5 |
+| Height | 1 |
+| Initiative | 1 (varies) |
+| Wounds | Special (see Armored Swarm) |
+
+**Skills:** Evade 3, Pneumatic 4, Stealth 1.
+
+**Abilities:**
+- **Collective Focus:** This character has the following Condition: "Rank Value +8: Treat this character's Rank Value as equal to the value of this Condition. This character does not add its Rank Value to its Defense."
+- **Armored Swarm:** This character does not have Wounds; when this character would suffer damage, instead reduce its Rank Value Condition by 1, unless the attack dealt blast (b) damage, in which case its Rank Value Condition is reduced by the normal amount of damage dealt -1, to a minimum of 1. When the Rank Value Condition reaches 0, the last remaining Steam Arachnid is destroyed.
+- **Hive Mind:** This character is immune to Willpower duels.
+- **Evasive:** This character is immune to damage caused by pulse (p) effects.
+- **Unimpeded:** This character ignores penalties for terrain while taking Movement Actions.
+
+**Actions:**
+
+**(1) Swarm of Steel Claws** (Pneumatic)
+AV: 4 (varies) | Rg: y1 | Resist: Df
+Target suffers 2/3/5 damage.
+- Tome Exploding Arachnids: After resolving, lower the Rank Value Condition of this character by 1. Every character within p2 suffers 2 damage.
+- Mask Carry Away: After damaging, move this character up to its Walk speed in any direction; then, place the target into physical contact with this character.
+
+**(0) Skitter Apart**
+This character breaks apart into a number of Steam Arachnids equal to its current Rank Value Condition; then, each Steam Arachnid suffers 2 damage that cannot be reduced.
+
+---
+
+### Large Arachnid
+
+> Purpose-built combat constructs modeled on the Steam Arachnid design. Armed with industrial saw blades, they are especially effective against armored targets and can self-repair using scrap from fallen constructs.
+
+**Aspects:**
+| Aspect | Value |
+|---|---|
+| Might | 2 |
+| Grace | 0 |
+| Speed | 0 |
+| Resilience | 1 |
+| Charm | -5 |
+| Intellect | -5 |
+| Cunning | -5 |
+| Tenacity | -5 |
+
+**Rank:** Minion (6) | **Types:** Construct
+
+| Stat | Value |
+|---|---|
+| Defense | 4 (10) |
+| Willpower | 4 (10) |
+| Walk | 4 |
+| Charge | 6 |
+| Height | 2 |
+| Initiative | 0 (6) |
+| Wounds | 7 |
+
+**Skills:** Centering 2, Evade 3, Pneumatic 3, Toughness 2.
+
+**Abilities:**
+- **Armor +1:** Reduce all damage suffered by this character by +1, to a minimum of 1.
+- **Rush +2:** This character's Charge Aspect has been increased by +2.
+- **Unimpeded:** This character ignores penalties for terrain while taking Movement Actions.
+
+**Actions:**
+
+**(1) Circular Sawblade** (Pneumatic)
+AV: 5 (11) | Rg: y2 | Resist: Df
+Target suffers 2/3/4 damage, ignoring Armor.
+- Tome Heated Metal: After damaging, the target gains Burning +1.
+- Crow Mangle: After damaging, this character chooses one piece of armor worn by the target and destroys it.
+
+**(1) Self-Repair**
+This character may use a pile of scrap within 2 yards to heal 2 damage. The pile of scrap must have roughly the same mass as a large dog, and using this Action utterly consumes it.
+
+---
+
+### Arcanist Smuggler
+
+> Paranoid operatives who move stolen Soulstones through Guild checkpoints using hidden compartments, bribery, and subtle magic. Getting caught means death, and that knowledge has made them exceptionally cautious.
+
+**Aspects:**
+| Aspect | Value |
+|---|---|
+| Might | 1 |
+| Grace | 2 |
+| Speed | 2 |
+| Resilience | 0 |
+| Charm | 0 |
+| Intellect | 2 |
+| Cunning | 3 |
+| Tenacity | -1 |
+
+**Rank:** Minion (6) | **Types:** Living
+
+| Stat | Value |
+|---|---|
+| Defense | 5 (11) |
+| Willpower | 4 (10) |
+| Walk | 5 |
+| Charge | 6 |
+| Height | 2 |
+| Initiative | 5 (11) |
+| Wounds | 5 |
+
+**Skills:** Athletics 2, Barter 3, Centering 2, Convince 1, Deceive 3, Evade 3, Forgery 2, Lockpicking 1, Melee 3, Notice 3, Pistol 2, Scrutiny 3, Stealth 3, Toughness 1.
+
+**Abilities:**
+- **Don't Mind Me (12):** If this character did not take any offensive actions on her last turn, or if it is the first round of Dramatic Time and this character has not yet acted, enemies targeting this character with an attack action must succeed on a TN 12 Scrutiny Challenge or be forced to choose a different target.
+- **Slink Away:** This character gains + to her Defense flips against disengaging strikes. If at least one friendly character is engaged with an enemy, that enemy may not make disengaging strikes against this character.
+- **Unimpeded:** This character ignores penalties for terrain while taking Movement Actions.
+
+**Actions:**
+
+**(1) Hunting Knife** (Melee)
+AV: 4 (10) | Rg: y1 | Resist: Df
+Target suffers 1/3/4 damage.
+
+**(1) Quick-Draw Harnessed Hold-Out Pistol** (Pistol)
+AV: 4 (10) | Rg: z6 | Resist: Df
+Target suffers 2/3/3 damage. This weapon may be readied as a (0) Action. The turn that this weapon is readied, it gains + to its attack flips and the target may not declare Defensive Triggers. Capacity 4, Reload 2.
+
+---
+
+### December Cultist
+
+> Fanatical servants of the Tyrant December, drawn from desperate and hungry lowlanders to the frozen Ten Peaks. They embrace cannibalism as survival and wield frost magic and harpoon guns. Allied with the Arcanists through Rasputina's pact.
+
+**Aspects:**
+| Aspect | Value |
+|---|---|
+| Might | 1 |
+| Grace | 2 |
+| Speed | 1 |
+| Resilience | 1 |
+| Charm | -2 |
+| Intellect | 2 |
+| Cunning | 2 |
+| Tenacity | 1 |
+
+**Rank:** Minion (6) | **Types:** Living
+
+| Stat | Value |
+|---|---|
+| Defense | 4 (10) |
+| Willpower | 4 (10) |
+| Walk | 5 |
+| Charge | 5 |
+| Height | 2 |
+| Initiative | 3 (9) |
+| Wounds | 7 |
+
+**Skills:** Acrobatics 1, Archery 3, Athletics 1, Centering 2, Evade 2, Homesteading 1, Notice 2, Sorcery 3t, Stealth 2, Toughness 2, Track 2, Wilderness 3.
+
+**Abilities:**
+- **Frozen Heart:** This character is immune to Horror Duels and the Paralyzed Condition.
+- **From the Shadows:** When called upon to make an Initiative flip, if no enemy is aware that this character is an unfriendly combatant, this character may immediately take one additional turn after the Initiative flip (but before characters begin resolving their turns in order) for each instance of this Talent. If multiple characters have this talent, resolve each in Initiative order.
+
+**Actions:**
+
+**(1) Frozen Touch** (Sorcery/Intellect)
+AV: 5t (11t) | TN: 10t | Rg: y1 | Resist: Df
+Target suffers 1/3/4 damage and becomes Slow.
+
+**(1) Harpoon Gun** (Archery)
+AV: 5 (11) | Rg: z12 | Resist: Df
+Target suffers 2/4/6 damage and becomes Slow. Capacity 1, Reload 2.
+- Ram Pull and Drag: After damaging, push the target towards you a number of yards equal to your Might Aspect (minimum 1 yard).
+
+**(2) Grim Feast**
+This character may devour the corpse of a Living or Undead character of Minion rank or higher within 1 yard to gain the following Condition for 1 hour: "Well Fed +1: This character gains +1 to her Physical Aspects, to a maximum Aspect Value of 4. The value of this Condition may not exceed +3." Once devoured, the corpse cannot be turned into an Undead creature.
+
+---
+
+## Ten Thunders
+
+The Ten Thunders are a secretive criminal organization based in the Three Kingdoms that has extended its reach into Malifaux. They operate through proxies and subterfuge, using assassins, archers, and supernatural agents to advance their hidden agenda.
+
+---
+
+### Thunder Archer
+
+> Elite archers who serve the Ten Thunders, trained in a tradition said to descend from the Archers of the Silent Eye who rebelled against the tyrant Izamu. They wear eye-engraved helmets and are masters of both bow and martial arts.
+
+**Aspects:**
+| Aspect | Value |
+|---|---|
+| Might | -1 |
+| Grace | 3 |
+| Speed | 2 |
+| Resilience | 1 |
+| Charm | -2 |
+| Intellect | 2 |
+| Cunning | 0 |
+| Tenacity | 2 |
+
+**Rank:** Enforcer (7) | **Types:** Living
+
+| Stat | Value |
+|---|---|
+| Defense | 4 (11) |
+| Willpower | 5 (12) |
+| Walk | 5 |
+| Charge | 6 |
+| Height | 2 |
+| Initiative | 5 (12) |
+| Wounds | 7 |
+
+**Skills:** Acrobatics 1, Archery 3, Athletics 2, Centering 3, Intimidate 2, Martial Arts 3, Notice 3, Stealth 2, Toughness 2, Track 2.
+
+**Abilities:**
+- **Df (Mask) Leap Aside:** After an attack fails against this character, this character may push up to 5 yards in any direction.
+- **Reading the Wind:** The first time that this character takes the Focus Action during its turn, it gains an additional Focused +1.
+- **Threading the Needle:** This character does not randomly determine his target when firing into an engagement.
+
+**Actions:**
+
+**(1) Jujutsu** (Martial Arts)
+AV: 5 (12) | Rg: y1 | Resist: Df
+Target suffers 1/3/4 damage. If this attack deals Severe damage, the target suffers a Weak Critical Effect.
+
+**(1) Longbow** (Archery)
+AV: 6 (13) | Rg: z12 | Resist: Df
+Target suffers 2/2/4 damage. This attack can be made without needing line of sight, but doing so imposes a - on the attack.
+- Crow Barbed Arrowhead: A character wounded by this attack suffers 1 damage at the end of any turn in which it spent at least 2 AP. The Arrow can be removed with a TN 15 Doctor Challenge.
+- Mask Hail of Hachinosu: When damaging, this attack gains +B to Moderate and Severe damage.
+
+**(2) Rapid Fire**
+This character may discard a Twist Card to take three 1 AP attack Actions with a Ranged Combat weapon against a single target.
