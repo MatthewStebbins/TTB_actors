@@ -2757,3 +2757,363 @@ Target suffers 1/2/3B damage. This Attack must declare a Trigger if possible. Ca
 - Crow Whoops, Ricochet: After resolving, the closest other character within range and line of sight suffers 1 damage.
 - Tome What If... More Powder?: When damaging, this attack adds +B to its Moderate and Severe damage.
 - Mask "I Got 'im!": After succeeding, push this character 3 yards toward the target.
+
+---
+
+### Bayou Boss
+
+Given enough food, a Gremlin will never really stop growing. Thus, some of the most prolific and successful Gremlins are also some of the largest of their kind, which comes in handy when intimidating smaller Gremlins into handing over their food. These Bayou Bosses use their increased size, strength, and (sometimes) intelligence to bully, cajole, and extort their smaller kin into subservience.
+
+Gremlin society revolves around the various Bayou Bosses of the swamp. They determine when a Gremlin village will work with humans, what sort of food the village should cook, and when it's time to start (or end) a feud with one of their neighbors. Smaller Gremlins are more or less comfortable with this situation — those that don't learn their place tend to end up getting tossed into the pig pen to shut them up.
+
+#### Bayou Boss
+
+| Aspect | Value |
+|---|---|
+| Might | 2 |
+| Grace | 2 |
+| Speed | 2 |
+| Resilience | 3 |
+| Charm | -2 |
+| Cunning | 3 |
+| Intellect | -1 |
+| Tenacity | 3 |
+
+**Rank:** Enforcer (8) | **Types:** Living, Gremlin
+
+| Stat | Value |
+|---|---|
+| Defense | 5 (13) |
+| Willpower | 6 (14) |
+| Walk | 5 |
+| Charge | 6 |
+| Height | 2 |
+| Initiative | 5 (13) |
+| Wounds | 9 |
+
+**Skills:** Barter 2, Carouse 4, Centering 4, Deceive 3, Evade 3, Gambling 2, Leadership 2, Melee 3, Music 1, Notice 3, Shotgun 3, Thrown Weapons 2, Toughness 3, Wilderness 1
+
+**Abilities:**
+- **Encouragement:** Friendly characters within 6 yards of this character may suffer 1 damage when performing an Action to gain + to that flip.
+- **Gremlin Boss:** This character is accompanied by a number of friendly Bayou Gremlins equal to its Rank Value.
+- **Df (Tome) "Delegate":** After an attack succeeds against this character, it instead affects a friendly character within 3 yards of this character.
+
+**Actions:**
+
+**(1) Clubbin' Stick** (Melee)
+AV: 5 (13) | Rg: y1 | Resist: Df
+Target suffers 2/2/4 damage, +1 damage if it is a Pig.
+
+**(1) Flintlock Boomer 1894** (Shotgun)
+AV: 5 (13) | Rg: z10 | Resist: Df
+Target suffers 2/5b/5b damage. This weapon gains + to damage flips against characters within 3 yards, and − to damage flips against characters further than 6 yards away.
+- Ram Blown Back: After damaging, if this attack dealt Moderate or Severe damage, the target is pushed 1 yard away and becomes Prone.
+
+**(1) "Git Over 'ere!"** (Leadership)
+This character may discard a card to summon two friendly Bayou Gremlins within 10 yards. They may not act this round but may act normally on subsequent rounds.
+
+---
+
+### Slop Hauler
+
+There are few things in life that pigs like more than eating without having to work for it, which makes Slop Haulers some of their favorite Gremlins. The position of Slop Hauler is highly coveted among Gremlins due to the food perks — Slop Haulers get first pick of the food being given to the pigs. Unfortunately, it's not uncommon for the chef to become the main course in the midst of feeding hogs, so experienced Slop Haulers tend to be rather quick on their feet.
+
+When pressed into battle, Slop Haulers will often throw the vilest, most disgusting slop they can find at their enemies, grossing their opponents out even as it attracts the attention of every nearby pig.
+
+#### Slop Hauler
+
+| Aspect | Value |
+|---|---|
+| Might | 0 |
+| Grace | 2 |
+| Speed | 2 |
+| Resilience | 1 |
+| Charm | -3 |
+| Cunning | 1 |
+| Intellect | -1 |
+| Tenacity | 2 |
+
+**Rank:** Minion (6) | **Types:** Living, Gremlin
+
+| Stat | Value |
+|---|---|
+| Defense | 4 (10) |
+| Willpower | 4 (10) |
+| Walk | 5 |
+| Charge | 6 |
+| Height | 1 |
+| Initiative | 4 (10) |
+| Wounds | 5 |
+
+**Skills:** Athletics 2, Carouse 2, Deceive 2, Evade 2, Homesteading 2, Husbandry 2, Melee 2C, Music 1, Notice 2, Thrown Weapon 3, Wilderness 1
+
+**Abilities:**
+- **One Eye on the Pigs:** At the start of this character's turn, if there is a Pig within 3 yards of it, this character generates one additional AP that can only be used to take a Movement General Action.
+- **Df (Mask) "Squeal!":** After this character is damaged by an enemy Close Combat attack, push this character 4 yards directly away from the attacker.
+
+**Actions:**
+
+**(1) Slop Bucket** (Melee)
+AV: 2C (8C) | Rg: y2 | Resist: Df
+Target suffers 1/2/2 damage.
+- Crow Full of Slop: After succeeding, take the Tossed Slop Action against the target, even if engaged.
+
+**(1) Tossed Slop** (Thrown Weapon)
+AV: 5 (11) | Rg: z9 | Resist: Df
+Target suffers 1/2/3B damage. Every character damaged by this attack gains the following Condition until it washes the slop off: *"Covered in Slop: This character suffers − to all Social Skill duels and cannot declare Triggers. Pigs targeting this character with attacks gain + to the Attack flip."* Capacity 1, Reload 1.
+- Mask "Come and Get It!": After succeeding, every Pig within p5 of the target pushes 5 yards toward the character and makes a y attack against the target, if possible.
+
+---
+
+### Moon Shinobi
+
+The Gremlins that serve the master craftsman known only as the Brewmaster are a special lot. To join the enigmatic order of the Moon Shinobi, a Gremlin must renounce all ties to their family and swear an oath of loyalty to the Brewmaster alone. In return, the Gremlin is given all the alcohol that they can drink — and then a bit more. Those who survive the initiation process (and many do not) are then deemed to be in an appropriate state of inebriation to learn the secrets of Drunken Gremlin Kung Fu.
+
+The Gremlins are kept drunk (and, arguably, poisoned) throughout the entire training process. Even after mastering their training, Moon Shinobi are given ready access to as much alcohol as they wish, ensuring sobriety is nothing more than a distant, unpleasant memory. It is rumored that the Moon Shinobi — or even the Brewmaster — might be pawns of the Ten Thunders, but that's just too complicated a thought for most Moon Shinobi to process.
+
+#### Moon Shinobi
+
+| Aspect | Value |
+|---|---|
+| Might | 0 |
+| Grace | 2 |
+| Speed | 2 |
+| Resilience | 2 |
+| Charm | 1 |
+| Cunning | 1 |
+| Intellect | -1 |
+| Tenacity | 2 |
+
+**Rank:** Enforcer (7) | **Types:** Living, Gremlin
+
+| Stat | Value |
+|---|---|
+| Defense | 6 (13) |
+| Willpower | 4 (11) |
+| Walk | 5 |
+| Charge | 6 |
+| Height | 1 |
+| Initiative | 5 (12) |
+| Wounds | 8 |
+
+**Skills:** Acrobatics 2, Bewitch 3, Carouse 5, Culinary 2, Evade 4, Gambling 1, Martial Arts 3, Notice 3, Pick Pocket 2, Pugilism 3, Stealth 3, Toughness 3, Wilderness 1
+
+**Abilities:**
+- **Drunk and Reckless:** If this character has the Intoxicated Condition, it may suffer 2 damage at the start of its turn to gain one additional General AP.
+- **Drunken Gremlin Kung Fu:** This character is always considered to have the Intoxicated Condition (and thus suffers − to all Willpower duels). When this character is attacked by a Close or Ranged Combat attack, the attacker counts all + modifiers as − modifiers, and vice versa.
+- **Numb the Pain:** While this character has the Intoxicated Condition, it ignores the effects of Weak and Moderate Critical Effects.
+
+**Actions:**
+
+**(1) Tiny Green Fists of Fury** (Martial Arts)
+AV: 5 (12) | Rg: y1 | Resist: Df
+Target suffers 1/3/4 damage. If this attack deals Severe damage, the target suffers a Weak Critical Effect.
+- Ram Critical Strike: When damaging, deal 1 additional damage for each Ram in the final duel total.
+- Mask Drunken Roundhouse: After succeeding, take this Action again against a different character within range.
+
+**(1) Have a Drink** (Bewitch)
+AV: 4 (11) | Rg: 1 | Resist: Wp
+A Living target imbibes a flask of alcohol and gains the Intoxicated Condition for 10 minutes, or the Poison +1 Condition if it is already Intoxicated.
+- Crow A Bit Woozy: After succeeding, the target becomes Slow.
+- Ram Liver Damage: After succeeding, the target suffers 1/3/4 damage.
+
+---
+
+### Piglet
+
+Gremlins have an uneasy relationship with Piglets. Baby pigs grow up to be adult pigs, which instills a healthy amount of caution into most Gremlins — yet Piglets are easier to train than adult pigs, and it's not uncommon for a Gremlin to raise one as a pet. These relationships mirror the human relationship with a particularly violent pet dog: useful for self-defense, but not something a rational person lets run around unsupervised. In the wild, Piglets tend to accompany their mother on her meandering Bayou journeys, relying upon her for much of their defense, but when the situation calls for it, a Piglet is more than capable of charging into combat and making a nuisance of itself.
+
+#### Piglet
+
+| Aspect | Value |
+|---|---|
+| Might | 2 |
+| Grace | 0 |
+| Speed | 3 |
+| Resilience | 0 |
+| Charm | -3 |
+| Cunning | -3 |
+| Intellect | -2 |
+| Tenacity | 1 |
+
+**Rank:** Peon (4) | **Types:** Living, Beast, Pig
+
+| Stat | Value |
+|---|---|
+| Defense | 5 (9) |
+| Willpower | 3 (7) |
+| Walk | 6 |
+| Charge | 7 |
+| Height | 1 |
+| Initiative | 4 (8) |
+| Wounds | 3 |
+
+**Skills:** Notice 1, Pugilism 1, Track 1, Wilderness 2
+
+**Abilities:**
+- **Pigcharge:** This character may perform the (2) Charge Action as a (1) Action.
+- **Puny:** This character has -1 Wounds and may not make disengaging strikes.
+- **Set 'er Off:** At the start of this character's turn during Dramatic Time, if it is not engaged or within 2 yards of a friendly character without this Ability, this character must declare a Charge against the closest legal non-Pig target.
+
+**Actions:**
+
+**(1) Ram** (Pugilism)
+AV: 3 (7) | Rg: y1 | Resist: Df
+Target suffers 1/2/3 damage. When this Attack is used as part of a Charge, add +1 to the final duel total for each yard moved before the attack. This Attack must declare a Trigger if possible.
+- Ram Stampede: After damaging, this character must declare a Charge against the closest legal non-Pig target which it is not engaged with. If this character is engaged, it still declares this Charge but only makes a single Attack as a result.
+- Crow Eat Anything: After damaging a Living or Undead character, this character heals 1 damage.
+- Tome Grab On: After damaging, the target gains the following Condition: *"Clamped On +1: This character receives -1 Walk, -2 Charge, and suffers +1 damage at the end of her turn. The character that applied this Condition is carried along if this character moves. If the character that applied this Condition is killed, knocked unconscious, moves, or takes any Actions, end this Condition."*
+- Mask Bowled Over: After succeeding, the target must succeed at a TN 10 Acrobatics Challenge or be knocked Prone. Then this character becomes Prone.
+
+---
+
+### Bayou Pig
+
+Unlike the domesticated farm animals back on Earth, the pigs of Malifaux are voracious killing machines. With skin as thick as leather and massive tusks, they're more than capable of knocking an adult human to the ground and tearing away flesh with each bite.
+
+Until recent years, the wild pigs of the Bayou kept the Gremlin population culled down to a reasonable number. With the arrival of humanity and gunpowder, however, the Gremlins gained the upper hand on their porcine neighbors — now they could hunt even the larger pigs, and those they didn't kill, they forced into captivity. These pigs still aren't entirely domesticated — they're a stubborn breed — but the Gremlins have made a great deal of progress in recent years.
+
+#### Bayou Pig
+
+| Aspect | Value |
+|---|---|
+| Might | 3 |
+| Grace | 0 |
+| Speed | 2 |
+| Resilience | 2 |
+| Charm | -4 |
+| Cunning | -2 |
+| Intellect | -1 |
+| Tenacity | 2 |
+
+**Rank:** Minion (6) | **Types:** Living, Beast, Pig
+
+| Stat | Value |
+|---|---|
+| Defense | 4 (10) |
+| Willpower | 4 (10) |
+| Walk | 5 |
+| Charge | 6 |
+| Height | 2 |
+| Initiative | 4 (10) |
+| Wounds | 7 |
+
+**Skills:** Notice 2, Pugilism 2, Toughness 2, Track 2, Wilderness 3
+
+**Abilities:**
+- **Pigcharge:** This character may perform the (2) Charge Action as a (1) Action.
+- **Set 'er Off:** At the start of this character's turn during Dramatic Time, if it is not engaged or within 2 yards of a friendly character without this Ability, this character must declare a Charge against the closest legal non-Pig target.
+- **Eat Like A Pig:** After killing a Living or Undead creature with a Close Combat attack, this character may immediately end its turn to heal 3 damage.
+
+**Actions:**
+
+**(1) Tusks** (Pugilism)
+AV: 5 (11) | Rg: y1 | Resist: Df
+Target suffers 2/3/4 damage. This Attack must declare a Trigger if possible.
+- Ram Stampede: After damaging, this character must declare a Charge against the closest legal non-Pig target which it is not engaged with. If this character is engaged, it still declares this Charge but only makes a single Attack as a result.
+- Crow Eat Anything: After damaging a Living or Undead character, this character heals 1 damage.
+- Tome Tossed Up: After succeeding, place the target anywhere within 2 yards of this character. The target becomes Prone.
+- Mask Trampling Hooves: After succeeding, the target must succeed at a TN 12 Acrobatics Challenge. On a failure, it suffers 1 damage and becomes Prone.
+
+---
+
+### Bayou Gator
+
+Bayou Gators are one of the most efficient ambush predators in the swamps of Malifaux. They frequently wait in or near the water, holding still and hoping to be mistaken for a harmless, floating log. When their prey approaches for a drink, the gator leaps out at blinding speed, snaps its jaws around whatever limb it can catch, and attempts to drag its prey back into the water to drown it.
+
+Once in the water, Bayou Gators begin twisting their bodies in the infamous "death roll," a maneuver that uses torque to disorient and dismember prey much larger than itself. Hungry Bayou Gators have been known to charge after a potential meal for staggering distances, sometimes even climbing up trees to catch hiding prey. These "Drop Gators" are relatively rare, but all it takes is a single encounter to make a traveler wary of creaky branches for the rest of her days.
+
+#### Bayou Gator
+
+| Aspect | Value |
+|---|---|
+| Might | 2 |
+| Grace | -3 |
+| Speed | 2 |
+| Resilience | 2 |
+| Charm | -4 |
+| Cunning | 1 |
+| Intellect | -3 |
+| Tenacity | 2 |
+
+**Rank:** Minion (6) | **Types:** Living, Swampfiend, Beast
+
+| Stat | Value |
+|---|---|
+| Defense | 4 (10) |
+| Willpower | 4 (10) |
+| Walk | 5 |
+| Charge | 6 |
+| Height | 2 |
+| Initiative | 4 (10) |
+| Wounds | 7 |
+
+**Skills:** Athletics 1, Intimidate 2, Notice 2, Pugilism 3, Stealth 2, Toughness 2, Wilderness 3
+
+**Abilities:**
+- **Melee Expert:** This character generates an additional AP on its turn, that may only be used to make a Close Combat attack.
+- **Aquatic:** This character's speed is not reduced while swimming. It can take the Charge Action while underwater.
+- **Ruthless:** This character automatically succeeds at any Willpower duel it attempts during its turn.
+- **Unimpeded:** This character ignores penalties for terrain while taking Movement Actions.
+
+**Actions:**
+
+**(1) Fearsome Jaws** (Pugilism)
+AV: 5 (11) | Rg: y2 | Resist: Df
+Target suffers 2/3/5 damage.
+- Ram Death Roll: When damaging, this Attack gains + to its damage flip, and the target becomes Prone.
+- Crow Swallow Whole: After damaging a target with a lower Height than this character, the target must discard a card or be immediately killed and eaten.
+
+**(0) Creep**
+This character (or its controller) may discard a card to move this character a distance equal to its Walk Aspect in yards.
+
+---
+
+### Bayou Chicken
+
+The chickens of the Bayou were brought to Malifaux over a hundred years ago, during the days of the first Breach. Over the next hundred years, the latent magic of Malifaux seeped into each successive generation of chickens, eventually growing them to their current six-foot-tall height. The Bayou Chickens were prolific, spreading quickly across the swamp — until the Gremlins and pigs of the swamp started to take notice of them and just how delicious their eggs were.
+
+The constant stress of defending their nests from raids resulted in only the most high-strung and paranoid chickens surviving to raise their young. The trait started breeding true, and now all Bayou Chickens in the swamp are prone to nervousness and hypertension.
+
+#### Bayou Chicken
+
+| Aspect | Value |
+|---|---|
+| Might | 2 |
+| Grace | 1 |
+| Speed | 2 |
+| Resilience | 1 |
+| Charm | 0 |
+| Cunning | -1 |
+| Intellect | -2 |
+| Tenacity | 2 |
+
+**Rank:** Minion (6) | **Types:** Living, Beast
+
+| Stat | Value |
+|---|---|
+| Defense | 5 (11) |
+| Willpower | 4 (10) |
+| Walk | 5 |
+| Charge | 6 |
+| Height | 2 |
+| Initiative | 4 (10) |
+| Wounds | 7 |
+
+**Skills:** Athletics 1, Evade 3, Notice 2, Pugilism 3, Toughness 2, Wilderness 2
+
+**Abilities:**
+- **Rampage:** At the start of this character's turn, if it has 0 or fewer Wounds, it must declare a Charge against the closest legal target that it is not engaged with. If this character is engaged, it still declares this Charge but only makes a single Attack as a result. This character gains + to attack and damage flips made during this Charge Action.
+- **Roostercharge:** This character may perform the (2) Charge Action as a (1) Action.
+- **Unimpeded:** This character ignores penalties for terrain while taking Movement Actions.
+
+**Actions:**
+
+**(1) Beak** (Pugilism)
+AV: 5 (11) | Rg: y2 | Resist: Df
+Target suffers 2/3/5 damage. This attack must declare a Trigger if possible.
+- Ram BU-GAWK!!!: After damaging, this character must declare a Charge against the closest legal target which it is not engaged with. If this character is engaged when it declares this Charge, it suffers 1 damage.
+- Crow Foot Spurs: If this character is male, the target gains the Dazed Condition until the end of its next turn. If the target is already Dazed, it instead suffers +1 damage.
+
+**(0) Delicious Egg**
+If this character is female, it may discard a card to lay a fresh egg in any space adjacent to it. While within a5 of one or more fresh eggs, Bayou Chickens gain + to their Defense flips. The egg ceases to be fresh after two weeks.
