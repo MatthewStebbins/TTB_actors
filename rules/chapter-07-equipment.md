@@ -686,3 +686,200 @@ Each pneumatic limb has a number of **augment slots** (listed as Augment X). Aug
 | **Integrated** | The character may use the integrated item as if it were in her hand at any time. |
 | **Light** | Counts as Light armor for armored category purposes (see Armor). |
 | **Pneumatic (Aspect)** | Once per session per limb, the character may use this augment to increase the noted Aspect by **+5** until the start of her next turn. |
+
+### Pneumatic Augment Catalog
+
+| Augment | Location | Effect | Slots | Cost | Skill |
+|---|---|---|---|---|---|
+| Enhanced Fist | Arms | Damaging +1 | 2 | 5§ | 2 |
+| Crusher | Arms | Damaging +2 | 3 | 30§ | 3 |
+| Military Brace | Arms | Integrated (Ranged Combat weapon) | 1 | 15§ | 1 |
+| Mercenary Brace | Arms | Integrated (Close Combat weapon) | 1 | 15§ | 1 |
+| Piston Driver | Arms or Legs | Pneumatic (Might) | 1 | 10§ | 2 |
+| Steam Coils | Legs | Pneumatic (Speed) | 1 | 10§ | 2 |
+| Trade Custom | Any | Integrated (Toolkit) | 1 | 2§ | 1 |
+
+**Enhanced Fist** — Adds spiked protrusions, extra actuators, or springs to the pneumatic knuckles. Allows the recipient to punch significantly harder.
+
+**Crusher** — Replaces the pneumatic hand with an oversized fist and additional actuators. Can crush granite and bend steel; the limb becomes bulky and misshapen.
+
+**Military Brace** — Accommodates any ranged weapon, permanently integrated (cannot be removed). *Price does not include weapon.*
+
+**Mercenary Brace** — Incorporates a melee weapon into the prosthetic. On a full limb, the weapon may fold or retract when sheathed. *Price does not include weapon.*
+
+**Piston Driver** — Series of pistons and bone anchors adding strength to the limb. Useful for physical labor (rail laying, construction).
+
+**Steam Coils** — Powerful industrial springs reset by the limb's pneumatics, enabling bursts of greatly increased movement speed. Accompanied by steam and hissing — poor for stealth. Requires time to build pressure between uses.
+
+**Trade Custom** — Incorporates a skill toolkit into the prosthetic design. Tools can be internalized or attached externally, folding flat against the limb when not in use. *Price does not include toolkit.*
+
+---
+
+## Sundries & Services
+
+### General Sundries
+
+| Item | Cost |
+|---|---|
+| Beads (Glass) | 0.50§ / lb. |
+| Beads (Wooden) | 0.50§ / lb. |
+| Binoculars | 6.00§ |
+| Blanket (Wool) | 2.00§ |
+| Broom | 0.20§ |
+| Bucket | 0.10§ |
+| Candles | 0.70§ |
+| Canning Supplies | 0.80§ / 20 |
+| Canteen | 0.30§ |
+| Chair (Wooden) | 1.00§ |
+| Cloth | 0.02§ / yard |
+| Coal | 0.90§ / bushel |
+| Flatware (China) | 3.00§ |
+| Flatware (Clay) | 2.00§ |
+| Flatware (Tin) | 0.50§ |
+| Haversack | 1.20§ |
+| Journal | 2.00§ |
+| Kerosene | 0.50§ / 12 oz. |
+| Mop | 0.20§ |
+| Pan | 1.20§ |
+| Portable Oven | 1.50§ |
+| Rope (Hemp) | 2.60§ / 50 ft. |
+| Rope (Silk) | 2.90§ / 50 ft. |
+| Sewing Machine | 9.00§ |
+| Tarpaulin | 1.40§ |
+| Telescope | 2.00§ |
+| Tent | 4.00§ |
+| Valise | 0.80§ |
+| Watch | 3.00§ |
+
+### Alcohol
+
+| Item | Cost |
+|---|---|
+| Beer | 0.05§ / 12 oz. |
+| Brandy | 0.20§ / 12 oz. |
+| Gin | 0.02§ / 12 oz. |
+| Tequila | 0.15§ / 12 oz. |
+| Vodka | 0.15§ / 12 oz. |
+| Whiskey | 0.20§ / 12 oz. |
+| Wine | 0.50§ / 12 oz. |
+
+### Instruments
+
+| Item | Cost |
+|---|---|
+| Banjo | 3.00§ |
+| Bugle | 4.00§ |
+| Guitar | 5.00§ |
+| Harmonica | 1.00§ |
+| Harpsichord | 35.00§ |
+| Mandolin | 3.00§ |
+| Trumpet | 3.00§ |
+| Violin | 15.00§ |
+
+### Perishables
+
+| Item | Cost |
+|---|---|
+| Apples | 0.13§ / lb. |
+| Butter | 0.70§ / lb. |
+| Cheese | 1.00§ / lb. |
+| Eggs | 0.01§ / 12 |
+| Pears | 0.14§ / lb. |
+| Peas | 0.09§ / bushel |
+| Potatoes | 0.07§ / bushel |
+
+### Meats
+
+| Item | Cost |
+|---|---|
+| Beef (Salt) | 0.15§ / lb. |
+| Beef (Fresh) | 0.20§ / lb. |
+| Mutton | 0.08§ / lb. |
+| Pork | 0.10§ / lb. |
+| Poultry | 0.02§ / lb. |
+
+### Livestock
+
+| Animal | Cost |
+|---|---|
+| Chicken | 0.50§ |
+| Cow | 15.00§–25.00§ |
+| Donkey | 20.00§ |
+| Goat | 2.00§ |
+| Horse (Pack) | 25.00§ |
+| Horse (Draft) | 50.00§ |
+| Horse (Riding) | 75.00§ |
+| Mule | 15.00§–20.00§ |
+| Ox | 75.00§ |
+| Pig | 4.00§ |
+| Sheep | 3.00§ |
+| Yak | 30.00§ |
+
+### Clothing
+
+| Item | Cost |
+|---|---|
+| Blouse | 0.50§–1.00§ |
+| Boots | 1.00§–1.40§ |
+| Breeches | 0.60§ |
+| Corset (Steel Band) | 1.10§ |
+| Corset (Whale) | 1.40§ |
+| Dress | 0.60§–5.00§ |
+| Hat (Bowler) | 1.20§–3.50§ |
+| Necktie | 0.40§ |
+| Petticoats | 0.30§ |
+| Shirt | 0.60§–0.80§ |
+| Shoes | 0.60§–0.80§ |
+| Skirt | 0.30§ |
+| Trousers | 0.80§ |
+| Waistcoat | 0.65§ |
+
+### Tobacco
+
+| Item | Cost |
+|---|---|
+| Cigars | 1.00§ / 24 |
+| Pipe | 0.20§ |
+| Rolling Paper | 0.01§ / 100 |
+| Tobacco (Smoke) | 0.30§ / lb. |
+| Tobacco (Chewing) | 0.25§ / lb. |
+
+### Tack & Bridle
+
+| Item | Cost |
+|---|---|
+| Blinders | 0.75§ |
+| Bridle | 1.00§ |
+| Draft Collar | 2.50§ |
+| Harness | 3.50§ |
+| Pack Saddle | 0.75§ |
+| Riding Saddle | 1.50§ |
+| Saddle Bags | 2.00§ |
+| Tack | 0.25§ |
+
+### Transportation
+
+| Route | Cost |
+|---|---|
+| Carriage (within Malifaux City) | 0.50§–2.00§ |
+| Train (between Guild Stations in Malifaux City) | 0.50§ / person |
+| Train (between minor stations in Malifaux City) | 0.75§ / person |
+| Carriage (Malifaux City ↔ Ridley or Edge Point) | 5.00§ |
+| Train (Malifaux City ↔ Ridley or Edge Point) | 1.00§ / person |
+| Carriage (Ridley or Edge Point ↔ Contract Town) | 5.00§–10.00§ |
+| Train (Ridley or Edge Point ↔ connected Contract Town) | 2.00§ / person |
+| Winston's Dirigibles chartered airship (Ridley → any location except Malifaux City) | 25.00§ |
+| Bayou Boat (with human guide) | 2.00§ / day |
+| Bayou Boat (with unreliable Gremlin guide) | 1.00§ / day (0.50§ / day if paid in alcohol) |
+
+---
+
+## Currency
+
+The primary currency in Malifaux is **Guild Scrip** (§), printed on paper. The Guild also issues coins of lesser denomination:
+
+| Coin | Value |
+|---|---|
+| Quarter-Scrip | 0.25§ |
+| Deiner | 0.10§ |
+| Pence | 0.01§ |
