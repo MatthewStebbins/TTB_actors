@@ -511,3 +511,125 @@ These properties appear in weapon stat blocks and modify how the weapon function
 | **Special (Weapon)** | This ammunition can only be used with the indicated weapon type. |
 | **Torch** | Characters who suffer **Severe damage** also gain **Burning +1**. |
 | **Wailer** | Imposes **−−** on Damage Flips, but the attack gains **Stunning**. |
+
+---
+
+## Weapon Modifications
+
+Most weapons and armor can be modified. **Finely Tuned** items cannot be modified at all.
+
+**Modification complexity:** To determine if a character can add a modification, add:
+- The item's Skill Rank requirement
+- The Skill Rank requirements of all existing modifications on the item
+- The Skill Rank requirement of the new modification
+
+If this total ≤ the character's (Aspect + Crafting Skill Rank), she may modify the item.
+
+**Cost:** Expend raw materials equal to **25% of the modification's listed price**, or have the physical modification already on hand (e.g., a salvaged bayonet can be attached at no cost).
+
+| Modification | Effect | Cost | Skill |
+|---|---|---|---|
+| Bayonet | Bayonet; Exclusive (Pistol or Rifle) | 3§ / 4§ | 1 |
+| Brutal | Brutal | 15§ | 2 |
+| Custom Action | +2 Range; Exclusive (z weapons) | 10§ | 1 |
+| Custom Grip | Accurate; Exclusive (z weapons) | 20§ | 2 |
+| Embellishment | None (purely aesthetic) | varies | 0 |
+| Enlarged | Increase damage by 1/1/2; Exclusive (y weapons) | 7§ | 2 |
+| Extended | +1 Range; Exclusive (y weapons) | 5§ | 2 |
+| Folded Steel | Increase damage by 0/0/1; Brutal; Exclusive (y weapons) | 10§ | 2 |
+| Grapeshot Barrel | Adds a barrel with a single grapeshot round: Range 5, Shotgun, 1/2B/4B damage, Capacity 1, Reload 2 AP | 20§ | 2 |
+| Nickel-Plated | Nickel-Plated | 15§ | 0 |
+| Shoddy | Shoddy | −25% | 0 |
+| Shortened | −1 Range (min 1 yard); Concealable | 1§ | 1 |
+| Throwing | −1 Range (min 1 yard); Exclusive (y weapons); Thrown | 1§ | 1 |
+
+---
+
+## Armor
+
+### Armor Categories
+
+Characters are categorized by how much armor they wear:
+
+| Category | Condition | Effect |
+|---|---|---|
+| **Unarmored** | Not wearing Light or Heavy armor | No Armor ability |
+| **Lightly Armored** | Light or Heavy armor on at least **one location** | Armor +1 |
+| **Heavily Armored** | Heavy armor on at least **one location** + Light or Heavy armor on **two additional locations** | Armor +2 |
+
+> Characters with **pneumatic limbs** are always considered to be wearing armor at that limb's location (Light or Heavy depending on limb type).
+
+Armor covers four locations: **Arms, Legs, Head, Chest.**
+
+### The Armor Ability
+
+> **Armor +X:** Reduce all damage suffered by this character by X, to a minimum of 1.
+
+- Armor stacks with itself (Armor +1 + Armor +1 = Armor +2).
+- **Maximum Armor: +3.** Any excess is lost.
+- The **Defense Aspect is reduced** by the character's Armor value for as long as armor is worn (even magical Armor).
+
+*Example: A character with Defense 4 who gains Armor +1 has Defense 3 while armored.*
+
+### Armor Table
+
+| Armor | Coverage | Effect | Cost | Skill |
+|---|---|---|---|---|
+| Aventail | Head | Light, Protected (t) | 3§ | 2 |
+| Round Helmet | Head | Protected (t) | 5§ | 1 |
+| Greaves | Legs | Light, Protected (M) | 5§ | 2 |
+| Trail Chaps | Legs | Protected (M) | 2§ | 1 |
+| Breastplate | Chest | Heavy, Protected (R) | 19§ | 3 |
+| Brigandine | Chest | Light, Protected (R) | 7§ | 2 |
+| Doublet or Duster | Chest | Protected (R) | 5§ | 1 |
+| Gauntlets or Vambraces | Arms | Light, Protected (C) | 5§ | 2 |
+| Trail Gloves | Arms | Protected (C) | 3§ | 1 |
+| Buckler | Shield | Shield +1 | 6§ | 1 |
+| Heater Shield | Shield | Deflecting, Shield +1 | 15§ | 2 |
+| Kite Shield | Shield | Bulwark, Deflecting, Shield +2 | 25§ | 3 |
+
+### Armor Descriptions
+
+**Aventail** — Short, flexible curtains of chainmail protecting the neck and shoulders. Considered old-fashioned but effective.
+
+**Round Helmet** — Simple metal helmets protecting the head. Some include nose guards; Miner's Helmets include a small front lamp.
+
+**Greaves** — Form-fitted steel plates for the lower legs, often with a curved strap-plate over the foot.
+
+**Trail Chaps** — Leather armor protecting legs and thighs; also makes long rides more comfortable. Must be worn over pants.
+
+**Breastplate** — Hardened steel carapaces, fallen out of battlefield use but popular among the Guild Guard.
+
+**Brigandine** — Normal-looking jackets reinforced with hidden metal plates. Available in many colors and designs; hard to detect without close examination.
+
+**Doublet or Duster** — Tight-fitting jackets that button to the neck. Dusters are worn open; doublets are fully buttoned with no trailing back.
+
+**Gauntlets or Vambraces** — Steel arm and hand protection. Gauntlets cover the hand (full steel or leather with a steel plate); vambraces protect the upper arms and leave hands free.
+
+**Trail Gloves** — Sturdy leather gloves protecting against scrapes and light burns without impairing grip. Some users cut the fingers off for faster draws.
+
+**Buckler** — Small shields buckled to the forearm, leaving both hands free. Roughly dinner-plate sized.
+
+**Heater Shield** — Iron-shaped shields large enough to protect the face and chest. Require a free hand.
+
+**Kite Shield** — Full-body shields from ankle to brow. Sturdy enough to stop a bullet, but heavy and bulky.
+
+### Armor Modifications
+
+| Modification | Effect | Cost | Skill |
+|---|---|---|---|
+| Braced | Braced | 18§ | 1 |
+| Deflecting | Deflecting | 22§ | 2 |
+| Thickened | Light (or Heavy if already Light) | 10§ | 2 |
+
+### Armor Special Rules
+
+| Property | Effect |
+|---|---|
+| **Braced** | When this character takes a Defensive Stance Action, damage flips against her suffer **−**. |
+| **Bulwark** | This character **may not** take both Defensive Stance and Movement Actions in the same turn. |
+| **Deflecting** | When this character takes a Defensive Stance Action, she also gains **Armor +X**, where X equals the AP spent on the Defensive Stance Action. |
+| **Heavy** | Wearing Heavy armor on at least one location = **Lightly Armored (Armor +1)**. If also wearing Light or Heavy armor on at least two other locations = **Heavily Armored (Armor +2)**. |
+| **Light** | Wearing Light armor on at least one location = **Lightly Armored (Armor +1)**. |
+| **Protected (Suit)** | The character **ignores the first Critical Effect** (but not damage) generated with the noted Suit during each Dramatic Time. |
+| **Shield +X** | When this character takes a Defensive Stance Action, **increase the Defensive Condition value** granted by the character's Shield value. |
