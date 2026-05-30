@@ -84,3 +84,81 @@ An assassin's weapon for silent eliminations. A length of flexible but tough mat
 
 #### Lasso
 Primarily a cattle-herding tool, occasionally used in bounty hunting. A length of rope with a loop at one end, tossed around the target and pulled tight to restrain them.
+
+---
+
+## Heavy Melee Weapons
+
+Heavy Melee weapons use the **Heavy Melee Skill**. Most require two hands.
+
+| Weapon | Range | Damage | Special | Cost | Skill |
+|---|---|---|---|---|---|
+| Bayonet (Rifle) | y2 | 1/3/4 | — | 4§ | 1 |
+| Breaching Axe | y2 | 2/3/4 | Precise | 18§ | 3 |
+| Gate Spear | y2 | 2/3/4 | Thrown | 8§ | 2 |
+| Greatsword | y2 | 3/4/6 | Brutal (if attack is not part of a Charge), Intimidating | 22§ | 3 |
+| Polearm | y3 | 2/3/4 | — | 18§ | 2 |
+| Rail Hammer | y2 | 2/4/6 | — | 6§ | 2 |
+| Staff | y2 | 1/2/4 | — | 1§ | 1 |
+
+### Weapon Descriptions
+
+#### Bayonet (Rifle)
+Small knife-like blades that attach to the end of a rifle, transforming it into a crude spear. Designed not to interfere with firing, but experienced marksmen dislike the extra weight pulling the tip down.
+
+#### Breaching Axe
+Issued by the Guild to personnel on Quarantine Zone duty. These large, two-handed axes are specially designed to tear through wood and stone walls — and are equally effective against shambling zombies.
+
+#### Gate Spear
+Named for their frequent use by Guild gate guards. Their long reach and ability to be thrown at fleeing enemies makes them versatile and popular.
+
+#### Greatsword
+Any sword too large to wield with one hand. Can be broad or thin; all are capable of dealing significant destruction.
+
+#### Polearm
+Any blade attached to a long handle. Considered outdated since the rise of firearms, but popular among Nephilim hunters — the long reach helps the wielder avoid being splashed with corrosive Black Blood.
+
+#### Rail Hammer
+Massive two-handed hammers primarily used to drive iron spikes when laying railroad tracks.
+
+#### Staff
+Any large walking stick, fancy or plain. A frequent travel companion for those making long journeys.
+
+---
+
+## Melee Weapons
+
+Melee weapons use the **Melee Skill**.
+
+| Weapon | Range | Damage | Special | Cost | Skill |
+|---|---|---|---|---|---|
+| Bayonet (Pistol) | y1 | 1/3/4 | — | 3§ | 1 |
+| Club | y2 | 2/2/4 | Stunning | 4§ | 1 |
+| Hand Axe | y1 | 1/3/4 | Thrown | 2§ | 2 |
+| Hunting Knife | y1 | 1/3/4 | Concealable | 2§ | 2 |
+| Javelin | y1 | 1/3/4 | Slowing (when thrown), Thrown | 5§ | 1 |
+| Sword | y2 | 2/3/4 | — | 10§ | 2 |
+| Truncheon | y1 | 1/3/4 | Stunning | 3§ | 1 |
+
+### Weapon Descriptions
+
+#### Bayonet (Pistol)
+Small blades that attach to a pistol at the barrel or around the grip (resembling bladed brass knuckles). Allow a gunslinger to defend herself in close quarters without holstering her pistol.
+
+#### Club
+Any one-handed bludgeoning weapon. Simple and prolific — crude, but effective.
+
+#### Hand Axe
+A light, all-purpose tool that works as well in combat as it does cutting firewood or rope.
+
+#### Hunting Knife
+Popular across Malifaux, especially in the Northern Hills. Some have small tools built into the handle (typically adding the price of a skill toolkit to the cost).
+
+#### Javelin
+Light spears primarily designed to be thrown. Considered an outdated relic but still effective for those who avoid gun maintenance. Designed to stick in wounds and slow the target until removed.
+
+#### Sword
+Encompasses all one-handed swords regardless of construction. Expensive due to the steel required, but reliable and capable of significant damage in trained hands.
+
+#### Truncheon
+A staple of constabulary forces worldwide, including the Guild. Designed to stun and confuse enemies the Guild would rather capture alive.
