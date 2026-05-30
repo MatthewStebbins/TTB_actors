@@ -534,3 +534,251 @@ Target suffers 2/4/6 damage. This attack ignores Incorporeal and Hard to Wound.
 **(0) "It's A Zombie!"** (Notice/Cunning)
 AV: 5C (13C) | TN: 10C | Rg: 8 | Resist: Df
 Target gains the Undead Characteristic for 1 minute.
+
+---
+
+### Witchling Stalker
+
+Rogue mages captured by Witch Hunter Sonnia Criid are subjected to a fate worse than death: their powers are turned against themselves, burning away their humanity, memories, and personalities to create charred, wretched Witchlings. Where they once channeled great magic, they now can only sense and negate the magic of others — making them ideal hunting dogs for the Witch Hunters. Residual fire from Criid's process smolders within them, letting Witchlings cloak their weapons in magical flame enhanced by carved runes. Even experienced mages fear their arrival, knowing it means the Witch Hunters have found the scent.
+
+#### Witchling Stalker
+
+| Aspect | Value |
+|---|---|
+| Might | 3 |
+| Grace | 2 |
+| Speed | 2 |
+| Resilience | 0 |
+| Charm | -1 |
+| Cunning | -1 |
+| Intellect | -1 |
+| Tenacity | 2 |
+
+**Rank:** Minion (6) | **Types:** Living, Witch Hunter, Witchling
+
+| Stat | Value |
+|---|---|
+| Defense | 5 (11) |
+| Willpower | 5 (11) |
+| Walk | 5 |
+| Charge | 6 |
+| Height | 2 |
+| Initiative | 4 (10) |
+| Wounds | 6 |
+
+**Skills:** Athletics 1, Centering 3, Counter-Spelling 3, Enchanting 1, Evade 3, Melee 3, Notice 2, Pistol 3, Toughness 2, Track 2
+
+**Abilities:**
+- **Df (Mask) Drawn to Pain:** After this character fails, but before it suffers damage, move this character a distance equal to its Walk speed directly toward the attacker.
+- **Fiery Demise:** When this character is killed, all characters within p2 suffer 1 damage and gain the Burning +1 Condition.
+- **Searing Mark:** All characters damaged by this character gain Burning +1.
+- **Sense Magic:** When a Spell or Manifested Power is cast within 30 yards of this character, it may attempt a Counter-Spelling Challenge (TN 20 − the spell's TN). On a success, this character learns the exact location of the caster and can sense any magical effects produced by the Spell or Manifested Power for its duration.
+
+**Actions:**
+
+**(1) Shattered Rune Blade** (Melee)
+AV: 6 (12) | Rg: y1 | Resist: Df
+Target suffers 2/3/5 damage.
+- Crow Drain Magic: After damaging, end all magical effects and Conditions gained from Spells or Manifested Powers on the target, then heal 1 Wound for each such effect.
+
+**(1) Runed Pistol** (Pistol)
+AV: 5 (11) | Rg: z12 | Resist: Df
+Target suffers 2/3/4 damage. Capacity 6, Reload 2.
+- Tome Cataclysm: This attack gains +B to its Severe damage.
+
+**(1) Dispel Magic** (Counter-Spelling/Tenacity)
+AV: 5 (11) | TN: 10 | Rg: 12 | Resist: Wp
+End all magical effects and Conditions gained from Spells or Manifested Powers on the target.
+
+---
+
+### Witchling Handler
+
+After Sonnia Criid burns away a witch's personality, Handlers are tasked with training the resulting husks — coaxing together just enough of the Witchling's former self to make it functional. Using lies, half-truths, and Guild maxims, Handlers brainwash Witchlings into living weapons. Handlers often have a personal connection with their charges, having been the ones who hunted them down, and the knowledge that many Witchlings were once ordinary people unlucky enough to develop powers takes a psychological toll on all but the most jaded.
+
+#### Witchling Handler
+
+| Aspect | Value |
+|---|---|
+| Might | 2 |
+| Grace | 3 |
+| Speed | 2 |
+| Resilience | 2 |
+| Charm | -1 |
+| Cunning | 0 |
+| Intellect | 2 |
+| Tenacity | 3 |
+
+**Rank:** Enforcer (8) | **Types:** Living, Witch Hunter
+
+| Stat | Value |
+|---|---|
+| Defense | 5R (13R) |
+| Willpower | 6R (14R) |
+| Walk | 5 |
+| Charge | 6 |
+| Height | 2 |
+| Initiative | 5 (13) |
+| Wounds | 8 |
+
+**Skills:** Bureaucracy 2, Centering 4R, Counter-Spelling 3, Enchanting 3, Evade 3R, Heavy Melee 4, Intimidate 2, Leadership 3, Notice 3, Pistol 3, Scrutiny 3, Sorcery 3T, Toughness 3, Track 3
+
+**Abilities:**
+- **Df/Wp (Ram+Mask) Reflect Magic:** After this character succeeds against a Spell or Manifested Power, the attacker suffers 2/3B/5BB damage. This damage flip receives −.
+- **Df (Ram) On My Orders:** After succeeding against an enemy character, a friendly Minion character within 12 yards of this character may take a (1) Walk Action toward the attacker. If the friendly Minion is a Witchling character, it may then make a (1) Close Combat attack.
+- **Thalarian Doctrine (Magical Theory):** When this character casts an Enchanting Spell or Manifested Power, two instances of the Increased Duration Immuto are added to it without increasing its TN.
+
+**Actions:**
+
+**(1) Runed Greatsword** (Heavy Melee)
+AV: 6 (14) | Rg: y2 | Resist: Df
+Target suffers 3/4/6 damage. This damage flip gains + if this attack is not being made as part of a Charge. This weapon grants its wielder + to Intimidate Challenges.
+- Crow Drain Magic: After damaging, end all magical effects and Conditions gained from Spells or Manifested Powers on the target, then heal 1 Wound for each such effect.
+
+**(1) Burn Them All** (Sorcery/Tenacity)
+AV: 6T (14T) | TN: 14T | Rg: z10 | Resist: Wp
+Target suffers 2/3B/4B damage. Every character damaged by this attack gains Burning +1.
+
+**(1) Collier Single Action Army** (Pistol)
+AV: 6 (14) | Rg: z12 | Resist: Df
+Target suffers 2/3/4 damage. Capacity 6, Reload 2. This weapon grants its wielder + to Intimidate Challenges.
+
+---
+
+### Guild Reporter
+
+Malifaux City has two official newspapers: the Malifaux Daily Record (widely seen as a Guild PR organ) and the newer Malifaux Tattler (known for sensationalism and anti-Union sentiment). Guild Reporters — by design mostly women, who can gather information more unobtrusively — work for both. While dangerous in combat, a Guild Reporter's true power is social: a single story can destroy a well-loved hero's reputation, using facts and fiction in equal measure.
+
+#### Guild Reporter
+
+| Aspect | Value |
+|---|---|
+| Might | -2 |
+| Grace | 2 |
+| Speed | 2 |
+| Resilience | -1 |
+| Charm | 3 |
+| Cunning | 2 |
+| Intellect | 2 |
+| Tenacity | 1 |
+
+**Rank:** Minion (5) | **Types:** Living
+
+| Stat | Value |
+|---|---|
+| Defense | 4 (9) |
+| Willpower | 4 (9) |
+| Walk | 7 |
+| Charge | — |
+| Height | 2 |
+| Initiative | 5 (10) |
+| Wounds | 4 |
+
+**Skills:** Bewitch 2, Bureaucracy 1, Centering 2, Convince 1, Deceive 2, Forgery 2, History 1, Literacy 3, Notice 3, Pick Pocket 2, Scrutiny 2, Stealth 1
+
+**Abilities:**
+- **Better Part of Valor:** This character's Walk has been increased by +2, but it has no Charge Aspect.
+- **Disguised:** This character may not be the target of the Charge Action.
+- **Distracting Presence:** Enemy characters within a5 ignore any suits associated with their Skills and cannot take the Defensive Stance or Focus Actions.
+- **Don't Mind Me (11):** If this character did not take any offensive actions on her last turn, or if it is the first round of Dramatic Time and this character has not yet acted, enemies targeting this character with an attack action must succeed on a TN 11 Scrutiny Challenge or be forced to choose a different target.
+
+**Actions:**
+
+**(1) Incessant Questioning** (Bewitch)
+AV: 5 (10) | Rg: 5 | Resist: Wp
+Target becomes Slow and Dazed until the start of this character's next turn.
+
+**(1) Flash Photography** (Notice)
+AV: 5 (10) | Rg: 5 | Resist: Wp
+Target becomes Blind until the start of this character's next turn. Capacity 1, Reload 1.
+- Ram "Hey! Look Over Here!": After succeeding, every character within p1 of the target also becomes Blind until the start of this character's next turn.
+
+---
+
+### Orphan
+
+Malifaux's high mortality rate — serial killers, faction attacks, and a startling suicide rate — leaves many children without caregivers. The Guild sweeps them into orphanages that hire them out as cheap factory labor; those who slip through the cracks form street gangs, surviving by begging and stealing. Hardened quickly by Malifaux's horrors, orphan gangs invent dangerous games — a favorite being "Dead Man's Knock," where children knock on the Quarantine Zone barricade to attract zombies and then try to evade them.
+
+#### Orphan
+
+| Aspect | Value |
+|---|---|
+| Might | -2 |
+| Grace | 1 |
+| Speed | 0 |
+| Resilience | -1 |
+| Charm | 1 |
+| Cunning | 1 |
+| Intellect | -2 |
+| Tenacity | -1 |
+
+**Rank:** Peon (4) | **Types:** Living
+
+| Stat | Value |
+|---|---|
+| Defense | 3 (7) |
+| Willpower | 2 (6) |
+| Walk | 4 |
+| Charge | 4 |
+| Height | 2 |
+| Initiative | 1 (5) |
+| Wounds | 3 |
+
+**Skills:** Acrobatics 1, Athletics 1, Deceive 1, Evade 1, Lock Picking 1, Notice 1, Pick Pocket 1, Pugilism 1, Stealth 2, Thrown Weapons 2
+
+**Abilities:**
+- **Flick of the Wrist:** This character may use Grace in place of Might when making a Melee or Pugilism attack.
+- **Harmless (Living):** Living characters must discard a card to target this character with an attack.
+- **Puny:** This character has −1 Wounds and may not make disengaging strikes.
+
+**Actions:**
+
+**(1) Shin Kick** (Pugilism)
+AV: 2 (6) | Rg: y1 | Resist: Df
+Target suffers 1/2/3 damage.
+
+**(1) Thrown Rock** (Thrown Weapons)
+AV: 3 (7) | Rg: z6 | Resist: Df
+Target suffers 1/2/3 damage.
+
+---
+
+### Horse
+
+Brought to Malifaux in the days of the first Breach and again when it reopened, horses have been indispensable to humanity's survival and expansion. During the Breach's closure, horses left behind turned feral — and each generation born in Malifaux grew stranger, until descendants were completely unrecognizable: tentacled, multi-eyed creatures tamed by the Neverborn as twisted mockeries of mounts. Even modern Malifaux-born horses show subtle mutations (split hooves, sharpened teeth, bisected pupils) that give breeders pause.
+
+#### Horse
+
+| Aspect | Value |
+|---|---|
+| Might | 3 |
+| Grace | 1 |
+| Speed | 4 |
+| Resilience | 2 |
+| Charm | 0 |
+| Cunning | -2 |
+| Intellect | -3 |
+| Tenacity | -1 |
+
+**Rank:** Peon (3) | **Types:** Living, Beast
+
+| Stat | Value |
+|---|---|
+| Defense | 6 (9) |
+| Willpower | 2 (5) |
+| Walk | 8 |
+| Charge | — |
+| Height | 2 |
+| Initiative | 7 (10) |
+| Wounds | 7 |
+
+**Skills:** Acrobatics 1, Athletics 3, Evade 1, Martial Arts 1, Notice 3, Toughness 2, Wilderness 1
+
+**Abilities:**
+- **Better Part of Valor:** This character's Walk has been increased by +2, but it has no Charge Aspect.
+
+**Actions:**
+
+**(1) Hoof** (Martial Arts)
+AV: 5 (8) | Rg: y1 | Resist: Df
+Target suffers 1/2/4 damage.
