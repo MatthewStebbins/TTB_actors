@@ -782,3 +782,92 @@ Damage dealt by the Spell **ignores Armor**. Additionally, the Spell does not ra
 ### Fire (TN +3)
 Any character that suffers damage from the Spell also gains the **Burning +1 Condition**.  
 *May be added multiple times.* Each application: increase the Burning Condition value by **+1** (maximum Burning +3).
+
+### Ice (TN +3)
+Any character that suffers damage from the Spell also gains the **Slow Condition**.  
+*May be added up to twice.* If added twice, after damaging a Slow character, that character becomes **Paralyzed**.
+
+### Infected (TN +2)
+Any character that suffers damage from the Spell also gains the following Condition:  
+> *"Infection +1: At the end of the day, this character takes +1 damage."*
+
+### Light (TN +1)
+Any character that suffers damage from the Spell also gains the **Blind Condition** until the start of the caster's next turn.  
+*May be added multiple times.* Each application: extend the Blind Condition duration by **+1 round**.
+
+### Natural (TN +2)
+Any character that suffers damage from the Spell also gains the following Condition until the start of the caster's next turn:  
+> *"Rooted: This character may not take Walk or Charge Actions. If this character is pushed, this character suffers 3 damage, then this Condition ends."*  
+*May be added multiple times.* Each application: extend the Rooted Condition duration by **+1 round**.
+
+### Poison (TN +1)
+Any character that suffers damage from the Spell also gains the **Poison +1 Condition**.  
+*May be added multiple times.* Each application: increase the Poison Condition value by **+1** (maximum Poison +3).
+
+### Spirit (TN +3)
+Damage dealt by the Spell ignores **Armor** and **Hard to Wound**.
+
+### Terror (TN +1)
+Any character that suffers damage from the Spell must also make a **TN 6 Horror Duel**.  
+*May be added multiple times.* Each application: increase the Horror Duel TN by **+1**.
+
+### Water (TN +1)
+Any character **targeted** by the Spell (not just damaged) is **doused with water**, ending the **Burning Condition** on the target.  
+Any fire-based character (such as a Fire Gamin) **damaged** by the Spell becomes **Slow**.
+
+### Wind (TN +1)
+Any character that suffers damage from the Spell is also **pushed 1 yard** in a direction of the caster's choice.  
+*May be added multiple times.* Each application: increase the push distance by **+1 yard**.
+
+---
+
+## Manifested Powers
+
+**Manifested Powers** represent a character's innate ability to control the energies of Malifaux. They tend to be more diverse than Spells but less flexible (most have fixed parameters once created).
+
+### Obtaining Manifested Powers
+
+Characters typically gain Manifested Powers in one of two ways:
+
+| Source | Customization |
+|---|---|
+| **Pursuit Talent** | Effects and parameters are predetermined; the character simply learns and uses the listed Manifested Power |
+| **Resolving a Destiny Step** | The player has significant freedom in defining the Manifested Power's effects (see creation rules below) |
+
+---
+
+## Ability Manifested Powers
+
+Ability Manifested Powers are **passive effects** — always active or auto-triggering in certain circumstances. They are easier to create but carry a risk of unbalancing play. Players and Fatemasters should work together to tune them, adjusting if they prove too strong or too weak.
+
+**Examples:**
+- *Walk It Off* — Heal 1 damage every time the character takes a Walk Action during Dramatic Time.
+- *Singed Soul* — Pugilism attacks also apply Burning +1 to the target.
+- *One Foot in the Grave* — Character gains the Incorporeal ability, but only when reduced to below 0 Wounds.
+- *Heart of Steel* — Immune to Critical Hits to the chest; gain a Defensive Trigger (R) to reduce damage suffered from a successful attack by 2 (minimum 1).
+
+---
+
+## Spell-Like Manifested Powers
+
+Spell-Like Manifested Powers must be **consciously activated**. They are created by combining Magia and Immuto (like a Spell), but once created, their parameters are **fixed**. Players have more creative freedom when building these than when casting normal Spells.
+
+### Creation Steps
+
+1. **Decide the theme.** It should tie in with the circumstances that led the character to gain the Manifested Power.
+2. **Choose any 1 Magia.**
+3. **Add any number of Immuto.** Recommended maximum of 4, though this is a guideline. Immuto that normally wouldn't apply to the Magia may be allowed at the Fatemaster's discretion if it fits the theme.
+4. **Choose the TN suit (if any).** Discuss with the Fatemaster which suit fits the thematic nature of the power. For instance, a Necromancy-themed power using Elemental Engulf might change from `t` to `C`.
+5. **Choose the Aspect and Skill.** Use whatever makes the most narrative sense. A healing Manifested Power might use Doctor instead of Enchanting.
+
+### Example: *The River Beckons* (Elisabeth Van Assen)
+
+**Origin:** After nearly drowning in an icy river while fighting a Nephilim, Elisabeth resolves a Destiny Step.
+
+**Construction:**
+- **Magia:** Bury (base TN 14C)
+- **Immuto added:** Ice, Water, Increased Duration ×2 (+4 TN), Alter Range ×3 (−6 TN — range decreased from z5 to y1)
+- **Final TN:** 12M (suit changed from C to M to reflect teleportation flavor)
+- **Skill/Aspect:** Prestidigitation + Tenacity
+
+**Result:** For 1 AP, Elisabeth targets someone within **y1** and makes a **Prestidigitation + Tenacity** duel against **TN 12M**. On success, the target disappears for **3 rounds**, returning Slow and soaking wet.
