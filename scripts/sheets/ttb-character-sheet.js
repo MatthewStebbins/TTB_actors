@@ -202,6 +202,9 @@ export class TtbCharacterSheet extends ActorSheet {
       charge:    av("speed") + 2,
       height:    2,
       woundsMax: av("resilience") * 2,
+      soak:      allItems
+        .filter((i) => i.type === "armor" && i.system?.equipped)
+        .reduce((sum, i) => sum + (Number(i.system?.soak) || 0), 0),
     };
 
     context.suitOptions = SUIT_OPTIONS;
@@ -489,6 +492,10 @@ export class TtbCharacterSheet extends ActorSheet {
       const type = ev.currentTarget.dataset.type;
       Item.create({ name: `New ${type}`, type }, { parent: this.actor });
     });
+    html.find(".ttb-item-name-link").click((ev) => {
+      const id = ev.currentTarget.closest("[data-item-id]").dataset.itemId;
+      this.actor.items.get(id)?.sheet.render(true);
+    });
     html.find(".ttb-item-edit").click((ev) => {
       const id = ev.currentTarget.closest("[data-item-id]").dataset.itemId;
       this.actor.items.get(id)?.sheet.render(true);
@@ -596,5 +603,19 @@ export class TtbCharacterSheet extends ActorSheet {
       await this.actor._createFateDeck();
       this.render(false);
     }));
+  }
+
+  /** Allow dragging Item documents from the sidebar/compendium onto this sheet. */
+  async _onDropItem(event, data) {
+    if (!this.actor.isOwner) return false;
+    const item = await Item.fromDropData(data);
+    if (!item) return false;
+    const allowed = ["weapon", "armor", "gear", "talent", "spell"];
+    if (!allowed.includes(item.type)) {
+      ui.notifications.warn(`TTB | Cannot add item type "${item.type}" to a character.`);
+      return false;
+    }
+    // If already owned by this actor, default Foundry sorts/moves handle it.
+    return super._onDropItem(event, data);
   }
 }

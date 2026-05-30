@@ -41,12 +41,17 @@ export class TtbActor extends Actor {
         .filter((i) => i.type === "armor" && i.system?.equipped)
         .reduce((sum, i) => sum + (Number(i.system?.defenseBonus) || 0), 0);
 
+      const soakBonus = Array.from(this.items)
+        .filter((i) => i.type === "armor" && i.system?.equipped)
+        .reduce((sum, i) => sum + (Number(i.system?.soak) || 0), 0);
+
       if (system.derived) {
         system.derived.defense   = av("grace") + armorBonus;
         system.derived.willpower = av("tenacity");
         system.derived.walk      = av("speed");
         system.derived.charge    = av("speed") + 2;
         system.derived.height    = 2;
+        system.derived.soak      = soakBonus;
       }
 
       if (system.wounds) {

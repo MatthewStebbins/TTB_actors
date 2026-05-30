@@ -953,6 +953,14 @@
   justify-content: flex-end;
 }
 
+.ttb-item-name-link {
+  cursor: pointer;
+  color: var(--ttb-burgundy);
+  text-decoration: none;
+  font-weight: 600;
+}
+.ttb-item-name-link:hover { text-decoration: underline; }
+
 .ttb-scrip {
   display: flex;
   align-items: center;

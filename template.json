@@ -89,7 +89,8 @@
         "willpower": 0,
         "walk":      0,
         "charge":    0,
-        "height":    2
+        "height":    2,
+        "soak":      0
       },
       "conditions": {
         "burning":     0,

@@ -47,6 +47,12 @@
       <span class="ttb-actors-derived-label">Height</span>
       <span class="ttb-actors-derived-value">{{derived.height}}</span>
     </div>
+    {{#if derived.soak}}
+    <div class="ttb-actors-derived-item">
+      <span class="ttb-actors-derived-label">Soak</span>
+      <span class="ttb-actors-derived-value">+{{derived.soak}}</span>
+    </div>
+    {{/if}}
     <div class="ttb-actors-wounds">
       <span class="ttb-actors-derived-label">Wounds&nbsp;</span>
       <span class="ttb-actors-derived-value">{{system.wounds.value}}/{{derived.woundsMax}}</span>
@@ -395,7 +401,7 @@
               {{#each weapons}}
                 <tr data-item-id="{{id}}">
                   <td><input type="checkbox" class="ttb-item-equipped" {{#if system.equipped}}checked{{/if}} /></td>
-                  <td>{{name}}</td>
+                  <td><a class="ttb-item-name-link">{{name}}</a></td>
                   <td>{{system.apCost}}</td>
                   <td>{{system.attackSkill}}</td>
                   <td>{{displayDamage}}</td>
@@ -421,7 +427,7 @@
               {{#each armors}}
                 <tr data-item-id="{{id}}">
                   <td><input type="checkbox" class="ttb-item-equipped" {{#if system.equipped}}checked{{/if}} /></td>
-                  <td>{{name}}</td>
+                  <td><a class="ttb-item-name-link">{{name}}</a></td>
                   <td>{{system.defenseBonus}}</td>
                   <td>{{#if system.soak}}+{{system.soak}}{{else}}—{{/if}}</td>
                   <td>{{system.special}}</td>
@@ -445,7 +451,7 @@
             <tbody>
               {{#each inventory}}
                 <tr data-item-id="{{id}}">
-                  <td>{{name}}</td>
+                  <td><a class="ttb-item-name-link">{{name}}</a></td>
                   <td>{{system.quantity}}</td>
                   <td>{{system.description}}</td>
                   <td class="ttb-item-controls">
@@ -473,7 +479,7 @@
             <tbody>
               {{#each talentItems}}
                 <tr data-item-id="{{id}}">
-                  <td>{{name}}</td>
+                  <td><a class="ttb-item-name-link">{{name}}</a></td>
                   <td>{{system.pursuit}}</td>
                   <td>{{system.requirements}}</td>
                   <td class="ttb-item-controls">
@@ -496,7 +502,7 @@
             <tbody>
               {{#each spellItems}}
                 <tr data-item-id="{{id}}">
-                  <td>{{name}}</td>
+                  <td><a class="ttb-item-name-link">{{name}}</a></td>
                   <td>{{system.theory}}</td>
                   <td>{{system.tn}}</td>
                   <td>{{system.range}}</td>
