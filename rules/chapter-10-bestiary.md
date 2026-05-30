@@ -2065,3 +2065,319 @@ Move this character up to 5 yards in any direction, then reduce its Rank Value C
 **(1) Gnashing Bite** (Pugilism)
 AV: 3 (7) | Rg: y1 | Resist: Df
 Target suffers 2/3/3 damage. Increase the AV of this attack by +1 for every other friendly character engaged with the target.
+
+---
+
+## Neverborn
+
+---
+
+### Sorrow
+
+Sorrows are the physical manifestations of their namesake: attracted to despondency, they serve only to increase melancholy and drive those around them to despair. It is theorized that the presence of these depressing spirits is the reason why Malifaux is such a bleak place, as even the most cheerful person will find themselves overcome with self-loathing and inadequacy in their presence.
+
+It is from this spiral of self-loathing that Sorrows derive their sustenance. The influence of one Sorrow often attracts more of their kind, which in turn drives the helpless victim into even darker depths of depression, which then attracts more Sorrows in a self-perpetuating spiral of despair.
+
+While Sorrows are not particularly dangerous in physical combat, they can quickly sap the spirit of even the strongest opponent. Mustering the resolve to attack one can be a problem — their victims often see little reason to raise their sword and instead prefer to slump to the ground listlessly as the Sorrow slowly feeds on their ebbing life.
+
+#### Sorrow
+
+| Aspect | Value |
+|---|---|
+| Might | 2 |
+| Grace | 2 |
+| Speed | -1 |
+| Resilience | 0 |
+| Charm | -4 |
+| Cunning | 0 |
+| Intellect | 0 |
+| Tenacity | 2 |
+
+**Rank:** Minion (5) | **Types:** Spirit, Woe
+
+| Stat | Value |
+|---|---|
+| Defense | 3 (8) |
+| Willpower | 4 (9) |
+| Walk | 4 |
+| Charge | 4 |
+| Height | 2 |
+| Initiative | -1 (4) |
+| Wounds | 4 |
+
+**Skills:** Evade 1, Intimidate 2, Prestidigitation 3, Pugilism 2, Stealth 1
+
+**Abilities:**
+- **Don't Mind Me (10):** If this character did not take any offensive actions on its last turn, or if it is the first round of Dramatic Time and this character has not yet acted, enemies targeting this character with an attack action must succeed on a TN 10 Scrutiny Challenge or be forced to choose a different target.
+- **Incorporeal:** This character ignores, and is ignored by, other characters and terrain during any movement. Reduce all damage this character suffers from Ranged and Close Combat attacks by half.
+- **Life Leech:** Enemy characters beginning their turn within a1 of this character suffer 1 damage; then, this character heals 1 damage.
+- **Misery:** When an enemy character within 6 yards of this character fails a Willpower duel, it suffers 1 damage after resolving the current action.
+
+**Actions:**
+
+**(1) Doleful Grasp** (Pugilism)
+AV: 4 (9) | Rg: y1 | Resist: Df
+Target suffers 1/2/4 damage.
+- Mask Melancholy: After succeeding, the target gains the following Condition until the next sunrise or sunset: *"Nobody Likes Me: This character suffers − on Social duels. During Dramatic Time, this character cannot take her turn until every other character without this Condition has taken its turn."*
+
+**(1) Doldrums** (Prestidigitation/Tenacity)
+AV: 5 (10) | Rg: 6 | Resist: Wp
+Target becomes Slow. If it is already Slow, it becomes Paralyzed. *(Note: source text truncated; effect inferred as Paralyzed.)*
+
+---
+
+### Poltergeist
+
+Though similar to Sorrows in appearance, Poltergeists are much more active spirits that have little patience for the slow collapse of a victim's mental faculties. Instead, they lash out violently against their victims, using their telekinetic powers to hurl heavy objects at the targets of their fickle wrath.
+
+Poltergeists are frequently encountered haunting buildings — most often private residences or less-traveled public buildings such as libraries or warehouses. It's theorized that these places might have been important to these spirits in life, but most people who encounter a poltergeist care more about getting rid of it than learning its tragic history.
+
+Worse yet, the constant whispers of a Poltergeist tend to be insidiously distracting to those around them, and it is for this reason that powerful Neverborn sometimes bind a Poltergeist to their service, turning their anger and rage outward against the world.
+
+#### Poltergeist
+
+| Aspect | Value |
+|---|---|
+| Might | -2 |
+| Grace | 3 |
+| Speed | 2 |
+| Resilience | 1 |
+| Charm | -2 |
+| Cunning | 1 |
+| Intellect | 2 |
+| Tenacity | 2 |
+
+**Rank:** Minion (6) | **Types:** Woe, Spirit
+
+| Stat | Value |
+|---|---|
+| Defense | 5 (11) |
+| Willpower | 6 (12) |
+| Walk | 5 |
+| Charge | 6 |
+| Height | 3 |
+| Initiative | 4 (10) |
+| Wounds | 6 |
+
+**Skills:** Centering 4, Evade 3, Intimidate 3, Notice 2, Prestidigitation 2, Thrown Weapons 3, Toughness 1
+
+**Abilities:**
+- **Distracting Whispers:** Enemy characters within a2 of this character suffer − to Wp duels.
+- **Incorporeal:** This character ignores, and is ignored by, other characters and terrain during any movement. Reduce all damage this character suffers from Ranged and Close Combat attacks by half.
+- **Misery:** When an enemy character within 6 yards of this character fails a Willpower duel, it suffers 1 damage after resolving the current action.
+- **Regeneration +1:** This character heals 1 damage at the start of its turn during Dramatic Time.
+
+**Actions:**
+
+**(1) Hurl Heavy Object** (Thrown Weapons)
+AV: 6 (12) | Rg: z9 | Resist: Df
+Target suffers 2/3/4 damage.
+- Ram Crushing Strike: When damaging, the damage flip gains + for each Ram in the final duel total.
+- Mask Forceful Push: After succeeding, the target is pushed up to 3 yards in any direction and is then knocked Prone.
+
+**(1) Paranormal Activity** (Prestidigitation)
+Every character within p6 must succeed on a TN 12 Willpower duel or become Slow. This character may move any unattended objects weighing 200 lbs. or less within 6 yards to any other location within 6 yards. This Action may only be declared once per turn.
+
+---
+
+### Terror Tot
+
+Terror Tots are the youngest of the Nephilim race, but their small size belies their ruthlessness. Though they cannot yet fly, they do not lack mobility — Terror Tots use their horse-like hooves to dig into the ground and spring at their enemies. When in a hunting pack, they alternate between attacking and withdrawing to keep their prey disoriented.
+
+Upon killing their prey, Terror Tots feed upon the corpse. If a Terror Tot consumes enough blood, its body undergoes a sudden and violent transformation into a ravenous Young Nephilim.
+
+The Black Blood of the Nephilim is extremely dangerous to other creatures. Just a few drops on living flesh can eat through to the bone, and it's acidic enough to damage constructs as well. Worse yet, repeated exposure has a warping effect, gradually transforming the infected into a Nephilim in both body and mind.
+
+> **Blood Sickness:** Characters exposed to Nephilim Black Blood may contract Blood Sickness, a supernatural disease that slowly transforms them into a Nephilim. See *Under Quarantine*, pg. 152.
+
+#### Terror Tot
+
+| Aspect | Value |
+|---|---|
+| Might | 1 |
+| Grace | 3 |
+| Speed | 4 |
+| Resilience | 0 |
+| Charm | -2 |
+| Cunning | 2 |
+| Intellect | 0 |
+| Tenacity | 3 |
+
+**Rank:** Minion (5) | **Types:** Living, Nephilim
+
+| Stat | Value |
+|---|---|
+| Defense | 6 (11) |
+| Willpower | 5 (10) |
+| Walk | 6 |
+| Charge | 8 |
+| Height | 1 |
+| Initiative | 5 (10) |
+| Wounds | 4 |
+
+**Skills:** Acrobatics 1, Athletics 2, Martial Arts 1, Notice 1, Stealth 2, Track 1, Wilderness 1
+
+**Abilities:**
+- **Black Blood:** All characters without Black Blood within 1 yard suffer 1 damage when this character suffers damage.
+- **Pounce:** When an enemy character ends a push or move within this character's engagement range that is not part of a Walk or Charge Action, this character may immediately take a (1) AP Close Combat attack against the enemy character.
+- **Grow:** If this character kills a Living non-Nephilim character with a y attack, it may feast upon the character's remains to become a Young Nephilim. All damage and Conditions on this character are removed.
+
+**Actions:**
+
+**(1) Blackened Claws** (Martial Arts)
+AV: 5 (10) | Rg: y1 | Resist: Df
+Target suffers 1/2/4 damage.
+
+**(0) Sprint** (Athletics)
+This character may discard a card to take a Walk Action.
+
+---
+
+### Young Nephilim
+
+While not yet fully grown, Young Nephilim are still dangerous opponents. They grow from Terror Tots after consuming enough blood, and the growth process is both sudden and violent — bones thrust into new configurations as strained muscles tear and reknit around them.
+
+The rapid growth leaves the new Young Nephilim with a ravenous appetite that never quite leaves them, making them dangerous and reckless. They will sometimes hunt in packs of two or three, only parting once one of them has consumed enough blood to grow into a Mature Nephilim. Exactly what triggers the growth in a Young Nephilim is a mystery — some gorge themselves on entire villages without changing, while others grow larger after feasting on a single victim.
+
+#### Young Nephilim
+
+| Aspect | Value |
+|---|---|
+| Might | 3 |
+| Grace | 2 |
+| Speed | 2 |
+| Resilience | 2 |
+| Charm | -3 |
+| Cunning | 2 |
+| Intellect | -1 |
+| Tenacity | 3 |
+
+**Rank:** Minion (6) | **Types:** Living, Nephilim
+
+| Stat | Value |
+|---|---|
+| Defense | 5 (11) |
+| Willpower | 5 (11) |
+| Walk | 5 |
+| Charge | 6 |
+| Height | 2 |
+| Initiative | 4 (10) |
+| Wounds | 7 |
+
+**Skills:** Acrobatics 1, Athletics 2, Evade 3, Notice 2, Pugilism 3M, Stealth 1, Toughness 2, Track 2, Wilderness 2
+
+**Abilities:**
+- **Black Blood:** All characters without Black Blood within 1 yard suffer 1 damage when this character suffers damage.
+- **Flight:** This character is immune to falling damage and may ignore any terrain or other characters when moving.
+- **Thirst for Blood:** This character gains the Fast Condition when a Living character within 3 yards is killed by another friendly character.
+- **Mature:** If this character kills a Living non-Nephilim character of Enforcer, Henchman, or Master rank, or a character with the Fated Characteristic, with a y attack, it may feast upon the character's remains to become a Mature Nephilim. All damage and Conditions on this character are removed.
+
+**Actions:**
+
+**(1) Talons** (Pugilism)
+AV: 6M (12M) | Rg: y1 | Resist: Df
+Target suffers 2/4/5 damage.
+- Ram Blood Frenzy: After damaging, take this Action again against the same target.
+- Mask Toss Away: After damaging, push the target up to 4 yards in any direction.
+- Mask Feed the Brood: After killing the target, push the target's corpse up to 4 yards in any direction. If the corpse ends within the engagement range of a friendly Terror Tot, that Terror Tot may count as having killed the target for the purposes of its Grow ability.
+
+---
+
+### Mature Nephilim
+
+Few things in Malifaux can compare to the terror of seeing a Mature Nephilim drop from the heavens. These hulking creatures stand nearly twice as tall as a human, with strong claws that can easily tear a man apart with a single swipe. The average Mature Nephilim is more intelligent than a typical human, and this keen mind — in combination with swift speed and prodigious strength — makes it a frightening opponent. Even other Nephilim are frightened of Mature Nephilim, and they rarely have difficulty rounding up packs of their younger kin to herd toward human settlements.
+
+Nephilim never actually stop growing. Upon killing a living creature, they often stop to drink the blood that remains, which fuels their further growth.
+
+#### Mature Nephilim
+
+| Aspect | Value |
+|---|---|
+| Might | 4 |
+| Grace | 3 |
+| Speed | 3 |
+| Resilience | 4 |
+| Charm | -2 |
+| Cunning | 2 |
+| Intellect | 3 |
+| Tenacity | 3 |
+
+**Rank:** Enforcer (8) | **Types:** Living, Nephilim
+
+| Stat | Value |
+|---|---|
+| Defense | 4 (12) |
+| Willpower | 5 (13) |
+| Walk | 6 |
+| Charge | 7 |
+| Height | 3 |
+| Initiative | 5 (13) |
+| Wounds | 10 |
+
+**Skills:** Athletics 3, Evade 3, Melee 2, Notice 2, Pugilism 3M, Toughness 4, Track 2, Wilderness 3
+
+**Abilities:**
+- **Armor +1:** Reduce all damage suffered by this character by +1, to a minimum of 1.
+- **Black Blood:** All characters without Black Blood within 1 yard suffer 1 damage when this character suffers damage.
+- **Flight:** This character is immune to falling damage and may ignore any terrain or other characters when moving.
+- **Terrifying (Living) (12):** Enemy Living characters must pass a TN 12 Horror Duel when they end their turn within this character's engagement range or target this character with a harmful action.
+
+**Actions:**
+
+**(1) Monstrous Talons** (Pugilism)
+AV: 7M (15M) | Rg: y2 | Resist: Df
+Target suffers 4/5/6 damage.
+- Mask/Tome Charge Through: After succeeding against an enemy character, instead of dealing damage, push the target 4 yards away from this character. If this character is not engaged, it may take a Charge Action against a different target.
+- Mask/Crow Rip in Half: After killing the target, all enemy characters within p6 must immediately perform a TN 12 Horror Duel.
+
+---
+
+### Insidious Madness
+
+Like water running downhill and pooling in sunken gullies, there are some places in Malifaux that seem to attract madness. After enough insanity has blighted an area, it can grow into a physical entity capable of perpetuating itself in an unending cycle of nightmares and madness.
+
+Despite its horrific, ever-changing form, an Insidious Madness rarely resorts to physical aggression. Instead, it floats above the ground, moving languidly toward its victim as its grasping tentacles reach for them. No more solid than a specter, these creatures can float through walls, floors, and defended barricades with ease. Its most dangerous aspect is the twisted whispers that escape its many mouths, forming demented thoughts and hideous visions that persist long after it has drifted away.
+
+#### Insidious Madness
+
+| Aspect | Value |
+|---|---|
+| Might | -4 |
+| Grace | -2 |
+| Speed | 2 |
+| Resilience | -2 |
+| Charm | -2 |
+| Cunning | 1 |
+| Intellect | 2 |
+| Tenacity | 3 |
+
+**Rank:** Minion (5) | **Types:** Nightmare, Woe
+
+| Stat | Value |
+|---|---|
+| Defense | 4 (9) |
+| Willpower | 5 (10) |
+| Walk | 7 |
+| Charge | — |
+| Height | 2 |
+| Initiative | 3 (8) |
+| Wounds | 4 |
+
+**Skills:** Notice 1, Prestidigitation 2, Thrown Weapons 3
+
+**Abilities:**
+- **Better Part of Valor:** This character's Walk has been increased by +2, but it has no Charge Aspect.
+- **Incorporeal:** This character ignores, and is ignored by, other characters and terrain during any movement. Reduce all damage this character suffers from Ranged and Close Combat attacks by half.
+- **Insidious Whispers:** Any character that ends its turn within a3 of this character must pass a TN 8 Centering Challenge or gain the following Condition: *"Crazy +1: This character suffers -1 to the final duel total of any duel involving a Mental Aspect. She may hear voices or see things that are not actually there, at the Fatemaster's discretion."*
+
+**Actions:**
+
+**(1) Touch of Madness** (Prestidigitation/Speed)
+AV: 4 (9) | Rg: y1 | Resist: Wp
+Target suffers damage equal to the value of its Repressed Memories Condition; then, it gains the following Condition until the end of the day: *"Repressed Memories +1: This character's Initiative value is reduced by the value of this Condition, to a minimum of 0."*
+- Crow Deepest Fears: After succeeding, the target must discard a card.
+
+**(1) Psychotic Influence** (Prestidigitation/Tenacity)
+AV: 5 (10) | Rg: 9 | Resist: Wp
+Target suffers 1/2/2 damage and gains the Crazy +1 Condition (see Insidious Whispers above).
+- Crow Induce Phobia: After damaging, the target must make a TN 10 Horror Duel.
