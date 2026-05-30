@@ -380,3 +380,206 @@ If a character **wants** a spell to succeed (e.g., a healing spell):
 
 When casting a Spell or Manifested Power while on **Earth**, the Challenge Flip suffers a **-**.  
 Most spellcasters mitigate this by spending a Soulstone charge to gain a **+** on the casting duel.
+
+---
+
+## Magia
+
+A **Magia** defines the core function of a magical effect. Every Spell is built from one Magia plus any number of Immuto.
+
+### Magia Properties
+
+| Property | Description |
+|---|---|
+| **Aspect** | The Aspect used with the appropriate Magical Skill when casting |
+| **AP** | Action Points required to cast the Spell |
+| **TN** | Target Number that must be met (plus winning any opposed duel) |
+| **Resist** | Derived Aspect the target uses to resist (if any) |
+| **Range** | Distance in yards; `y` = melee range, `z` = ranged distance |
+| **Effect** | The Spell's mechanical outcome and duration |
+| **Requirements** | Special conditions that must be met; if unmet, casting automatically fails |
+
+**Spell Duration:** Measured in rounds or minutes (1 minute = 10 rounds). A Spell lasting 2 rounds ends at the start of the caster's second turn after casting.
+
+**Describing Spell Effects:** The cosmetic appearance of a Spell is up to the caster and should remain consistent. The Fatemaster/player may update aesthetics for story-based reasons (e.g., attuning to a new Grimoire). Manifested Powers especially should have a narrative backstory.
+
+---
+
+## Enchanting Magia
+
+Enchanting magic augments and enhances a target — healing, strengthening, or imbuing it with magical properties.
+
+### Animate Construct
+**AP:** 2 | **TN:** 10t | **Resist:** — | **Range:** 2y  
+**Effect:** Target inanimate construct comes to life as a subordinate character under the caster's control for **1 hour**. If it has no Rank Value, it becomes Minion (5). When the Spell ends, the construct becomes inanimate again but may be reanimated later.
+
+### Animate Limb
+**AP:** 2 | **TN:** 8t | **Resist:** — | **Range:** 2y  
+**Effect:** Target artificial limb animates under the control of the attached character for **1 week**. The character controls it as if it were her natural limb. The limb must be crafted to function generally as a normal limb but need not look like one. Alternatively, cancels the **Useless Limb Condition** on an artificial limb.  
+> If used to animate a non-mechanical (organic) limb, use the **Necromancy Skill** and change TN to **10C**.
+
+### Elemental Weapon
+**AP:** 1 | **TN:** 8t | **Resist:** — | **Range:** 2y  
+**Effect:** Target weapon (or character's body) gains the effects of an **Elemental Immuto** for **1 minute**. Any character damaged by the weapon suffers the Elemental Immuto's effects. If cast on a character, her Grappling, Martial Arts, and Pugilism attacks gain the Elemental Immuto. Casting this Spell on the same target again overwrites the first instance.  
+**Requirements:** Must include at least one Elemental Immuto.
+
+### Heal
+**AP:** 1 | **TN:** 8t | **Resist:** — | **Range:** 6y  
+**Effect:** A Living target heals **1/2/3 damage**.  
+Each additional time the same character is targeted by this Spell within the same hour (success or failure), TN increases by **+3 or +R** (caster's choice each time).
+
+### Mend Critical
+**AP:** 2 | **TN:** 12t | **Resist:** — | **Range:** 2y  
+**Effect:** Remove the **Bleeding Out Condition** or a **lasting Critical Effect** from a Living target. A lasting Critical Effect can only be removed if received within the past **1 minute** (extendable with Increased Duration Immuto).  
+If the Critical Effect destroyed or amputated a limb, this Spell causes it to regenerate — provided there is room and it hasn't been replaced with a pneumatic limb.  
+> This Spell will not revive characters killed by a Critical Effect.
+
+### Mental Enhancement
+**AP:** 1 | **TN:** 10t | **Resist:** — | **Range:** 6y  
+**Effect:** The target gains the following Condition for **1 minute**:  
+> *"Mentally Enhanced +1: This character adds +1 to her Mental Aspects, to a maximum of 5."*  
+Each additional time the same character is targeted within the same hour (success or failure), TN increases by **+3 or +R** (caster's choice).
+
+### Physical Enhancement
+**AP:** 1 | **TN:** 10t | **Resist:** — | **Range:** 6y  
+**Effect:** The target gains the following Condition for **1 minute**:  
+> *"Physically Enhanced +1: This character adds +1 to her Physical Aspects, to a maximum of 5."*  
+Each additional time a character is targeted within the same hour (success or failure), TN increases by **+3 or +R** (caster's choice).
+
+### Shapeshift
+**AP:** 2 | **TN:** Variable (see below) | **Resist:** — | **Range:** Self  
+**Effect:** The caster transforms her body (and carried clothing/equipment) into a chosen **Beast** for **1 minute**. She gains the Beast characteristic, all of the Beast's Talents and attacks, and replaces her Physical Aspects with the Beast's (which may affect Derived Aspects). While shifted she may not speak, use manufactured equipment, or cast Spells. The caster may end the Spell prematurely as a **(1) Action**.  
+**TN:** 10R + (Beast's highest Physical Aspect − caster's lowest Physical Aspect).  
+*Example: Caster Speed −2, Beast Might 4 → TN = 10R + 6 = 16R.*
+
+---
+
+## Necromancy Magia
+
+Necromancy deals with the forces of life and death, and the manipulation of others' minds.
+
+### Beckon
+**AP:** 1 | **TN:** 10C | **Resist:** Willpower | **Range:** 12y  
+**Effect:** The target moves a number of yards equal to its **Walk Aspect** directly toward the caster (ending as close as possible). On a **Margin of Success**, the caster may instead move the target a number of yards equal to its **Charge Aspect**.
+
+### Bury
+**AP:** 2 | **TN:** 14C | **Resist:** Willpower | **Range:** 6y  
+**Effect:** The target is removed from reality for **1 round**. When the Spell ends, it reappears in a safe location within line of sight and **1 yard** of the caster, unaware that any time passed.
+
+### Cadaver Mask
+**AP:** 2 | **TN:** 12C | **Resist:** — | **Range:** Touch  
+**Effect:** The caster removes the face from a target corpse and gains its appearance and voice until the **next sunrise or sunset**, at which point the face returns to the corpse. Physical appearance changes only (not clothing, height, or weight). The caster gains **++** on all Deceive Challenges to impersonate the person whose face she wears.
+
+### Interrogate
+**AP:** 1 | **TN:** 10C | **Resist:** Willpower | **Range:** 6y  
+**Effect:** A Living target must **truthfully answer one question** (asked as part of casting) to the best of its ability. The target is aware it has been magically compelled. For each **Margin of Success**, the caster may ask one additional question.  
+Each additional time the same character is targeted within the same hour (success or failure), TN increases by **+3 or +C** (caster's choice).
+
+### Mind Control
+**AP:** 2 | **TN:** 14C | **Resist:** Willpower | **Range:** 6y  
+**Effect:** The caster forces the target (not herself) to take a **1 AP Action** of her choice. The Action cannot force the target to attack itself or divulge information, but can cause actions against its nature or dangerously foolish actions.
+
+### Raise Undead
+**AP:** 3 | **TN:** 14C | **Resist:** — | **Range:** 6y  
+**Effect:** Target corpse becomes an **undead subordinate** under the caster's control for **10 minutes**, with these alterations:
+- Tenacity increased to **3**; all other Mental Aspects lowered to **−5**
+- Loses **Living** characteristic; gains **Undead** characteristic
+- Loses all Mental Aspect–linked Skills; Physical Aspect–linked Skills halved (round up)
+- Rank Value becomes **Peon (4)**
+- Raised with **half Wounds** remaining; if it acts on the round it was summoned, gains the **Slow Condition**
+
+Alternatively, may take control of an **uncontrolled Undead of Minion Rank or lower** (target may resist with Willpower). At Spell's end, the undead becomes uncontrolled (usually violent).
+
+### Subsume Corpse
+**AP:** 2 | **TN:** 10C | **Resist:** Df | **Range:** 6y  
+**Effect:** Target inanimate corpse crumbles to dust (unsuitable for future reanimation). The caster heals **1/2/3 damage**, plus additional damage equal to the corpse's **Resilience Aspect** (if positive).  
+Alternatively, if cast on a non-corpse **Undead** target: the target suffers 1/2/3 damage and the caster heals damage equal to the damage inflicted (after reduction).
+
+### Terrifying Aura
+**AP:** 2 | **TN:** 12C | **Resist:** — | **Range:** Touch  
+**Effect:** The target gains a terrifying aura for **1 minute**. Any **Living** character that ends a Walk Action within the target's engagement range, or targets the target with an Action, must attempt a **TN 10 Horror Duel**.
+
+---
+
+## Prestidigitation Magia
+
+Prestidigitation governs illusions, teleportation, and the manipulation of fate.
+
+### Conjuring
+**AP:** 1 | **TN:** 8M | **Resist:** — | **Range:** See below  
+**Effect:** The caster teleports a **previously prepared** target object to her hands.  
+- Any object the caster could carry may be **prepared** as a **(1) Action** by touching it and concentrating.
+- Max prepared objects = **Intellect Aspect** (minimum 1). Exceeding this limit requires unprepareing one.
+- Range = **Intellect Aspect in miles** (minimum 1 mile).
+
+### Divination
+**AP:** 3 | **TN:** 12M | **Resist:** — | **Range:** 10 miles  
+**Effect:** The caster enters a trance for **1 hour**, her body going limp. She can see and hear as if present at the target location (senses not augmented — darkness is still dark). She may end the Spell prematurely as a **(1) Action**. While in the trance, she may take no other Actions and automatically flips a **Black Joker** on any Defense duels.
+
+### Invisibility
+**AP:** 1 | **TN:** 10M | **Resist:** — | **Range:** Touch  
+**Effect:** The target becomes **invisible** for **1 round**. Anyone targeting her is considered to have the **Blind Condition** for that action; visual detection fails completely. She still makes sound, displaces air, and leaves footprints — non-visual detection is possible (with **−−** to Notice duels).
+
+### Parlor Tricks
+**AP:** 1 | **TN:** 6M | **Resist:** — | **Range:** 6y  
+**Effect:** The caster produces one minor effect of her choice:
+- Instantly clean and repair a target's clothes
+- Create a short, simple sound (soft bells, a single word) audible to everyone in range
+- Whisper a short sentence only audible to one target in range
+- Move a lightweight object 1 yard
+- Change the flavor of a food or drink for 10 minutes
+- Light a candle, lantern, or similar light source
+- Create a translucent, still image within range
+- Create a small orb of magical light (lantern-bright) hovering above the caster's head
+- Open an unlocked door, window, or container
+- Play soft music of the caster's choice for 10 minutes
+
+### Phantasm
+**AP:** 2 | **TN:** 12M | **Resist:** — | **Range:** 10y  
+**Effect:** The caster creates an **animated illusion** that appears real for **1 minute**. All details (what it does, how it can be sensed) must be declared at casting. The illusion does not react to external stimuli unless controlled.
+
+- Can be **seen, heard, and smelled** — not touched or tasted.
+- Has no substance; characters passing through it are unharmed.
+- Automatically fools observers with no reason to disbelieve.
+- If a character has reason to disbelieve, she may attempt a **TN 10 Centering Challenge**. On failure, she believes it is real. Physical contact = automatic disbelief.
+- The caster may take control of the illusion as a **(1) Action**, altering its form or responses until the start of her next turn.
+- The caster may end this Spell at any time without an Action.
+
+### Swirling Illusions
+**AP:** 1 | **TN:** 10M | **Resist:** — | **Range:** 6y  
+**Effect:** The caster surrounds the target in illusionary duplicates for **1 round**. The caster names a suit; any successful attack against the target that does **not** include the named suit in its final duel total is considered a **miss**. On her turn, the caster may spend a **(1) Action** to change the named suit.
+
+### Teleport
+**AP:** 2 | **TN:** 12M | **Resist:** Df | **Range:** 10y  
+**Effect:** A target within range is teleported to a **safe location** within range.  
+- May also target an **unattended object** (no resistance needed; caster just meets TN).
+- If an object is held by another character, that character may resist.
+- Cannot teleport objects directly into another character's possession — the object appears at the target's feet instead.
+
+---
+
+## Sorcery Magia
+
+Sorcery creates raw magical energy, hurling it at enemies. Sorcery Magia benefit most from Elemental Immuto.
+
+> **All Sorcery Magia require at least one Elemental Immuto.**
+
+### Elemental Engulf
+**AP:** 2 | **TN:** 12C | **Resist:** Df | **Range:** 6y  
+**Effect:** The target suffers **1/2/3 damage**.  
+**Requirements:** Must include at least one Elemental Immuto.
+
+### Elemental Nova
+**AP:** 2 | **TN:** 10C | **Resist:** — | **Range:** p2 (pulse 2)  
+**Effect:** Every character within **p2** of the caster must pass a **TN 10 Evade Challenge** or suffer **2 damage**. The Challenge TN increases by **+2 per Margin of Success** achieved by the caster.  
+**Requirements:** Must include at least one Elemental Immuto.
+
+### Elemental Projectile
+**AP:** 1 | **TN:** 10C | **Resist:** Df | **Range:** 12y  
+**Effect:** The target suffers **1/2/3 damage**.  
+**Requirements:** Must include at least one Elemental Immuto.
+
+### Elemental Strike
+**AP:** 1 | **TN:** 10C | **Resist:** Df | **Range:** Engagement  
+**Effect:** The target suffers **1/2/3 damage**.  
+**Requirements:** Must include at least one Elemental Immuto.
