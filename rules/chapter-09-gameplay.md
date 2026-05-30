@@ -464,6 +464,152 @@ Characters may also take "non-actions" (talking, dropping items, etc.) freely on
 
 ---
 
+### Combat Actions
+
+| Action | AP | Effect |
+|---|---|---|
+| **Strike** | 1 | Target a character or object within range of a readied weapon (melee or ranged) and make a single attack. |
+| **Cast Spell** | Varies | Cast a Spell or Spell-Like Manifested Power resisted by Df or Wp. Cost = Spell's AP cost. |
+| **Charge** | 2 | Move up to Charge Aspect yards in a straight line toward a visible target. Must end with target in engagement range of a readied `y` weapon. Make two (1) AP `y` attacks against the target. Cannot Charge while engaged or if movement can't reach the target. Characters with Charge "–" cannot Charge. |
+| **Shove** | 1 | Target a character within 1 yard. Make an Athletics Challenge resisted by the target's Athletics. If the Shoving character succeeds: push target 1 yard away + 1 yard per MoS. If one character has greater Height, they gain **+** to their Challenge. |
+
+---
+
+## Melee Attacks (y)
+
+Attacks with a Range including `y`. Represents the weapon's entire **threat range** (including lunges and feints), typically 1–2 yards.
+
+- Characters within range of an enemy's `y` attack are **engaged** with that enemy.
+- While engaged: may **not** make `z` attacks.
+- If a character attempts a Walk or Run Action that leaves an enemy's engagement range, the enemy may make a **disengaging strike**: a single melee attack that deals no damage but **cancels the movement** (AP is lost) if it hits.
+
+---
+
+## Projectile Attacks (z)
+
+Attacks that fire something at a target (bullets, fireballs, etc.). Much longer range than melee, but with more restrictions.
+
+- **Cannot** be made while engaged with an enemy.
+- Subject to **Cover** rules.
+- Require **line of sight (LoS)** to the target.
+
+### Targeting and Line of Sight
+
+- The attacker must know the target's rough location.
+- **Blind attacks** (no vision — darkness, Blind Condition): suffer **−−** to the attack flip.
+- **Cover** imposes additional penalties (see below).
+
+### Shooting into an Engagement
+
+When firing at an engaged target, flip one Fate Card for the engaged target and one for every other character (friend or foe) within **2 yards** of the target with LoS. Characters without LoS are not legal targets — no card flipped for them. The character with the **lowest flipped card** becomes the actual target. Fated attackers may Cheat Fate on any or all of these flips.
+
+### Cover
+
+| Cover Type | Description | Penalty |
+|---|---|---|
+| **Soft Cover** | Obscures vision without physical protection (fog, steam, hedges) | **−** to `z` attack flips |
+| **Hard Cover** | Physically stops projectiles (walls, rocks, trees). Target must still be partially visible (full concealment = no LoS) | **−** to `z` attack **and** damage flips |
+
+### Unstable Platforms
+
+Making a `z` attack while on unsteady footing (boat, jetpack, etc.) suffers **−** to the attack flip.
+
+---
+
+## Pulses and Auras
+
+| Type | Symbol | How It Works |
+|---|---|---|
+| **Pulse** | `p` | Instantaneous effect radiating from a point. Does **not** affect the character at the center. |
+| **Aura** | `a` | Continuous effect radiating from a point. **Does** affect the character at the center. |
+
+Range is listed as a number of yards (e.g., `p3`, `a5`).
+
+---
+
+## Damage
+
+Every character has a **Wounds Aspect** representing how much damage they can take. Damage temporarily reduces Wounds. At 0 or fewer Wounds, the character risks unconsciousness and Critical Effects. Healing restores Wounds up to the character's maximum.
+
+### Damage Tracks
+
+Most attacks use a **three-number damage track** (e.g., `1/2/3`), representing **Weak / Moderate / Severe** damage. Which amount is dealt is determined by a **damage flip**.
+
+### The Damage Flip
+
+A damage flip is a simple Fate Card flip (not a duel). Follow these steps:
+
+#### Step 1: Determine Accuracy Modifiers
+
+The modifier is based on the difference between attacker's and defender's final duel totals:
+
+| Difference (Attacker − Defender) | Damage Flip Modifier |
+|---|---|
+| 0–4 | − |
+| 5–10 | None |
+| 11+ | + |
+
+Additional +/− modifiers may come from weapon abilities, the Focused Condition, Hard to Wound, etc. Modifiers cancel each other out; final modifier is capped at **−−−** or **+++**.
+
+#### Step 2: Flip Cards
+
+Flip one Fate Card (plus extras for Fate Modifiers). Choose the appropriate card per Fate Modifier rules (highest for +, lowest for −). Consult the card's **numeric value** to determine damage level:
+
+| Card Value | Damage Level |
+|---|---|
+| 1–5 | Weak |
+| 6–10 | Moderate |
+| 11–14 | Severe |
+
+#### Step 3: Cheat Fate
+
+If the attacker is a Fated character and there are **no − modifiers** on the damage flip, she may Cheat Fate.
+
+#### Step 4: Apply Damage and Effects
+
+- Target suffers the appropriate damage (Weak/Moderate/Severe from the damage track).
+- Weapon/ability special effects that trigger on damage type apply now.
+- **"When damaging"** Triggers apply now.
+- If damage reduces the target to **0 Wounds or fewer**: target suffers a **Critical Effect** and must make an **Unconsciousness Challenge**.
+- After Critical Effects are resolved, **"after damaging"** Triggers apply.
+
+#### Jokers on Damage Flips
+
+| Joker | Effect |
+|---|---|
+| **Red Joker** | May be used even with − modifiers. Deals **Severe damage** and forces a **Severe Critical Effect**. |
+| **Black Joker** | Must be used even with + modifiers. **Cannot be Cheated.** Attack deals **no damage**. |
+| Both flipped | **Black Joker takes precedence.** |
+
+### Blast Damage
+
+Blast damage is denoted by `B`. When an attack deals `B` damage:
+- The primary target takes the listed damage.
+- Every other character within **2 yards per B** of the primary target suffers damage **one level lower** than what the primary target took.
+
+*Example: Weapon with 2/3B/4BB. Severe hit (4 damage): all characters within 4 yards (2×B) suffer 3 damage. Moderate hit (3 damage): all characters within 2 yards suffer 2 damage.*
+
+---
+
+## Unconsciousness
+
+When a character's Wounds drop to **0 or fewer**, she must make an **Unconsciousness Challenge**:
+> **TN 10 Toughness Challenge.** Success = nothing happens. Failure = character falls unconscious.
+
+### Unconscious Characters
+
+- Falls **Prone**.
+- Generates **no AP** on her turn; cannot take actions.
+- Has **no awareness** of surroundings.
+- **Fated character:** treated as flipping the **Black Joker** on all Defense and Willpower duels.
+- **FM character:** treated as having **Rank Value 0** for resisting attacks.
+- Remains unconscious until healed to **1+ Wound** (even if already at 1+ Wound when knocked out — still requires healing to wake up).
+- During **Narrative Time**, a character with a readied weapon may perform a **coup de grace** to automatically kill an unconscious character within 1 yard.
+
+> FM characters interact with Unconsciousness Challenges in special ways based on Rank Value (see Stations and Rank Values).
+
+---
+
 ## Mounted Combat
 
 | Husbandry Rank | Benefit |
