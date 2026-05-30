@@ -162,3 +162,88 @@ Encompasses all one-handed swords regardless of construction. Expensive due to t
 
 #### Truncheon
 A staple of constabulary forces worldwide, including the Guild. Designed to stun and confuse enemies the Guild would rather capture alive.
+
+---
+
+## Pneumatic Weapons
+
+Pneumatic weapons use the **Pneumatic Skill** and require a pneumatic limb or backpack power source.
+
+| Weapon | Range | Damage | Special | Cost | Skill |
+|---|---|---|---|---|---|
+| Pneumatic Bonesaw | y1 | 2/3/5 | Brutal, Finely Tuned, Penetrating | 35§ | 3 |
+| Pneumatic Drill | y2 | 4/5/7 | Finely Tuned, Heavy, Penetrating | 40§ | 4 |
+| Rail Driver | y2 | 2/4/5 | Finely Tuned, Penetrating, Thrown | 30§ | 3 |
+| US&E Chainsaw | y2 | 3/4/5 | Brutal, Finely Tuned | 40§ | 4 |
+| Welding Torch | y1 | 2/3/5 | Finely Tuned, Flaming, Penetrating | 40§ | 4 |
+
+### Weapon Descriptions
+
+#### Pneumatic Bonesaw
+A spinning blade attached to a pneumatic backpack power supply. Originally a surgeon's tool, now pressed into combat service — most notably by the Abyssinian armed forces.
+
+#### Pneumatic Drill
+Motorized drills designed to quickly bore through solid rock. Heavy and unwieldy as weapons. Most commonly see combat use when an unlucky miner ends up with one attached to a pneumatic limb.
+
+#### Rail Driver
+A bulky rivet gun used to sink rivets into steel rails. The weapon itself can't be thrown, but the pressurized rivets can be fired like a pneumatic gun.
+
+#### US&E Chainsaw
+Originally developed for quickly cutting down trees. Its brutal nature has made it popular among those who do frequent battle with the walking dead.
+
+#### Welding Torch
+Initially designed to weld metal. Capable of producing and maintaining a flame burning at approximately 3,500 degrees Celsius.
+
+---
+
+## Pugilism / Martial Arts Weapons
+
+These weapons enhance unarmed combat and use the **Pugilism** or **Martial Arts Skill**.
+
+| Weapon | Range | Damage | Special | Cost | Skill |
+|---|---|---|---|---|---|
+| Fighting Claw | y1 | 1/3/4 | Fistload | 8§ | 2 |
+| Knuckleduster | y1 | Special | Concealable, Finely Tuned, Fistload | 1§ | 1 |
+
+### Weapon Descriptions
+
+#### Fighting Claw
+Leather or metal gloves with attached metal blades, based on the natural claws of beasts. Can be used as slashing weapons or in combination with unarmed attacks.
+
+#### Knuckleduster
+Essentially brass knuckles. Focuses and concentrates the force of unarmed attacks, turning even a simple punch into a dangerous strike.
+
+---
+
+## Archery Weapons
+
+Archery weapons use the **Archery Skill**.
+
+| Weapon | Range | Damage | Cap. | Reload | Special | Cost | Skill |
+|---|---|---|---|---|---|---|---|
+| AG Harpoon Gun | z12 | 2/4/6 | 1 | 2 AP | Slowing, Special Ammo, Tether | 14§ | 3 |
+| Blowgun | z6 | 1/1/2 | 1 | 1 AP | Concealable, Special Ammo | 4§ | 1 |
+| Clockwork Bow | z12 | 2/3/4 | 6 | 3 AP | Full Auto | 35§ | 3 |
+| Crossbow | z18 | 2/4/6 | 1 | 2 AP | Penetrating | 15§ | 3 |
+| Longbow | z12 | 2/2/4 | — | — | Bow, Indirect | 10§ | 2 |
+| Shortbow | z8 | 2/2/3 | — | — | Bow, Indirect | 4§ | 1 |
+
+### Weapon Descriptions
+
+#### AG Harpoon Gun
+The weapon of choice for hunters of the Cult of December. Cultists added a modification allowing a strong rope to be attached to the harpoon for "reeling in" struck targets. AG Works incorporated this modification into all subsequent models; now popular among hunters of all stripes.
+
+#### Blowgun
+A hollow tube (~2 feet long) that propels a small dart by blowing into it. The dart itself is not especially dangerous — it is almost always coated in poison prior to firing.
+
+#### Clockwork Bow
+Based on the Chu-Ko-Nu of the Three Kingdoms. Holds six bolts preloaded into a top-mounted magazine. Internal pulleys automatically nock a new bolt after each shot, enabling rapid fire.
+
+#### Crossbow
+A mechanical weapon sharing more in common with a rifle than a traditional bow. A bolt is loaded and winched back for great force. In skilled hands, can match some firearms in effectiveness, especially against armored targets.
+
+#### Longbow
+A mainstay of warfare for thousands of years until the rifle's invention. Still a popular hunting tool in Malifaux's wilds, where a rifle's loud report can attract things far more deadly than a sleepy bear.
+
+#### Shortbow
+A smaller version of the longbow. Less range and stopping power, but easier to maintain and requires less practice — popular among those who only dabble in archery.
