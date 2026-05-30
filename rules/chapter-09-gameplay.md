@@ -265,3 +265,217 @@ Compare each character's **(Acting Value + Rank Value)**. Higher total wins. In 
 
 *Attack example: Bubba Joe (Minion 5, Defense 4) → Attack TN = 4 + 5 = 9.*  
 *Skill example: Wastrel (Gambling AV 3, Minion 5) → Gambling Challenge TN = 3 + 5 = 8.*
+
+### FM Character vs. Fated (FM is Aggressor)
+
+TN = FM character's **Acting Value** (numerical only, ignoring suits) + **Rank Value**.
+
+- For **attacks**: the Fated makes a **Defense or Willpower** duel against this TN.
+- For **non-attack Skills**: the Fated makes the appropriate resisting Skill duel against this TN.
+- If the FM character's attack requires a specific suit (Spell or Manifested Power), it may use suits from its own AV **and** suits in the Fated's final duel total to meet that requirement.
+
+*Example: Wastrel (Intimidate AV 3, Minion 5) → Intimidate TN = 3 + 5 = 8. Fated resists with Centering.*
+
+### Fated vs. Fated
+
+When two Fated characters duel each other:
+1. Determine aggressor and defender based on circumstances.
+2. Both characters determine their **Acting Values** and **flip Fate Cards** independently.
+3. The character with the **lower duel total** (or the **defender**, on a tie) has the **first opportunity to Cheat Fate**.
+4. After both have had the option to Cheat, the character with the **higher final duel total wins**. On a tie, the **aggressor** wins.
+
+---
+
+## Ongoing Challenges
+
+An **Ongoing Challenge** represents a large task that cannot be resolved in a single duel — such as building barricades across a town or searching an entire library. Multiple characters can contribute (or hurt) the effort.
+
+### Elements
+
+| Element | Description |
+|---|---|
+| **Name** | Descriptive name of what the characters are attempting |
+| **Skills Allowed** | 2–5 Skills usable during the challenge, each representing a different approach |
+| **Target Number** | TN applied to every individual Challenge made as part of the Ongoing Challenge |
+| **Duration** | Time required per attempt; each participating character makes one Challenge per Duration |
+| **Success Requirement** | Total successful Challenges needed to complete the Ongoing Challenge. Each **Margin of Success** counts as one additional success |
+| **Failure Requirement** | If this many total **Margins of Failure** are accumulated across all characters, the Ongoing Challenge ends in **catastrophic failure** |
+| **Effects Text** | Describes the challenge context, any special rules, and outcomes for success or catastrophic failure |
+
+### Design Guidelines
+
+- **Success Requirement:** ~2–3 per Fated character (completable in 3–5 Durations with group effort).
+- **Failure Requirement:** ~1 per Fated character (keeps players concerned about Margins of Failure).
+
+### Example: Gathering Information
+
+> Characters are asking around a crowded bar for information.
+
+- **Skills Allowed:** Barter, Bewitch, Carouse, Gambling, Intimidate
+- **Target Number:** 10
+- **Duration:** 30 minutes
+- **Success Requirement:** 6
+- **Failure Requirement:** 2
+
+*Special:* Barter and Carouse each cost **0.5 scrip** per use (bribery or buying drinks).  
+*Success:* Characters learn the information they need.  
+*Catastrophic Failure:* Questions anger the wrong people — 6 Union Thugs attack. If the Fated lose, survivors wake up stripped of weapons and valuables in an alley.
+
+---
+
+## Measuring Time
+
+### Narrative Time
+
+**Narrative Time** is the default time mode. Used whenever moment-to-moment tracking is unnecessary — travel, rest, casual interactions, investigations. The Fatemaster advances time freely. Characters can reload, cast non-harmful Spells, and take minor actions without tracking AP.
+
+### Dramatic Time
+
+**Dramatic Time** is used during combat and other high-stakes scenes. Measured in **Combat Rounds** (≈6 seconds each; ~10 rounds per minute).
+
+#### Initiative
+
+At the start of Dramatic Time, each character generates an **Initiative value**:
+- **Fated characters:** Flip a card from the Fate Deck (cannot Cheat) + **Initiative Aspect**.
+- **FM characters:** **Initiative Aspect** + **Rank Value** (no flip).
+
+Characters act in **descending Initiative order**. After all characters act, the round ends and a new round begins.
+
+**Tiebreakers (in order):**
+1. Fated character beats FM character.
+2. Higher **Speed** Aspect goes first.
+3. Players (or FM) decide on a round-by-round basis.
+
+**At the end of Dramatic Time:** Each player may discard any number of cards from her Control Hand and draw back up to **3 cards**.
+
+---
+
+## Turns
+
+Each character's turn during Dramatic Time follows these steps:
+
+1. **Start Turn Effects** — Resolve any effects that trigger at the start of the turn (player chooses order).
+2. **Generate AP** — Receive **2 General AP**. Some Conditions (Fast, Slow) may modify this.
+3. **Take Actions** — Spend AP on actions. Declare one action at a time; fully resolve it (including Triggers) before declaring the next. May declare the same action multiple times if AP allows.
+4. **End Turn Effects** — Resolve any effects that trigger at the end of the turn (player chooses order).
+
+---
+
+## Action Points (AP)
+
+AP measure the time and effort of actions during Dramatic Time. AP costs are shown in parentheses before the action name, e.g., **(1) Walk**.
+
+- Characters may only declare an action if they have enough unspent AP to pay its cost.
+- An action must be fully resolved before another is declared.
+- During **Narrative Time**, AP costs are ignored for non-combat actions.
+
+### Specific AP
+Some Talents grant AP usable only for specific action types (e.g., Melee Expert). These are added to available AP in the Generate AP step.
+
+### Free Actions (0 AP)
+Free Actions cost 0 AP. A character may only declare **one Free Action per turn**, regardless of how many she has access to.
+
+---
+
+## General Actions
+
+### Movement Actions
+
+| Action | AP | Effect |
+|---|---|---|
+| **Walk** | 1 | Move up to Walk Aspect in yards (any direction). Triggers disengaging strike if leaving engagement range. |
+| **Run** | 2 | Move up to (Walk × 2) + Athletics ranks in yards (any direction). |
+| **Drop Prone** | 1 | Character becomes Prone. |
+| **Stand Up** | 1 | Character ceases being Prone. |
+
+#### Jumping
+Done as part of a Walk, Run, or Charge Action (no extra AP).
+- **Base distance:** 0.5 yards × Height (doubled if Running or Charging).
+- **Extended jump:** TN 5 Athletics Challenge. Success adds 0.5 yards × Height + 0.5 yards per MoS (doubled if Running/Charging).
+
+#### Climbing
+| Surface | AP | Movement | Notes |
+|---|---|---|---|
+| Easily scalable (ladder) | 1 | Walk ÷ 2 yards | No Challenge needed |
+| Difficult surface | 2 | Athletics Challenge (see table) | Failure = no move; MoF = fall |
+
+| Surface | TN |
+|---|---|
+| Steep, rocky hill | 5 |
+| Tree | 8 |
+| Cobblestone wall | 10 |
+| Brick wall | 12 |
+| Wooden wall | 14 |
+| Descending | +2 |
+| Slippery surface | +1 to +3 |
+
+#### Prone Characters
+- **+ to Defense** vs. Projectile (z) attacks.
+- **− to Defense** vs. Melee (y) attacks.
+
+#### Swimming
+Done as part of a Walk or Run Action (no extra AP). Characters may **not Charge** while swimming.
+- Calm water: half speed, indefinitely.
+- Rough water (can't touch bottom): TN Athletics Challenge at start of turn. Failure = gain **Suffocating +1** and turn ends.
+
+#### Flight
+Characters with the **Flight** ability move over terrain and other characters without penalty. Still subject to disengaging strikes if not at sufficient altitude.
+- Airborne characters are treated as standing on an **unstable platform** (penalizes z attacks).
+- If a flying character becomes **Paralyzed**, it falls (up to 170 yards) but does not suffer falling damage.
+
+#### Falling
+If a character falls **3+ yards**: becomes **Prone** and suffers **2/4/6 damage** + 1 damage per additional 2 yards beyond 3 (rounded down).
+
+#### Pushes
+Forced movement (thrown, shoved, dragged):
+- Horizontal unless otherwise stated.
+- Ignores Severe Terrain movement penalties.
+- Not subject to disengaging strikes.
+- Ends immediately upon contact with an obstruction or another character.
+
+#### Severe Terrain
+Difficult terrain (underbrush, ice, shallow water, etc.) — characters move at **half speed**.
+
+#### Hazardous Terrain
+Dangerous terrain (fire, razor wire, thorns, etc.):
+- Fatemaster makes a damage flip (usually **1/2/3**) against any character that moves through or begins their turn in it. Flip occurs after movement completes.
+- A character that suffers damage from Hazardous Terrain is **immune to further damage** from that same terrain until the start of her next turn.
+
+---
+
+### Tactical Actions
+
+Characters may also take "non-actions" (talking, dropping items, etc.) freely on their turn without spending AP.
+
+| Action | AP | Effect |
+|---|---|---|
+| **Assist** | 1 | Help a willing target within 1 yard with a specific action. If the assisting character has ≥1 rank in the relevant Skill, the target adds the assisting character's Skill ranks to her final duel total on that action on her next turn. Subordinate characters contribute only half ranks (rounded up). A character may only benefit from one Assist at a time per action. |
+| **Cast Spell** | Varies | Cast a Spell or Spell-Like Manifested Power not resisted by Df or Wp. Cost = Spell's AP cost. |
+| **Defensive Stance** | 1–3 | Discard a card. Gain the **Defensive +X Condition** where X = AP spent. |
+| **Focus** | 1 | Gain **Focused +1 Condition** until the end of this turn. |
+| **Impose** | 1 | Make an Intimidate Challenge (resisted by target's Centering). On success: target suffers **−** (plus additional **−** per MoS) to any attack that doesn't include an Imposing character as a target. Lasts until start of Imposing character's next turn. |
+| **Manipulate Object** | 1 | Open a door, pull a lever, pick up an item, retrieve something from a pack, etc. |
+| **Order** | 1 | Command a subordinate character under the character's control. After the character's turn ends, the ordered subordinate immediately takes its turn. |
+| **Pass** | 1 | Do nothing; gain **+1 to Initiative** value (lasts until end of Dramatic Time). |
+| **Ready Weapon** | 1 | Draw a weapon from its holster or sheath. |
+| **Reload** | Varies | Reload a weapon with a listed Reload AP cost. AP may be spent across multiple turns. When total AP spent = Reload cost, the weapon is fully reloaded. |
+| **Trick** | 1 | Make a Deceive Challenge (resisted by target's Scrutiny). On success: gain **+** to attacks and damage flips against the target, and **+** to Defense flips against the target's attacks. Lasts until start of Tricking character's next turn. |
+| **Wait** | Named Action AP +1 | Name an action and a trigger event. When the event occurs before the start of the character's next turn, she may immediately take the named action — interrupting the triggering action before any duels resolve. If the event doesn't occur, the Wait has no effect. Each Wait lowers the character's Initiative by **−1** on subsequent turns. |
+
+---
+
+## Mounted Combat
+
+| Husbandry Rank | Benefit |
+|---|---|
+| 2+ | Can ride a non-Swarm mount into combat with one hand free for a weapon |
+| 4+ | Can guide mount with knees; both hands free |
+
+**Rules:**
+- Use the **mount's Walk Aspect** in place of the rider's Walk and Charge Aspects.
+- The mount does not take its own turn; the rider spends AP to have it act (mount counts as a subordinate character).
+- If the mount has a movement/charge Talent (e.g., Flight, Pigcharge), the rider gains that Talent while mounted.
+- If either character or mount is pushed, **both move together**.
+
+**Injury Check:** Each time the mount is injured, the rider must make a **Husbandry Challenge** (TN = 6 + damage dealt). On failure: rider is thrown, suffers **1/2/4 damage**, and becomes **Prone**. The mount likely flees.  
+*Exception:* If the mount is the rider's **Animal Companion**, she automatically passes this Challenge.
