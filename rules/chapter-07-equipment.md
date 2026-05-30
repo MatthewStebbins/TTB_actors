@@ -329,3 +329,101 @@ A seven-barrel pepperbox designed by the British Royal Navy to repel boarding pa
 
 #### Yamisaka Type 30
 Released in the mid-1890s and quickly adopted as a standard infantry rifle by the Guild and many Earth powers. Long barrel, strong action, light recoil, and excellent balance. Still considered one of the best rifles on the market a decade after release. The Three Kingdoms governments have a troubled relationship with it — rumors persist of daimyo smuggling Type 30s to arm anti-Guild revolutionary forces.
+
+---
+
+## Pistols
+
+Pistols use the **Pistol Skill**.
+
+| Weapon | Range | Damage | Cap. | Reload | Special | Cost | Skill |
+|---|---|---|---|---|---|---|---|
+| A&T Drakon | z6 | 1/2B/4B | 1 | 2 AP | Blunderbuss | 5§ | 2 |
+| Axton & Co. Model 1842 | z10 | 2/3/4 | 1 | 2 AP | — | 3§ | 1 |
+| B&D Gatling Derringer | z6 | 2/3/3 | 9 | 2 AP | Burst Fire, Concealable | 20§ | 3 |
+| B&D Pocket | z6 | 2/3/3 | 4 | 2 AP | Concealable | 7§ | 2 |
+| Clockwork Pistol | z12 | 2/4/5 | 6 | 2 AP | — | 20§ | 3 |
+| Collier Navy | z12 | 2/3/4 | 6 | 2 AP | — | 9§ | 2 |
+| Collier "Rough Rider" | z10 | 2/3/4 | 6 | 2 AP | Fan | 19§ | 3 |
+| Maucher Three-Barrel | z6 | 2/2/5 | 3 | 4 AP | Multi-Barrel | 14§ | 3 |
+| Peacebringer | z10 | 2/3/5 | 6 | 1 AP | Intimidating | 27§ | 3 |
+| Volyer Revolving | z10 | 2/3/4 | 7 | 4 AP | — | 8§ | 2 |
+| Weshorn & Smitte #3 | z12 | 2/3/4 | 6 | 1 AP | — | 19§ | 2 |
+
+### Weapon Descriptions
+
+#### A&T Drakon
+A pistol-sized blunderbuss known as a "hand cannon." Can be loaded with nails, scrap metal, or other improvised projectiles. Suffers from its compact size — limited range and force. Manufactured by Alexeivich & Tocharof Weaponsmiths Ltd. in Malifaux.
+
+#### Axton & Co. Model 1842
+Mostly military surplus from the U.S. Army arsenal at Rock Island, Illinois. A single-fire relic of another era. Features an oiled walnut stock, brass furniture, and dark blued barrel. Inexpensive and widely available.
+
+#### B&D Gatling Derringer
+Uses the same firing mechanism as a Gatling gun, scaled down to pistol size. Fires from a nine-round replaceable drum. Small enough to conceal in a boot or purse — an effective backup weapon by Blackheel & Doyle.
+
+#### B&D Pocket
+A small Blackheel & Doyle revolver designed to be concealed in a pocket or purse. Despite its size, it is a legitimate weapon — an excellent sidearm for a forward-thinking socialite.
+
+#### Clockwork Pistol
+Considered a gentleman's weapon, typically used only in self-defense. Notable exception: the Freikorps mercenary group, for whom it is standard issue.
+
+#### Collier Navy
+A double-action revolver designed as a more user-friendly companion to the "Rough Rider." Double-action prevents fanning but improves range. One of the most ubiquitous pistols in the world. Despite the name, never officially issued to any naval forces — named instead for the Battle of Alcatraz engraving on the cylinder.
+
+#### Collier "Rough Rider"
+The Model 1848 Percussion Army Revolver, known as the "Rough Rider." Named after the American cavalry unit of the second American-Texan War. Synonymous with American exceptionalism. Features the Fan special ability.
+
+#### Maucher Three-Barrel
+One of the first pistols manufactured in Malifaux. A lightweight pepperbox with three barrels. Slightly awkward but affordable and popular.
+
+#### Peacebringer
+The signature firearm of the Guild. Standard issue to Death Marshals; popular among Nephilim Hunters and Witch Hunters. Large, intimidating, high-caliber, and highly accurate. Nearly all models include a bayonet. **Not sold on the open market — possession by non-Guild members is illegal.**
+
+#### Volyer Revolving
+Designed by Elisha Volyer; produced by Marley Evens & Sons of London for the Royal Army. One of the earliest revolvers available to the public — technically a multi-cylinder single-shot rather than a true revolver. Awkward to load by modern standards but sturdy and reliable.
+
+#### Weshorn & Smitte #3
+First produced in 1870 as a direct competitor to Collier's revolvers. Officially produced for armies in North America, South America, and Europe. Many have ended up in outlaw hands over the years, tarnishing an otherwise solid reputation.
+
+---
+
+## Shotguns
+
+Shotguns use the **Shotgun Skill**.
+
+| Weapon | Range | Damage | Cap. | Reload | Special | Cost | Skill |
+|---|---|---|---|---|---|---|---|
+| AG Riot Gun | z10 | 2/3B/4B | 10 | 3 AP | Shot, Slowing (Blast damage only) | 19§ | 3 |
+| Alpine Automatic Shotgun | z12 | 2/3/4B | 12 | 4 AP | Shot | 35§ | 3 |
+| Chesterfield Model 1887 | z12 | 2/3B/5B | 5 | 3 AP | Intimidating, Shot | 19§ | 3 |
+| Chesterfield Model 1897 | z12 | 3/4B/5B | 5 | 3 AP | Shot | 29§ | 3 |
+| Collier Hammerless | z10 | 2/3B/4B | 2 | 1 AP | Multi-Barrel, Shot | 8§ | 1 |
+| Flintlock Boomer 1894 | z9 | 2/4B/5B | 1 | 3 AP | Blunderbuss, Intimidating | 9§ | 2 |
+| Solberg Inertia | z12 | 2/3B/4B | 6 | 3 AP | Shot | 9§ | 2 |
+| US&E Pump Action | z12 | 2/3B/4B | 4 | 2 AP | Shot | 4§ | 1 |
+
+### Weapon Descriptions
+
+#### AG Riot Gun
+Commissioned by the Guild to clear striking miners or protestors without killing them. Shorter barrel and increased capacity over most shotguns. Shot can be ricocheted off the ground for non-lethal but wide-spread effect — while still capable of putting down zombies or enraged Nephilim.
+
+#### Alpine Automatic Shotgun
+Alpine's attempt to improve shotgun fire rate. Revolving chambers increase capacity without sacrificing stopping power. Higher cost and longer reload time are the trade-offs. One of the better shotguns money can buy.
+
+#### Collier Hammerless
+Collier's premier shotgun. Hammers and firing mechanisms are fully internal. Breaking open the action automatically ejects spent shells. A landmark in shotgun design that spawned many imitators, none of which improved upon the original.
+
+#### Chesterfield Model 1887
+Produced after the Guild took over Chesterfield Repeating Arms. One of the first practical repeating shotguns on the market. Quickly adopted by law enforcement and stagecoach companies. Efficient, deadly, and intimidating.
+
+#### Chesterfield Model 1897
+An improved version of the '87 with a stronger receiver, lengthened stock, and heat shield. Considered one of the finest shotguns ever made — but too expensive for widespread adoption. The Guild's Breach focus led to Chesterfield's closure; remaining stock was warehoused in Malifaux before being reissued to the Elite Division.
+
+#### Flintlock Boomer 1894
+An imposing, destructive weapon infamous for its association with the Gremlin Som'er "Teeth" Jones, who has used it in bloody raids throughout the western Bayou. The association has damaged the already-struggling Flintlock company's reputation.
+
+#### Solberg Inertia
+Designed by Avlin Solberg and produced in Denmark. The first self-loading sporting shotgun, using Solberg's patented Inertia action. Only needs to be cocked once; operates on a principle similar to double-action pistols and rifles.
+
+#### US&E Pump Action
+The ubiquitous, reliable, affordable "no frills" shotgun. Popular among stagecoach drivers and frontier lawmen. Considered an excellent weapon for its price.
