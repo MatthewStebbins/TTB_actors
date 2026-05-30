@@ -463,3 +463,51 @@ These properties appear in weapon stat blocks and modify how the weapon function
 | **Stunning** | Whenever this weapon deals Severe damage, the target suffers a **Weak Critical Effect** in addition to any other Critical Effects. |
 | **Tether** | Grants the following Trigger — **R Pull and Drag:** After damaging, push the target towards you a number of yards equal to your **Might Aspect** (minimum 1 yard). |
 | **Thrown** | If thrown, this weapon has a range of **3 yards + (3 × Thrown Weapons Skill rank)**. |
+
+---
+
+## Ammunition
+
+| Ammo | Special | Cost | Skill |
+|---|---|---|---|
+| 20 Bullets/Shells | Bullet | 3§ | 1 |
+| 20 Cavity Bullets | Bullet, Cavity | 24§ | 3 |
+| 20 Torch Bullets | Bullet, Torch | 14§ | 2 |
+| 20 Wailer Bullets | Bullet, Wailer | 6§ | 2 |
+| 20 Arrows / Bolts | Bolt | 1§ | 1 |
+| 20 Piercing Arrows/Bolts | Bolt, Piercing | 5§ | 1 |
+| 20 Barbed Arrows/Bolts | Barbed, Bolt | 3§ | 2 |
+| 20 Piped Arrows/Bolts | Bolt, Piped | 5§ | 2 |
+| 5 Mortars | Special (Mortar Gun) | 25§ | 3 |
+| 5 Darts | Special (Blowgun) | 1§ | 1 |
+| 5 Grenades | Special (Grenade Launcher) | 20§ | 3 |
+| 1 Harpoon (reusable) | Special (Harpoon Gun) | 6§ | 2 |
+| 1 Fuel Tank (10 shots) | Special (Flamethrower) | 30§ | 4 |
+
+### Ammo Descriptions
+
+**Cavity Bullets** — Designed to expand on impact. Extremely effective against unnatural targets.
+
+**Torch Bullets** — Specially designed to light the walking dead on fire. Commonly called "flamers."
+
+**Wailer Bullets** — Rock-salt shells or resin-wax bullets designed to incapacitate the target rather than kill.
+
+**Piercing Arrows/Bolts** — Arrowheads designed to punch through armor.
+
+**Barbed Arrows/Bolts** — Tear at flesh when removed, making safe extraction difficult.
+
+**Piped Arrows/Bolts** — Head and shaft specially designed to channel blood from the wound.
+
+### Ammo Special Rules
+
+| Property | Effect |
+|---|---|
+| **Barbed** | A character wounded by this ammo suffers **1 damage** at the end of any turn in which it spent 2 or more AP. Removable with a **TN 15 Doctor Challenge**. |
+| **Bolt** | Can only be used with a **Bow**. |
+| **Bullet** | Can only be used with a **firearm**. |
+| **Cavity** | Gains **+** to Damage Flips against targets **without an Armor value**. Armor may still reduce damage to 0. |
+| **Piercing** | If the target is wearing Armor, this weapon **ignores 1 point of Armor** when damaging. |
+| **Piped** | If the target suffers **Severe damage**, it gains the **Bleeding Out Condition**. |
+| **Special (Weapon)** | This ammunition can only be used with the indicated weapon type. |
+| **Torch** | Characters who suffer **Severe damage** also gain **Burning +1**. |
+| **Wailer** | Imposes **−−** on Damage Flips, but the attack gains **Stunning**. |
