@@ -213,3 +213,170 @@ A **Magical Theory** is a Talent automatically gained when a character first lea
 | Pillars of Heaven | Soulstone augment grants both + and suit choice | +1 TN on Spells not Soulstone-augmented | No |
 | Hedge Magic | Chosen Elemental Immuto auto-applied to all spells free | Can cause unintended elemental effects | No |
 | Unique Magical Theory | No restrictions | No benefits | No |
+
+---
+
+## Soulstones
+
+Soulstones are rare magical gemstones that trap the souls of living creatures that die nearby. Spellcasters use trapped souls to fuel and enhance their magic.
+
+**Physical Description:**
+- Size: roughly coin-sized; larger stones exist.
+- Color: dull/cloudy gray (low quality) → fully transparent (highest quality).
+- Colored tints (red, orange, blue, green, purple, yellow) are valued for aesthetics; function identically.
+
+**Legal Status:** Guild prosecutes possession as smuggling, theft, or Arcanist activity.
+
+### Soulstone Quality & Size
+
+| Quality | Description |
+|---|---|
+| 0 | Dingy, opaque, mottled stone texture |
+| 1 | Dull color, opaque look |
+| 2 | Partially translucent |
+| 3 | Translucent |
+| 4 | Partially transparent |
+| 5 | Fully transparent |
+
+| Size | Description |
+|---|---|
+| 0 | About the size of a pea |
+| 1 | About the size of a marble |
+| 2 | About the size of a walnut |
+| 3 | About the size of a fist or apple |
+| 4 | About the size of a cantaloupe or melon |
+| 5 | About the size of a bowling ball |
+
+### Soulstone Lade
+
+**Lade** = Size + Quality. Represents the Soulstone's combined relative worth and magical capacity.  
+Example: Size 2 + Quality 3 = Lade 5.
+
+| Lade | Raw Value (uncut, in Malifaux) | Refined Value (cut & mounted) |
+|---|---|---|
+| Dust | 5§ | — |
+| 0 | 10§ | 50§ |
+| 1 | 20§ | 100§ |
+| 2 | 50§ | 500§ |
+| 3 | 100§ | 1,000§ |
+| 4 | 150§ | 5,000§ |
+| 5 | 300§ | 10,000§ |
+| 6 | 500§ | 20,000§ |
+| 7 | 1,000§ | 50,000§ |
+| 8 | 5,000§ | 100,000§ |
+| 9 | 10,000§ | 200,000§ |
+| 10 | 20,000§ | 500,000§ |
+
+> The Guild considers Earth-shipped Soulstones worth 2–3× the Refined Value, but no one in Malifaux pays that price.
+
+### Charging a Soulstone
+
+- A Soulstone becomes **charged** when a living character dies within a number of yards equal to its Lade.
+- Lade 0 stones must be **held** by the dying character to become charged.
+- If multiple eligible uncharged Soulstones are present, the one with the **highest Lade** absorbs the soul.
+- A Soulstone can only ever hold **one charge** regardless of Lade.
+
+### Using Charges
+
+#### Augment Magic
+Spend a charge from a held Soulstone when casting a Spell or Manifested Power to either:
+- Gain a **+** to the casting duel, **OR**
+- Add a **suit of your choice** to the final duel total.
+
+A character may only spend **one charge** this way per casting, regardless of how many charged Soulstones she has.
+
+#### Animate Construct
+Place a charged Soulstone in a Construct or pneumatic limb to animate it (per the **Animate Construct** or **Animate Limb** Magia). The machine remains animated for a number of **weeks equal to the Soulstone's Lade**.
+
+- If a living character dies within range and no other Soulstones are present to absorb the soul, this Soulstone does so and the duration refreshes.
+- Soulstones used this way **lose their charge if removed** from the Construct or pneumatic limb.
+
+#### Absorb Soul
+As a **(0) Action**, a character may absorb the soul in a held Soulstone to:
+- Heal **1/2/3 damage**, OR
+- Remove a **lasting Critical Effect**.
+
+This Action may target the character herself or another character **within 1 yard**.
+
+### Soulstone Dust
+
+Ground fragments left over from cutting Soulstones. A shimmering powder containing a **single charge**.
+- Once used, permanently inert.
+- If used to animate a Construct or Pneumatic Limb, animates it for **one month**.
+
+---
+
+## Grimoires
+
+A **Grimoire** is any object that contains magical formulae and incantations. Form varies widely — it need not be a book.
+
+**Example forms:**
+- Dusty leather book filled with magical formulae
+- Loose papers of borderline-mad poetry
+- Scrolls in a shifting cypher
+- Smooth stones carved with magical glyphs
+- An intricate tattoo covering arm and chest
+- A preserved spellcaster's head that repeats incantations on request
+- A bonsai tree shaped for generations that shares secrets with its caretaker (3+ months)
+- Sheets of music that impart magical knowledge when heard
+- A clock that dispenses spells on ticker tape at impossible times
+- A typewriter whose keys, in the right combination, form magical instructions
+- Notes scrawled in blood on an asylum wall
+
+### Gaining Grimoires
+
+**At character creation:** The player chooses the Grimoire's form and which Magia and Immuto it contains.
+
+**During play:** The Fatemaster determines contents.  
+- Typical contents: **2 Magia + 3 Immuto** (more or less possible; minimum 1 Magia).
+- Expected frequency: roughly **1 Grimoire every 2–3 sessions**.
+- If a Fated chooses a Pursuit with a Grimoire as a Starting Bonus, the FM should place one early in the adventure if the character doesn't already have one.
+
+### Attuning to a Grimoire
+
+- Attunement requires time spent studying or solving the Grimoire's puzzle (typically a few hours).
+- Attunement is always an **active, voluntary choice** — a character cannot be attuned against her will.
+- Multiple characters **can** attune to the same Grimoire.
+- A practitioner **cannot** access multiple Grimoires simultaneously (each Grimoire has a unique magical resonance).
+
+### Maintaining Attunement
+
+A character must **consult her Grimoire at least once per week** to keep incantations fresh.
+
+**Extended duration:** The weekly requirement is extended by a number of weeks equal to the character's **Intellect Aspect** (if positive).
+
+**If the deadline passes without consulting the Grimoire:**
+1. The character must choose one Magia or Immuto from the Grimoire.
+2. She **loses access** to the chosen Magia or Immuto until she consults the Grimoire again.
+3. This repeats each period until she consults the Grimoire or loses access to everything in it.
+4. If she loses access to **all** Magia and Immuto (excluding those from Mastered Magia/Immuto Talents), she is **no longer attuned** to the Grimoire.
+
+> **Tradition Magic exception:** Practitioners of the Tradition Magical Theory do not need to maintain attunement to their attuned Grimoire.
+
+---
+
+## Spellcasting
+
+Spellcasting involves learning magical formulae from Grimoires and combining them into a **Spell**.
+
+### How to Cast a Spell
+
+1. **Choose a Magia** — defines the primary effect and sets the base TN, AP cost, Skill/Aspect used, Range, and other variables.
+2. **Add Immuto** (optional) — each Immuto modifies the Spell's parameters; most adjust TN up or down.
+3. **Make a Magical Duel** — using the relevant Skill + Aspect.
+   - If the final duel total ≥ the Spell's TN (and the target's Defense or Willpower, if applicable), the Spell takes effect.
+
+**Example:**  
+Marcelline wants to find out who ate her cake. She uses the **Interrogate Magia** (base TN 10C) and adds the **Location Genus Immuto** (+3 TN) to affect everyone in the room. Final TN: **13C**. Each coworker resists with a Willpower duel; those who fail must answer truthfully.
+
+### Resisting Beneficial Effects
+
+If a character **wants** a spell to succeed (e.g., a healing spell):
+- She does not flip to resist — she is assumed to have "failed" the duel.
+- If the effect deals damage, the damage flip is treated as if the caster won by **11+ points** (gains a +).
+- If the character was expecting a different effect (e.g., healing but received a fireball instead), she may resist as normal.
+
+### Casting Spells on Earth
+
+When casting a Spell or Manifested Power while on **Earth**, the Challenge Flip suffers a **-**.  
+Most spellcasters mitigate this by spending a Soulstone charge to gain a **+** on the casting duel.
