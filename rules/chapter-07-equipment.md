@@ -247,3 +247,85 @@ A mainstay of warfare for thousands of years until the rifle's invention. Still 
 
 #### Shortbow
 A smaller version of the longbow. Less range and stopping power, but easier to maintain and requires less practice — popular among those who only dabble in archery.
+
+---
+
+## Heavy Guns
+
+Heavy Guns use the **Heavy Guns Skill**. Many are illegal without Guild permits or outright banned.
+
+| Weapon | Range | Damage | Cap. | Reload | Special | Cost | Skill |
+|---|---|---|---|---|---|---|---|
+| Alpine Gatling Gun | z20 | 2/3/5 | 50 | 4 AP | Deadly, Full Auto, Heavy | 45§ | 4 |
+| Flamethrower | z10 | 2/3B/4BB | 20 | 8 AP | Flaming, Intimidating, Special Ammo | 75§ | 4 |
+| Grenade Launcher | z12 | 3/3B/6BB | 4 | 4 AP | Multi-Barrel, Special Ammo | 80§ | 4 |
+| Model 1866 Six Pounder | z50 | 5/7B/9BB | 1 | 6 AP | Heavy, Loader | 500§ | 3 |
+| Mortar Gun | z50 | 5/6B/7B | 1 | 2 AP | Heavy, Indirect, Special Ammo | 100§ | 4 |
+| One-Pounder Swivel Gun | z18 | 5/7/9B | 1 | 6 AP | Heavy, Loader | 100§ | 3 |
+
+### Weapon Descriptions
+
+#### Alpine Gatling Gun
+One of Alpine's first weapons — an attempt to scale down a mobile Gatling gun for personal use. Still requires the provided brace. Initially banned by the Guild, Alpine eventually negotiated permits for purchase (~half the weapon's cost); owners are added to the Governor-Secretary's special lists.
+
+#### Flamethrower
+A product of the Black Powder Wars, rarely fielded but notorious. The Freikorps have special permission to carry them; all other possession is **illegal**. Capable of projecting a sustained stream of fire.
+
+#### Grenade Launcher
+An illegal weapon from the Black Powder Wars era. Launches an explosive payload like a rifle bullet. Banned in Malifaux.
+
+#### Model 1866 Six Pounder
+A tried-and-true cannon mounted on a two-wheeled carriage. The Guild keeps dozens in reserve; **private ownership is outlawed** in Malifaux.
+
+#### Mortar Gun
+**Outlawed by the Guild**, but a handful sneak through the Breach each year. Fires an explosive round in an arc, allowing it to go over obstacles to reach targets.
+
+#### One-Pounder Swivel Gun
+A small cannon typically mounted on pintles on boats or large wagons. Aimed via a rod attached to the breech; usually loaded with grapeshot and easy to load and fire.
+
+---
+
+## Long Arms
+
+Long Arms use the **Long Arms Skill**.
+
+| Weapon | Range | Damage | Cap. | Reload | Special | Cost | Skill |
+|---|---|---|---|---|---|---|---|
+| A&T Model 10 | z12 | 1/2B/4B | 1 | 2 AP | Blunderbuss | 3§ | 2 |
+| Alpine Machine Gun | z12 | 2/3/5 | 18 | 4 AP | Deadly, Full Auto | 25§ | 4 |
+| Chesterfield 1879 | z18 | 2/3/5 | 10 | 3 AP | Rifle | 14§ | 2 |
+| Collier Lightning 1902 | z18 | 3/3/4 | 12 | 2 AP | Rifle | 20§ | 3 |
+| Enfield Musketoon | z16 | 2/3/4 | 1 | 2 AP | Rifle | 5§ | 1 |
+| Hawken Rifle | z16 | 2/3/5 | 1 | 3 AP | Rifle | 5§ | 1 |
+| Howles Pattern 1874 | z24 | 3/5/6 | 1 | 1 AP | Rifle | 20§ | 2 |
+| Nock Volley Gun | z12 | 2/3/4 | 7 | 4 AP | Multi-Barrel | 20§ | 3 |
+| Yamisaka Type 30 | z18 | 3/4/5 | 5 | 2 AP | Rifle | 22§ | 2 |
+
+### Weapon Descriptions
+
+#### A&T Model 10
+The larger sibling to A&T's Drakon pistol. Manufactured in Malifaux by Alexeivich & Tocharof Weaponsmiths Ltd. A blunderbuss capable of firing virtually anything that fits in the barrel — lead shot, nails, scrap metal, glass shards, small rocks. Ideal for remote areas where standard ammunition may be unavailable.
+
+#### Alpine Machine Gun
+The result of Alpine's efforts to scale their Gatling gun down even further. A resounding success — now considered the best personal machine gun on the market. Demand is so high that Alpine opened a second factory to meet orders from Earth's governments.
+
+#### Chesterfield 1879
+Simple, reliable, and portable — and **outlawed by the Guild**. Legend holds that the Guild raided and destroyed the Chesterfield factories after the owner refused to sell at Guild-set prices. The 1879 models are said to carry the owner's dying curse, with every bullet finding its way to a Guild employee's heart.
+
+#### Collier Lightning 1902
+A lightweight pump-action carbine fed by a round magazine. Originally marketed to law enforcement as a rifle/shotgun hybrid. Overpriced at launch, and sales never fully recovered. Primarily found in Malifaux in the hands of wealthy hunters and treasure hunters.
+
+#### Enfield Musketoon
+A series of popular single-shot, muzzle-loading muskets from the Royal Small Arms Factory in London. Once standard-issue to British cavalry and artillery; now showing their age. Affordable and popular among budget-conscious adventurers and smaller nations.
+
+#### Hawken Rifle
+Renowned for durability and accuracy. Features a double set of triggers — pulling the rear trigger "sets" the front trigger into an extremely sensitive hair trigger. Beloved by frontiersmen; seen as a symbol of oppression by the displaced native tribes of the American Midwest.
+
+#### Howles Pattern 1874
+The most popular of the long-running Howles family of large single-shot rifles. Exceptional range and firepower even compared to modern weapons. Increasingly difficult to acquire as they are now priced more as collector's items than combat rifles.
+
+#### Nock Volley Gun
+A seven-barrel pepperbox designed by the British Royal Navy to repel boarding parties. Cumbersome and slow to reload, but capable of unleashing extraordinary destruction in a single salvo of .52 caliber slugs. Popular among retired Navy officers turned river captains in Malifaux. Highly admired by Gremlins for its impressive appearance and raw stopping power.
+
+#### Yamisaka Type 30
+Released in the mid-1890s and quickly adopted as a standard infantry rifle by the Guild and many Earth powers. Long barrel, strong action, light recoil, and excellent balance. Still considered one of the best rifles on the market a decade after release. The Three Kingdoms governments have a troubled relationship with it — rumors persist of daimyo smuggling Type 30s to arm anti-Guild revolutionary forces.
