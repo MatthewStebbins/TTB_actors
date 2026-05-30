@@ -633,3 +633,56 @@ Armor covers four locations: **Arms, Legs, Head, Chest.**
 | **Light** | Wearing Light armor on at least one location = **Lightly Armored (Armor +1)**. |
 | **Protected (Suit)** | The character **ignores the first Critical Effect** (but not damage) generated with the noted Suit during each Dramatic Time. |
 | **Shield +X** | When this character takes a Defensive Stance Action, **increase the Defensive Condition value** granted by the character's Shield value. |
+
+---
+
+## Pneumatic Limbs
+
+### Overview
+
+Pneumatic limbs are mechanical replacements for lost body parts. Attaching one requires a character with at least **Rank 3 in the Doctor Skill**. Limbs are essentially custom-fit to their owner.
+
+**Operation costs:** ~3–4 scrip per month in Soulstone Dust and maintenance. Multiple limbs can spiral a character into crippling debt. If a character cannot pay, the limb shuts down and becomes inert machinery. For vital limbs (head, torso), shutdown means death.
+
+> **Constructs** receive no mechanical benefit from pneumatic replacements — to them, it is simply a normal limb and all augment effects are ignored.
+
+> Characters with pneumatic limbs still use **Pugilism, Martial Arts, and Grappling** for unarmed attacks. Pneumatic limbs have the **Fistload** special rule.
+
+### Pneumatic Replacements
+
+| Replacement | Effect | Cost | Skill |
+|---|---|---|---|
+| Partial Limb | Fistload, Light, Augment 1 | 15§ | 1 |
+| Advanced Partial Limb | Fistload, Light, Augment 2 | 30§ | 2 |
+| Full Limb | Fistload, Heavy, Augment 2 | 20§ | 2 |
+| Advanced Full Limb | Fistload, Heavy, Augment 3 | 50§ | 3 |
+| Torso | Light, Augment 2 | 40§ | 5 |
+| Head | Light, Augment 1 | 75§ | 5 |
+
+**Partial Limb** — Replaces a hand or foot at the elbow or knee. Mass-produced limbs may require amputation of remaining tissue to fit properly.
+
+**Full Limb** — Replaces an entire limb at the shoulder or hip. Roughly the same size as the original but clearly artificial.
+
+**Advanced Limbs** — Cutting-edge designs by inventors pushing unstable technologies. Clearly masterpieces of engineering; appearance varies greatly.
+
+**Torso** — Replaces enough of the torso to keep internal organs functioning. Rare, as most accidents severe enough to require one are also fatal. If the prosthetic shuts down, the character dies.
+
+**Head** — Replaces all or most of the head with a pneumatic device. Always leaves the character somewhat "off" — mood swings are common. If the prosthetic shuts down, the character dies.
+
+### Pneumatic Augments
+
+Each pneumatic limb has a number of **augment slots** (listed as Augment X). Augments fill these slots; once all slots are filled, the limb cannot be further augmented. Fatemaster approval is required.
+
+> Most recipients never use augment slots — the cost is additional and Guild/Union credit rarely extends to them. Occasionally, the Guild or Union decides a recipient would be more productive with a specific augment and installs it without asking.
+
+### Pneumatic Limb Special Rules
+
+| Property | Effect |
+|---|---|
+| **Augment (X)** | The number of slots available in this pneumatic limb for augments. |
+| **Damaging +X** | Pugilism or Martial Arts attacks with this limb deal **+X additional damage**. |
+| **Fistload** | Pugilism and Martial Arts attacks with this limb **ignore one −** on the Damage Flip. |
+| **Heavy** | Counts as Heavy armor for armored category purposes (see Armor). |
+| **Integrated** | The character may use the integrated item as if it were in her hand at any time. |
+| **Light** | Counts as Light armor for armored category purposes (see Armor). |
+| **Pneumatic (Aspect)** | Once per session per limb, the character may use this augment to increase the noted Aspect by **+5** until the start of her next turn. |
