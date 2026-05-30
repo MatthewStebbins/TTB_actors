@@ -12,10 +12,20 @@
     <div class="ttb-item-fields">
       <label>Defense Bonus</label>
       <input type="number" name="system.defenseBonus" value="{{system.defenseBonus}}" min="0" />
-      <label>Special</label>
-      <input type="text" name="system.special" value="{{system.special}}" />
+      <label>Soak (Armor +X)</label>
+      <input type="number" name="system.soak" value="{{system.soak}}" min="0" placeholder="Damage reduction" />
+      <label>Cost (Scrip)</label>
+      <input type="number" name="system.cost" value="{{system.cost}}" min="0" />
       <label>Equipped</label>
       <input type="checkbox" name="system.equipped" {{#if system.equipped}}checked{{/if}} />
+    </div>
+    <div class="ttb-item-text-section">
+      <label>Special Rules</label>
+      <textarea name="system.special" rows="2" placeholder="Special properties...">{{system.special}}</textarea>
+    </div>
+    <div class="ttb-item-text-section">
+      <label>Description</label>
+      <textarea name="system.description" rows="3" placeholder="Item description or lore...">{{system.description}}</textarea>
     </div>
   </section>
 </form>

@@ -89,7 +89,8 @@
         "willpower": 0,
         "walk":      0,
         "charge":    0,
-        "height":    2
+        "height":    2,
+        "soak":      0
       },
       "conditions": {
         "burning":     0,
@@ -140,23 +141,48 @@
     }
   },
   "Item": {
-    "types": ["weapon", "armor", "gear"],
+    "types": ["weapon", "armor", "gear", "talent", "spell"],
     "templates": {},
     "weapon": {
-      "attackSkill": "",
-      "damage":      "",
-      "range":       "",
-      "special":     "",
-      "equipped":    false
+      "attackSkill":  "",
+      "apCost":       1,
+      "rangeType":    "melee",
+      "damageWeak":   0,
+      "damageMod":    0,
+      "damageSevere": 0,
+      "range":        "",
+      "capacity":     0,
+      "reload":       0,
+      "triggers":     "",
+      "special":      "",
+      "description":  "",
+      "equipped":     false
     },
     "armor": {
       "defenseBonus": 0,
+      "soak":         0,
       "special":      "",
+      "description":  "",
+      "cost":         0,
       "equipped":     false
     },
     "gear": {
       "quantity":    1,
-      "description": ""
+      "description": "",
+      "cost":        0
+    },
+    "talent": {
+      "pursuit":      "",
+      "requirements": "",
+      "description":  ""
+    },
+    "spell": {
+      "theory":      "",
+      "tn":          0,
+      "range":       "",
+      "duration":    "",
+      "description": "",
+      "immutos":     ""
     }
   }
 }

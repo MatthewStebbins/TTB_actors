@@ -16,7 +16,7 @@ Hooks.once("init", () => {
 
   Items.unregisterSheet("core", ItemSheet);
   Items.registerSheet("ttb-actors", TtbItemSheet, {
-    types: ["weapon", "armor", "gear"],
+    types: ["weapon", "armor", "gear", "talent", "spell"],
     makeDefault: true,
     label: "TTB.Sheet.item",
   });
@@ -34,6 +34,8 @@ async function preloadTemplates() {
     "systems/ttb-actors/templates/items/weapon-sheet.hbs",
     "systems/ttb-actors/templates/items/armor-sheet.hbs",
     "systems/ttb-actors/templates/items/gear-sheet.hbs",
+    "systems/ttb-actors/templates/items/talent-sheet.hbs",
+    "systems/ttb-actors/templates/items/spell-sheet.hbs",
   ];
   return loadTemplates(templatePaths);
 }
