@@ -797,3 +797,153 @@ A **subordinate character** is any FM character taking orders from a Fated (anim
   - **Exception:** If the subordinate has **Reactivate**, the controller may spend a second (1) Order to grant the Reactivate turn at round's end.
 - On its turn, the subordinate is controlled by the ordering Fated. It flips cards for Challenges **as if Fated** but **cannot Cheat Fate**.
 - Outside its turn, uses its **Rank Value** in place of card flips (standard FM character rules).
+
+---
+
+## Fatemaster Characters
+
+Fatemaster (FM) characters are controlled by the Fatemaster. They may be allies, villains, bystanders, or anything in between. FM characters operate differently from Fated characters in several key ways.
+
+### Rank Value
+
+FM characters do not flip cards. Instead, each has a **Rank Value** — when an FM character would flip a card, it is assumed to flip a card equal to its Rank Value.
+
+**Rank Value Table:**
+
+| Rank Title | Rank Value | Max Fate Points |
+|---|---|---|
+| Peon | 1 | 0 |
+| Minion | 5 | 1 |
+| Enforcer | 7 | 2 |
+| Henchman | 8 | 3 |
+| Master | 10 | 4 |
+| Tyrant | 14 | 5 |
+
+Rank Titles group FM characters by relative power level. Some effects specifically reference Rank Titles or deal additional effects to certain groups (e.g., bonus damage to Peons/Minions).
+
+### Fate Points
+
+FM characters each have a number of **Fate Points** representing their minor ability to influence fate.
+
+- **Using Abilities:** When an FM character must discard a card to use a Talent or ability (e.g., Flurry, Rapid Fire), it may expend 1 Fate Point instead.
+- **Starting Points:** FM characters begin each session with the maximum Fate Points for their Rank.
+- **Gaining Points:** When an FM character would draw a Twist Card (e.g., on a Fate Deck reshuffle), it instead gains 1 Fate Point, up to its Rank maximum.
+
+#### Additional Fate Point Effects (Enforcer+ only, non-subordinate)
+
+| Effect | Cost | Details |
+|---|---|---|
+| **Competence** | 1 FP | When an action is announced, gain **+** to one duel (including Df/Wp). Since FM characters don't flip, this usually imposes **-** on a Fated character's flip. |
+| **Quick Action** | 1 FP | On its turn, gain **+1 General AP**. Max 1 FP per turn for this effect. |
+| **Recovery** | 1 FP | On its turn, remove **1 Condition** affecting it. |
+| **Second Wind** | 1 FP | On its turn, **heal 2 damage**. |
+
+### Adjusting Difficulty
+
+Rank Values are not fixed — the FM is encouraged to adjust them up or down by a few points to present an appropriate encounter. A leader Gunfighter might be upgraded from Minion (5) to Enforcer (7) to represent her greater threat.
+
+### Unconsciousness Challenges
+
+| Rank | Behavior at 0 Wounds |
+|---|---|
+| **Peon / Minion** | Critical Effect automatically includes a failed Unconsciousness Challenge (immediate KO). If they can ignore the Critical Effect, they also ignore this forced failure. |
+| **Enforcer / Henchman / Master / Tyrant** | Suffer Critical Effect normally, but **automatically pass** their Unconsciousness Challenge. |
+| **All ranks** | Still make Unconsciousness Challenges from other sources (Spells, Manifested Powers, Critical Effects that specifically call for one), using Rank Value in place of a card flip. |
+
+---
+
+### Rank Titles
+
+| Rank | Description |
+|---|---|
+| **Peon** | Little threat to others. Shopkeepers, background NPCs, harmless animals. No meaningful combat role on their own. |
+| **Minion** | Threat only in large numbers. Rank-and-file soldiers, street thugs, standard enemies. The default rank for most FM characters. |
+| **Enforcer** | Received special training or significant experience. Legitimately dangerous to Fated. Often leads groups of Minions. |
+| **Henchman** | Elite movers and shakers. Capable of threatening even experienced Fated. Suitable as "boss encounters" with Enforcer/Minion support. |
+| **Master** | Singular, extraordinarily powerful individuals who control vast resources. Exist at the pinnacle of skill. Combating a Master should focus on escape, avoidance, or stalling — not direct defeat. |
+| **Tyrant** | Powers beyond mortal comprehension. Warp reality itself. Technically defeatable but effectively immortal — can never be permanently slain, only temporarily overcome. |
+
+---
+
+## Session Structure
+
+Each Through the Breach session follows three phases: **Prologue → Adventure → Epilogue**. A "session" = a single adventure resolving one Fated character's Destiny Step. Sessions may span multiple real-world gatherings.
+
+### Phase 1: The Prologue
+
+- Establishes the session's theme and sets up the adventure like a TV cold open.
+- Fated have **not yet drawn Control Hands** — no card flips occur. Anything that would require a flip means the Prologue has ended.
+- The Fatemaster decides outcomes of any Prologue actions narratively.
+- **At the end of the Prologue:** Each Fated chooses which **Pursuit** to follow for the session, gaining its *On the Pursuit* ability (and the Step 0 Talent if this is the first time choosing that Pursuit). Each Fated then draws **3 cards** from her Twist Deck to form her Control Hand.
+- *Exception:* During the **first session**, Fated do not choose a Pursuit — they already did so during character creation.
+
+### Phase 2: The Adventure
+
+- The bulk of the session's action and roleplaying.
+- The FM is encouraged to **spotlight** the first unresolved Destiny Step of one Fated character, weaving her backstory and history into the adventure.
+- Each session focuses on a different character in rotation, allowing plot lines to naturally interweave.
+- If two or more characters share the same Destiny Step, the FM may resolve both simultaneously or present the same Step through different lenses for each character.
+
+### Phase 3: The Epilogue
+
+- Wraps up minor plot threads through narration (no card flips needed).
+- Can set up the next session with hints, letters, or taunts.
+- **If a character resolved a Destiny Step this session**, she may choose one bonus:
+  - Increase one Physical or Mental Aspect by **+1**.
+  - Gain an **Ability Manifested Power** or **Spell-like Manifested Power** tied to the adventure's events.
+- Characters gain Experience Points and advance (see Character Advancement below).
+
+---
+
+## Character Advancement
+
+At the end of each session's Epilogue, characters advance in three steps:
+
+### Step 1: Pursuit Advancement
+
+- Each character advances **one step** along her current Pursuit and gains the listed Talent.
+- If a step offers a choice between two Talents, the character picks one.
+- If the session focused on an **Advanced Pursuit** relevant to the character, she may instead advance one step along that Advanced Pursuit (this replaces, not supplements, Basic Pursuit advancement).
+
+### Step 2: Gain Experience Points
+
+- Each Fated character who played in the session gains **1 XP**.
+- XP can be spent during Skill Advancement or saved. Advancing higher-ranked Skills costs more XP, so saving up is often necessary.
+
+### Step 3: Skill Advancement
+
+During the Adventure, the FM tracks which Skills had notable impact (used repeatedly, led to critical success/failure, or had thematic relevance). She selects **two** of these Skills per character as advancement options.
+
+In addition, each character's *On the Pursuit* ability lists **Pursuit Skills** always available for advancement.
+
+**Advancement costs:**
+
+| Current Skill Rank | Cost to Advance |
+|---|---|
+| 0 (untrained) | Free (gain Rank 1 at no XP cost) |
+| 1 | 1 XP |
+| 2 | 2 XP |
+| 3 | 3 XP |
+| 4 | 4 XP |
+
+Alternatively, a character may spend **1 XP** to learn a **Skill Trigger** for any Skill she has at 3+ ranks.
+
+---
+
+## Campaign Length
+
+Campaigns are designed to be **finite**. With five Destiny Steps per character, most campaigns run approximately **five sessions per Fated character**. Factors that extend length:
+
+- A Fated character dies → her player creates a new character with new Destiny Steps.
+- Players pursue **Advanced Pursuits** → the FM may dedicate a session to that Advanced Pursuit (character advances one step along it instead of resolving a Destiny Step or advancing a Basic Pursuit).
+
+### The Final Days
+
+When the last Fated resolves her final Destiny Step:
+- Wrap up loose ends and close out character histories with satisfying conclusions.
+- If needed, one or two final sessions may resolve lingering questions — no new mysteries should be introduced.
+- End the campaign gracefully while players still want more.
+
+### Starting a New Campaign
+
+New characters may hear tales of the old group's exploits, meet NPCs they knew, or even assist a former Fated with a new problem — but the **new characters are the heroes**. Former Fated characters become part of the world's history, not the new story's protagonists.
