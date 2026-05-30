@@ -4,20 +4,20 @@
     <div class="ttb-actors-header-fields">
       <h1 class="charname"><input name="name" type="text" value="{{item.name}}" /></h1>
       <div class="ttb-actors-header-details">
-        <label>Type</label><span style="color:var(--ttb-gold)">Gear</span>
+        <label>Type</label><span style="color:var(--ttb-gold)">Talent</span>
       </div>
     </div>
   </header>
   <section class="ttb-item-body">
     <div class="ttb-item-fields">
-      <label>Quantity</label>
-      <input type="number" name="system.quantity" value="{{system.quantity}}" min="0" />
-      <label>Cost (Scrip)</label>
-      <input type="number" name="system.cost" value="{{system.cost}}" min="0" />
+      <label>Pursuit</label>
+      <input type="text" name="system.pursuit" value="{{system.pursuit}}" placeholder="e.g. Gunslinger, General" />
+      <label>Requirements</label>
+      <input type="text" name="system.requirements" value="{{system.requirements}}" placeholder="e.g. Cunning 3, Pistol 2" />
     </div>
     <div class="ttb-item-text-section">
       <label>Description</label>
-      <textarea name="system.description" rows="4" placeholder="Item description...">{{system.description}}</textarea>
+      <textarea name="system.description" rows="6" placeholder="Talent effect and rules...">{{system.description}}</textarea>
     </div>
   </section>
 </form>

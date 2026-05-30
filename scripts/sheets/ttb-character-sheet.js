@@ -317,9 +317,19 @@ export class TtbCharacterSheet extends ActorSheet {
     context.grimoireEmpty = context.grimoire.length === 0;
 
     // Items by type
-    context.weapons   = allItems.filter((i) => i.type === "weapon");
-    context.armors    = allItems.filter((i) => i.type === "armor");
-    context.inventory = allItems.filter((i) => i.type === "gear");
+    context.weapons = allItems
+      .filter((i) => i.type === "weapon")
+      .map((i) => ({
+        id:            i.id,
+        name:          i.name,
+        img:           i.img,
+        system:        i.system,
+        displayDamage: `${i.system.damageWeak ?? 0}/${i.system.damageMod ?? 0}/${i.system.damageSevere ?? 0}`,
+      }));
+    context.armors       = allItems.filter((i) => i.type === "armor");
+    context.inventory    = allItems.filter((i) => i.type === "gear");
+    context.talentItems  = allItems.filter((i) => i.type === "talent");
+    context.spellItems   = allItems.filter((i) => i.type === "spell");
 
     // ── Fate Deck ──────────────────────────────────────────
     const fd         = system.fateDeck ?? {};

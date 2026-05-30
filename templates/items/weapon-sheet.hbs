@@ -9,17 +9,60 @@
     </div>
   </header>
   <section class="ttb-item-body">
-    <div class="ttb-item-fields">
+
+    <div class="ttb-item-fields ttb-item-fields-4col">
+      <label>AP Cost</label>
+      <input type="number" name="system.apCost" value="{{system.apCost}}" min="0" max="3" />
+
+      <label>Range Type</label>
+      <select name="system.rangeType">
+        <option value="melee"  {{#if (eq system.rangeType "melee")}}selected{{/if}}>Melee</option>
+        <option value="ranged" {{#if (eq system.rangeType "ranged")}}selected{{/if}}>Ranged</option>
+        <option value="thrown" {{#if (eq system.rangeType "thrown")}}selected{{/if}}>Thrown</option>
+      </select>
+
       <label>Attack Skill</label>
       <input type="text" name="system.attackSkill" value="{{system.attackSkill}}" placeholder="e.g. Pistol" />
-      <label>Damage</label>
-      <input type="text" name="system.damage" value="{{system.damage}}" placeholder="e.g. 2/4/6" />
+
       <label>Range</label>
-      <input type="text" name="system.range" value="{{system.range}}" placeholder="e.g. 10" />
-      <label>Special</label>
-      <input type="text" name="system.special" value="{{system.special}}" />
+      <input type="text" name="system.range" value="{{system.range}}" placeholder="e.g. y1, z12" />
+
+      <label>Capacity</label>
+      <input type="number" name="system.capacity" value="{{system.capacity}}" min="0" placeholder="0 = melee" />
+
+      <label>Reload</label>
+      <input type="number" name="system.reload" value="{{system.reload}}" min="0" />
+
       <label>Equipped</label>
       <input type="checkbox" name="system.equipped" {{#if system.equipped}}checked{{/if}} />
     </div>
+
+    <div class="ttb-item-damage-row">
+      <span class="ttb-damage-label">Damage</span>
+      <div class="ttb-damage-track">
+        <label>Weak</label>
+        <input type="number" name="system.damageWeak"   value="{{system.damageWeak}}"   min="0" />
+        <label>Moderate</label>
+        <input type="number" name="system.damageMod"    value="{{system.damageMod}}"    min="0" />
+        <label>Severe</label>
+        <input type="number" name="system.damageSevere" value="{{system.damageSevere}}" min="0" />
+      </div>
+    </div>
+
+    <div class="ttb-item-text-section">
+      <label>Triggers</label>
+      <textarea name="system.triggers" rows="3" placeholder="e.g. Ram Critical Strike: deal +1 damage per Ram in duel total">{{system.triggers}}</textarea>
+    </div>
+
+    <div class="ttb-item-text-section">
+      <label>Special Rules</label>
+      <textarea name="system.special" rows="2" placeholder="e.g. Capacity 6, Reload 1; ignores Hard to Wound">{{system.special}}</textarea>
+    </div>
+
+    <div class="ttb-item-text-section">
+      <label>Description</label>
+      <textarea name="system.description" rows="3" placeholder="Item description or lore...">{{system.description}}</textarea>
+    </div>
+
   </section>
 </form>

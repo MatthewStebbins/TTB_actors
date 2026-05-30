@@ -390,16 +390,16 @@
             <button type="button" class="ttb-item-create ttb-add-btn" data-type="weapon" title="Add weapon">+</button>
           </h3>
           <table class="ttb-table">
-            <thead><tr><th>E</th><th>Name</th><th>Skill</th><th>Dmg</th><th>Range</th><th>Special</th><th></th></tr></thead>
+            <thead><tr><th>E</th><th>Name</th><th>AP</th><th>Skill</th><th>Dmg</th><th>Range</th><th></th></tr></thead>
             <tbody>
               {{#each weapons}}
                 <tr data-item-id="{{id}}">
                   <td><input type="checkbox" class="ttb-item-equipped" {{#if system.equipped}}checked{{/if}} /></td>
                   <td>{{name}}</td>
+                  <td>{{system.apCost}}</td>
                   <td>{{system.attackSkill}}</td>
-                  <td>{{system.damage}}</td>
+                  <td>{{displayDamage}}</td>
                   <td>{{system.range}}</td>
-                  <td>{{system.special}}</td>
                   <td class="ttb-item-controls">
                     <button type="button" class="ttb-item-edit" title="Edit">&#9998;</button>
                     <button type="button" class="ttb-item-delete" title="Delete">&times;</button>
@@ -416,13 +416,14 @@
             <button type="button" class="ttb-item-create ttb-add-btn" data-type="armor" title="Add armor">+</button>
           </h3>
           <table class="ttb-table">
-            <thead><tr><th>E</th><th>Name</th><th>Def Bonus</th><th>Special</th><th></th></tr></thead>
+            <thead><tr><th>E</th><th>Name</th><th>Def Bonus</th><th>Soak</th><th>Special</th><th></th></tr></thead>
             <tbody>
               {{#each armors}}
                 <tr data-item-id="{{id}}">
                   <td><input type="checkbox" class="ttb-item-equipped" {{#if system.equipped}}checked{{/if}} /></td>
                   <td>{{name}}</td>
                   <td>{{system.defenseBonus}}</td>
+                  <td>{{#if system.soak}}+{{system.soak}}{{else}}—{{/if}}</td>
                   <td>{{system.special}}</td>
                   <td class="ttb-item-controls">
                     <button type="button" class="ttb-item-edit" title="Edit">&#9998;</button>
@@ -461,6 +462,55 @@
           <label>Scrip (Guilders)</label>
           <input type="number" name="system.equipment.scrip" value="{{system.equipment.scrip}}" min="0" />
         </div>
+
+        <div class="ttb-section">
+          <h3 class="ttb-section-header">
+            Talents
+            <button type="button" class="ttb-item-create ttb-add-btn" data-type="talent" title="Add talent">+</button>
+          </h3>
+          <table class="ttb-table">
+            <thead><tr><th>Name</th><th>Pursuit</th><th>Requirements</th><th></th></tr></thead>
+            <tbody>
+              {{#each talentItems}}
+                <tr data-item-id="{{id}}">
+                  <td>{{name}}</td>
+                  <td>{{system.pursuit}}</td>
+                  <td>{{system.requirements}}</td>
+                  <td class="ttb-item-controls">
+                    <button type="button" class="ttb-item-edit" title="Edit">&#9998;</button>
+                    <button type="button" class="ttb-item-delete" title="Delete">&times;</button>
+                  </td>
+                </tr>
+              {{/each}}
+            </tbody>
+          </table>
+        </div>
+
+        <div class="ttb-section">
+          <h3 class="ttb-section-header">
+            Spells
+            <button type="button" class="ttb-item-create ttb-add-btn" data-type="spell" title="Add spell">+</button>
+          </h3>
+          <table class="ttb-table">
+            <thead><tr><th>Name</th><th>Theory</th><th>TN</th><th>Range</th><th>Duration</th><th></th></tr></thead>
+            <tbody>
+              {{#each spellItems}}
+                <tr data-item-id="{{id}}">
+                  <td>{{name}}</td>
+                  <td>{{system.theory}}</td>
+                  <td>{{system.tn}}</td>
+                  <td>{{system.range}}</td>
+                  <td>{{system.duration}}</td>
+                  <td class="ttb-item-controls">
+                    <button type="button" class="ttb-item-edit" title="Edit">&#9998;</button>
+                    <button type="button" class="ttb-item-delete" title="Delete">&times;</button>
+                  </td>
+                </tr>
+              {{/each}}
+            </tbody>
+          </table>
+        </div>
+
       </div>
     </div>
 
