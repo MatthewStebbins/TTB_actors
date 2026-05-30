@@ -3117,3 +3117,362 @@ Target suffers 2/3/5 damage. This attack must declare a Trigger if possible.
 
 **(0) Delicious Egg**
 If this character is female, it may discard a card to lay a fresh egg in any space adjacent to it. While within a5 of one or more fresh eggs, Bayou Chickens gain + to their Defense flips. The egg ceases to be fresh after two weeks.
+
+
+---
+
+## Arcanists
+
+The Arcanists are a secretive organization that believes magic should be free from Guild control. They operate through the Miners and Steamfitters Union as cover, employing thugs, constructs, spellcasters, and entertainers as agents.
+
+---
+
+### Union Thug
+
+> The strong, unsubtle arm of the Union. Former convicts and rough laborers who enforce the Union's will through intimidation and violence, rewarded with good pay and legal protection.
+
+**Aspects:**
+| Aspect | Value |
+|---|---|
+| Might | 3 |
+| Grace | 0 |
+| Speed | 0 |
+| Resilience | 2 |
+| Charm | -1 |
+| Intellect | 0 |
+| Cunning | -1 |
+| Tenacity | 2 |
+
+**Rank:** Minion (5) | **Types:** Living
+
+| Stat | Value |
+|---|---|
+| Defense | 4 (9) |
+| Willpower | 4 (9) |
+| Walk | 4 |
+| Charge | 4 |
+| Height | 2 |
+| Initiative | 0 (5) |
+| Wounds | 6 |
+
+**Skills:** Athletics 2, Carouse 2, Deceive 1, Evade 2, Intimidate 3, Pugilism 2, Scrutiny 1, Toughness 1.
+
+**Abilities:**
+- **Eat Lightning:** When this character suffers damage, it gains the following Condition until the end of Dramatic Time: "Adrenaline +1: At the end of the round, this character heals exactly 1 damage and lowers this Condition's value by 1."
+- **Hand-Picked Men:** This character gains + to attack and damage flips while within 6 yards of a friendly Enforcer, Henchman, or Master.
+
+**Actions:**
+
+**(1) Brass Knuckles** (Pugilism)
+AV: 5 (10) | Rg: y1 | Resist: Df
+Target suffers 2/3/4 damage. This weapon gains + to the damage flip.
+- Ram Broken Nose: After damaging, the target becomes Dazed until all its damage is healed.
+- Crow Aim Low: After damaging, the target becomes Slow.
+
+**(1) You Lookin' At Me?** (Intimidate)
+AV: 5 (10) | Rg: 8 | Resist: Wp
+If this character is capable of being Charged by the target, the target immediately declares a Charge Action against this character, even if it is engaged. Any successful attacks made as a result of this Charge suffer -- to the damage flip. After resolving these attacks, if the target was able to declare a successful Charge, it becomes Paralyzed.
+
+---
+
+### Steamborg Executioner
+
+> Amalgamations of flesh and steel, the Steamborg Executioners are injured miners whose lives were saved — and bodies transformed — by Viktor Ramos. Nearly fanatically loyal to the Union, they are fearsome combatants capable of shrugging off tremendous punishment.
+
+**Aspects:**
+| Aspect | Value |
+|---|---|
+| Might | 4 |
+| Grace | 2 |
+| Speed | 2 |
+| Resilience | 4 |
+| Charm | -3 |
+| Intellect | 0 |
+| Cunning | 2 |
+| Tenacity | 3 |
+
+**Rank:** Henchman (9) | **Types:** Construct, Living
+
+| Stat | Value |
+|---|---|
+| Defense | 3 (12) |
+| Willpower | 5 (14) |
+| Walk | 5 |
+| Charge | 6 |
+| Height | 3 |
+| Initiative | 4 (13) |
+| Wounds | 11 |
+
+**Skills:** Acrobatics 2, Athletics 4, Carouse 2, Evade 3, Intimidate 5, Notice 2, Pugilism 3C, Toughness 5.
+
+**Abilities:**
+- **Armor +2:** Reduce all damage suffered by this character by +2, to a minimum of 1.
+- **Nimble:** This character generates an additional AP on her turn that can only be used to take a Movement General Action.
+- **Terrifying (Living) (12):** Enemy Living characters must pass a TN 12 Horror Duel when they end their turn within this character's engagement range or target this character with a harmful action.
+- **Unimpeded:** This character ignores penalties for terrain while taking Movement Actions.
+
+**Actions:**
+
+**(1) Reinforced Executioner Claw** (Pugilism)
+AV: 7C (16C) | Rg: y2 | Resist: Df
+Target suffers 4/5/6 damage.
+- Ram+Crow Decapitate: After damaging, the target must discard two Twist Cards or be killed.
+- Mask+Crow Rip in Half: After killing the target, all enemy characters within p6 must immediately perform a TN 12 Horror Duel.
+
+**(0) Vent Steam**
+Until the start of this character's next turn, the area within a4 of this character is considered to be Ht 5 soft cover.
+
+**(2) Flurry**
+This character may discard a Twist Card to take three 1 AP attack actions with a Close Combat weapon against a single target.
+
+---
+
+### Gunsmith
+
+> Elite troubleshooters of the M&SU, Gunsmiths carry heavily modified pistols loaded with specialized ammunition. Their reputation alone often resolves conflicts, but when pressed, they are devastating opponents.
+
+**Aspects:**
+| Aspect | Value |
+|---|---|
+| Might | 1 |
+| Grace | 2 |
+| Speed | 2 |
+| Resilience | 2 |
+| Charm | 1 |
+| Intellect | 1 |
+| Cunning | 2 |
+| Tenacity | 3 |
+
+**Rank:** Minion (6) | **Types:** Living
+
+| Stat | Value |
+|---|---|
+| Defense | 5 (11) |
+| Willpower | 5 (11) |
+| Walk | 5 |
+| Charge | 6 |
+| Height | 2 |
+| Initiative | 4 (10) |
+| Wounds | 7 |
+
+**Skills:** Athletics 2, Barter 2, Carouse 1, Convince 3, Enchanting 1, Evade 3, Intimidate 4, Notice 2, Pistol 4, Scrutiny 3, Stealth 1, Toughness 2.
+
+**Abilities:**
+- **Df/Wp (Mask) Return Fire:** After this character succeeds at a Defense or Willpower duel, the attacker suffers damage from one of this character's readied Pistol weapons. The damage flip receives a -.
+- **Always Ready:** This character may take a Ready Weapon Action immediately after flipping Initiative.
+- **Gunfighter:** This character may use Pistols as if they were Range y2.
+- **Hard to Kill:** This character may choose to ignore one Critical Effect per Dramatic Time.
+
+**Actions:**
+
+**(1) Custom Pistol** (Pistol)
+AV: 6 (12) | Rg: z12 or y2 | Resist: Df
+Target suffers 2/3/4 damage. If this attack was made as part of the Rapid Fire Action, increase this attack's final duel total by +2. Capacity 8, Reload 0.
+- Tome Piercing Bullet: When damaging, this attack ignores Armor and Hard to Wound.
+- Mask Experimental Bullet: When damaging, this attack deals 2/4/6 damage instead.
+- Ram Explosive Bullet: When damaging, this attack adds +B to its Moderate and Severe damage.
+- Crow Cavity Bullet: When damaging, this attack gains + to the damage flip.
+
+**(2) Rapid Fire**
+This character may discard a Twist Card to take three 1 AP attack Actions with a Ranged Combat weapon against a single target.
+
+---
+
+### Showgirl
+
+> The performers of the Star Theater are beautiful, charming, and secretly trained Arcanist agents. They assist with smuggling Soulstones, distract enemies, and wield subtle magic that serves both stage and shadow.
+
+**Aspects:**
+| Aspect | Value |
+|---|---|
+| Might | 1 |
+| Grace | 3 |
+| Speed | 2 |
+| Resilience | -2 |
+| Charm | 3 |
+| Intellect | 1 |
+| Cunning | 2 |
+| Tenacity | 1 |
+
+**Rank:** Minion (5) | **Types:** Living, Belle
+
+| Stat | Value |
+|---|---|
+| Defense | 4 (9) |
+| Willpower | 3 (8) |
+| Walk | 5 |
+| Charge | 6 |
+| Height | 2 |
+| Initiative | 4 (9) |
+| Wounds | 4 |
+
+**Skills:** Art 2, Bewitch 3, Convince 2, Deceive 3, Literacy 1, Melee 2, Music 3, Notice 2, Scrutiny 2, Stitching 2.
+
+**Abilities:**
+- **Distracting Performance:** When this character is performing in any manner, her allies within 10 yards gain + to their Deceive, Pick Pocket, and Stealth Challenges for the duration of the performance.
+- **Flick of the Wrist:** This character may use Grace in place of Might when making a Melee or Pugilism attack.
+- **Manipulative (10):** When an enemy character targets this character with an Action, they must pass a TN 10 Willpower Challenge. On a failure, this character may change the target of the Action to a legal target of its choice.
+
+**Actions:**
+
+**(1) Poisoned Hairpin** (Melee)
+AV: 5 (10) | Rg: y1 | Resist: Df
+Target suffers 1/1/2 damage and gains Poison +1.
+
+**(1) Lure** (Bewitch)
+AV: 6 (11) | Rg: 18 yards | Resist: Wp
+A Living target moves a number of yards equal to its Walk Aspect directly towards this character. This movement must end as close to this character as possible.
+- Mask Fatal Distraction: After succeeding, a friendly character within 5 yards of this character may make a 1 AP attack against the target.
+
+**(1) Expensive Gift** (Bewitch)
+AV: 6 (11) | Rg: 2 yards | Resist: Wp
+A Living target gives this character a non-weapon item held in one of its hands.
+
+---
+
+### Steamfitter
+
+> The magical backbone of the Arcanist movement, Steamfitters officially maintain Union mining constructs but are actually skilled spellcasters with access to the Arcanist's hidden vaults of magical knowledge.
+
+**Aspects:**
+| Aspect | Value |
+|---|---|
+| Might | 0 |
+| Grace | 1 |
+| Speed | 2 |
+| Resilience | 1 |
+| Charm | -1 |
+| Intellect | 2 |
+| Cunning | 2 |
+| Tenacity | -1 |
+
+**Rank:** Minion (6) | **Types:** Living
+
+| Stat | Value |
+|---|---|
+| Defense | 4 (10) |
+| Willpower | 4 (10) |
+| Walk | 5 |
+| Charge | 6 |
+| Height | 2 |
+| Initiative | 3 (9) |
+| Wounds | 6 |
+
+**Skills:** Artefacting 3, Bureaucracy 1, Centering 2, Enchanting 3R, Engineering 2, Intimidate 2, Notice 1, Scrutiny 1, Sorcery 4t, Stealth 1, Toughness 1.
+
+**Abilities:**
+- **Killswitch:** After one of this character's subordinate Constructs is killed, this character may discard a card to cause the Construct to detonate, dealing 2 damage to each character within p2 of the Construct.
+- **My Creation:** This character is accompanied by and may control a single non-Swarm Construct of Minion Rank or lower.
+
+**Actions:**
+
+**(1) Freezing Touch** (Sorcery/Intellect)
+AV: 6t (12t) | TN: 12t | Rg: y1 | Resist: Df
+Target suffers 2/3/4 damage and becomes Slow.
+
+**(1) Lightning Bolt** (Sorcery/Intellect)
+AV: 6t (12t) | TN: 12t | Rg: z10 | Resist: Df
+Target suffers 1/3/4 damage, ignoring Armor. This attack does not randomize when firing at an engaged target.
+
+**(1) Enchant Weapon** (Enchanting/Cunning)
+AV: 5R (11R) | TN: 11R | Rg: 1 | Resist: Df
+Target weapon gains one of these two effects for 1 minute:
+- Electric: This weapon's attacks ignore Armor and do not randomize when firing at an engaged target.
+- Ice: Characters damaged by this weapon become Slow.
+
+---
+
+### Oxfordian Mage
+
+> Graduates of Oxford's University of Metaphysical Studies, smuggled into Malifaux by the Arcanists. Their ritualistic casting style allows them to chain multiple Triggers, and they grow exponentially more dangerous when working together.
+
+**Aspects:**
+| Aspect | Value |
+|---|---|
+| Might | -1 |
+| Grace | 1 |
+| Speed | 0 |
+| Resilience | 2 |
+| Charm | 1 |
+| Intellect | 3 |
+| Cunning | 2 |
+| Tenacity | 3 |
+
+**Rank:** Enforcer (7) | **Types:** Living, Academic
+
+| Stat | Value |
+|---|---|
+| Defense | 4 (11) |
+| Willpower | 5 (12) |
+| Walk | 4 |
+| Charge | 4 |
+| Height | 2 |
+| Initiative | 3 (10) |
+| Wounds | 6 |
+
+**Skills:** Enchanting 3, Evade 2, History 3, Literacy 4, Mathematics 2, Necromancy 2, Notice 3, Prestidigitation 3M, Scrutiny 2, Sorcery 4t, Stealth 1, Toughness 1.
+
+**Abilities:**
+- **Counterspell:** When this character is targeted by an enemy's Magical Action, the enemy loses any suit associated with their Magical Skill.
+- **Magical Shielding:** Friendly characters within a6 reduce all damage they suffer by 1, to a minimum of 0.
+- **Ritualistic Caster:** When declaring Triggers, this character may declare any number of Triggers and may even declare the same Trigger multiple times. Each suit in this character's final duel total may only be used to pay for a single Trigger.
+- **The Ritual Has Begun:** Peon and Minion characters within a6 may take the following Action: "(2) Assist with the Ritual: A target friendly Oxfordian Mage within 6 yards gains +rtcm to its Magical skills until the end of its next turn. This Action can only be taken once per turn." Academic characters treat this Action as a (1) Action.
+
+**Actions:**
+
+**(2) Elemental Bolt** (Sorcery/Intellect)
+AV: 7t (14t) | TN: 14t | Rg: z10 | Resist: Df
+Target suffers 2/3/4 damage.
+- Tome Fire: After damaging, the target gains Burning +1.
+- Tome Ice: After damaging, the target becomes Slow.
+- Tome Electric: When damaging, this attack ignores Armor.
+- Tome Wind: After damaging, the target is pushed 2 yards in any direction.
+
+**(2) Teleport** (Prestidigitation/Intellect)
+AV: 6m (13m) | TN: 10m | Rg: 10 | Resist: Wp
+Target character or object is instantly teleported to a safe location within range.
+
+---
+
+### Soulstone Driller
+
+> Worm-like mining constructs designed by Viktor Ramos to sense and burrow toward Soulstone deposits. Equally capable in combat, they tunnel underground and burst up beneath enemies, drilling through anything in their path.
+
+**Aspects:**
+| Aspect | Value |
+|---|---|
+| Might | 3 |
+| Grace | -1 |
+| Speed | -1 |
+| Resilience | 2 |
+| Charm | -5 |
+| Intellect | -5 |
+| Cunning | -5 |
+| Tenacity | -5 |
+
+**Rank:** Minion (5) | **Types:** Construct
+
+| Stat | Value |
+|---|---|
+| Defense | 4 (9) |
+| Willpower | 3 (8) |
+| Walk | 4 |
+| Charge | 4 |
+| Height | 2 |
+| Initiative | -1 (4) |
+| Wounds | 6 |
+
+**Skills:** Athletics 2, Centering 1, Evade 3, Pneumatic 3, Toughness 1.
+
+**Abilities:**
+- **Armor +1:** Reduce all damage suffered by this character by +1, to a minimum of 1.
+- **Burrowing Charge:** When this character declares the Charge Action, it may make a single 2 AP Close Combat attack instead of two 1 AP Close Combat attacks.
+- **Rock Drill:** This character may move through solid stone without any reduction to its speed. It may leave a tunnel behind it as it moves, if it chooses.
+- **Unimpeded:** This character ignores penalties for terrain while taking Movement Actions.
+
+**Actions:**
+
+**(2) Pneumatic Drill** (Pneumatic)
+AV: 6 (11) | Rg: y2 | Resist: Df
+Target suffers 4/5/7 damage, ignoring Armor.
+- Mask Excavation: After resolving, a two yard deep, one yard wide hole is created beneath the target. The target must make a TN 10 Evade Challenge or fall into the hole and become Prone.
