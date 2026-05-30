@@ -427,3 +427,39 @@ Designed by Avlin Solberg and produced in Denmark. The first self-loading sporti
 
 #### US&E Pump Action
 The ubiquitous, reliable, affordable "no frills" shotgun. Popular among stagecoach drivers and frontier lawmen. Considered an excellent weapon for its price.
+
+---
+
+## Weapon Special Rules
+
+These properties appear in weapon stat blocks and modify how the weapon functions.
+
+| Property | Effect |
+|---|---|
+| **Blunderbuss** | + to damage flips against targets in the first third of range; − to damage flips against targets in the last third of range. |
+| **Bow** | Must be used two-handed. Does not need to be separately loaded (loading is part of the firing process). |
+| **Brutal** | This weapon gains **+** to its Damage Flip. |
+| **Burst Fire** | May fire a burst of 3 bullets as a single action. If used, add **+B** to Moderate or Severe damage, **or** add **+** to both the attack and Damage Flip. |
+| **Choking** | Characters damaged by this weapon gain the **Suffocating +1** Condition. |
+| **Concealable** | Grants **+** to any attempt to hide the weapon. |
+| **Deadly** | This weapon automatically gains **+R** to the attack flip. |
+| **Fan** | When taking the Rapid Fire Action with this weapon, gain **+2** to attack flips. |
+| **Finely Tuned** | This weapon **cannot be modified**. |
+| **Fistload** | Pugilism and Martial Arts attacks made with this weapon **ignore one −** on the Damage Flip. |
+| **Flaming** | Anyone damaged by this weapon also gains **Burning +1**. |
+| **Full Auto** | Grants the following Trigger — **R Stutter Fire:** After damaging, immediately make another attack with this weapon against a different target. This extra attack may not declare Triggers. |
+| **Heavy** | Attacking with this weapon is a **2 AP Action**. If a gun, it must be braced to a weapon mount to fire. |
+| **Indirect** | Can be fired without line of sight, but receives **−** on the attack flip and **neither attack nor damage can be cheated**. |
+| **Intimidating** | The weapon's reputation may add **+** to Intimidate Challenges involving it. |
+| **Loader** | Up to **3 characters** can work together to reload this weapon, each contributing AP to the reload. |
+| **Multi-Barrel** | May fire entire Capacity as one action to gain **+** to Damage Flip and deal **+1 damage per 2 bullets fired** (rounded down). |
+| **Penetrating** | This weapon **ignores Armor**. |
+| **Precise** | Grants the following Trigger — **R Critical Strike:** When damaging, deal **+1 damage per R** in the final duel total. |
+| **Rifle** | The range of this weapon is **increased by +10** for each + gained from the Focused Condition. |
+| **Shoddy** | This weapon **cannot declare Triggers**. |
+| **Shot** | Can be loaded with **Slugs** instead of Shot. If loaded with Slugs, the weapon **loses all B** but **gains + to its Damage Flip**. |
+| **Slowing** | The target gains the **Slow Condition** in addition to any normal damage. |
+| **Special Ammo** | Requires a specific type of ammunition to function. |
+| **Stunning** | Whenever this weapon deals Severe damage, the target suffers a **Weak Critical Effect** in addition to any other Critical Effects. |
+| **Tether** | Grants the following Trigger — **R Pull and Drag:** After damaging, push the target towards you a number of yards equal to your **Might Aspect** (minimum 1 yard). |
+| **Thrown** | If thrown, this weapon has a range of **3 yards + (3 × Thrown Weapons Skill rank)**. |
