@@ -625,3 +625,175 @@ When a character's Wounds drop to **0 or fewer**, she must make an **Unconscious
 
 **Injury Check:** Each time the mount is injured, the rider must make a **Husbandry Challenge** (TN = 6 + damage dealt). On failure: rider is thrown, suffers **1/2/4 damage**, and becomes **Prone**. The mount likely flees.  
 *Exception:* If the mount is the rider's **Animal Companion**, she automatically passes this Challenge.
+
+---
+
+## Critical Effects
+
+Critical Effects are detrimental ailments acquired after suffering significant physical damage. Usually triggered when damage reduces a character to 0 Wounds or fewer; some devastating weapons can inflict them on otherwise healthy characters.
+
+### Determining the Critical Effect
+
+1. The character that caused the Critical Effect (or the FM if no Fated caused it) flips a card from the Fate Deck. This flip has **no Fate Modifiers** and **cannot be Cheated** by either party.
+2. If the victim has 0 or fewer Wounds, add her **negative Wound total** (as a positive number) to the card value.
+3. Consult the table matching the **damage level** (Weak/Moderate/Severe) of the triggering effect.
+4. Effects without a damage level (e.g., Poison, Burning) use the **Weak** table.
+
+### Critical Effect Location
+
+The **suit** of the flipped card determines location:
+
+| Suit | Location |
+|---|---|
+| Ram | Chest |
+| Tome | Head |
+| Crow | Arm |
+| Mask | Leg |
+
+If the location cannot be affected (e.g., no arms), it defaults to **Chest**.
+
+### Instant vs. Lasting
+
+- **Instant:** Temporary penalty, usually lasting at most 1 turn.
+- **Lasting** (bold in tables): Longer or permanent until healed. No listed end condition = effectively permanent.
+- If multiple Critical Effects occur simultaneously, the attacker determines flip order.
+
+### Healing Critical Effects
+
+Lasting Critical Effects can be removed by: **Mend Critical** Magia, **Soulstone** use, or the appropriate Skill (Doctor for Living, Artefacting for Construct, Stitching for Undead).
+
+---
+
+### Weak Critical Effects Table
+
+| Modified Card Value | Effect |
+|---|---|
+| 2 or less | No effect. |
+| 3-4 | Character becomes **Dazed** until end of next turn. |
+| 5-6 | Character falls **Prone**. |
+| 7-8 | Character suffers **-** to all duels on her next turn. |
+| 9-10 | Character becomes **Slow** until end of next turn. |
+| 11-12 | Character suffers **1 damage** (does not generate a Critical Effect). |
+| 13-14 | Character becomes **Paralyzed** until end of next turn. |
+| 15+ | Generate a new Critical Effect on the **Moderate** table (treat 2 or less as 3). |
+
+---
+
+### Moderate Critical Effects Table
+
+| Modified Card Value | Effect |
+|---|---|
+| 2 or less | Generate a new Critical Effect on the **Weak** table (treat 15+ as 14). |
+| 3-4 | **Badly Bruised and Lacerated:** - to Social duels unless the wound is hidden. |
+| 5-6 | **Hyperventilating:** All action TNs +2. Each (1) Pass Action allows a Toughness Challenge (TN = 8 + negative Wounds) to end this effect on success. |
+| 7-8 | **Useless Limb** for the affected limb until end of Dramatic Time. Head or Chest: **Dazed** until end of Dramatic Time instead. |
+| 9-10 | Immediately make another **Unconsciousness Challenge** (TN = 8 + negative Wounds). |
+| 11-12 | **Deep Tissue Damage:** Critical Effect modified values targeting this location are increased by **+2**. |
+| 13-14 | **Seeping Wound:** At start of turn, become Slow OR suffer **2 damage** that generates a Weak Critical Effect. |
+| 15+ | Generate a new Critical Effect on the **Severe** table (treat 2 or less as 3). |
+
+---
+
+### Severe Critical Effects Table
+
+| Modified Card Value | Effect |
+|---|---|
+| 2 or less | Generate a new Critical Effect on the **Moderate** table (treat 15+ as 14). |
+| 3-4 | Major organ/component damaged: **2 damage** that does not generate a Critical Effect. |
+| 5-6 | **Broken Bone:** Location rendered useless. Arm/Leg = Useless Limb. Head = - to all Mental Challenges. Chest = - to all Physical Challenges. |
+| 7-8 | **Bleeding Out +1** Condition. |
+| 9-10 | **Nervous System Trauma:** When declaring specified action (Legs: Walk/Run/Charge; Arms: Strike/Shove; Head: Focus/Cast Spell; Chest: Defensive Stance/Impose), make an **Unconsciousness Challenge** (TN = 8 + negative Wounds). |
+| 11-12 | **Crippled:** Location permanently useless. Arm/Leg = permanent Useless Limb. Head = one eye destroyed (Blind, or only - if one eye remains). Chest = cannot declare actions, can only whisper. |
+| 13-14 | **Agonizing Pain:** Generates **one fewer General AP** per turn during Dramatic Time. |
+| 15-16 | **Gushing Wound:** At end of each turn, gains **Bleeding Out +1**. Ending Bleeding Out does not end this effect. |
+| 17-18 | Severs an artery: **Bleeding Out +3** (Doctor Challenge TN increased by number of negative Wounds). If Living, **Unconsciousness Challenge** (TN = 8 + negative Wounds). |
+| 19-20 | **Amputated:** Arm/Leg destroyed + **Bleeding Out +5**. Head or Chest = character **killed messily**. Cannot be removed unless the removing effect names it. If Living, **Unconsciousness Challenge** (TN = 10 + negative Wounds). |
+| 21+ | **Bloody Mess:** As 19-20, plus every Living character within p4 must make a **Horror Duel** (TN = 8 + half Rank Value rounded up, or TN 14 if target was Fated). |
+
+---
+
+## Conditions
+
+Ongoing effects characters can acquire in various ways.
+
+### Stacking Rules
+
+- Conditions **with a value** (e.g., Poison +1) stack into a single Condition. Ends when value reaches 0.
+- Conditions **without a value** do not stack (gaining Slow a second time does nothing extra).
+- If the same Condition is gained with multiple durations, the **longest duration takes precedence**.
+
+---
+
+### Condition Reference
+
+| Condition | Effect | Notes |
+|---|---|---|
+| **Blind** | -- to any action requiring sight. | Until removed. |
+| **Bleeding Out +X** | At end of turn, value +1. At Bleeding Out +10, character **dies**. Any character may use (2) Doctor Action TN 15 to end it (TN 20 if self-treating). | Only affects Living. |
+| **Burning +X** | At end of turn, suffer damage = value, then Condition ends. Characters within 1 yard may spend (1) AP to reduce value by 1. | Ends after damage. |
+| **Crazy +X** | Subtract value from final total of any Mental Aspect duel. May cause hallucinations (FM discretion). TN 15 Centering Challenge at start of day to lower value by 1. | Stacking. |
+| **Dazed** | TN of every action +2. | Usually until end of next turn. |
+| **Defensive +X** | + to Defense duels per value (max +++ at Defensive +3). | Until start of character's next turn. |
+| **Fast** | +1 General AP per turn. If gained mid-turn, gain 1 AP immediately. Cancels Slow (both removed). | Until end of character's turn. |
+| **Focused +X** | When declaring an action, may end Focused to gain + per value (max +++ at Focused +3). Ends automatically at end of turn if unused. | Until end of character's turn. |
+| **Intoxicated** | - to all Willpower duels. Gaining again = Poison +1 instead. | 10 minutes. Only affects Living. |
+| **Paralyzed** | No AP, no Actions. If gained mid-turn, turn ends immediately. If gained at end of turn, lasts until end of next turn. Cancels Reactivate (both removed). | Until end of turn (or next turn). |
+| **Poison +X** | At end of turn, suffer 1 damage, then value -1. | Stacking. Generally only affects Living. |
+| **Reactivate** | At end of round, may take one additional turn (in Initiative order). Max one extra turn per round regardless of stacking. Cancels Paralyzed (both removed). | Ends after extra turn. |
+| **Slow** | -1 General AP (minimum 1). If gained mid-turn, lose 1 AP immediately. Cancels Fast (both removed). | Until end of character's turn. |
+| **Suffocating +X** | At end of turn: Toughness duel TN = value or fall unconscious. If already unconscious: 3/4/5 unblockable damage. Reduced to 0 Wounds = **killed**. Ends when able to breathe. | Only affects Living. |
+| **Surprised** | Treated as **Slow** on first turn of Dramatic Time. | First turn only. |
+| **Useless Limb** | Arm: -- to duels using that arm. Leg: Walk -2 (min 1), cannot Run or Charge, -- to duels using that leg. | Until healed. |
+
+---
+
+## Healing
+
+### Natural Healing
+
+At the start of each day, every **Living** character who slept at least **6 hours** makes a **1/2/3 healing flip** (may be Cheated).
+
+### Healing Damage
+
+Healing restores Wounds up to the character's maximum. Healing flips work like damage flips: flip **one card**, usually **no Fate Modifiers**.
+
+**Healing Flip Table:**
+
+| Card Value | Amount Healed |
+|---|---|
+| Black Joker | None |
+| 1-5 | Weak |
+| 6-10 | Moderate |
+| 11-13 | Severe |
+| Red Joker | All damage |
+
+### Sleep and Fatigue
+
+Living characters need at least **6 hours of sleep** per night. Those who do not are **Dazed** until they sleep for 6+ hours.
+
+---
+
+## Horror Duels
+
+When a character encounters something truly terrifying, she must pass a **Horror Duel** or become **Paralyzed**. Once she succeeds at a Horror Duel from a specific source, she is **immune** to future Horror Duels from that source until the end of Dramatic Time.
+
+### Fated Characters Resisting Horror
+Make a **Willpower duel** against the noted TN.
+
+### Fated Characters Causing Horror
+The Fated uses **half the Horror Duel TN (rounded up)** as her Acting Value. The target makes a Willpower duel to resist. On success (attacker wins): target Paralyzed. On failure: target is considered to have succeeded at the Horror Duel.
+
+---
+
+## Subordinate Characters
+
+A **subordinate character** is any FM character taking orders from a Fated (animated undead, constructs, hired mercenaries, etc.). Characters controlled by an FM character are **not** subordinate, regardless of what would otherwise make them so.
+
+### Subordinate Characters in Combat
+
+- Do **not** generate Initiative; do **not** automatically receive a turn.
+- When a Fated uses the **(1) Order Action**, the subordinate **immediately takes its turn** after the Fated's turn ends.
+- A subordinate can only receive **one turn per round**, no matter how many Order Actions are taken.
+  - **Exception:** If the subordinate has **Reactivate**, the controller may spend a second (1) Order to grant the Reactivate turn at round's end.
+- On its turn, the subordinate is controlled by the ordering Fated. It flips cards for Challenges **as if Fated** but **cannot Cheat Fate**.
+- Outside its turn, uses its **Rank Value** in place of card flips (standard FM character rules).
