@@ -2381,3 +2381,379 @@ Target suffers damage equal to the value of its Repressed Memories Condition; th
 AV: 5 (10) | Rg: 9 | Resist: Wp
 Target suffers 1/2/2 damage and gains the Crazy +1 Condition (see Insidious Whispers above).
 - Crow Induce Phobia: After damaging, the target must make a TN 10 Horror Duel.
+
+---
+
+### Doppleganger
+
+While all Neverborn tend to be shapechangers to one extent or another, it is the Doppleganger that comes to mind when the subject is brought up in conversation. There is some debate as to just what a Doppleganger's natural form might look like, as all of them encountered by humanity have worn a human face — often one borrowed from a murdered victim.
+
+A Doppleganger is able to change its physical form with a thought, its flesh shifting and twisting until it settles on the desired form. The only restriction is that, to copy a specific person's appearance, the Doppleganger must be relatively close to its target; a likeness from a photograph is not enough. Once it finds a person whose form it wishes to steal, it usually waits until that person is alone before attacking while its target is surprised by the transformation. Above all else, Dopplegangers are patient and crafty, often spending weeks, months, or even years impersonating their victim to accomplish their mysterious goals.
+
+#### Doppleganger
+
+| Aspect | Value |
+|---|---|
+| Might | 1 |
+| Grace | 2 |
+| Speed | 3 |
+| Resilience | 1 |
+| Charm | 2 |
+| Cunning | 3 |
+| Intellect | 1 |
+| Tenacity | 3 |
+
+**Rank:** Enforcer (7) | **Types:** Living, Woe, Mimic
+
+| Stat | Value |
+|---|---|
+| Defense | 5 (12) |
+| Willpower | 5 (12) |
+| Walk | 6 |
+| Charge | 7 |
+| Height | 2 |
+| Initiative | 6 (13) |
+| Wounds | 8 |
+
+**Skills:** Carouse 1, Convince 4, Deceive 5, Enchanting 4, Forgery 3, Intimidate 2, Leadership 2, Melee 3, Notice 3, Pick Pocket 2, Pistol 3, Scrutiny 3, Stealth 3, Toughness 3
+
+**Abilities:**
+- **Manipulative (11):** When an enemy character targets this character with an Action, they must pass a TN 11 Willpower Challenge. On a failure, this character may change the target of the Action to a legal target of its choice.
+- **Which One Is Real?:** When another character randomizes between targets in a melee involving this character, this character may discard a card to have the attack target a character of its choice.
+
+**Actions:**
+
+**(1) Sharp Knife** (Melee)
+AV: 4 (11) | Rg: y1 | Resist: Df
+Target suffers 1/2/4 damage. If the target is engaged with at least one other character it considers to be an enemy, the attack deals +2 damage.
+- Ram Vital Strike: When damaging, this attack deals +2 damage and the target gains Slow.
+
+**(0) Mimic** (Enchanting)
+This character changes its appearance (including clothing, but not weapons) to match that of another humanoid character within 8 yards. This duplication is perfect, including the target's voice, scars, and birthmarks, even if this character is unaware of them. If the target has any pneumatic limbs, this character's body changes in appearance and texture to mimic the pneumatic, but the limbs do not actually become mechanical. This change lasts until this character takes this Action again (even if this character is killed).
+
+---
+
+### Waldgeist
+
+In Malifaux, the phrase "the trees have eyes" is not a metaphor. At times, the trees do have eyes, as well as hungry mouths and sharp claws. Typically non-violent, the Waldgeists have been roused to anger by their Neverborn brethren, who point to the destruction of the Waldgeists' forests by lumberjacks as a valid reason for marching to war against the encroaching threat of humanity.
+
+Even then, Waldgeists must frequently be coaxed into battle, often by calling upon eldritch magics to bind the tree spirits into service. Those without such powerful magic frequently offer up living flesh to the ancient trees, who are more than happy to accept such offerings as nourishment for their roots. Once roused, Waldgeists are frustrating enemies — their thick bark makes it difficult to deal significant damage, and they can force roots to burst from the ground to entangle enemies' legs. Even in urban settings they remain dangerous, forcing young plants to burst from the ground at their command.
+
+#### Waldgeist
+
+| Aspect | Value |
+|---|---|
+| Might | 4 |
+| Grace | 3 |
+| Speed | 2 |
+| Resilience | 3 |
+| Charm | -2 |
+| Cunning | 3 |
+| Intellect | 0 |
+| Tenacity | 3 |
+
+**Rank:** Minion (5) | **Types:** Living, Swampfiend, Beast
+
+| Stat | Value |
+|---|---|
+| Defense | 4 (9) |
+| Willpower | 5 (10) |
+| Walk | 5 |
+| Charge | 6 |
+| Height | 2 |
+| Initiative | 5 (10) |
+| Wounds | 7 |
+
+**Skills:** Enchanting 4M, Evade 4, Notice 3, Stealth 2, Toughness 1, Track 3, Wilderness 4
+
+**Abilities:**
+- **Armor +2:** Reduce all damage suffered by this character by +2, to a minimum of 1.
+- **Walking Tree:** This character is indistinguishable from a normal tree when not moving.
+- **Unimpeded:** This character ignores penalties for terrain while taking Movement Actions.
+
+**Actions:**
+
+**(1) Tangling Roots** (Enchanting/Cunning)
+AV: 7M (12M) | Rg: y2 | Resist: Df
+Target suffers 2/3/5 damage. While this character is touching severe terrain, increase the range of this attack to y4.
+- Mask/Mask Entangle: After damaging, the target gains Slow.
+- Mask/Tome Entrench: After damaging, the target gains the following Condition until the end of its next turn: *"Rooted: This character may not take Walk or Charge Actions. If this character is pushed, this character suffers 3 damage, then end this Condition."*
+
+**(1) Germinate**
+This character creates an area of thick vegetation that counts as severe terrain anywhere within 8 yards. The area is 3 yards in diameter and lasts indefinitely.
+
+---
+
+### Stitched Together
+
+Bad dreams have a way of clinging to a person's thoughts even after waking. In Malifaux, they sometimes follow the dreamer into the waking world. The influence of the Dreamer (a child bonded to the Tyrant known as Nytemare) has allowed some bad dreams to step fully into reality. The Stitched Together are one of these persistent nightmares, originally imagined by a gambler whose bookie threatened to dismember him if he didn't pay his debts.
+
+Taking the form of horrible burlap puppets stuffed with rotten meat and offal, Stitched Together stalk the living, tormenting those who cross their path — often forcing their victims to wager parts of themselves in crooked games of chance that few people ever win. After slaying a victim, a Stitched Together will shove its dismembered body into a burlap sack, creating another of its twisted kind to stalk the waking world.
+
+#### Stitched Together
+
+| Aspect | Value |
+|---|---|
+| Might | 2 |
+| Grace | -2 |
+| Speed | -1 |
+| Resilience | 2 |
+| Charm | -4 |
+| Cunning | 2 |
+| Intellect | 0 |
+| Tenacity | 3 |
+
+**Rank:** Minion (6) | **Types:** Construct, Doll, Nightmare
+
+| Stat | Value |
+|---|---|
+| Defense | 4 (10) |
+| Willpower | 5 (11) |
+| Walk | 4 |
+| Charge | 6 |
+| Height | 2 |
+| Initiative | 2 (8) |
+| Wounds | 7 |
+
+**Skills:** Convince 2, Enchanting 3C, Evade 2, Gambling 3M, Intimidate 2, Melee 3, Notice 3, Toughness 2
+
+**Abilities:**
+- **Eternal Nightmare:** If this character suffers damage that would reduce it to 0 Wounds or lower, it may discard a card to heal 3 Wounds and gain Reactivate.
+- **Rotten Contents:** When this character suffers a Critical Effect or is killed, all Living characters within p2 must succeed at a TN 12 Carouse Challenge or gain Poison +2.
+- **Rush +2:** This character's Charge Aspect has been increased by +2.
+
+**Actions:**
+
+**(1) Hook Hands** (Melee)
+AV: 5 (11) | Rg: y1 | Resist: Df
+Target suffers 1/2/4 damage.
+
+**(1) Gamble Your Life** (Gambling/Cunning)
+AV: 5m (11m) | TN: 10M | Rg: y1 | Resist: Df
+Target suffers 3/4/6 damage. If the target successfully resists this attack, this character suffers 3/4/6 damage. Damage flips generated by this Manifested Power may not be Cheated and ignore all + and − modifiers. This Action can only be declared once per turn.
+
+**(1) The Mist** (Enchanting/Cunning)
+AV: 5C (11C) | TN: 10C
+Until the start of this character's next turn (or the start of its controller's next turn, if this character is a subordinate), the area within a4 of this character is considered to be Ht 3 soft cover.
+
+---
+
+### Marionette
+
+Though made of wood, these puppets are able to act mostly on their own, though they are still bound by the strings of their creation, forced to dance whenever the puppetmaster flicks her fingers. Originally crafted by the puppetmaster known as Collodi — each one holds the trapped soul of a child — the secret to creating a Marionette has unfortunately spread to others.
+
+Marionettes can walk around of their own volition and may attack anyone they see as a threat to their owner. While newly created Marionettes tend to fall into depression, time eventually shatters their minds, turning them into cruel predators that can only soothe their pain by hurting others. The authorities in some Contract Towns have taken to outlawing all forms of puppet shows; any puppets found are dismembered and burnt.
+
+#### Marionette
+
+| Aspect | Value |
+|---|---|
+| Might | -1 |
+| Grace | 2 |
+| Speed | 2 |
+| Resilience | 0 |
+| Charm | 1 |
+| Cunning | 2 |
+| Intellect | -3 |
+| Tenacity | 3 |
+
+**Rank:** Minion (5) | **Types:** Construct, Doll
+
+| Stat | Value |
+|---|---|
+| Defense | 5 (10) |
+| Willpower | 5 (10) |
+| Walk | 5 |
+| Charge | 6 |
+| Height | 1 |
+| Initiative | 2 (7) |
+| Wounds | 4 |
+
+**Skills:** Evade 3, Pugilism 2
+
+**Abilities:**
+- **Adorable Doll:** This character is indistinguishable from a normal doll when not moving.
+- **Flick of the Wrist:** This character may use its Grace instead of its Might when making Melee or Pugilism attacks.
+- **Trailing Strings:** If there is no character holding this character's strings, an Enforcer, Henchman, Master, or Fated character within 2 yards may seize them as a (0) Action. The character may release the strings at any time, but while holding them cannot use two-handed weapons or cast Spells. A character can only hold the strings of one Marionette at a time.
+- **Tangled Up:** While an enemy character is holding this character's strings, this character is Slow.
+- **Puppet Show:** While a friendly character is holding this character's strings, this character gains + to its attacks and may use the character's Skill ranks in place of its own. The character holding this character's strings may spend 1 AP to force this character to perform a (1) Action of its choice.
+
+**Actions:**
+
+**(1) Wooden Fists** (Pugilism)
+AV: 4 (9) | Rg: y1 | Resist: Df
+Target suffers 1/2/3 damage. This character may add the Grace Aspect of a friendly character holding its strings to its final duel total.
+- Tome Made to Follow: After resolving, if it is not this character's turn, take this Action again.
+
+**(0) Dragging Along**
+This character may move up to 2 yards in any direction. Then, if there is a character holding this character's strings, it is pushed 2 yards directly toward this character.
+
+---
+
+### Wicked Doll
+
+These voodoo dolls are malicious little things filled with so much hatred and spite that they actively poison those around them. While most are sewn together from burlap or cloth, the most powerful Wicked Dolls are crafted from human flesh and anointed with the blood of their targets.
+
+Wicked Dolls primarily exact their creator's revenge by creeping into their victim's home and stabbing them in their sleep. Since they don't have a good sense of direction, this can lead to a Wicked Doll losing its way and attacking someone who merely looks like their target. They carry bundles of needles, which they use to throw at enemies or stitch up fellow dolls — often tying thread to needles to pull their lightweight bodies into close proximity with the victim. Once next to a doll, the victim is enveloped by its aura of spite and malice.
+
+#### Wicked Doll
+
+| Aspect | Value |
+|---|---|
+| Might | -1 |
+| Grace | 2 |
+| Speed | 2 |
+| Resilience | 0 |
+| Charm | 2 |
+| Cunning | 1 |
+| Intellect | -1 |
+| Tenacity | 3 |
+
+**Rank:** Minion (5) | **Types:** Construct, Doll
+
+| Stat | Value |
+|---|---|
+| Defense | 6 (11) |
+| Willpower | 5 (10) |
+| Walk | 5 |
+| Charge | 6 |
+| Height | 1 |
+| Initiative | 3 (8) |
+| Wounds | 4 |
+
+**Skills:** Acrobatics 1, Bewitch 2, Deceive 2, Evade 4, Melee 3, Notice 1, Scrutiny 1, Stealth 3, Stitching 2, Thrown Weapons 3M
+
+**Abilities:**
+- **Adorable Doll:** This character is indistinguishable from a normal doll when not moving.
+- **Flick of the Wrist:** This character may use its Grace instead of its Might when making Melee or Pugilism attacks.
+- **Malice Aura:** When a Living character suffers damage from a source other than the Poison Condition while within a1 of this character, she also gains Poison +1.
+
+**Actions:**
+
+**(1) Knife** (Melee)
+AV: 5 (10) | Rg: y1 | Resist: Df
+Target suffers 1/3/4 damage.
+- Crow Hamstring: When damaging, the target suffers +1 damage, falls Prone, and gains the Useless Limb (Legs) Condition until all damage is healed.
+
+**(1) Thrown Needles** (Thrown Weapons)
+AV: 5M (10M) | Rg: z9 | Resist: Df
+Target suffers 1/1/1B damage. This attack does not randomize when firing into an engagement.
+- Mask Attached Threads: After succeeding, push this character into physical contact with the target.
+
+**(1) All Sewed Up**
+Target other Doll within 1 yard of this character heals 1 damage and gains the following Condition for 24 hours: *"New Threads: This character gains + to its attack flips."*
+
+---
+
+### Rougarou
+
+These massive, undead wolves are the favored servants of Titania, the Autumn Queen of the Fae. They were some of the few members of her court deemed dangerous enough to be doomed to imprisonment in Nythera alongside her, but now that she is free, so are they.
+
+Despite their bestial forms, Rougarou are keenly intelligent and dangerously cunning. The Queen uses them to hunt down those who have displeased her, employing them as her assassins and enforcers. When not in her service, they roam the Knotwoods, hunting Neverborn and human alike — for a Rougarou, this is merely entertainment, as their rotting bodies require no physical sustenance. The memory of hunger is sated by their feeding, and for most Rougarou, that is more than enough reason to kill. When needed, they can stand and walk on their hind legs, reigniting superstitions about werewolves — though unlike a werewolf, a Rougarou remains dangerous regardless of the moon's phase, and silver has no special effect upon them.
+
+#### Rougarou
+
+| Aspect | Value |
+|---|---|
+| Might | 4 |
+| Grace | 2 |
+| Speed | 2 |
+| Resilience | 3 |
+| Charm | -4 |
+| Cunning | 3 |
+| Intellect | 2 |
+| Tenacity | 3 |
+
+**Rank:** Enforcer (7) | **Types:** Undead, Beast, Fae
+
+| Stat | Value |
+|---|---|
+| Defense | 4 (11) |
+| Willpower | 5 (12) |
+| Walk | 5 |
+| Charge | 7 |
+| Height | 3 |
+| Initiative | 5 (12) |
+| Wounds | 9 |
+
+**Skills:** Acrobatics 2, Athletics 2, Centering 3, Deceive 2, Intimidate 3, Notice 3, Pugilism 2, Scrutiny 1, Stealth 2, Toughness 3, Track 4, Wilderness 3
+
+**Abilities:**
+- **Diving Charge:** This character may declare Charge Actions while engaged. When this character moves as part of a Charge Action, it ignores intervening characters, is not slowed by terrain, and opponents engaged with it may not attempt Disengaging Strikes to prevent its movement.
+- **Hard to Wound +1:** Damage flips against this character suffer −.
+- **Rush +1:** This character's Charge Aspect has been increased by +1.
+
+**Actions:**
+
+**(1) Wulfen Claws** (Pugilism)
+AV: 6 (13) | Rg: y2 | Resist: Df
+Target suffers 2/4/6 damage.
+- Ram Crushing Strike: When damaging, the damage flip gains + for each Ram in the final duel total.
+
+**(2) The Mauling** (Pugilism)
+AV: 6 (13) | Rg: y1 | Resist: Df
+Target suffers 2/3/4 damage and suffers the effects of a Critical Hit of the appropriate severity.
+- Crow Eat Anything: After damaging a Living or Undead character, this character heals 1 damage.
+
+**(0) Howl to the Blood Moon** (Intimidate)
+This character may discard a card to force every Living character within p10 to make a TN 13 Centering Challenge. Those who fail gain the following Condition until the start of this character's next turn: *"Prey: This character may not take Charge Actions and while engaged in melee can only take Walk Actions."*
+
+---
+
+## Gremlins
+
+---
+
+### Bayou Gremlin
+
+The Bayou is filled with many creatures, and there's certainly an argument to be made that the Bayou Gremlin is the most intelligent of them all. Originally little more than savages living in small packs in the depths of the swamp, the Gremlins came into their own when humans arrived in Malifaux.
+
+Gremlins raise their young through mimicry. Despite the average Gremlin litter consisting of around ten to twenty babies, a Gremlin mother can only breastfeed two children at a time — females or particularly attractive children are given priority. The rest follow the adults around, trying to figure out how life works by copying them.
+
+This mimicry served the Gremlins well when they began learning from humans: clothing (the most important people always have the biggest hat), firearms (so much damage!), crude walls, the domestication of Bayou pigs (which had been their primary predators), and, most importantly, how to brew moonshine. With these "borrowed" advancements, the Gremlin population swiftly boomed. The Guild has recently realized that Gremlins could be a serious threat to their dominance of Malifaux — and it's only a matter of time before the Gremlins realize that, too.
+
+#### Bayou Gremlin
+
+| Aspect | Value |
+|---|---|
+| Might | -1 |
+| Grace | 2 |
+| Speed | 1 |
+| Resilience | 0 |
+| Charm | -2 |
+| Cunning | 1 |
+| Intellect | -1 |
+| Tenacity | 1 |
+
+**Rank:** Minion (5) | **Types:** Living, Gremlin
+
+| Stat | Value |
+|---|---|
+| Defense | 4 (9) |
+| Willpower | 3 (8) |
+| Walk | 5 |
+| Charge | 5 |
+| Height | 1 |
+| Initiative | 2 (7) |
+| Wounds | 4 |
+
+**Skills:** Barter 1, Carouse 2, Deceive 2, Evade 2, Gambling 1, Homesteading 1, Husbandry 1, Long Arms 2, Melee 2, Music 1, Notice 1, Pick Pocket 1, Track 1, Wilderness 1
+
+**Abilities:**
+- **Drunk and Reckless:** If this character has the Intoxicated Condition, it may suffer 2 damage at the start of its turn to gain one additional General AP.
+- **From the Hip:** This character uses its Grace instead of its Intellect when making Long Arm attacks.
+- **Df (Mask) "Squeal!":** After this character is damaged by an enemy Close Combat attack, push this character 4 yards directly away from the attacker.
+
+**Actions:**
+
+**(1) Banjo Bash** (Melee)
+AV: 1 (6) | Rg: y2 | Resist: Df
+Target suffers 2/2/4 damage. If this weapon inflicts a Critical Effect, it breaks in half and ceases to function as either a weapon or a musical instrument.
+
+**(1) Boomstick** (Long Arms)
+AV: 4 (9) | Rg: z12 | Resist: Df
+Target suffers 1/2/3B damage. This Attack must declare a Trigger if possible. Capacity 1, Reload 1.
+- Ram Dumb Luck: When damaging, this attack inflicts double damage. This character suffers damage equal to half of the amount suffered by the target.
+- Crow Whoops, Ricochet: After resolving, the closest other character within range and line of sight suffers 1 damage.
+- Tome What If... More Powder?: When damaging, this attack adds +B to its Moderate and Severe damage.
+- Mask "I Got 'im!": After succeeding, push this character 3 yards toward the target.
