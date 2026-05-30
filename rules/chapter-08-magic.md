@@ -583,3 +583,202 @@ Sorcery creates raw magical energy, hurling it at enemies. Sorcery Magia benefit
 **AP:** 1 | **TN:** 10C | **Resist:** Df | **Range:** Engagement  
 **Effect:** The target suffers **1/2/3 damage**.  
 **Requirements:** Must include at least one Elemental Immuto.
+
+### Sleep
+**AP:** 2 | **TN:** 12C | **Resist:** Willpower | **Range:** 6y  
+**Effect:** A Living target must make a **TN 10 Unconsciousness Challenge**. The Challenge TN increases by **+2 per Margin of Success** achieved by the caster.
+
+### Summon Gamin
+**AP:** 2 | **TN:** 12C | **Resist:** — | **Range:** 6y  
+**Effect:** A **Gamin** is summoned within range on a surface that can support its weight, under the caster's control. The caster may command it with the **(1) Order Action**. If the Gamin acts on the round it was summoned, it gains the **Slow Condition**. The summoned Gamin lasts for **3 rounds** before disappearing.  
+**Requirements:** Must include at least one Elemental Immuto.
+
+### Telekinetic Movement
+**AP:** 2 | **TN:** 10M | **Resist:** Df | **Range:** 10y  
+**Effect:** The caster moves a target object weighing no more than **Intellect × 50 lbs.** (minimum 50 lbs.) up to **5 yards** in any direction. For the next minute, the caster may spend **1 AP** to move the object again without recasting.  
+- If the object is a **weapon**, the caster may make attacks with it (and may Charge with `y` weapons), using the appropriate Skill but replacing the relevant Aspect with **Intellect**.
+- If the target is **unattended**, it does not resist.
+- If the target is **held** by another character, that character may resist.
+
+### Telekinetic Push
+**AP:** 1 | **TN:** 10M | **Resist:** Df | **Range:** 10y  
+**Effect:** The target is pushed **1 yard** in any direction, plus additional yards equal to the caster's **Tenacity Aspect** (if positive).
+
+### Wrench
+**AP:** 2 | **TN:** 12C | **Resist:** Toughness | **Range:** 6y  
+**Effect:** A Living target must make a **TN 10 Toughness Challenge**. On failure, it suffers a **Moderate Critical Effect**. The Challenge TN increases by **+2 per Margin of Success** achieved by the caster.
+
+---
+
+## Immuto
+
+**Immuto** modify individual Magia, altering or extending their base effects. Key rules:
+- Not every Immuto works with every Magia — the Fatemaster is the final arbiter.
+- Each Immuto also adjusts the Spell's **TN** as listed (shown in the heading).
+- Unless stated otherwise, each Immuto may only be added to a Magia **once**.
+- Two types: **Alteration Immuto** and **Elemental Immuto**.
+
+---
+
+## Alteration Immuto
+
+Alteration Immuto change the way a Spell performs, pushing Magia into unusual and creative directions.
+
+### Additional Suit (TN −3)
+The Spell's TN gains an additional suit of the caster's choice.
+
+### Alter Range (TN Varies)
+*May be added multiple times.*  
+Each application increases or decreases the Spell's range by one step on the range chart.
+- **Increasing** range: **+2 TN per step**
+- **Decreasing** range: **−2 TN per step**
+- If the Spell's range isn't listed, round down to the nearest chart entry and adjust from there.
+- If a `y`-range Spell's range increases above 3 yards, `y` becomes `z`.
+- If a `z`-range Spell's range decreases below 5 yards, `z` becomes `y`.
+- Spells without `y` or `z` in their range do not gain these designators when range changes.
+
+### Alternate Resistance (TN +2)
+- If the Spell is normally resisted by **Willpower**, it is instead resisted by **Defense**.
+- If normally resisted by **Defense**, it is instead resisted by **Willpower**.
+
+### Blast (TN +2)
+*May be added up to three times.*  
+Adds blast damage to the Spell's damage track:
+- 1 application: **+0/0/B**
+- 2 applications: **+0/B/B**
+- 3 applications: **+0/B/BB**
+
+### Combined Spell (TN +5)
+The Spell combines the effects of two Magia. The caster chooses a second Magia she is capable of casting and adds its effects. Restrictions:
+- The second Magia's base TN must be ≤ the primary Magia's base TN.
+- Both Magia must have the same Resist (Df or Wp).
+- The primary Magia may only have Immuto that can also apply to the second Magia.
+- The two Magia must be different.
+
+### Construct Genus (TN +2)
+The Spell can also affect **Construct** characters.  
+Alternatively, if the Spell already affects Constructs, the caster may make it **only** affect Constructs (non-Constructs are immune).
+
+### Delay (TN Varies)
+The caster makes all decisions (including targets) when casting, but the Spell waits until a trigger condition is met. A character may only have **one** Delayed Spell waiting at a time; casting a second cancels the first.
+
+- **Rounds (TN +2):** The caster chooses up to 10 rounds; the Spell triggers after that many rounds.
+- **Defined (TN +5):** The caster specifies a trigger situation (e.g., "when someone crosses this threshold" or "when a specific word is spoken"). Expires at the next sunrise or sunset if not triggered.
+
+### Focus Object (TN Varies)
+The Spell can be cast more easily with a magical focus object. When this Immuto is learned, a **Focus Object** is chosen and cannot be changed. When the caster brandishes her Focus Object, the Spell's TN is lowered based on two factors (combine both):
+
+**Portability:**
+| Portability | TN Reduction |
+|---|---|
+| Can be carried in a pocket | −0 |
+| Must be held in one hand | −1 |
+| Must be held in both hands | −2 |
+| Effectively immobile (iron cauldron, engraved circle) | −3 |
+
+**Commonality:**
+| Commonality | TN Reduction |
+|---|---|
+| Easy to replace | −0 |
+| Difficult to replace (e.g., oak wand) | −1 |
+| Must be specifically crafted for the caster | −2 |
+| Unique and one of a kind | −3 |
+
+### Ignore Character (TN +2)
+*May be added multiple times.*  
+Each application: the caster chooses one character. Chosen characters suffer **no damage** from the Spell itself but may still suffer secondary effects (e.g., fire started by a fire spell).
+
+### Inanimate Genus (TN +3)
+The Spell can also affect objects that cannot move on their own, including **corpses**. These objects automatically fail any Resistance duel with no Margins of Failure.
+
+### Increase AP (TN −3)
+The Spell requires **+1 AP** to cast.  
+*May be added multiple times.* The character must still finish casting on her turn; if she does not, the Spell fails.
+
+### Increase Pulse (TN +2)
+*May be added multiple times.*  
+Each application: increase the Spell's Pulse range by **+1 yard** and increase any TNs required to avoid Pulse effects by **+1**.  
+May not be applied to a Spell without a Pulse effect.
+
+### Increase Resistance (TN +2)
+*May be added multiple times.*  
+Each application: increase the TN of any duels listed in the Spell's effects by **+1**.
+
+### Increased Damage (TN +2)
+*May be added multiple times.*  
+Each application: improve the Spell's damage track by one step on the Damage Steps chart.  
+- If the damage isn't listed, determine its position on the chart and increase from there.
+- For **fixed damage**: every **two** applications increases damage by **+1** (chart is ignored).
+
+**Damage Steps:**
+```
+1 damage → 1/1/2 → 1/2/3 → 1/3/4 → 2/3/4 → 2/4/5 → 3/4/5 → 3/5/6
+```
+
+### Increased Duration (TN +2)
+*May be added multiple times.*  
+Each application: increase the Spell's duration by one step on the Duration Steps chart.
+
+**Duration Steps:**
+```
+1 Round → 2 Rounds → 3 Rounds → 1 Minute → 10 Minutes → 1 Hour →
+Sunrise or Sunset → 1 Day → 1 Week → 1 Month → 6 Months → 1 Year → 10 Years
+```
+
+### Living Genus (TN +1)
+The Spell can also affect **Living** characters.  
+Alternatively, if the Spell already affects Living characters, the caster may make it **only** affect Living characters (non-Living are immune).
+
+### Location Genus (TN +3)
+The Spell affects a **location** in range rather than a single target. The location must be clearly defined (a single building, a circle of stones, a pasture) and cannot be larger than a single building. Every character in the location is affected.  
+If the Spell allows a Resistance duel, every character in the location gains **+4** to their final duel total to resist.
+
+### Pulse (TN +4)
+The Spell affects every character within **p1** of the initial target.
+- If the Spell heals or deals damage, every character affected by the Pulse heals/suffers the **Weak** amount.
+- If the Spell deals fixed damage, every character affected suffers **1 damage**.
+- TNs listed in the Spell's effects are lowered by **−3** for Pulse targets.
+- If resisted by Defense or Willpower, Pulse targets may attempt a **TN 10** Defense or Willpower duel (as appropriate) to avoid being affected.
+
+### Reduce AP (TN +5)
+*May be added multiple times.*  
+Each application: the Spell requires **1 less AP** to cast (minimum 0 AP).
+
+### Reduce Damage (TN −1)
+*May be added multiple times.*  
+Each application: decrease the Spell's damage track by one step on the Damage Steps chart.
+- For **fixed damage**: each application decreases damage by **−1**.
+- Cannot be applied if doing so would reduce damage to less than 1.
+
+### Reduce Resistance (TN −1)
+*May be added multiple times.*  
+Each application: decrease the TN of any duels listed in the Spell's effects by **−1**.
+
+### Reduce Severity (TN −3)
+*Only applies to Spells that deal damage.*  
+The Spell deals **no damage**. All other effects still occur. Targets that would only suffer effects upon taking damage from this Spell still suffer those effects.
+
+### Undead Genus (TN +2)
+The Spell can also affect **Undead** characters.  
+Alternatively, if the Spell already affects Undead characters, the caster may make it **only** affect Undead (non-Undead are immune).
+
+---
+
+## Elemental Immuto
+
+Elemental Immuto add environmental or elemental effects to Spells.
+
+### Darkness (TN +1)
+Any character that suffers damage from the Spell also gains the **Blind Condition** until the start of the caster's next turn.  
+*May be added multiple times.* Each application: extend the Blind Condition duration by **+1 round**.
+
+### Decay (TN +1)
+Any **Undead** character that suffers damage from the Spell suffers no damage and instead **heals 1 damage**.  
+*May be added multiple times.* Each application: increase the amount healed by **+1**.
+
+### Electric (TN +3)
+Damage dealt by the Spell **ignores Armor**. Additionally, the Spell does not randomize when shooting at an engaged target.
+
+### Fire (TN +3)
+Any character that suffers damage from the Spell also gains the **Burning +1 Condition**.  
+*May be added multiple times.* Each application: increase the Burning Condition value by **+1** (maximum Burning +3).
