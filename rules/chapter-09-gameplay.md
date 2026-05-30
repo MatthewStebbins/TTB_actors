@@ -123,4 +123,145 @@ Any time Brett fails an Acrobatics, Athletics, Carouse, Centering, Evade, Pick P
 
 During a duel, a Fated character may replace the card flipped from the Fate Deck with a card from her Control Hand. This is called **"Cheating Fate"** (or just "Cheating"). A character may cheat with a lower card than she flipped — for example, to achieve a specific suit or to intentionally fail a duel.
 
-Full Cheating Fate rules are described in the **Duel Overview** section.
+Full Cheating Fate rules are described in the **Duel Overview** section below.
+
+---
+
+## Duel Overview
+
+A **duel** (also called a "duel with fate") is the core resolution mechanic. Duels occur whenever a Fated character attempts an action with a meaningful chance of failure (called a **Challenge**).
+
+### Step 1: Determine Skill and Target Number
+
+The Fatemaster chooses the relevant **Skill** and sets the **Target Number (TN)**. Higher TN = harder task.
+
+| Difficulty | TN Range |
+|---|---|
+| Easy | 6 or less |
+| Routine | 7–8 |
+| Challenging | 9–11 |
+| Difficult | 12–14 |
+| Very Unlikely | 15–17 |
+| Incredibly Difficult | 18–20 |
+| Highly Improbable | 21+ |
+
+> Players should always be told the TN so they can decide whether to attempt the action or whether they have a card to Cheat Fate with.
+
+When a character interacts with another character, the TN is often determined by that character's **Defense**, **Willpower**, or other stats (see Complex Duels).
+
+### Step 2: Determine Acting Value
+
+The **Acting Value (AV)** = character's **Skill rank** + the **Aspect** tied to that Skill.  
+If the character has a suit associated with her Skill, that suit is also added to her AV.
+
+*Example: Brett's Intellect is −1, Literacy rank is 2 → AV = 1. If his Literacy were 2M, his AV would be 1M.*
+
+### Step 3: Flip a Card
+
+The player flips the top card of the **Fate Deck** face-up for all to see.
+
+#### Joker Rules
+
+| Joker | Value | Suit | Special Rule |
+|---|---|---|---|
+| **Red Joker** | 14 | Any (player's choice) | May be used even with negative Fate Modifiers (−); cannot be replaced by Cheating Fate |
+| **Black Joker** | 0 | None | **Must** be used even with positive Fate Modifiers (+); character **cannot Cheat Fate** when the Black Joker is flipped |
+
+### Step 4: Apply Fate Modifiers
+
+Some actions have **Fate Modifiers** that affect the flip:
+- **+ (Positive):** Flip an additional card; use the **higher** result.
+- **− (Negative):** Flip an additional card; use the **lower** result.
+
+Multiple modifiers stack. A +++ means flip 4 cards total and use the highest.
+
+### Step 5: Cheat Fate
+
+After flipping (and applying Fate Modifiers), the player may **Cheat Fate** by replacing the flipped card with a card from her **Control Hand**.
+
+- The replaced card goes to the Fate Deck discard pile.
+- The card played from the Control Hand goes to the Twist Card discard pile.
+- A character **may not Cheat Fate** if the Black Joker was flipped.
+- A character **may** Cheat with a lower card to get a desired suit or to intentionally fail.
+
+### Step 6: Declare Triggers
+
+After Cheating Fate (or choosing not to), the player may declare **one Skill Trigger** if the character's **final duel total** contains the required suit(s).
+
+**Trigger timing:**
+
+| Timing | When It Resolves |
+|---|---|
+| "After failing" | Only if the character **fails** the duel |
+| "After succeeding" | Only if the character **succeeds** |
+| "After resolving" | After the duel completes, **regardless** of success or failure |
+| "After damaging" | Only if the action **dealt damage** to the target |
+| "When damaging" | **As** damage is dealt (frequently modifies the damage amount) |
+
+Triggers resolve after the duel finishes, the action resolves, and any damage is applied. Actions or movement granted by a Trigger do not cost additional AP.
+
+> **Multiple-suit Triggers:** Some Triggers require two or more of the same suit (e.g., `tt Surge`). The character must have both suits in her final duel total — typically by having one in her AV and one on the flipped card.
+
+**Fatemaster Characters and Triggers:** FM characters use suits from their own AV. When involved in a duel with a Fated character, they may also use suits from the Fated's final duel total. In FM vs. FM duels, only their own AV suits apply.
+
+### Step 7: Determine Results
+
+Compare the character's **final duel total** to the **TN**:
+- **Final duel total ≥ TN** → **Success**
+- **Final duel total < TN** → **Failure**
+
+If the action deals damage, damage is applied now.
+
+#### Multiple TNs
+
+Some actions (especially Spells) have **multiple TNs** that must all be met. If the final duel total meets one TN but not another, the **entire action fails**.
+
+*Example: A fire Spell with TN 12t against a target with Defense 10 requires the final duel total to be ≥ 12 AND include a t. A total of 11t fails (doesn't meet 12). A total of 14C fails (no t).*
+
+### Step 8: Margins of Success or Failure
+
+| Result | Rule |
+|---|---|
+| **Margin of Success (MoS)** | +1 per every **5 points** the final total **exceeds** the TN |
+| **Margin of Failure (MoF)** | +1 per every **5 points** the final total **falls short** of the TN |
+
+More MoS = better outcomes. More MoF = worse failures.
+
+### Step 9: Discard Cards
+
+After the duel resolves, all cards used are discarded to their respective discard piles.
+
+---
+
+## Complex Duels
+
+When a Fated character directly confronts another character, the TN is determined by that character's stats. The initiating character is typically the **aggressor**.
+
+### Fatemaster Characters — Rank Values
+
+FM characters do not flip cards. Instead, each has a **Rank Value** used in place of a flip:
+
+| Rank | Value |
+|---|---|
+| Peon | 4 |
+| Minion | 5 |
+| Enforcer | 7 |
+| Henchman | 8 |
+| Master | 10 |
+
+*Example: Bubba Joe the Bayou Gremlin is Minion (5). Whenever he would flip, he is treated as having flipped a 5.*
+
+FM characters **cannot Cheat Fate** (no Control Hand or Twist Cards).
+
+### FM Character vs. FM Character
+
+Compare each character's **(Acting Value + Rank Value)**. Higher total wins. In a tie, the **aggressor** wins.
+
+### Fated vs. FM Character
+
+**If the Fated is the aggressor:**
+- For **attacks** — TN = FM character's **Defense or Willpower** (numerical value only, no suit) + **Rank Value**.
+- For **non-attack Skills** — TN = FM character's **Acting Value with the resisting Skill** + **Rank Value**.
+
+*Attack example: Bubba Joe (Minion 5, Defense 4) → Attack TN = 4 + 5 = 9.*  
+*Skill example: Wastrel (Gambling AV 3, Minion 5) → Gambling Challenge TN = 3 + 5 = 8.*
