@@ -2,8 +2,10 @@ name: Release
 
 on:
   push:
-    tags:
-      - 'v*'
+    branches:
+      - main
+    paths:
+      - 'system.json'
 
 jobs:
   release:
@@ -13,8 +15,27 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Read version from system.json
+        id: version
+        run: |
+          VERSION=$(jq -r '.version' system.json)
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "tag=v$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Check if tag already exists
+        id: tag_check
+        run: |
+          if git ls-remote --tags origin "refs/tags/v${{ steps.version.outputs.version }}" | grep -q .; then
+            echo "exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "exists=false" >> $GITHUB_OUTPUT
+          fi
 
       - name: Build system.zip
+        if: steps.tag_check.outputs.exists == 'false'
         run: |
           zip -r system.zip \
             system.json \
@@ -25,8 +46,11 @@ jobs:
             lang/ \
             --exclude "scripts/create-ttb-actor.js"
 
-      - name: Create GitHub Release
+      - name: Create tag and GitHub Release
+        if: steps.tag_check.outputs.exists == 'false'
         uses: softprops/action-gh-release@v2
         with:
+          tag_name: ${{ steps.version.outputs.tag }}
+          name: v${{ steps.version.outputs.version }}
           files: system.zip
           generate_release_notes: true
