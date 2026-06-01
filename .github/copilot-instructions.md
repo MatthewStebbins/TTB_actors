@@ -8,7 +8,7 @@ This repo is a **FoundryVTT Game System** (`system.json`) for the *Through the B
 
 | Path | Purpose |
 |------|---------|
-| `system.json` | Foundry system manifest. `id` must stay `ttb-actors` (matches install folder). Current version: `0.1.2`. Verified on Foundry **v13**. |
+| `system.json` | Foundry system manifest. `id` must stay `ttb-actors` (matches install folder). Current version: `0.1.7`. Verified on Foundry **v13**. |
 | `template.json` | Declarative data model for all Actor/Item types. Edit this to add new fields — no JS needed for data shape. |
 | `scripts/main.js` | ES module entry point. Registers actor class, sheets, and preloads templates via `Hooks.once("init")`. |
 | `scripts/actors/` | `Actor` document subclasses. Derived stats computed in `prepareDerivedData()`. |
@@ -19,6 +19,28 @@ This repo is a **FoundryVTT Game System** (`system.json`) for the *Through the B
 | `scripts/create-ttb-actor.js` | Legacy CJS helper used only by Node unit tests. Do not import this in Foundry code. |
 | `test/` | Node.js unit tests (`node --test`). Run with `npm test`. Tests must not depend on Foundry globals. |
 | `.github/workflows/release.yml` | Pushes a `v*` tag → builds `system.zip` → creates GitHub Release. Required for Foundry's manifest installer. |
+| `rules/` | **Authoritative Markdown rules reference files** — see section below. Always consult these before implementing any game mechanic. |
+
+## Rules Reference Files
+
+All game rules are captured as structured Markdown in `rules/`. **Always read the relevant file before implementing any mechanic** — these are the authoritative source of truth for the TTB ruleset.
+
+| File | Contents |
+|------|----------|
+| `rules/chapter-03-character-creation.md` | 14-step character creation, Station/Aspect tables, Cross Roads Tarot, Destiny Spread |
+| `rules/chapter-04-pursuits.md` | All Pursuits (Arcanist, Bounty Hunter, Dabbler, Death Marshal, Doctor, Drifter, Enforcer, Explorer, Gambler, Gunfighter, Infiltrator, Malifaux Rat, Mercenary, Performer, Reporter, Scavenger, Seeker, Sorcerer, Tinkerer, Wastrel, etc.) and their Pursuit Talents |
+| `rules/chapter-05-skills.md` | All 39 skills with full descriptions, governing Attribute, and all named Triggers (suit + effect) |
+| `rules/chapter-06-general-talents.md` | All General Talents with requirements and descriptions |
+| `rules/chapter-07-equipment.md` | Weapons (melee & ranged stat blocks), Armor, Gear, Upgrades, costs, damage tracks |
+| `rules/chapter-08-magic.md` | Magia list, Immutos, spell construction rules, theoretical schools, casting mechanics |
+| `rules/chapter-09-gameplay.md` | Flip/duel resolution, AP actions, movement, range, conditions (Burning/Slow/Fast/Stunned/etc.), combat rules, initiative (Rushing the Season), terrain |
+| `rules/chapter-10-bestiary.md` | 200+ NPC stat blocks — Guild, Resurrectionists, Neverborn, Gremlins, Arcanists, Ten Thunders, Freikorps, Void, Summoned Constructs, Elementals; includes Minion/Enforcer/Master/Peon ranks, Actions, Abilities, Attack profiles |
+
+### How to use the rules files
+- When implementing a mechanic (flip resolution, condition effect, NPC stat block layout), **read the relevant chapter first**.
+- Stat block format for NPCs is defined in `rules/chapter-10-bestiary.md` — follow that schema exactly for the NPC actor type.
+- Talent/Spell data for compendium packs comes from ch04–ch08.
+- Condition automation rules (tick damage, AP penalties) are in `rules/chapter-09-gameplay.md`.
 
 ## Through the Breach Game Rules Context
 
@@ -90,12 +112,16 @@ Read back via `cardDisplayInfoFromData(suit, value, name)` in `getData()`.
 
 **`_createFateDeck()` is public** — called from the "Create Fate Deck" button if stacks go missing (e.g., accidentally deleted). Guard with `if (!game.cards) return;`.
 
-### Items
-- **Weapon**: attackSkill, damage, range, special, equipped.
-- **Armor**: defenseBonus, special, equipped (adds to Defense when equipped).
-- **Gear**: quantity, description.
+### Items (v0.1.7+)
+- **Weapon**: `apCost`, `rangeType`, `damageWeak/damageMod/damageSevere`, `range`, `capacity`, `reload`, `triggers`, `special`, `description`, `equipped`.
+- **Armor**: `defenseBonus`, `soak` (flat damage reduction, summed as `system.derived.soak`), `special`, `description`, `cost`, `equipped`.
+- **Gear**: `quantity`, `description`, `cost`.
+- **Talent**: `pursuit`, `requirements`, `description`. Shown in Talents table on Equipment tab.
+- **Spell**: `theory`, `tn`, `range`, `duration`, `immutos`, `description`. Shown in Spells table on Equipment tab.
+- Item names are clickable links (`.ttb-item-name-link`) to open item sheet.
+- `_onDropItem()` on character sheet allows drag-and-drop from sidebar/compendium (allowed types: weapon, armor, gear, talent, spell).
 
-### Fatemaster Characters (NPCs) — *planned*
+### Fatemaster Characters (NPCs) — *in progress (feature/npc-actor)*
 - Simpler stat block: Df (Defense), Wp (Willpower), Wounds, relevant skills only.
 - Minions share a single wound pool; Peons are defeated on any damage.
 
@@ -222,3 +248,5 @@ The `download` field in `system.json` points to the GitHub Release asset. Always
 | 0.1.0 | Flip totals badge, suit symbol buttons, wider trigger fields, 2-column Pursuits tab |
 | 0.1.1 | Fixed delete button full-width override (Foundry global CSS) |
 | 0.1.2 | Fate Deck tab — auto-creates 3 Foundry Card Stacks per character; flip, draw-to-hand, Cheat Fate, reshuffle |
+| 0.1.3–0.1.6 | Incremental improvements to Fate Deck, sheet UX, conditions |
+| 0.1.7 | Item types overhaul: Weapon redesign (damage track), Armor soak derived stat, Talent + Spell item types, drag-drop items, name-click to open sheet |
