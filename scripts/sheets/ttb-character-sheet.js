@@ -92,6 +92,26 @@ function toArray(raw) {
 }
 
 /**
+ * Build a sorted list of skill options for the duel skill dropdown.
+ * Pre-computes the AV label so HBS doesn't need {{add}} or {{math}} helpers.
+ */
+function buildSkillOptions(system, locFn, selectedKey) {
+  const skills = system.skills ?? {};
+  const attrs  = system.attributes ?? {};
+  return Object.entries(skills)
+    .map(([key, s]) => {
+      const attrVal  = attrs[s?.attribute]?.value ?? 2;
+      const av       = attrVal + (s?.value ?? 0);
+      return {
+        key,
+        label:    `${locFn(`TTB.Skill.${key}`)} (AV ${av})`,
+        selected: key === selectedKey,
+      };
+    })
+    .sort((a, b) => a.label.localeCompare(b.label));
+}
+
+/**
  * Reveal a card (face: 0) in whatever stack currently holds it.
  * Call after passing a card to hand or discard so it shows face-up.
  * Cards.pass() preserves card IDs, so the same ID works in the destination.
@@ -156,8 +176,15 @@ export class TtbCharacterSheet extends ActorSheet {
    */
   _registerFateHooks() {
     this._unregisterFateHooks();
-    const sys = this.actor.system.fateDeck ?? {};
-    const trackedIds = new Set([sys.deckId, sys.handId, sys.discardId].filter(Boolean));
+    const sys        = this.actor.system.fateDeck ?? {};
+    const trackedIds = new Set([sys.handId, sys.discardId].filter(Boolean));
+    // Also track communal world deck/pile IDs
+    try {
+      const worldDeckId = game.settings.get("ttb-actors", "fateDeckId");
+      const worldPileId = game.settings.get("ttb-actors", "fatePileId");
+      if (worldDeckId) trackedIds.add(worldDeckId);
+      if (worldPileId) trackedIds.add(worldPileId);
+    } catch (_) {}
     if (trackedIds.size === 0) return;
 
     const onCardChange = (card) => {
@@ -335,18 +362,59 @@ export class TtbCharacterSheet extends ActorSheet {
     context.spellItems   = allItems.filter((i) => i.type === "spell");
 
     // ── Fate Deck ──────────────────────────────────────────
-    const fd         = system.fateDeck ?? {};
-    const deckDoc    = fd.deckId    ? game.cards?.get(fd.deckId)    : null;
+    const fd = system.fateDeck ?? {};
+    let worldDeckId = "", worldPileId = "";
+    try {
+      worldDeckId = game.settings.get("ttb-actors", "fateDeckId") ?? "";
+      worldPileId = game.settings.get("ttb-actors", "fatePileId") ?? "";
+    } catch (_) {}
+
+    const worldDeck  = worldDeckId ? game.cards?.get(worldDeckId) : null;
+    const worldPile  = worldPileId ? game.cards?.get(worldPileId) : null;
     const handDoc    = fd.handId    ? game.cards?.get(fd.handId)    : null;
     const discardDoc = fd.discardId ? game.cards?.get(fd.discardId) : null;
 
-    context.deckMissing  = !deckDoc;
-    context.deckSize     = deckDoc    ? deckDoc.cards.size    : 0;
-    context.handSize     = handDoc    ? handDoc.cards.size    : 0;
-    context.discardSize  = discardDoc ? discardDoc.cards.size : 0;
+    context.worldDeckMissing = !worldDeck;
+    context.handMissing      = !handDoc;
+    context.isGM             = game.user?.isGM ?? false;
+    context.deckSize         = worldDeck  ? worldDeck.cards.size  : 0;
+    context.pileSize         = worldPile  ? worldPile.cards.size  : 0;
+    context.handSize         = handDoc    ? handDoc.cards.size    : 0;
+    context.discardSize      = discardDoc ? discardDoc.cards.size : 0;
+
+    const duel = fd.duel ?? {};
+    context.duelSkillKey = duel.skillKey ?? "";
+    context.duelTN       = duel.tn       ?? 10;
+    context.duelModifier = duel.modifier ?? 0;
+    const mod = duel.modifier ?? 0;
+    context.duelModifierDisplay  = mod > 0 ? `+${mod}` : mod < 0 ? `\u2212${Math.abs(mod)}` : "0";
+    context.duelModifierPositive = mod > 0;
+    context.duelModifierNegative = mod < 0;
+    context.skillOptions = buildSkillOptions(system, (k) => loc(k), duel.skillKey ?? "");
 
     const lf = fd.lastFlip ?? {};
-    context.lastFlip  = lf.name ? cardDisplayInfoFromData(lf.suit, lf.value, lf.name) : null;
+    if (lf.name) {
+      const cardInfo = cardDisplayInfoFromData(lf.suit, lf.value, lf.name);
+      const mos = lf.mos ?? 0;
+      context.lastFlip = {
+        ...cardInfo,
+        tn:         lf.tn       ?? 10,
+        av:         lf.av       ?? 0,
+        total:      lf.total    ?? 0,
+        skillKey:   lf.skillKey ?? "",
+        skillLabel: lf.skillKey ? loc(`TTB.Skill.${lf.skillKey}`) : "",
+        success:    !!lf.success,
+        mos,
+        mosAbs:     Math.abs(mos),
+        hasMos:     mos > 0,
+        hasMof:     mos < 0,
+        canCheat:   lf.canCheat !== false,
+      };
+    } else {
+      context.lastFlip = null;
+    }
+
+    context.canCheat  = lf.name ? (lf.canCheat !== false) : false;
     context.hand      = handDoc ? handDoc.cards.contents.map(c => cardDisplayInfo(c)) : [];
     context.handEmpty = context.hand.length === 0;
 
@@ -510,97 +578,81 @@ export class TtbCharacterSheet extends ActorSheet {
     });
 
     // ── Fate Deck Listeners ──────────────────────────────────
-    // All handlers are wrapped in _fateOp() to prevent concurrent operations
-    // (e.g. rapid double-clicks) that cause "already exists in collection" errors.
-    // Counts update via the createCard/deleteCard hooks registered above — those
-    // fire after Foundry updates the local collection, guaranteeing fresh data.
+    // Fate Modifier controls
+    html.find(".ttb-modifier-plus").click(() => {
+      const mod = this.actor.system.fateDeck?.duel?.modifier ?? 0;
+      this.actor.update({ "system.fateDeck.duel.modifier": mod + 1 });
+    });
+    html.find(".ttb-modifier-minus").click(() => {
+      const mod = this.actor.system.fateDeck?.duel?.modifier ?? 0;
+      this.actor.update({ "system.fateDeck.duel.modifier": mod - 1 });
+    });
+    html.find(".ttb-modifier-reset").click(() => {
+      this.actor.update({ "system.fateDeck.duel.modifier": 0 });
+    });
 
-    // Flip top card from deck to discard — reveal face-up in discard pile.
+    // Duel setup inputs
+    html.find(".ttb-duel-skill").change((ev) => {
+      this.actor.update({ "system.fateDeck.duel.skillKey": ev.currentTarget.value });
+    });
+    html.find(".ttb-duel-tn").change((ev) => {
+      this.actor.update({ "system.fateDeck.duel.tn": Number(ev.currentTarget.value) || 10 });
+    });
+
+    // Flip from world deck
     html.find(".ttb-deck-flip").click(() => this._fateOp(async () => {
-      const sys     = this.actor.system.fateDeck ?? {};
-      const deck    = sys.deckId    ? game.cards?.get(sys.deckId)    : null;
-      const discard = sys.discardId ? game.cards?.get(sys.discardId) : null;
-      if (!deck || !discard) return ui.notifications.warn("TTB | Fate Deck not found. Click \"Create Fate Deck\".");
-      if (deck.cards.size === 0) return ui.notifications.warn("TTB | Fate Deck is empty. Click Reshuffle Discard.");
-
-      const sorted = deck.cards.contents.sort((a, b) => (b.sort ?? 0) - (a.sort ?? 0));
-      const card   = sorted[0];
-      if (!card) return;
-      const info = { suit: card.suit ?? "", value: card.value ?? 0, name: card.name ?? "" };
-      if (card.drawn) await deck.updateEmbeddedDocuments("Card", [{ _id: card.id, drawn: false }]);
-      await deck.pass(discard, [card.id]);
-      await revealCard(discard, card.id);
-      // actor.update triggers auto re-render for lastFlip display; card hooks handle counts.
-      await this.actor.update({
-        "system.fateDeck.lastFlip.suit":  info.suit,
-        "system.fateDeck.lastFlip.value": info.value,
-        "system.fateDeck.lastFlip.name":  info.name,
-      });
+      const duel = this.actor.system.fateDeck?.duel ?? {};
+      await this._fateFlip(duel.skillKey ?? "", duel.tn ?? 10, duel.modifier ?? 0);
     }));
 
-    // Draw top card from deck to hand — reveal face-up in hand.
-    html.find(".ttb-deck-draw-hand").click(() => this._fateOp(async () => {
-      const sys  = this.actor.system.fateDeck ?? {};
-      const deck = sys.deckId ? game.cards?.get(sys.deckId) : null;
-      const hand = sys.handId ? game.cards?.get(sys.handId) : null;
-      if (!deck || !hand) return;
-      if (deck.cards.size === 0) return ui.notifications.warn("TTB | Fate Deck is empty. Reshuffle first.");
-      const sorted = deck.cards.contents.sort((a, b) => (b.sort ?? 0) - (a.sort ?? 0));
-      const card   = sorted[0];
-      if (!card) return;
-      if (card.drawn) await deck.updateEmbeddedDocuments("Card", [{ _id: card.id, drawn: false }]);
-      await deck.pass(hand, [card.id]);
-      await revealCard(hand, card.id);
-      // No actor.update here — card hooks trigger render so the hand grid updates.
-    }));
-
-    // Play a card from hand (Cheat Fate) — reveal face-up in discard.
+    // Cheat Fate — play card from Control Hand
     html.find(".ttb-hand-play").click((ev) => this._fateOp(async () => {
-      const cardId  = ev.currentTarget.dataset.cardId;
-      const sys     = this.actor.system.fateDeck ?? {};
-      const hand    = sys.handId    ? game.cards?.get(sys.handId)    : null;
-      const discard = sys.discardId ? game.cards?.get(sys.discardId) : null;
-      if (!hand || !discard || !cardId) return;
-      const card = hand.cards.get(cardId);
-      if (!card) return;
-      const info = { suit: card.suit ?? "", value: card.value ?? 0, name: card.name ?? "" };
-      await hand.pass(discard, [cardId]);
-      await revealCard(discard, cardId);
-      // actor.update triggers auto re-render for lastFlip display; card hooks handle counts.
-      await this.actor.update({
-        "system.fateDeck.lastFlip.suit":  info.suit,
-        "system.fateDeck.lastFlip.value": info.value,
-        "system.fateDeck.lastFlip.name":  info.name,
-      });
+      const cardId = ev.currentTarget.dataset.cardId;
+      if (!cardId) return;
+      const lf = this.actor.system.fateDeck?.lastFlip ?? {};
+      if (lf.canCheat === false) return ui.notifications.warn("TTB | Cannot Cheat Fate on this flip.");
+      await this._cheatFate(cardId);
     }));
 
-    // Reshuffle all discard cards back into the deck, then shuffle.
-    // resetDrawnFlags also resets face:null so cards return face-down.
+    // Reshuffle world discard back into deck (GM only)
     html.find(".ttb-deck-reshuffle").click(() => this._fateOp(async () => {
-      const sys     = this.actor.system.fateDeck ?? {};
-      const deck    = sys.deckId    ? game.cards?.get(sys.deckId)    : null;
-      const discard = sys.discardId ? game.cards?.get(sys.discardId) : null;
-      if (!deck || !discard) return;
-      if (discard.cards.size === 0) return ui.notifications.warn("TTB | Discard pile is empty — nothing to reshuffle.");
-      const allIds = discard.cards.contents.map(c => c.id);
-      await discard.pass(deck, allIds);
+      if (!game.user?.isGM) return;
+      let worldDeckId = "", worldPileId = "";
+      try {
+        worldDeckId = game.settings.get("ttb-actors", "fateDeckId") ?? "";
+        worldPileId = game.settings.get("ttb-actors", "fatePileId") ?? "";
+      } catch (_) {}
+      const deck = worldDeckId ? game.cards?.get(worldDeckId) : null;
+      const pile = worldPileId ? game.cards?.get(worldPileId) : null;
+      if (!deck || !pile) return;
+      if (pile.cards.size === 0) return ui.notifications.warn("TTB | Discard pile is empty — nothing to reshuffle.");
+      const allIds = pile.cards.contents.map(c => c.id);
+      await pile.pass(deck, allIds);
       await resetDrawnFlags(deck);
       await deck.shuffle();
-      // Clear lastFlip display; actor.update also triggers re-render.
       await this.actor.update({ "system.fateDeck.lastFlip.name": "" });
     }));
 
-    // Open native Foundry deck/hand sheet
+    // Open native Foundry card stack sheets
     html.find(".ttb-deck-open").click(() => {
-      game.cards?.get(this.actor.system.fateDeck?.deckId ?? "")?.sheet.render(true);
+      let worldDeckId = "";
+      try { worldDeckId = game.settings.get("ttb-actors", "fateDeckId") ?? ""; } catch (_) {}
+      game.cards?.get(worldDeckId)?.sheet.render(true);
     });
     html.find(".ttb-hand-open").click(() => {
       game.cards?.get(this.actor.system.fateDeck?.handId ?? "")?.sheet.render(true);
     });
 
-    // Create card stacks if missing
-    html.find(".ttb-deck-create").click(() => this._fateOp(async () => {
-      await this.actor._createFateDeck();
+    // Create world deck (GM only)
+    html.find(".ttb-world-deck-create").click(() => this._fateOp(async () => {
+      if (!game.user?.isGM) return;
+      await this.actor.constructor.createWorldFateDeck();
+      this.render(false);
+    }));
+
+    // Recreate Control Hand if missing
+    html.find(".ttb-control-hand-create").click(() => this._fateOp(async () => {
+      await this.actor._createControlHand();
       this.render(false);
     }));
   }
@@ -617,5 +669,161 @@ export class TtbCharacterSheet extends ActorSheet {
     }
     // If already owned by this actor, default Foundry sorts/moves handle it.
     return super._onDropItem(event, data);
+  }
+
+  /**
+   * Flip cards from the communal world Fate Deck.
+   * Applies Fate Modifier rules, Joker priority, and computes duel result.
+   */
+  async _fateFlip(skillKey, tn, modifier) {
+    let worldDeckId = "", worldPileId = "";
+    try {
+      worldDeckId = game.settings.get("ttb-actors", "fateDeckId") ?? "";
+      worldPileId = game.settings.get("ttb-actors", "fatePileId") ?? "";
+    } catch (_) {}
+
+    const deck = worldDeckId ? game.cards?.get(worldDeckId) : null;
+    const pile = worldPileId ? game.cards?.get(worldPileId) : null;
+    if (!deck || !pile) return ui.notifications.warn("TTB | Communal Fate Deck not found. Ask the GM to create it.");
+    if (deck.cards.size === 0) return ui.notifications.warn("TTB | Fate Deck is empty. Ask the GM to reshuffle.");
+
+    // modifier=0 → 1 card; modifier=±N → N+1 cards (use best/worst)
+    const flipCount = Math.abs(modifier) + 1;
+    const sorted    = deck.cards.contents.sort((a, b) => (b.sort ?? 0) - (a.sort ?? 0));
+    const toFlip    = sorted.slice(0, Math.min(flipCount, sorted.length));
+    if (toFlip.length === 0) return;
+
+    for (const c of toFlip) {
+      if (c.drawn) await deck.updateEmbeddedDocuments("Card", [{ _id: c.id, drawn: false }]);
+    }
+    await deck.pass(pile, toFlip.map(c => c.id));
+    for (const c of toFlip) await revealCard(pile, c.id);
+
+    // Select card per Joker priority + modifier rules
+    const blackJoker = toFlip.find(c => c.suit === "Joker" && c.value === 0);
+    const redJoker   = toFlip.find(c => c.suit === "Joker" && c.value === 14);
+    let selected;
+    if      (blackJoker)   selected = blackJoker;
+    else if (redJoker)     selected = redJoker;
+    else if (modifier > 0) selected = toFlip.reduce((b, c) => c.value > b.value ? c : b);
+    else if (modifier < 0) selected = toFlip.reduce((b, c) => c.value < b.value ? c : b);
+    else                   selected = toFlip[0];
+
+    const system   = this.actor.system;
+    const skill    = skillKey ? (system.skills?.[skillKey] ?? null) : null;
+    const attrVal  = skill ? (system.attributes?.[skill.attribute]?.value ?? 2) : 0;
+    const av       = attrVal + (skill?.value ?? 0);
+    const cardVal  = selected.value ?? 0;
+    const total    = cardVal + av;
+    const success  = total >= tn;
+    const mos      = Math.floor((total - tn) / 5);
+    const canCheat = selected.suit !== "Joker";
+
+    await this.actor.update({
+      "system.fateDeck.lastFlip.suit":     selected.suit  ?? "",
+      "system.fateDeck.lastFlip.value":    selected.value ?? 0,
+      "system.fateDeck.lastFlip.name":     selected.name  ?? "",
+      "system.fateDeck.lastFlip.tn":       tn,
+      "system.fateDeck.lastFlip.av":       av,
+      "system.fateDeck.lastFlip.total":    total,
+      "system.fateDeck.lastFlip.skillKey": skillKey,
+      "system.fateDeck.lastFlip.success":  success,
+      "system.fateDeck.lastFlip.mos":      mos,
+      "system.fateDeck.lastFlip.canCheat": canCheat,
+    });
+
+    await this._postFlipToChat({
+      actorName:    this.actor.name,
+      skillLabel:   skillKey ? loc(`TTB.Skill.${skillKey}`) : "",
+      cardName:     selected.name  ?? "",
+      cardSuit:     selected.suit  ?? "",
+      cardVal,
+      tn, av, total, success, mos,
+      isRedJoker:   selected.suit === "Joker" && selected.value === 14,
+      isBlackJoker: selected.suit === "Joker" && selected.value === 0,
+      flipCount,
+      modifier,
+    });
+  }
+
+  /**
+   * Cheat Fate — replace the last flip result with a card from the Control Hand.
+   * The chosen card moves from Control Hand to the character's personal discard.
+   */
+  async _cheatFate(cardId) {
+    const sys     = this.actor.system.fateDeck ?? {};
+    const hand    = sys.handId    ? game.cards?.get(sys.handId)    : null;
+    const discard = sys.discardId ? game.cards?.get(sys.discardId) : null;
+    if (!hand || !discard || !cardId) return;
+
+    const card = hand.cards.get(cardId);
+    if (!card) return;
+
+    const lf      = sys.lastFlip ?? {};
+    const tn      = lf.tn ?? 10;
+    const av      = lf.av ?? 0;
+    const cardVal = card.value ?? 0;
+    const total   = cardVal + av;
+    const success = total >= tn;
+    const mos     = Math.floor((total - tn) / 5);
+
+    await hand.pass(discard, [cardId]);
+    await revealCard(discard, cardId);
+
+    await this.actor.update({
+      "system.fateDeck.lastFlip.suit":     card.suit  ?? "",
+      "system.fateDeck.lastFlip.value":    card.value ?? 0,
+      "system.fateDeck.lastFlip.name":     card.name  ?? "",
+      "system.fateDeck.lastFlip.total":    total,
+      "system.fateDeck.lastFlip.success":  success,
+      "system.fateDeck.lastFlip.mos":      mos,
+      "system.fateDeck.lastFlip.canCheat": false,
+    });
+
+    await this._postFlipToChat({
+      actorName:    this.actor.name,
+      skillLabel:   lf.skillKey ? loc(`TTB.Skill.${lf.skillKey}`) : "",
+      cardName:     card.name  ?? "",
+      cardSuit:     card.suit  ?? "",
+      cardVal,
+      tn, av, total, success, mos,
+      isRedJoker:   card.suit === "Joker" && card.value === 14,
+      isBlackJoker: card.suit === "Joker" && card.value === 0,
+      cheated: true,
+    });
+  }
+
+  /** Post a flip result or Cheat Fate result to the chat log as inline HTML. */
+  async _postFlipToChat(data) {
+    const suitLower    = (data.cardSuit ?? "").toLowerCase();
+    const symbol       = SUIT_SYMBOLS[suitLower] || "?";
+    const mos          = data.mos ?? 0;
+    const mosAbs       = Math.abs(mos);
+    const outcomeClass = data.success ? "ttb-chat-success" : "ttb-chat-failure";
+    const outcomeText  = data.success
+      ? (mos > 0 ? `\u2713 Success (MoS ${mos})` : "\u2713 Success")
+      : (mos < 0 ? `\u2717 Failure (MoF ${mosAbs})` : "\u2717 Failure");
+
+    const headerDetail = data.cheated
+      ? ` &mdash; Cheat Fate${data.skillLabel ? ` (${data.skillLabel})` : ""}`
+      : (data.skillLabel ? ` &mdash; ${data.skillLabel}` : "");
+
+    let jokerNote = "";
+    if (data.isRedJoker)   jokerNote = `<div class="ttb-chat-joker-note">\u2605 Critical Success &mdash; triggers on any suit</div>`;
+    if (data.isBlackJoker) jokerNote = `<div class="ttb-chat-joker-note">\u26a0 Critical Failure &mdash; Bad Luck Twist</div>`;
+
+    const content = `<div class="ttb-chat-flip">
+  <div class="ttb-chat-header"><strong>${data.actorName}</strong> flips${headerDetail}</div>
+  <div class="ttb-chat-card ttb-suit-${suitLower}${data.isRedJoker ? " ttb-joker-red" : ""}${data.isBlackJoker ? " ttb-joker-black" : ""}">
+    <span class="ttb-chat-card-symbol">${symbol}</span>
+    <span class="ttb-chat-card-name">${data.cardName}</span>
+    <span class="ttb-chat-card-value">${data.cardVal}</span>
+  </div>
+  <div class="ttb-chat-math">${data.cardVal} + AV ${data.av} = <strong>${data.total}</strong> vs TN ${data.tn}</div>
+  <div class="ttb-chat-result ${outcomeClass}">${outcomeText}</div>
+  ${jokerNote}
+</div>`;
+
+    await ChatMessage.create({ content });
   }
 }

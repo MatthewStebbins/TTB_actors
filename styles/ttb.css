@@ -1480,3 +1480,192 @@
 .ttb-hand-card.ttb-joker-black .ttb-hand-card-symbol,
 .ttb-hand-card.ttb-joker-black .ttb-hand-card-name { color: #ccc; }
 .ttb-hand-card.ttb-joker-black .ttb-hand-play { background: #444; }
+
+/* ── Duel Setup Row ──────────────────────────────────────── */
+.ttb-duel-setup {
+  margin: 6px 0;
+  padding: 6px 8px;
+  background: rgba(0,0,0,0.15);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 4px;
+}
+.ttb-duel-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+}
+.ttb-duel-label {
+  font-size: 0.75rem;
+  color: var(--ttb-parchment);
+  opacity: 0.8;
+  white-space: nowrap;
+}
+.ttb-duel-skill {
+  flex: 1 1 160px;
+  min-width: 120px;
+  max-width: 240px;
+  background: rgba(0,0,0,0.3);
+  color: var(--ttb-parchment);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 3px;
+  padding: 2px 4px;
+  font-size: 0.78rem;
+}
+.ttb-duel-tn {
+  width: 48px;
+  text-align: center;
+  background: rgba(0,0,0,0.3);
+  color: var(--ttb-parchment);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 3px;
+  padding: 2px 4px;
+  font-size: 0.85rem;
+}
+
+/* Fate Modifier */
+.ttb-modifier-row {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.ttb-modifier-value {
+  display: inline-block;
+  min-width: 28px;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--ttb-parchment);
+  padding: 0 2px;
+}
+.ttb-modifier-value.ttb-mod-positive { color: #6fca6f; }
+.ttb-modifier-value.ttb-mod-negative { color: #e06060; }
+.ttb-modifier-plus,
+.ttb-modifier-minus,
+.ttb-modifier-reset {
+  width: 22px !important;
+  height: 22px;
+  padding: 0;
+  font-size: 0.85rem;
+  font-weight: bold;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 3px;
+  color: var(--ttb-parchment);
+  cursor: pointer;
+  flex-shrink: 0;
+  line-height: 1;
+}
+.ttb-modifier-plus:hover,
+.ttb-modifier-minus:hover { background: rgba(255,255,255,0.2); }
+.ttb-modifier-reset { color: #aaa; font-size: 0.75rem; }
+.ttb-modifier-reset:hover { background: rgba(200,80,80,0.3); }
+
+/* ── Flip Result Section ─────────────────────────────────── */
+.ttb-flip-result-section {
+  margin: 6px 0;
+  padding: 6px 8px;
+  background: rgba(0,0,0,0.1);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.ttb-flip-math {
+  font-size: 0.82rem;
+  color: var(--ttb-parchment);
+  opacity: 0.9;
+}
+.ttb-flip-outcome {
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 3px;
+  display: inline-block;
+  align-self: flex-start;
+}
+.ttb-flip-success {
+  background: rgba(50,150,50,0.3);
+  color: #8fdf8f;
+  border: 1px solid rgba(80,180,80,0.4);
+}
+.ttb-flip-failure {
+  background: rgba(150,40,40,0.3);
+  color: #e08080;
+  border: 1px solid rgba(180,60,60,0.4);
+}
+.ttb-cheat-disabled {
+  font-size: 0.75rem;
+  color: #888;
+  font-style: italic;
+}
+.ttb-fate-missing-note {
+  font-size: 0.8rem;
+  color: #bbb;
+  margin: 4px 0 0;
+}
+
+/* GM controls row */
+.ttb-fate-gm-controls {
+  margin-top: 6px;
+}
+.ttb-fate-gm-controls button,
+.ttb-world-deck-create,
+.ttb-control-hand-create {
+  width: auto !important;
+  flex-shrink: 0;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 3px;
+  color: var(--ttb-parchment);
+  cursor: pointer;
+}
+.ttb-fate-gm-controls button:hover,
+.ttb-world-deck-create:hover,
+.ttb-control-hand-create:hover { background: rgba(255,255,255,0.15); }
+
+/* ── Chat Flip Message ───────────────────────────────────── */
+.ttb-chat-flip {
+  font-family: inherit;
+  font-size: 0.88rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.ttb-chat-header {
+  font-size: 0.9rem;
+  color: var(--ttb-burgundy, #6b2737);
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+  padding-bottom: 3px;
+  margin-bottom: 2px;
+}
+.ttb-chat-card {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 6px;
+  background: rgba(0,0,0,0.06);
+  border-radius: 3px;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+.ttb-chat-card-symbol { font-size: 1rem; font-weight: bold; }
+.ttb-chat-card.ttb-suit-crow .ttb-chat-card-symbol { color: #2a3080; }
+.ttb-chat-card.ttb-suit-mask .ttb-chat-card-symbol { color: #1a5a2a; }
+.ttb-chat-card.ttb-suit-tome .ttb-chat-card-symbol { color: #7a5a10; }
+.ttb-chat-card.ttb-joker-red  .ttb-chat-card-symbol { color: #cc0000; }
+.ttb-chat-card.ttb-joker-black .ttb-chat-card-symbol { color: #333; }
+.ttb-chat-card-name { flex: 1; font-style: italic; }
+.ttb-chat-card-value { font-weight: bold; opacity: 0.7; }
+.ttb-chat-math { font-size: 0.82rem; opacity: 0.85; }
+.ttb-chat-result {
+  font-weight: bold;
+  padding: 2px 7px;
+  border-radius: 3px;
+  display: inline-block;
+}
+.ttb-chat-success { background: rgba(50,150,50,0.15); color: #2a7a2a; }
+.ttb-chat-failure { background: rgba(150,40,40,0.15); color: #8a2020; }
+.ttb-chat-joker-note { font-size: 0.78rem; font-style: italic; opacity: 0.8; }
