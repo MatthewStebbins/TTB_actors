@@ -74,28 +74,39 @@ export class TtbActor extends Actor {
     await super._onCreate(data, options, userId);
     if (game.user.id !== userId) return;
     if (this.type !== "character") return;
-    await this._createFateDeck();
+    await this._createControlHand();
   }
 
-  async _createFateDeck() {
+  async _createControlHand() {
     if (!game.cards) return;
     const actorName = this.name;
     try {
-      const deck    = await Cards.create({ name: `${actorName}'s Fate Deck`, type: "deck", folder: null });
-      const hand    = await Cards.create({ name: `${actorName}'s Hand`,      type: "hand", folder: null });
-      const discard = await Cards.create({ name: `${actorName}'s Discard`,   type: "pile", folder: null });
-
-      await deck.createEmbeddedDocuments("Card", buildTtbCardData());
-      await deck.shuffle();
-
+      const hand    = await Cards.create({ name: `${actorName}'s Control Hand`, type: "hand", folder: null });
+      const discard = await Cards.create({ name: `${actorName}'s Discard`,      type: "pile", folder: null });
       await this.update({
-        "system.fateDeck.deckId":    deck.id,
         "system.fateDeck.handId":    hand.id,
         "system.fateDeck.discardId": discard.id,
       });
     } catch (err) {
-      console.error("TTB | Failed to create Fate Deck card stacks:", err);
-      ui.notifications?.warn("TTB | Could not auto-create Fate Deck. Use 'Create Fate Deck' on the character sheet.");
+      console.error("TTB | Failed to create Control Hand:", err);
+      ui.notifications?.warn("TTB | Could not auto-create Control Hand. Use 'Create My Control Hand' on the character sheet.");
+    }
+  }
+
+  static async createWorldFateDeck() {
+    if (!game.cards) return;
+    if (!game.user?.isGM) return;
+    try {
+      const deck = await Cards.create({ name: "TTB Fate Deck",    type: "deck", folder: null });
+      const pile = await Cards.create({ name: "TTB Fate Discard", type: "pile", folder: null });
+      await deck.createEmbeddedDocuments("Card", buildTtbCardData());
+      await deck.shuffle();
+      await game.settings.set("ttb-actors", "fateDeckId", deck.id);
+      await game.settings.set("ttb-actors", "fatePileId", pile.id);
+      ui.notifications?.info("TTB | World Fate Deck created and shuffled!");
+    } catch (err) {
+      console.error("TTB | Failed to create World Fate Deck:", err);
+      ui.notifications?.error("TTB | Could not create World Fate Deck.");
     }
   }
 }

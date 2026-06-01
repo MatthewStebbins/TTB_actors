@@ -133,10 +133,15 @@
         "scrip": 0
       },
       "fateDeck": {
-        "deckId":    "",
         "handId":    "",
         "discardId": "",
-        "lastFlip":  { "suit": "", "value": 0, "name": "" }
+        "lastFlip":  {
+          "suit": "", "value": 0, "name": "",
+          "tn": 10, "av": 0, "total": 0,
+          "skillKey": "", "success": false, "mos": 0,
+          "canCheat": true
+        },
+        "duel": { "skillKey": "", "tn": 10, "modifier": 0 }
       }
     }
   },

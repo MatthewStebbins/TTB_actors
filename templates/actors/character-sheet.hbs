@@ -563,26 +563,33 @@
     <div class="tab" data-tab="fate">
       <div class="ttb-fate-deck">
 
-        {{#if deckMissing}}
+        <!-- World deck missing -->
+        {{#if worldDeckMissing}}
           <div class="ttb-fate-missing">
-            <p>No Fate Deck found for this character.</p>
-            <button type="button" class="ttb-deck-create">Create Fate Deck</button>
+            <p>No communal Fate Deck found for this world.</p>
+            {{#if isGM}}
+              <button type="button" class="ttb-world-deck-create">Create World Fate Deck</button>
+            {{else}}
+              <p class="ttb-fate-missing-note">Ask your Fatemaster to set up the Fate Deck.</p>
+            {{/if}}
           </div>
-        {{else}}
+        {{/if}}
 
-          <!-- Deck stats + open buttons -->
+        {{#unless worldDeckMissing}}
+
+          <!-- Counters + open buttons -->
           <div class="ttb-fate-controls">
             <div class="ttb-fate-counter">
-              <span class="ttb-fate-counter-label">Deck</span>
+              <span class="ttb-fate-counter-label">Fate Deck</span>
               <span class="ttb-fate-counter-value">{{deckSize}}</span>
             </div>
             <div class="ttb-fate-counter">
-              <span class="ttb-fate-counter-label">Hand</span>
-              <span class="ttb-fate-counter-value">{{handSize}}</span>
+              <span class="ttb-fate-counter-label">Discard</span>
+              <span class="ttb-fate-counter-value">{{pileSize}}</span>
             </div>
             <div class="ttb-fate-counter">
-              <span class="ttb-fate-counter-label">Discard</span>
-              <span class="ttb-fate-counter-value">{{discardSize}}</span>
+              <span class="ttb-fate-counter-label">My Hand</span>
+              <span class="ttb-fate-counter-value">{{handSize}}</span>
             </div>
             <div class="ttb-fate-open-btns">
               <button type="button" class="ttb-deck-open">Open Deck</button>
@@ -590,52 +597,100 @@
             </div>
           </div>
 
-          <!-- Action buttons -->
-          <div class="ttb-fate-actions">
-            <button type="button" class="ttb-deck-flip">&#9824; Flip Card</button>
-            <button type="button" class="ttb-deck-draw-hand">Draw to Hand</button>
-            <button type="button" class="ttb-deck-reshuffle">Reshuffle Discard</button>
+          <!-- Duel setup row -->
+          <div class="ttb-duel-setup">
+            <div class="ttb-duel-row">
+              <label class="ttb-duel-label">Skill</label>
+              <select class="ttb-duel-skill">
+                <option value="">— no skill —</option>
+                {{#each skillOptions}}
+                  <option value="{{key}}"{{#if selected}} selected{{/if}}>{{label}}</option>
+                {{/each}}
+              </select>
+              <label class="ttb-duel-label">TN</label>
+              <input type="number" class="ttb-duel-tn" value="{{duelTN}}" min="1" max="99" />
+              <div class="ttb-modifier-row">
+                <label class="ttb-duel-label">Fate</label>
+                <button type="button" class="ttb-modifier-minus" title="Add Negative Fate Modifier">&minus;</button>
+                <span class="ttb-modifier-value{{#if duelModifierPositive}} ttb-mod-positive{{/if}}{{#if duelModifierNegative}} ttb-mod-negative{{/if}}">{{duelModifierDisplay}}</span>
+                <button type="button" class="ttb-modifier-plus" title="Add Positive Fate Modifier">+</button>
+                <button type="button" class="ttb-modifier-reset" title="Reset modifier">&times;</button>
+              </div>
+              <button type="button" class="ttb-deck-flip">&#9824; Flip</button>
+            </div>
           </div>
 
           <!-- Last flip result -->
           {{#if lastFlip}}
-            <div class="ttb-fate-flip-result">
+            <div class="ttb-flip-result-section">
               <div class="ttb-fate-flip-card ttb-suit-{{lastFlip.suit}}{{#if lastFlip.isRedJoker}} ttb-joker-red{{/if}}{{#if lastFlip.isBlackJoker}} ttb-joker-black{{/if}}">
                 <span class="ttb-flip-symbol">{{lastFlip.symbol}}</span>
                 <span class="ttb-flip-label">{{lastFlip.label}}</span>
-                <span class="ttb-flip-tn">TN +{{lastFlip.tnValue}}</span>
-                {{#if lastFlip.isRedJoker}}
-                  <span class="ttb-joker-note">&#9733; Critical Success &mdash; triggers on any suit</span>
-                {{/if}}
-                {{#if lastFlip.isBlackJoker}}
-                  <span class="ttb-joker-note">&#9888; Critical Failure &mdash; Bad Luck Twist</span>
+                <span class="ttb-flip-tn">+{{lastFlip.tnValue}}</span>
+              </div>
+              <div class="ttb-flip-math">
+                {{lastFlip.tnValue}} + AV {{lastFlip.av}} = <strong>{{lastFlip.total}}</strong> vs TN {{lastFlip.tn}}
+              </div>
+              <div class="ttb-flip-outcome{{#if lastFlip.success}} ttb-flip-success{{else}} ttb-flip-failure{{/if}}">
+                {{#if lastFlip.success}}
+                  &#10003; Success{{#if lastFlip.hasMos}} (MoS {{lastFlip.mos}}){{/if}}
+                {{else}}
+                  &#10007; Failure{{#if lastFlip.hasMof}} (MoF {{lastFlip.mosAbs}}){{/if}}
                 {{/if}}
               </div>
+              {{#if lastFlip.isRedJoker}}
+                <div class="ttb-joker-note">&#9733; Critical Success &mdash; triggers on any suit; cannot be Cheated</div>
+              {{/if}}
+              {{#if lastFlip.isBlackJoker}}
+                <div class="ttb-joker-note">&#9888; Critical Failure &mdash; Bad Luck Twist; cannot be Cheated</div>
+              {{/if}}
+              {{#unless lastFlip.canCheat}}
+                <div class="ttb-cheat-disabled">Cannot Cheat Fate on this flip.</div>
+              {{/unless}}
             </div>
           {{else}}
             <div class="ttb-fate-no-flip">
-              <p>No card flipped yet. Click &ldquo;Flip Card&rdquo; to draw.</p>
+              <p>Set up a duel above and click <strong>&#9824; Flip</strong> to draw.</p>
             </div>
           {{/if}}
 
-          <!-- Hand -->
-          {{#unless handEmpty}}
-            <div class="ttb-hand-section">
-              <h3 class="ttb-section-header">Hand &mdash; Cheat Fate</h3>
-              <div class="ttb-hand-grid">
-                {{#each hand}}
-                  <div class="ttb-hand-card ttb-suit-{{suit}}{{#if isRedJoker}} ttb-joker-red{{/if}}{{#if isBlackJoker}} ttb-joker-black{{/if}}">
-                    <span class="ttb-hand-card-symbol">{{symbol}}</span>
-                    <span class="ttb-hand-card-name">{{label}}</span>
-                    <button type="button" class="ttb-hand-play" data-card-id="{{id}}"
-                      title="Play this card to replace your flip (Cheat Fate)">Play</button>
-                  </div>
-                {{/each}}
-              </div>
+          <!-- GM controls -->
+          {{#if isGM}}
+            <div class="ttb-fate-gm-controls">
+              <button type="button" class="ttb-deck-reshuffle">Reshuffle Discard</button>
             </div>
-          {{/unless}}
+          {{/if}}
 
+        {{/unless}}
+
+        <!-- Control Hand missing -->
+        {{#if handMissing}}
+          <div class="ttb-fate-missing">
+            <p>Control Hand not found.</p>
+            <button type="button" class="ttb-control-hand-create">Create My Control Hand</button>
+          </div>
         {{/if}}
+
+        <!-- Control Hand grid -->
+        {{#unless handEmpty}}
+          <div class="ttb-hand-section">
+            <h3 class="ttb-section-header">Control Hand</h3>
+            <div class="ttb-hand-grid">
+              {{#each hand}}
+                <div class="ttb-hand-card ttb-suit-{{suit}}{{#if isRedJoker}} ttb-joker-red{{/if}}{{#if isBlackJoker}} ttb-joker-black{{/if}}">
+                  <span class="ttb-hand-card-symbol">{{symbol}}</span>
+                  <span class="ttb-hand-card-name">{{label}}</span>
+                  {{#if ../canCheat}}
+                    <button type="button" class="ttb-hand-play" data-card-id="{{id}}"
+                      title="Cheat Fate &mdash; replace your flip with this card">Cheat</button>
+                  {{else}}
+                    <span class="ttb-cheat-disabled" title="Cannot Cheat Fate on this flip">Cheat</span>
+                  {{/if}}
+                </div>
+              {{/each}}
+            </div>
+          </div>
+        {{/unless}}
 
       </div>
     </div>

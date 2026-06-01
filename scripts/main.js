@@ -5,6 +5,24 @@ import { TtbItemSheet }      from "./sheets/ttb-item-sheet.js";
 Hooks.once("init", () => {
   console.log("TTB | Initialising Through the Breach system");
 
+  // World-level Fate Deck settings (communal deck shared by all players)
+  game.settings.register("ttb-actors", "fateDeckId", {
+    name:    "TTB Fate Deck ID",
+    hint:    "The ID of the communal Fate Deck card stack used by all players.",
+    scope:   "world",
+    config:  false,
+    type:    String,
+    default: "",
+  });
+  game.settings.register("ttb-actors", "fatePileId", {
+    name:    "TTB Fate Discard ID",
+    hint:    "The ID of the communal Fate Deck discard pile.",
+    scope:   "world",
+    config:  false,
+    type:    String,
+    default: "",
+  });
+
   CONFIG.Actor.documentClass = TtbActor;
 
   Actors.unregisterSheet("core", ActorSheet);
