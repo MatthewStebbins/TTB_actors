@@ -46,84 +46,23 @@ Hooks.once("i18nInit", () => {
   console.log("TTB | i18n ready");
 });
 
-// ── GM Tools Scene Control Panel ─────────────────────────────────────────────
-// Foundry v12: controls is Array<SceneControl>, tools is Array<SceneControlTool>
-// Foundry v13: controls is Record<string, SceneControl>, tools is Record<string, SceneControlTool>
+// ── GM Tools Scene Control Button ────────────────────────────────────────────
+// Single button — clicking the wizard hat opens a Dialog with all Fate Deck options.
+// Foundry v12: controls is Array<SceneControl>
+// Foundry v13: controls is Record<string, SceneControl>
 Hooks.on("getSceneControlButtons", (controls) => {
   if (!game.user?.isGM) return;
 
-  const toolList = [
-    {
-      name:    "ttb-create-fate-deck",
-      title:   "Create World Fate Deck",
-      icon:    "fas fa-layer-group",
-      button:  true,
-      onClick: async () => {
-        await TtbActor.createWorldFateDeck();
-      },
-    },
-    {
-      name:    "ttb-open-fate-deck",
-      title:   "Open World Fate Deck",
-      icon:    "fas fa-eye",
-      button:  true,
-      onClick: () => {
-        try {
-          const id = game.settings.get("ttb-actors", "fateDeckId");
-          const deck = id ? game.cards?.get(id) : null;
-          if (deck) deck.sheet.render(true);
-          else ui.notifications.warn("TTB | No World Fate Deck found. Create one first.");
-        } catch (_) {}
-      },
-    },
-    {
-      name:    "ttb-open-fate-discard",
-      title:   "Open World Discard Pile",
-      icon:    "fas fa-box-archive",
-      button:  true,
-      onClick: () => {
-        try {
-          const id = game.settings.get("ttb-actors", "fatePileId");
-          const pile = id ? game.cards?.get(id) : null;
-          if (pile) pile.sheet.render(true);
-          else ui.notifications.warn("TTB | No World Discard Pile found. Create the Fate Deck first.");
-        } catch (_) {}
-      },
-    },
-    {
-      name:    "ttb-reshuffle-fate-deck",
-      title:   "Reshuffle Discard into Fate Deck",
-      icon:    "fas fa-rotate",
-      button:  true,
-      onClick: async () => {
-        try {
-          const deckId = game.settings.get("ttb-actors", "fateDeckId") ?? "";
-          const pileId = game.settings.get("ttb-actors", "fatePileId") ?? "";
-          const deck = deckId ? game.cards?.get(deckId) : null;
-          const pile = pileId ? game.cards?.get(pileId) : null;
-          if (!deck || !pile) return ui.notifications.warn("TTB | World Fate Deck not found.");
-          if (pile.cards.size === 0) return ui.notifications.warn("TTB | Discard pile is empty.");
-          const allIds = pile.cards.contents.map(c => c.id);
-          await pile.pass(deck, allIds);
-          await deck.shuffle();
-          ui.notifications.info("TTB | Fate Deck reshuffled!");
-        } catch (err) {
-          console.error("TTB | Reshuffle failed:", err);
-        }
-      },
-    },
-  ];
-
   const group = {
-    name:        "ttb-gm-tools",
-    title:       "TTB GM Tools",
-    icon:        "fas fa-hat-wizard",
-    layer:       "tokens",
-    visible:     true,
-    activeTool:  "ttb-create-fate-deck",
-    tools:       Array.isArray(controls)
-      ? toolList
-      : Object.fromEntries(toolList.map(t => [t.name, t])),
+    name:    "ttb-gm-tools",
+    title:   "TTB GM Tools",
+    icon:    "fas fa-hat-wizard",
+    layer:   "tokens",
+    visible: true,
+    button:  true,
+    onClick: () => openGmToolsDialog(),
+    // v13 requires a tools entry even for button groups; provide an empty record/array
+    tools:   Array.isArray(controls) ? [] : {},
   };
 
   if (Array.isArray(controls)) {
@@ -132,6 +71,62 @@ Hooks.on("getSceneControlButtons", (controls) => {
     controls["ttb-gm-tools"] = group;
   }
 });
+
+function openGmToolsDialog() {
+  const deckId = game.settings.get("ttb-actors", "fateDeckId") ?? "";
+  const pileId = game.settings.get("ttb-actors", "fatePileId") ?? "";
+  const hasDeck = !!(deckId && game.cards?.get(deckId));
+
+  new Dialog({
+    title: "TTB GM Tools — Fate Deck",
+    content: `
+      <div style="display:flex; flex-direction:column; gap:6px; padding:4px 0;">
+        <p style="margin:0 0 6px; font-style:italic; font-size:0.9em;">
+          ${hasDeck ? "World Fate Deck is ready." : "<b>No Fate Deck found.</b> Create one to get started."}
+        </p>
+      </div>`,
+    buttons: {
+      createDeck: {
+        icon:  "<i class='fas fa-layer-group'></i>",
+        label: "Create World Fate Deck",
+        callback: async () => { await TtbActor.createWorldFateDeck(); },
+      },
+      openDeck: {
+        icon:  "<i class='fas fa-eye'></i>",
+        label: "Open Fate Deck",
+        callback: () => {
+          const deck = deckId ? game.cards?.get(deckId) : null;
+          if (deck) deck.sheet.render(true);
+          else ui.notifications.warn("TTB | No World Fate Deck found. Create one first.");
+        },
+      },
+      openDiscard: {
+        icon:  "<i class='fas fa-box-archive'></i>",
+        label: "Open Discard Pile",
+        callback: () => {
+          const pile = pileId ? game.cards?.get(pileId) : null;
+          if (pile) pile.sheet.render(true);
+          else ui.notifications.warn("TTB | No Discard Pile found. Create the Fate Deck first.");
+        },
+      },
+      reshuffle: {
+        icon:  "<i class='fas fa-rotate'></i>",
+        label: "Reshuffle Discard into Deck",
+        callback: async () => {
+          const deck = deckId ? game.cards?.get(deckId) : null;
+          const pile = pileId ? game.cards?.get(pileId) : null;
+          if (!deck || !pile) return ui.notifications.warn("TTB | World Fate Deck not found.");
+          if (pile.cards.size === 0) return ui.notifications.warn("TTB | Discard pile is empty.");
+          const allIds = pile.cards.contents.map(c => c.id);
+          await pile.pass(deck, allIds);
+          await deck.shuffle();
+          ui.notifications.info("TTB | Fate Deck reshuffled!");
+        },
+      },
+    },
+    default: "createDeck",
+  }, { width: 320 }).render(true);
+}
 
 async function preloadTemplates() {
   const templatePaths = [
