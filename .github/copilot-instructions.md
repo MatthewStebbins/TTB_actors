@@ -249,7 +249,7 @@ This project follows **[Semantic Versioning 2.0.0](https://semver.org/)**: `MAJO
 
 **Critical rule**: The **minor version must only be incremented after the user has tested the feature in Foundry VTT and confirmed it works**. Agents bump the patch version for fixes; agents propose a minor bump but wait for user sign-off before applying it.
 
-Current version: `0.1.9`
+Current version: `0.1.10`
 
 ### Current Version History
 | Version | Key Changes |
@@ -266,3 +266,4 @@ Current version: `0.1.9`
 | 0.1.7 | Item types overhaul: Weapon redesign (damage track), Armor soak derived stat, Talent + Spell item types, drag-drop items, name-click to open sheet |
 | 0.1.8 | Communal Fate Deck, full duel resolution (TN/AV/MoS/MoF), Cheat Fate rework, chat output |
 | 0.1.9 | Workflow test / auto-release CI |
+| 0.1.10 | TTB GM Tools panel in Scene Controls; Fate Deck setup/reshuffle moved out of character sheet |
