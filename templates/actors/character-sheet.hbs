@@ -566,12 +566,8 @@
         <!-- World deck missing -->
         {{#if worldDeckMissing}}
           <div class="ttb-fate-missing">
-            <p>No communal Fate Deck found for this world.</p>
-            {{#if isGM}}
-              <button type="button" class="ttb-world-deck-create">Create World Fate Deck</button>
-            {{else}}
-              <p class="ttb-fate-missing-note">Ask your Fatemaster to set up the Fate Deck.</p>
-            {{/if}}
+            <p class="ttb-fate-missing-note">No communal Fate Deck found for this world.</p>
+            <p class="ttb-fate-missing-note">Ask your Fatemaster to create one via <strong>TTB GM Tools</strong> in the Scene Controls.</p>
           </div>
         {{/if}}
 
@@ -592,8 +588,7 @@
               <span class="ttb-fate-counter-value">{{handSize}}</span>
             </div>
             <div class="ttb-fate-open-btns">
-              <button type="button" class="ttb-deck-open">Open Deck</button>
-              <button type="button" class="ttb-hand-open">Open Hand</button>
+              <button type="button" class="ttb-hand-open">Open My Hand</button>
             </div>
           </div>
 
@@ -654,12 +649,7 @@
             </div>
           {{/if}}
 
-          <!-- GM controls -->
-          {{#if isGM}}
-            <div class="ttb-fate-gm-controls">
-              <button type="button" class="ttb-deck-reshuffle">Reshuffle Discard</button>
-            </div>
-          {{/if}}
+          <!-- GM controls removed — use TTB GM Tools in Scene Controls -->
 
         {{/unless}}
 

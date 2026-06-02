@@ -614,41 +614,10 @@ export class TtbCharacterSheet extends ActorSheet {
       await this._cheatFate(cardId);
     }));
 
-    // Reshuffle world discard back into deck (GM only)
-    html.find(".ttb-deck-reshuffle").click(() => this._fateOp(async () => {
-      if (!game.user?.isGM) return;
-      let worldDeckId = "", worldPileId = "";
-      try {
-        worldDeckId = game.settings.get("ttb-actors", "fateDeckId") ?? "";
-        worldPileId = game.settings.get("ttb-actors", "fatePileId") ?? "";
-      } catch (_) {}
-      const deck = worldDeckId ? game.cards?.get(worldDeckId) : null;
-      const pile = worldPileId ? game.cards?.get(worldPileId) : null;
-      if (!deck || !pile) return;
-      if (pile.cards.size === 0) return ui.notifications.warn("TTB | Discard pile is empty — nothing to reshuffle.");
-      const allIds = pile.cards.contents.map(c => c.id);
-      await pile.pass(deck, allIds);
-      await resetDrawnFlags(deck);
-      await deck.shuffle();
-      await this.actor.update({ "system.fateDeck.lastFlip.name": "" });
-    }));
-
-    // Open native Foundry card stack sheets
-    html.find(".ttb-deck-open").click(() => {
-      let worldDeckId = "";
-      try { worldDeckId = game.settings.get("ttb-actors", "fateDeckId") ?? ""; } catch (_) {}
-      game.cards?.get(worldDeckId)?.sheet.render(true);
-    });
+    // Open Control Hand (per-character)
     html.find(".ttb-hand-open").click(() => {
       game.cards?.get(this.actor.system.fateDeck?.handId ?? "")?.sheet.render(true);
     });
-
-    // Create world deck (GM only)
-    html.find(".ttb-world-deck-create").click(() => this._fateOp(async () => {
-      if (!game.user?.isGM) return;
-      await this.actor.constructor.createWorldFateDeck();
-      this.render(false);
-    }));
 
     // Recreate Control Hand if missing
     html.find(".ttb-control-hand-create").click(() => this._fateOp(async () => {
