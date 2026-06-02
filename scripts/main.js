@@ -46,29 +46,39 @@ Hooks.once("i18nInit", () => {
   console.log("TTB | i18n ready");
 });
 
-// ── GM Tools Scene Control Button ────────────────────────────────────────────
-// Single button — clicking the wizard hat opens a Dialog with all Fate Deck options.
-// Foundry v12: controls is Array<SceneControl>
-// Foundry v13: controls is Record<string, SceneControl>
+// ── GM Tools Scene Control Panel ─────────────────────────────────────────────
+// The group appears as the wizard hat icon in the scene controls sidebar.
+// It contains a single "button: true" tool that opens a Dialog popup.
+// Group-level button:true is NOT valid in Foundry v13 (hides the group entirely).
+// Foundry v12: controls is Array<SceneControl>,  tools is Array
+// Foundry v13: controls is Record<string,…>,     tools is Record<string,…>
 Hooks.on("getSceneControlButtons", (controls) => {
   if (!game.user?.isGM) return;
 
-  const group = {
-    name:    "ttb-gm-tools",
+  const isV13 = !Array.isArray(controls);
+
+  const openTool = {
+    name:    "ttb-open-dialog",
     title:   "TTB GM Tools",
     icon:    "fas fa-hat-wizard",
-    layer:   "tokens",
-    visible: true,
     button:  true,
     onClick: () => openGmToolsDialog(),
-    // v13 requires a tools entry even for button groups; provide an empty record/array
-    tools:   Array.isArray(controls) ? [] : {},
   };
 
-  if (Array.isArray(controls)) {
-    controls.push(group);
-  } else {
+  const group = {
+    name:        "ttb-gm-tools",
+    title:       "TTB GM Tools",
+    icon:        "fas fa-hat-wizard",
+    layer:       "tokens",
+    visible:     true,
+    activeTool:  "ttb-open-dialog",
+    tools:       isV13 ? { "ttb-open-dialog": openTool } : [openTool],
+  };
+
+  if (isV13) {
     controls["ttb-gm-tools"] = group;
+  } else {
+    controls.push(group);
   }
 });
 
@@ -79,21 +89,18 @@ function openGmToolsDialog() {
 
   new Dialog({
     title: "TTB GM Tools — Fate Deck",
-    content: `
-      <div style="display:flex; flex-direction:column; gap:6px; padding:4px 0;">
-        <p style="margin:0 0 6px; font-style:italic; font-size:0.9em;">
-          ${hasDeck ? "World Fate Deck is ready." : "<b>No Fate Deck found.</b> Create one to get started."}
-        </p>
-      </div>`,
+    content: `<p style="margin:0 0 8px; font-style:italic; font-size:0.9em;">
+      ${hasDeck ? "World Fate Deck is ready." : "<b>No Fate Deck found.</b> Create one to get started."}
+    </p>`,
     buttons: {
       createDeck: {
-        icon:  "<i class='fas fa-layer-group'></i>",
-        label: "Create World Fate Deck",
+        icon:     "<i class='fas fa-layer-group'></i>",
+        label:    "Create World Fate Deck",
         callback: async () => { await TtbActor.createWorldFateDeck(); },
       },
       openDeck: {
-        icon:  "<i class='fas fa-eye'></i>",
-        label: "Open Fate Deck",
+        icon:     "<i class='fas fa-eye'></i>",
+        label:    "Open Fate Deck",
         callback: () => {
           const deck = deckId ? game.cards?.get(deckId) : null;
           if (deck) deck.sheet.render(true);
@@ -101,8 +108,8 @@ function openGmToolsDialog() {
         },
       },
       openDiscard: {
-        icon:  "<i class='fas fa-box-archive'></i>",
-        label: "Open Discard Pile",
+        icon:     "<i class='fas fa-box-archive'></i>",
+        label:    "Open Discard Pile",
         callback: () => {
           const pile = pileId ? game.cards?.get(pileId) : null;
           if (pile) pile.sheet.render(true);
@@ -110,8 +117,8 @@ function openGmToolsDialog() {
         },
       },
       reshuffle: {
-        icon:  "<i class='fas fa-rotate'></i>",
-        label: "Reshuffle Discard into Deck",
+        icon:     "<i class='fas fa-rotate'></i>",
+        label:    "Reshuffle Discard into Deck",
         callback: async () => {
           const deck = deckId ? game.cards?.get(deckId) : null;
           const pile = pileId ? game.cards?.get(pileId) : null;
@@ -124,7 +131,7 @@ function openGmToolsDialog() {
         },
       },
     },
-    default: "createDeck",
+    default: hasDeck ? "openDeck" : "createDeck",
   }, { width: 320 }).render(true);
 }
 
