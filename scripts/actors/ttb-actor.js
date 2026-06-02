@@ -96,6 +96,15 @@ export class TtbActor extends Actor {
   static async createWorldFateDeck() {
     if (!game.cards) return;
     if (!game.user?.isGM) return;
+
+    // Guard: check if a deck already exists in game.cards via the saved setting.
+    // Allow recreation only if the setting points to a stack that no longer exists.
+    const existingDeckId = game.settings.get("ttb-actors", "fateDeckId") ?? "";
+    if (existingDeckId && game.cards.get(existingDeckId)) {
+      ui.notifications?.warn("TTB | A World Fate Deck already exists. Use Reshuffle to reset it, or delete the existing deck first.");
+      return;
+    }
+
     try {
       const deck = await Cards.create({ name: "TTB Fate Deck",    type: "deck", folder: null });
       const pile = await Cards.create({ name: "TTB Fate Discard", type: "pile", folder: null });
