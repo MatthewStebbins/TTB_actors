@@ -48,10 +48,8 @@ Hooks.once("i18nInit", () => {
 
 // ── GM Tools Scene Control Panel ─────────────────────────────────────────────
 // Foundry v13: controls is Record<string, SceneControl>, tools is Record<string, SceneControlTool>
-// A single button:true tool fires onChange on click without becoming a persistent active mode.
-// Clicking the wizard hat activates the group; the single tool fires immediately, opening a Dialog.
-// The Dialog contains all Fate Deck actions including Create Deck.
-// Groups with empty tools are silently deleted — tools must have at least one entry.
+// activeTool points to a non-button tool so clicking the wizard hat only opens the sub-panel.
+// The 4 action tools are button:true — each fires onChange only when explicitly clicked.
 // onClick is deprecated in v13; use onChange(event, active).
 Hooks.on("getSceneControlButtons", (controls) => {
   if (!game.user?.isGM) return;
@@ -63,63 +61,67 @@ Hooks.on("getSceneControlButtons", (controls) => {
     icon:       "fas fa-hat-wizard",
     layer:      "tokens",
     visible:    true,
-    activeTool: "ttb-open-dialog",
+    activeTool: "ttb-gm-select",   // non-button placeholder — no action fires on hat click
     tools: {
-      "ttb-open-dialog": {
-        name:     "ttb-open-dialog",
+      // Placeholder tool: clicking the wizard hat selects this, opening the sub-panel with no side effect.
+      "ttb-gm-select": {
+        name:  "ttb-gm-select",
+        order: 0,
+        title: "TTB GM Tools",
+        icon:  "fas fa-hat-wizard",
+        // No button:true — this is a passive mode selector, not an action button.
+      },
+      "ttb-create-fate-deck": {
+        name:     "ttb-create-fate-deck",
         order:    1,
-        title:    "TTB GM Tools",
-        icon:     "fas fa-hat-wizard",
+        title:    "Create World Fate Deck",
+        icon:     "fas fa-layer-group",
         button:   true,
         onChange: (_event, active) => {
           if (!active) return;
-          openGmToolsDialog();
+          TtbActor.createWorldFateDeck();
         },
       },
-    },
-  };
-});
-
-function openGmToolsDialog() {
-  const deckId  = game.settings.get("ttb-actors", "fateDeckId") ?? "";
-  const pileId  = game.settings.get("ttb-actors", "fatePileId") ?? "";
-  const hasDeck = !!(deckId && game.cards?.get(deckId));
-
-  new Dialog({
-    title:   "TTB GM Tools — Fate Deck",
-    content: `<p style="margin:0 0 8px; font-style:italic; font-size:0.9em;">
-      ${hasDeck ? "World Fate Deck is ready." : "<b>No Fate Deck found.</b> Create one to get started."}
-    </p>`,
-    buttons: {
-      createDeck: {
-        icon:     "<i class='fas fa-layer-group'></i>",
-        label:    "Create World Fate Deck",
-        callback: async () => { await TtbActor.createWorldFateDeck(); },
-      },
-      openDeck: {
-        icon:     "<i class='fas fa-eye'></i>",
-        label:    "Open Fate Deck",
-        callback: () => {
-          const deck = deckId ? game.cards?.get(deckId) : null;
+      "ttb-open-fate-deck": {
+        name:     "ttb-open-fate-deck",
+        order:    2,
+        title:    "Open Fate Deck",
+        icon:     "fas fa-eye",
+        button:   true,
+        onChange: (_event, active) => {
+          if (!active) return;
+          const deckId = game.settings.get("ttb-actors", "fateDeckId") ?? "";
+          const deck   = deckId ? game.cards?.get(deckId) : null;
           if (deck) deck.sheet.render(true);
           else ui.notifications.warn("TTB | No World Fate Deck found. Create one first.");
         },
       },
-      openDiscard: {
-        icon:     "<i class='fas fa-box-archive'></i>",
-        label:    "Open Discard Pile",
-        callback: () => {
-          const pile = pileId ? game.cards?.get(pileId) : null;
+      "ttb-open-fate-discard": {
+        name:     "ttb-open-fate-discard",
+        order:    3,
+        title:    "Open Discard Pile",
+        icon:     "fas fa-box-archive",
+        button:   true,
+        onChange: (_event, active) => {
+          if (!active) return;
+          const pileId = game.settings.get("ttb-actors", "fatePileId") ?? "";
+          const pile   = pileId ? game.cards?.get(pileId) : null;
           if (pile) pile.sheet.render(true);
           else ui.notifications.warn("TTB | No Discard Pile found. Create the Fate Deck first.");
         },
       },
-      reshuffle: {
-        icon:     "<i class='fas fa-rotate'></i>",
-        label:    "Reshuffle Discard into Deck",
-        callback: async () => {
-          const deck = deckId ? game.cards?.get(deckId) : null;
-          const pile = pileId ? game.cards?.get(pileId) : null;
+      "ttb-reshuffle": {
+        name:     "ttb-reshuffle",
+        order:    4,
+        title:    "Reshuffle Discard into Deck",
+        icon:     "fas fa-rotate",
+        button:   true,
+        onChange: async (_event, active) => {
+          if (!active) return;
+          const deckId = game.settings.get("ttb-actors", "fateDeckId") ?? "";
+          const pileId = game.settings.get("ttb-actors", "fatePileId") ?? "";
+          const deck   = deckId ? game.cards?.get(deckId) : null;
+          const pile   = pileId ? game.cards?.get(pileId) : null;
           if (!deck || !pile) return ui.notifications.warn("TTB | World Fate Deck not found.");
           if (pile.cards.size === 0) return ui.notifications.warn("TTB | Discard pile is empty.");
           const allIds = pile.cards.contents.map(c => c.id);
@@ -129,9 +131,8 @@ function openGmToolsDialog() {
         },
       },
     },
-    default: hasDeck ? "openDeck" : "createDeck",
-  }, { width: 340 }).render(true);
-}
+  };
+});
 
 async function preloadTemplates() {
   const templatePaths = [
