@@ -223,11 +223,11 @@ Never store derived values as raw editable fields if they can be computed. Overr
 ```bash
 npm test               # run Node.js unit tests (no Foundry required)
 git pull               # sync after remote pushes
-git tag v0.x.x         # trigger release.yml → produces system.zip on GitHub
-git push origin v0.x.x
 ```
 
-**Note**: `pwsh.exe` (PowerShell 6+) is not available in the Copilot agent environment. Use `git` CLI and GitHub API tools for all file operations. Commits pushed via GitHub API require the user to run `git pull` locally before tagging.
+Releases are **automatic**: pushing to `main` with a changed `system.json` version triggers `release.yml`, which builds `system.zip` and creates a GitHub Release tagged `v{version}`.
+
+**Note**: `pwsh.exe` (PowerShell 6+) is not available in the Copilot agent environment. Use `git` CLI and GitHub API tools for all file operations. The user must run `git pull` locally after agent pushes.
 
 ## Release Process
 
@@ -235,7 +235,21 @@ Foundry installs via manifest URL:
 ```
 https://raw.githubusercontent.com/MatthewStebbins/TTB_actors/main/system.json
 ```
-The `download` field in `system.json` points to the GitHub Release asset. Always bump `version` in `system.json` before tagging.
+The `download` field in `system.json` points to the GitHub Release asset. The release is created automatically when `system.json` version changes on main.
+
+### Versioning Rules — Semantic Versioning 2.0.0
+
+This project follows **[Semantic Versioning 2.0.0](https://semver.org/)**: `MAJOR.MINOR.PATCH`
+
+| Segment | When to bump | Who decides |
+|---------|-------------|-------------|
+| **MAJOR** (`1.x.x`) | Breaking changes to the data model that require migration | User + agent |
+| **MINOR** (`x.1.x`) | New feature complete AND user has tested it in Foundry VTT | **User only** — agent must NOT bump minor without explicit user approval after in-VTT testing |
+| **PATCH** (`x.x.1`) | Bug fixes, CSS tweaks, text corrections, refactors with no new features | Agent can bump as part of PR |
+
+**Critical rule**: The **minor version must only be incremented after the user has tested the feature in Foundry VTT and confirmed it works**. Agents bump the patch version for fixes; agents propose a minor bump but wait for user sign-off before applying it.
+
+Current version: `0.1.9`
 
 ### Current Version History
 | Version | Key Changes |
@@ -250,3 +264,5 @@ The `download` field in `system.json` points to the GitHub Release asset. Always
 | 0.1.2 | Fate Deck tab — auto-creates 3 Foundry Card Stacks per character; flip, draw-to-hand, Cheat Fate, reshuffle |
 | 0.1.3–0.1.6 | Incremental improvements to Fate Deck, sheet UX, conditions |
 | 0.1.7 | Item types overhaul: Weapon redesign (damage track), Armor soak derived stat, Talent + Spell item types, drag-drop items, name-click to open sheet |
+| 0.1.8 | Communal Fate Deck, full duel resolution (TN/AV/MoS/MoF), Cheat Fate rework, chat output |
+| 0.1.9 | Workflow test / auto-release CI |
