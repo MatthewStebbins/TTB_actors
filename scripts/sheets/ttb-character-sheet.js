@@ -25,16 +25,12 @@ const SUIT_BUTTONS = [
   { value: "tome", symbol: "\u2666", label: "Tome" },
 ];
 
-/** Localize a key; fall back to the last segment title-cased if not found. */
 function loc(key) {
-  const result = game.i18n.localize(key);
-  if (result !== key) return result;
-  const segment = key.split(".").pop();
-  return segment.replace(/([A-Z])/g, " $1").replace(/^./, (c) => c.toUpperCase());
+  try { return game.i18n.localize(key) || key; } catch (_) { return key; }
 }
 
 /**
- * Build card display info from raw stored data (suit/value/name strings).
+ * Build card display info from raw suit/value/name strings.
  * Works for both live Card documents and persisted snapshots.
  */
 function cardDisplayInfoFromData(suit, value, name) {
@@ -167,12 +163,11 @@ export class TtbCharacterSheet extends ActorSheet {
   }
 
   /**
-   * Register createCard / deleteCard hooks so deck/hand/discard counts update
-   * reactively whenever a card moves between our tracked stacks.
+   * Register createCard / deleteCard / updateCard hooks so deck/hand/discard counts
+   * and card faces update reactively whenever a card moves or is revealed.
    *
    * These hooks fire AFTER Foundry updates the local in-memory collection,
-   * which is the reliable moment to re-render (unlike calling render() right
-   * after await pass(), which can race the socket propagation).
+   * which is the reliable signal to re-render the sheet.
    */
   _registerFateHooks() {
     this._unregisterFateHooks();
@@ -194,6 +189,7 @@ export class TtbCharacterSheet extends ActorSheet {
     this._fateHookIds = [
       { name: "createCard", id: Hooks.on("createCard", onCardChange) },
       { name: "deleteCard", id: Hooks.on("deleteCard", onCardChange) },
+      { name: "updateCard", id: Hooks.on("updateCard", onCardChange) },
     ];
   }
 
@@ -329,39 +325,48 @@ export class TtbCharacterSheet extends ActorSheet {
       return { index: i, number: i + 1, text: step.text ?? "", completed: !!step.completed, isCurrent: currentStep === i + 1 };
     });
 
-    context.destinyAgenda         = destiny.agenda         ?? "";
-    context.destinyAgendaComplete = !!destiny.agendaComplete;
+    context.destinyAgenda = {
+      text:     destiny.agenda         ?? "",
+      complete: !!destiny.agendaComplete,
+    };
+    context.destinyCurrentStep = currentStep;
 
-    // Pursuits / Talents / Manifested Powers / Other Abilities
-    context.pursuits         = toArray(system.pursuits);
-    context.talents          = toArray(system.talents);
-    context.manifestedPowers = toArray(system.manifestedPowers);
-    context.otherAbilities   = toArray(system.otherAbilities);
-    context.pursuitsEmpty         = context.pursuits.length         === 0;
-    context.talentsEmpty          = context.talents.length          === 0;
-    context.manifestedPowersEmpty = context.manifestedPowers.length === 0;
-    context.otherAbilitiesEmpty   = context.otherAbilities.length   === 0;
+    // Pursuits
+    const rawPursuits = toArray(system.pursuits);
+    context.pursuits  = rawPursuits.map((p, i) => ({ index: i, name: p.name ?? "", session: p.session ?? "" }));
+
+    // Talents
+    const rawTalents = toArray(system.talents);
+    context.talents  = rawTalents.map((t, i) => ({ index: i, name: t.name ?? "", description: t.description ?? "" }));
+
+    // Manifested Powers
+    const rawMp  = toArray(system.manifestedPowers);
+    context.manifestedPowers = rawMp.map((p, i) => ({ index: i, name: p.name ?? "", description: p.description ?? "" }));
+
+    // Other Abilities
+    const rawOa = toArray(system.otherAbilities);
+    context.otherAbilities = rawOa.map((o, i) => ({ index: i, name: o.name ?? "", description: o.description ?? "" }));
 
     // Grimoire
-    context.grimoire      = toArray(system.grimoire);
-    context.grimoireEmpty = context.grimoire.length === 0;
+    const rawGrimoire = toArray(system.grimoire);
+    context.grimoire  = rawGrimoire.map((s, i) => ({
+      index:       i,
+      theory:      s.theory      ?? "",
+      name:        s.name        ?? "",
+      tn:          s.tn          ?? 0,
+      range:       s.range       ?? "",
+      duration:    s.duration    ?? "",
+      description: s.description ?? "",
+      immutos:     s.immutos     ?? "",
+    }));
 
-    // Items by type
-    context.weapons = allItems
-      .filter((i) => i.type === "weapon")
-      .map((i) => ({
-        id:            i.id,
-        name:          i.name,
-        img:           i.img,
-        system:        i.system,
-        displayDamage: `${i.system.damageWeak ?? 0}/${i.system.damageMod ?? 0}/${i.system.damageSevere ?? 0}`,
-      }));
-    context.armors       = allItems.filter((i) => i.type === "armor");
-    context.inventory    = allItems.filter((i) => i.type === "gear");
-    context.talentItems  = allItems.filter((i) => i.type === "talent");
-    context.spellItems   = allItems.filter((i) => i.type === "spell");
+    // Items
+    const allItemsArr = Array.from(this.actor.items);
+    context.weapons = allItemsArr.filter(i => i.type === "weapon").map(i => ({ id: i.id, name: i.name, system: i.system }));
+    context.armors  = allItemsArr.filter(i => i.type === "armor" ).map(i => ({ id: i.id, name: i.name, system: i.system }));
+    context.gears   = allItemsArr.filter(i => i.type === "gear"  ).map(i => ({ id: i.id, name: i.name, system: i.system }));
 
-    // ── Fate Deck ──────────────────────────────────────────
+    // Fate Deck — communal world deck + per-character hand
     const fd = system.fateDeck ?? {};
     let worldDeckId = "", worldPileId = "";
     try {
@@ -509,36 +514,36 @@ export class TtbCharacterSheet extends ActorSheet {
       this.actor.update({ "system.talents": talents });
     });
 
-    // Manifested Powers
-    html.find(".ttb-power-add").click(() => {
-      const powers = toArray(foundry.utils.deepClone(this.actor.system.manifestedPowers));
-      powers.push({ name: "", description: "" });
-      this.actor.update({ "system.manifestedPowers": powers });
+    // Other Abilities
+    html.find(".ttb-other-ability-add").click(() => {
+      const oa = toArray(foundry.utils.deepClone(this.actor.system.otherAbilities));
+      oa.push({ name: "", description: "" });
+      this.actor.update({ "system.otherAbilities": oa });
     });
-    html.find(".ttb-power-delete").click((ev) => {
-      const idx    = Number(ev.currentTarget.dataset.index);
-      const powers = toArray(foundry.utils.deepClone(this.actor.system.manifestedPowers));
-      powers.splice(idx, 1);
-      this.actor.update({ "system.manifestedPowers": powers });
+    html.find(".ttb-other-ability-delete").click((ev) => {
+      const idx = Number(ev.currentTarget.dataset.index);
+      const oa  = toArray(foundry.utils.deepClone(this.actor.system.otherAbilities));
+      oa.splice(idx, 1);
+      this.actor.update({ "system.otherAbilities": oa });
     });
 
-    // Other Abilities
-    html.find(".ttb-ability-add").click(() => {
-      const abilities = toArray(foundry.utils.deepClone(this.actor.system.otherAbilities));
-      abilities.push({ name: "", description: "" });
-      this.actor.update({ "system.otherAbilities": abilities });
+    // Manifested Powers
+    html.find(".ttb-mp-add").click(() => {
+      const mp = toArray(foundry.utils.deepClone(this.actor.system.manifestedPowers));
+      mp.push({ name: "", description: "" });
+      this.actor.update({ "system.manifestedPowers": mp });
     });
-    html.find(".ttb-ability-delete").click((ev) => {
-      const idx       = Number(ev.currentTarget.dataset.index);
-      const abilities = toArray(foundry.utils.deepClone(this.actor.system.otherAbilities));
-      abilities.splice(idx, 1);
-      this.actor.update({ "system.otherAbilities": abilities });
+    html.find(".ttb-mp-delete").click((ev) => {
+      const idx = Number(ev.currentTarget.dataset.index);
+      const mp  = toArray(foundry.utils.deepClone(this.actor.system.manifestedPowers));
+      mp.splice(idx, 1);
+      this.actor.update({ "system.manifestedPowers": mp });
     });
 
     // Grimoire
     html.find(".ttb-grimoire-add").click(() => {
       const grimoire = toArray(foundry.utils.deepClone(this.actor.system.grimoire));
-      grimoire.push({ theory: "", name: "", cost: "", range: "", duration: "", description: "" });
+      grimoire.push({ theory: "", name: "", tn: 0, range: "", duration: "", description: "", immutos: "" });
       this.actor.update({ "system.grimoire": grimoire });
     });
     html.find(".ttb-grimoire-delete").click((ev) => {
@@ -547,59 +552,54 @@ export class TtbCharacterSheet extends ActorSheet {
       grimoire.splice(idx, 1);
       this.actor.update({ "system.grimoire": grimoire });
     });
-    html.find(".ttb-grimoire-field, .ttb-grimoire-desc").change((ev) => {
-      const idx   = Number(ev.currentTarget.dataset.grimoireIndex);
-      const field = ev.currentTarget.dataset.grimoireField;
+    html.find(".ttb-grimoire-field").change((ev) => {
+      const el    = ev.currentTarget;
+      const idx   = Number(el.dataset.index);
+      const field = el.dataset.field;
+      const val   = el.type === "number" ? Number(el.value) : el.value;
       const grimoire = toArray(foundry.utils.deepClone(this.actor.system.grimoire));
-      if (grimoire[idx]) grimoire[idx][field] = ev.currentTarget.value;
+      if (grimoire[idx]) grimoire[idx][field] = val;
       this.actor.update({ "system.grimoire": grimoire });
     });
 
-    // Items
-    html.find(".ttb-item-create").click((ev) => {
-      const type = ev.currentTarget.dataset.type;
-      Item.create({ name: `New ${type}`, type }, { parent: this.actor });
-    });
-    html.find(".ttb-item-name-link").click((ev) => {
-      const id = ev.currentTarget.closest("[data-item-id]").dataset.itemId;
-      this.actor.items.get(id)?.sheet.render(true);
-    });
+    // Items (weapons, armor, gear, talents, spells) — equipment tab
     html.find(".ttb-item-edit").click((ev) => {
-      const id = ev.currentTarget.closest("[data-item-id]").dataset.itemId;
-      this.actor.items.get(id)?.sheet.render(true);
+      const itemId = ev.currentTarget.closest("[data-item-id]")?.dataset.itemId;
+      this.actor.items.get(itemId)?.sheet.render(true);
     });
     html.find(".ttb-item-delete").click((ev) => {
-      const id = ev.currentTarget.closest("[data-item-id]").dataset.itemId;
-      this.actor.items.get(id)?.delete();
+      const itemId = ev.currentTarget.closest("[data-item-id]")?.dataset.itemId;
+      if (itemId) this.actor.deleteEmbeddedDocuments("Item", [itemId]);
     });
     html.find(".ttb-item-equipped").change((ev) => {
-      const id = ev.currentTarget.closest("[data-item-id]").dataset.itemId;
-      this.actor.items.get(id)?.update({ "system.equipped": ev.currentTarget.checked });
+      const itemId = ev.currentTarget.closest("[data-item-id]")?.dataset.itemId;
+      if (itemId) this.actor.items.get(itemId)?.update({ "system.equipped": ev.currentTarget.checked });
     });
 
-    // ── Fate Deck Listeners ──────────────────────────────────
+    // ── Fate Deck listeners ──────────────────────────────────────────────────
+
+    // Save duel setup fields to actor on change
+    html.find(".ttb-duel-skill").change((ev) => {
+      this.actor.update({ "system.fateDeck.duel.skillKey": ev.currentTarget.value });
+    });
+    html.find(".ttb-duel-tn").change((ev) => {
+      this.actor.update({ "system.fateDeck.duel.tn": Number(ev.currentTarget.value) });
+    });
+
     // Fate Modifier controls
     html.find(".ttb-modifier-plus").click(() => {
-      const mod = this.actor.system.fateDeck?.duel?.modifier ?? 0;
-      this.actor.update({ "system.fateDeck.duel.modifier": mod + 1 });
+      const cur = this.actor.system.fateDeck?.duel?.modifier ?? 0;
+      this.actor.update({ "system.fateDeck.duel.modifier": cur + 1 });
     });
     html.find(".ttb-modifier-minus").click(() => {
-      const mod = this.actor.system.fateDeck?.duel?.modifier ?? 0;
-      this.actor.update({ "system.fateDeck.duel.modifier": mod - 1 });
+      const cur = this.actor.system.fateDeck?.duel?.modifier ?? 0;
+      this.actor.update({ "system.fateDeck.duel.modifier": cur - 1 });
     });
     html.find(".ttb-modifier-reset").click(() => {
       this.actor.update({ "system.fateDeck.duel.modifier": 0 });
     });
 
-    // Duel setup inputs
-    html.find(".ttb-duel-skill").change((ev) => {
-      this.actor.update({ "system.fateDeck.duel.skillKey": ev.currentTarget.value });
-    });
-    html.find(".ttb-duel-tn").change((ev) => {
-      this.actor.update({ "system.fateDeck.duel.tn": Number(ev.currentTarget.value) || 10 });
-    });
-
-    // Flip from world deck
+    // Flip — draw card(s) from world Fate Deck and compute duel result
     html.find(".ttb-deck-flip").click(() => this._fateOp(async () => {
       const duel = this.actor.system.fateDeck?.duel ?? {};
       await this._fateFlip(duel.skillKey ?? "", duel.tn ?? 10, duel.modifier ?? 0);
@@ -612,6 +612,11 @@ export class TtbCharacterSheet extends ActorSheet {
       const lf = this.actor.system.fateDeck?.lastFlip ?? {};
       if (lf.canCheat === false) return ui.notifications.warn("TTB | Cannot Cheat Fate on this flip.");
       await this._cheatFate(cardId);
+    }));
+
+    // Draw a card from the world Fate Deck to Control Hand
+    html.find(".ttb-draw-to-hand").click(() => this._fateOp(async () => {
+      await this._drawToHand();
     }));
 
     // Open Control Hand (per-character)
@@ -716,8 +721,8 @@ export class TtbCharacterSheet extends ActorSheet {
   }
 
   /**
-   * Cheat Fate — replace the last flip result with a card from the Control Hand.
-   * The chosen card moves from Control Hand to the character's personal discard.
+   * Cheat Fate — replace the last flip result with a card from the Control
+   * Hand. Recomputes result using stored AV so only the card value changes.
    */
   async _cheatFate(cardId) {
     const sys     = this.actor.system.fateDeck ?? {};
@@ -762,6 +767,22 @@ export class TtbCharacterSheet extends ActorSheet {
     });
   }
 
+  /** Draw the top card from the world Fate Deck into this character's Control Hand and reveal it. */
+  async _drawToHand() {
+    let worldDeckId = "";
+    try { worldDeckId = game.settings.get("ttb-actors", "fateDeckId") ?? ""; } catch (_) {}
+    const deck   = worldDeckId ? game.cards?.get(worldDeckId) : null;
+    const handId = this.actor.system.fateDeck?.handId ?? "";
+    const hand   = handId ? game.cards?.get(handId) : null;
+    if (!deck)  return ui.notifications.warn("TTB | Communal Fate Deck not found. Ask the GM to create one.");
+    if (!hand)  return ui.notifications.warn("TTB | Control Hand not found. Recreate it on the Fate Deck tab.");
+    if (deck.cards.size === 0) return ui.notifications.warn("TTB | Fate Deck is empty. Ask the GM to reshuffle.");
+    const sorted  = deck.cards.contents.sort((a, b) => (b.sort ?? 0) - (a.sort ?? 0));
+    const topCard = sorted[0];
+    await deck.pass(hand, [topCard.id]);
+    await revealCard(hand, topCard.id);
+  }
+
   /** Post a flip result or Cheat Fate result to the chat log as inline HTML. */
   async _postFlipToChat(data) {
     const suitLower    = (data.cardSuit ?? "").toLowerCase();
@@ -793,6 +814,10 @@ export class TtbCharacterSheet extends ActorSheet {
   ${jokerNote}
 </div>`;
 
-    await ChatMessage.create({ content });
+    ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+      content,
+      type: CONST.CHAT_MESSAGE_TYPES?.OOC ?? 0,
+    });
   }
 }
