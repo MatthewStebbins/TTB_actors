@@ -48,9 +48,9 @@ Hooks.once("i18nInit", () => {
 
 // ── GM Tools Scene Control Panel ─────────────────────────────────────────────
 // Foundry v13: controls is Record<string, SceneControl>, tools is Record<string, SceneControlTool>
-// activeTool points to a non-button tool so clicking the wizard hat only opens the sub-panel.
+// No 'layer' property — avoids canvas.tokens activation conflicting with the built-in token group.
+// activeTool points to a non-button placeholder so clicking the wizard hat only opens the sub-panel.
 // The 4 action tools are button:true — each fires onChange only when explicitly clicked.
-// onClick is deprecated in v13; use onChange(event, active).
 Hooks.on("getSceneControlButtons", (controls) => {
   if (!game.user?.isGM) return;
 
@@ -59,7 +59,6 @@ Hooks.on("getSceneControlButtons", (controls) => {
     order:      99,
     title:      "TTB GM Tools",
     icon:       "fas fa-hat-wizard",
-    layer:      "tokens",
     visible:    true,
     activeTool: "ttb-gm-select",   // non-button placeholder — no action fires on hat click
     tools: {
@@ -69,7 +68,6 @@ Hooks.on("getSceneControlButtons", (controls) => {
         order: 0,
         title: "TTB GM Tools",
         icon:  "fas fa-hat-wizard",
-        // No button:true — this is a passive mode selector, not an action button.
       },
       "ttb-create-fate-deck": {
         name:     "ttb-create-fate-deck",
