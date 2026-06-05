@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "test": "node --test"
+    "test": "node --test",
+    "compile-packs": "node scripts/compile-packs.mjs"
+  },
+  "dependencies": {
+    "classic-level": "^3.0.0"
   }
 }
