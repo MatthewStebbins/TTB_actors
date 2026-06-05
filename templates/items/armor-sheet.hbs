@@ -18,6 +18,25 @@
       <input type="number" name="system.cost" value="{{system.cost}}" min="0" />
       <label>Equipped</label>
       <input type="checkbox" name="system.equipped" {{#if system.equipped}}checked{{/if}} />
+      <label>Coverage</label>
+      <select name="system.coverage">
+        <option value="">— Select —</option>
+        <option value="head" {{#if (eq system.coverage "head")}}selected{{/if}}>Head</option>
+        <option value="chest" {{#if (eq system.coverage "chest")}}selected{{/if}}>Chest</option>
+        <option value="arms" {{#if (eq system.coverage "arms")}}selected{{/if}}>Arms</option>
+        <option value="legs" {{#if (eq system.coverage "legs")}}selected{{/if}}>Legs</option>
+        <option value="shield" {{#if (eq system.coverage "shield")}}selected{{/if}}>Shield</option>
+        <option value="prosthetic" {{#if (eq system.coverage "prosthetic")}}selected{{/if}}>Prosthetic Limb</option>
+        <option value="mod" {{#if (eq system.coverage "mod")}}selected{{/if}}>Modification</option>
+      </select>
+      <label>Armor Type</label>
+      <select name="system.armorType">
+        <option value="">— Select —</option>
+        <option value="light" {{#if (eq system.armorType "light")}}selected{{/if}}>Light</option>
+        <option value="heavy" {{#if (eq system.armorType "heavy")}}selected{{/if}}>Heavy</option>
+        <option value="shield" {{#if (eq system.armorType "shield")}}selected{{/if}}>Shield</option>
+        <option value="pneumatic" {{#if (eq system.armorType "pneumatic")}}selected{{/if}}>Pneumatic</option>
+      </select>
     </div>
     <div class="ttb-item-text-section">
       <label>Special Rules</label>

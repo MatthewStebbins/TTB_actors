@@ -161,7 +161,9 @@
       "triggers":     "",
       "special":      "",
       "description":  "",
-      "equipped":     false
+      "equipped":     false,
+      "cost":         0,
+      "category":     ""
     },
     "armor": {
       "defenseBonus": 0,
@@ -169,7 +171,9 @@
       "special":      "",
       "description":  "",
       "cost":         0,
-      "equipped":     false
+      "equipped":     false,
+      "coverage":     "",
+      "armorType":    ""
     },
     "gear": {
       "quantity":    1,

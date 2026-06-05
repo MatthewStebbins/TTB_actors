@@ -2,7 +2,7 @@
   "id": "ttb-actors",
   "title": "Through the Breach",
   "description": "A FoundryVTT game system for the Through the Breach tabletop RPG by Wyrd Miniatures. Supports Fated (player) character creation and character sheets.",
-  "version": "0.1.19",
+  "version": "0.1.20",
   "compatibility": {
     "minimum": "10",
     "verified": "13"
@@ -26,5 +26,43 @@
   "readme": "README.md",
   "bugs": "https://github.com/MatthewStebbins/TTB_actors/issues",
   "manifest": "https://raw.githubusercontent.com/MatthewStebbins/TTB_actors/main/system.json",
-  "download": "https://github.com/MatthewStebbins/TTB_actors/releases/latest/download/system.zip"
+  "download": "https://github.com/MatthewStebbins/TTB_actors/releases/latest/download/system.zip",
+  "packs": [
+    {
+      "name": "ttb-weapons",
+      "label": "TTB Weapons",
+      "path": "packs/ttb-weapons.db",
+      "type": "Item"
+    },
+    {
+      "name": "ttb-armor",
+      "label": "TTB Armor & Shields",
+      "path": "packs/ttb-armor.db",
+      "type": "Item"
+    },
+    {
+      "name": "ttb-gear",
+      "label": "TTB Gear & Sundries",
+      "path": "packs/ttb-gear.db",
+      "type": "Item"
+    },
+    {
+      "name": "ttb-general-talents",
+      "label": "TTB General Talents",
+      "path": "packs/ttb-general-talents.db",
+      "type": "Item"
+    },
+    {
+      "name": "ttb-pursuit-talents",
+      "label": "TTB Pursuit Talents",
+      "path": "packs/ttb-pursuit-talents.db",
+      "type": "Item"
+    },
+    {
+      "name": "ttb-spells",
+      "label": "TTB Spells & Magia",
+      "path": "packs/ttb-spells.db",
+      "type": "Item"
+    }
+  ]
 }
