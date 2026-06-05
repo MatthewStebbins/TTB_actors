@@ -33,6 +33,24 @@
       <label>Reload</label>
       <input type="number" name="system.reload" value="{{system.reload}}" min="0" />
 
+      <label>Cost (Scrip)</label>
+      <input type="number" name="system.cost" value="{{system.cost}}" min="0" />
+
+      <label>Category</label>
+      <select name="system.category">
+        <option value="">— Select —</option>
+        <option value="melee"      {{#if (eq system.category "melee")}}selected{{/if}}>Melee</option>
+        <option value="heavy_melee" {{#if (eq system.category "heavy_melee")}}selected{{/if}}>Heavy Melee</option>
+        <option value="flexible"   {{#if (eq system.category "flexible")}}selected{{/if}}>Flexible</option>
+        <option value="pugilism"   {{#if (eq system.category "pugilism")}}selected{{/if}}>Pugilism</option>
+        <option value="pneumatic"  {{#if (eq system.category "pneumatic")}}selected{{/if}}>Pneumatic</option>
+        <option value="archery"    {{#if (eq system.category "archery")}}selected{{/if}}>Archery</option>
+        <option value="pistol"     {{#if (eq system.category "pistol")}}selected{{/if}}>Pistol</option>
+        <option value="long_arm"   {{#if (eq system.category "long_arm")}}selected{{/if}}>Long Arm</option>
+        <option value="shotgun"    {{#if (eq system.category "shotgun")}}selected{{/if}}>Shotgun</option>
+        <option value="heavy_gun"  {{#if (eq system.category "heavy_gun")}}selected{{/if}}>Heavy Gun</option>
+      </select>
+
       <label>Equipped</label>
       <input type="checkbox" name="system.equipped" {{#if system.equipped}}checked{{/if}} />
     </div>
