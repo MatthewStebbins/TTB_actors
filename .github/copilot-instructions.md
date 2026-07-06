@@ -8,7 +8,7 @@ This repo is a **FoundryVTT Game System** (`system.json`) for the *Through the B
 
 | Path | Purpose |
 |------|---------|
-| `system.json` | Foundry system manifest. `id` must stay `ttb-actors` (matches install folder). Current version: `0.1.7`. Verified on Foundry **v13**. |
+| `system.json` | Foundry system manifest. `id` must stay `ttb-actors` (matches install folder). Current version: `0.1.21`. Verified on Foundry **v13**. |
 | `template.json` | Declarative data model for all Actor/Item types. Edit this to add new fields — no JS needed for data shape. |
 | `scripts/main.js` | ES module entry point. Registers actor class, sheets, and preloads templates via `Hooks.once("init")`. |
 | `scripts/actors/` | `Actor` document subclasses. Derived stats computed in `prepareDerivedData()`. |
@@ -17,6 +17,8 @@ This repo is a **FoundryVTT Game System** (`system.json`) for the *Through the B
 | `styles/ttb.css` | All CSS. Dark Victorian/Steampunk aesthetic using CSS custom properties. Every class must be prefixed `.ttb-` to avoid collisions. |
 | `lang/en.json` | English strings. All localization keys use `TTB.` namespace. Use `game.i18n.localize("TTB.Key")` in JS and `{{localize "TTB.Key"}}` in HBS. |
 | `scripts/create-ttb-actor.js` | Legacy CJS helper used only by Node unit tests. Do not import this in Foundry code. |
+| `scripts/compile-packs.mjs` | Converts source `.db` compendium exports into Foundry v12+/v13 LevelDB pack directories. Run with `npm run compile-packs`. |
+| `packs/` | Compendium content. Keep the LevelDB pack directories referenced by `system.json`; `.db` source files remain in `packs/` for compilation, and older legacy copies are preserved under `packs/archive/`. |
 | `test/` | Node.js unit tests (`node --test`). Run with `npm test`. Tests must not depend on Foundry globals. |
 | `.github/workflows/release.yml` | Pushes a `v*` tag → builds `system.zip` → creates GitHub Release. Required for Foundry's manifest installer. |
 | `rules/` | **Authoritative Markdown rules reference files** — see section below. Always consult these before implementing any game mechanic. |
@@ -72,13 +74,20 @@ All game rules are captured as structured Markdown in `rules/`. **Always read th
 - **Grimoire tab**: Spell entries with Theory, Name, Cost, Range, Duration, Description.
 - **Allegiance**: Guild, Arcanists, Resurrectionists, Neverborn, Ten Thunders, Outcasts, Unaffiliated.
 
-### Fate Deck (v0.1.2+)
-Each character gets **3 linked Foundry Card Stacks** auto-created on `_onCreate`:
-- `[Name]'s Fate Deck` — type `"deck"`, populated with 54 TTB cards + shuffled
-- `[Name]'s Hand` — type `"hand"`
-- `[Name]'s Discard` — type `"pile"`
+### Fate Deck / Control Hand (v0.1.17+)
+The system now uses a **communal world Fate Deck** plus **per-character Control Hands**:
+- World deck: `TTB Fate Deck` — type `"deck"`
+- World discard: `TTB Fate Discard` — type `"pile"`
+- Per character: `[Name]'s Control Hand` — type `"hand"`
+- Per character: `[Name]'s Discard` — type `"pile"`
 
-IDs stored on actor at `system.fateDeck.{ deckId, handId, discardId }`.
+World stack IDs are stored in `game.settings`:
+```js
+game.settings.get("ttb-actors", "fateDeckId");
+game.settings.get("ttb-actors", "fatePileId");
+```
+
+Per-character stack IDs are stored on actor at `system.fateDeck.{ handId, discardId }`.
 
 **TTB Card Data (54 cards):**
 - 4 suits × 13 values: Crow, Mask, Ram, Tome (capitalized in `card.suit`)
@@ -92,7 +101,7 @@ IDs stored on actor at `system.fateDeck.{ deckId, handId, discardId }`.
 const sorted = deck.cards.contents.sort((a, b) => (b.sort ?? 0) - (a.sort ?? 0));
 await deck.pass(discard, [sorted[0].id]);
 
-// Move from hand to discard (Cheat Fate / Play)
+// Move from Control Hand to discard (Cheat Fate / Play)
 await hand.pass(discard, [cardId]);
 
 // Reshuffle all discard back into deck
@@ -100,7 +109,18 @@ await discard.pass(deck, discard.cards.contents.map(c => c.id));
 await deck.shuffle();
 ```
 
-**Last flip storage** — store a data snapshot, NOT the card ID (IDs change on move):
+**Foundry v13 card visibility gotcha** — after `pass()`, explicitly reveal moved cards with `face: 0` or they stay face-down in the destination stack:
+```js
+await stack.updateEmbeddedDocuments("Card", [{ _id: cardId, face: 0 }]);
+```
+
+**Reshuffle gotcha** — after moving discard back into deck, reset both `drawn: false` and `face: null` on all deck cards or Foundry may refuse to pass them again:
+```js
+const updates = deck.cards.contents.map(c => ({ _id: c.id, drawn: false, face: null }));
+await deck.updateEmbeddedDocuments("Card", updates);
+```
+
+**Last flip storage** — store a data snapshot, NOT the card ID:
 ```js
 await actor.update({
   "system.fateDeck.lastFlip.suit":  card.suit,
@@ -110,7 +130,9 @@ await actor.update({
 ```
 Read back via `cardDisplayInfoFromData(suit, value, name)` in `getData()`.
 
-**`_createFateDeck()` is public** — called from the "Create Fate Deck" button if stacks go missing (e.g., accidentally deleted). Guard with `if (!game.cards) return;`.
+**`TtbActor.createWorldFateDeck()` is public** — wired from GM Tools. It must guard against duplicate deck creation by checking the saved world deck setting and only recreate when the referenced stack no longer exists.
+
+**`_createControlHand()` auto-runs on character create** — if it fails or the stacks are deleted, the sheet offers a manual recreate flow.
 
 ### Items (v0.1.7+)
 - **Weapon**: `apCost`, `rangeType`, `damageWeak/damageMod/damageSevere`, `range`, `capacity`, `reload`, `triggers`, `special`, `description`, `equipped`.
@@ -197,6 +219,19 @@ Clicking the already-active suit deselects it (sets to `""`). Active colors per 
 - **Foundry sets `button { width: 100%; }` globally.** Any custom button that should NOT be full-width must explicitly set `width: auto; flex-shrink: 0;` or a fixed pixel width. This includes all Fate Deck buttons (`.ttb-deck-flip`, `.ttb-hand-play`, etc.).
 - CSS variables are defined in `:root` — see `styles/ttb.css` for the full palette (`--ttb-parchment`, `--ttb-burgundy`, `--ttb-gold`, etc.).
 
+### Foundry v13 Scene Controls — GM Tools Gotchas
+- `getSceneControlButtons` in v13 uses `Record<string, SceneControl>` and `tools` is also a record, not the older array format.
+- Do **not** set `layer: "tokens"` on the custom GM Tools group. Doing so can reactivate the built-in token controls and prevent the sub-panel from staying open.
+- Use a non-button placeholder as `activeTool` so clicking the wizard hat opens the GM Tools sub-panel without firing an action.
+- The actual actions (`Create World Fate Deck`, `Open Fate Deck`, `Open Discard Pile`, `Reshuffle`) should be `button: true` tools that run from `onChange`.
+
+### Compendium Pack Format (v0.1.20+)
+- Foundry v12+ / v13 requires **LevelDB compendium directories**, not legacy NeDB `.db` packs, for runtime use.
+- Source content is still maintained in `.db` files and compiled into `packs/<name>/` via `npm run compile-packs`.
+- `system.json` must point pack `path` entries at the **directory** (for example `packs/ttb-weapons`), not the legacy `.db` file.
+- Legacy `.db` pack sources are kept under `packs/archive/` once compiled/migrated; do not delete them unless the source-of-truth workflow changes.
+- `scripts/compile-packs.mjs` uses `classic-level`; keep that dependency in `package.json`.
+
 ### Adding a New Actor Type
 1. Add the type string to `template.json` → `Actor.types`.
 2. Define its data template under `Actor.templates` or inline under `Actor.<type>`.
@@ -222,6 +257,7 @@ Never store derived values as raw editable fields if they can be computed. Overr
 
 ```bash
 npm test               # run Node.js unit tests (no Foundry required)
+npm run compile-packs  # rebuild LevelDB compendium packs from .db sources
 git pull               # sync after remote pushes
 ```
 
@@ -249,7 +285,7 @@ This project follows **[Semantic Versioning 2.0.0](https://semver.org/)**: `MAJO
 
 **Critical rule**: The **minor version must only be incremented after the user has tested the feature in Foundry VTT and confirmed it works**. Agents bump the patch version for fixes; agents propose a minor bump but wait for user sign-off before applying it.
 
-Current version: `0.1.10`
+Current version: `0.1.21`
 
 ### Current Version History
 | Version | Key Changes |
@@ -267,3 +303,14 @@ Current version: `0.1.10`
 | 0.1.8 | Communal Fate Deck, full duel resolution (TN/AV/MoS/MoF), Cheat Fate rework, chat output |
 | 0.1.9 | Workflow test / auto-release CI |
 | 0.1.10 | TTB GM Tools panel in Scene Controls; Fate Deck setup/reshuffle moved out of character sheet |
+| 0.1.11 | Fixed GM Tools scene controls for Foundry v13 (`Record` format + Font Awesome Free icons) |
+| 0.1.12 | GM Tools switched from toolbar sub-icons to a popup dialog |
+| 0.1.13 | Restored GM Tools wizard hat visibility in v13 by removing group-level `button: true` |
+| 0.1.14 | Corrected GM Tools for the Foundry v13 scene controls `onChange` API |
+| 0.1.15 | GM Tools wizard hat opened a popup dialog with Fate Deck actions |
+| 0.1.16 | Wizard hat/sub-panel behavior changed so actions require explicit clicks |
+| 0.1.17 | Reworked Fate Deck flow around per-character Control Hands; added duplicate world deck creation guard; draw-to-hand reveals cards face-up |
+| 0.1.18 | Removed `layer: "tokens"` from GM Tools to stop Foundry from stealing focus back to the token controls |
+| 0.1.19 | Fixed Foundry v13 card visibility so flipped and drawn cards reveal face-up |
+| 0.1.20 | Added six item compendiums (weapons, armor, gear, general talents, pursuit talents, spells) with 431 entries total |
+| 0.1.21 | Converted runtime compendium packs to LevelDB format for Foundry v12+/v13 and added `compile-packs` support |
