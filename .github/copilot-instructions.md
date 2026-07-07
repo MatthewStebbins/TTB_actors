@@ -8,7 +8,7 @@ This repo is a **FoundryVTT Game System** (`system.json`) for the *Through the B
 
 | Path | Purpose |
 |------|---------|
-| `system.json` | Foundry system manifest. `id` must stay `ttb-actors` (matches install folder). Current version: `0.1.23`. Verified on Foundry **v13**. |
+| `system.json` | Foundry system manifest. `id` must stay `ttb-actors` (matches install folder). Current version: `0.1.24`. Verified on Foundry **v13**. |
 | `template.json` | Declarative data model for all Actor/Item types. Edit this to add new fields — no JS needed for data shape. |
 | `scripts/main.js` | ES module entry point. Registers actor class, sheets, and preloads templates via `Hooks.once("init")`. |
 | `scripts/actors/` | `Actor` document subclasses. Derived stats computed in `prepareDerivedData()`. |
@@ -285,7 +285,7 @@ This project follows **[Semantic Versioning 2.0.0](https://semver.org/)**: `MAJO
 
 **Critical rule**: The **minor version must only be incremented after the user has tested the feature in Foundry VTT and confirmed it works**. Agents bump the patch version for fixes; agents propose a minor bump but wait for user sign-off before applying it.
 
-Current version: `0.1.23`
+Current version: `0.1.24`
 
 ### Current Version History
 | Version | Key Changes |
@@ -316,3 +316,4 @@ Current version: `0.1.23`
 | 0.1.21 | Converted runtime compendium packs to LevelDB format for Foundry v12+/v13 and added `compile-packs` support |
 | 0.1.22 | Refreshed `copilot-instructions.md` so the documented architecture, Fate Deck flow, GM Tools behavior, and compendium workflow match the current repo state |
 | 0.1.23 | Compiled LevelDB compendium packs so 441 items now load in Foundry |
+| 0.1.24 | Bumped manifest version so Foundry detects and applies the latest compendium pack update |
