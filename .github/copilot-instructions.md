@@ -8,7 +8,7 @@ This repo is a **FoundryVTT Game System** (`system.json`) for the *Through the B
 
 | Path | Purpose |
 |------|---------|
-| `system.json` | Foundry system manifest. `id` must stay `ttb-actors` (matches install folder). Current version: `0.1.25`. Verified on Foundry **v13**. |
+| `system.json` | Foundry system manifest. `id` must stay `ttb-actors` (matches install folder). Current version: `0.1.26`. Verified on Foundry **v13**. |
 | `template.json` | Declarative data model for all Actor/Item types. Edit this to add new fields — no JS needed for data shape. |
 | `scripts/main.js` | ES module entry point. Registers actor class, sheets, and preloads templates via `Hooks.once("init")`. |
 | `scripts/actors/` | `Actor` document subclasses. Derived stats computed in `prepareDerivedData()`. |
@@ -285,7 +285,7 @@ This project follows **[Semantic Versioning 2.0.0](https://semver.org/)**: `MAJO
 
 **Critical rule**: The **minor version must only be incremented after the user has tested the feature in Foundry VTT and confirmed it works**. Agents bump the patch version for fixes; agents propose a minor bump but wait for user sign-off before applying it.
 
-Current version: `0.1.25`
+Current version: `0.1.26`
 
 ### Current Version History
 | Version | Key Changes |
@@ -318,4 +318,5 @@ Current version: `0.1.25`
 | 0.1.23 | Compiled 441 items (66 weapons, 21 armor, 52 gear, 49 general talents, 211 pursuit talents, 32 spells) into LevelDB pack format; resolved Windows npm build issue with `--ignore-scripts` |
 | 0.1.24 | Updated instructions through v0.1.21 state with versioning rules and pack compilation workflow documentation |
 | 0.1.25 | **CRITICAL FIX**: Added `packs/` directory to `.github/workflows/release.yml` zip command so compiled compendium packs are included in system releases (was causing missing items in Foundry) |
+| 0.1.26 | **NEW**: Fatemaster NPC actor type with basic stat block sheet (Df, Wp, wounds, skills, abilities). Supports Minion/Enforcer/Master rank tracking. Ready for bestiary pack population. |
 
