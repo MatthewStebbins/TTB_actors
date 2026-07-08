@@ -318,3 +318,4 @@ Current version: `0.1.25`
 | 0.1.23 | Compiled 441 items (66 weapons, 21 armor, 52 gear, 49 general talents, 211 pursuit talents, 32 spells) into LevelDB pack format; resolved Windows npm build issue with `--ignore-scripts` |
 | 0.1.24 | Updated instructions through v0.1.21 state with versioning rules and pack compilation workflow documentation |
 | 0.1.25 | **CRITICAL FIX**: Added `packs/` directory to `.github/workflows/release.yml` zip command so compiled compendium packs are included in system releases (was causing missing items in Foundry) |
+
