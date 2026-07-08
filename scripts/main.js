@@ -1,5 +1,7 @@
 import { TtbActor }         from "./actors/ttb-actor.js";
+import { TtbNpc }           from "./actors/ttb-npc.js";
 import { TtbCharacterSheet } from "./sheets/ttb-character-sheet.js";
+import { TtbNpcSheet }      from "./sheets/ttb-npc-sheet.js";
 import { TtbItemSheet }      from "./sheets/ttb-item-sheet.js";
 
 Hooks.once("init", () => {
@@ -30,6 +32,11 @@ Hooks.once("init", () => {
     types: ["character"],
     makeDefault: true,
     label: "TTB.Sheet.character",
+  });
+  Actors.registerSheet("ttb-actors", TtbNpcSheet, {
+    types: ["fatemaster"],
+    makeDefault: true,
+    label: "TTB.Sheet.fatemaster",
   });
 
   Items.unregisterSheet("core", ItemSheet);
@@ -135,6 +142,7 @@ Hooks.on("getSceneControlButtons", (controls) => {
 async function preloadTemplates() {
   const templatePaths = [
     "systems/ttb-actors/templates/actors/character-sheet.hbs",
+    "systems/ttb-actors/templates/actors/npc-sheet.hbs",
     "systems/ttb-actors/templates/items/weapon-sheet.hbs",
     "systems/ttb-actors/templates/items/armor-sheet.hbs",
     "systems/ttb-actors/templates/items/gear-sheet.hbs",

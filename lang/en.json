@@ -118,6 +118,9 @@
   "TTB.Skill.healing":          "Healing",
   "TTB.Skill.lore":             "Lore",
   "TTB.Skill.notice":           "Notice",
+  "TTB.Skill.track":            "Track",
+  "TTB.Skill.occultism":        "Occultism",
+  "TTB.Skill.arcanology":       "Arcanology",
 
   "TTB.Tab.attributes": "Attributes",
   "TTB.Tab.skills":      "Skills",
@@ -175,6 +178,24 @@
 
   "TTB.Sheet.character": "Through the Breach -- Fated",
   "TTB.Sheet.item":      "Through the Breach -- Item",
+  "TTB.Sheet.fatemaster": "Through the Breach -- NPC",
 
-  "TTB.ActorTypes.character": "Fated"
+  "TTB.ActorTypes.character": "Fated",
+  "TTB.ActorTypes.fatemaster": "Fatemaster (NPC)",
+
+  "TTB.Attr.might":      "Might",
+  "TTB.Attr.grace":      "Grace",
+  "TTB.Attr.speed":      "Speed",
+  "TTB.Attr.resilience": "Resilience",
+  "TTB.Attr.charm":      "Charm",
+  "TTB.Attr.cunning":    "Cunning",
+  "TTB.Attr.tenacity":   "Tenacity",
+  "TTB.Attr.intellect":  "Intellect",
+
+  "TTB.StatBlock": "Stat Block",
+  "TTB.Skills":    "Skills",
+  "TTB.Abilities": "Abilities",
+  "TTB.Description": "Description",
+  "TTB.Delete": "Delete",
+  "TTB.AddAbility": "Add Ability"
 }

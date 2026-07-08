@@ -1,6 +1,6 @@
 {
   "Actor": {
-    "types": ["character"],
+    "types": ["character", "fatemaster"],
     "templates": {
       "attributes": {
         "attributes": {
@@ -143,6 +143,66 @@
         },
         "duel": { "skillKey": "", "tn": 10, "modifier": 0 }
       }
+    },
+    "fatemaster": {
+      "templates": ["attributes", "details"],
+      "rank": {
+        "title": "Minion",
+        "value": 0
+      },
+      "derived": {
+        "defense":   4,
+        "willpower": 2,
+        "walk":      4,
+        "charge":    6,
+        "height":    2,
+        "initiative": 0
+      },
+      "wounds": {
+        "value": 0,
+        "max":   4
+      },
+      "skills": {
+        "athletics":        { "value": 0 },
+        "intimidation":     { "value": 0 },
+        "labor":            { "value": 0 },
+        "pugilism":         { "value": 0 },
+        "toughness":        { "value": 0 },
+        "acrobatics":       { "value": 0 },
+        "disguise":         { "value": 0 },
+        "evade":            { "value": 0 },
+        "prestidigitation": { "value": 0 },
+        "ride":             { "value": 0 },
+        "escapology":       { "value": 0 },
+        "pistol":           { "value": 0 },
+        "rifle":            { "value": 0 },
+        "thrownWeapons":    { "value": 0 },
+        "carouse":          { "value": 0 },
+        "endurance":        { "value": 0 },
+        "mettle":           { "value": 0 },
+        "wilderness":       { "value": 0 },
+        "convince":         { "value": 0 },
+        "leadership":       { "value": 0 },
+        "performance":      { "value": 0 },
+        "seduction":        { "value": 0 },
+        "cheatFate":        { "value": 0 },
+        "deceive":          { "value": 0 },
+        "gambling":         { "value": 0 },
+        "lockpicking":      { "value": 0 },
+        "pickpocket":       { "value": 0 },
+        "scrutiny":         { "value": 0 },
+        "stealth":          { "value": 0 },
+        "centering":        { "value": 0 },
+        "enchanting":       { "value": 0 },
+        "necromancy":       { "value": 0 },
+        "notice":           { "value": 0 },
+        "occultism":        { "value": 0 },
+        "track":            { "value": 0 },
+        "arcanology":       { "value": 0 }
+      },
+      "abilities": [],
+      "actions": [],
+      "notes": ""
     }
   },
   "Item": {
