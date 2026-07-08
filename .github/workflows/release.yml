@@ -44,6 +44,7 @@ jobs:
             templates/ \
             styles/ \
             lang/ \
+            packs/ \
             --exclude "scripts/create-ttb-actor.js"
 
       - name: Create tag and GitHub Release
