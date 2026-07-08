@@ -68,13 +68,13 @@
     <div class="tab" data-tab="stat-block">
       <div class="ttb-npc-stat-block">
         <div class="ttb-attributes-grid">
-          {{#each system.attributes as |attr key|}}
+          {{#each attributes as |attr|}}
             <div class="ttb-attribute-card">
               <div class="ttb-attr-header">
-                {{localize (concat "TTB.Attr." (capitalize key))}}
+                {{attr.label}}
               </div>
               <div class="ttb-attr-value">
-                <input type="number" name="system.attributes.{{key}}.value" value="{{attr.value}}" min="-5" max="5" />
+                <input type="number" name="system.attributes.{{attr.key}}.value" value="{{attr.value}}" min="-5" max="5" />
               </div>
             </div>
           {{/each}}
@@ -85,15 +85,15 @@
     <!-- Skills Tab -->
     <div class="tab" data-tab="skills">
       <div class="ttb-skills-section">
-        {{#each skillsByAttribute as |skills attr|}}
-          {{#if skills.length}}
+        {{#each skillsByAttribute as |group attr|}}
+          {{#if group.skills.length}}
             <div class="ttb-skill-group">
-              <h4>{{localize (concat "TTB.Attr." (capitalize attr))}}</h4>
+              <h4>{{group.label}}</h4>
               <table class="ttb-skills-table">
                 <tbody>
-                  {{#each skills as |skill|}}
+                  {{#each group.skills as |skill|}}
                     <tr>
-                      <td class="ttb-skill-name">{{localize (concat "TTB.Skill." skill.key)}}</td>
+                      <td class="ttb-skill-name">{{skill.label}}</td>
                       <td class="ttb-skill-value">
                         <input type="number" name="system.skills.{{skill.key}}.value" value="{{skill.value}}" min="0" max="5" />
                       </td>

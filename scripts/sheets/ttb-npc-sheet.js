@@ -1,6 +1,6 @@
 export class TtbNpcSheet extends ActorSheet {
   static get defaultOptions() {
-    return foundry.utils.mergeObject(super.defaultOptions(), {
+    return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["ttb", "sheet", "npc"],
       template: "systems/ttb-actors/templates/actors/npc-sheet.hbs",
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "stat-block" }],
@@ -26,16 +26,32 @@ export class TtbNpcSheet extends ActorSheet {
     }
     context.woundBoxes = woundArray;
 
+    // Attribute labels (pre-computed to avoid template helpers)
+    const attrLabels = {
+      might: "Might", grace: "Grace", speed: "Speed", resilience: "Resilience",
+      charm: "Charm", cunning: "Cunning", tenacity: "Tenacity", intellect: "Intellect",
+    };
+
+    // Build attributes list with pre-computed labels
+    context.attributes = [];
+    for (const [key, attr] of Object.entries(system.attributes || {})) {
+      context.attributes.push({
+        key,
+        label: attrLabels[key] || key,
+        value: attr.value,
+      });
+    }
+
     // Build skills list with organization
     context.skillsByAttribute = {
-      might: [],
-      grace: [],
-      speed: [],
-      resilience: [],
-      charm: [],
-      cunning: [],
-      tenacity: [],
-      intellect: [],
+      might: { label: "Might", skills: [] },
+      grace: { label: "Grace", skills: [] },
+      speed: { label: "Speed", skills: [] },
+      resilience: { label: "Resilience", skills: [] },
+      charm: { label: "Charm", skills: [] },
+      cunning: { label: "Cunning", skills: [] },
+      tenacity: { label: "Tenacity", skills: [] },
+      intellect: { label: "Intellect", skills: [] },
     };
 
     const skillOrder = ["athletics", "intimidation", "labor", "pugilism", "toughness", 
@@ -63,7 +79,12 @@ export class TtbNpcSheet extends ActorSheet {
       const skill = context.skills[skillKey];
       if (skill) {
         const attr = skillAttrMap[skillKey] || "intellect";
-        context.skillsByAttribute[attr].push({ key: skillKey, ...skill });
+        const skillLabel = game.i18n.localize(`TTB.Skill.${skillKey}`);
+        context.skillsByAttribute[attr].skills.push({ 
+          key: skillKey, 
+          label: skillLabel,
+          value: skill.value 
+        });
       }
     }
 
