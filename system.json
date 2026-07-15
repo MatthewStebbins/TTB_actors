@@ -1,74 +1,78 @@
 {
-  "id": "ttb-actors",
-  "title": "Through the Breach",
-  "description": "A FoundryVTT game system for the Through the Breach tabletop RPG by Wyrd Miniatures. Supports Fated (player) character creation and character sheets.",
-  "version": "0.1.28",
-  "compatibility": {
-    "minimum": "10",
-    "verified": "13"
-  },
-  "authors": [
-    {
-      "name": "MatthewStebbins",
-      "url": "https://github.com/MatthewStebbins"
-    }
-  ],
-  "esmodules": ["scripts/main.js"],
-  "styles": ["styles/ttb.css"],
-  "languages": [
-    {
-      "lang": "en",
-      "name": "English",
-      "path": "lang/en.json"
-    }
-  ],
-  "url": "https://github.com/MatthewStebbins/TTB_actors",
-  "readme": "README.md",
-  "bugs": "https://github.com/MatthewStebbins/TTB_actors/issues",
-  "manifest": "https://raw.githubusercontent.com/MatthewStebbins/TTB_actors/main/system.json",
-  "download": "https://github.com/MatthewStebbins/TTB_actors/releases/latest/download/system.zip",
-  "packs": [
-    {
-      "name": "ttb-weapons",
-      "label": "TTB Weapons",
-      "path": "packs/ttb-weapons",
-      "type": "Item"
-    },
-    {
-      "name": "ttb-armor",
-      "label": "TTB Armor & Shields",
-      "path": "packs/ttb-armor",
-      "type": "Item"
-    },
-    {
-      "name": "ttb-gear",
-      "label": "TTB Gear & Sundries",
-      "path": "packs/ttb-gear",
-      "type": "Item"
-    },
-    {
-      "name": "ttb-general-talents",
-      "label": "TTB General Talents",
-      "path": "packs/ttb-general-talents",
-      "type": "Item"
-    },
-    {
-      "name": "ttb-pursuit-talents",
-      "label": "TTB Pursuit Talents",
-      "path": "packs/ttb-pursuit-talents",
-      "type": "Item"
-    },
-    {
-      "name": "ttb-spells",
-      "label": "TTB Spells & Magia",
-      "path": "packs/ttb-spells",
-      "type": "Item"
-    },
-    {
-      "name": "ttb-bestiary",
-      "label": "TTB Bestiary",
-      "path": "packs/ttb-bestiary",
-      "type": "Actor"
-    }
-  ]
+    "id":  "ttb-actors",
+    "title":  "Through the Breach",
+    "description":  "A FoundryVTT game system for the Through the Breach tabletop RPG by Wyrd Miniatures. Supports Fated (player) character creation and character sheets.",
+    "version":  "0.1.29",
+    "compatibility":  {
+                          "minimum":  "10",
+                          "verified":  "13"
+                      },
+    "authors":  [
+                    {
+                        "name":  "MatthewStebbins",
+                        "url":  "https://github.com/MatthewStebbins"
+                    }
+                ],
+    "esmodules":  [
+                      "scripts/main.js"
+                  ],
+    "styles":  [
+                   "styles/ttb.css"
+               ],
+    "languages":  [
+                      {
+                          "lang":  "en",
+                          "name":  "English",
+                          "path":  "lang/en.json"
+                      }
+                  ],
+    "url":  "https://github.com/MatthewStebbins/TTB_actors",
+    "readme":  "README.md",
+    "bugs":  "https://github.com/MatthewStebbins/TTB_actors/issues",
+    "manifest":  "https://raw.githubusercontent.com/MatthewStebbins/TTB_actors/main/system.json",
+    "download":  "https://github.com/MatthewStebbins/TTB_actors/releases/latest/download/system.zip",
+    "packs":  [
+                  {
+                      "name":  "ttb-weapons",
+                      "label":  "TTB Weapons",
+                      "path":  "packs/ttb-weapons",
+                      "type":  "Item"
+                  },
+                  {
+                      "name":  "ttb-armor",
+                      "label":  "TTB Armor \u0026 Shields",
+                      "path":  "packs/ttb-armor",
+                      "type":  "Item"
+                  },
+                  {
+                      "name":  "ttb-gear",
+                      "label":  "TTB Gear \u0026 Sundries",
+                      "path":  "packs/ttb-gear",
+                      "type":  "Item"
+                  },
+                  {
+                      "name":  "ttb-general-talents",
+                      "label":  "TTB General Talents",
+                      "path":  "packs/ttb-general-talents",
+                      "type":  "Item"
+                  },
+                  {
+                      "name":  "ttb-pursuit-talents",
+                      "label":  "TTB Pursuit Talents",
+                      "path":  "packs/ttb-pursuit-talents",
+                      "type":  "Item"
+                  },
+                  {
+                      "name":  "ttb-spells",
+                      "label":  "TTB Spells \u0026 Magia",
+                      "path":  "packs/ttb-spells",
+                      "type":  "Item"
+                  },
+                  {
+                      "name":  "ttb-bestiary",
+                      "label":  "TTB Bestiary",
+                      "path":  "packs/ttb-bestiary",
+                      "type":  "Actor"
+                  }
+              ]
 }
