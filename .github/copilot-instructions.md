@@ -322,6 +322,8 @@ Current version: `0.1.28`
 | 0.1.27 | **FIXED**: NPC sheet errors (removed non-existent template helpers, fixed defaultOptions method call). NPC sheet now renders properly in Foundry.
 | 0.1.28 | **NEW**: Bestiary compendium pack started with 3 starter NPCs (Guard Dog, Guild Guardsman, Guard Sergeant). Ready for population with additional NPCs from chapter-10 rules. |
 | 0.1.29 | **UI/UX**: Improved NPC sheet display—stat blocks now read-only (Defense/Willpower as primary badges), added comprehensive NPC-specific CSS styling (stat grid layout, wound dots, ability headers, skills table grouping). |
+| 0.1.30 | **MAJOR UI FIX**: Fixed NPC sheet rendering—removed broken localization helpers, added plain text labels (matches character sheet pattern). Comprehensive CSS rewrite for proper stat display, wounds, abilities, skills. Sheet now fully functional in Foundry. |
+
 
 
 
