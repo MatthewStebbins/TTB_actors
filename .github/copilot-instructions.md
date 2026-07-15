@@ -8,7 +8,7 @@ This repo is a **FoundryVTT Game System** (`system.json`) for the *Through the B
 
 | Path | Purpose |
 |------|---------|
-| `system.json` | Foundry system manifest. `id` must stay `ttb-actors` (matches install folder). Current version: `0.1.27`. Verified on Foundry **v13**. |
+| `system.json` | Foundry system manifest. `id` must stay `ttb-actors` (matches install folder). Current version: `0.1.28`. Verified on Foundry **v13**. |
 | `template.json` | Declarative data model for all Actor/Item types. Edit this to add new fields — no JS needed for data shape. |
 | `scripts/main.js` | ES module entry point. Registers actor class, sheets, and preloads templates via `Hooks.once("init")`. |
 | `scripts/actors/` | `Actor` document subclasses. Derived stats computed in `prepareDerivedData()`. |
@@ -285,7 +285,7 @@ This project follows **[Semantic Versioning 2.0.0](https://semver.org/)**: `MAJO
 
 **Critical rule**: The **minor version must only be incremented after the user has tested the feature in Foundry VTT and confirmed it works**. Agents bump the patch version for fixes; agents propose a minor bump but wait for user sign-off before applying it.
 
-Current version: `0.1.27`
+Current version: `0.1.28`
 
 ### Current Version History
 | Version | Key Changes |
@@ -320,5 +320,7 @@ Current version: `0.1.27`
 | 0.1.25 | **CRITICAL FIX**: Added `packs/` directory to `.github/workflows/release.yml` zip command so compiled compendium packs are included in system releases (was causing missing items in Foundry) |
 | 0.1.26 | **NEW**: Fatemaster NPC actor type with basic stat block sheet (Df, Wp, wounds, skills, abilities). Supports Minion/Enforcer/Master rank tracking. Ready for bestiary pack population. |
 | 0.1.27 | **FIXED**: NPC sheet errors (removed non-existent template helpers, fixed defaultOptions method call). NPC sheet now renders properly in Foundry.
+| 0.1.28 | **NEW**: Bestiary compendium pack started with 3 starter NPCs (Guard Dog, Guild Guardsman, Guard Sergeant). Ready for population with additional NPCs from chapter-10 rules. |
+
 
 
