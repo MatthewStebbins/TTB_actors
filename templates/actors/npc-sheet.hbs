@@ -15,30 +15,31 @@
   </header>
 
   <section class="ttb-stat-block">
+    <h3 style="text-align: center; margin: 0 0 12px 0; font-size: 0.9em; text-transform: uppercase; letter-spacing: 0.5px; color: var(--ttb-burgundy);">Stat Block</h3>
     <div class="ttb-stat-grid">
-      <div class="ttb-stat">
-        <label>Defense</label>
-        <input type="number" name="system.derived.defense" value="{{derived.defense}}" />
+      <div class="ttb-stat ttb-stat-primary">
+        <label class="ttb-stat-label">Defense</label>
+        <div class="ttb-stat-display">{{derived.defense}}</div>
+      </div>
+      <div class="ttb-stat ttb-stat-primary">
+        <label class="ttb-stat-label">Willpower</label>
+        <div class="ttb-stat-display">{{derived.willpower}}</div>
       </div>
       <div class="ttb-stat">
-        <label>Willpower</label>
-        <input type="number" name="system.derived.willpower" value="{{derived.willpower}}" />
+        <label class="ttb-stat-label">Walk</label>
+        <div class="ttb-stat-display">{{derived.walk}}</div>
       </div>
       <div class="ttb-stat">
-        <label>Walk</label>
-        <input type="number" name="system.derived.walk" value="{{derived.walk}}" />
+        <label class="ttb-stat-label">Charge</label>
+        <div class="ttb-stat-display">{{derived.charge}}</div>
       </div>
       <div class="ttb-stat">
-        <label>Charge</label>
-        <input type="number" name="system.derived.charge" value="{{derived.charge}}" />
+        <label class="ttb-stat-label">Height</label>
+        <div class="ttb-stat-display">{{derived.height}}</div>
       </div>
       <div class="ttb-stat">
-        <label>Height</label>
-        <input type="number" name="system.derived.height" value="{{derived.height}}" />
-      </div>
-      <div class="ttb-stat">
-        <label>Initiative</label>
-        <input type="number" name="system.derived.initiative" value="{{derived.initiative}}" />
+        <label class="ttb-stat-label">Initiative</label>
+        <div class="ttb-stat-display">{{derived.initiative}}</div>
       </div>
     </div>
   </section>

@@ -1669,3 +1669,53 @@
 .ttb-chat-success { background: rgba(50,150,50,0.15); color: #2a7a2a; }
 .ttb-chat-failure { background: rgba(150,40,40,0.15); color: #8a2020; }
 .ttb-chat-joker-note { font-size: 0.78rem; font-style: italic; opacity: 0.8; }
+
+/* -- NPC Sheet Styles -- */
+.ttb-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 12px;
+  padding: 12px;
+  background: linear-gradient(135deg, rgba(240,230,204,0.5), rgba(225,208,168,0.3));
+  border: 1px solid var(--ttb-gold-dk);
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.ttb-stat-display {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: var(--ttb-burgundy);
+  min-height: 24px;
+}
+
+.ttb-wound-box {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--ttb-burgundy);
+  background: var(--ttb-parchment);
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.ttb-wound-box.ttb-wound-active {
+  background: var(--ttb-burgundy);
+  box-shadow: 0 0 4px var(--ttb-burgundy-lt);
+}
+
+.ttb-ability-item {
+  margin-bottom: 12px;
+  padding: 8px;
+  background: linear-gradient(135deg, rgba(240,230,204,0.3), rgba(225,208,168,0.15));
+  border-left: 3px solid var(--ttb-gold);
+}
+
+.ttb-ability-name {
+  flex: 1;
+  border: none;
+  border-bottom: 1px solid var(--ttb-burgundy-lt);
+  background: transparent;
+  font-weight: bold;
+  color: var(--ttb-burgundy);
+}
+
