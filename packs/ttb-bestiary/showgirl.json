@@ -1,0 +1,86 @@
+{
+  "_id": "showgirl",
+  "name": "Showgirl",
+  "type": "fatemaster",
+  "system": {
+    "rank": {
+      "title": "Minion",
+      "value": 5
+    },
+    "types": "Living, Belle",
+    "aspects": {
+      "might": 1,
+      "grace": 3,
+      "speed": 2,
+      "resilience": -2,
+      "charm": 3,
+      "cunning": 2,
+      "intellect": 1,
+      "tenacity": 1
+    },
+    "derived": {
+      "defense": "4 (9)",
+      "willpower": "3 (8)",
+      "walk": "5",
+      "charge": "6",
+      "height": "2",
+      "initiative": "4 (9)"
+    },
+    "wounds": {
+      "value": 0,
+      "max": 4
+    },
+    "skills": {
+      "art": {
+        "value": 2
+      },
+      "bewitch": {
+        "value": 3
+      },
+      "convince": {
+        "value": 2
+      },
+      "deceive": {
+        "value": 3
+      },
+      "literacy": {
+        "value": 1
+      },
+      "melee": {
+        "value": 2
+      },
+      "music": {
+        "value": 3
+      },
+      "notice": {
+        "value": 2
+      },
+      "scrutiny": {
+        "value": 2
+      },
+      "stitching": {
+        "value": 2
+      }
+    },
+    "abilities": [
+      {
+        "name": "Distracting Performance",
+        "description": "When performing, allies within 10 yards gain + to Deceive, Pick Pocket, Stealth Challenges."
+      },
+      {
+        "name": "Flick of the Wrist",
+        "description": "May use Grace instead of Might for Melee/Pugilism attacks."
+      },
+      {
+        "name": "Manipulative (10)",
+        "description": "When enemy targets this character, they must pass TN 10 Willpower. On failure, may change target to legal choice."
+      }
+    ],
+    "actions": [
+      "(1) Poisoned Hairpin (Melee) | AV: 5 (10) | Rg: y1 | Resist: Df | Target suffers 1/1/2 damage, gains Poison +1.",
+      "(1) Lure (Bewitch) | AV: 6 (11) | Rg: 18 | Resist: Wp | Living target moves toward this character. Mask Fatal Distraction: Friendly within 5 yards may make 1 AP attack.",
+      "(1) Expensive Gift (Bewitch) | AV: 6 (11) | Rg: 2 | Resist: Wp | Living target gives this character non-weapon item from hand."
+    ],
+    "notes": "Beautiful, charming performers at Star Theater. Secretly trained Arcanist agents. Assist with Soulstone smuggling. Wield subtle stage and shadow magic."
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "_id": "moon-shinobi",
+  "name": "Moon Shinobi",
+  "type": "fatemaster",
+  "system": {
+    "rank": {
+      "title": "Enforcer",
+      "value": 7
+    },
+    "types": "Living, Gremlin",
+    "aspects": {
+      "might": 0,
+      "grace": 2,
+      "speed": 2,
+      "resilience": 2,
+      "charm": 1,
+      "cunning": 1,
+      "intellect": -1,
+      "tenacity": 2
+    },
+    "derived": {
+      "defense": "6 (13)",
+      "willpower": "4 (11)",
+      "walk": "5",
+      "charge": "6",
+      "height": "1",
+      "initiative": "5 (12)"
+    },
+    "wounds": {
+      "value": 0,
+      "max": 8
+    },
+    "skills": {
+      "acrobatics": {
+        "value": 2
+      },
+      "bewitch": {
+        "value": 3
+      },
+      "carouse": {
+        "value": 5
+      },
+      "culinary": {
+        "value": 2
+      },
+      "evade": {
+        "value": 4
+      },
+      "gambling": {
+        "value": 1
+      },
+      "martialArts": {
+        "value": 3
+      },
+      "notice": {
+        "value": 3
+      },
+      "pickPocket": {
+        "value": 2
+      },
+      "pugilism": {
+        "value": 3
+      },
+      "stealth": {
+        "value": 3
+      },
+      "toughness": {
+        "value": 3
+      },
+      "wilderness": {
+        "value": 1
+      }
+    },
+    "abilities": [
+      {
+        "name": "Drunk and Reckless",
+        "description": "If Intoxicated, may suffer 2 damage at start of turn to gain additional General AP."
+      },
+      {
+        "name": "Drunken Gremlin Kung Fu",
+        "description": "Always Intoxicated (suffers - to Willpower duels). When attacked by Close/Ranged, attacker counts + as - and - as +."
+      },
+      {
+        "name": "Numb the Pain",
+        "description": "While Intoxicated, ignores effects of Weak and Moderate Critical Effects."
+      }
+    ],
+    "actions": [
+      "(1) Tiny Green Fists of Fury (Martial Arts) | AV: 5 (12) | Rg: y1 | Resist: Df | Target suffers 1/3/4 damage. Severe inflicts Weak Critical Effect. Ram Critical Strike: +1 damage per Ram. Mask Drunken Roundhouse: After succeeding, take action again vs different character.",
+      "(1) Have a Drink (Bewitch) | AV: 4 (11) | Rg: 1 | Resist: Wp | Living target gains Intoxicated Condition 10 min or Poison +1 if already. Crow Bit Woozy: After succeeding, Slow. Ram Liver Damage: After succeeding, suffers 1/3/4 damage."
+    ],
+    "notes": "Serve enigmatic Brewmaster. Renounce family ties, swear loyalty. Receive all alcohol. Survive initiation through Drunken Gremlin Kung Fu training. Kept drunk throughout training."
+  }
+}
