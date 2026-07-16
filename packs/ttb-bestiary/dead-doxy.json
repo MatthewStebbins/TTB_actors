@@ -1,0 +1,83 @@
+{
+  "_id": "dead-doxy",
+  "name": "Dead Doxy",
+  "type": "fatemaster",
+  "system": {
+    "rank": {
+      "title": "Minion",
+      "value": 6
+    },
+    "types": "Undead, Belle",
+    "aspects": {
+      "might": -2,
+      "grace": 3,
+      "speed": 2,
+      "resilience": 3,
+      "charm": 3,
+      "cunning": 2,
+      "intellect": -2,
+      "tenacity": 3
+    },
+    "derived": {
+      "defense": "5 (11)",
+      "willpower": "5 (11)",
+      "walk": "5",
+      "charge": "6",
+      "height": "2",
+      "initiative": "4 (10)"
+    },
+    "wounds": {
+      "value": 0,
+      "max": 7
+    },
+    "skills": {
+      "acrobatics": {
+        "value": 2
+      },
+      "bewitch": {
+        "value": 3
+      },
+      "deceive": {
+        "value": 1
+      },
+      "evade": {
+        "value": 3
+      },
+      "melee": {
+        "value": 3
+      },
+      "music": {
+        "value": 2
+      },
+      "notice": {
+        "value": 2
+      },
+      "toughness": {
+        "value": 1
+      }
+    },
+    "abilities": [
+      {
+        "name": "Flick of the Wrist",
+        "description": "May use Grace instead of Might for Melee or Pugilism attacks."
+      },
+      {
+        "name": "Hard to Wound +1",
+        "description": "Damage flips against this character suffer -."
+      },
+      {
+        "name": "Inviting Allure",
+        "description": "When character within a6 becomes Slow, may discard card to force it to move yards equal to its Walk toward this character."
+      },
+      {
+        "name": "Manipulative (10)",
+        "description": "When enemy targets this character, they must pass TN 10 Willpower Challenge. On failure, may change target to legal target of choice."
+      }
+    ],
+    "actions": [
+      "(1) Fancy Cane (Melee) | AV: 6 (12) | Rg: y2 | Resist: Df | Target suffers 2/2/4 damage. Severe damage inflicts Weak Critical Effect. Ram Out Clubbing: After damaging, target knocked Prone, take action again vs same target.",
+      "(1) Undress (Bewitch) | AV: 6T (12T) | Rg: 6 | Resist: Wp | Living target becomes Slow. Tome Burlesque Show: Living characters within p3 must make TN 13 Centering Challenge or become Slow. Mask Confusing Feelings: After succeeding, target gains Confusing Feelings until end of next turn."
+    ],
+    "notes": "Undead performers reanimated by necromancers. Retain grace and showmanship. Walk with confident strides not shambling. Seductive manner can freeze attackers."
+  }
+}

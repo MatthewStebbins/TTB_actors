@@ -1,0 +1,85 @@
+{
+  "_id": "desolation-engine",
+  "name": "Desolation Engine",
+  "type": "fatemaster",
+  "system": {
+    "rank": {
+      "title": "Enforcer",
+      "value": 8
+    },
+    "types": "Construct, Undead",
+    "aspects": {
+      "might": 4,
+      "grace": -2,
+      "speed": 1,
+      "resilience": 5,
+      "charm": -5,
+      "cunning": -3,
+      "intellect": -3,
+      "tenacity": 3
+    },
+    "derived": {
+      "defense": "3 (11)",
+      "willpower": "5 (13)",
+      "walk": "5",
+      "charge": "8",
+      "height": "3",
+      "initiative": "3 (11)"
+    },
+    "wounds": {
+      "value": 0,
+      "max": 12
+    },
+    "skills": {
+      "athletics": {
+        "value": 3
+      },
+      "necromancy": {
+        "value": 2
+      },
+      "notice": {
+        "value": 2
+      },
+      "pugilism": {
+        "value": 2
+      },
+      "stealth": {
+        "value": 1
+      },
+      "toughness": {
+        "value": 5
+      }
+    },
+    "abilities": [
+      {
+        "name": "Hard to Wound +2",
+        "description": "Damage flips against this character suffer --."
+      },
+      {
+        "name": "Caustic Aura",
+        "description": "Living characters beginning turn within a2 suffer 2 damage and cannot declare (0) Actions until next turn."
+      },
+      {
+        "name": "Desolate Warping",
+        "description": "After killing Living, Construct, or Undead, may discard card to transform it into Abomination that cannot act this round. This character heals to full Wounds."
+      },
+      {
+        "name": "Lost Focus",
+        "description": "If killed, becomes two Abominations that cannot act this round."
+      },
+      {
+        "name": "Melee Expert",
+        "description": "Generates 1 additional AP on turn, but only for Close Combat attacks."
+      },
+      {
+        "name": "Rush +3",
+        "description": "Charge Aspect increased by +3."
+      }
+    ],
+    "actions": [
+      "(1) Entropy Claws (Pugilism) | AV: 6T (14T) | Rg: y3 | Resist: Df | Target suffers 3/4/6 damage. Tome Consuming Touch: After damaging, heals amount equal to damage target suffered.",
+      "(1) Desolate Supplications (Necromancy) | This character may suffer up to 4 damage. Every character within p6 must pass TN 13 Toughness duel or suffer damage equal to what this character suffered -1."
+    ],
+    "notes": "Towering monstrosities formed when 4+ Abominations converge. Ooze putrid fluid from seams. Heal by consuming. No loyalty - attack anyone. Only annihilation ends the cycle."
+  }
+}
