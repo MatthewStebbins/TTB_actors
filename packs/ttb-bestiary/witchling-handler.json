@@ -1,0 +1,98 @@
+{
+  "_id": "witchling-handler",
+  "name": "Witchling Handler",
+  "type": "fatemaster",
+  "system": {
+    "rank": {
+      "title": "Enforcer",
+      "value": 8
+    },
+    "types": "Living, Witch Hunter",
+    "aspects": {
+      "might": 2,
+      "grace": 3,
+      "speed": 2,
+      "resilience": 2,
+      "charm": -1,
+      "cunning": 0,
+      "intellect": 2,
+      "tenacity": 3
+    },
+    "derived": {
+      "defense": "5R (13R)",
+      "willpower": "6R (14R)",
+      "walk": "5",
+      "charge": "6",
+      "height": "2",
+      "initiative": "5 (13)"
+    },
+    "wounds": {
+      "value": 0,
+      "max": 8
+    },
+    "skills": {
+      "convince": {
+        "value": 2
+      },
+      "centering": {
+        "value": 4
+      },
+      "counterSpelling": {
+        "value": 3
+      },
+      "enchanting": {
+        "value": 3
+      },
+      "evade": {
+        "value": 3
+      },
+      "labor": {
+        "value": 4
+      },
+      "intimidation": {
+        "value": 2
+      },
+      "leadership": {
+        "value": 3
+      },
+      "notice": {
+        "value": 3
+      },
+      "pistol": {
+        "value": 3
+      },
+      "scrutiny": {
+        "value": 3
+      },
+      "sorcery": {
+        "value": 3
+      },
+      "toughness": {
+        "value": 3
+      },
+      "track": {
+        "value": 3
+      }
+    },
+    "abilities": [
+      {
+        "name": "Reflect Magic (Ram+Mask)",
+        "description": "After succeeding against Spell/Manifested Power, attacker suffers 2/3B/5BB damage. Damage flip receives -."
+      },
+      {
+        "name": "On My Orders (Ram)",
+        "description": "After succeeding, friendly Minion within 12 yards may take (1) Walk toward attacker. If Witchling, may make Close Combat attack."
+      },
+      {
+        "name": "Thalarian Doctrine",
+        "description": "When casting Enchanting Spell/Manifested Power, two instances of Increased Duration Immuto added without increasing TN."
+      }
+    ],
+    "actions": [
+      "(1) Runed Greatsword (Labor) | AV: 6 (14) | Rg: y2 | Resist: Df | Target suffers 3/4/6 damage. Gains + if not part of Charge. Grants + to Intimidate. Crow Drain Magic: End magical effects and heal 1 Wound per effect.",
+      "(1) Burn Them All (Sorcery) | AV: 6T (14T) | TN: 14T | Rg: z10 | Resist: Wp | Target suffers 2/3B/4B damage. Every character damaged gains Burning +1.",
+      "(1) Collier Single Action Army (Pistol) | AV: 6 (14) | Rg: z12 | Resist: Df | Target suffers 2/3/4 damage. Capacity 6, Reload 2. Grants + to Intimidate."
+    ],
+    "notes": "Trainers tasked with brainwashing Witchlings into living weapons after their personalities are burned away by Sonnia Criid."
+  }
+}

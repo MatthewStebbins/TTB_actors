@@ -1,0 +1,84 @@
+{
+  "_id": "socialite",
+  "name": "Socialite",
+  "type": "fatemaster",
+  "system": {
+    "rank": {
+      "title": "Minion",
+      "value": 5
+    },
+    "types": "Living",
+    "aspects": {
+      "might": -2,
+      "grace": 2,
+      "speed": -1,
+      "resilience": -1,
+      "charm": 3,
+      "cunning": 1,
+      "intellect": 2,
+      "tenacity": -1
+    },
+    "derived": {
+      "defense": "4 (9)",
+      "willpower": "4 (9)",
+      "walk": "4",
+      "charge": "4",
+      "height": "2",
+      "initiative": "3 (8)"
+    },
+    "wounds": {
+      "value": 0,
+      "max": 4
+    },
+    "skills": {
+      "art": {
+        "value": 2
+      },
+      "barter": {
+        "value": 1
+      },
+      "bewitch": {
+        "value": 3
+      },
+      "convince": {
+        "value": 2
+      },
+      "centering": {
+        "value": 2
+      },
+      "deceive": {
+        "value": 1
+      },
+      "gambling": {
+        "value": 1
+      },
+      "literacy": {
+        "value": 1
+      },
+      "notice": {
+        "value": 1
+      },
+      "bureaucracy": {
+        "value": 1
+      }
+    },
+    "abilities": [
+      {
+        "name": "Governor's Gift",
+        "description": "Choose a gender. Gain + on Bewitch and Scrutiny duels vs chosen gender."
+      },
+      {
+        "name": "Grace Under Fire",
+        "description": "Uses Grace instead of Speed for Defense and Initiative."
+      },
+      {
+        "name": "Don't Mind Me (11)",
+        "description": "If no offensive actions last turn, enemies must succeed TN 11 Scrutiny Challenge or choose different target."
+      }
+    ],
+    "actions": [
+      "(1) B&D Pocket (Pistol) | AV: 2 (7) | Rg: z6 | Resist: Df | Target suffers 2/3/3 damage. Capacity 4, Reload 2."
+    ],
+    "notes": "Highest echelons of Malifaux society. Weaponize gossip, bribery, and conspiracy to ruin rivals for sport."
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "_id": "desperate-mercenary",
+  "name": "Desperate Mercenary",
+  "type": "fatemaster",
+  "system": {
+    "rank": {
+      "title": "Minion",
+      "value": 5
+    },
+    "types": "Living",
+    "aspects": {
+      "might": 2,
+      "grace": 2,
+      "speed": 1,
+      "resilience": -1,
+      "charm": 0,
+      "cunning": 1,
+      "intellect": 1,
+      "tenacity": 2
+    },
+    "derived": {
+      "defense": "4 (9)",
+      "willpower": "4 (9)",
+      "walk": "5",
+      "charge": "5",
+      "height": "2",
+      "initiative": "3 (8)"
+    },
+    "wounds": {
+      "value": 0,
+      "max": 5
+    },
+    "skills": {
+      "athletics": {
+        "value": 1
+      },
+      "barter": {
+        "value": 2
+      },
+      "convince": {
+        "value": 1
+      },
+      "evade": {
+        "value": 2
+      },
+      "labor": {
+        "value": 2
+      },
+      "notice": {
+        "value": 2
+      },
+      "pistol": {
+        "value": 3
+      },
+      "scrutiny": {
+        "value": 2
+      },
+      "toughness": {
+        "value": 1
+      }
+    },
+    "abilities": [
+      {
+        "name": "Combat Reading",
+        "description": "When making disengaging strikes, add Scrutiny (+2) to Acting Value."
+      },
+      {
+        "name": "Reckless",
+        "description": "At start of turn, may suffer 1 damage to gain 1 additional General AP."
+      }
+    ],
+    "actions": [
+      "(1) Brahk'blade (Labor) | AV: 4 (9) | Rg: y2 | Resist: Df | Target suffers 2/3/4 damage. No Triggers.",
+      "(1) Collier Navy (Pistol) | AV: 5 (10) | Rg: z12 | Resist: Df | Target suffers 2/3/4 damage. Capacity 6, Reload 2. Ram Unload: If 2+ bullets remain, +2 damage and weapon empty."
+    ],
+    "notes": "Failed immigrants taking jobs no reputable mercenary will touch � extortion, kidnapping, murder. Survive at any cost."
+  }
+}

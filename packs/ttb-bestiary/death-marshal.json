@@ -1,0 +1,97 @@
+{
+  "_id": "death-marshal",
+  "name": "Death Marshal",
+  "type": "fatemaster",
+  "system": {
+    "rank": {
+      "title": "Enforcer",
+      "value": 8
+    },
+    "types": "Living, Death Marshal",
+    "aspects": {
+      "might": 2,
+      "grace": 2,
+      "speed": 1,
+      "resilience": 3,
+      "charm": -2,
+      "cunning": 1,
+      "intellect": 1,
+      "tenacity": 2
+    },
+    "derived": {
+      "defense": "4 (12)",
+      "willpower": "5 (13)",
+      "walk": "5",
+      "charge": "5",
+      "height": "2",
+      "initiative": "4 (12)"
+    },
+    "wounds": {
+      "value": 0,
+      "max": 9
+    },
+    "skills": {
+      "convince": {
+        "value": 2
+      },
+      "centering": {
+        "value": 3
+      },
+      "deceive": {
+        "value": 3
+      },
+      "evade": {
+        "value": 2
+      },
+      "labor": {
+        "value": 3
+      },
+      "intimidation": {
+        "value": 3
+      },
+      "leadership": {
+        "value": 1
+      },
+      "necromancy": {
+        "value": 3
+      },
+      "notice": {
+        "value": 3
+      },
+      "pistol": {
+        "value": 4
+      },
+      "scrutiny": {
+        "value": 2
+      },
+      "toughness": {
+        "value": 3
+      },
+      "thrownWeapons": {
+        "value": 3
+      },
+      "track": {
+        "value": 4
+      },
+      "wilderness": {
+        "value": 1
+      }
+    },
+    "abilities": [
+      {
+        "name": "Hard to Wound +1",
+        "description": "Damage flips against this character suffer -."
+      },
+      {
+        "name": "Fear Not Death",
+        "description": "This character's corpse can never be reanimated. May render target remains unfit for reanimation."
+      }
+    ],
+    "actions": [
+      "(1) Peacebringer (Pistol) | AV: 6 (14) | Rg: z10 | Resist: Df | Target suffers 2/3/5 damage. Grants + to Intimidate. Capacity 6, Reload 1. Ram Critical Strike: +1 per Ram.",
+      "(1) Peacebringer Bayonet (Melee) | AV: 5 (13) | Rg: y1 | Resist: Df | Target suffers 1/3/4 damage. Ram Critical Strike: +1 per Ram.",
+      "(1) Pine Box (Heavy Melee) | AV: 6 (14) | Rg: y2 or z9 | Resist: Df | Target suffers 2/3/4 damage. Crow Get in Box: Trap target, gains Boxed and Buried Condition."
+    ],
+    "notes": "One of the few Guild Special Divisions genuinely appreciated by Malifaux citizens. Locate and eliminate Resurrectionists and undead."
+  }
+}
