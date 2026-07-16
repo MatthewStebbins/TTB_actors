@@ -1,0 +1,66 @@
+{
+  "_id": "mindless-zombie-horde",
+  "name": "Mindless Zombie Horde",
+  "type": "fatemaster",
+  "system": {
+    "rank": {
+      "title": "Peon",
+      "value": 0
+    },
+    "types": "Undead, Swarm",
+    "aspects": {
+      "might": 1,
+      "grace": -3,
+      "speed": -3,
+      "resilience": 0,
+      "charm": -5,
+      "cunning": -5,
+      "intellect": -5,
+      "tenacity": -5
+    },
+    "derived": {
+      "defense": "2",
+      "willpower": "2 (varies)",
+      "walk": "3",
+      "charge": "3",
+      "height": "2",
+      "initiative": "-3 (varies)"
+    },
+    "wounds": {
+      "value": 0,
+      "max": 0
+    },
+    "skills": {
+      "pugilism": {
+        "value": 2
+      }
+    },
+    "abilities": [
+      {
+        "name": "Collective Focus",
+        "description": "Rank Value +8: Treat as equal to Condition value. Does not add Rank to Defense."
+      },
+      {
+        "name": "Multiple Bodies",
+        "description": "No Wounds; damage reduces Rank Value by 1, unless blast (b) or immune (i) damage, reduced by full amount. At 0 Rank Value, last Zombie slain."
+      },
+      {
+        "name": "Rotted Brains",
+        "description": "Immune to Willpower duels."
+      },
+      {
+        "name": "Shambling",
+        "description": "Gains Slow at start of each turn during Dramatic Time."
+      },
+      {
+        "name": "Zombie Curse",
+        "description": "Any Living killed by this character animates as Mindless Zombie after 1 hour."
+      }
+    ],
+    "actions": [
+      "(1) Pulled into the Horde (Pugilism) | AV: 3 (varies) | Rg: y1 | Resist: Df | Target suffers damage equal to Rank Value.",
+      "(0) Surge Forward | Move this character up to 5 yards in any direction, then reduce Rank Value Condition by 1."
+    ],
+    "notes": "Collective horde of mindless undead zombies. Moves as swarm. Shambles forward slowly. Growing curse animates slain Living as zombies. Multiple bodies health pool."
+  }
+}
