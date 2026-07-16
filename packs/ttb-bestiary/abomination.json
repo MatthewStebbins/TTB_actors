@@ -1,0 +1,67 @@
+{
+  "_id": "abomination",
+  "name": "Abomination",
+  "type": "fatemaster",
+  "system": {
+    "rank": {
+      "title": "Minion",
+      "value": 5
+    },
+    "types": "Construct, Undead, Horror",
+    "aspects": {
+      "might": 2,
+      "grace": 1,
+      "speed": 2,
+      "resilience": -1,
+      "charm": -5,
+      "cunning": -3,
+      "intellect": -3,
+      "tenacity": 3
+    },
+    "derived": {
+      "defense": "4 (9)",
+      "willpower": "5 (10)",
+      "walk": "5",
+      "charge": "6",
+      "height": "2",
+      "initiative": "3 (8)"
+    },
+    "wounds": {
+      "value": 0,
+      "max": 4
+    },
+    "skills": {
+      "athletics": {
+        "value": 2
+      },
+      "notice": {
+        "value": 1
+      },
+      "pugilism": {
+        "value": 2
+      },
+      "stealth": {
+        "value": 1
+      }
+    },
+    "abilities": [
+      {
+        "name": "Caustic Aura",
+        "description": "Living characters beginning turn within a2 suffer 1 damage and cannot declare (0) Actions until next turn."
+      },
+      {
+        "name": "Controlled Deformation",
+        "description": "If within 2 yards of 3+ characters with this ability at start of turn, absorbs them and becomes Desolation Engine. New Engine cannot act this round."
+      },
+      {
+        "name": "Horrifying Presence",
+        "description": "When this character is created or revealed to Living characters, each must pass TN 10 Horror Duel."
+      }
+    ],
+    "actions": [
+      "(1) Grasping Limbs (Pugilism) | AV: 3 (8) | Rg: y2 | Resist: Df | Target suffers 1/2/3 damage and becomes Slow.",
+      "(0) Absorb Corpse | If within 2 yards of a dead Living character, absorb it and heal 1 damage."
+    ],
+    "notes": "Horrifying amalgamations of mechanical devices and rotting flesh from Old Malifaux. Warp living flesh when near. Can absorb bodies to repair themselves."
+  }
+}
