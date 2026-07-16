@@ -1,0 +1,81 @@
+{
+  "_id": "gokudo",
+  "name": "Gokudo",
+  "type": "fatemaster",
+  "system": {
+    "rank": {
+      "title": "Minion",
+      "value": 5
+    },
+    "types": "Living, Retainer",
+    "aspects": {
+      "might": 0,
+      "grace": 2,
+      "speed": 2,
+      "resilience": 1,
+      "charm": -2,
+      "cunning": 2,
+      "intellect": 0,
+      "tenacity": 1
+    },
+    "derived": {
+      "defense": "4 (9)",
+      "willpower": "4 (9)",
+      "walk": "5",
+      "charge": "6",
+      "height": "2",
+      "initiative": "3 (8)"
+    },
+    "wounds": {
+      "value": 0,
+      "max": 6
+    },
+    "skills": {
+      "athletics": {
+        "value": 1
+      },
+      "carouse": {
+        "value": 1
+      },
+      "centering": {
+        "value": 2
+      },
+      "intimidate": {
+        "value": 2
+      },
+      "martial": {
+        "value": 3
+      },
+      "notice": {
+        "value": 1
+      },
+      "scrutiny": {
+        "value": 2
+      },
+      "stealth": {
+        "value": 2
+      },
+      "thrownWeapons": {
+        "value": 3
+      },
+      "toughness": {
+        "value": 1
+      }
+    },
+    "abilities": [
+      {
+        "name": "Leap Aside (Mask)",
+        "description": "After attack fails, may push 5 yards in any direction."
+      },
+      {
+        "name": "Tethered Soul",
+        "description": "If killed within 6 yards of friendly Enforcer/Henchman/Master, that character may discard card to bind spirit as friendly Shackled Spirit adjacent."
+      }
+    ],
+    "actions": [
+      "(1) Serpent Punch (Martial Arts) | AV: 5 (10) | Rg: y1 | Resist: Df | Target suffers 1/3/4 damage. Severe inflicts Weak CF. Crow Poisoned Chi: After damaging, target gains Poison +1.",
+      "(1) Shuriken (Thrown Weapons) | AV: 5 (10) | Rg: z8 | Resist: Df | Target suffers 1/2/3 damage. Ram Poison Coated: After, target gains Poison +1."
+    ],
+    "notes": "Thugs bound to sorcerer Wei Lu through inherited magical oaths. When killed near Ten Thunders leader, spirits bound to fight on."
+  }
+}

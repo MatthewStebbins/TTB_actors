@@ -1,0 +1,94 @@
+{
+  "_id": "oiran",
+  "name": "Oiran",
+  "type": "fatemaster",
+  "system": {
+    "rank": {
+      "title": "Minion",
+      "value": 6
+    },
+    "types": "Living, Belle, Last-Blossom",
+    "aspects": {
+      "might": -1,
+      "grace": 3,
+      "speed": 3,
+      "resilience": 1,
+      "charm": 3,
+      "cunning": 3,
+      "intellect": 2,
+      "tenacity": 1
+    },
+    "derived": {
+      "defense": "5 (11)",
+      "willpower": "6 (12)",
+      "walk": "6",
+      "charge": "7",
+      "height": "2",
+      "initiative": "6 (12)"
+    },
+    "wounds": {
+      "value": 0,
+      "max": 6
+    },
+    "skills": {
+      "acrobatics": {
+        "value": 2
+      },
+      "art": {
+        "value": 2
+      },
+      "athletics": {
+        "value": 1
+      },
+      "bewitch": {
+        "value": 2
+      },
+      "centering": {
+        "value": 4
+      },
+      "convince": {
+        "value": 1
+      },
+      "deceive": {
+        "value": 3
+      },
+      "leadership": {
+        "value": 1
+      },
+      "music": {
+        "value": 2
+      },
+      "notice": {
+        "value": 3
+      },
+      "pugilism": {
+        "value": 3
+      },
+      "scrutiny": {
+        "value": 3
+      },
+      "toughness": {
+        "value": 1
+      }
+    },
+    "abilities": [
+      {
+        "name": "Disguised",
+        "description": "Cannot be target of Charge Action."
+      },
+      {
+        "name": "Flick of the Wrist",
+        "description": "May use Grace instead of Might for Melee/Pugilism."
+      },
+      {
+        "name": "Manipulative (11)",
+        "description": "When enemy targets with Action, TN 11 Willpower or this character changes target to legal choice."
+      }
+    ],
+    "actions": [
+      "(1) Poisoned Fighting Claws (Pugilism) | AV: 6 (12) | Rg: y1 | Resist: Df | Target suffers 1/3/4 damage, gains Poison +1. Gains + to attack. Tome Overwhelm: After damaging, take again vs same target (-1 AV per other Trigger).",
+      "(1) Lure (Bewitch) | AV: 5 (11) | Rg: 18 | Resist: Wp | Living target moves toward this character. Crow Spider and Fly: After, may make 1 AP Close Combat vs target."
+    ],
+    "notes": "Intelligence operatives disguised as humble entertainers. Handlers for Ten Thunders specialists. Poisoned metal claws. Lethal training beneath performance."
+  }
+}
