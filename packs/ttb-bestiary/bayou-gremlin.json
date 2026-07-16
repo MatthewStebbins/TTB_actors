@@ -1,0 +1,97 @@
+{
+  "_id": "bayou-gremlin",
+  "name": "Bayou Gremlin",
+  "type": "fatemaster",
+  "system": {
+    "rank": {
+      "title": "Minion",
+      "value": 5
+    },
+    "types": "Living, Gremlin",
+    "aspects": {
+      "might": -1,
+      "grace": 2,
+      "speed": 1,
+      "resilience": 0,
+      "charm": -2,
+      "cunning": 1,
+      "intellect": -1,
+      "tenacity": 1
+    },
+    "derived": {
+      "defense": "4 (9)",
+      "willpower": "3 (8)",
+      "walk": "5",
+      "charge": "5",
+      "height": "1",
+      "initiative": "2 (7)"
+    },
+    "wounds": {
+      "value": 0,
+      "max": 4
+    },
+    "skills": {
+      "barter": {
+        "value": 1
+      },
+      "carouse": {
+        "value": 2
+      },
+      "deceive": {
+        "value": 2
+      },
+      "evade": {
+        "value": 2
+      },
+      "gambling": {
+        "value": 1
+      },
+      "homesteading": {
+        "value": 1
+      },
+      "husbandry": {
+        "value": 1
+      },
+      "longArms": {
+        "value": 2
+      },
+      "melee": {
+        "value": 2
+      },
+      "music": {
+        "value": 1
+      },
+      "notice": {
+        "value": 1
+      },
+      "pickPocket": {
+        "value": 1
+      },
+      "track": {
+        "value": 1
+      },
+      "wilderness": {
+        "value": 1
+      }
+    },
+    "abilities": [
+      {
+        "name": "Drunk and Reckless",
+        "description": "If Intoxicated, may suffer 2 damage at start of turn to gain additional General AP."
+      },
+      {
+        "name": "From the Hip",
+        "description": "Uses Grace instead of Intellect for Long Arm attacks."
+      },
+      {
+        "name": "Squeal (Mask)",
+        "description": "After damaged by enemy Close Combat, push 4 yards directly away."
+      }
+    ],
+    "actions": [
+      "(1) Banjo Bash (Melee) | AV: 1 (6) | Rg: y2 | Resist: Df | Target suffers 2/2/4 damage. If Critical Effect, breaks and ceases function.",
+      "(1) Boomstick (Long Arms) | AV: 4 (9) | Rg: z12 | Resist: Df | Target suffers 1/2/3B damage. Must declare Trigger. Capacity 1, Reload 1. Ram Dumb Luck: Double damage, suffer half. Crow Whoops Ricochet: Closest char within range suffers 1 damage. Tome What If: Add +B to Moderate/Severe. Mask I Got Him: After succeeding, push 3 yards toward target."
+    ],
+    "notes": "Most intelligent creatures of Bayou. Raised through mimicry. Learn from humans: clothing, firearms, walls, pig domestication, moonshine brewing. Population booming. Serious threat to Guild dominance."
+  }
+}
