@@ -1,0 +1,71 @@
+{
+  "_id": "simulacrum",
+  "name": "Simulacrum",
+  "type": "fatemaster",
+  "system": {
+    "rank": {
+      "title": "Enforcer",
+      "value": 8
+    },
+    "types": "Undead, Horror",
+    "aspects": {
+      "might": 4,
+      "grace": -3,
+      "speed": -2,
+      "resilience": 4,
+      "charm": -5,
+      "cunning": -3,
+      "intellect": -4,
+      "tenacity": 3
+    },
+    "derived": {
+      "defense": "2 (10)",
+      "willpower": "5 (13)",
+      "walk": "3",
+      "charge": "6",
+      "height": "3",
+      "initiative": "-2 (6)"
+    },
+    "wounds": {
+      "value": 0,
+      "max": 11
+    },
+    "skills": {
+      "athletics": {
+        "value": 5
+      },
+      "pugilism": {
+        "value": 2
+      },
+      "thrownWeapons": {
+        "value": 2
+      },
+      "toughness": {
+        "value": 5
+      }
+    },
+    "abilities": [
+      {
+        "name": "Hard to Wound +2",
+        "description": "Damage flips against this character suffer --."
+      },
+      {
+        "name": "Rush +3",
+        "description": "Charge Aspect increased by +3."
+      },
+      {
+        "name": "Terrifying (Living) (12)",
+        "description": "Enemy Living characters must pass TN 12 Horror Duel when ending turn in engagement range or targeting."
+      },
+      {
+        "name": "Walking Morgue",
+        "description": "If limbs severed/destroyed, reanimates as two Mindless Zombies (cannot act). If killed, becomes six Mindless Zombies (cannot act)."
+      }
+    ],
+    "actions": [
+      "(1) Meaty Fists (Pugilism) | AV: 6 (14) | Rg: y1 | Resist: Df | Target suffers 3/5/6 damage. Mask Knockabout: Push target up to 5 yards. Crow Loose Pieces: Summon Mindless Zombie in base contact (cannot act), suffer 1 damage.",
+      "(1) Hurl Zombie (Thrown Weapons) | AV: 6 (14) | Rg: z10 | Resist: Df | Throw friendly Mindless Zombie at target. Target suffers 2/4/5 damage and Prone. Zombie suffers 2 damage, placed within 1 yard, becomes Prone."
+    ],
+    "notes": "Massive brutes stitched from dozens of corpses. Graveyard's worth per creation. Severing limb releases Mindless Zombies. Inspire revulsion."
+  }
+}
