@@ -1,0 +1,79 @@
+{
+  "_id": "gamin-ice",
+  "name": "Gamin (Ice)",
+  "type": "fatemaster",
+  "system": {
+    "rank": {
+      "title": "Minion",
+      "value": 5
+    },
+    "types": "Construct, Gamin",
+    "aspects": {
+      "might": 2,
+      "grace": 2,
+      "speed": 0,
+      "resilience": 1,
+      "charm": -3,
+      "cunning": 1,
+      "intellect": -1,
+      "tenacity": 2
+    },
+    "derived": {
+      "defense": "4 (9)",
+      "willpower": "4 (9)",
+      "walk": "4",
+      "charge": "5",
+      "height": "1",
+      "initiative": "2 (7)"
+    },
+    "wounds": {
+      "value": 0,
+      "max": 5
+    },
+    "skills": {
+      "evade": {
+        "value": 3
+      },
+      "notice": {
+        "value": 2
+      },
+      "pugilism": {
+        "value": 2
+      },
+      "thrownWeapons": {
+        "value": 2
+      }
+    },
+    "abilities": [
+      {
+        "name": "Armor +1",
+        "description": "Reduce all damage by +1 (minimum 1)."
+      },
+      {
+        "name": "Demise",
+        "description": "Falls unconscious = killed. On death, all within p2 suffer 2 damage + Ice effect."
+      },
+      {
+        "name": "Rush +1",
+        "description": "Charge increased by +1."
+      },
+      {
+        "name": "Frozen Heart",
+        "description": "Immune to Horror Duels and Paralyzed Condition."
+      },
+      {
+        "name": "Chill (Ice)",
+        "description": "After damaging, target becomes Slow (passive trigger)."
+      },
+      {
+        "name": "Ice Immuto Demise",
+        "description": "On death, damaged characters gain Slow."
+      }
+    ],
+    "actions": [
+      "(1) Claw (Pugilism) | AV: 4 (9) | Rg: y1 | Resist: Df | Target suffers 1/3/4 damage.",
+      "(1) Elemental Blast (Thrown Weapons) | AV: 4 (9) | Rg: z8 | Resist: Df | Target suffers 1/3/4 damage."
+    ],
+    "notes": "Small elemental Ice construct summoned by spellcasters. Immune Horror/Paralyzed. All attacks inflict Slow. On death gives Slow."
+  }
+}

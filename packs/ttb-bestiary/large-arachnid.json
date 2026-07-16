@@ -1,0 +1,67 @@
+{
+  "_id": "large-arachnid",
+  "name": "Large Arachnid",
+  "type": "fatemaster",
+  "system": {
+    "rank": {
+      "title": "Minion",
+      "value": 6
+    },
+    "types": "Construct",
+    "aspects": {
+      "might": 2,
+      "grace": 0,
+      "speed": 0,
+      "resilience": 1,
+      "charm": -5,
+      "cunning": -5,
+      "intellect": -5,
+      "tenacity": -5
+    },
+    "derived": {
+      "defense": "4 (10)",
+      "willpower": "4 (10)",
+      "walk": "4",
+      "charge": "6",
+      "height": "2",
+      "initiative": "0 (6)"
+    },
+    "wounds": {
+      "value": 0,
+      "max": 7
+    },
+    "skills": {
+      "centering": {
+        "value": 2
+      },
+      "evade": {
+        "value": 3
+      },
+      "pneumatic": {
+        "value": 3
+      },
+      "toughness": {
+        "value": 2
+      }
+    },
+    "abilities": [
+      {
+        "name": "Armor +1",
+        "description": "Reduce all damage by +1 (minimum 1)."
+      },
+      {
+        "name": "Rush +2",
+        "description": "Charge Aspect increased by +2."
+      },
+      {
+        "name": "Unimpeded",
+        "description": "Ignores terrain penalties when taking Movement Actions."
+      }
+    ],
+    "actions": [
+      "(1) Circular Sawblade (Pneumatic) | AV: 5 (11) | Rg: y2 | Resist: Df | Target suffers 2/3/4 damage, ignoring Armor. Tome Heated Metal: After, target gains Burning +1. Crow Mangle: Choose one armor worn, destroy it.",
+      "(1) Self-Repair | Use scrap pile within 2 yards to heal 2 damage. Pile mass roughly large dog."
+    ],
+    "notes": "Purpose-built combat constructs modeled on Steam Arachnid design. Industrial saw blades. Especially effective vs armored targets. Self-repair capability."
+  }
+}

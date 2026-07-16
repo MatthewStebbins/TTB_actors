@@ -1,0 +1,79 @@
+{
+  "_id": "golem-ice",
+  "name": "Golem (Ice)",
+  "type": "fatemaster",
+  "system": {
+    "rank": {
+      "title": "Enforcer",
+      "value": 8
+    },
+    "types": "Construct, Golem",
+    "aspects": {
+      "might": 5,
+      "grace": 0,
+      "speed": 0,
+      "resilience": 3,
+      "charm": -3,
+      "cunning": 1,
+      "intellect": -1,
+      "tenacity": 3
+    },
+    "derived": {
+      "defense": "2 (10)",
+      "willpower": "5 (13)",
+      "walk": "4",
+      "charge": "6",
+      "height": "3",
+      "initiative": "2 (10)"
+    },
+    "wounds": {
+      "value": 0,
+      "max": 10
+    },
+    "skills": {
+      "evade": {
+        "value": 2
+      },
+      "notice": {
+        "value": 2
+      },
+      "pugilism": {
+        "value": 3
+      },
+      "toughness": {
+        "value": 4
+      }
+    },
+    "abilities": [
+      {
+        "name": "Armor +2",
+        "description": "Reduce all damage by +2 (minimum 1)."
+      },
+      {
+        "name": "Demise",
+        "description": "Falls unconscious = killed. On death, all within p2 suffer 2 damage + Ice effect."
+      },
+      {
+        "name": "Melee Expert",
+        "description": "Generates 1 additional AP only for Close Combat."
+      },
+      {
+        "name": "Rush +2",
+        "description": "Charge increased by +2."
+      },
+      {
+        "name": "Frozen Heart",
+        "description": "Immune to Horror Duels and Paralyzed Condition."
+      },
+      {
+        "name": "Chill (Ice)",
+        "description": "After damaging, target becomes Slow (passive)."
+      }
+    ],
+    "actions": [
+      "(1) Talon (Pugilism) | AV: 8R (16R) | Rg: y2 | Resist: Df | Target suffers 3/4/6 damage. Ram Toss: Reduce to 0, push 10 yards, Prone.",
+      "(3) Smash (Pugilism) | AV: 8R (16R) | Rg: y1 | Resist: Df | Target suffers 9/10/12 damage."
+    ],
+    "notes": "Massive elemental Ice construct. Immune Horror/Paralyzed. Powerful freezing aura. On death inflicts Slow."
+  }
+}
