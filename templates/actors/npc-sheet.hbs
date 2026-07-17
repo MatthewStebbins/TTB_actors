@@ -13,13 +13,18 @@
           <input type="number" name="system.rank.value" value="{{rank.value}}" min="0" max="10" class="ttb-rank-value"/>
         </div>
       </div>
-    </div>
+        {{#if system.types}}
+        <div class="ttb-npc-meta">
+          <span class="ttb-meta-label">Type:</span> <span class="ttb-meta-value">{{system.types}}</span>
+        </div>
+        {{/if}}
+      </div></div>
   </header>
 
   <!-- Stat Block Bar (always visible) -->
   <section class="ttb-stat-block-bar">
     <h3 class="ttb-section-title">Stat Block</h3>
-    <div class="ttb-stat-grid">
+    <div class="ttb-stat-grid ttb-stat-2row">
       <div class="ttb-stat ttb-stat-primary">
         <label class="ttb-stat-label">Df</label>
         <div class="ttb-stat-display">{{derived.defense}}</div>
@@ -73,7 +78,7 @@
   <section class="sheet-body">
     <!-- Attributes Tab -->
     <div class="tab" data-tab="attributes">
-      <div class="ttb-attributes-grid">
+      <div class="ttb-attributes-grid ttb-attr-3col">
         {{#each attributes as |attr|}}
           <div class="ttb-attribute-card">
             <label class="ttb-attr-label">{{attr.label}}</label>
