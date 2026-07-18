@@ -1,0 +1,95 @@
+{
+  "_id": "gunsmith",
+  "name": "Gunsmith",
+  "type": "fatemaster",
+  "system": {
+    "rank": {
+      "title": "Minion",
+      "value": 6
+    },
+    "types": "Living",
+    "aspects": {
+      "might": 1,
+      "grace": 2,
+      "speed": 2,
+      "resilience": 2,
+      "charm": 1,
+      "intellect": 1,
+      "cunning": 2,
+      "tenacity": 3
+    },
+    "derived": {
+      "defense": "5 (11)",
+      "willpower": "5 (11)",
+      "walk": "5",
+      "charge": "6",
+      "height": "2",
+      "initiative": "4 (10)"
+    },
+    "wounds": {
+      "value": 0,
+      "max": 7
+    },
+    "skills": {
+      "athletics": {
+        "value": 2
+      },
+      "barter": {
+        "value": 2
+      },
+      "carouse": {
+        "value": 1
+      },
+      "convince": {
+        "value": 3
+      },
+      "enchanting": {
+        "value": 1
+      },
+      "evade": {
+        "value": 3
+      },
+      "intimidate": {
+        "value": 4
+      },
+      "notice": {
+        "value": 2
+      },
+      "pistol": {
+        "value": 4
+      },
+      "scrutiny": {
+        "value": 3
+      },
+      "stealth": {
+        "value": 1
+      },
+      "toughness": {
+        "value": 2
+      }
+    },
+    "abilities": [
+      {
+        "name": "Return Fire (Mask)",
+        "description": "After succeeding at Defense/Willpower duel, attacker suffers damage from readied Pistol weapon. Damage flip receives -."
+      },
+      {
+        "name": "Always Ready",
+        "description": "May take Ready Weapon Action immediately after flipping Initiative."
+      },
+      {
+        "name": "Gunfighter",
+        "description": "May use Pistols as if Range y2."
+      },
+      {
+        "name": "Hard to Kill",
+        "description": "May choose to ignore one Critical Effect per Dramatic Time."
+      }
+    ],
+    "actions": [
+      "(1) Custom Pistol (Pistol) | AV: 6 (12) | Rg: z12 or y2 | Resist: Df | Target suffers 2/3/4 damage. If Rapid Fire, +2 to final duel total. Capacity 8, Reload 0. Tome Piercing: Ignores Armor/Hard to Wound. Mask Experimental: 2/4/6 damage. Ram Explosive: +B to Moderate/Severe. Crow Cavity: + to damage.",
+      "(2) Rapid Fire | Discard Twist Card to take three 1 AP attacks with Ranged weapon vs single target."
+    ],
+    "notes": "Elite troubleshooters of M&SU. Carry heavily modified pistols with specialized ammunition. Reputation alone often resolves conflicts. Devastating when pressed."
+  }
+}

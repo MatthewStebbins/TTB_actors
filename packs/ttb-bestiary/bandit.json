@@ -1,0 +1,91 @@
+{
+  "_id": "bandit",
+  "name": "Bandit",
+  "type": "fatemaster",
+  "system": {
+    "rank": {
+      "title": "Minion",
+      "value": 5
+    },
+    "types": "Living",
+    "aspects": {
+      "might": 1,
+      "grace": 2,
+      "speed": 2,
+      "resilience": 1,
+      "charm": -2,
+      "cunning": 0,
+      "intellect": 0,
+      "tenacity": 2
+    },
+    "derived": {
+      "defense": "5 (10)",
+      "willpower": "4 (9)",
+      "walk": "5",
+      "charge": "6",
+      "height": "2",
+      "initiative": "4 (9)"
+    },
+    "wounds": {
+      "value": 0,
+      "max": 6
+    },
+    "skills": {
+      "acrobatics": {
+        "value": 1
+      },
+      "athletics": {
+        "value": 2
+      },
+      "carouse": {
+        "value": 3
+      },
+      "centering": {
+        "value": 2
+      },
+      "evade": {
+        "value": 3
+      },
+      "intimidation": {
+        "value": 3
+      },
+      "notice": {
+        "value": 2
+      },
+      "pistol": {
+        "value": 3
+      },
+      "scrutiny": {
+        "value": 1
+      },
+      "stealth": {
+        "value": 2
+      },
+      "toughness": {
+        "value": 1
+      },
+      "wilderness": {
+        "value": 1
+      }
+    },
+    "abilities": [
+      {
+        "name": "Quick Getaway (Mask)",
+        "description": "After resolving vs enemy, push this character up to 5 yards in any direction."
+      },
+      {
+        "name": "Bulletproof +1",
+        "description": "Reduce all Ranged Combat damage by 1 (minimum 1)."
+      },
+      {
+        "name": "Gunfighter",
+        "description": "May use Pistols as if Range y2."
+      }
+    ],
+    "actions": [
+      "(1) Collier Navy (Pistol) | AV: 5 (10) | Rg: y2 or z12 | Resist: Df | Target suffers 2/3/4 damage. Capacity 6, Reload 2. Tome Drop It: Target passes TN 10 Centering duel or drops held item.",
+      "(2) Run and Gun | Discard Twist. Move up to Walk, make (1) AP Ranged Combat attack, move up to Walk."
+    ],
+    "notes": "Many escaped convicts plaguing the Northern Hills and Contract Towns. Rob mining towns and Guild trains."
+  }
+}

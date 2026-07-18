@@ -1,0 +1,82 @@
+{
+  "_id": "mature-nephilim",
+  "name": "Mature Nephilim",
+  "type": "fatemaster",
+  "system": {
+    "rank": {
+      "title": "Enforcer",
+      "value": 8
+    },
+    "types": "Living, Nephilim",
+    "aspects": {
+      "might": 4,
+      "grace": 3,
+      "speed": 3,
+      "resilience": 4,
+      "charm": -2,
+      "cunning": 2,
+      "intellect": 3,
+      "tenacity": 3
+    },
+    "derived": {
+      "defense": "4 (12)",
+      "willpower": "5 (13)",
+      "walk": "6",
+      "charge": "7",
+      "height": "3",
+      "initiative": "5 (13)"
+    },
+    "wounds": {
+      "value": 0,
+      "max": 10
+    },
+    "skills": {
+      "athletics": {
+        "value": 3
+      },
+      "evade": {
+        "value": 3
+      },
+      "melee": {
+        "value": 2
+      },
+      "notice": {
+        "value": 2
+      },
+      "pugilism": {
+        "value": 3
+      },
+      "toughness": {
+        "value": 4
+      },
+      "track": {
+        "value": 2
+      },
+      "wilderness": {
+        "value": 3
+      }
+    },
+    "abilities": [
+      {
+        "name": "Armor +1",
+        "description": "Reduce all damage by 1 (minimum 1)."
+      },
+      {
+        "name": "Black Blood",
+        "description": "All characters without Black Blood within 1 yard suffer 1 damage when this character suffers damage."
+      },
+      {
+        "name": "Flight",
+        "description": "Immune to falling damage. May ignore terrain and other characters when moving."
+      },
+      {
+        "name": "Terrifying (Living) (12)",
+        "description": "Enemy Living must pass TN 12 Horror Duel when ending turn in engagement range or targeting."
+      }
+    ],
+    "actions": [
+      "(1) Monstrous Talons (Pugilism) | AV: 7M (15M) | Rg: y2 | Resist: Df | Target suffers 4/5/6 damage. Mask/Tome Charge Through: Instead of damage, push target 4 yards. Mask/Crow Rip in Half: After killing, all enemies within p6 make TN 12 Horror Duel."
+    ],
+    "notes": "Hulking creatures twice human height. Strong claws tear men apart. Keenly intelligent. Swift and strong. Even other Nephilim fear them. Never stop growing. Blood drinking fuels further growth."
+  }
+}

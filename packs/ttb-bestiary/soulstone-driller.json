@@ -1,0 +1,73 @@
+{
+  "_id": "soulstone-driller",
+  "name": "Soulstone Driller",
+  "type": "fatemaster",
+  "system": {
+    "rank": {
+      "title": "Minion",
+      "value": 5
+    },
+    "types": "Construct",
+    "aspects": {
+      "might": 3,
+      "grace": -1,
+      "speed": -1,
+      "resilience": 2,
+      "charm": -5,
+      "cunning": -5,
+      "intellect": -5,
+      "tenacity": -5
+    },
+    "derived": {
+      "defense": "4 (9)",
+      "willpower": "3 (8)",
+      "walk": "4",
+      "charge": "4",
+      "height": "2",
+      "initiative": "-1 (4)"
+    },
+    "wounds": {
+      "value": 0,
+      "max": 6
+    },
+    "skills": {
+      "athletics": {
+        "value": 2
+      },
+      "centering": {
+        "value": 1
+      },
+      "evade": {
+        "value": 3
+      },
+      "pneumatic": {
+        "value": 3
+      },
+      "toughness": {
+        "value": 1
+      }
+    },
+    "abilities": [
+      {
+        "name": "Armor +1",
+        "description": "Reduce all damage by +1 (minimum 1)."
+      },
+      {
+        "name": "Burrowing Charge",
+        "description": "When Charge, may make single 2 AP Close Combat attack instead of two 1 AP."
+      },
+      {
+        "name": "Rock Drill",
+        "description": "May move through solid stone without speed reduction. May leave tunnel behind."
+      },
+      {
+        "name": "Unimpeded",
+        "description": "Ignores terrain penalties when taking Movement Actions."
+      }
+    ],
+    "actions": [
+      "(2) Pneumatic Drill (Pneumatic) | AV: 6 (11) | Rg: y2 | Resist: Df | Target suffers 4/5/7 damage, ignoring Armor. Mask Excavation: Creates 2 yard deep hole. TN 10 Evade or fall Prone."
+    ],
+    "notes": "Worm-like mining constructs by Viktor Ramos. Sense and burrow toward Soulstone deposits. Tunnel underground, burst beneath enemies, drill through anything."
+  }
+}

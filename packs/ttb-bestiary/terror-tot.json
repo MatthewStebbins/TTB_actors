@@ -1,0 +1,76 @@
+{
+  "_id": "terror-tot",
+  "name": "Terror Tot",
+  "type": "fatemaster",
+  "system": {
+    "rank": {
+      "title": "Minion",
+      "value": 5
+    },
+    "types": "Living, Nephilim",
+    "aspects": {
+      "might": 1,
+      "grace": 3,
+      "speed": 4,
+      "resilience": 0,
+      "charm": -2,
+      "cunning": 2,
+      "intellect": 0,
+      "tenacity": 3
+    },
+    "derived": {
+      "defense": "6 (11)",
+      "willpower": "5 (10)",
+      "walk": "6",
+      "charge": "8",
+      "height": "1",
+      "initiative": "5 (10)"
+    },
+    "wounds": {
+      "value": 0,
+      "max": 4
+    },
+    "skills": {
+      "acrobatics": {
+        "value": 1
+      },
+      "athletics": {
+        "value": 2
+      },
+      "martialArts": {
+        "value": 1
+      },
+      "notice": {
+        "value": 1
+      },
+      "stealth": {
+        "value": 2
+      },
+      "track": {
+        "value": 1
+      },
+      "wilderness": {
+        "value": 1
+      }
+    },
+    "abilities": [
+      {
+        "name": "Black Blood",
+        "description": "All characters without Black Blood within 1 yard suffer 1 damage when this character suffers damage."
+      },
+      {
+        "name": "Pounce",
+        "description": "When enemy ends push or move within engagement range not part of Walk/Charge, may immediately take (1) AP Close Combat attack."
+      },
+      {
+        "name": "Grow",
+        "description": "If kills Living non-Nephilim with y attack, may feast on remains to become Young Nephilim. All damage and Conditions removed."
+      }
+    ],
+    "actions": [
+      "(1) Blackened Claws (Martial Arts) | AV: 5 (10) | Rg: y1 | Resist: Df | Target suffers 1/2/4 damage.",
+      "(0) Sprint (Athletics) | Character may discard card to take Walk Action."
+    ],
+    "notes": "Youngest Nephilim. Small size belies ruthlessness. Cannot yet fly. Use hooves to spring at enemies. Hunt in packs. Feed on corpses to grow into Young Nephilim."
+  }
+}

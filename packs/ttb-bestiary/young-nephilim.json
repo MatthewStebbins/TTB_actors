@@ -1,0 +1,85 @@
+{
+  "_id": "young-nephilim",
+  "name": "Young Nephilim",
+  "type": "fatemaster",
+  "system": {
+    "rank": {
+      "title": "Minion",
+      "value": 6
+    },
+    "types": "Living, Nephilim",
+    "aspects": {
+      "might": 3,
+      "grace": 2,
+      "speed": 2,
+      "resilience": 2,
+      "charm": -3,
+      "cunning": 2,
+      "intellect": -1,
+      "tenacity": 3
+    },
+    "derived": {
+      "defense": "5 (11)",
+      "willpower": "5 (11)",
+      "walk": "5",
+      "charge": "6",
+      "height": "2",
+      "initiative": "4 (10)"
+    },
+    "wounds": {
+      "value": 0,
+      "max": 7
+    },
+    "skills": {
+      "acrobatics": {
+        "value": 1
+      },
+      "athletics": {
+        "value": 2
+      },
+      "evade": {
+        "value": 3
+      },
+      "notice": {
+        "value": 2
+      },
+      "pugilism": {
+        "value": 3
+      },
+      "stealth": {
+        "value": 1
+      },
+      "toughness": {
+        "value": 2
+      },
+      "track": {
+        "value": 2
+      },
+      "wilderness": {
+        "value": 2
+      }
+    },
+    "abilities": [
+      {
+        "name": "Black Blood",
+        "description": "All characters without Black Blood within 1 yard suffer 1 damage when this character suffers damage."
+      },
+      {
+        "name": "Flight",
+        "description": "Immune to falling damage. May ignore terrain and other characters when moving."
+      },
+      {
+        "name": "Thirst for Blood",
+        "description": "Gains Fast Condition when Living character within 3 yards killed by friendly character."
+      },
+      {
+        "name": "Mature",
+        "description": "If kills Living non-Nephilim Enforcer/Henchman/Master rank or Fated with y attack, may feast to become Mature Nephilim. All damage/Conditions removed."
+      }
+    ],
+    "actions": [
+      "(1) Talons (Pugilism) | AV: 6M (12M) | Rg: y1 | Resist: Df | Target suffers 2/4/5 damage. Ram Blood Frenzy: After damaging, take action again vs same target. Mask Toss Away: Push target 4 yards. Mask Feed Brood: Push corpse 4 yards, Terror Tots count as killing for Grow."
+    ],
+    "notes": "Grown from Terror Tots after consuming blood. Sudden violent growth process. Ravenous appetite. Hunt in packs of 2-3. Trigger growth through feasting."
+  }
+}

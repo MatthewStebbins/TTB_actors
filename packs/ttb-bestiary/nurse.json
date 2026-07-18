@@ -1,0 +1,77 @@
+{
+  "_id": "nurse",
+  "name": "Nurse",
+  "type": "fatemaster",
+  "system": {
+    "rank": {
+      "title": "Minion",
+      "value": 6
+    },
+    "types": "Living, Tormented",
+    "aspects": {
+      "might": -1,
+      "grace": 3,
+      "speed": 2,
+      "resilience": 1,
+      "charm": 2,
+      "cunning": 1,
+      "intellect": 2,
+      "tenacity": 2
+    },
+    "derived": {
+      "defense": "6 (12)",
+      "willpower": "4 (10)",
+      "walk": "5",
+      "charge": "6",
+      "height": "2",
+      "initiative": "3 (9)"
+    },
+    "wounds": {
+      "value": 0,
+      "max": 6
+    },
+    "skills": {
+      "doctor": {
+        "value": 3
+      },
+      "evade": {
+        "value": 4
+      },
+      "literacy": {
+        "value": 2
+      },
+      "melee": {
+        "value": 2
+      },
+      "notice": {
+        "value": 1
+      },
+      "prestidigitation": {
+        "value": 2
+      },
+      "toughness": {
+        "value": 1
+      }
+    },
+    "abilities": [
+      {
+        "name": "Hands Off (Mask)",
+        "description": "After damaged by y attack, may immediately move yards equal to Walk in any direction."
+      },
+      {
+        "name": "Flick of the Wrist",
+        "description": "Use Grace instead of Might for Melee and Pugilism attacks."
+      },
+      {
+        "name": "Illegible Prescriptions",
+        "description": "During duel, may end Focused Condition to add any suit to final duel total."
+      }
+    ],
+    "actions": [
+      "(1) Surgical Instruments (Melee) | AV: 5 (11) | Rg: y1 | Resist: Df | Target suffers 2/3/5 damage, ignoring Hard to Wound.",
+      "(1) Syringe (Melee) | AV: 5 (11) | Rg: y1 | Resist: Df | Target suffers 0/0/1 damage and gains Poison +4. Ram Overdose: Target suffers 2/3/4 and no Poison.",
+      "(1) Take Your Meds (Doctor) | AV: 5 (11) | Rg: 8 | Resist: Wp | Target gains Condition until start of next turn: Ram Hallucinogens, Mask Uppers, Tome Downers, or Crow Painkillers."
+    ],
+    "notes": "McMourning promised nurses eternal youth through skin transplant. Psychological trauma drives insanity. Experts in anesthetics. Serve in Guild morgue and Quarantine Zone lab."
+  }
+}

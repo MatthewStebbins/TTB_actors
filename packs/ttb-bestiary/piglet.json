@@ -1,0 +1,66 @@
+{
+  "_id": "piglet",
+  "name": "Piglet",
+  "type": "fatemaster",
+  "system": {
+    "rank": {
+      "title": "Peon",
+      "value": 4
+    },
+    "types": "Living, Beast, Pig",
+    "aspects": {
+      "might": 2,
+      "grace": 0,
+      "speed": 3,
+      "resilience": 0,
+      "charm": -3,
+      "cunning": -3,
+      "intellect": -2,
+      "tenacity": 1
+    },
+    "derived": {
+      "defense": "5 (9)",
+      "willpower": "3 (7)",
+      "walk": "6",
+      "charge": "7",
+      "height": "1",
+      "initiative": "4 (8)"
+    },
+    "wounds": {
+      "value": 0,
+      "max": 3
+    },
+    "skills": {
+      "notice": {
+        "value": 1
+      },
+      "pugilism": {
+        "value": 1
+      },
+      "track": {
+        "value": 1
+      },
+      "wilderness": {
+        "value": 2
+      }
+    },
+    "abilities": [
+      {
+        "name": "Pigcharge",
+        "description": "May perform (2) Charge Action as (1) Action."
+      },
+      {
+        "name": "Puny",
+        "description": "Has -1 Wounds and cannot make Disengaging Strikes."
+      },
+      {
+        "name": "Set Er Off",
+        "description": "At start of turn during Dramatic Time, if not engaged or within 2 yards of friendly without this Ability, must declare Charge vs closest legal non-Pig target."
+      }
+    ],
+    "actions": [
+      "(1) Ram (Pugilism) | AV: 3 (7) | Rg: y1 | Resist: Df | Target suffers 1/2/3 damage. As part of Charge, +1 per yard moved before attack. Must declare Trigger. Ram Stampede: After damaging, must declare Charge vs closest non-Pig not engaged. Crow Eat Anything: After damaging Living/Undead, heal 1. Tome Grab On: Target gains Clamped On +1 (-1 Walk, -2 Charge, +1 damage). Mask Bowled Over: Target TN 10 Acrobatics or Prone."
+    ],
+    "notes": "Baby pigs that grow into adults. Easier to train than adults. Raised as pets by Gremlins. Useful self-defense but can't be left unsupervised. Follow mothers in wild."
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "_id": "crooligan",
+  "name": "Crooligan",
+  "type": "fatemaster",
+  "system": {
+    "rank": {
+      "title": "Minion",
+      "value": 5
+    },
+    "types": "Undead, Horror, Lost",
+    "aspects": {
+      "might": 0,
+      "grace": 4,
+      "speed": 2,
+      "resilience": 0,
+      "charm": -2,
+      "cunning": 2,
+      "intellect": 0,
+      "tenacity": 3
+    },
+    "derived": {
+      "defense": "6 (11)",
+      "willpower": "5 (10)",
+      "walk": "5",
+      "charge": "6",
+      "height": "1",
+      "initiative": "4 (9)"
+    },
+    "wounds": {
+      "value": 0,
+      "max": 4
+    },
+    "skills": {
+      "acrobatics": {
+        "value": 1
+      },
+      "athletics": {
+        "value": 1
+      },
+      "enchanting": {
+        "value": 3
+      },
+      "evade": {
+        "value": 4
+      },
+      "lockpicking": {
+        "value": 1
+      },
+      "melee": {
+        "value": 3
+      },
+      "notice": {
+        "value": 2
+      },
+      "pickPocket": {
+        "value": 2
+      },
+      "stealth": {
+        "value": 4
+      }
+    },
+    "abilities": [
+      {
+        "name": "From the Shadows",
+        "description": "When called on Initiative flip, if no enemy aware is unfriendly, may immediately take one additional turn after flip (before characters resolve) for each instance. If multiple characters have this, resolve in Initiative order."
+      }
+    ],
+    "actions": [
+      "(1) Infected Dagger (Melee) | AV: 3C (8C) | Rg: y1 | Resist: Df | Target suffers 1/2/3 damage. Crow Infect: After succeeding, target gains Poison +1 Condition number of times equal to Crow in final duel total.",
+      "(1) Return to Sender | Teleport to space within 1 yard of controller regardless of distance, or within 1 yard of any character within 12 yards fully in soft cover.",
+      "(1) The Mist (Enchanting) | AV: 5C (10C) | TN: 10C | Until start of next turn (or controller's next turn if subordinate), area within a4 considered Ht 3 soft cover."
+    ],
+    "notes": "Abused children changed by mist. Ragged silhouettes with dead eyes. Abusers who follow victims into fog find themselves confronted - by morning, no trace remains."
+  }
+}

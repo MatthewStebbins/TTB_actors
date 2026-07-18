@@ -1,0 +1,73 @@
+{
+  "_id": "bayou-chicken",
+  "name": "Bayou Chicken",
+  "type": "fatemaster",
+  "system": {
+    "rank": {
+      "title": "Minion",
+      "value": 6
+    },
+    "types": "Living, Beast",
+    "aspects": {
+      "might": 2,
+      "grace": 1,
+      "speed": 2,
+      "resilience": 1,
+      "charm": 0,
+      "cunning": -1,
+      "intellect": -2,
+      "tenacity": 2
+    },
+    "derived": {
+      "defense": "5 (11)",
+      "willpower": "4 (10)",
+      "walk": "5",
+      "charge": "6",
+      "height": "2",
+      "initiative": "4 (10)"
+    },
+    "wounds": {
+      "value": 0,
+      "max": 7
+    },
+    "skills": {
+      "athletics": {
+        "value": 1
+      },
+      "evade": {
+        "value": 3
+      },
+      "notice": {
+        "value": 2
+      },
+      "pugilism": {
+        "value": 3
+      },
+      "toughness": {
+        "value": 2
+      },
+      "wilderness": {
+        "value": 2
+      }
+    },
+    "abilities": [
+      {
+        "name": "Rampage",
+        "description": "At start of turn, if 0 or fewer Wounds, must declare Charge vs closest legal target not engaged. If engaged, still declare Charge but only single Attack. Gains + to attack and damage."
+      },
+      {
+        "name": "Roostercharge",
+        "description": "May perform (2) Charge Action as (1) Action."
+      },
+      {
+        "name": "Unimpeded",
+        "description": "Ignores terrain penalties when taking Movement Actions."
+      }
+    ],
+    "actions": [
+      "(1) Beak (Pugilism) | AV: 5 (11) | Rg: y2 | Resist: Df | Target suffers 2/3/5 damage. Must declare Trigger. Ram BU-GAWK: After damaging, must declare Charge vs closest target. If engaged, suffers 1 damage. Crow Foot Spurs: If male, target Dazed until end of next turn. Already Dazed gets +1 damage.",
+      "(0) Delicious Egg | If female, discard card to lay egg adjacent. Within a5 of egg, Chickens gain + to Defense. Egg fresh 2 weeks."
+    ],
+    "notes": "Six-foot-tall birds brought 100 years ago. Malifaux magic seeped into generations. Prolific spread until Gremlins noticed delicious eggs. High-strung and paranoid from constant nest raids."
+  }
+}

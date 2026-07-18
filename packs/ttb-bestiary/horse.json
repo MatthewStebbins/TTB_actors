@@ -1,0 +1,67 @@
+{
+  "_id": "horse",
+  "name": "Horse",
+  "type": "fatemaster",
+  "system": {
+    "rank": {
+      "title": "Peon",
+      "value": 3
+    },
+    "types": "Living, Beast",
+    "aspects": {
+      "might": 3,
+      "grace": 1,
+      "speed": 4,
+      "resilience": 2,
+      "charm": 0,
+      "cunning": -2,
+      "intellect": -3,
+      "tenacity": -1
+    },
+    "derived": {
+      "defense": "6 (9)",
+      "willpower": "2 (5)",
+      "walk": "8",
+      "charge": "—",
+      "height": "2",
+      "initiative": "7 (10)"
+    },
+    "wounds": {
+      "value": 0,
+      "max": 7
+    },
+    "skills": {
+      "acrobatics": {
+        "value": 1
+      },
+      "athletics": {
+        "value": 3
+      },
+      "evade": {
+        "value": 1
+      },
+      "martialArts": {
+        "value": 1
+      },
+      "notice": {
+        "value": 3
+      },
+      "toughness": {
+        "value": 2
+      },
+      "wilderness": {
+        "value": 1
+      }
+    },
+    "abilities": [
+      {
+        "name": "Better Part of Valor",
+        "description": "Walk increased by +2, but no Charge Aspect."
+      }
+    ],
+    "actions": [
+      "(1) Hoof (Martial Arts) | AV: 5 (8) | Rg: y1 | Resist: Df | Target suffers 1/2/4 damage."
+    ],
+    "notes": "Brought to Malifaux by the first Breach. Modern Malifaux-born horses show mutations (split hooves, sharpened teeth, bisected pupils)."
+  }
+}

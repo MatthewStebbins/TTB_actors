@@ -1,0 +1,85 @@
+{
+  "_id": "steamfitter",
+  "name": "Steamfitter",
+  "type": "fatemaster",
+  "system": {
+    "rank": {
+      "title": "Minion",
+      "value": 6
+    },
+    "types": "Living",
+    "aspects": {
+      "might": 0,
+      "grace": 1,
+      "speed": 2,
+      "resilience": 1,
+      "charm": -1,
+      "cunning": 2,
+      "intellect": 2,
+      "tenacity": -1
+    },
+    "derived": {
+      "defense": "4 (10)",
+      "willpower": "4 (10)",
+      "walk": "5",
+      "charge": "6",
+      "height": "2",
+      "initiative": "3 (9)"
+    },
+    "wounds": {
+      "value": 0,
+      "max": 6
+    },
+    "skills": {
+      "artefacting": {
+        "value": 3
+      },
+      "bureaucracy": {
+        "value": 1
+      },
+      "centering": {
+        "value": 2
+      },
+      "enchanting": {
+        "value": 3
+      },
+      "engineering": {
+        "value": 2
+      },
+      "intimidate": {
+        "value": 2
+      },
+      "notice": {
+        "value": 1
+      },
+      "scrutiny": {
+        "value": 1
+      },
+      "sorcery": {
+        "value": 4
+      },
+      "stealth": {
+        "value": 1
+      },
+      "toughness": {
+        "value": 1
+      }
+    },
+    "abilities": [
+      {
+        "name": "Killswitch",
+        "description": "After subordinate Construct killed, may discard card to detonate it, 2 damage within p2."
+      },
+      {
+        "name": "My Creation",
+        "description": "Accompanied by and may control single non-Swarm Construct of Minion Rank or lower."
+      }
+    ],
+    "actions": [
+      "(1) Freezing Touch (Sorcery/Intellect) | AV: 6t (12t) | TN: 12t | Rg: y1 | Resist: Df | Target suffers 2/3/4 damage, becomes Slow.",
+      "(1) Lightning Bolt (Sorcery/Intellect) | AV: 6t (12t) | TN: 12t | Rg: z10 | Resist: Df | Target suffers 1/3/4 damage, ignoring Armor. No randomize on engaged.",
+      "(1) Enchant Weapon (Enchanting/Cunning) | AV: 5R (11R) | TN: 11R | Rg: 1 | Resist: Df | Target weapon gains Electric or Ice effect 1 minute."
+    ],
+    "notes": "Magical backbone of Arcanist movement. Officially maintain Union constructs. Skilled spellcasters with hidden vaults of Arcanist knowledge."
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "_id": "rougarou",
+  "name": "Rougarou",
+  "type": "fatemaster",
+  "system": {
+    "rank": {
+      "title": "Enforcer",
+      "value": 7
+    },
+    "types": "Undead, Beast, Fae",
+    "aspects": {
+      "might": 4,
+      "grace": 2,
+      "speed": 2,
+      "resilience": 3,
+      "charm": -4,
+      "cunning": 3,
+      "intellect": 2,
+      "tenacity": 3
+    },
+    "derived": {
+      "defense": "4 (11)",
+      "willpower": "5 (12)",
+      "walk": "5",
+      "charge": "7",
+      "height": "3",
+      "initiative": "5 (12)"
+    },
+    "wounds": {
+      "value": 0,
+      "max": 9
+    },
+    "skills": {
+      "acrobatics": {
+        "value": 2
+      },
+      "athletics": {
+        "value": 2
+      },
+      "centering": {
+        "value": 3
+      },
+      "deceive": {
+        "value": 2
+      },
+      "intimidate": {
+        "value": 3
+      },
+      "notice": {
+        "value": 3
+      },
+      "pugilism": {
+        "value": 2
+      },
+      "scrutiny": {
+        "value": 1
+      },
+      "stealth": {
+        "value": 2
+      },
+      "toughness": {
+        "value": 3
+      },
+      "track": {
+        "value": 4
+      },
+      "wilderness": {
+        "value": 3
+      }
+    },
+    "abilities": [
+      {
+        "name": "Diving Charge",
+        "description": "May declare Charge while engaged. Ignores intervening characters, terrain, opponents cannot Disengage."
+      },
+      {
+        "name": "Hard to Wound +1",
+        "description": "Damage flips against this character suffer -."
+      },
+      {
+        "name": "Rush +1",
+        "description": "Charge Aspect increased by +1."
+      }
+    ],
+    "actions": [
+      "(1) Wulfen Claws (Pugilism) | AV: 6 (13) | Rg: y2 | Resist: Df | Target suffers 2/4/6 damage. Ram Crushing Strike: Damage flip gains + per Ram.",
+      "(2) The Mauling (Pugilism) | AV: 6 (13) | Rg: y1 | Resist: Df | Target suffers 2/3/4 damage and Critical Hit of appropriate severity. Crow Eat Anything: After damaging Living/Undead, heal 1 damage.",
+      "(0) Howl to the Blood Moon (Intimidate) | Discard card. Every Living within p10 makes TN 13 Centering Challenge. Failed gain Prey Condition until next turn (no Charge, Walk only in melee)."
+    ],
+    "notes": "Massive undead wolves. Servants of Titania, Autumn Queen of Fae. Keenly intelligent and cunning assassins. Roam Knotwoods hunting Neverborn and human. Dangerous regardless of moon phase."
+  }
+}

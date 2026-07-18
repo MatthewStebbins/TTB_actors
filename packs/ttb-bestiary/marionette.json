@@ -1,0 +1,69 @@
+{
+  "_id": "marionette",
+  "name": "Marionette",
+  "type": "fatemaster",
+  "system": {
+    "rank": {
+      "title": "Minion",
+      "value": 5
+    },
+    "types": "Construct, Doll",
+    "aspects": {
+      "might": -1,
+      "grace": 2,
+      "speed": 2,
+      "resilience": 0,
+      "charm": 1,
+      "cunning": 2,
+      "intellect": -3,
+      "tenacity": 3
+    },
+    "derived": {
+      "defense": "5 (10)",
+      "willpower": "5 (10)",
+      "walk": "5",
+      "charge": "6",
+      "height": "1",
+      "initiative": "2 (7)"
+    },
+    "wounds": {
+      "value": 0,
+      "max": 4
+    },
+    "skills": {
+      "evade": {
+        "value": 3
+      },
+      "pugilism": {
+        "value": 2
+      }
+    },
+    "abilities": [
+      {
+        "name": "Adorable Doll",
+        "description": "Indistinguishable from normal doll when not moving."
+      },
+      {
+        "name": "Flick of the Wrist",
+        "description": "May use Grace instead of Might for Melee/Pugilism attacks."
+      },
+      {
+        "name": "Trailing Strings",
+        "description": "If no character holding strings, Enforcer/Henchman/Master/Fated within 2 yards may seize as (0) Action. Cannot use two-handed/cast Spells. One Marionette per character."
+      },
+      {
+        "name": "Tangled Up",
+        "description": "While enemy holds strings, character is Slow."
+      },
+      {
+        "name": "Puppet Show",
+        "description": "Friendly holding strings gains + to attacks, use their Skill ranks instead. Spend 1 AP to force (1) Action of choice."
+      }
+    ],
+    "actions": [
+      "(1) Wooden Fists (Pugilism) | AV: 4 (9) | Rg: y1 | Resist: Df | Target suffers 1/2/3 damage. May add Grace of friendly holding strings to duel total. Tome Made to Follow: After resolving, if not character's turn, take action again.",
+      "(0) Dragging Along | Character moves up to 2 yards. If character holding strings, it pushed 2 yards directly toward."
+    ],
+    "notes": "Wooden puppets with trapped souls of children. Created by Collodi. Act mostly own volition but bound by strings. Newly created tend toward depression. Time shatters minds into cruel predators."
+  }
+}

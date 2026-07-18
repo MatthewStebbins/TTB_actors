@@ -1,0 +1,76 @@
+{
+  "_id": "shieldbearer",
+  "name": "Shieldbearer",
+  "type": "fatemaster",
+  "system": {
+    "rank": {
+      "title": "Minion",
+      "value": 5
+    },
+    "types": "Living",
+    "aspects": {
+      "might": 3,
+      "grace": -2,
+      "speed": 1,
+      "resilience": 0,
+      "charm": -2,
+      "cunning": 2,
+      "intellect": 0,
+      "tenacity": 2
+    },
+    "derived": {
+      "defense": "3 (8)",
+      "willpower": "6 (11)",
+      "walk": "5",
+      "charge": "5",
+      "height": "2",
+      "initiative": "2 (7)"
+    },
+    "wounds": {
+      "value": 0,
+      "max": 4
+    },
+    "skills": {
+      "athletics": {
+        "value": 1
+      },
+      "centering": {
+        "value": 4
+      },
+      "evade": {
+        "value": 2
+      },
+      "heavyMelee": {
+        "value": 2
+      },
+      "melee": {
+        "value": 3
+      },
+      "necromancy": {
+        "value": 2
+      },
+      "notice": {
+        "value": 1
+      }
+    },
+    "abilities": [
+      {
+        "name": "Armor +1",
+        "description": "Reduce all damage by 1 (minimum 1)."
+      },
+      {
+        "name": "Dismember",
+        "description": "When attack causes Severe Critical Effect, may discard card to change Critical Effect to Amputated without changing location."
+      },
+      {
+        "name": "Tethered Soul",
+        "description": "If killed within 6 yards of friendly Enforcer/Henchman/Master, that character may discard card to bind spirit, transforming into friendly Shackled Spirit appearing adjacent to corpse (cannot act this round)."
+      }
+    ],
+    "actions": [
+      "(1) Salvaged Greatsword (Heavy Melee) | AV: 5 (10) | Rg: y2 | Resist: Df | Target suffers 3/4/6 damage. Damage flip gains + if not from Charge Action.",
+      "(1) Shield Slam (Melee) | AV: 6 (11) | Rg: y2 | Resist: Df | Target suffers 1/2/3 damage and pushed 1 yard away."
+    ],
+    "notes": "Desperate slum-dwellers inspired by Reva Cortinas. Took up salvaged Guardian weapons and shields. Rise as Shackled Spirits when fallen."
+  }
+}

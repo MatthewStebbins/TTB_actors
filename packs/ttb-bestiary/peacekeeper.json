@@ -1,0 +1,76 @@
+{
+  "_id": "peacekeeper",
+  "name": "Peacekeeper",
+  "type": "fatemaster",
+  "system": {
+    "rank": {
+      "title": "Enforcer",
+      "value": 8
+    },
+    "types": "Construct",
+    "aspects": {
+      "might": 2,
+      "grace": 1,
+      "speed": -1,
+      "resilience": 2,
+      "charm": -5,
+      "cunning": -5,
+      "intellect": -5,
+      "tenacity": -5
+    },
+    "derived": {
+      "defense": "2 (10)",
+      "willpower": "2 (10)",
+      "walk": "4",
+      "charge": "6",
+      "height": "3",
+      "initiative": "0 (8)"
+    },
+    "wounds": {
+      "value": 0,
+      "max": 9
+    },
+    "skills": {
+      "athletics": {
+        "value": 1
+      },
+      "evade": {
+        "value": 2
+      },
+      "notice": {
+        "value": 1
+      },
+      "pneumatic": {
+        "value": 2
+      },
+      "toughness": {
+        "value": 4
+      }
+    },
+    "abilities": [
+      {
+        "name": "Armor +2",
+        "description": "Reduce all damage by +2 (minimum 1)."
+      },
+      {
+        "name": "Hard to Wound +1",
+        "description": "Damage flips suffer -."
+      },
+      {
+        "name": "Rush +2",
+        "description": "Charge Aspect increased by +2."
+      },
+      {
+        "name": "Terrifying (Living) (12)",
+        "description": "Enemy Living must pass TN 12 Horror Duel when ending turn in engagement range or targeting."
+      }
+    ],
+    "actions": [
+      "(1) Mechanical Claws (Pneumatic) | AV: 4? (11?) | Rg: y1 | Resist: Df | Target suffers 3/4/6 damage. ? Critical Strike: When damaging, +1 per ?.",
+      "(1) Heavy Chain Harpoon (Pneumatic/Grace) | AV: 3? (11?) | Rg: y1 | Resist: Df | Target suffers 3/4/6 damage, gains Slow. Fire once/turn. ? Pull and Drag: After damaging, push target 4 yards toward this character.",
+      "(2) Flurry | Discard Twist Card for three 1 AP Close Combat attacks vs single target.",
+      "(0) Advanced Protocols | Discard card to heal 3 damage. End all Weak and Moderate Critical Effects."
+    ],
+    "notes": "Construct peacekeeper enforcer. Heavy pneumatic augmentation. Mechanical claws and harpoon. Terrifies Living creatures. Advanced healing/repair protocols."
+  }
+}

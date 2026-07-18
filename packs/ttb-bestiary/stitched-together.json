@@ -1,0 +1,80 @@
+{
+  "_id": "stitched-together",
+  "name": "Stitched Together",
+  "type": "fatemaster",
+  "system": {
+    "rank": {
+      "title": "Minion",
+      "value": 6
+    },
+    "types": "Construct, Doll, Nightmare",
+    "aspects": {
+      "might": 2,
+      "grace": -2,
+      "speed": -1,
+      "resilience": 2,
+      "charm": -4,
+      "cunning": 2,
+      "intellect": 0,
+      "tenacity": 3
+    },
+    "derived": {
+      "defense": "4 (10)",
+      "willpower": "5 (11)",
+      "walk": "4",
+      "charge": "6",
+      "height": "2",
+      "initiative": "2 (8)"
+    },
+    "wounds": {
+      "value": 0,
+      "max": 7
+    },
+    "skills": {
+      "convince": {
+        "value": 2
+      },
+      "enchanting": {
+        "value": 3
+      },
+      "evade": {
+        "value": 2
+      },
+      "gambling": {
+        "value": 3
+      },
+      "intimidate": {
+        "value": 2
+      },
+      "melee": {
+        "value": 3
+      },
+      "notice": {
+        "value": 3
+      },
+      "toughness": {
+        "value": 2
+      }
+    },
+    "abilities": [
+      {
+        "name": "Eternal Nightmare",
+        "description": "If would reduce to 0 Wounds, may discard card to heal 3 Wounds and gain Reactivate."
+      },
+      {
+        "name": "Rotten Contents",
+        "description": "When suffering Critical Effect or killed, Living within p2 must pass TN 12 Carouse or gain Poison +2."
+      },
+      {
+        "name": "Rush +2",
+        "description": "Charge Aspect increased by +2."
+      }
+    ],
+    "actions": [
+      "(1) Hook Hands (Melee) | AV: 5 (11) | Rg: y1 | Resist: Df | Target suffers 1/2/4 damage.",
+      "(1) Gamble Your Life (Gambling) | AV: 5m (11m) | TN: 10M | Rg: y1 | Resist: Df | Target suffers 3/4/6 damage. If resist, character suffers 3/4/6. No Cheat, ignore +/-. Once per turn.",
+      "(1) The Mist (Enchanting) | AV: 5C (11C) | TN: 10C | Until start of next turn, area within a4 is Ht 3 soft cover."
+    ],
+    "notes": "Bad dreams stepped into reality. Burlap puppets filled with rotten meat and offal. Torment living. Force victims to wager body parts. Create new Stitched Together from bodies."
+  }
+}

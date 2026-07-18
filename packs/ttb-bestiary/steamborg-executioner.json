@@ -1,0 +1,84 @@
+{
+  "_id": "steamborg-executioner",
+  "name": "Steamborg Executioner",
+  "type": "fatemaster",
+  "system": {
+    "rank": {
+      "title": "Henchman",
+      "value": 9
+    },
+    "types": "Construct, Living",
+    "aspects": {
+      "might": 4,
+      "grace": 2,
+      "speed": 2,
+      "resilience": 4,
+      "charm": -3,
+      "intellect": 0,
+      "cunning": 2,
+      "tenacity": 3
+    },
+    "derived": {
+      "defense": "3 (12)",
+      "willpower": "5 (14)",
+      "walk": "5",
+      "charge": "6",
+      "height": "3",
+      "initiative": "4 (13)"
+    },
+    "wounds": {
+      "value": 0,
+      "max": 11
+    },
+    "skills": {
+      "acrobatics": {
+        "value": 2
+      },
+      "athletics": {
+        "value": 4
+      },
+      "carouse": {
+        "value": 2
+      },
+      "evade": {
+        "value": 3
+      },
+      "intimidate": {
+        "value": 5
+      },
+      "notice": {
+        "value": 2
+      },
+      "pugilism": {
+        "value": 3
+      },
+      "toughness": {
+        "value": 5
+      }
+    },
+    "abilities": [
+      {
+        "name": "Armor +2",
+        "description": "Reduce all damage by +2 (minimum 1)."
+      },
+      {
+        "name": "Nimble",
+        "description": "Generates additional AP on turn, only for Movement General Action."
+      },
+      {
+        "name": "Terrifying (Living) (12)",
+        "description": "Enemy Living must pass TN 12 Horror Duel when ending turn in engagement range or targeting."
+      },
+      {
+        "name": "Unimpeded",
+        "description": "Ignores terrain penalties when taking Movement Actions."
+      }
+    ],
+    "actions": [
+      "(1) Reinforced Executioner Claw (Pugilism) | AV: 7C (16C) | Rg: y2 | Resist: Df | Target suffers 4/5/6 damage. Ram+Crow Decapitate: After damaging, target must discard two Twist or be killed. Mask+Crow Rip in Half: After killing, all enemies within p6 make TN 12 Horror Duel.",
+      "(0) Vent Steam | Until start of next turn, area within a4 is Ht 5 soft cover.",
+      "(2) Flurry | Discard Twist Card to take three 1 AP attacks with Close Combat weapon vs single target."
+    ],
+    "notes": "Amalgamations of flesh and steel. Injured miners saved and transformed by Viktor Ramos. Nearly fanatical loyalty to Union. Fearsome combatants shrug off punishment."
+  }
+}

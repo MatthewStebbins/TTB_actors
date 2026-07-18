@@ -1,0 +1,104 @@
+{
+  "_id": "torakage",
+  "name": "Torakage",
+  "type": "fatemaster",
+  "system": {
+    "rank": {
+      "title": "Enforcer",
+      "value": 8
+    },
+    "types": "Living, Last-Blossom",
+    "aspects": {
+      "might": 2,
+      "grace": 2,
+      "speed": 3,
+      "resilience": 1,
+      "charm": -2,
+      "cunning": 0,
+      "intellect": 2,
+      "tenacity": 1
+    },
+    "derived": {
+      "defense": "6 (14)",
+      "willpower": "6 (14)",
+      "walk": "6",
+      "charge": "7",
+      "height": "2",
+      "initiative": "6 (14)"
+    },
+    "wounds": {
+      "value": 0,
+      "max": 7
+    },
+    "skills": {
+      "acrobatics": {
+        "value": 4
+      },
+      "archery": {
+        "value": 3
+      },
+      "athletics": {
+        "value": 3
+      },
+      "centering": {
+        "value": 4
+      },
+      "evade": {
+        "value": 4
+      },
+      "flexible": {
+        "value": 3
+      },
+      "forgery": {
+        "value": 2
+      },
+      "lockpicking": {
+        "value": 2
+      },
+      "melee": {
+        "value": 3
+      },
+      "notice": {
+        "value": 3
+      },
+      "pickPocket": {
+        "value": 2
+      },
+      "stealth": {
+        "value": 5
+      },
+      "thrownWeapons": {
+        "value": 3
+      },
+      "toughness": {
+        "value": 2
+      },
+      "track": {
+        "value": 3
+      },
+      "wilderness": {
+        "value": 1
+      }
+    },
+    "abilities": [
+      {
+        "name": "The Wind's Path",
+        "description": "Immune to disengaging strikes. When pushed, may increase/decrease distance by Speed Aspect (min 1)."
+      },
+      {
+        "name": "Smoke Screen",
+        "description": "Enemy attacks from 6+ yards suffer - to attack flip."
+      },
+      {
+        "name": "Lone Assassin",
+        "description": "Gains Focused +1 when attacking character 6+ yards from allies."
+      }
+    ],
+    "actions": [
+      "(1) Double-Edged Sword (Melee) | AV: 5R (13R) | Rg: y2 | Resist: Df | Target suffers 2/3/5 damage. Ram Critical Strike: +1 per Ram.",
+      "(1) Shuriken (Thrown Weapons) | AV: 5M (13M) | Rg: z8 | Resist: Df | Target suffers 1/2/3 damage. Rapid Fire +2. Mask Leaf Steps: After, move 3 yards.",
+      "(2) Rapid Fire | Discard Twist Card for three 1 AP attacks vs single target."
+    ],
+    "notes": "Ancient Katanaka Clan assassins. Now secretly Ten Thunders. Masters of stealth and precision. Scalpel against syndicate targets."
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "_id": "steam-arachnid-swarm",
+  "name": "Steam Arachnid Swarm",
+  "type": "fatemaster",
+  "system": {
+    "rank": {
+      "title": "Minion",
+      "value": 0
+    },
+    "types": "Construct, Swarm",
+    "aspects": {
+      "might": 0,
+      "grace": 1,
+      "speed": 1,
+      "resilience": 0,
+      "charm": -5,
+      "cunning": -5,
+      "intellect": -5,
+      "tenacity": -5
+    },
+    "derived": {
+      "defense": "4",
+      "willpower": "2 (varies)",
+      "walk": "5",
+      "charge": "5",
+      "height": "1",
+      "initiative": "1 (varies)"
+    },
+    "wounds": {
+      "value": 0,
+      "max": 0
+    },
+    "skills": {
+      "evade": {
+        "value": 3
+      },
+      "pneumatic": {
+        "value": 4
+      },
+      "stealth": {
+        "value": 1
+      }
+    },
+    "abilities": [
+      {
+        "name": "Collective Focus",
+        "description": "Rank Value +8: Treat as equal to Condition value. Does not add Rank to Defense."
+      },
+      {
+        "name": "Armored Swarm",
+        "description": "No Wounds; damage reduces Rank Value by 1 (blast reduces by damage-1 min 1). Destroyed at 0."
+      },
+      {
+        "name": "Hive Mind",
+        "description": "Immune to Willpower duels."
+      },
+      {
+        "name": "Evasive",
+        "description": "Immune to pulse (p) damage."
+      },
+      {
+        "name": "Unimpeded",
+        "description": "Ignores terrain penalties when taking Movement Actions."
+      }
+    ],
+    "actions": [
+      "(1) Swarm of Steel Claws (Pneumatic) | AV: 4 (varies) | Rg: y1 | Resist: Df | Target suffers 2/3/5 damage. Tome Exploding: Lower Rank Value by 1, all within p2 suffer 2 damage. Mask Carry Away: After, move Walk speed, place target adjacent.",
+      "(0) Skitter Apart | Break into Steam Arachnids equal to Rank Value; each suffers 2 unreducible damage."
+    ],
+    "notes": "Merged collective of Steam Arachnids functioning as single entity. Health via Rank Value Condition. Blasts deal reduced damage. Immune to disengagement."
+  }
+}

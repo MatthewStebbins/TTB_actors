@@ -1,0 +1,57 @@
+{
+  "_id": "mindless-zombie",
+  "name": "Mindless Zombie",
+  "type": "fatemaster",
+  "system": {
+    "rank": {
+      "title": "Peon",
+      "value": 4
+    },
+    "types": "Undead",
+    "aspects": {
+      "might": 1,
+      "grace": -3,
+      "speed": -3,
+      "resilience": 0,
+      "charm": -5,
+      "cunning": -5,
+      "intellect": -5,
+      "tenacity": -5
+    },
+    "derived": {
+      "defense": "2 (6)",
+      "willpower": "2 (6)",
+      "walk": "3",
+      "charge": "3",
+      "height": "2",
+      "initiative": "-3 (1)"
+    },
+    "wounds": {
+      "value": 0,
+      "max": 4
+    },
+    "skills": {
+      "pugilism": {
+        "value": 2
+      }
+    },
+    "abilities": [
+      {
+        "name": "Hard to Wound +1",
+        "description": "Damage flips against this character suffer -."
+      },
+      {
+        "name": "Shambling",
+        "description": "Gains Slow at start of each turn during Dramatic Time."
+      },
+      {
+        "name": "Zombie Curse",
+        "description": "Any Living character killed by this character animates as Mindless Zombie one hour after death."
+      }
+    ],
+    "actions": [
+      "(1) Gnashing Bite (Pugilism) | AV: 3 (7) | Rg: y1 | Resist: Df | Target suffers 2/3/3 damage. Increase AV by +1 for every other friendly character engaged with target."
+    ],
+    "notes": "Weakest of all undead. Incapable of higher thought. Dangerous only in numbers but grow quickly. Death Marshals respond to every report seriously."
+  }
+}

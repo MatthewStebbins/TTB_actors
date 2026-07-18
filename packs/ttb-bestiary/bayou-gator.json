@@ -1,0 +1,80 @@
+{
+  "_id": "bayou-gator",
+  "name": "Bayou Gator",
+  "type": "fatemaster",
+  "system": {
+    "rank": {
+      "title": "Minion",
+      "value": 6
+    },
+    "types": "Living, Swampfiend, Beast",
+    "aspects": {
+      "might": 2,
+      "grace": -3,
+      "speed": 2,
+      "resilience": 2,
+      "charm": -4,
+      "cunning": 1,
+      "intellect": -3,
+      "tenacity": 2
+    },
+    "derived": {
+      "defense": "4 (10)",
+      "willpower": "4 (10)",
+      "walk": "5",
+      "charge": "6",
+      "height": "2",
+      "initiative": "4 (10)"
+    },
+    "wounds": {
+      "value": 0,
+      "max": 7
+    },
+    "skills": {
+      "athletics": {
+        "value": 1
+      },
+      "intimidate": {
+        "value": 2
+      },
+      "notice": {
+        "value": 2
+      },
+      "pugilism": {
+        "value": 3
+      },
+      "stealth": {
+        "value": 2
+      },
+      "toughness": {
+        "value": 2
+      },
+      "wilderness": {
+        "value": 3
+      }
+    },
+    "abilities": [
+      {
+        "name": "Melee Expert",
+        "description": "Generates additional AP on turn, may only use for Close Combat attack."
+      },
+      {
+        "name": "Aquatic",
+        "description": "Speed not reduced while swimming. Can take Charge Action underwater."
+      },
+      {
+        "name": "Ruthless",
+        "description": "Automatically succeeds at any Willpower duel it attempts during turn."
+      },
+      {
+        "name": "Unimpeded",
+        "description": "Ignores terrain penalties when taking Movement Actions."
+      }
+    ],
+    "actions": [
+      "(1) Fearsome Jaws (Pugilism) | AV: 5 (11) | Rg: y2 | Resist: Df | Target suffers 2/3/5 damage. Ram Death Roll: When damaging, Attack gains + to damage flip, target Prone. Crow Swallow Whole: After damaging target with lower Height, target must discard card or be killed and eaten.",
+      "(0) Creep | Character/controller may discard card to move distance equal to Walk."
+    ],
+    "notes": "Most efficient ambush predators of swamps. Wait in/near water looking like logs. Drag prey to water to drown. Perform death roll to dismember. Hungry ones charge staggering distances."
+  }
+}

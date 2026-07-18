@@ -1,0 +1,97 @@
+{
+  "_id": "arcanist-smuggler",
+  "name": "Arcanist Smuggler",
+  "type": "fatemaster",
+  "system": {
+    "rank": {
+      "title": "Minion",
+      "value": 6
+    },
+    "types": "Living",
+    "aspects": {
+      "might": 1,
+      "grace": 2,
+      "speed": 2,
+      "resilience": 0,
+      "charm": 0,
+      "cunning": 3,
+      "intellect": 2,
+      "tenacity": -1
+    },
+    "derived": {
+      "defense": "5 (11)",
+      "willpower": "4 (10)",
+      "walk": "5",
+      "charge": "6",
+      "height": "2",
+      "initiative": "5 (11)"
+    },
+    "wounds": {
+      "value": 0,
+      "max": 5
+    },
+    "skills": {
+      "athletics": {
+        "value": 2
+      },
+      "barter": {
+        "value": 3
+      },
+      "centering": {
+        "value": 2
+      },
+      "convince": {
+        "value": 1
+      },
+      "deceive": {
+        "value": 3
+      },
+      "evade": {
+        "value": 3
+      },
+      "forgery": {
+        "value": 2
+      },
+      "lockpicking": {
+        "value": 1
+      },
+      "melee": {
+        "value": 3
+      },
+      "notice": {
+        "value": 3
+      },
+      "pistol": {
+        "value": 2
+      },
+      "scrutiny": {
+        "value": 3
+      },
+      "stealth": {
+        "value": 3
+      },
+      "toughness": {
+        "value": 1
+      }
+    },
+    "abilities": [
+      {
+        "name": "Don't Mind Me (12)",
+        "description": "If no offensive actions last turn or first round not acted, enemies TN 12 Scrutiny or choose different target."
+      },
+      {
+        "name": "Slink Away",
+        "description": "Gain + to Defense against disengaging strikes. If friendly engaged, enemy cannot make disengaging strikes vs this."
+      },
+      {
+        "name": "Unimpeded",
+        "description": "Ignores terrain penalties when taking Movement Actions."
+      }
+    ],
+    "actions": [
+      "(1) Hunting Knife (Melee) | AV: 4 (10) | Rg: y1 | Resist: Df | Target suffers 1/3/4 damage.",
+      "(1) Quick-Draw Hold-Out Pistol (Pistol) | AV: 4 (10) | Rg: z6 | Resist: Df | Target suffers 2/3/3 damage. Ready as (0). Gains + to attack, target cannot declare Defensive Triggers. Capacity 4, Reload 2."
+    ],
+    "notes": "Paranoid operatives moving stolen Soulstones through checkpoints. Use hidden compartments, bribery, magic. Caught = death. Exceptionally cautious."
+  }
+}

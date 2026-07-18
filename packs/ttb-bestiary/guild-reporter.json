@@ -1,0 +1,95 @@
+{
+  "_id": "guild-reporter",
+  "name": "Guild Reporter",
+  "type": "fatemaster",
+  "system": {
+    "rank": {
+      "title": "Minion",
+      "value": 5
+    },
+    "types": "Living",
+    "aspects": {
+      "might": -2,
+      "grace": 2,
+      "speed": 2,
+      "resilience": -1,
+      "charm": 3,
+      "cunning": 2,
+      "intellect": 2,
+      "tenacity": 1
+    },
+    "derived": {
+      "defense": "4 (9)",
+      "willpower": "4 (9)",
+      "walk": "7",
+      "charge": "—",
+      "height": "2",
+      "initiative": "5 (10)"
+    },
+    "wounds": {
+      "value": 0,
+      "max": 4
+    },
+    "skills": {
+      "bewitch": {
+        "value": 2
+      },
+      "convince": {
+        "value": 1
+      },
+      "centering": {
+        "value": 2
+      },
+      "deceive": {
+        "value": 2
+      },
+      "forgery": {
+        "value": 2
+      },
+      "history": {
+        "value": 1
+      },
+      "literacy": {
+        "value": 3
+      },
+      "notice": {
+        "value": 3
+      },
+      "pickPocket": {
+        "value": 2
+      },
+      "scrutiny": {
+        "value": 2
+      },
+      "stealth": {
+        "value": 1
+      },
+      "bureaucracy": {
+        "value": 1
+      }
+    },
+    "abilities": [
+      {
+        "name": "Better Part of Valor",
+        "description": "Walk increased by +2, but no Charge Aspect."
+      },
+      {
+        "name": "Disguised",
+        "description": "Cannot be targeted by Charge Action."
+      },
+      {
+        "name": "Distracting Presence",
+        "description": "Enemy characters within a5 ignore suit associations from Skills, cannot take Defensive Stance or Focus Actions."
+      },
+      {
+        "name": "Don't Mind Me (11)",
+        "description": "If this character did not take offensive actions last turn, enemies must succeed TN 11 Scrutiny Challenge or choose different target."
+      }
+    ],
+    "actions": [
+      "(1) Incessant Questioning (Bewitch) | AV: 5 (10) | Rg: 5 | Resist: Wp | Target becomes Slow and Dazed until start of next turn.",
+      "(1) Flash Photography (Notice) | AV: 5 (10) | Rg: 5 | Resist: Wp | Target becomes Blind until start of next turn. Capacity 1, Reload 1. Ram Hey Look Over Here: Every character within p1 also becomes Blind."
+    ],
+    "notes": "Guild-affiliated reporters gathering information unobtrusively. Work for Malifaux Daily Record or Malifaux Tattler newspapers."
+  }
+}

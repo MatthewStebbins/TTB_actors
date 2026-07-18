@@ -1,0 +1,76 @@
+{
+  "_id": "void-wretch",
+  "name": "Void Wretch",
+  "type": "fatemaster",
+  "system": {
+    "rank": {
+      "title": "Minion",
+      "value": 6
+    },
+    "types": "Void",
+    "aspects": {
+      "might": 0,
+      "grace": 3,
+      "speed": 1,
+      "resilience": 0,
+      "charm": -5,
+      "cunning": -2,
+      "intellect": -2,
+      "tenacity": 2
+    },
+    "derived": {
+      "defense": "7 (13)",
+      "willpower": "4 (10)",
+      "walk": "5",
+      "charge": "5",
+      "height": "1",
+      "initiative": "3 (9)"
+    },
+    "wounds": {
+      "value": 0,
+      "max": 5
+    },
+    "skills": {
+      "athletics": {
+        "value": 2
+      },
+      "evade": {
+        "value": 5
+      },
+      "necromancy": {
+        "value": 3
+      },
+      "notice": {
+        "value": 2
+      },
+      "prestidigitation": {
+        "value": 2
+      },
+      "toughness": {
+        "value": 1
+      },
+      "track": {
+        "value": 2
+      }
+    },
+    "abilities": [
+      {
+        "name": "Incorporeal",
+        "description": "Ignores other characters and terrain during movement. Reduce Ranged/Close Combat damage by half (rounded up)."
+      },
+      {
+        "name": "Pure Nothingness",
+        "description": "At end of each Dramatic Time round, suffer cumulative -1 Df (minimum 0)."
+      },
+      {
+        "name": "Time is Meaningless",
+        "description": "Gain ++ on all duels vs characters with Fast Condition."
+      }
+    ],
+    "actions": [
+      "(1) Touch of the Void (Necromancy) | AV: 4 (10) | Rg: y1 | Resist: Wp | Target suffers 1/2/3 damage and becomes Slow.",
+      "(1) Phase Through (Athletics) | TN: 10 | Target moves up to 8 yards through terrain and other characters."
+    ],
+    "notes": "Sentient nothingness given purpose by Tyrant Obliteration. Exist between dimensions. Only survive few hours before reality fills them in."
+  }
+}

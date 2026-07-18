@@ -1,0 +1,67 @@
+{
+  "_id": "riotbreaker",
+  "name": "Riotbreaker",
+  "type": "fatemaster",
+  "system": {
+    "rank": {
+      "title": "Minion",
+      "value": 5
+    },
+    "types": "Construct",
+    "aspects": {
+      "might": 1,
+      "grace": 2,
+      "speed": 0,
+      "resilience": 1,
+      "charm": -5,
+      "cunning": -5,
+      "intellect": -5,
+      "tenacity": -5
+    },
+    "derived": {
+      "defense": "1 (6)",
+      "willpower": "3 (8)",
+      "walk": "4",
+      "charge": "4",
+      "height": "2",
+      "initiative": "0 (5)"
+    },
+    "wounds": {
+      "value": 0,
+      "max": 9
+    },
+    "skills": {
+      "centering": {
+        "value": 1
+      },
+      "labor": {
+        "value": 4
+      },
+      "shotgun": {
+        "value": 3
+      },
+      "toughness": {
+        "value": 4
+      }
+    },
+    "abilities": [
+      {
+        "name": "Armor +1",
+        "description": "Reduce all damage suffered by 1 (minimum 1)."
+      },
+      {
+        "name": "Hard to Wound +1",
+        "description": "Damage flips against this character suffer -."
+      },
+      {
+        "name": "Pneumatic Entrenching Spikes",
+        "description": "Cannot move or be pushed except on its turn. Provides Hard Cover, cannot become Prone."
+      }
+    ],
+    "actions": [
+      "(1) Shield (Labor) | AV: 5 (10) | Rg: y2 | Resist: Df | Target suffers 1/2/3 damage. Push 1 yard. Ram Shield Slam: Target suffers 1 damage or becomes Prone.",
+      "(1) Riot Gun (Shotgun) | AV: 5 (10) | Rg: z10 | Resist: Df | Target suffers 2/3B/4BB damage. Characters gain Slow. Capacity 10, Reload 3."
+    ],
+    "notes": "Guardian variant optimized for crowd control. Shotguns fire downward to ricochet (nonlethal levels). Anchored by pneumatic spikes."
+  }
+}

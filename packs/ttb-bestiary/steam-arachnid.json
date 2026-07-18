@@ -1,0 +1,64 @@
+{
+  "_id": "steam-arachnid",
+  "name": "Steam Arachnid",
+  "type": "fatemaster",
+  "system": {
+    "rank": {
+      "title": "Minion",
+      "value": 5
+    },
+    "types": "Construct",
+    "aspects": {
+      "might": 0,
+      "grace": 1,
+      "speed": 1,
+      "resilience": 0,
+      "charm": -5,
+      "cunning": -5,
+      "intellect": -5,
+      "tenacity": -5
+    },
+    "derived": {
+      "defense": "4 (9)",
+      "willpower": "2 (7)",
+      "walk": "5",
+      "charge": "5",
+      "height": "1",
+      "initiative": "1 (6)"
+    },
+    "wounds": {
+      "value": 0,
+      "max": 4
+    },
+    "skills": {
+      "evade": {
+        "value": 3
+      },
+      "pneumatic": {
+        "value": 4
+      },
+      "stealth": {
+        "value": 1
+      }
+    },
+    "abilities": [
+      {
+        "name": "Armor +1",
+        "description": "Reduce all damage by +1 (minimum 1)."
+      },
+      {
+        "name": "Evasive",
+        "description": "Immune to damage from pulse (p) effects."
+      },
+      {
+        "name": "Unimpeded",
+        "description": "Ignores terrain penalties when taking Movement Actions."
+      }
+    ],
+    "actions": [
+      "(1) Steel Claws (Pneumatic) | AV: 4 (9) | Rg: y1 | Resist: Df | Target suffers 1/2/4 damage. Tome Overheat: Destroy this character, everyone within p2 suffers 2 damage.",
+      "(0) Swarm Together | This character and at least one other friendly within a3 become Steam Arachnid Swarm with Rank Value Condition."
+    ],
+    "notes": "Small spider-like spy constructs for Arcanists. Weak individually. Programmed to merge into deadly swarms."
+  }
+}

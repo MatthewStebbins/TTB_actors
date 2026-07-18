@@ -1,0 +1,67 @@
+{
+  "_id": "hunter-construct",
+  "name": "Hunter",
+  "type": "fatemaster",
+  "system": {
+    "rank": {
+      "title": "Minion",
+      "value": 6
+    },
+    "types": "Construct",
+    "aspects": {
+      "might": 3,
+      "grace": 2,
+      "speed": 3,
+      "resilience": -1,
+      "charm": -5,
+      "cunning": -5,
+      "intellect": -5,
+      "tenacity": -5
+    },
+    "derived": {
+      "defense": "4 (10)",
+      "willpower": "4 (10)",
+      "walk": "6",
+      "charge": "7",
+      "height": "2",
+      "initiative": "3 (9)"
+    },
+    "wounds": {
+      "value": 0,
+      "max": 7
+    },
+    "skills": {
+      "centering": {
+        "value": 2
+      },
+      "pneumatic": {
+        "value": 3
+      },
+      "toughness": {
+        "value": 3
+      },
+      "track": {
+        "value": 1
+      }
+    },
+    "abilities": [
+      {
+        "name": "Armor +1",
+        "description": "Reduce all damage suffered by 1 (minimum 1)."
+      },
+      {
+        "name": "Pneumatic Tracker",
+        "description": "May substitute Pneumatic Skill for Cunning when using Notice and Track."
+      },
+      {
+        "name": "Prey on the Unaware",
+        "description": "Attack flips gain + against characters that haven't taken a turn in Dramatic Time."
+      }
+    ],
+    "actions": [
+      "(1) Steel Claws (Pneumatic) | AV: 6 (12) | Rg: y1 | Resist: Df | Target suffers 2/4/5 damage. Ram Critical Strike: +1 per Ram. Mask Leap: Target Drop Prone.",
+      "(1) Chain Harpoon (Pneumatic) | AV: 5R (11R) | Rg: z10 | Resist: Df | Target suffers 2/3/5 and Slow. Ram Pull and Drag: Push 3 yards toward you."
+    ],
+    "notes": "Construct designed to track escaped convicts. Segmented body, specially sprung legs, chain harpoon."
+  }
+}

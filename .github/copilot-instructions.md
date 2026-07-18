@@ -8,7 +8,7 @@ This repo is a **FoundryVTT Game System** (`system.json`) for the *Through the B
 
 | Path | Purpose |
 |------|---------|
-| `system.json` | Foundry system manifest. `id` must stay `ttb-actors` (matches install folder). Current version: `0.1.26`. Verified on Foundry **v13**. |
+| `system.json` | Foundry system manifest. `id` must stay `ttb-actors` (matches install folder). Current version: `0.1.28`. Verified on Foundry **v13**. |
 | `template.json` | Declarative data model for all Actor/Item types. Edit this to add new fields â€” no JS needed for data shape. |
 | `scripts/main.js` | ES module entry point. Registers actor class, sheets, and preloads templates via `Hooks.once("init")`. |
 | `scripts/actors/` | `Actor` document subclasses. Derived stats computed in `prepareDerivedData()`. |
@@ -285,7 +285,7 @@ This project follows **[Semantic Versioning 2.0.0](https://semver.org/)**: `MAJO
 
 **Critical rule**: The **minor version must only be incremented after the user has tested the feature in Foundry VTT and confirmed it works**. Agents bump the patch version for fixes; agents propose a minor bump but wait for user sign-off before applying it.
 
-Current version: `0.1.26`
+Current version: `0.1.28`
 
 ### Current Version History
 | Version | Key Changes |
@@ -319,4 +319,14 @@ Current version: `0.1.26`
 | 0.1.24 | Updated instructions through v0.1.21 state with versioning rules and pack compilation workflow documentation |
 | 0.1.25 | **CRITICAL FIX**: Added `packs/` directory to `.github/workflows/release.yml` zip command so compiled compendium packs are included in system releases (was causing missing items in Foundry) |
 | 0.1.26 | **NEW**: Fatemaster NPC actor type with basic stat block sheet (Df, Wp, wounds, skills, abilities). Supports Minion/Enforcer/Master rank tracking. Ready for bestiary pack population. |
+| 0.1.27 | **FIXED**: NPC sheet errors (removed non-existent template helpers, fixed defaultOptions method call). NPC sheet now renders properly in Foundry.
+| 0.1.28 | **NEW**: Bestiary compendium pack started with 3 starter NPCs (Guard Dog, Guild Guardsman, Guard Sergeant). Ready for population with additional NPCs from chapter-10 rules. |
+| 0.1.29 | **UI/UX**: Improved NPC sheet display—stat blocks now read-only (Defense/Willpower as primary badges), added comprehensive NPC-specific CSS styling (stat grid layout, wound dots, ability headers, skills table grouping). |
+| 0.1.30 | **MAJOR UI FIX**: Fixed NPC sheet rendering—removed broken localization helpers, added plain text labels (matches character sheet pattern). Comprehensive CSS rewrite for proper stat display, wounds, abilities, skills. Sheet now fully functional in Foundry. |
+| 0.1.31 | **BESTIARY COMPILED**: LevelDB bestiary pack now compiled with complete NPC data. Guard Dog, Guild Guardsman, Guard Sergeant fully populated with skills, abilities, and actions. Ready for in-game use. |
+
+
+
+
+
 
