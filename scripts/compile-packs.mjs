@@ -21,6 +21,7 @@ const PACKS = [
   { src: "packs/ttb-general-talents.db",  out: "packs/ttb-general-talents",  docType: "Item" },
   { src: "packs/ttb-pursuit-talents.db",  out: "packs/ttb-pursuit-talents",  docType: "Item" },
   { src: "packs/ttb-spells.db",           out: "packs/ttb-spells",           docType: "Item" },
+  { src: "packs/ttb-bestiary.db",         out: "packs/ttb-bestiary",         docType: "Actor" },
 ];
 
 for (const { src, out, docType } of PACKS) {

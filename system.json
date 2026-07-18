@@ -2,7 +2,7 @@
   "id": "ttb-actors",
   "title": "Through the Breach",
   "description": "A FoundryVTT game system for the Through the Breach tabletop RPG by Wyrd Miniatures. Supports Fated (player) character creation and character sheets.",
-  "version": "0.1.26",
+  "version": "0.1.36",
   "compatibility": {
     "minimum": "10",
     "verified": "13"
@@ -63,6 +63,12 @@
       "label": "TTB Spells & Magia",
       "path": "packs/ttb-spells",
       "type": "Item"
+    },
+    {
+      "name": "ttb-bestiary",
+      "label": "TTB Bestiary",
+      "path": "packs/ttb-bestiary",
+      "type": "Actor"
     }
   ]
 }

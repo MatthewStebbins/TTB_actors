@@ -1,5 +1,5 @@
 /* ============================================================
-   Through the Breach — Character Sheet Styles
+   Through the Breach â€” Character Sheet Styles
    Dark Victorian/Western Steampunk aesthetic
    ============================================================ */
 
@@ -23,7 +23,7 @@
   --ttb-teal-lt:      #2a8060;
 }
 
-/* ── Base sheet ─────────────────────────────────────────── */
+/* â”€â”€ Base sheet â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-actors.sheet {
   font-family: "Palatino Linotype", Palatino, "Book Antiqua", serif;
   background: var(--ttb-parchment);
@@ -40,7 +40,7 @@
 .ttb-actors.sheet ::-webkit-scrollbar-track { background: var(--ttb-parchment-dk); }
 .ttb-actors.sheet ::-webkit-scrollbar-thumb { background: var(--ttb-burgundy-lt); border-radius: 3px; }
 
-/* ── Header ─────────────────────────────────────────────── */
+/* â”€â”€ Header â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-actors-header {
   display: flex;
   align-items: flex-start;
@@ -111,7 +111,7 @@
   color: var(--ttb-parchment);
 }
 
-/* ── Derived Stats Bar ──────────────────────────────────── */
+/* â”€â”€ Derived Stats Bar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-actors-derived {
   display: flex;
   align-items: stretch;
@@ -158,7 +158,7 @@
 
 .ttb-actors-wounds .ttb-actors-derived-label { color: #e06070; }
 
-/* ── Soulstones ─────────────────────────────────────────── */
+/* â”€â”€ Soulstones â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-soulstones {
   display: flex;
   flex-direction: column;
@@ -206,7 +206,7 @@
   margin-left: 2px;
 }
 
-/* ── Wound Track ─────────────────────────────────────────── */
+/* â”€â”€ Wound Track â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-wound-track {
   display: flex;
   align-items: center;
@@ -263,7 +263,7 @@
   font-size: 0.9em;
 }
 
-/* ── Conditions Strip ───────────────────────────────────── */
+/* â”€â”€ Conditions Strip â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-conditions-strip {
   display: flex;
   align-items: center;
@@ -324,7 +324,7 @@
   background: rgba(107,15,26,0.4);
 }
 
-/* ── Tabs ────────────────────────────────────────────────── */
+/* â”€â”€ Tabs â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-actors.sheet .tabs {
   display: flex;
   background: var(--ttb-leather);
@@ -352,14 +352,14 @@
   border-bottom-color: var(--ttb-gold);
 }
 
-/* ── Sheet body ─────────────────────────────────────────── */
+/* â”€â”€ Sheet body â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-actors.sheet .sheet-body {
   padding: 10px;
   background: var(--ttb-parchment);
   overflow-y: auto;
 }
 
-/* ── Section headers ─────────────────────────────────────── */
+/* â”€â”€ Section headers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-section-header {
   display: flex;
   align-items: center;
@@ -389,7 +389,7 @@
 
 .ttb-section { margin-bottom: 14px; }
 
-/* ── Attributes Grid ────────────────────────────────────── */
+/* â”€â”€ Attributes Grid â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-actors-attributes {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -435,7 +435,7 @@
 .ttb-actors-attr-value::-webkit-inner-spin-button,
 .ttb-actors-attr-value::-webkit-outer-spin-button { opacity: 0; }
 
-/* Characteristic suit — 4 clickable symbol buttons */
+/* Characteristic suit â€” 4 clickable symbol buttons */
 .ttb-attr-suit-row {
   display: flex;
   gap: 3px;
@@ -469,7 +469,7 @@
 .ttb-attr-suit-btn.active[data-suit="ram"]  { background: var(--ttb-burgundy); color: var(--ttb-parchment); border-color: var(--ttb-burgundy-lt); }
 .ttb-attr-suit-btn.active[data-suit="tome"] { background: #7a5c00; color: #ffe090; border-color: #c09020; }
 
-/* ── Skills ─────────────────────────────────────────────── */
+/* â”€â”€ Skills â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-actors-skill-group { margin-bottom: 14px; }
 
 .ttb-actors-skill-group-header {
@@ -576,7 +576,7 @@
   width: 130px;
 }
 
-/* ── Destiny Tab ─────────────────────────────────────────── */
+/* â”€â”€ Destiny Tab â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-destiny { padding: 4px 0; }
 
 .ttb-destiny-spread {
@@ -691,7 +691,7 @@
   color: var(--ttb-burgundy);
 }
 
-/* ── Personal Agenda ─────────────────────────────────────── */
+/* â”€â”€ Personal Agenda â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-personal-agenda {
   margin-top: 14px;
   padding-top: 10px;
@@ -746,7 +746,7 @@
   cursor: pointer;
 }
 
-/* ── Grimoire Tab ────────────────────────────────────────── */
+/* â”€â”€ Grimoire Tab â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-grimoire { padding: 4px 0; }
 
 .ttb-grimoire-hint {
@@ -838,7 +838,7 @@
   padding-top: 5px;
 }
 
-/* ── Pursuits & Talents Tab ─────────────────────────────── */
+/* â”€â”€ Pursuits & Talents Tab â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-pursuits-talents { padding: 4px 0; }
 
 /* 2-column layout for Talents + Other Abilities */
@@ -919,7 +919,7 @@
   padding: 10px 0;
 }
 
-/* ── Equipment Tab ──────────────────────────────────────── */
+/* â”€â”€ Equipment Tab â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-equipment { padding: 4px 0; }
 
 .ttb-table {
@@ -982,7 +982,7 @@
   font-size: 1em;
 }
 
-/* ── Biography Tab ──────────────────────────────────────── */
+/* â”€â”€ Biography Tab â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-biography { padding: 4px 0; }
 
 .ttb-bio-fields {
@@ -1049,7 +1049,7 @@
   border-color: var(--ttb-burgundy-lt);
 }
 
-/* ── Add / Delete buttons ───────────────────────────────── */
+/* â”€â”€ Add / Delete buttons â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-add-btn {
   background: transparent;
   border: 1px solid var(--ttb-gold-dk);
@@ -1079,7 +1079,7 @@
 
 .ttb-delete-btn:hover { color: #cc0000; }
 
-/* ── Item Sheet ─────────────────────────────────────────── */
+/* â”€â”€ Item Sheet â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-item-body {
   padding: 12px;
   background: var(--ttb-parchment);
@@ -1117,12 +1117,12 @@
   min-height: 60px;
 }
 
-/* ── Input resets ───────────────────────────────────────── */
+/* â”€â”€ Input resets â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-actors.sheet input[type="number"] { -moz-appearance: textfield; }
 .ttb-actors.sheet input[type="number"]::-webkit-inner-spin-button,
 .ttb-actors.sheet input[type="number"]::-webkit-outer-spin-button { opacity: 0; }
 
-/* ── Item sheet extras ──────────────────────────────────── */
+/* â”€â”€ Item sheet extras â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-item-fields-4col {
   grid-template-columns: auto 1fr auto 1fr;
 }
@@ -1198,7 +1198,7 @@
   box-sizing: border-box;
 }
 
-/* ── Fate Deck Tab ──────────────────────────────────────── */
+/* â”€â”€ Fate Deck Tab â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-fate-deck { padding: 6px 0; }
 
 /* Missing deck notice */
@@ -1481,7 +1481,7 @@
 .ttb-hand-card.ttb-joker-black .ttb-hand-card-name { color: #ccc; }
 .ttb-hand-card.ttb-joker-black .ttb-hand-play { background: #444; }
 
-/* ── Duel Setup Row ──────────────────────────────────────── */
+/* â”€â”€ Duel Setup Row â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-duel-setup {
   margin: 6px 0;
   padding: 6px 8px;
@@ -1561,7 +1561,7 @@
 .ttb-modifier-reset { color: #aaa; font-size: 0.75rem; }
 .ttb-modifier-reset:hover { background: rgba(200,80,80,0.3); }
 
-/* ── Flip Result Section ─────────────────────────────────── */
+/* â”€â”€ Flip Result Section â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-flip-result-section {
   margin: 6px 0;
   padding: 6px 8px;
@@ -1627,7 +1627,7 @@
 .ttb-world-deck-create:hover,
 .ttb-control-hand-create:hover { background: rgba(255,255,255,0.15); }
 
-/* ── Chat Flip Message ───────────────────────────────────── */
+/* â”€â”€ Chat Flip Message â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-chat-flip {
   font-family: inherit;
   font-size: 0.88rem;
@@ -1669,3 +1669,107 @@
 .ttb-chat-success { background: rgba(50,150,50,0.15); color: #2a7a2a; }
 .ttb-chat-failure { background: rgba(150,40,40,0.15); color: #8a2020; }
 .ttb-chat-joker-note { font-size: 0.78rem; font-style: italic; opacity: 0.8; }
+
+/* -- NPC Sheet Styles -- */
+.ttb-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 12px;
+  padding: 12px;
+  background: linear-gradient(135deg, rgba(240,230,204,0.5), rgba(225,208,168,0.3));
+  border: 1px solid var(--ttb-gold-dk);
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.ttb-stat-display {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: var(--ttb-burgundy);
+  min-height: 24px;
+}
+
+.ttb-wound-box {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--ttb-burgundy);
+  background: var(--ttb-parchment);
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.ttb-wound-box.ttb-wound-active {
+  background: var(--ttb-burgundy);
+  box-shadow: 0 0 4px var(--ttb-burgundy-lt);
+}
+
+.ttb-ability-item {
+  margin-bottom: 12px;
+  padding: 8px;
+  background: linear-gradient(135deg, rgba(240,230,204,0.3), rgba(225,208,168,0.15));
+  border-left: 3px solid var(--ttb-gold);
+}
+
+.ttb-ability-name {
+  flex: 1;
+  border: none;
+  border-bottom: 1px solid var(--ttb-burgundy-lt);
+  background: transparent;
+  font-weight: bold;
+  color: var(--ttb-burgundy);
+}
+
+
+
+/* -- NPC Sheet Styles -- */
+.ttb-sheet.npc { font-family: "Palatino Linotype", Palatino, "Book Antiqua", serif; }
+.ttb-npc-rank-display { display: flex; align-items: center; gap: 6px; font-size: 0.9em; margin-top: 6px; }
+.ttb-npc-meta { display: flex; align-items: center; gap: 6px; font-size: 0.85em; margin-top: 4px; color: var(--ttb-ink-mid); }
+.ttb-npc-meta .ttb-meta-label { font-weight: 600; text-transform: uppercase; letter-spacing: 0.2px; }
+.ttb-npc-meta .ttb-meta-value { color: var(--ttb-ink); }
+.ttb-rank-label { font-weight: bold; color: var(--ttb-burgundy); }
+.ttb-rank-input, .ttb-rank-value { background: transparent; border: none; border-bottom: 1px solid var(--ttb-burgundy-lt); color: var(--ttb-burgundy); font-weight: bold; padding: 0 4px; font-size: 0.95em; }
+.ttb-rank-value { width: 40px; text-align: center; }
+.ttb-rank-sep { color: var(--ttb-ink-mid); opacity: 0.5; }
+.ttb-stat-block-bar { padding: 10px 12px; background: linear-gradient(135deg, rgba(240,230,204,0.6), rgba(225,208,168,0.4)); border: 1px solid var(--ttb-gold-dk); border-radius: 4px; margin-bottom: 8px; }
+.ttb-section-title { margin: 0 0 8px 0; font-size: 0.85em; text-transform: uppercase; letter-spacing: 0.5px; color: var(--ttb-burgundy); font-weight: bold; }
+.ttb-stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); gap: 10px; }
+.ttb-stat-grid.ttb-stat-2row { grid-template-columns: repeat(3, 1fr); }
+.ttb-stat { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 4px; }
+.ttb-stat-label { font-size: 0.75em; text-transform: uppercase; letter-spacing: 0.4px; color: var(--ttb-ink-mid); font-weight: 600; }
+.ttb-stat.ttb-stat-primary .ttb-stat-label { color: var(--ttb-burgundy); font-weight: bold; }
+.ttb-stat-display { font-size: 1.5em; font-weight: bold; color: var(--ttb-burgundy); min-height: 28px; display: flex; align-items: center; justify-content: center; }
+.ttb-wound-track { padding: 10px 12px; background: rgba(107,15,26,0.08); border: 1px solid var(--ttb-burgundy-lt); border-radius: 4px; margin-bottom: 12px; }
+.ttb-wounds-box { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+.ttb-wound-box { width: 22px; height: 22px; border: 1.5px solid var(--ttb-burgundy); border-radius: 2px; background: var(--ttb-parchment); cursor: pointer; transition: all 0.1s; flex-shrink: 0; }
+.ttb-wound-box:hover { background: var(--ttb-parchment-dk); box-shadow: inset 0 0 3px rgba(107,15,26,0.2); }
+.ttb-wound-box.filled { background: var(--ttb-burgundy); box-shadow: 0 0 5px rgba(107,15,26,0.3); }
+.ttb-wounds-counter { display: flex; align-items: center; gap: 4px; font-size: 0.9em; color: var(--ttb-ink-mid); }
+.ttb-wound-input { width: 35px; text-align: center; border: none; border-bottom: 1px solid var(--ttb-burgundy-lt); background: transparent; color: var(--ttb-burgundy); font-weight: bold; padding: 0 3px; }
+.ttb-wound-separator { color: var(--ttb-ink-mid); font-weight: bold; }
+.ttb-wound-max { font-weight: bold; color: var(--ttb-burgundy); }
+.ttb-attributes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 12px; padding: 8px; }
+.ttb-attribute-card { display: flex; flex-direction: column; gap: 4px; padding: 8px; background: var(--ttb-parchment-dk); border: 1px solid var(--ttb-burgundy-lt); border-radius: 3px; }
+.ttb-attr-label { font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.4px; color: var(--ttb-burgundy); font-weight: bold; }
+.ttb-attr-input-group { display: flex; justify-content: center; }
+.ttb-attr-input { width: 50px; text-align: center; border: none; border-bottom: 1px solid var(--ttb-burgundy-lt); background: transparent; color: var(--ttb-burgundy); font-weight: bold; font-size: 1.1em; }
+.ttb-skills-section { padding: 8px; }
+.ttb-skill-group { margin-bottom: 16px; }
+.ttb-skill-group-header { font-size: 0.85em; color: var(--ttb-burgundy); text-transform: uppercase; letter-spacing: 0.4px; margin: 0 0 6px 0; padding-bottom: 4px; border-bottom: 1px solid var(--ttb-gold); font-weight: bold; }
+.ttb-skills-table { width: 100%; font-size: 0.85em; border-collapse: collapse; }
+.ttb-skill-row { border-bottom: 1px dotted rgba(107,15,26,0.1); }
+.ttb-skill-row:hover { background: rgba(240,230,204,0.4); }
+.ttb-skill-name { padding: 4px 8px; color: var(--ttb-ink); text-align: left; }
+.ttb-skill-input { padding: 4px 8px; text-align: center; width: 60px; }
+.ttb-skill-value-input { width: 40px; text-align: center; border: none; border-bottom: 1px solid var(--ttb-burgundy-lt); background: transparent; color: var(--ttb-burgundy); font-weight: bold; }
+.ttb-abilities-section { padding: 8px; }
+.ttb-ability-item { margin-bottom: 12px; padding: 10px; background: linear-gradient(135deg, rgba(240,230,204,0.4), rgba(225,208,168,0.2)); border-left: 3px solid var(--ttb-gold); border-radius: 2px; }
+.ttb-ability-header { display: flex; gap: 8px; margin-bottom: 6px; align-items: center; }
+.ttb-ability-name { flex: 1; border: none; border-bottom: 1px solid var(--ttb-burgundy-lt); background: transparent; color: var(--ttb-burgundy); font-weight: bold; font-size: 0.95em; padding: 2px 4px; }
+.ttb-ability-delete { flex-shrink: 0; width: auto; padding: 4px 8px; font-size: 0.75em; background: var(--ttb-burgundy); color: var(--ttb-parchment); border: none; border-radius: 2px; cursor: pointer; transition: background 0.1s; }
+.ttb-ability-delete:hover { background: var(--ttb-burgundy-lt); }
+.ttb-ability-description { width: 100%; min-height: 70px; border: 1px solid var(--ttb-gold-dk); border-radius: 2px; padding: 6px 8px; font-size: 0.85em; line-height: 1.4; color: var(--ttb-ink); font-family: inherit; background: var(--ttb-parchment); resize: vertical; }
+.ttb-ability-add { width: auto; padding: 6px 12px; background: var(--ttb-gold); color: var(--ttb-ink); border: 1px solid var(--ttb-gold-dk); border-radius: 2px; cursor: pointer; font-size: 0.85em; font-weight: bold; margin-top: 8px; transition: all 0.1s; }
+.ttb-ability-add:hover { background: var(--ttb-gold-dk); box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.ttb-notes-field { width: 100%; min-height: 200px; border: 1px solid var(--ttb-burgundy-lt); border-radius: 3px; padding: 8px; font-family: inherit; font-size: 0.9em; color: var(--ttb-ink); background: var(--ttb-parchment); resize: vertical; }
+.ttb-notes-field:focus { outline: 1px solid var(--ttb-gold); }

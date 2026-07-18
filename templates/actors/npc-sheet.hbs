@@ -4,98 +4,106 @@
       <img src="{{actor.img}}" title="{{actor.name}}" class="ttb-sheet-img" />
       <div class="ttb-title-section">
         <h1 class="ttb-sheet-name">
-          <input type="text" name="name" value="{{actor.name}}" />
+          <input type="text" name="name" value="{{actor.name}}" placeholder="NPC Name"/>
         </h1>
-        <p class="ttb-npc-rank">
-          <input type="text" name="system.rank.title" value="{{rank.title}}" placeholder="Minion" />
-          (Rank: <input type="number" name="system.rank.value" value="{{rank.value}}" />)
-        </p>
+        <div class="ttb-npc-rank-display">
+          <span class="ttb-rank-label">Rank:</span>
+          <input type="text" name="system.rank.title" value="{{rank.title}}" placeholder="e.g., Minion" class="ttb-rank-input"/>
+          <span class="ttb-rank-sep">|</span>
+          <input type="number" name="system.rank.value" value="{{rank.value}}" min="0" max="10" class="ttb-rank-value"/>
+        </div>
+        {{#if system.types}}
+        <div class="ttb-npc-meta">
+          <span class="ttb-meta-label">Type:</span> <span class="ttb-meta-value">{{system.types}}</span>
+        </div>
+        {{/if}}
       </div>
     </div>
   </header>
 
-  <section class="ttb-stat-block">
-    <div class="ttb-stat-grid">
-      <div class="ttb-stat">
-        <label>Defense</label>
-        <input type="number" name="system.derived.defense" value="{{derived.defense}}" />
+  <!-- Stat Block Bar (always visible) -->
+  <section class="ttb-stat-block-bar">
+    <h3 class="ttb-section-title">Stat Block</h3>
+    <div class="ttb-stat-grid ttb-stat-2row">
+      <div class="ttb-stat ttb-stat-primary">
+        <label class="ttb-stat-label">Df</label>
+        <div class="ttb-stat-display">{{derived.defense}}</div>
+      </div>
+      <div class="ttb-stat ttb-stat-primary">
+        <label class="ttb-stat-label">Wp</label>
+        <div class="ttb-stat-display">{{derived.willpower}}</div>
       </div>
       <div class="ttb-stat">
-        <label>Willpower</label>
-        <input type="number" name="system.derived.willpower" value="{{derived.willpower}}" />
+        <label class="ttb-stat-label">Walk</label>
+        <div class="ttb-stat-display">{{derived.walk}}</div>
       </div>
       <div class="ttb-stat">
-        <label>Walk</label>
-        <input type="number" name="system.derived.walk" value="{{derived.walk}}" />
+        <label class="ttb-stat-label">Charge</label>
+        <div class="ttb-stat-display">{{derived.charge}}</div>
       </div>
       <div class="ttb-stat">
-        <label>Charge</label>
-        <input type="number" name="system.derived.charge" value="{{derived.charge}}" />
+        <label class="ttb-stat-label">Height</label>
+        <div class="ttb-stat-display">{{derived.height}}</div>
       </div>
       <div class="ttb-stat">
-        <label>Height</label>
-        <input type="number" name="system.derived.height" value="{{derived.height}}" />
-      </div>
-      <div class="ttb-stat">
-        <label>Initiative</label>
-        <input type="number" name="system.derived.initiative" value="{{derived.initiative}}" />
+        <label class="ttb-stat-label">Init</label>
+        <div class="ttb-stat-display">{{derived.initiative}}</div>
       </div>
     </div>
   </section>
 
-  <section class="ttb-wounds-section">
-    <h3>{{localize "TTB.Wounds"}}</h3>
+  <!-- Wounds Track -->
+  <div class="ttb-wound-track">
+    <h3 class="ttb-section-title">Wounds</h3>
     <div class="ttb-wounds-box">
       {{#each woundBoxes as |box index|}}
-        <div class="ttb-wound-box {{#if box}}ttb-wound-active{{/if}}" data-index="{{index}}" title="Click to toggle"></div>
+        <button type="button" class="ttb-wound-box {{#if box}}filled{{/if}}" data-index="{{index}}" title="Click to toggle wound"></button>
       {{/each}}
     </div>
-    <div class="ttb-wounds-input">
-      <input type="number" name="system.wounds.value" value="{{wounds.value}}" min="0" max="{{wounds.max}}" />
-      / {{wounds.max}}
+    <div class="ttb-wounds-counter">
+      <input type="number" name="system.wounds.value" value="{{wounds.value}}" min="0" max="{{wounds.max}}" class="ttb-wound-input"/>
+      <span class="ttb-wound-separator">/</span>
+      <span class="ttb-wound-max">{{wounds.max}}</span>
     </div>
-  </section>
+  </div>
 
+  <!-- Tab Navigation -->
   <nav class="sheet-tabs tabs" data-group="primary">
-    <button class="item" data-tab="stat-block">{{localize "TTB.StatBlock"}}</button>
-    <button class="item" data-tab="skills">{{localize "TTB.Skills"}}</button>
-    <button class="item" data-tab="abilities">{{localize "TTB.Abilities"}}</button>
-    <button class="item" data-tab="biography">{{localize "TTB.Description"}}</button>
+    <button class="item" data-tab="attributes">Attributes</button>
+    <button class="item" data-tab="skills">Skills</button>
+    <button class="item" data-tab="abilities">Abilities</button>
+    <button class="item" data-tab="biography">Description</button>
   </nav>
 
   <section class="sheet-body">
-    <!-- Stat Block Tab -->
-    <div class="tab" data-tab="stat-block">
-      <div class="ttb-npc-stat-block">
-        <div class="ttb-attributes-grid">
-          {{#each attributes as |attr|}}
-            <div class="ttb-attribute-card">
-              <div class="ttb-attr-header">
-                {{attr.label}}
-              </div>
-              <div class="ttb-attr-value">
-                <input type="number" name="system.attributes.{{attr.key}}.value" value="{{attr.value}}" min="-5" max="5" />
-              </div>
+    <!-- Attributes Tab -->
+    <div class="tab" data-tab="attributes">
+      <div class="ttb-attributes-grid ttb-attr-3col">
+        {{#each attributes as |attr|}}
+          <div class="ttb-attribute-card">
+            <label class="ttb-attr-label">{{attr.label}}</label>
+            <div class="ttb-attr-input-group">
+              <input type="number" name="system.attributes.{{attr.key}}.value" value="{{attr.value}}" min="-5" max="5" class="ttb-attr-input"/>
             </div>
-          {{/each}}
-        </div>
+          </div>
+        {{/each}}
       </div>
     </div>
 
     <!-- Skills Tab -->
     <div class="tab" data-tab="skills">
       <div class="ttb-skills-section">
-        {{#each skillsByAttribute as |group attr|}}
+        {{#each skillsByAttribute as |group|}}
           {{#if group.skills.length}}
             <div class="ttb-skill-group">
-              <h4>{{group.label}}</h4>
+              <h4 class="ttb-skill-group-header">{{group.label}}</h4>
               <table class="ttb-skills-table">
                 <tbody>
                   {{#each group.skills as |skill|}}
-                    <tr>
+                    <tr class="ttb-skill-row">
                       <td class="ttb-skill-name">{{skill.label}}</td>
-                      <td class="ttb-skill-value">
-                        <input type="number" name="system.skills.{{skill.key}}.value" value="{{skill.value}}" min="0" max="5" />
+                      <td class="ttb-skill-input">
+                        <input type="number" name="system.skills.{{skill.key}}.value" value="{{skill.value}}" min="0" max="5" class="ttb-skill-value-input"/>
                       </td>
                     </tr>
                   {{/each}}
@@ -112,20 +120,20 @@
       <div class="ttb-abilities-section">
         {{#each abilities as |ability index|}}
           <div class="ttb-ability-item">
-            <div class="ttb-ability-controls">
+            <div class="ttb-ability-header">
               <input type="text" class="ttb-ability-name" data-index="{{index}}" value="{{ability.name}}" placeholder="Ability Name" />
-              <button class="ttb-ability-delete" data-index="{{index}}" type="button">{{localize "TTB.Delete"}}</button>
+              <button type="button" class="ttb-ability-delete" data-index="{{index}}" title="Delete this ability">Remove</button>
             </div>
-            <textarea class="ttb-ability-description" data-index="{{index}}" placeholder="Ability description">{{ability.description}}</textarea>
+            <textarea class="ttb-ability-description" data-index="{{index}}" placeholder="Ability description...">{{ability.description}}</textarea>
           </div>
         {{/each}}
-        <button class="ttb-ability-add" type="button">{{localize "TTB.AddAbility"}}</button>
+        <button type="button" class="ttb-ability-add">+ Add Ability</button>
       </div>
     </div>
 
     <!-- Description Tab -->
     <div class="tab" data-tab="biography">
-      <textarea name="system.notes" class="ttb-notes-field">{{system.notes}}</textarea>
+      <textarea name="system.notes" class="ttb-notes-field" placeholder="NPC description, personality, and story notes...">{{system.notes}}</textarea>
     </div>
   </section>
 </form>
