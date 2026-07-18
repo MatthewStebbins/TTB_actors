@@ -12,7 +12,7 @@
       "might": 2,
       "grace": 1,
       "speed": 2,
-      "resilience": -1,
+      "resilience": 1,
       "charm": -5,
       "cunning": -3,
       "intellect": -3,
@@ -21,9 +21,9 @@
     "derived": {
       "defense": "4 (9)",
       "willpower": "5 (10)",
-      "walk": "5",
-      "charge": "6",
-      "height": "2",
+      "walk": 5,
+      "charge": 7,
+      "height": 2,
       "initiative": "3 (8)"
     },
     "wounds": {
@@ -47,21 +47,26 @@
     "abilities": [
       {
         "name": "Caustic Aura",
-        "description": "Living characters beginning turn within a2 suffer 1 damage and cannot declare (0) Actions until next turn."
+        "description": "Living characters that begin their turn within 🂎2 of one or more characters with this ability suffer 1 damage and may not declare (0) Actions until the start of their next turn."
       },
       {
         "name": "Controlled Deformation",
-        "description": "If within 2 yards of 3+ characters with this ability at start of turn, absorbs them and becomes Desolation Engine. New Engine cannot act this round."
+        "description": "If this character is within 2 yards of at least three other characters with this ability at the start of its turn, it absorbs every such character and becomes a Desolation Engine. The new Desolation Engine may not act this round."
       },
       {
-        "name": "Horrifying Presence",
-        "description": "When this character is created or revealed to Living characters, each must pass TN 10 Horror Duel."
+        "name": "Desolate Warping",
+        "description": "After killing a Living, Construct, or Undead character, this character may discard a card to transform it into an Abomination that may not act this round. If this happens, this character heals to full Wounds."
+      },
+      {
+        "name": "Hard to Wound +1",
+        "description": "Damage flips against this character suffer 🂠."
+      },
+      {
+        "name": "(1) Claws of Metal and Bone (Pugilism)",
+        "description": "AV: 4 — Rg: ★ 1 — Resist: Df. Target suffers 2/3/3 damage. ⬜ Consuming Touch: After damaging, this character heals an amount of damage equal to the amount the target suffered from this attack."
       }
     ],
-    "actions": [
-      "(1) Grasping Limbs (Pugilism) | AV: 3 (8) | Rg: y2 | Resist: Df | Target suffers 1/2/3 damage and becomes Slow.",
-      "(0) Absorb Corpse | If within 2 yards of a dead Living character, absorb it and heal 1 damage."
-    ],
-    "notes": "Horrifying amalgamations of mechanical devices and rotting flesh from Old Malifaux. Warp living flesh when near. Can absorb bodies to repair themselves."
-  }
+    "actions": []
+  },
+  "folder": null
 }
