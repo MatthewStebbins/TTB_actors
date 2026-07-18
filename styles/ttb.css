@@ -1,5 +1,5 @@
 /* ============================================================
-   Through the Breach Ã¢â‚¬â€ Character Sheet Styles
+   Through the Breach â€” Character Sheet Styles
    Dark Victorian/Western Steampunk aesthetic
    ============================================================ */
 
@@ -23,7 +23,7 @@
   --ttb-teal-lt:      #2a8060;
 }
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ Base sheet Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ Base sheet â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-actors.sheet {
   font-family: "Palatino Linotype", Palatino, "Book Antiqua", serif;
   background: var(--ttb-parchment);
@@ -40,7 +40,7 @@
 .ttb-actors.sheet ::-webkit-scrollbar-track { background: var(--ttb-parchment-dk); }
 .ttb-actors.sheet ::-webkit-scrollbar-thumb { background: var(--ttb-burgundy-lt); border-radius: 3px; }
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ Header Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ Header â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-actors-header {
   display: flex;
   align-items: flex-start;
@@ -111,7 +111,7 @@
   color: var(--ttb-parchment);
 }
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ Derived Stats Bar Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ Derived Stats Bar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-actors-derived {
   display: flex;
   align-items: stretch;
@@ -158,7 +158,7 @@
 
 .ttb-actors-wounds .ttb-actors-derived-label { color: #e06070; }
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ Soulstones Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ Soulstones â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-soulstones {
   display: flex;
   flex-direction: column;
@@ -206,7 +206,7 @@
   margin-left: 2px;
 }
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ Wound Track Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ Wound Track â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-wound-track {
   display: flex;
   align-items: center;
@@ -217,22 +217,20 @@
   flex-wrap: wrap;
 }
 
-.ttb-wound-box { 
-  width: 24px; 
-  height: 24px; 
-  border: 2px solid var(--ttb-burgundy); 
-  border-radius: 3px; 
-  background: var(--ttb-parchment); 
-  cursor: pointer; 
-  transition: all 0.15s ease; 
-  flex-shrink: 0; 
-  box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
+.ttb-wound-box {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--ttb-burgundy);
+  border-radius: 3px;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.1s;
 }
 
-.ttb-wound-box.filled { 
-  background: var(--ttb-burgundy); 
-  box-shadow: 0 2px 6px rgba(107,15,26,0.4), inset 0 1px 2px rgba(0,0,0,0.2);
-  border-color: var(--ttb-burgundy-lt);
+.ttb-wound-box.filled {
+  background: var(--ttb-burgundy);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.4);
 }
 
 .ttb-wound-box.inactive {
@@ -265,7 +263,7 @@
   font-size: 0.9em;
 }
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ Conditions Strip Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ Conditions Strip â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-conditions-strip {
   display: flex;
   align-items: center;
@@ -326,7 +324,7 @@
   background: rgba(107,15,26,0.4);
 }
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ Tabs Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ Tabs â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-actors.sheet .tabs {
   display: flex;
   background: var(--ttb-leather);
@@ -354,14 +352,14 @@
   border-bottom-color: var(--ttb-gold);
 }
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ Sheet body Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ Sheet body â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-actors.sheet .sheet-body {
   padding: 10px;
   background: var(--ttb-parchment);
   overflow-y: auto;
 }
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ Section headers Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ Section headers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-section-header {
   display: flex;
   align-items: center;
@@ -391,7 +389,7 @@
 
 .ttb-section { margin-bottom: 14px; }
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ Attributes Grid Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ Attributes Grid â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-actors-attributes {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -437,7 +435,7 @@
 .ttb-actors-attr-value::-webkit-inner-spin-button,
 .ttb-actors-attr-value::-webkit-outer-spin-button { opacity: 0; }
 
-/* Characteristic suit Ã¢â‚¬â€ 4 clickable symbol buttons */
+/* Characteristic suit â€” 4 clickable symbol buttons */
 .ttb-attr-suit-row {
   display: flex;
   gap: 3px;
@@ -471,7 +469,7 @@
 .ttb-attr-suit-btn.active[data-suit="ram"]  { background: var(--ttb-burgundy); color: var(--ttb-parchment); border-color: var(--ttb-burgundy-lt); }
 .ttb-attr-suit-btn.active[data-suit="tome"] { background: #7a5c00; color: #ffe090; border-color: #c09020; }
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ Skills Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ Skills â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-actors-skill-group { margin-bottom: 14px; }
 
 .ttb-actors-skill-group-header {
@@ -578,7 +576,7 @@
   width: 130px;
 }
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ Destiny Tab Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ Destiny Tab â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-destiny { padding: 4px 0; }
 
 .ttb-destiny-spread {
@@ -693,7 +691,7 @@
   color: var(--ttb-burgundy);
 }
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ Personal Agenda Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ Personal Agenda â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-personal-agenda {
   margin-top: 14px;
   padding-top: 10px;
@@ -748,7 +746,7 @@
   cursor: pointer;
 }
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ Grimoire Tab Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ Grimoire Tab â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-grimoire { padding: 4px 0; }
 
 .ttb-grimoire-hint {
@@ -840,7 +838,7 @@
   padding-top: 5px;
 }
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ Pursuits & Talents Tab Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ Pursuits & Talents Tab â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-pursuits-talents { padding: 4px 0; }
 
 /* 2-column layout for Talents + Other Abilities */
@@ -921,7 +919,7 @@
   padding: 10px 0;
 }
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ Equipment Tab Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ Equipment Tab â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-equipment { padding: 4px 0; }
 
 .ttb-table {
@@ -984,7 +982,7 @@
   font-size: 1em;
 }
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ Biography Tab Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ Biography Tab â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-biography { padding: 4px 0; }
 
 .ttb-bio-fields {
@@ -1051,7 +1049,7 @@
   border-color: var(--ttb-burgundy-lt);
 }
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ Add / Delete buttons Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ Add / Delete buttons â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-add-btn {
   background: transparent;
   border: 1px solid var(--ttb-gold-dk);
@@ -1081,7 +1079,7 @@
 
 .ttb-delete-btn:hover { color: #cc0000; }
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ Item Sheet Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ Item Sheet â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-item-body {
   padding: 12px;
   background: var(--ttb-parchment);
@@ -1119,12 +1117,12 @@
   min-height: 60px;
 }
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ Input resets Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ Input resets â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-actors.sheet input[type="number"] { -moz-appearance: textfield; }
 .ttb-actors.sheet input[type="number"]::-webkit-inner-spin-button,
 .ttb-actors.sheet input[type="number"]::-webkit-outer-spin-button { opacity: 0; }
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ Item sheet extras Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ Item sheet extras â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-item-fields-4col {
   grid-template-columns: auto 1fr auto 1fr;
 }
@@ -1200,7 +1198,7 @@
   box-sizing: border-box;
 }
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ Fate Deck Tab Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ Fate Deck Tab â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-fate-deck { padding: 6px 0; }
 
 /* Missing deck notice */
@@ -1483,7 +1481,7 @@
 .ttb-hand-card.ttb-joker-black .ttb-hand-card-name { color: #ccc; }
 .ttb-hand-card.ttb-joker-black .ttb-hand-play { background: #444; }
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ Duel Setup Row Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ Duel Setup Row â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-duel-setup {
   margin: 6px 0;
   padding: 6px 8px;
@@ -1563,7 +1561,7 @@
 .ttb-modifier-reset { color: #aaa; font-size: 0.75rem; }
 .ttb-modifier-reset:hover { background: rgba(200,80,80,0.3); }
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ Flip Result Section Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ Flip Result Section â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-flip-result-section {
   margin: 6px 0;
   padding: 6px 8px;
@@ -1629,7 +1627,7 @@
 .ttb-world-deck-create:hover,
 .ttb-control-hand-create:hover { background: rgba(255,255,255,0.15); }
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ Chat Flip Message Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ Chat Flip Message â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ttb-chat-flip {
   font-family: inherit;
   font-size: 0.88rem;
@@ -1673,14 +1671,16 @@
 .ttb-chat-joker-note { font-size: 0.78rem; font-style: italic; opacity: 0.8; }
 
 /* -- NPC Sheet Styles -- */
-.ttb-stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 18px; padding: 16px; background: linear-gradient(135deg, rgba(240,230,204,0.5), rgba(225,208,168,0.3)); border-radius: 4px;
+.ttb-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 12px;
   padding: 12px;
   background: linear-gradient(135deg, rgba(240,230,204,0.5), rgba(225,208,168,0.3));
   border: 1px solid var(--ttb-gold-dk);
   border-radius: 4px;
   margin-bottom: 12px;
 }
-.ttb-stat-grid.ttb-stat-2row { grid-template-columns: repeat(3, 1fr); }
 
 .ttb-stat-display {
   font-size: 1.4em;
@@ -1689,16 +1689,13 @@
   min-height: 24px;
 }
 
-.ttb-wound-box { 
-  width: 24px; 
-  height: 24px; 
-  border: 2px solid var(--ttb-burgundy); 
-  border-radius: 3px; 
-  background: var(--ttb-parchment); 
-  cursor: pointer; 
-  transition: all 0.15s ease; 
-  flex-shrink: 0; 
-  box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
+.ttb-wound-box {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--ttb-burgundy);
+  background: var(--ttb-parchment);
+  cursor: pointer;
+  transition: all 0.1s;
 }
 
 .ttb-wound-box.ttb-wound-active {
@@ -1741,32 +1738,17 @@
 .ttb-stat { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 4px; }
 .ttb-stat-label { font-size: 0.75em; text-transform: uppercase; letter-spacing: 0.4px; color: var(--ttb-ink-mid); font-weight: 600; }
 .ttb-stat.ttb-stat-primary .ttb-stat-label { color: var(--ttb-burgundy); font-weight: bold; }
-.ttb-stat-display { font-size: 2em; font-weight: 900; color: var(--ttb-burgundy); min-height: 28px; display: flex; align-items: center; justify-content: center; text-shadow: 1px 1px 2px rgba(0,0,0,0.1); }
+.ttb-stat-display { font-size: 1.5em; font-weight: bold; color: var(--ttb-burgundy); min-height: 28px; display: flex; align-items: center; justify-content: center; }
 .ttb-wound-track { padding: 10px 12px; background: rgba(107,15,26,0.08); border: 1px solid var(--ttb-burgundy-lt); border-radius: 4px; margin-bottom: 12px; }
 .ttb-wounds-box { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
-.ttb-wound-box { 
-  width: 24px; 
-  height: 24px; 
-  border: 2px solid var(--ttb-burgundy); 
-  border-radius: 3px; 
-  background: var(--ttb-parchment); 
-  cursor: pointer; 
-  transition: all 0.15s ease; 
-  flex-shrink: 0; 
-  box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
-}
+.ttb-wound-box { width: 22px; height: 22px; border: 1.5px solid var(--ttb-burgundy); border-radius: 2px; background: var(--ttb-parchment); cursor: pointer; transition: all 0.1s; flex-shrink: 0; }
 .ttb-wound-box:hover { background: var(--ttb-parchment-dk); box-shadow: inset 0 0 3px rgba(107,15,26,0.2); }
-.ttb-wound-box.filled { 
-  background: var(--ttb-burgundy); 
-  box-shadow: 0 2px 6px rgba(107,15,26,0.4), inset 0 1px 2px rgba(0,0,0,0.2);
-  border-color: var(--ttb-burgundy-lt);
-}
+.ttb-wound-box.filled { background: var(--ttb-burgundy); box-shadow: 0 0 5px rgba(107,15,26,0.3); }
 .ttb-wounds-counter { display: flex; align-items: center; gap: 4px; font-size: 0.9em; color: var(--ttb-ink-mid); }
 .ttb-wound-input { width: 35px; text-align: center; border: none; border-bottom: 1px solid var(--ttb-burgundy-lt); background: transparent; color: var(--ttb-burgundy); font-weight: bold; padding: 0 3px; }
 .ttb-wound-separator { color: var(--ttb-ink-mid); font-weight: bold; }
 .ttb-wound-max { font-weight: bold; color: var(--ttb-burgundy); }
 .ttb-attributes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 12px; padding: 8px; }
-.ttb-attributes-grid.ttb-attr-3col { grid-template-columns: repeat(3, 1fr); }
 .ttb-attribute-card { display: flex; flex-direction: column; gap: 4px; padding: 8px; background: var(--ttb-parchment-dk); border: 1px solid var(--ttb-burgundy-lt); border-radius: 3px; }
 .ttb-attr-label { font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.4px; color: var(--ttb-burgundy); font-weight: bold; }
 .ttb-attr-input-group { display: flex; justify-content: center; }
@@ -1791,207 +1773,3 @@
 .ttb-ability-add:hover { background: var(--ttb-gold-dk); box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
 .ttb-notes-field { width: 100%; min-height: 200px; border: 1px solid var(--ttb-burgundy-lt); border-radius: 3px; padding: 8px; font-family: inherit; font-size: 0.9em; color: var(--ttb-ink); background: var(--ttb-parchment); resize: vertical; }
 .ttb-notes-field:focus { outline: 1px solid var(--ttb-gold); }
-
-/* Active tab styling */
-.sheet-tabs.tabs .item { 
-  padding: 8px 14px; 
-  border: none; 
-  border-bottom: 3px solid transparent; 
-  background: transparent; 
-  color: var(--ttb-ink-mid); 
-  font-weight: 600; 
-  cursor: pointer; 
-  transition: all 0.2s;
-  text-transform: uppercase;
-  font-size: 0.85em;
-  letter-spacing: 0.5px;
-}
-
-.sheet-tabs.tabs .item:hover {
-  background: rgba(201,168,76,0.1);
-  color: var(--ttb-ink);
-}
-
-.sheet-tabs.tabs .item.active {
-  border-bottom-color: var(--ttb-burgundy);
-  color: var(--ttb-burgundy);
-  background: rgba(107,15,26,0.05);
-}
-
-
-/* Active tab styling */
-.sheet-tabs.tabs .item { 
-  padding: 8px 14px; 
-  border: none; 
-  border-bottom: 3px solid transparent; 
-  background: transparent; 
-  color: var(--ttb-ink-mid); 
-  font-weight: 600; 
-  cursor: pointer; 
-  transition: all 0.2s;
-  text-transform: uppercase;
-  font-size: 0.85em;
-  letter-spacing: 0.5px;
-}
-
-.sheet-tabs.tabs .item:hover {
-  background: rgba(201,168,76,0.1);
-  color: var(--ttb-ink);
-}
-
-.sheet-tabs.tabs .item.active {
-  border-bottom-color: var(--ttb-burgundy);
-  color: var(--ttb-burgundy);
-  background: rgba(107,15,26,0.05);
-}
-
-.ttb-ability-item {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  padding: 12px;
-  background: rgba(240,230,204,0.4);
-  border: 1px solid var(--ttb-gold-dk);
-  border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-  transition: box-shadow 0.2s;
-}
-
-.ttb-ability-item:hover {
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-}
-
-.ttb-ability-header {
-  display: flex;
-  gap: 8px;
-  align-items: flex-start;
-}
-
-.ttb-ability-name {
-  flex: 1;
-  font-weight: 600;
-  border: none;
-  border-bottom: 1px solid var(--ttb-gold);
-  background: transparent;
-  padding: 4px 0;
-  color: var(--ttb-burgundy);
-}
-
-.ttb-ability-delete {
-  padding: 4px 8px;
-  background: var(--ttb-burgundy);
-  color: var(--ttb-parchment);
-  border: none;
-  border-radius: 2px;
-  font-size: 0.75em;
-  cursor: pointer;
-  transition: background 0.2s;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
-.ttb-ability-delete:hover {
-  background: var(--ttb-burgundy-lt);
-}
-
-.ttb-ability-description {
-  background: var(--ttb-parchment);
-  border: 1px solid var(--ttb-gold-dk);
-  border-radius: 2px;
-  padding: 8px;
-  font-size: 0.9em;
-  min-height: 60px;
-  font-family: inherit;
-}
-
-.ttb-ability-add {
-  padding: 10px 16px;
-  background: var(--ttb-gold);
-  color: var(--ttb-ink);
-  border: none;
-  border-radius: 4px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.2s;
-  margin-top: 8px;
-}
-
-.ttb-ability-add:hover {
-  background: var(--ttb-gold-dk);
-}
-
-
-.ttb-ability-item {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  padding: 12px;
-  background: rgba(240,230,204,0.4);
-  border: 1px solid var(--ttb-gold-dk);
-  border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-  transition: box-shadow 0.2s;
-}
-
-.ttb-ability-item:hover {
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-}
-
-.ttb-ability-header {
-  display: flex;
-  gap: 8px;
-  align-items: flex-start;
-}
-
-.ttb-ability-name {
-  flex: 1;
-  font-weight: 600;
-  border: none;
-  border-bottom: 1px solid var(--ttb-gold);
-  background: transparent;
-  padding: 4px 0;
-  color: var(--ttb-burgundy);
-}
-
-.ttb-ability-delete {
-  padding: 4px 8px;
-  background: var(--ttb-burgundy);
-  color: var(--ttb-parchment);
-  border: none;
-  border-radius: 2px;
-  font-size: 0.75em;
-  cursor: pointer;
-  transition: background 0.2s;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
-.ttb-ability-delete:hover {
-  background: var(--ttb-burgundy-lt);
-}
-
-.ttb-ability-description {
-  background: var(--ttb-parchment);
-  border: 1px solid var(--ttb-gold-dk);
-  border-radius: 2px;
-  padding: 8px;
-  font-size: 0.9em;
-  min-height: 60px;
-  font-family: inherit;
-}
-
-.ttb-ability-add {
-  padding: 10px 16px;
-  background: var(--ttb-gold);
-  color: var(--ttb-ink);
-  border: none;
-  border-radius: 4px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.2s;
-  margin-top: 8px;
-}
-
-.ttb-ability-add:hover {
-  background: var(--ttb-gold-dk);
-}
