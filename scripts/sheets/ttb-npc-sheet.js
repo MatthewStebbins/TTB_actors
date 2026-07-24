@@ -38,7 +38,7 @@ export class TtbNpcSheet extends ActorSheet {
       context.attributes.push({
         key,
         label: attrLabels[key] || key,
-        value: attr.value,
+        value: typeof attr === 'object' ? attr.value : attr,
       });
     }
 
@@ -129,3 +129,4 @@ export class TtbNpcSheet extends ActorSheet {
     });
   }
 }
+
