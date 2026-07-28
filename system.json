@@ -2,7 +2,7 @@
     "id":  "ttb-actors",
     "title":  "Through the Breach",
     "description":  "A FoundryVTT game system for the Through the Breach tabletop RPG by Wyrd Miniatures. Supports Fated (player) character creation and character sheets.",
-    "version":  "0.1.47",
+    "version":  "0.1.48",
     "compatibility":  {
                           "minimum":  "10",
                           "verified":  "13"
@@ -30,7 +30,7 @@
     "readme":  "README.md",
     "bugs":  "https://github.com/MatthewStebbins/TTB_actors/issues",
     "manifest":  "https://raw.githubusercontent.com/MatthewStebbins/TTB_actors/main/system.json",
-    "download":  "https://github.com/MatthewStebbins/TTB_actors/releases/download/v0.1.47/system.zip",
+    "download":  "https://github.com/MatthewStebbins/TTB_actors/releases/download/v0.1.48/system.zip",
     "packs":  [
                   {
                       "name":  "ttb-weapons",
