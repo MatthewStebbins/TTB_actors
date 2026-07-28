@@ -116,59 +116,6 @@
       </div>
     </div>
 
-    <!-- Combat Tab -->
-    <div class="tab" data-tab="combat">
-      <div class="ttb-combat-section">
-        {{#if actions.length}}
-          {{#each actions as |action index|}}
-            <div class="ttb-action-card">
-              <div class="ttb-action-header">
-                <div class="ttb-action-title">
-                  <h4 class="ttb-action-name">{{action.name}}</h4>
-                  <span class="ttb-action-ap">AP {{action.apCost}}</span>
-                </div>
-              </div>
-              <div class="ttb-action-stats">
-                <div class="ttb-action-stat">
-                  <span class="ttb-action-stat-label">Skill:</span>
-                  <span class="ttb-action-stat-value">{{action.skill}}</span>
-                </div>
-                <div class="ttb-action-stat">
-                  <span class="ttb-action-stat-label">AV:</span>
-                  <span class="ttb-action-stat-value">{{action.av}} ({{action.avModified}})</span>
-                </div>
-                <div class="ttb-action-stat">
-                  <span class="ttb-action-stat-label">Range:</span>
-                  <span class="ttb-action-stat-value">{{action.range}}</span>
-                </div>
-                <div class="ttb-action-stat">
-                  <span class="ttb-action-stat-label">Resist:</span>
-                  <span class="ttb-action-stat-value">{{action.resist}}</span>
-                </div>
-              </div>
-              {{#if action.damage.weak}}
-                <div class="ttb-action-damage">
-                  <span class="ttb-damage-label">Damage:</span>
-                  <span class="ttb-damage-weak">{{action.damage.weak}}</span>
-                  <span class="ttb-damage-sep">/</span>
-                  <span class="ttb-damage-moderate">{{action.damage.moderate}}</span>
-                  <span class="ttb-damage-sep">/</span>
-                  <span class="ttb-damage-severe">{{action.damage.severe}}</span>
-                </div>
-              {{/if}}
-              {{#if action.description}}
-                <div class="ttb-action-description">
-                  {{{action.description}}}
-                </div>
-              {{/if}}
-            </div>
-          {{/each}}
-        {{else}}
-          <div class="ttb-no-actions">No actions defined for this NPC.</div>
-        {{/if}}
-      </div>
-    </div>
-
     <!-- Abilities Tab -->
     <div class="tab" data-tab="abilities">
       <div class="ttb-abilities-section">
@@ -191,3 +138,6 @@
     </div>
   </section>
 </form>
+
+
+
