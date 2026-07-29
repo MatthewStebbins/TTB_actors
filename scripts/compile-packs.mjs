@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Compiles NDJSON .db source files into Foundry V12+ LevelDB compendium packs.
  * Run: node scripts/compile-packs.mjs
  *
@@ -7,7 +7,7 @@
  */
 
 import { ClassicLevel } from "classic-level";
-import { readFileSync, mkdirSync, rmSync, existsSync } from "fs";
+import fs from "fs";
 import { resolve, dirname } from "path";
 import { fileURLToPath } from "url";
 
@@ -24,38 +24,42 @@ const PACKS = [
   { src: "packs/ttb-bestiary.db",         out: "packs/ttb-bestiary",         docType: "Actor" },
 ];
 
-for (const { src, out, docType } of PACKS) {
-  const srcPath = resolve(ROOT, src);
-  const outPath = resolve(ROOT, out);
+(async () => {
+  for (const { src, out, docType } of PACKS) {
+    const srcPath = resolve(ROOT, src);
+    const outPath = resolve(ROOT, out);
 
-  const lines = readFileSync(srcPath, "utf8").split("\n").filter(l => l.trim());
-  console.log(`\n[${src}] → [${out}/]  (${lines.length} documents)`);
+    const lines = fs.readFileSync(srcPath, "utf8").split("\n").filter(l => l.trim());
+    console.log(`\n[${src}] -> [${out}/]  (${lines.length} documents)`);
 
-  // Remove existing LevelDB directory if present
-  if (existsSync(outPath)) rmSync(outPath, { recursive: true });
-  mkdirSync(outPath, { recursive: true });
-
-  const db = new ClassicLevel(outPath, { keyEncoding: "utf8", valueEncoding: "utf8" });
-  await db.open();
-
-  const prefix = `!${docType.toLowerCase()}s!`;
-  const batch = db.batch();
-
-  let ok = 0, fail = 0;
-  for (const line of lines) {
-    try {
-      const doc = JSON.parse(line);
-      batch.put(prefix + doc._id, JSON.stringify(doc));
-      ok++;
-    } catch (e) {
-      console.error(`  PARSE ERROR: ${e.message}`);
-      fail++;
+    // Remove existing LevelDB directory if present
+    if (fs.existsSync(outPath)) {
+      fs.rmSync(outPath, { recursive: true, force: true });
     }
+    fs.mkdirSync(outPath, { recursive: true });
+
+    const db = new ClassicLevel(outPath, { keyEncoding: "utf8", valueEncoding: "utf8" });
+    await db.open();
+
+    const prefix = `!${docType.toLowerCase()}s!`;
+    const batch = db.batch();
+
+    let ok = 0, fail = 0;
+    for (const line of lines) {
+      try {
+        const doc = JSON.parse(line);
+        batch.put(prefix + doc._id, JSON.stringify(doc));
+        ok++;
+      } catch (e) {
+        console.error(`  PARSE ERROR: ${e.message}`);
+        fail++;
+      }
+    }
+
+    await batch.write();
+    await db.close();
+    console.log(`  ✓ ${ok} written${fail ? `, ${fail} failed` : ""}`);
   }
 
-  await batch.write();
-  await db.close();
-  console.log(`  ✓ ${ok} written${fail ? `, ${fail} failed` : ""}`);
-}
-
-console.log("\n✅ All packs compiled to LevelDB format.");
+  console.log("\n✅ All packs compiled to LevelDB format.");
+})();
